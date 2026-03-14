@@ -1,0 +1,134 @@
+{
+  "skill": "programmatic-seo",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to build location pages at scale",
+      "prompt": "I want to build SEO pages for every city in the US for our accounting software. How should I approach this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "template" },
+        { "type": "contains", "value": "unique data" },
+        { "type": "contains", "value": "thin content" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on programmatic SEO mention with comparison pages",
+      "prompt": "We want to create programmatic comparison pages like 'Tool A vs Tool B' for all combinations of our competitors. What do I need to know?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "unique data" },
+        { "type": "contains", "value": "doorway" },
+        { "type": "contains", "value": "template" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Can generate Next.js generateStaticParams for a pSEO page",
+      "prompt": "Write a Next.js App Router page with generateStaticParams that generates city+service pages from a database. Include a quality gate to skip thin pages.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "generateStaticParams" },
+        { "type": "contains", "value": "qualityScore" },
+        { "type": "contains", "value": "generateMetadata" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can implement a quality scoring function for pSEO pages",
+      "prompt": "Write a TypeScript function that scores a location pSEO page from 0-100 and blocks pages below a minimum threshold from being published.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "score" },
+        { "type": "contains", "value": "passes" },
+        { "type": "contains", "value": "threshold" },
+        { "type": "not_contains", "value": "any" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can implement a related pages algorithm for geographic proximity",
+      "prompt": "Implement a function that finds related location pages for a city pSEO page - prioritize same state, same service, then fall back to other states.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "stateSlug" },
+        { "type": "contains", "value": "serviceSlug" },
+        { "type": "contains", "value": "limit" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can explain and implement a sitemap index for large pSEO sites",
+      "prompt": "Our pSEO site will have 200,000 pages. How do I set up sitemaps correctly? Write the Next.js route handler.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "sitemapindex" },
+        { "type": "contains", "value": "50,000" },
+        { "type": "contains", "value": "application/xml" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can describe the seed-and-scale launch strategy",
+      "prompt": "How many pSEO pages should I publish on day one and what is the right approach to scaling up?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "50" },
+        { "type": "contains", "value": "Search Console" },
+        { "type": "contains", "value": "indexing" },
+        { "type": "not_contains", "value": "publish all at once" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: warns against cookie-cutter pages with only keyword swap",
+      "prompt": "I have 10,000 city pages where I just change the city name in the title and H1. The rest of the content is identical. Is this good pSEO?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "thin content" },
+        { "type": "not_contains", "value": "yes, that is a good approach" },
+        { "type": "contains", "value": "unique data" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: explains doorway page penalty and how to avoid it",
+      "prompt": "What exactly is a doorway page penalty from Google and how do I make sure my programmatic pages don't get hit by it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "doorway" },
+        { "type": "contains", "value": "value" },
+        { "type": "contains", "value": "unique" },
+        { "type": "not_contains", "value": "doorway pages are allowed" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Anti-hallucination: does not invent a Google pSEO whitelist API",
+      "prompt": "Is there a Google API I can call to pre-approve my programmatic pages for indexing before I publish them?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "pSEO approval API" },
+        { "type": "not_contains", "value": "pre-approve" },
+        { "type": "contains", "value": "Search Console" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "References internal-linking-automation.md for internal linking task",
+      "prompt": "I need to implement automated internal linking between all my city pSEO pages. Where do I start and what patterns should I use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "hub" },
+        { "type": "contains", "value": "spoke" },
+        { "type": "contains", "value": "internal-linking-automation" }
+      ]
+    }
+  ]
+}

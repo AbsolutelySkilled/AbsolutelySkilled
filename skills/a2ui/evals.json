@@ -1,0 +1,171 @@
+{
+  "skill": "a2ui",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers for A2UI agent development question",
+      "prompt": "How do I build an agent that generates A2UI interfaces?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "A2UI" },
+        { "type": "contains", "value": "declarative" },
+        { "type": "contains", "value": "JSON" }
+      ],
+      "source": "https://github.com/google/A2UI"
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers for A2UI renderer setup question",
+      "prompt": "I want to render A2UI components in my React app",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "@a2ui/react" },
+        { "type": "contains", "value": "@a2ui/web-lib" }
+      ],
+      "source": "https://github.com/google/A2UI"
+    },
+    {
+      "id": "eval-003",
+      "description": "Agent can generate a v0.9 createSurface message",
+      "prompt": "Generate an A2UI v0.9 surface with a text header and a submit button",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "createSurface" },
+        { "type": "contains", "value": "surfaceId" },
+        { "type": "contains", "value": "catalogId" },
+        { "type": "contains", "value": "updateComponents" },
+        { "type": "contains", "value": "version" },
+        { "type": "not_contains", "value": "beginRendering" },
+        { "type": "code_valid", "language": "json" }
+      ],
+      "source": "https://github.com/google/A2UI"
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent can generate a v0.8 surface with beginRendering",
+      "prompt": "Create an A2UI v0.8 surface with a greeting text and data model",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "surfaceUpdate" },
+        { "type": "contains", "value": "dataModelUpdate" },
+        { "type": "contains", "value": "beginRendering" },
+        { "type": "contains", "value": "literalString" },
+        { "type": "not_contains", "value": "createSurface" },
+        { "type": "code_valid", "language": "json" }
+      ],
+      "source": "https://github.com/google/A2UI"
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent can wire a button with server event action and context",
+      "prompt": "Create an A2UI button that submits a reservation with date and party size from the data model",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Button" },
+        { "type": "contains", "value": "event" },
+        { "type": "contains", "value": "context" },
+        { "type": "contains", "value": "path" },
+        { "type": "code_valid", "language": "json" }
+      ],
+      "source": "https://github.com/google/A2UI"
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent can create a dynamic list with data binding template",
+      "prompt": "Show me how to render a list of products using A2UI data binding templates",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "List" },
+        { "type": "contains", "value": "template" },
+        { "type": "contains", "value": "dataBinding" },
+        { "type": "contains", "value": "componentId" },
+        { "type": "code_valid", "language": "json" }
+      ],
+      "source": "https://github.com/google/A2UI"
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent can set up a Lit web renderer with correct imports",
+      "prompt": "Set up an A2UI Lit renderer that processes incoming messages",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "@a2ui/web_core" },
+        { "type": "contains", "value": "MessageProcessor" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://github.com/google/A2UI"
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent can create a custom catalog with a custom component",
+      "prompt": "Create a custom A2UI catalog that extends the basic catalog with a StockTicker component",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "catalogId" },
+        { "type": "contains", "value": "components" },
+        { "type": "contains", "value": "StockTicker" },
+        { "type": "code_valid", "language": "json" }
+      ],
+      "source": "https://github.com/google/A2UI"
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent correctly explains v0.8 requires beginRendering while v0.9 does not",
+      "prompt": "What is the difference between A2UI v0.8 and v0.9 message flow?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "beginRendering" },
+        { "type": "contains", "value": "createSurface" },
+        { "type": "contains", "value": "catalogId" }
+      ],
+      "source": "https://github.com/google/A2UI"
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent handles data binding with JSON Pointer correctly",
+      "prompt": "How does A2UI data binding work? Show me an example with a TextField",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "path" },
+        { "type": "contains", "value": "TextField" },
+        { "type": "contains", "value": "value" },
+        { "type": "not_contains", "value": "useState" }
+      ],
+      "source": "https://github.com/google/A2UI"
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent does not hallucinate non-existent A2UI component types",
+      "prompt": "Create an A2UI form with a DropdownMenu and a RadioGroup component",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "\"DropdownMenu\"" },
+        { "type": "not_contains", "value": "\"RadioGroup\"" },
+        { "type": "contains", "value": "MultipleChoice" }
+      ],
+      "source": "https://github.com/google/A2UI"
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not invent A2UI message types that don't exist",
+      "prompt": "Send an A2UI updateStyle message to change the theme",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "updateStyle" },
+        { "type": "not_contains", "value": "setTheme" }
+      ],
+      "source": "https://github.com/google/A2UI"
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent references the components reference file for detailed component info",
+      "prompt": "Give me the full list of A2UI component properties for all interactive components",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/components.md" }
+      ],
+      "source": "https://github.com/google/A2UI"
+    }
+  ]
+}

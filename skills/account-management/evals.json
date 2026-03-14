@@ -1,0 +1,135 @@
+{
+  "skill": "account-management",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on account plan creation request",
+      "prompt": "Help me build an account plan for our largest enterprise customer. They're up for renewal in 6 months.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "strategic" },
+        { "type": "contains", "value": "renewal" },
+        { "type": "contains", "value": "stakeholder" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on stakeholder mapping request",
+      "prompt": "How do I map stakeholders at a large enterprise account? I only have one contact there.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "champion" },
+        { "type": "contains", "value": "economic buyer" },
+        { "type": "contains", "value": "single-threaded" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on QBR preparation request",
+      "prompt": "I have a QBR with a key account next week. What should I prepare and how should I structure it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "agenda" },
+        { "type": "contains", "value": "ROI" },
+        { "type": "contains", "value": "executive" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Triggers on expansion opportunity identification",
+      "prompt": "One of my accounts is really happy with us. How do I identify and pitch an expansion opportunity?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "upsell" },
+        { "type": "contains", "value": "ROI" },
+        { "type": "contains", "value": "expansion" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Triggers on renewal management request and provides timeline",
+      "prompt": "My biggest account renews in 90 days. What should I be doing right now?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "90" },
+        { "type": "contains", "value": "proposal" },
+        { "type": "contains", "value": "economic buyer" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Warns against starting renewal too late",
+      "prompt": "My customer's renewal is in 30 days and I haven't started the conversation yet. What do I do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "late" },
+        { "type": "contains", "value": "escalate" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Provides health scoring framework with signal categories",
+      "prompt": "How do I build an account health score to predict which customers might churn?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "usage" },
+        { "type": "contains", "value": "NPS" },
+        { "type": "contains", "value": "red" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Triggers on at-risk account / save playbook request",
+      "prompt": "A customer just told me they're considering canceling. How do I save this account?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "root cause" },
+        { "type": "contains", "value": "executive" },
+        { "type": "contains", "value": "action plan" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Advises against leading QBR with product demo",
+      "prompt": "Should I use the QBR to demo our new product features to the customer?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "business outcome" },
+        { "type": "not_contains", "value": "yes, demo" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Explains account tiering concept correctly",
+      "prompt": "How should I prioritize my time across a book of 50 accounts with very different sizes?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "tier" },
+        { "type": "contains", "value": "strategic" },
+        { "type": "contains", "value": "ARR" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Advises against expanding before value is proven",
+      "prompt": "We just closed a new enterprise customer last month. Can I already start pitching them on our premium tier?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ROI" },
+        { "type": "contains", "value": "value" },
+        { "type": "not_contains", "value": "pitch the premium tier now" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References qbr-template.md for detailed QBR deck structure",
+      "prompt": "Give me a complete QBR deck template with every slide laid out.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "qbr-template" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

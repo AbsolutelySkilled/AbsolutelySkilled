@@ -1,0 +1,141 @@
+{
+  "skill": "open-source-management",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to set up a new OSS project",
+      "prompt": "I'm open sourcing my CLI tool. What files do I need to set up the project properly?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "LICENSE" },
+        { "type": "contains", "value": "CONTRIBUTING" },
+        { "type": "contains", "value": "CODE_OF_CONDUCT" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on license selection question",
+      "prompt": "I'm building an open source library and want companies to use it freely but with patent protection. Which license should I choose?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Apache" },
+        { "type": "contains", "value": "patent" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Can write a changelog entry following Keep a Changelog format",
+      "prompt": "Write a changelog entry for version 2.3.0 that adds dark mode support, fixes a login bug (#452), and deprecates the legacy API.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "### Added" },
+        { "type": "contains", "value": "### Fixed" },
+        { "type": "contains", "value": "### Deprecated" },
+        { "type": "contains", "value": "2.3.0" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Triggers on semantic versioning question",
+      "prompt": "I renamed a public API method. Should this be a patch, minor, or major version bump?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "major" },
+        { "type": "contains", "value": "breaking" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can write a CONTRIBUTING.md",
+      "prompt": "Write a CONTRIBUTING.md for my Node.js open source project that uses Jest for testing and ESLint for linting.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "fork" },
+        { "type": "contains", "value": "pull request" },
+        { "type": "contains", "value": "test" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Triggers on community building question",
+      "prompt": "My project has 500 stars but zero contributors. How do I attract people to contribute?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "good first issue" },
+        { "type": "contains", "value": "CONTRIBUTING" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Triggers on governance question",
+      "prompt": "My project now has 5 regular contributors. How should I set up governance?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "GOVERNANCE" },
+        { "type": "contains", "value": "maintainer" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Warns against relicensing without contributor consent",
+      "prompt": "I want to change my project from MIT to AGPL. Can I just update the LICENSE file?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "contributor" },
+        { "type": "contains", "value": "consent" },
+        { "type": "not_contains", "value": "just update the LICENSE file" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Can create a security disclosure policy",
+      "prompt": "How should I handle security vulnerability reports in my open source project?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "SECURITY.md" },
+        { "type": "contains", "value": "private" },
+        { "type": "not_contains", "value": "public issue" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Understands copyleft vs permissive licensing difference",
+      "prompt": "What's the difference between MIT and GPL for my open source project?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "permissive" },
+        { "type": "contains", "value": "copyleft" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not invent non-existent OSS standards",
+      "prompt": "Tell me about the Open Source Maintainer Certification Program standard.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "Open Source Maintainer Certification Program is a standard" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for internal project management",
+      "prompt": "How should I manage sprints and velocity tracking for my team's internal product?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "CONTRIBUTING.md" },
+        { "type": "not_contains", "value": "open source" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Can advise on release automation tooling",
+      "prompt": "I want to automate my npm package releases with changelog generation. What tools should I use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "semantic-release" },
+        { "type": "contains", "value": "changelog" }
+      ]
+    }
+  ]
+}

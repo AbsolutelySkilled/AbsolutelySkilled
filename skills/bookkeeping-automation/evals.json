@@ -1,0 +1,140 @@
+{
+  "skill": "bookkeeping-automation",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on chart of accounts design request",
+      "prompt": "Help me design a chart of accounts for a SaaS startup that has subscription revenue, professional services, and hardware sales",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Assets" },
+        { "type": "contains", "value": "Revenue" },
+        { "type": "contains", "value": "1000" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on bank reconciliation request",
+      "prompt": "Our books show $142,500 in cash but our bank statement shows $139,800. Walk me through how to reconcile this",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "outstanding" },
+        { "type": "contains", "value": "deposit" },
+        { "type": "contains", "value": "reconcil" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on AP workflow request",
+      "prompt": "We keep paying invoices late and our vendors are complaining. Design an accounts payable process for a 50-person company",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "approval" },
+        { "type": "contains", "value": "invoice" },
+        { "type": "contains", "value": "payment" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Triggers on AR collections question",
+      "prompt": "We have $200K in invoices over 90 days past due. What process should we follow to collect?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "aging" },
+        { "type": "contains", "value": "outreach" },
+        { "type": "contains", "value": "escalat" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Triggers on month-end close request",
+      "prompt": "Our month-end close takes 15 business days. How can we get it down to 5?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "reconcil" },
+        { "type": "contains", "value": "accrual" },
+        { "type": "contains", "value": "close" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Correctly explains double-entry bookkeeping for a payment",
+      "prompt": "Show me the journal entry for paying a $2,000 vendor invoice that was previously recorded as accounts payable",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Debit" },
+        { "type": "contains", "value": "Credit" },
+        { "type": "contains", "value": "Accounts Payable" },
+        { "type": "contains", "value": "2,000" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can explain accrual vs cash basis with correct implications",
+      "prompt": "We're switching from cash basis to accrual accounting. What changes and why does it matter?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "accounts receivable" },
+        { "type": "contains", "value": "accounts payable" },
+        { "type": "contains", "value": "earned" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Correctly designs an auto-reversing accrual entry",
+      "prompt": "We have $30,000 in December payroll that won't be paid until January 3rd. How do I record this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "accrual" },
+        { "type": "contains", "value": "reverse" },
+        { "type": "contains", "value": "Payroll" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Identifies the anti-pattern of using a Miscellaneous account",
+      "prompt": "Our bookkeeper puts anything unusual into a single Miscellaneous Expense account. Is this a problem?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "account" },
+        { "type": "not_contains", "value": "fine" },
+        { "type": "contains", "value": "audit" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Can describe COA numeric range conventions",
+      "prompt": "What numbering scheme should I use for my chart of accounts?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "1000" },
+        { "type": "contains", "value": "Assets" },
+        { "type": "contains", "value": "Liabilities" },
+        { "type": "contains", "value": "Revenue" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not trigger for tax strategy questions",
+      "prompt": "What tax deductions can I take for my home office to minimize my business tax bill this year?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "chart of accounts" },
+        { "type": "not_contains", "value": "reconciliation" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Can design an expense management workflow end-to-end",
+      "prompt": "Build me an end-to-end expense reimbursement process for a 100-person remote company",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "receipt" },
+        { "type": "contains", "value": "approval" },
+        { "type": "contains", "value": "reimburse" },
+        { "type": "contains", "value": "policy" }
+      ]
+    }
+  ]
+}

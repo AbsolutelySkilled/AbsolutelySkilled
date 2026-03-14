@@ -1,0 +1,155 @@
+{
+  "skill": "product-analytics",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on north star metric request",
+      "prompt": "We're a B2B SaaS collaboration tool. Help us define our north star metric.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "north star" },
+        { "type": "contains", "value": "value" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on funnel analysis request",
+      "prompt": "Our sign-up to paid conversion rate dropped from 8% to 5% last month. How do I diagnose what's happening?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "funnel" },
+        { "type": "contains", "value": "drop-off" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on cohort analysis request",
+      "prompt": "How do I run a cohort analysis to understand why our Day 30 retention is declining?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cohort" },
+        { "type": "contains", "value": "retention" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can design a correct event taxonomy with naming conventions",
+      "prompt": "Design an event taxonomy for a project management SaaS app. Include events for creating projects, assigning tasks, and completing milestones.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "project_created" },
+        { "type": "contains", "value": "object_action" },
+        { "type": "contains", "value": "user_id" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can explain the three-tier metric hierarchy",
+      "prompt": "What's the difference between a north star metric, input metrics, and health metrics?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "north star" },
+        { "type": "contains", "value": "input" },
+        { "type": "contains", "value": "health" },
+        { "type": "contains", "value": "guardrail" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Correctly explains feature adoption lifecycle stages",
+      "prompt": "We just launched a new commenting feature. How should we measure whether it's being adopted?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "adoption" },
+        { "type": "contains", "value": "activation" },
+        { "type": "contains", "value": "eligible" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Warns about sample ratio mismatch in A/B test analysis",
+      "prompt": "Our A/B test was supposed to be 50/50 but we got 52% in control and 48% in treatment. Should I be worried?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "sample ratio mismatch" },
+        { "type": "contains", "value": "biased" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Identifies and explains the vanity metrics anti-pattern",
+      "prompt": "Our CEO wants us to report total all-time registered users on the board deck. Is that a good metric?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "vanity" },
+        { "type": "contains", "value": "active" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Correctly explains retention curve shapes and their meaning",
+      "prompt": "Our retention curve keeps declining all the way to zero at week 12. What does that mean and what should we do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "floor" },
+        { "type": "contains", "value": "habit" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Warns against inferring causation from correlation in product data",
+      "prompt": "We noticed users who invite teammates in the first week retain 3x better. Should we force all new users to invite someone?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "correlation" },
+        { "type": "contains", "value": "experiment" },
+        { "type": "not_contains", "value": "yes, force all users" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Can recommend appropriate dashboard structure by audience",
+      "prompt": "We need dashboards for our executive team and our product team. What metrics should go on each?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "executive" },
+        { "type": "contains", "value": "north star" },
+        { "type": "contains", "value": "weekly" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for data pipeline or warehouse architecture questions",
+      "prompt": "How should I design the schema for our Snowflake data warehouse to support fast analytical queries?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "north star metric" },
+        { "type": "not_contains", "value": "funnel analysis" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "References feature-adoption.md for detailed adoption lifecycle measurement",
+      "prompt": "Give me a complete feature adoption scorecard template with kill criteria and benchmarks for our new collaboration feature.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "adoption" },
+        { "type": "contains", "value": "references" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "Correctly applies AARRR framework with specific metrics per stage",
+      "prompt": "Map out the AARRR pirate metrics for our project management SaaS tool with specific events for each stage.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Acquisition" },
+        { "type": "contains", "value": "Activation" },
+        { "type": "contains", "value": "Retention" },
+        { "type": "contains", "value": "Revenue" },
+        { "type": "contains", "value": "Referral" }
+      ]
+    }
+  ]
+}

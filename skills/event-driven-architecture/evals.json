@@ -1,0 +1,165 @@
+{
+  "skill": "event-driven-architecture",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on event sourcing implementation question",
+      "prompt": "I want to store my order aggregate as a sequence of events instead of a mutable row. How do I implement event sourcing for this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "event store" },
+        { "type": "contains", "value": "append" },
+        { "type": "contains", "value": "replay" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on CQRS pattern question",
+      "prompt": "Our read queries are slow because the write-optimized schema requires too many joins. Should we separate our read and write models?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "CQRS" },
+        { "type": "contains", "value": "projection" },
+        { "type": "contains", "value": "denormalize" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on message broker selection question",
+      "prompt": "We need to choose a message broker for our microservices. We have about 50k events per second and need replay capability. Kafka or RabbitMQ?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Kafka" },
+        { "type": "contains", "value": "partition" },
+        { "type": "contains", "value": "replay" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: designing an event-sourced aggregate with correct concurrency control",
+      "prompt": "Implement an event-sourced Order aggregate in Python. It should handle PlaceOrder and ShipOrder commands with optimistic concurrency.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "version" },
+        { "type": "contains", "value": "apply" },
+        { "type": "contains", "value": "OrderPlaced" },
+        { "type": "code_valid", "language": "python" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: implementing a saga for distributed transaction across services",
+      "prompt": "Design a saga for an e-commerce checkout flow that coordinates order placement, payment processing, and inventory reservation. Show the compensating actions for each step.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "compensat" },
+        { "type": "contains", "value": "PaymentFailed" },
+        { "type": "contains", "value": "saga" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: setting up Kafka consumer with correct configuration",
+      "prompt": "Write a Kafka consumer in Python that processes OrderPlaced events with manual offset commits and proper error handling.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "auto.commit" },
+        { "type": "contains", "value": "commit" },
+        { "type": "contains", "value": "consumer_group" },
+        { "type": "code_valid", "language": "python" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: designing event schema with versioning strategy",
+      "prompt": "We need to add a currency field to our OrderPlaced event but we have millions of existing events without it. How do we handle event schema evolution?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "upcast" },
+        { "type": "contains", "value": "backward compatible" },
+        { "type": "contains", "value": "default" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: implementing idempotent consumer with deduplication",
+      "prompt": "Our Kafka consumer sometimes processes the same event twice after a rebalance. How do I make the consumer idempotent?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "idempoten" },
+        { "type": "contains", "value": "dedup" },
+        { "type": "contains", "value": "event_id" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: correctly identifies the dual write problem and recommends outbox pattern",
+      "prompt": "We save to our database and then publish an event to Kafka. Sometimes the publish fails after the DB write succeeds. How do we fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "outbox" },
+        { "type": "contains", "value": "transaction" },
+        { "type": "not_contains", "value": "distributed transaction" },
+        { "type": "not_contains", "value": "two-phase commit is the best solution" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about assuming global ordering in Kafka",
+      "prompt": "We're using Kafka with 12 partitions. We need all OrderPlaced events to be processed in exact chronological order across all orders. How do we guarantee this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "partition" },
+        { "type": "contains", "value": "ordering" },
+        { "type": "not_contains", "value": "Kafka guarantees global ordering" },
+        { "type": "not_contains", "value": "all partitions are ordered" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns about unbounded event store without snapshots",
+      "prompt": "Our event-sourced aggregate has 50,000 events and loading it takes 3 seconds. What should we do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "snapshot" },
+        { "type": "contains", "value": "checkpoint" },
+        { "type": "not_contains", "value": "delete old events" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not claim exactly-once delivery is simple or default",
+      "prompt": "Can Kafka guarantee exactly-once delivery to my consumers? I don't want to deal with duplicates.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "at-least-once" },
+        { "type": "contains", "value": "idempoten" },
+        { "type": "not_contains", "value": "Kafka guarantees exactly-once by default" },
+        { "type": "not_contains", "value": "you don't need to handle duplicates" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Anti-hallucination: does not recommend two-phase commit for microservices",
+      "prompt": "We have 5 microservices that need to participate in a single transaction. Should we use a distributed two-phase commit?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "saga" },
+        { "type": "not_contains", "value": "two-phase commit is recommended for microservices" },
+        { "type": "not_contains", "value": "2PC is the standard approach" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "References load: points to broker comparison reference for detailed broker selection",
+      "prompt": "Give me a detailed comparison of Kafka vs RabbitMQ vs NATS including configuration recommendations and when to use each.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Kafka" },
+        { "type": "contains", "value": "RabbitMQ" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

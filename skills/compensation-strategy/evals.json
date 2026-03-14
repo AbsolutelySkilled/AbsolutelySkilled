@@ -1,0 +1,140 @@
+{
+  "skill": "compensation-strategy",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on compensation benchmarking question",
+      "prompt": "We're hiring a Staff Engineer and I want to make sure our offer is competitive. How do I benchmark compensation for this role?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "market" },
+        { "type": "contains", "value": "percentile" },
+        { "type": "contains", "value": "data" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on equity grant question",
+      "prompt": "We're a Series B startup about to make our first Staff Engineer hire. What's a reasonable equity grant and how should we structure it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "vesting" },
+        { "type": "contains", "value": "cliff" },
+        { "type": "contains", "value": "grant" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on leveling framework question",
+      "prompt": "Our engineering team has grown to 40 people and we don't have formal levels. People are asking how to get promoted and we have no answer. Where do we start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "level" },
+        { "type": "contains", "value": "scope" },
+        { "type": "contains", "value": "impact" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: designing pay bands with correct spread and overlap",
+      "prompt": "I need to create salary bands for our 4-level IC engineering track. We want to target P50 base. Walk me through how to structure the bands including spread and overlap.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "midpoint" },
+        { "type": "contains", "value": "spread" },
+        { "type": "contains", "value": "overlap" },
+        { "type": "contains", "value": "compa-ratio" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: explains total rewards beyond base salary",
+      "prompt": "A candidate turned us down saying our base was lower than another offer, but we think our total package is actually better. How do I make the case for total compensation?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "total" },
+        { "type": "contains", "value": "equity" },
+        { "type": "contains", "value": "benefit" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: handling pay compression correctly",
+      "prompt": "A new engineer we just hired is being paid more than a senior engineer who has been with us for 3 years. How do I handle this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "compression" },
+        { "type": "contains", "value": "audit" },
+        { "type": "contains", "value": "adjust" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: structuring equity refreshes for retention",
+      "prompt": "We gave early employees big equity grants 3 years ago. Most of their grants are nearly fully vested and we're worried they'll leave once the 4-year mark hits. What should we do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "refresh" },
+        { "type": "contains", "value": "retention" },
+        { "type": "contains", "value": "vest" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: running a pay equity audit",
+      "prompt": "We're a team of 80 and our Head of People wants to run our first pay equity audit. What does the process look like and what do we do with the results?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "regression" },
+        { "type": "contains", "value": "gap" },
+        { "type": "contains", "value": "remediat" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Core task: writing a compensation philosophy",
+      "prompt": "Employees keep asking why they're paid what they're paid and how to earn more. We don't have a formal compensation philosophy. What should it cover?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "percentile" },
+        { "type": "contains", "value": "transparent" },
+        { "type": "contains", "value": "progression" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns against setting pay from last person's salary",
+      "prompt": "We're opening a backend engineer role. The last person in this seat was making $120k when they left. Should we just use that as the starting point for the offer range?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "market" },
+        { "type": "contains", "value": "data" },
+        { "type": "not_contains", "value": "yes, use $120k" },
+        { "type": "not_contains", "value": "that's a good starting point" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns against single-trigger equity acceleration",
+      "prompt": "We're drafting equity agreements for our new VP hire. They're asking for acceleration on change of control. Should we agree to single-trigger or double-trigger acceleration?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "double-trigger" },
+        { "type": "contains", "value": "involuntary" },
+        { "type": "not_contains", "value": "single-trigger is standard" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load: points to equity-guide for ISO vs RSU decision",
+      "prompt": "We're moving from ISO grants to RSUs as we approach our Series D. Our employees are confused about the difference and what it means for their taxes. Where should I point them?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ISO" },
+        { "type": "contains", "value": "RSU" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

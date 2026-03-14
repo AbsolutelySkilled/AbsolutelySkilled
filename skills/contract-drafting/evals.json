@@ -1,0 +1,138 @@
+{
+  "skill": "contract-drafting",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on NDA drafting request",
+      "prompt": "Help me draft a mutual NDA between my company and a potential partner",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Confidential Information" },
+        { "type": "contains", "value": "Permitted Purpose" },
+        { "type": "contains", "value": "disclaimer" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on MSA drafting request",
+      "prompt": "I need to create a Master Services Agreement for my consulting business",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Statement of Work" },
+        { "type": "contains", "value": "indemnification" },
+        { "type": "contains", "value": "limitation of liability" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on SaaS agreement request",
+      "prompt": "Draft subscription terms for my SaaS product",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "uptime" },
+        { "type": "contains", "value": "data" },
+        { "type": "contains", "value": "auto-renewal" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Provides redlining checklist when reviewing a counterparty contract",
+      "prompt": "I received a vendor contract. What should I look for when reviewing it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "liability cap" },
+        { "type": "contains", "value": "governing law" },
+        { "type": "contains", "value": "indemnif" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Explains license types correctly",
+      "prompt": "What is the difference between an exclusive and non-exclusive software license?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "exclusive" },
+        { "type": "contains", "value": "non-exclusive" },
+        { "type": "not_contains", "value": "sublicensable" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Produces a GDPR-compliant DPA outline",
+      "prompt": "I need a Data Processing Agreement for my SaaS product to comply with GDPR",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Article 28" },
+        { "type": "contains", "value": "sub-processor" },
+        { "type": "contains", "value": "data subject" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Warns about residuals clause risk",
+      "prompt": "The other party wants to add a residuals clause to our NDA. Should I accept it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "residuals" },
+        { "type": "contains", "value": "unaided memory" },
+        { "type": "not_contains", "value": "safe to accept" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Explains liability cap carve-outs correctly",
+      "prompt": "What should be carved out from a SaaS liability cap?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "death" },
+        { "type": "contains", "value": "confidentiality" },
+        { "type": "contains", "value": "IP" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Produces a correct license grant clause",
+      "prompt": "Write a non-exclusive, non-sublicensable, perpetual software license grant clause",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "non-exclusive" },
+        { "type": "contains", "value": "non-sublicensable" },
+        { "type": "contains", "value": "perpetual" },
+        { "type": "not_contains", "value": "exclusive license" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Advises on auto-renewal notice window risk",
+      "prompt": "My vendor contract auto-renews for 12 months with no notice requirement. Is that a problem?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "notice" },
+        { "type": "contains", "value": "cancellation" },
+        { "type": "contains", "value": "calendar" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not provide legal advice and includes appropriate disclaimer",
+      "prompt": "Is this NDA legally binding in California?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "legal advice" },
+        { "type": "contains", "value": "counsel" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for employment law or litigation strategy",
+      "prompt": "Help me sue my former employer for wrongful termination",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "NDA" },
+        { "type": "not_contains", "value": "MSA" },
+        { "type": "contains", "value": "employment" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "skill": "ecommerce-seo",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on faceted navigation crawl question",
+      "prompt": "Our Shopify store has 8,000 products and we use filters for color, size, brand, and price. Google is showing 400,000 pages indexed in Search Console but we only have 8,000 products. What's happening and how do we fix it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "faceted" },
+        { "type": "contains", "value": "crawl budget" },
+        { "type": "contains", "value": "noindex" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on product schema / rich snippet question",
+      "prompt": "Our competitors show star ratings and price in Google search results but our products don't. How do we get those rich snippets for our product pages?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "schema" },
+        { "type": "contains", "value": "Product" },
+        { "type": "contains", "value": "AggregateRating" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on out-of-stock SEO question",
+      "prompt": "We have about 200 products that go out of stock periodically. Our developer wants to delete those pages and 404 them to keep the site clean. Is that the right call from an SEO perspective?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "out-of-stock" },
+        { "type": "contains", "value": "301" },
+        { "type": "contains", "value": "OutOfStock" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task (code): generate valid Product schema with Offer and AggregateRating",
+      "prompt": "Write the JSON-LD Product schema markup for a product page selling a Sony WH-1000XM5 headphone priced at $349.99, currently in stock, with 4.8 average rating from 1,847 reviews. The store is called AudioZone and the product URL is https://audiozone.com/products/sony-wh1000xm5.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "application/ld+json" },
+        { "type": "contains", "value": "@type\": \"Product" },
+        { "type": "contains", "value": "schema.org/InStock" },
+        { "type": "contains", "value": "349.99" },
+        { "type": "contains", "value": "4.8" },
+        { "type": "contains", "value": "1847" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task (code): implement noindex on filtered pages only",
+      "prompt": "I need to add a noindex meta tag to filtered category pages (URLs with ?color=, ?size=, ?sort= parameters) but NOT on base category pages or product pages. Show me how to do this in a server-side rendered Node.js/Express app.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "noindex" },
+        { "type": "contains", "value": "follow" },
+        { "type": "contains", "value": "searchParams" },
+        { "type": "contains", "value": "meta" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task (explanation): canonical strategy for paginated category pages",
+      "prompt": "For our paginated category pages like /womens/boots?page=2 and /womens/boots?page=3, should we set the canonical to /womens/boots (page 1) or should each page canonical to itself? I've seen conflicting advice online.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "itself" },
+        { "type": "not_contains", "value": "canonical all pages to page 1" },
+        { "type": "not_contains", "value": "rel=\"next\"" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task (code): breadcrumb schema for a product page",
+      "prompt": "Generate the BreadcrumbList schema markup for a product page at: Home > Women's > Shoes > Boots > UGG Classic Short Boot. Include the HTML breadcrumb nav with microdata and a separate JSON-LD block.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "BreadcrumbList" },
+        { "type": "contains", "value": "ListItem" },
+        { "type": "contains", "value": "position" },
+        { "type": "contains", "value": "Women's" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task (explanation): product variant consolidation vs separate URLs",
+      "prompt": "We sell a t-shirt that comes in 12 colors and 6 sizes. Right now each color has its own URL like /products/basic-tee-black and /products/basic-tee-red. Is it better to keep separate URLs per color, or consolidate them all under /products/basic-tee with a color picker?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "canonical" },
+        { "type": "contains", "value": "search volume" },
+        { "type": "contains", "value": "variant" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns that rel=next/prev is deprecated",
+      "prompt": "I'm implementing pagination on our category pages and found old SEO guides recommending rel='next' and rel='prev' tags. Should I add those to our paginated category pages?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "deprecated" },
+        { "type": "contains", "value": "2019" },
+        { "type": "not_contains", "value": "you should add rel=\"next\"" },
+        { "type": "not_contains", "value": "Google supports rel=next" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns against lazy-loading all product images without fallback",
+      "prompt": "For performance, our developer wants to JavaScript lazy-load all product images on category pages so they only load when in the viewport. Is there an SEO risk to this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Googlebot" },
+        { "type": "contains", "value": "loading=\"lazy\"" },
+        { "type": "contains", "value": "render" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns that duplicate manufacturer descriptions cause thin content issues",
+      "prompt": "We're launching a new electronics store and our supplier is giving us full product descriptions for all 3,000 products. Can we just use the supplier's copy directly to save time on content creation?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "duplicate" },
+        { "type": "contains", "value": "manufacturer" },
+        { "type": "not_contains", "value": "yes, you can use the supplier's copy" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not recommend blocking Googlebot from all category pages",
+      "prompt": "Someone told us we should block all category listing pages in robots.txt because they're 'not real content' and only product pages matter for SEO. Is that right?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "category" },
+        { "type": "not_contains", "value": "block all category pages" },
+        { "type": "not_contains", "value": "robots.txt Disallow /category" },
+        { "type": "contains", "value": "commercial" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "References load: points to faceted-navigation reference file for robots.txt blocking strategy",
+      "prompt": "I need to block our ?sort= and ?page_size= URL parameters from being crawled by Googlebot. Can you walk me through the robots.txt rules and also show me how to handle the case where parameters appear in different orders in the URL?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "robots.txt" },
+        { "type": "contains", "value": "Disallow" },
+        { "type": "contains", "value": "references/faceted-navigation" }
+      ]
+    }
+  ]
+}

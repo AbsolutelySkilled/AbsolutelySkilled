@@ -1,0 +1,138 @@
+{
+  "skill": "employment-law",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on offer letter drafting request",
+      "prompt": "Help me draft an offer letter for a senior software engineer we want to hire at $180,000/year",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "at-will" },
+        { "type": "contains", "value": "compensation" },
+        { "type": "contains", "value": "conditions" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on termination process question",
+      "prompt": "We need to let an employee go for repeated performance issues. What is the proper process?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "documentation" },
+        { "type": "contains", "value": "final pay" },
+        { "type": "contains", "value": "counsel" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on contractor vs employee classification question",
+      "prompt": "We have a designer who works 40 hours a week exclusively for us and uses our equipment. Can we keep them as a 1099 contractor?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "misclassification" },
+        { "type": "contains", "value": "employee" },
+        { "type": "contains", "value": "IRS" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Identifies high contractor misclassification risk correctly",
+      "prompt": "Our contractor works 40 hours a week, only for us, from our office, using our laptop. Should we be concerned about misclassification?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "risk" },
+        { "type": "not_contains", "value": "no concern" },
+        { "type": "contains", "value": "reclassif" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Warns that non-competes are unenforceable in California",
+      "prompt": "We are a California company and want to add a 2-year non-compete clause to all employee agreements",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "California" },
+        { "type": "contains", "value": "unenforceable" },
+        { "type": "contains", "value": "counsel" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Covers FMLA basics correctly",
+      "prompt": "An employee just told me she needs 10 weeks off for surgery and recovery. What are my obligations?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "FMLA" },
+        { "type": "contains", "value": "12 weeks" },
+        { "type": "contains", "value": "job-protected" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Explains ADA interactive process requirement",
+      "prompt": "An employee with anxiety asked to work from home as an accommodation. Do we have to grant it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "interactive process" },
+        { "type": "contains", "value": "ADA" },
+        { "type": "contains", "value": "reasonable" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Flags retaliation risk when terminating after a complaint",
+      "prompt": "An employee filed an HR complaint against their manager last week. The manager wants to put them on a PIP now. Is that okay?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "retaliation" },
+        { "type": "contains", "value": "timing" },
+        { "type": "contains", "value": "documentation" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Recommends written documentation over verbal warnings",
+      "prompt": "We have verbally warned an employee three times about being late. Can we fire them now?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "written" },
+        { "type": "contains", "value": "document" },
+        { "type": "not_contains", "value": "verbal warnings are sufficient" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Provides workplace investigation steps",
+      "prompt": "An employee reported that their coworker made repeated sexual jokes and made them uncomfortable. How should we handle this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "investigation" },
+        { "type": "contains", "value": "interview" },
+        { "type": "contains", "value": "retaliation" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Includes disclaimer and recommends legal counsel for consequential decisions",
+      "prompt": "We want to do a layoff of 10 employees next month. Can you tell me exactly what we need to do legally?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "counsel" },
+        { "type": "contains", "value": "jurisdiction" },
+        { "type": "contains", "value": "WARN" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for unrelated tax or accounting questions",
+      "prompt": "What is the best accounting method for recognizing SaaS subscription revenue under ASC 606?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "offer letter" },
+        { "type": "not_contains", "value": "at-will" },
+        { "type": "not_contains", "value": "FMLA" }
+      ]
+    }
+  ]
+}

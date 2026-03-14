@@ -1,0 +1,133 @@
+{
+  "skill": "test-strategy",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on test pyramid question",
+      "prompt": "What's the right balance between unit, integration, and e2e tests for my web app?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "integration" },
+        { "type": "contains", "value": "unit" },
+        { "type": "contains", "value": "e2e" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Recommends integration tests as the primary weight in the trophy model",
+      "prompt": "Should I write more unit tests or more integration tests for my REST API service?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "integration" },
+        { "type": "contains", "value": "trophy" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Correctly advises on what to unit test vs integration test",
+      "prompt": "I have a function that validates email format and a function that saves a user to the database. Which should I unit test vs integration test?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "unit" },
+        { "type": "contains", "value": "integration" },
+        { "type": "contains", "value": "database" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can recommend contract testing for microservice boundaries",
+      "prompt": "We have two microservices that communicate over HTTP. How do we test the API contract between them without deploying both?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "contract" },
+        { "type": "contains", "value": "consumer" },
+        { "type": "contains", "value": "provider" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Correctly explains why flaky tests must not be tolerated",
+      "prompt": "Our CI has some tests that randomly fail. The team just re-runs CI when they fail. Is that okay?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "flaky" },
+        { "type": "not_contains", "value": "that is okay" },
+        { "type": "contains", "value": "root cause" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Warns against using line coverage as the sole quality metric",
+      "prompt": "Our team has a rule that all PRs must have 80% line coverage. Is this a good strategy?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "mutation" },
+        { "type": "not_contains", "value": "yes, 80% is perfect" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can explain and apply the Arrange-Act-Assert pattern",
+      "prompt": "How should I structure my unit tests for readability?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Arrange" },
+        { "type": "contains", "value": "Act" },
+        { "type": "contains", "value": "Assert" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Advises against testing implementation details",
+      "prompt": "My tests check that specific private methods are called when I call a public method. Is this a good pattern?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "behavior" },
+        { "type": "not_contains", "value": "yes, that is fine" },
+        { "type": "contains", "value": "implementation" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Recommends fakes over mocks for infrastructure",
+      "prompt": "Should I mock my database calls in integration tests or use a real database?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "real" },
+        { "type": "contains", "value": "fake" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Provides a systematic approach to fixing flaky tests",
+      "prompt": "I have a test that fails intermittently because of a race condition in async code. How do I fix it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "await" },
+        { "type": "contains", "value": "async" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Can design a testing strategy for a new service",
+      "prompt": "I'm building a new Node.js microservice with a Postgres database and REST API. Walk me through how to structure the test suite.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "unit" },
+        { "type": "contains", "value": "integration" },
+        { "type": "contains", "value": "factory" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for performance/load testing questions",
+      "prompt": "How do I load test my API to see how many requests per second it can handle?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "test pyramid" },
+        { "type": "not_contains", "value": "testing trophy" }
+      ]
+    }
+  ]
+}

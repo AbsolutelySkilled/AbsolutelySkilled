@@ -1,0 +1,165 @@
+{
+  "skill": "aeo-optimization",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers on featured snippet optimization request",
+      "prompt": "I want to win the featured snippet for the query 'what is content marketing'. How should I structure my content?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "40" },
+        { "type": "contains", "value": "paragraph" },
+        { "type": "contains", "value": "H2" },
+        { "type": "contains", "value": "position zero" },
+        { "type": "not_contains", "value": "meta description" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers on voice search optimization request",
+      "prompt": "How do I optimize my website content to appear in Google Assistant voice search results?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "featured snippet" },
+        { "type": "contains", "value": "conversational" },
+        { "type": "contains", "value": "FAQ" },
+        { "type": "not_contains", "value": "backlinks" },
+        { "type": "not_contains", "value": "page speed score" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers on PAA (People Also Ask) optimization request",
+      "prompt": "My competitor is appearing in People Also Ask boxes for questions related to my product. How do I get into those PAA cards?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "People Also Ask" },
+        { "type": "contains", "value": "answer" },
+        { "type": "contains", "value": "format" },
+        { "type": "contains", "value": "rank" },
+        { "type": "not_contains", "value": "domain authority" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent explains the three featured snippet types and their format requirements",
+      "prompt": "What are the different types of featured snippets and how should I format content for each?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "paragraph" },
+        { "type": "contains", "value": "list" },
+        { "type": "contains", "value": "table" },
+        { "type": "contains", "value": "40" },
+        { "type": "contains", "value": "ordered" },
+        { "type": "not_contains", "value": "rich snippet" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent explains PAA mining workflow with actionable steps",
+      "prompt": "Walk me through how to find People Also Ask questions to target for my SEO content strategy.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "PAA" },
+        { "type": "contains", "value": "expand" },
+        { "type": "contains", "value": "question" },
+        { "type": "contains", "value": "content" },
+        { "type": "not_contains", "value": "Google Ads" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent produces valid Speakable schema JSON-LD",
+      "prompt": "Write the Speakable schema JSON-LD for a web page about 'what is AEO' that has a summary section with CSS class 'article-summary'.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "SpeakableSpecification" },
+        { "type": "contains", "value": "cssSelector" },
+        { "type": "contains", "value": "article-summary" },
+        { "type": "contains", "value": "application/ld+json" },
+        { "type": "contains", "value": "WebPage" },
+        { "type": "not_contains", "value": "xpath" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent produces valid FAQPage schema JSON-LD for a two-question FAQ",
+      "prompt": "Generate FAQPage structured data schema for a page with these two questions: 'What is AEO?' and 'How does AEO differ from SEO?'",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "FAQPage" },
+        { "type": "contains", "value": "mainEntity" },
+        { "type": "contains", "value": "Question" },
+        { "type": "contains", "value": "acceptedAnswer" },
+        { "type": "contains", "value": "Answer" },
+        { "type": "contains", "value": "What is AEO" },
+        { "type": "not_contains", "value": "HowToStep" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent explains zero-click search strategy trade-offs correctly",
+      "prompt": "If I win a featured snippet, won't that actually reduce my click-through rate? Is it worth optimizing for snippets?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "brand" },
+        { "type": "contains", "value": "awareness" },
+        { "type": "contains", "value": "zero-click" },
+        { "type": "not_contains", "value": "always increases clicks" },
+        { "type": "not_contains", "value": "guaranteed traffic" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent correctly identifies that snippets require a top-10 ranking first (gotcha)",
+      "prompt": "My page ranks on page 3 for a query that has a featured snippet. How do I win that snippet?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "position" },
+        { "type": "contains", "value": "rank" },
+        { "type": "contains", "value": "top" },
+        { "type": "not_contains", "value": "you can win the snippet from page 3" },
+        { "type": "not_contains", "value": "schema alone" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent correctly handles the gotcha of FAQPage schema without visible content",
+      "prompt": "I added FAQPage schema to my page but the visible FAQ section is in a JavaScript-rendered accordion that's not in the initial HTML. Will the schema still work?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "visible" },
+        { "type": "contains", "value": "DOM" },
+        { "type": "not_contains", "value": "schema alone is sufficient" },
+        { "type": "not_contains", "value": "JavaScript doesn't matter" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination - agent does not invent a 'voice search ranking factor' separate from featured snippets",
+      "prompt": "Is there a separate Google ranking algorithm or index specifically for voice search results?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "featured snippet" },
+        { "type": "not_contains", "value": "voice search index" },
+        { "type": "not_contains", "value": "separate algorithm for voice" },
+        { "type": "not_contains", "value": "VoiceRank" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load - agent correctly directs to featured-snippets.md for snippet analysis detail",
+      "prompt": "I lost a featured snippet I held for 6 months. What's the step-by-step process to analyze what happened and reclaim it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "featured-snippets.md" },
+        { "type": "contains", "value": "analyze" },
+        { "type": "contains", "value": "format" },
+        { "type": "not_contains", "value": "contact Google" }
+      ]
+    }
+  ]
+}

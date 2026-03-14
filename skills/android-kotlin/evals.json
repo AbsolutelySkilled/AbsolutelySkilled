@@ -1,0 +1,176 @@
+{
+  "skill": "android-kotlin",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on a Jetpack Compose UI question",
+      "prompt": "Build me a login screen with email and password fields using Jetpack Compose",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "@Composable" },
+        { "type": "contains", "value": "TextField" },
+        { "type": "contains", "value": "remember" },
+        { "type": "code_valid", "language": "kotlin" }
+      ],
+      "source": "https://developer.android.com/develop/ui/compose"
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on Room database setup question",
+      "prompt": "How do I set up a Room database for storing user profiles in my Android app?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "@Entity" },
+        { "type": "contains", "value": "@Dao" },
+        { "type": "contains", "value": "@Database" },
+        { "type": "code_valid", "language": "kotlin" }
+      ],
+      "source": "https://developer.android.com/training/data-storage/room"
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on coroutines/async question",
+      "prompt": "What's the right way to make a network call in an Android ViewModel using coroutines?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "viewModelScope" },
+        { "type": "contains", "value": "launch" },
+        { "type": "contains", "value": "Dispatchers.IO" },
+        { "type": "code_valid", "language": "kotlin" }
+      ],
+      "source": "https://developer.android.com/kotlin/coroutines"
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent can create a ViewModel with StateFlow for Compose",
+      "prompt": "Create a ViewModel that fetches a list of products from a repository and exposes them as state for Jetpack Compose",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "StateFlow" },
+        { "type": "contains", "value": "MutableStateFlow" },
+        { "type": "contains", "value": "viewModelScope" },
+        { "type": "contains", "value": "collectAsStateWithLifecycle" },
+        { "type": "not_contains", "value": "LiveData" },
+        { "type": "code_valid", "language": "kotlin" }
+      ],
+      "source": "https://developer.android.com/develop/ui/compose/state"
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent can set up Hilt dependency injection for Android",
+      "prompt": "Set up Hilt DI to inject a Room database and repository into my ViewModel",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "@HiltViewModel" },
+        { "type": "contains", "value": "@Inject" },
+        { "type": "contains", "value": "@Module" },
+        { "type": "contains", "value": "@InstallIn" },
+        { "type": "contains", "value": "@Provides" },
+        { "type": "code_valid", "language": "kotlin" }
+      ],
+      "source": "https://developer.android.com/training/dependency-injection/hilt-android"
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent can implement Navigation Compose with arguments",
+      "prompt": "Set up navigation between a list screen and a detail screen, passing an item ID",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "NavHost" },
+        { "type": "contains", "value": "composable" },
+        { "type": "contains", "value": "navController" },
+        { "type": "contains", "value": "navigate" },
+        { "type": "code_valid", "language": "kotlin" }
+      ],
+      "source": "https://developer.android.com/develop/ui/compose/navigation"
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent can write a Room migration correctly",
+      "prompt": "I need to add a 'description' column to my existing 'notes' table in Room. How do I migrate without losing data?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Migration" },
+        { "type": "contains", "value": "ALTER TABLE" },
+        { "type": "contains", "value": "addMigrations" },
+        { "type": "not_contains", "value": "fallbackToDestructiveMigration" },
+        { "type": "code_valid", "language": "kotlin" }
+      ],
+      "source": "https://developer.android.com/training/data-storage/room/migrating-db-versions"
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent handles the recomposition gotcha correctly",
+      "prompt": "My Compose screen keeps recomposing in an infinite loop. I'm updating a state variable inside the composable body. What's wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "LaunchedEffect" },
+        { "type": "contains", "value": "recomposition" },
+        { "type": "contains", "value": "side effect" }
+      ],
+      "source": "https://developer.android.com/develop/ui/compose/side-effects"
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent handles lifecycle-aware collection correctly",
+      "prompt": "Should I use collectAsState or collectAsStateWithLifecycle in Compose?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "collectAsStateWithLifecycle" },
+        { "type": "contains", "value": "lifecycle" }
+      ],
+      "source": "https://developer.android.com/develop/ui/compose/state#state-in-composables"
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent does not hallucinate deprecated Compose APIs",
+      "prompt": "Create a Compose button with a click handler",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Button" },
+        { "type": "contains", "value": "onClick" },
+        { "type": "not_contains", "value": "android.widget.Button" },
+        { "type": "not_contains", "value": "setOnClickListener" },
+        { "type": "code_valid", "language": "kotlin" }
+      ],
+      "source": "https://developer.android.com/develop/ui/compose/components/button"
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent does not recommend deprecated AsyncTask",
+      "prompt": "How do I run background work in my Android app?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "coroutines" },
+        { "type": "not_contains", "value": "AsyncTask" },
+        { "type": "not_contains", "value": "Loader" }
+      ],
+      "source": "https://developer.android.com/kotlin/coroutines"
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent correctly references compose-patterns.md for advanced theming",
+      "prompt": "I need to create a custom Material 3 theme with dynamic colors for my Android app. Where can I find detailed theming patterns?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/compose-patterns.md" },
+        { "type": "contains", "value": "Material" }
+      ],
+      "source": "https://developer.android.com/develop/ui/compose/designsystems/material3"
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent can configure Play Store release signing",
+      "prompt": "How do I sign my Android app for release and upload to the Play Store?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "signingConfigs" },
+        { "type": "contains", "value": "keystore" },
+        { "type": "contains", "value": "bundleRelease" },
+        { "type": "contains", "value": "isMinifyEnabled" }
+      ],
+      "source": "https://developer.android.com/studio/publish/app-signing"
+    }
+  ]
+}

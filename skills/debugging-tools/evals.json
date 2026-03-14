@@ -1,0 +1,132 @@
+{
+  "skill": "debugging-tools",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on Chrome DevTools performance debugging request",
+      "prompt": "My React app takes 3 seconds to load. How do I find what's slow using Chrome DevTools?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Performance" },
+        { "type": "contains", "value": "Flame Chart" },
+        { "type": "contains", "value": "Long Tasks" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on memory leak investigation request",
+      "prompt": "My Node.js server's memory keeps growing over time and eventually crashes. How do I find the leak?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "heap snapshot" },
+        { "type": "contains", "value": "Comparison" },
+        { "type": "contains", "value": "delta" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on Node.js debugger / inspector request",
+      "prompt": "How do I attach Chrome DevTools to a running Node.js process to use breakpoints?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "--inspect" },
+        { "type": "contains", "value": "chrome://inspect" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can write a working strace command for file tracing",
+      "prompt": "My program silently fails to read its config file. Show me how to use strace to find which file path it's trying to open.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "strace" },
+        { "type": "contains", "value": "openat" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can explain how to use conditional breakpoints",
+      "prompt": "I have a loop over 10,000 items and the bug only happens for one specific item ID. I don't want the debugger stopping on every iteration. What should I do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "conditional breakpoint" },
+        { "type": "contains", "value": "condition" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can explain logpoints as an alternative to console.log",
+      "prompt": "I keep adding and removing console.log statements while debugging. Is there a better way?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "logpoint" },
+        { "type": "not_contains", "value": "console.log is the best" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can explain reading a call stack correctly",
+      "prompt": "I see an error at the top of my stack trace but I don't understand what caused it. How do I read a call stack?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "frame" },
+        { "type": "contains", "value": "root cause" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can produce correct curl command for timing network phases",
+      "prompt": "How do I measure exactly how long DNS, TCP connect, and TLS handshake take for a curl request?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "curl" },
+        { "type": "contains", "value": "time_namelookup" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Can explain core dump analysis with lldb",
+      "prompt": "My C++ daemon crashed and produced a core file. Walk me through analyzing it with lldb.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "lldb" },
+        { "type": "contains", "value": "bt" },
+        { "type": "contains", "value": "backtrace" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Applies the binary-search principle to a debugging scenario",
+      "prompt": "An API request is taking 5 seconds. I don't know if it's slow in the frontend, the backend, or the database. How do I approach this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "isolate" },
+        { "type": "contains", "value": "network" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Warns against fixing without understanding root cause",
+      "prompt": "My test started passing after I changed a random line. Should I just commit this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "root cause" },
+        { "type": "not_contains", "value": "yes, just commit" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for code review or refactoring task",
+      "prompt": "Can you review this function and suggest better variable names?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "strace" },
+        { "type": "not_contains", "value": "heap snapshot" },
+        { "type": "not_contains", "value": "Chrome DevTools" }
+      ]
+    }
+  ]
+}

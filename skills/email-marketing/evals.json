@@ -1,0 +1,137 @@
+{
+  "skill": "email-marketing",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on drip sequence design request",
+      "prompt": "Help me design a welcome email drip sequence for a SaaS product",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "welcome" },
+        { "type": "contains", "value": "sequence" },
+        { "type": "contains", "value": "onboarding" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on deliverability question",
+      "prompt": "My emails are landing in spam. How do I fix my email deliverability?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "SPF" },
+        { "type": "contains", "value": "DKIM" },
+        { "type": "contains", "value": "DMARC" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Provides subject line formulas when asked",
+      "prompt": "Give me a formula for writing high-converting email subject lines",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "curiosity" },
+        { "type": "contains", "value": "open rate" },
+        { "type": "contains", "value": "characters" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Explains A/B testing process with sample sizes",
+      "prompt": "How should I A/B test my email subject lines?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "variant" },
+        { "type": "contains", "value": "sample" },
+        { "type": "contains", "value": "statistical" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Explains segmentation strategy",
+      "prompt": "What email segmentation strategy should I use for my e-commerce store?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "segment" },
+        { "type": "contains", "value": "engagement" },
+        { "type": "contains", "value": "active" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Provides mobile-first email design guidance",
+      "prompt": "How do I design email templates that look good on mobile?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "single-column" },
+        { "type": "contains", "value": "font size" },
+        { "type": "contains", "value": "tap" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Warns against purchased email lists",
+      "prompt": "I bought an email list of 50,000 contacts. Should I email all of them for my launch?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "reputation" },
+        { "type": "not_contains", "value": "go ahead" },
+        { "type": "contains", "value": "opt-in" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Explains lifecycle automation triggers",
+      "prompt": "What automated email flows should I set up for my SaaS product?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "trigger" },
+        { "type": "contains", "value": "onboarding" },
+        { "type": "contains", "value": "re-engagement" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Explains key email metrics and healthy benchmarks",
+      "prompt": "What is a good open rate for email marketing? How should I measure success?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "open rate" },
+        { "type": "contains", "value": "click" },
+        { "type": "contains", "value": "benchmark" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Explains DMARC setup correctly with p=none starting point",
+      "prompt": "Walk me through setting up DMARC for my sending domain",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "p=none" },
+        { "type": "contains", "value": "quarantine" },
+        { "type": "contains", "value": "reject" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not trigger for SMS marketing questions",
+      "prompt": "How should I design my SMS drip campaign for new subscribers?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "subject line" },
+        { "type": "not_contains", "value": "open rate" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Advises testing one variable at a time",
+      "prompt": "I want to test different subject lines, send times, and button colors all at once. Is that ok?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "one variable" },
+        { "type": "not_contains", "value": "yes, that is fine" },
+        { "type": "contains", "value": "attribute" }
+      ]
+    }
+  ]
+}

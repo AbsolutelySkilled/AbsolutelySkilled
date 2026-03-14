@@ -1,0 +1,150 @@
+{
+  "skill": "data-pipelines",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers on ETL pipeline design request",
+      "prompt": "I need to build a pipeline that pulls data from our Postgres database and loads it into BigQuery for analytics",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ELT" },
+        { "type": "contains", "value": "staging" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers on Airflow DAG question",
+      "prompt": "How should I structure my Airflow DAG for a daily data pipeline?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "DAG" },
+        { "type": "contains", "value": "default_args" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers on streaming vs batch architecture question",
+      "prompt": "Should I use streaming or batch processing for our clickstream data?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "latency" },
+        { "type": "contains", "value": "batch" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent can write a correct dbt incremental model",
+      "prompt": "Write a dbt incremental model for an orders table that loads new records based on created_at timestamp",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "materialized='incremental'" },
+        { "type": "contains", "value": "unique_key" },
+        { "type": "contains", "value": "is_incremental()" },
+        { "type": "code_valid", "language": "python" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent can write a correct Airflow DAG with proper defaults",
+      "prompt": "Create an Airflow DAG that runs a dbt transformation daily at 6am UTC with 2 retries",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "retries" },
+        { "type": "contains", "value": "schedule" },
+        { "type": "contains", "value": "DAG" },
+        { "type": "code_valid", "language": "python" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent can optimize a Spark job with broadcast join",
+      "prompt": "My Spark job joining a 500GB orders table with a 50MB products table is running slow. How do I optimize it?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "broadcast" },
+        { "type": "contains", "value": "shuffle" },
+        { "type": "code_valid", "language": "python" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent can design a dbt project with proper layering",
+      "prompt": "How should I organize my dbt models for a customer analytics pipeline?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "staging" },
+        { "type": "contains", "value": "intermediate" },
+        { "type": "contains", "value": "mart" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent can implement data quality checks in dbt",
+      "prompt": "How do I add data quality tests to my dbt models to catch bad data before it reaches the dashboard?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "not_null" },
+        { "type": "contains", "value": "unique" },
+        { "type": "contains", "value": "tests" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent handles data skew gotcha in Spark",
+      "prompt": "One of my Spark tasks takes 10x longer than the others during a join. What's happening and how do I fix it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "skew" },
+        { "type": "contains", "value": "salt" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent warns about idempotency in pipeline retries",
+      "prompt": "My Airflow DAG failed halfway through and I want to retry it. What should I worry about?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "idempoten" },
+        { "type": "contains", "value": "duplicate" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent handles late-arriving data in streaming edge case",
+      "prompt": "We have a Kafka stream but some events arrive up to 2 hours late. How do we handle this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "watermark" },
+        { "type": "contains", "value": "window" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not hallucinate non-existent Airflow operator",
+      "prompt": "Use the Airflow StreamingKafkaToWarehouseOperator to move data from Kafka to Snowflake",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "StreamingKafkaToWarehouseOperator" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent does not recommend deprecated Airflow patterns",
+      "prompt": "How do I write an Airflow DAG using provide_context=True?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "provide_context=True" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "Agent references the streaming-architecture reference file when needed",
+      "prompt": "I need to build a real-time event processing system with exactly-once semantics using Kafka and Flink",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/streaming-architecture.md" }
+      ]
+    }
+  ]
+}

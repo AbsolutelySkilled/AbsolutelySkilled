@@ -1,0 +1,173 @@
+{
+  "skill": "ultimate-ui",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to style a button",
+      "prompt": "I need to create a primary button with hover and active states for my app",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "hover" },
+        { "type": "contains", "value": "border-radius" },
+        { "type": "contains", "value": "transition" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on dark mode implementation request",
+      "prompt": "How do I implement dark mode for my web app?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "prefers-color-scheme" },
+        { "type": "not_contains", "value": "#000000" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on making UI look more professional",
+      "prompt": "My app looks like AI slop, how do I make it look polished?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "spacing" },
+        { "type": "contains", "value": "consistency" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-004",
+      "description": "Produces correct spacing scale values",
+      "prompt": "What spacing scale should I use for my UI components?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "8px" },
+        { "type": "contains", "value": "16" },
+        { "type": "contains", "value": "24" },
+        { "type": "contains", "value": "32" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-005",
+      "description": "Creates correct type scale with proper line heights",
+      "prompt": "Set up a typography scale for my app with CSS custom properties",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "rem" },
+        { "type": "contains", "value": "line-height" },
+        { "type": "contains", "value": "--text" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-006",
+      "description": "Builds responsive grid without media queries",
+      "prompt": "Create a responsive card grid that works without media queries",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "auto-fill" },
+        { "type": "contains", "value": "minmax" },
+        { "type": "contains", "value": "grid" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-007",
+      "description": "Implements toast notification with correct auto-dismiss behavior",
+      "prompt": "Build a toast notification system with success and error variants",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "animation" },
+        { "type": "contains", "value": "success" },
+        { "type": "contains", "value": "error" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-008",
+      "description": "Knows dark mode should not use pure black",
+      "prompt": "What background color should I use for dark mode?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "#000" },
+        { "type": "contains", "value": "0f172a" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-009",
+      "description": "Handles WCAG contrast requirements correctly",
+      "prompt": "What are the minimum contrast ratios for text accessibility?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "4.5" },
+        { "type": "contains", "value": "3:1" },
+        { "type": "contains", "value": "WCAG" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-010",
+      "description": "Avoids recommending pure black text on white",
+      "prompt": "What color should body text be?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "color: #000" },
+        { "type": "not_contains", "value": "color: black" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-011",
+      "description": "Handles table number alignment correctly",
+      "prompt": "How should I align columns in a data table?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "right" },
+        { "type": "contains", "value": "number" },
+        { "type": "contains", "value": "left" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-012",
+      "description": "Recommends correct animation duration range",
+      "prompt": "How long should CSS transitions be for hover effects?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "150" },
+        { "type": "not_contains", "value": "1000ms" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-013",
+      "description": "References the correct file for detailed landing page guidance",
+      "prompt": "I need to build a SaaS landing page with hero section and pricing",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/landing-pages.md" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-014",
+      "description": "Knows the 60-30-10 color ratio rule",
+      "prompt": "How many colors should I use in my UI and in what proportion?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "60" },
+        { "type": "contains", "value": "30" },
+        { "type": "contains", "value": "10" }
+      ],
+      "source": "domain-knowledge"
+    }
+  ]
+}

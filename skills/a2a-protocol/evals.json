@@ -1,0 +1,168 @@
+{
+  "skill": "a2a-protocol",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when asked about agent-to-agent communication",
+      "prompt": "How do I set up communication between two AI agents using the A2A protocol?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "agent card" },
+        { "type": "contains", "value": "sendMessage" },
+        { "type": "contains", "value": "JSON-RPC" }
+      ],
+      "source": "https://a2a-protocol.org/latest/"
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers when asked about agent interoperability",
+      "prompt": "What protocol should I use to make agents from different vendors work together?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "A2A" },
+        { "type": "contains", "value": "agent card" }
+      ],
+      "source": "https://a2a-protocol.org/latest/topics/what-is-a2a/"
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill correctly distinguishes A2A from MCP",
+      "prompt": "What is the difference between A2A and MCP protocols?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "agent-to-agent" },
+        { "type": "contains", "value": "tools" }
+      ],
+      "source": "https://a2a-protocol.org/latest/topics/what-is-a2a/"
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent can create a valid agent card JSON",
+      "prompt": "Create an A2A agent card for a weather service agent that supports streaming",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "supported_interfaces" },
+        { "type": "contains", "value": "capabilities" },
+        { "type": "contains", "value": "streaming" },
+        { "type": "contains", "value": "skills" },
+        { "type": "contains", "value": "protocol_binding" }
+      ],
+      "source": "https://a2a-protocol.org/latest/definitions/"
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent can construct a sendMessage JSON-RPC request",
+      "prompt": "Write a JSON-RPC request to send a message to an A2A agent asking it to search for flights",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "a2a.sendMessage" },
+        { "type": "contains", "value": "jsonrpc" },
+        { "type": "contains", "value": "parts" },
+        { "type": "contains", "value": "role" },
+        { "type": "not_contains", "value": "a2a.send_message" }
+      ],
+      "source": "https://a2a-protocol.org/latest/specification/"
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent can set up push notification webhook for a task",
+      "prompt": "Configure A2A push notifications for a long-running task with bearer token auth",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "createTaskPushNotificationConfig" },
+        { "type": "contains", "value": "bearer" },
+        { "type": "contains", "value": "url" },
+        { "type": "not_contains", "value": "a2a.registerWebhook" }
+      ],
+      "source": "https://a2a-protocol.org/latest/specification/"
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent correctly lists all task states",
+      "prompt": "What are all the possible task states in the A2A protocol?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "submitted" },
+        { "type": "contains", "value": "working" },
+        { "type": "contains", "value": "completed" },
+        { "type": "contains", "value": "failed" },
+        { "type": "contains", "value": "input-required" },
+        { "type": "contains", "value": "canceled" }
+      ],
+      "source": "https://a2a-protocol.org/latest/specification/"
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent handles multi-turn conversation with input-required state",
+      "prompt": "How do I handle multi-turn conversations in A2A when the agent needs more input?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "input-required" },
+        { "type": "contains", "value": "task_id" },
+        { "type": "contains", "value": "context_id" }
+      ],
+      "source": "https://a2a-protocol.org/latest/specification/"
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent knows about well-known URI for agent discovery",
+      "prompt": "Where do A2A agents publish their agent cards?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": ".well-known/agent-card.json" },
+        { "type": "not_contains", "value": ".well-known/agent.json" }
+      ],
+      "source": "https://a2a-protocol.org/latest/topics/agent-discovery/"
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent does not hallucinate non-existent A2A methods",
+      "prompt": "Send a task to an A2A agent using the protocol",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "a2a.sendMessage" },
+        { "type": "not_contains", "value": "a2a.createTask" },
+        { "type": "not_contains", "value": "a2a.submitTask" },
+        { "type": "not_contains", "value": "a2a.executeTask" }
+      ],
+      "source": "https://a2a-protocol.org/latest/specification/"
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent knows streaming requires capability declaration",
+      "prompt": "How do I use streaming in A2A?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "capabilities" },
+        { "type": "contains", "value": "streaming" },
+        { "type": "contains", "value": "sendStreamingMessage" }
+      ],
+      "source": "https://a2a-protocol.org/latest/specification/"
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent correctly handles TaskNotFoundError",
+      "prompt": "What happens when I try to get a task that doesn't exist in A2A?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "TaskNotFoundError" },
+        { "type": "not_contains", "value": "404" }
+      ],
+      "source": "https://a2a-protocol.org/latest/specification/"
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent references the agent-card reference file when building complex cards",
+      "prompt": "Build a comprehensive A2A agent card with OAuth2, multiple skills, and streaming support",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "oauth2" },
+        { "type": "contains", "value": "skills" },
+        { "type": "contains", "value": "streaming" },
+        { "type": "contains", "value": "security_schemes" }
+      ],
+      "source": "https://a2a-protocol.org/latest/definitions/"
+    }
+  ]
+}

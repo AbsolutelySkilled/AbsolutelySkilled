@@ -1,0 +1,163 @@
+{
+  "skill": "frontend-developer",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to improve page load performance",
+      "prompt": "My landing page takes 6 seconds to load. How do I make it faster?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "LCP" },
+        { "type": "contains", "value": "Lighthouse" },
+        { "type": "contains", "value": "render-blocking" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on accessibility review request",
+      "prompt": "Review this form for accessibility issues",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "label" },
+        { "type": "contains", "value": "keyboard" },
+        { "type": "contains", "value": "aria" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on CSS layout question",
+      "prompt": "What's the best way to create a responsive card grid that adapts to its container?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "container" },
+        { "type": "contains", "value": "grid" },
+        { "type": "code_valid", "language": "css" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Produces correct semantic HTML for navigation",
+      "prompt": "Write the HTML for a site header with logo, navigation links, and a search form",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "<nav" },
+        { "type": "contains", "value": "<header" },
+        { "type": "contains", "value": "aria-label" },
+        { "type": "contains", "value": "<form" },
+        { "type": "not_contains", "value": "<div class=\"nav\"" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Provides correct image optimization with responsive images",
+      "prompt": "How should I add a hero image that loads fast and looks good on all screen sizes?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "srcset" },
+        { "type": "contains", "value": "loading" },
+        { "type": "contains", "value": "fetchpriority" },
+        { "type": "contains", "value": "alt" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Recommends correct testing approach for a component",
+      "prompt": "How should I test a dropdown menu component?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "getByRole" },
+        { "type": "contains", "value": "keyboard" },
+        { "type": "not_contains", "value": "getByClassName" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Uses modern CSS instead of JS for theming",
+      "prompt": "Implement a dark mode toggle for my website",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "prefers-color-scheme" },
+        { "type": "contains", "value": "custom properties" },
+        { "type": "code_valid", "language": "css" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Handles state management decision correctly",
+      "prompt": "I have a list page with filters, sorting, and pagination. Where should I put the state?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "URL" },
+        { "type": "contains", "value": "search params" },
+        { "type": "not_contains", "value": "Redux" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Catches common accessibility gotcha with custom button",
+      "prompt": "Review this code: <div class=\"btn\" onclick=\"submit()\">Submit</div>",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "<button" },
+        { "type": "contains", "value": "keyboard" },
+        { "type": "contains", "value": "semantic" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Avoids recommending deprecated performance techniques",
+      "prompt": "Should I use HTTP/1.1 domain sharding and sprite sheets to optimize my site?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "HTTP/2" },
+        { "type": "not_contains", "value": "domain sharding is recommended" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not hallucinate CSS properties that don't exist",
+      "prompt": "How do I use the CSS parent-of selector?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": ":has()" },
+        { "type": "not_contains", "value": "parent-of" },
+        { "type": "not_contains", "value": ":parent" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References the correct reference file for deep performance work",
+      "prompt": "I need to deeply optimize my Core Web Vitals. Walk me through everything.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/web-performance.md" },
+        { "type": "contains", "value": "LCP" },
+        { "type": "contains", "value": "CLS" },
+        { "type": "contains", "value": "INP" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Provides correct font loading strategy",
+      "prompt": "My custom fonts cause a flash of unstyled text. How do I fix it?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "font-display" },
+        { "type": "contains", "value": "preload" },
+        { "type": "code_valid", "language": "html" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "Recommends integration tests over unit tests for UI components",
+      "prompt": "Should I write unit tests or integration tests for my React components?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "integration" },
+        { "type": "contains", "value": "behavior" },
+        { "type": "contains", "value": "user" }
+      ]
+    }
+  ]
+}

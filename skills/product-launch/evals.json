@@ -1,0 +1,134 @@
+{
+  "skill": "product-launch",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "type": "trigger",
+      "description": "Triggers on go-to-market strategy request",
+      "prompt": "I need a go-to-market plan for our new developer tool that speeds up CI/CD pipelines. Help me plan the launch.",
+      "assertions": [
+        { "type": "contains", "value": "target" },
+        { "type": "contains", "value": "positioning" },
+        { "type": "contains", "value": "channel" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "type": "trigger",
+      "description": "Triggers on launch checklist request",
+      "prompt": "We're launching a new feature next week. Can you give me a comprehensive launch checklist?",
+      "assertions": [
+        { "type": "contains", "value": "engineering" },
+        { "type": "contains", "value": "marketing" },
+        { "type": "contains", "value": "support" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "type": "trigger",
+      "description": "Triggers on rollout strategy request",
+      "prompt": "How should we roll out our new checkout flow? We're worried about bugs reaching all users at once.",
+      "assertions": [
+        { "type": "contains", "value": "feature flag" },
+        { "type": "contains", "value": "percentage" },
+        { "type": "contains", "value": "rollback" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "type": "trigger",
+      "description": "Triggers on beta program design request",
+      "prompt": "We want to run a closed beta before launching our SaaS product. How should we structure it?",
+      "assertions": [
+        { "type": "contains", "value": "feedback" },
+        { "type": "contains", "value": "exit criteria" },
+        { "type": "contains", "value": "recruitment" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "type": "core_task",
+      "description": "Can write a positioning statement in the correct format",
+      "prompt": "Help me write a positioning statement for a no-code database tool targeting small business owners who currently use spreadsheets.",
+      "assertions": [
+        { "type": "contains", "value": "For" },
+        { "type": "contains", "value": "who" },
+        { "type": "contains", "value": "unlike" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "type": "core_task",
+      "description": "Can build a RACI for a cross-functional launch",
+      "prompt": "We have product, engineering, marketing, sales, and support all involved in our launch. How do we assign ownership across all the deliverables?",
+      "assertions": [
+        { "type": "contains", "value": "RACI" },
+        { "type": "contains", "value": "owner" },
+        { "type": "contains", "value": "responsible" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "type": "core_task",
+      "description": "Can define launch success metrics beyond vanity metrics",
+      "prompt": "What metrics should I track to know if our product launch was successful? We're launching a project management tool for remote teams.",
+      "assertions": [
+        { "type": "contains", "value": "activation" },
+        { "type": "contains", "value": "retention" },
+        { "type": "not_contains", "value": "page views is a good" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "type": "core_task",
+      "description": "Can assign a launch tier to a given scenario",
+      "prompt": "We're shipping a small UX improvement to our settings page - just a new toggle. What kind of launch process does this need?",
+      "assertions": [
+        { "type": "contains", "value": "tier" },
+        { "type": "not_contains", "value": "press release" },
+        { "type": "not_contains", "value": "all-hands" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "type": "gotcha",
+      "description": "Warns against a big-bang rollout for a risky change",
+      "prompt": "We're flipping our billing system to a new provider. We're going to push it to all users at 9am on Monday. The code is ready. Is there anything we're missing?",
+      "assertions": [
+        { "type": "contains", "value": "rollback" },
+        { "type": "contains", "value": "phased" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "type": "gotcha",
+      "description": "Flags missing internal launch before external announcement",
+      "prompt": "Engineering is done, marketing has the blog post ready, we launch Monday. Are we good to go?",
+      "assertions": [
+        { "type": "contains", "value": "support" },
+        { "type": "contains", "value": "internal" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "type": "gotcha",
+      "description": "Warns against defining success metrics after launch",
+      "prompt": "Our launch went live two days ago. Now leadership wants to know if it was a success. How do I evaluate it?",
+      "assertions": [
+        { "type": "contains", "value": "before" },
+        { "type": "contains", "value": "metric" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "type": "anti_hallucination",
+      "description": "Does not invent a proprietary launch framework that does not exist",
+      "prompt": "Tell me about the LAUNCH-360 methodology for product launches.",
+      "assertions": [
+        { "type": "not_contains", "value": "LAUNCH-360 is a" },
+        { "type": "not_contains", "value": "LAUNCH-360 methodology consists of" }
+      ]
+    }
+  ]
+}

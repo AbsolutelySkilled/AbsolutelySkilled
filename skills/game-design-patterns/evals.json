@@ -1,0 +1,146 @@
+{
+  "skill": "game-design-patterns",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request for character state management",
+      "prompt": "My player character has idle, run, jump, and attack states. How should I structure this in my game?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "state machine" },
+        { "type": "contains", "value": "transition" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on object pooling performance question",
+      "prompt": "My bullet hell game drops frames when spawning hundreds of projectiles. How do I fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pool" },
+        { "type": "contains", "value": "pre-allocat" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on game event system architecture question",
+      "prompt": "How do I decouple my damage system from the UI health bar and sound effects in my game?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "event" },
+        { "type": "contains", "value": "subscribe" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can implement a finite state machine with typed states",
+      "prompt": "Write a TypeScript state machine for a game character with Idle, Running, and Jumping states",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "enter" },
+        { "type": "contains", "value": "exit" },
+        { "type": "contains", "value": "transition" },
+        { "type": "not_contains", "value": "if (state === 'idle')" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can implement an object pool with acquire/release",
+      "prompt": "Implement a generic object pool in TypeScript for my game's particle system",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "acquire" },
+        { "type": "contains", "value": "release" },
+        { "type": "contains", "value": "available" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can implement command pattern with undo for game editor",
+      "prompt": "I'm building a level editor and need undo/redo. Show me the command pattern in TypeScript.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "execute" },
+        { "type": "contains", "value": "undo" },
+        { "type": "contains", "value": "history" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can implement a typed event bus for game systems",
+      "prompt": "Create a type-safe event system in TypeScript where game systems can subscribe to typed events like DamageTaken and EnemyKilled",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "EventMap" },
+        { "type": "contains", "value": "emit" },
+        { "type": "contains", "value": "on" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can use commands for replay system",
+      "prompt": "How do I implement a replay system for my game using the command pattern?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "serialize" },
+        { "type": "contains", "value": "command" },
+        { "type": "contains", "value": "timestamp" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Warns against boolean state flags",
+      "prompt": "I have isJumping, isAttacking, isDashing booleans for my character. Is this a good approach?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "state machine" },
+        { "type": "not_contains", "value": "this is a good approach" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Handles edge case of unbounded command history",
+      "prompt": "My game's undo system uses more and more memory the longer the player plays. What's wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cap" },
+        { "type": "contains", "value": "history" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Warns about leaked event subscriptions",
+      "prompt": "Enemies in my game keep reacting to events after they're destroyed. What's happening?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "unsubscribe" },
+        { "type": "contains", "value": "listener" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not invent game patterns that don't exist",
+      "prompt": "How do I implement the Reactive Entity Mesh pattern for my game's AI?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "Reactive Entity Mesh is" },
+        { "type": "not_contains", "value": "The Reactive Entity Mesh pattern" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "References state-machines.md for hierarchical FSM detail",
+      "prompt": "My AI needs nested states - a patrol state that contains sub-states for walking and looking around. How do I architect this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "hierarchical" },
+        { "type": "contains", "value": "sub-state" }
+      ]
+    }
+  ]
+}

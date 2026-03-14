@@ -1,0 +1,140 @@
+{
+  "skill": "chaos-engineering",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on chaos experiment design request",
+      "prompt": "We want to test whether our checkout service handles inventory service outages gracefully. Where do we start with chaos engineering?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "steady state" },
+        { "type": "contains", "value": "hypothesis" },
+        { "type": "contains", "value": "blast radius" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on game day planning",
+      "prompt": "My team wants to run its first game day exercise next month. How should we plan and facilitate it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "scenario" },
+        { "type": "contains", "value": "debrief" },
+        { "type": "contains", "value": "runbook" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on fault injection tooling question",
+      "prompt": "What are the differences between Chaos Monkey, Litmus, Gremlin, and AWS Fault Injection Simulator? When would I pick each?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Litmus" },
+        { "type": "contains", "value": "Gremlin" },
+        { "type": "contains", "value": "Kubernetes" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: writing a well-structured chaos experiment",
+      "prompt": "Write a chaos experiment to validate that our API gateway correctly rate-limits and returns 429s when the backend is overwhelmed, without dropping legitimate requests.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "hypothesis" },
+        { "type": "contains", "value": "steady state" },
+        { "type": "contains", "value": "429" },
+        { "type": "contains", "value": "kill switch" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: network latency injection implementation",
+      "prompt": "How do I inject 300ms of network latency between my order service and the payment service in our Kubernetes staging cluster?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Toxiproxy" },
+        { "type": "contains", "value": "latency" },
+        { "type": "contains", "value": "staging" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: circuit breaker validation under chaos",
+      "prompt": "I've implemented a circuit breaker for our payment gateway integration. How do I verify it actually works correctly in a chaos experiment?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "OPEN" },
+        { "type": "contains", "value": "fallback" },
+        { "type": "contains", "value": "threshold" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: measuring and improving MTTR",
+      "prompt": "After running several game days, our MTTR is around 45 minutes for database-related incidents. What are the levers to bring that down?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "detection" },
+        { "type": "contains", "value": "runbook" },
+        { "type": "contains", "value": "automat" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: database failover experiment",
+      "prompt": "How do I safely test that our application handles a Postgres primary failover without data loss or requiring a restart?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "replica" },
+        { "type": "contains", "value": "connection pool" },
+        { "type": "contains", "value": "replication lag" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns against running chaos without observability",
+      "prompt": "We want to start chaos engineering but we only have basic logging set up. Can we still run experiments?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "observability" },
+        { "type": "contains", "value": "steady state" },
+        { "type": "not_contains", "value": "yes, you can start without" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns against jumping straight to production",
+      "prompt": "We're thinking about running chaos experiments directly in production to get the most realistic results. Is that the right approach?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "staging" },
+        { "type": "contains", "value": "blast radius" },
+        { "type": "not_contains", "value": "production is always the best place to start" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns against no hypothesis / random breaking",
+      "prompt": "Can I just start randomly killing pods and services to see what happens? That seems like the simplest way to find weaknesses.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "hypothesis" },
+        { "type": "contains", "value": "steady state" },
+        { "type": "not_contains", "value": "random killing is a good starting point" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not recommend skipping the kill switch",
+      "prompt": "Setting up a kill switch for our chaos experiments feels like extra overhead. Do we really need one for staging experiments?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "kill switch" },
+        { "type": "not_contains", "value": "skip" },
+        { "type": "not_contains", "value": "not necessary" },
+        { "type": "not_contains", "value": "optional in staging" }
+      ]
+    }
+  ]
+}

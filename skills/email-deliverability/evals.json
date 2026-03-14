@@ -1,0 +1,165 @@
+{
+  "skill": "email-deliverability",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when user asks about SPF setup",
+      "prompt": "I need to set up email authentication for my new domain. Where do I start with SPF?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "v=spf1" },
+        { "type": "contains", "value": "-all" },
+        { "type": "contains", "value": "include:" },
+        { "type": "contains", "value": "TXT" }
+      ],
+      "source": "https://datatracker.ietf.org/doc/html/rfc7208"
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers when user asks why emails go to spam",
+      "prompt": "Our marketing emails keep landing in Gmail spam. How do I diagnose this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "SPF" },
+        { "type": "contains", "value": "DKIM" },
+        { "type": "contains", "value": "DMARC" },
+        { "type": "contains", "value": "reputation" }
+      ],
+      "source": "https://support.google.com/a/answer/81126"
+    },
+    {
+      "id": "eval-003",
+      "description": "Agent can generate a correct DMARC record for monitoring phase",
+      "prompt": "Generate a DMARC DNS record for example.com in monitoring mode that sends aggregate reports to dmarc@example.com",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "_dmarc.example.com" },
+        { "type": "contains", "value": "v=DMARC1" },
+        { "type": "contains", "value": "p=none" },
+        { "type": "contains", "value": "rua=mailto:dmarc@example.com" },
+        { "type": "not_contains", "value": "p=reject" },
+        { "type": "not_contains", "value": "p=quarantine" }
+      ],
+      "source": "https://datatracker.ietf.org/doc/html/rfc7489"
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent provides a correct IP warm-up schedule for a new sender",
+      "prompt": "We just got a new dedicated IP for sending 50K marketing emails per day. Create a warm-up plan.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "engaged" },
+        { "type": "contains", "value": "bounce" },
+        { "type": "contains", "value": "complaint" },
+        { "type": "contains", "value": "week" }
+      ],
+      "source": "https://support.google.com/a/answer/81126"
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent correctly explains the SPF 10-lookup limit",
+      "prompt": "My SPF record has 12 includes and emails are failing SPF checks. What's wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "10" },
+        { "type": "contains", "value": "lookup" },
+        { "type": "contains", "value": "permerror" },
+        { "type": "contains", "value": "flatten" }
+      ],
+      "source": "https://datatracker.ietf.org/doc/html/rfc7208"
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent generates correct DKIM DNS record format",
+      "prompt": "Show me what the DKIM DNS TXT record looks like for selector 'mail1' on domain example.com",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "mail1._domainkey.example.com" },
+        { "type": "contains", "value": "v=DKIM1" },
+        { "type": "contains", "value": "k=rsa" },
+        { "type": "contains", "value": "p=" },
+        { "type": "contains", "value": "2048" }
+      ],
+      "source": "https://datatracker.ietf.org/doc/html/rfc6376"
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent correctly classifies bounce types and recommends actions",
+      "prompt": "We're getting a mix of 550 5.1.1 and 452 4.2.2 bounces. What do each of these mean and what should we do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "hard bounce" },
+        { "type": "contains", "value": "soft bounce" },
+        { "type": "contains", "value": "remove" },
+        { "type": "contains", "value": "retry" }
+      ],
+      "source": "https://datatracker.ietf.org/doc/html/rfc3463"
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent explains DMARC alignment correctly",
+      "prompt": "What's the difference between relaxed and strict DMARC alignment? Which should I use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "adkim" },
+        { "type": "contains", "value": "aspf" },
+        { "type": "contains", "value": "relaxed" },
+        { "type": "contains", "value": "strict" },
+        { "type": "contains", "value": "subdomain" }
+      ],
+      "source": "https://datatracker.ietf.org/doc/html/rfc7489"
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent warns against skipping warm-up and buying lists",
+      "prompt": "We just bought a list of 500K emails and want to send a blast from our new IP today. How do we set this up?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "warm-up" },
+        { "type": "contains", "value": "spam trap" },
+        { "type": "contains", "value": "blocklist" },
+        { "type": "contains", "value": "opt-in" }
+      ],
+      "source": "https://support.google.com/a/answer/81126"
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent handles Spamhaus blocklist delisting correctly",
+      "prompt": "Our sending IP just got listed on Spamhaus SBL. How do we get delisted?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "check.spamhaus.org" },
+        { "type": "contains", "value": "fix" },
+        { "type": "contains", "value": "delist" },
+        { "type": "not_contains", "value": "pay to delist" }
+      ],
+      "source": "https://www.spamhaus.org/faq/section/Spamhaus%20PBL"
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent does not invent a universal reputation API that does not exist",
+      "prompt": "Is there a single API I can call to get my universal sender reputation score across all providers?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "each provider" },
+        { "type": "not_contains", "value": "universal reputation API" },
+        { "type": "not_contains", "value": "globalreputation.com" },
+        { "type": "contains", "value": "Google Postmaster Tools" }
+      ],
+      "source": "https://postmaster.google.com"
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent references the bounce-handling reference file for detailed bounce codes",
+      "prompt": "I need a complete reference of all SMTP bounce codes and what to do with each one. Give me everything.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/bounce-handling.md" },
+        { "type": "contains", "value": "5.1.1" },
+        { "type": "contains", "value": "suppression" }
+      ],
+      "source": "https://datatracker.ietf.org/doc/html/rfc3463"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "skill": "docker-kubernetes",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on Dockerfile question",
+      "prompt": "I need to containerize my Node.js API for production. What should my Dockerfile look like?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "FROM" },
+        { "type": "contains", "value": "multi-stage" },
+        { "type": "contains", "value": "alpine" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on Kubernetes deployment question",
+      "prompt": "How do I deploy my containerized application to Kubernetes with rolling updates and zero downtime?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "RollingUpdate" },
+        { "type": "contains", "value": "readinessProbe" },
+        { "type": "contains", "value": "Deployment" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Core task: write a multi-stage Dockerfile correctly",
+      "prompt": "Write a production-ready multi-stage Dockerfile for a Node.js 20 Express app. It needs to be minimal and run as a non-root user.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "AS builder" },
+        { "type": "contains", "value": "node:20-alpine" },
+        { "type": "contains", "value": "adduser" },
+        { "type": "contains", "value": "npm ci" },
+        { "type": "contains", "value": "COPY --from=builder" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: create Helm chart structure with correct values",
+      "prompt": "Create a minimal Helm chart for our API service. It needs to support configurable replica count, image tag, resource limits, and an optional HPA.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Chart.yaml" },
+        { "type": "contains", "value": "values.yaml" },
+        { "type": "contains", "value": "replicaCount" },
+        { "type": "contains", "value": "autoscaling" },
+        { "type": "contains", "value": ".Chart.AppVersion" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: configure liveness, readiness, and startup probes correctly",
+      "prompt": "My service takes about 2 minutes to warm up its cache before it can serve traffic. How should I configure health probes so Kubernetes doesn't kill it during startup?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "startupProbe" },
+        { "type": "contains", "value": "readinessProbe" },
+        { "type": "contains", "value": "livenessProbe" },
+        { "type": "contains", "value": "failureThreshold" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: configure resource requests/limits and HPA",
+      "prompt": "How do I set resource requests and limits for my Kubernetes pod, and then configure horizontal autoscaling based on CPU usage?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "requests" },
+        { "type": "contains", "value": "limits" },
+        { "type": "contains", "value": "HorizontalPodAutoscaler" },
+        { "type": "contains", "value": "averageUtilization" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: configure Ingress with TLS termination",
+      "prompt": "I need to expose my Kubernetes service at api.example.com with HTTPS using cert-manager. How do I configure the Ingress?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "tls" },
+        { "type": "contains", "value": "cert-manager.io/cluster-issuer" },
+        { "type": "contains", "value": "secretName" },
+        { "type": "contains", "value": "ingressClassName" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: warns about using latest tag in production",
+      "prompt": "I'm deploying to Kubernetes with image: myapp:latest. It works fine. Is there anything I should change?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "latest" },
+        { "type": "contains", "value": "immutable" },
+        { "type": "not_contains", "value": "latest is fine" },
+        { "type": "not_contains", "value": "latest tag is acceptable" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about running containers as root",
+      "prompt": "My Docker container keeps getting permission errors accessing /tmp. Should I just run it as root to fix this quickly?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "non-root" },
+        { "type": "contains", "value": "security" },
+        { "type": "not_contains", "value": "running as root is safe" },
+        { "type": "not_contains", "value": "root user is fine" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about setting memory limit lower than request",
+      "prompt": "I set my pod's memory request to 512Mi and limit to 128Mi to save cost. But pods keep getting killed. What's wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "OOMKilled" },
+        { "type": "contains", "value": "limit" },
+        { "type": "contains", "value": "request" },
+        { "type": "not_contains", "value": "limit lower than request is valid" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not suggest kubectl edit for production deployments",
+      "prompt": "I need to update an environment variable on my production Kubernetes deployment quickly. Can I just kubectl edit the deployment?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "declarative" },
+        { "type": "not_contains", "value": "kubectl edit is the recommended" },
+        { "type": "not_contains", "value": "kubectl edit is safe for production" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load: points to kubectl cheatsheet for debugging",
+      "prompt": "A pod in my cluster is in CrashLoopBackOff. Walk me through the kubectl commands I should run to diagnose it.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "kubectl logs" },
+        { "type": "contains", "value": "--previous" },
+        { "type": "contains", "value": "kubectl describe" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

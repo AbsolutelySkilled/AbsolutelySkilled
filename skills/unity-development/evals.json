@@ -1,0 +1,160 @@
+{
+  "skill": "unity-development",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on MonoBehaviour scripting question",
+      "prompt": "I'm building a player controller in Unity and need to move a character using Rigidbody. Should I put the movement code in Update or FixedUpdate?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "FixedUpdate" },
+        { "type": "contains", "value": "Rigidbody" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on shader programming question",
+      "prompt": "I need to write a custom unlit shader for URP that supports a base color tint and a texture. What's the basic structure?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "UniversalPipeline" },
+        { "type": "contains", "value": "HLSLPROGRAM" },
+        { "type": "contains", "value": "CBUFFER_START" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on UI Toolkit question",
+      "prompt": "How do I create a health bar UI in Unity using UI Toolkit with UXML and USS?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "UXML" },
+        { "type": "contains", "value": "USS" },
+        { "type": "contains", "value": "VisualElement" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: writing a proper MonoBehaviour with cached references",
+      "prompt": "Write a Unity C# script for an enemy that chases the player. It should cache component references properly and use the correct lifecycle methods.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Awake" },
+        { "type": "contains", "value": "GetComponent" },
+        { "type": "contains", "value": "SerializeField" },
+        { "type": "not_contains", "value": "GetComponent<" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: setting up an ECS system with DOTS",
+      "prompt": "I want to use Unity ECS to move 50,000 entities forward every frame. Show me how to define the component and system.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "IComponentData" },
+        { "type": "contains", "value": "ISystem" },
+        { "type": "contains", "value": "BurstCompile" },
+        { "type": "contains", "value": "SystemAPI" },
+        { "type": "code_valid", "language": "csharp" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: creating a ScriptableObject data container",
+      "prompt": "I need a way to define weapon stats (damage, fire rate, projectile prefab) as reusable assets in Unity. What pattern should I use?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "ScriptableObject" },
+        { "type": "contains", "value": "CreateAssetMenu" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: configuring physics raycasting with layers",
+      "prompt": "How do I implement a click-to-interact system in Unity that raycasts from the camera and only detects objects on specific layers?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Physics.Raycast" },
+        { "type": "contains", "value": "LayerMask" },
+        { "type": "contains", "value": "RaycastHit" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: building a ListView with UI Toolkit",
+      "prompt": "I have a list of 500 inventory items and need to display them in a scrollable UI using Unity UI Toolkit. How do I set up a virtualized ListView?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "ListView" },
+        { "type": "contains", "value": "makeItem" },
+        { "type": "contains", "value": "bindItem" },
+        { "type": "contains", "value": "itemsSource" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about GetComponent in Update loop",
+      "prompt": "My Unity game runs fine with 10 enemies but drops to 15fps with 200. Each enemy script calls GetComponent<Rigidbody>() in Update to apply movement. What's wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Awake" },
+        { "type": "contains", "value": "cache" },
+        { "type": "not_contains", "value": "GetComponent in Update is fine" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about moving Rigidbody with Transform",
+      "prompt": "I'm moving my player character by setting transform.position directly each frame, but it keeps clipping through walls even though both have colliders. What am I doing wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Rigidbody" },
+        { "type": "contains", "value": "MovePosition" },
+        { "type": "contains", "value": "FixedUpdate" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns about SRP Batcher compatibility in shaders",
+      "prompt": "I wrote a custom URP shader but the Frame Debugger shows it's not SRP Batcher compatible. Each object with my material is a separate draw call. How do I fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "CBUFFER_START" },
+        { "type": "contains", "value": "UnityPerMaterial" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not recommend using SendMessage for communication",
+      "prompt": "What's the best way to send events between GameObjects in Unity - like when an enemy dies and the score manager needs to update?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "SendMessage is recommended" },
+        { "type": "not_contains", "value": "BroadcastMessage" },
+        { "type": "contains", "value": "event" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Anti-hallucination: does not recommend mixing 2D and 3D physics",
+      "prompt": "Can I use a Rigidbody2D with a BoxCollider (3D) on the same GameObject in Unity to get both 2D movement and 3D collision?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "separate" },
+        { "type": "not_contains", "value": "you can mix 2D and 3D" },
+        { "type": "not_contains", "value": "combining 2D and 3D physics works" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "References load: points to ECS reference file for advanced DOTS questions",
+      "prompt": "I need to implement a complex ECS baking pipeline in Unity to convert my authored GameObjects to entities in subscenes. How does the Baker system work with structural changes and ECBs?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Baker" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

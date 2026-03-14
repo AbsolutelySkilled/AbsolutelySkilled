@@ -1,0 +1,139 @@
+[
+  {
+    "id": "eval-trigger-001",
+    "description": "Skill triggers on production LLM app architecture questions",
+    "prompt": "Design the architecture for a production LLM-powered customer support chatbot",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "guardrail" },
+      { "type": "contains", "value": "fallback" },
+      { "type": "contains", "value": "eval" }
+    ]
+  },
+  {
+    "id": "eval-trigger-002",
+    "description": "Skill triggers on fine-tuning vs prompting decision",
+    "prompt": "Should I fine-tune GPT-4o or improve my prompts for my summarization use case?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "prompt" },
+      { "type": "contains", "value": "fine-tun" },
+      { "type": "contains", "value": "RAG" }
+    ]
+  },
+  {
+    "id": "eval-task-001",
+    "description": "Agent produces input guardrail code with PII scrubbing",
+    "prompt": "Write a TypeScript function that validates and sanitizes user input before sending it to an LLM, including PII detection",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "REDACTED" },
+      { "type": "contains", "value": "regex" + "" },
+      { "type": "contains", "value": "function" },
+      { "type": "code_valid", "language": "ts" }
+    ]
+  },
+  {
+    "id": "eval-task-002",
+    "description": "Agent produces output schema validation with zod",
+    "prompt": "Write TypeScript code to call an LLM and validate its JSON output matches a specific schema",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "z.object" },
+      { "type": "contains", "value": ".parse(" },
+      { "type": "contains", "value": "JSON.parse" },
+      { "type": "code_valid", "language": "ts" }
+    ]
+  },
+  {
+    "id": "eval-task-003",
+    "description": "Agent produces a working RAG retrieval pipeline",
+    "prompt": "Build a TypeScript RAG pipeline that chunks documents, embeds them, and retrieves relevant chunks for a query",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "chunk" },
+      { "type": "contains", "value": "embed" },
+      { "type": "contains", "value": "similarity" },
+      { "type": "contains", "value": "topK" },
+      { "type": "code_valid", "language": "ts" }
+    ]
+  },
+  {
+    "id": "eval-task-004",
+    "description": "Agent produces function calling loop with tool execution",
+    "prompt": "Write TypeScript code that uses OpenAI function calling to answer a question using a weather tool",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "tool_calls" },
+      { "type": "contains", "value": "finish_reason" },
+      { "type": "contains", "value": "JSON.parse" },
+      { "type": "contains", "value": "messages.push" },
+      { "type": "code_valid", "language": "ts" }
+    ]
+  },
+  {
+    "id": "eval-task-005",
+    "description": "Agent produces streaming SSE response implementation",
+    "prompt": "Show me how to stream an LLM response from an Express endpoint using Server-Sent Events",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "text/event-stream" },
+      { "type": "contains", "value": "stream: true" },
+      { "type": "contains", "value": "[DONE]" },
+      { "type": "code_valid", "language": "ts" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-001",
+    "description": "Agent recommends prompting before fine-tuning",
+    "prompt": "My LLM outputs are not good enough. Should I fine-tune the model?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "prompt" },
+      { "type": "not_contains", "value": "fine-tune immediately" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-002",
+    "description": "Agent caps tool-use loops to prevent infinite loops",
+    "prompt": "Write a TypeScript agent loop that uses tool calling",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "maxSteps" + "" },
+      { "type": "code_valid", "language": "ts" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-003",
+    "description": "Agent includes retry and fallback in LLM error handling",
+    "prompt": "How should I handle errors and rate limits when calling an LLM API in production?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "retry" },
+      { "type": "contains", "value": "fallback" },
+      { "type": "contains", "value": "backoff" }
+    ]
+  },
+  {
+    "id": "eval-anti-hallucination-001",
+    "description": "Agent does not recommend trusting raw LLM output without validation",
+    "prompt": "How do I parse the JSON output from an LLM?",
+    "type": "text",
+    "assertions": [
+      { "type": "not_contains", "value": "JSON.parse(response) //" },
+      { "type": "contains", "value": "validat" },
+      { "type": "contains", "value": "schema" }
+    ]
+  },
+  {
+    "id": "eval-reference-001",
+    "description": "Agent references the evaluation framework when designing eval pipelines",
+    "prompt": "Design an LLM evaluation pipeline with automated metrics and human-in-the-loop review",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "eval" },
+      { "type": "contains", "value": "metric" },
+      { "type": "contains", "value": "human" }
+    ]
+  }
+]

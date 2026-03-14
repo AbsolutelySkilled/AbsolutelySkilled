@@ -1,0 +1,131 @@
+{
+  "skill": "local-seo",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on Google Business Profile optimization request",
+      "prompt": "How do I optimize my Google Business Profile to rank higher in local search?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "category" },
+        { "type": "contains", "value": "reviews" },
+        { "type": "contains", "value": "photos" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on local pack ranking question",
+      "prompt": "My business isn't showing up in the map pack for local searches. What should I fix?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "NAP" },
+        { "type": "contains", "value": "citations" },
+        { "type": "contains", "value": "reviews" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Can explain Google's three local ranking factors",
+      "prompt": "What factors does Google use to rank businesses in the local pack?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "relevance" },
+        { "type": "contains", "value": "distance" },
+        { "type": "contains", "value": "prominence" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can produce valid LocalBusiness JSON-LD schema",
+      "prompt": "Write LocalBusiness schema markup for a dental clinic called Smile Bright Dentistry at 789 Oak Ave, Chicago IL 60601, phone (312) 555-0199",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "application/ld+json" },
+        { "type": "contains", "value": "LocalBusiness" },
+        { "type": "contains", "value": "PostalAddress" },
+        { "type": "contains", "value": "Smile Bright Dentistry" },
+        { "type": "contains", "value": "Chicago" },
+        { "type": "code_valid", "language": "json" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can explain NAP consistency and its importance",
+      "prompt": "Why does it matter if my business address says 'St.' on Yelp but 'Street' on my website?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "NAP" },
+        { "type": "contains", "value": "consistency" },
+        { "type": "contains", "value": "citation" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can outline a review generation strategy",
+      "prompt": "My plumbing business has only 8 Google reviews. How do I get more reviews ethically?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ask" },
+        { "type": "contains", "value": "link" },
+        { "type": "not_contains", "value": "buy" },
+        { "type": "not_contains", "value": "incentivize" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can produce multi-location schema with parentOrganization",
+      "prompt": "Write JSON-LD schema for a second location of Acme Fitness at 200 West End Ave, Nashville TN 37203, linking it to the parent company",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "parentOrganization" },
+        { "type": "contains", "value": "@id" },
+        { "type": "contains", "value": "Nashville" },
+        { "type": "code_valid", "language": "json" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can describe location landing page requirements",
+      "prompt": "We have 5 locations and want to create a location page for each. What content should each page have to rank locally?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "unique" },
+        { "type": "contains", "value": "schema" },
+        { "type": "contains", "value": "NAP" },
+        { "type": "not_contains", "value": "just swap the city name" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Catches the keyword-stuffing-in-business-name gotcha",
+      "prompt": "Should I change my Google Business Profile name to 'Best Austin Plumber - 24/7 Emergency Service' to rank better?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "guidelines" },
+        { "type": "contains", "value": "suspension" },
+        { "type": "not_contains", "value": "yes" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Correctly advises against fake reviews",
+      "prompt": "Can I offer a 10% discount coupon to customers who leave a 5-star Google review?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "terms of service" },
+        { "type": "not_contains", "value": "good idea" },
+        { "type": "not_contains", "value": "you can" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not invent a Google local ranking factor called 'citation velocity score'",
+      "prompt": "How do I improve my citation velocity score to rank in the local pack?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "citation velocity score is a Google ranking factor" }
+      ]
+    }
+  ]
+}

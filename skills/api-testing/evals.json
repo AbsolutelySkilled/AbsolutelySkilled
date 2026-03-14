@@ -1,0 +1,138 @@
+{
+  "skill": "api-testing",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on REST endpoint testing question",
+      "prompt": "I have an Express API and I want to write tests for my GET /products/:id endpoint. What's the best way to test it without spinning up a real server?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "supertest" },
+        { "type": "contains", "value": "request" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on contract testing question",
+      "prompt": "We have a checkout service that calls an order service. We keep breaking the integration when either team deploys. What is contract testing and how would Pact help here?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Pact" },
+        { "type": "contains", "value": "consumer" },
+        { "type": "contains", "value": "provider" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on MSW / mock server question",
+      "prompt": "My frontend app calls three different external APIs and I want to write integration tests without hitting real services. Should I use MSW?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "MSW" },
+        { "type": "contains", "value": "network" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: write Supertest integration test for a POST endpoint",
+      "prompt": "Write an integration test using Supertest for a POST /orders endpoint that creates an order. It should test the successful case and the case where required fields are missing.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "supertest" },
+        { "type": "contains", "value": "expect(201)" },
+        { "type": "contains", "value": "expect(422)" },
+        { "type": "contains", "value": ".post(" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: validate API response schema with Zod",
+      "prompt": "How do I use Zod to validate that my API response matches the expected shape in my tests? I want a single assertion that catches any structural regression.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "z.object" },
+        { "type": "contains", "value": "safeParse" },
+        { "type": "contains", "value": "zod" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: test all authentication states for a protected endpoint",
+      "prompt": "What authentication cases should I test for a JWT-protected endpoint, and can you show me the test structure?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "401" },
+        { "type": "contains", "value": "403" },
+        { "type": "contains", "value": "expired" },
+        { "type": "contains", "value": "Authorization" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: set up Pact consumer test",
+      "prompt": "Show me how to write a Pact consumer test for a user service that my app calls to fetch user profiles. I want to define what response shape I expect.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "PactV3" },
+        { "type": "contains", "value": "consumer" },
+        { "type": "contains", "value": "willRespondWith" },
+        { "type": "contains", "value": "executeTest" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: configure MSW server for Node.js tests",
+      "prompt": "How do I configure MSW in a Jest/Node test environment so it intercepts all HTTP calls? I want it to error on any unhandled requests.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "setupServer" },
+        { "type": "contains", "value": "onUnhandledRequest" },
+        { "type": "contains", "value": "beforeAll" },
+        { "type": "contains", "value": "afterEach" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Core task: test GraphQL query with Apollo Server",
+      "prompt": "I have an Apollo Server GraphQL API. How do I write tests for a query without making real HTTP requests?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "ApolloServer" },
+        { "type": "contains", "value": "executeOperation" },
+        { "type": "contains", "value": "contextValue" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about not leaking stack traces in error responses",
+      "prompt": "I'm testing my error handling and I want to make sure my API never exposes internal details like stack traces in 500 responses. How do I assert for this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "stack" },
+        { "type": "contains", "value": "not_contain" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns about shared state causing flaky tests",
+      "prompt": "My API tests pass individually but fail when I run the whole suite. Some tests seem to be interfering with each other. What is likely going wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "state" },
+        { "type": "contains", "value": "beforeEach" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: recommends testing error shapes, not just status codes",
+      "prompt": "Is it enough to just assert the status code in my API tests, like expect(res.status).toBe(422)?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "body" },
+        { "type": "not_contains", "value": "status code is sufficient" },
+        { "type": "not_contains", "value": "that is enough" }
+      ]
+    }
+  ]
+}

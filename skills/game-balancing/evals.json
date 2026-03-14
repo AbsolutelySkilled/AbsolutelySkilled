@@ -1,0 +1,150 @@
+{
+  "skill": "game-balancing",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: skill activates for economy design question",
+      "prompt": "I need to design the gold economy for my RPG. Players earn gold from quests and monster drops but I'm worried about inflation. How should I structure sinks and faucets?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "sink" },
+        { "type": "contains", "value": "faucet" },
+        { "type": "contains", "value": "inflation" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: skill activates for difficulty curve question",
+      "prompt": "My playtesters say level 15 is way too hard and most people quit there. How do I fix the difficulty curve?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "completion rate" },
+        { "type": "contains", "value": "difficulty" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: skill activates for XP progression question",
+      "prompt": "What's a good XP curve formula for a 100-level MMO?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "exponent" },
+        { "type": "contains", "value": "base" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: can design an economy audit table with sinks and faucets",
+      "prompt": "Create an economy audit for my mobile game. Players earn coins from battles (100/battle), daily login (500), and selling items (50/item). They spend on upgrades (200-2000), potions (50), and gacha pulls (300).",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "faucet" },
+        { "type": "contains", "value": "sink" },
+        { "type": "contains", "value": "net" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: can calculate XP curve with correct formula",
+      "prompt": "Calculate an XP curve for a 30-level game using base_xp=100 and exponent=2.0. Show me levels 1, 5, 10, 20, and 30.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "100" },
+        { "type": "contains", "value": "2500" },
+        { "type": "contains", "value": "10000" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: can design loot table with rarity tiers and pity system",
+      "prompt": "Design a loot table for a dungeon boss with 5 rarity tiers. Include drop rates and a pity system.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Common" },
+        { "type": "contains", "value": "Legendary" },
+        { "type": "contains", "value": "pity" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: can recommend difficulty curve shape for a given game type",
+      "prompt": "I'm making a casual puzzle game for mobile. What difficulty curve shape should I use and why?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "curve" },
+        { "type": "not_contains", "value": "API" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: can interpret playtest completion rate data",
+      "prompt": "My playtest data shows: Level 1: 98% completion, Level 5: 85%, Level 8: 42%, Level 9: 78%, Level 10 boss: 31%. What does this tell me about my balance?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "spike" },
+        { "type": "contains", "value": "Level 8" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about nerfing popular strategies instead of buffing alternatives",
+      "prompt": "All my players are using the fire mage build because it does 3x more damage than other classes. Should I nerf fire mage damage by 60%?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "buff" },
+        { "type": "contains", "value": "alternative" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about changing multiple systems at once",
+      "prompt": "My game feels unbalanced. I want to halve all gold drops, double enemy HP, reduce player damage by 30%, and add a new currency all in the next patch. Good plan?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "one" },
+        { "type": "contains", "value": "measure" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: identifies need for pity system on random drops",
+      "prompt": "My legendary items have a 0.5% drop rate. Some players have done 300 runs without getting one. Is this expected?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pity" },
+        { "type": "contains", "value": "guarantee" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not invent game engines or balancing software that doesn't exist",
+      "prompt": "What's the best auto-balancing API I can call to automatically tune my game's difficulty?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "AutoBalance.ai" },
+        { "type": "not_contains", "value": "GameTuner API" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Anti-hallucination: does not cite specific industry statistics without caveats",
+      "prompt": "What's the exact optimal completion rate for game levels according to GDC research?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "GDC published" },
+        { "type": "contains", "value": "%" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "References load: correctly points to economy-design reference for deep economy questions",
+      "prompt": "I need to build a full multiplayer auction house economy with anti-manipulation protections. Where should I start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "economy" },
+        { "type": "contains", "value": "sink" }
+      ]
+    }
+  ]
+}

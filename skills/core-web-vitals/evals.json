@@ -1,0 +1,159 @@
+{
+  "skill": "core-web-vitals",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to improve Google Search ranking via page speed",
+      "prompt": "My page has a poor Page Experience signal in Google Search Console. How do I fix it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Core Web Vitals" },
+        { "type": "contains", "value": "CrUX" },
+        { "type": "contains", "value": "75th percentile" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on Lighthouse score improvement request",
+      "prompt": "My Lighthouse performance score is 54. How do I get it above 90?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "LCP" },
+        { "type": "contains", "value": "INP" },
+        { "type": "contains", "value": "CLS" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on layout shift complaint",
+      "prompt": "My page keeps jumping around when images load. How do I fix the layout shifts?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "CLS" },
+        { "type": "contains", "value": "width" },
+        { "type": "contains", "value": "height" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Produces correct LCP image markup with fetchpriority and no lazy loading",
+      "prompt": "Write the HTML for a hero image that is optimized for LCP",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "fetchpriority" },
+        { "type": "contains", "value": "high" },
+        { "type": "contains", "value": "loading=\"eager\"" },
+        { "type": "not_contains", "value": "loading=\"lazy\"" },
+        { "type": "contains", "value": "width" },
+        { "type": "contains", "value": "height" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Produces correct scheduler.yield code for INP optimization",
+      "prompt": "My click handler processes 500 items and makes the page unresponsive. How do I fix it?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "scheduler.yield" },
+        { "type": "contains", "value": "await" },
+        { "type": "code_valid", "language": "javascript" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Provides correct CLS fix with image dimensions and CSS aspect-ratio",
+      "prompt": "Images on my product listing page cause layout shifts when they load. What's the fix?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "width" },
+        { "type": "contains", "value": "height" },
+        { "type": "contains", "value": "aspect-ratio" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Sets up web-vitals RUM correctly with all three CWV metrics",
+      "prompt": "How do I measure Core Web Vitals from real users on my production site?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "web-vitals" },
+        { "type": "contains", "value": "onLCP" },
+        { "type": "contains", "value": "onINP" },
+        { "type": "contains", "value": "onCLS" },
+        { "type": "code_valid", "language": "javascript" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Applies correct Next.js Image component with priority for LCP",
+      "prompt": "I'm using Next.js. How do I optimize my hero image for LCP?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "next/image" },
+        { "type": "contains", "value": "priority" },
+        { "type": "not_contains", "value": "loading=\"lazy\"" },
+        { "type": "code_valid", "language": "jsx" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Explains CrUX vs Lighthouse distinction correctly",
+      "prompt": "My Lighthouse score is 95 but Google Search Console still shows poor Core Web Vitals. Why?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "field data" },
+        { "type": "contains", "value": "lab data" },
+        { "type": "contains", "value": "real user" },
+        { "type": "not_contains", "value": "Lighthouse score is what Google uses" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Catches anti-pattern of lazy loading LCP image",
+      "prompt": "Should I add loading='lazy' to my hero image to improve performance?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "LCP" },
+        { "type": "not_contains", "value": "Yes, add lazy loading" },
+        { "type": "contains", "value": "fetchpriority" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not hallucinate CWV metric names or thresholds",
+      "prompt": "What are the three Core Web Vitals and their passing thresholds?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "2.5" },
+        { "type": "contains", "value": "200" },
+        { "type": "contains", "value": "0.1" },
+        { "type": "not_contains", "value": "FID" },
+        { "type": "not_contains", "value": "First Input Delay" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not hallucinate INP replacement date or metric name",
+      "prompt": "What replaced FID in Core Web Vitals and when?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "INP" },
+        { "type": "contains", "value": "Interaction to Next Paint" },
+        { "type": "contains", "value": "2024" },
+        { "type": "not_contains", "value": "TTI" },
+        { "type": "not_contains", "value": "Time to Interactive" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "References the correct reference file for Lighthouse CI setup",
+      "prompt": "Walk me through setting up automated Lighthouse performance checks in my GitHub Actions CI pipeline",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/lighthouse-ci.md" },
+        { "type": "contains", "value": "lhci" }
+      ]
+    }
+  ]
+}

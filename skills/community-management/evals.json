@@ -1,0 +1,131 @@
+{
+  "skill": "community-management",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on community strategy design request",
+      "prompt": "I want to build a community for our developer tool. Where do I start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "platform" },
+        { "type": "contains", "value": "guidelines" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on forum moderation request",
+      "prompt": "How do I moderate our Discourse forum and handle toxic users?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "moderation" },
+        { "type": "contains", "value": "guidelines" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on community metrics question",
+      "prompt": "What KPIs should I track to know if my community is healthy?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "active" },
+        { "type": "contains", "value": "retention" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Produces a 3-tier advocacy program structure",
+      "prompt": "Design a champions program for our 5,000-member developer community.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "tier" },
+        { "type": "contains", "value": "benefits" },
+        { "type": "contains", "value": "criteria" },
+        { "type": "contains", "value": "ambassador" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Produces a moderation policy template with enforcement ladder",
+      "prompt": "Write community guidelines for our new Slack workspace.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "harassment" },
+        { "type": "contains", "value": "warning" },
+        { "type": "contains", "value": "ban" },
+        { "type": "contains", "value": "appeal" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Designs a feedback loop from community to product team",
+      "prompt": "How do I systematically route community feedback to our product team?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "feature request" },
+        { "type": "contains", "value": "product" },
+        { "type": "contains", "value": "loop" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Designs recurring engagement programs",
+      "prompt": "Our community is active for a week after launches then goes quiet. How do we sustain engagement?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "weekly" },
+        { "type": "contains", "value": "recurring" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Applies the 1-9-90 rule when advising on lurker engagement",
+      "prompt": "Most of our community members never post. Should I be worried?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "lurk" },
+        { "type": "not_contains", "value": "failure" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Warns against vanity metric focus",
+      "prompt": "We hit 10,000 members! How do we report this success to leadership?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "active" },
+        { "type": "not_contains", "value": "member count alone" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Warns against extracting before giving value",
+      "prompt": "We just launched our community 2 weeks ago with 50 members. Can we ask them to fill out a product survey?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "value" },
+        { "type": "not_contains", "value": "yes, send the survey immediately" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not trigger for paid social media advertising",
+      "prompt": "What Facebook ad targeting should I use to grow our brand awareness?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "community guidelines" },
+        { "type": "not_contains", "value": "moderation" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References moderation-playbook.md for escalation procedure depth",
+      "prompt": "I need detailed response templates for warning, suspending, and banning members.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "moderation-playbook" },
+        { "type": "contains", "value": "template" }
+      ]
+    }
+  ]
+}

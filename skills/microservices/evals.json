@@ -1,0 +1,149 @@
+{
+  "skill": "microservices",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: skill activates on monolith decomposition request",
+      "prompt": "I have a Rails monolith handling orders, users, inventory, and payments. How do I start breaking it into microservices?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "strangler fig" },
+        { "type": "contains", "value": "bounded context" },
+        { "type": "contains", "value": "API gateway" },
+        { "type": "not_contains", "value": "big-bang rewrite" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: skill activates on distributed transaction question",
+      "prompt": "How do I handle a transaction that spans an order service, payment service, and inventory service?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "saga" },
+        { "type": "contains", "value": "compensating" },
+        { "type": "not_contains", "value": "two-phase commit" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Core task: saga pattern orchestration vs choreography tradeoffs",
+      "prompt": "Should I use orchestration or choreography for my saga pattern? I have a 6-step order fulfillment flow.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "orchestration" },
+        { "type": "contains", "value": "choreography" },
+        { "type": "contains", "value": "orchestrat" },
+        { "type": "contains", "value": "idempotent" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: CQRS implementation steps",
+      "prompt": "Walk me through implementing CQRS in my order service. We have heavy read traffic and complex write logic.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "command" },
+        { "type": "contains", "value": "query" },
+        { "type": "contains", "value": "read model" },
+        { "type": "contains", "value": "eventually consistent" },
+        { "type": "not_contains", "value": "requires event sourcing" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: circuit breaker implementation guidance",
+      "prompt": "My user service keeps taking down the whole system when it goes slow. How do I implement a circuit breaker?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Closed" },
+        { "type": "contains", "value": "Open" },
+        { "type": "contains", "value": "Half-Open" },
+        { "type": "contains", "value": "fallback" },
+        { "type": "contains", "value": "cascading" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: REST vs gRPC vs events decision",
+      "prompt": "When should I use gRPC vs REST vs Kafka for inter-service communication?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "gRPC" },
+        { "type": "contains", "value": "REST" },
+        { "type": "contains", "value": "async" },
+        { "type": "contains", "value": "latency" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: API gateway design responsibilities",
+      "prompt": "What should my API gateway be responsible for? We have a mobile app and a web app with different data needs.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "BFF" },
+        { "type": "contains", "value": "rate limit" },
+        { "type": "contains", "value": "auth" },
+        { "type": "contains", "value": "business logic" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: shared database anti-pattern",
+      "prompt": "Can two microservices share the same PostgreSQL database if they each use different schemas?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "anti-pattern" },
+        { "type": "contains", "value": "coupling" },
+        { "type": "not_contains", "value": "fine to share" },
+        { "type": "not_contains", "value": "acceptable approach" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: when NOT to use microservices",
+      "prompt": "We are a 3-person startup building our first product. Should we use microservices?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "monolith" },
+        { "type": "contains", "value": "complexity" },
+        { "type": "not_contains", "value": "yes, start with microservices" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: eventual consistency implications for CQRS read models",
+      "prompt": "A user updates their profile but the read model still shows the old data. Is this a bug?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "eventual consistency" },
+        { "type": "contains", "value": "propagat" },
+        { "type": "not_contains", "value": "bug" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination test: does not invent non-existent consensus protocols as microservice solutions",
+      "prompt": "What distributed consensus algorithm should I use to keep data consistent across my microservices?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "saga" },
+        { "type": "contains", "value": "eventual consistency" },
+        { "type": "not_contains", "value": "Paxos is the recommended microservice pattern" },
+        { "type": "not_contains", "value": "two-phase commit is recommended" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load test: patterns reference file is surfaced when user asks about a specific pattern",
+      "prompt": "Can you explain the bulkhead pattern and the sidecar pattern in microservices?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "bulkhead" },
+        { "type": "contains", "value": "sidecar" },
+        { "type": "contains", "value": "isolat" },
+        { "type": "contains", "value": "proxy" }
+      ]
+    }
+  ]
+}

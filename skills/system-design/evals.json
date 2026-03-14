@@ -1,0 +1,151 @@
+{
+  "skill": "system-design",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on a classic system design interview question",
+      "prompt": "Design a URL shortener like bit.ly. Walk me through the architecture.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cache" },
+        { "type": "contains", "value": "database" },
+        { "type": "contains", "value": "redirect" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on CAP theorem trade-off question",
+      "prompt": "We're building a distributed inventory system for an e-commerce site. How should we think about CAP theorem when choosing our database?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "consistency" },
+        { "type": "contains", "value": "availability" },
+        { "type": "contains", "value": "partition" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Core task: designing a rate limiter with correct algorithm recommendation",
+      "prompt": "I need to build a rate limiter for our public API. We want to allow bursts but enforce a per-user hourly limit. What algorithm should I use and how do I implement it in a distributed environment?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "token bucket" },
+        { "type": "contains", "value": "Redis" },
+        { "type": "contains", "value": "429" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: designing a notification system with correct queue isolation",
+      "prompt": "Design a notification system that can send push notifications, emails, and SMS. How do you handle different delivery speeds and third-party provider outages?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "queue" },
+        { "type": "contains", "value": "channel" },
+        { "type": "contains", "value": "dead letter" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: SQL vs NoSQL selection with correct reasoning",
+      "prompt": "We're building a social media platform. We need to store user profiles, posts, and follower relationships. What database or databases should we use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "PostgreSQL" },
+        { "type": "contains", "value": "graph" },
+        { "type": "contains", "value": "access pattern" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: back-of-envelope capacity estimation with correct process",
+      "prompt": "We expect 10 million DAU for our new photo sharing app. Each user uploads 2 photos per day on average. Each photo is 2 MB. How much storage do we need for the first year?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "DAU" },
+        { "type": "contains", "value": "TB" },
+        { "type": "contains", "value": "365" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: designing a chat system with correct protocol and storage choices",
+      "prompt": "Design a real-time group chat system like Slack. It needs to support millions of concurrent connections and message history.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "WebSocket" },
+        { "type": "contains", "value": "Cassandra" },
+        { "type": "contains", "value": "pub/sub" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: caching strategy with correct invalidation approach",
+      "prompt": "Our product catalog is read millions of times a day but updated only a few times per hour. We want to cache it in Redis. What caching pattern should we use and how do we handle invalidation?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cache-aside" },
+        { "type": "contains", "value": "TTL" },
+        { "type": "contains", "value": "invalidat" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns against sharding before exhausting simpler scaling options",
+      "prompt": "Our PostgreSQL database is getting slow under load. Should we shard it across multiple nodes?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "read replica" },
+        { "type": "contains", "value": "index" },
+        { "type": "not_contains", "value": "shard immediately" },
+        { "type": "not_contains", "value": "sharding is the first step" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: correctly identifies SPOF when a naive single-LB design is proposed",
+      "prompt": "We're putting a single load balancer in front of our three app servers. Our CTO says this is good enough for now. What risks should we flag?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "single point of failure" },
+        { "type": "contains", "value": "redundan" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: catches inconsistency when shared database between microservices is proposed",
+      "prompt": "We have an orders service and a payments service. Our team wants them to share the same PostgreSQL database to keep things simple. Is that OK?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "coupling" },
+        { "type": "contains", "value": "independent" },
+        { "type": "not_contains", "value": "sharing a database is fine" },
+        { "type": "not_contains", "value": "shared database is recommended" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not claim CA systems exist in distributed context",
+      "prompt": "My architect says we should design our distributed database to be both fully consistent and fully available at all times. Is that achievable?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "partition" },
+        { "type": "contains", "value": "CAP" },
+        { "type": "not_contains", "value": "CA is achievable" },
+        { "type": "not_contains", "value": "both consistency and availability are always possible" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "References load: points to interview framework reference for interview prep",
+      "prompt": "I have a system design interview at a FAANG company next week. Can you walk me through how to structure my answer during the interview?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "requirement" },
+        { "type": "contains", "value": "estimate" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "skill": "game-audio",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on game sound design request",
+      "prompt": "I need to set up a sound system for my 2D platformer game. Where do I start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "event" },
+        { "type": "contains", "value": "middleware" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on adaptive music question",
+      "prompt": "How do I make my game's music change dynamically when the player enters combat?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "vertical layering" },
+        { "type": "contains", "value": "parameter" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on spatial audio setup request",
+      "prompt": "I want enemies to sound like they're coming from the correct direction in my FPS game",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "3D" },
+        { "type": "contains", "value": "attenuation" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can implement FMOD event system in Unity",
+      "prompt": "Show me how to set up FMOD in Unity and play a sound effect when the player jumps",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "PlayOneShot" },
+        { "type": "contains", "value": "event:/" },
+        { "type": "code_valid", "language": "csharp" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can design a bus hierarchy for mixing",
+      "prompt": "How should I organize my audio buses for a game with music, SFX, dialogue, and UI sounds?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Master" },
+        { "type": "contains", "value": "duck" },
+        { "type": "contains", "value": "Voice" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can solve repetition fatigue problem",
+      "prompt": "My footstep sounds are annoying because they sound exactly the same every time. How do I fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "variation" },
+        { "type": "contains", "value": "random" },
+        { "type": "contains", "value": "pitch" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can implement audio occlusion",
+      "prompt": "How do I make sounds get muffled when they are behind a wall in my 3D game?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "occlusion" },
+        { "type": "contains", "value": "raycast" },
+        { "type": "contains", "value": "low-pass" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can advise on FMOD vs Wwise selection",
+      "prompt": "I'm starting a new game project. Should I use FMOD or Wwise for audio?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "FMOD" },
+        { "type": "contains", "value": "Wwise" },
+        { "type": "contains", "value": "revenue" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Can optimize audio memory usage",
+      "prompt": "My game is using 300MB of audio memory and loading takes forever. How do I fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "stream" },
+        { "type": "contains", "value": "compress" },
+        { "type": "contains", "value": "voice limit" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Warns against hardcoding audio file paths",
+      "prompt": "In my game I'm calling AudioSource.PlayClipAtPoint with direct references to wav files. Is this fine?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "event" },
+        { "type": "not_contains", "value": "this is fine" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not invent audio middleware that does not exist",
+      "prompt": "How do I set up the AudioForge Pro middleware for my Unity game?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "AudioForge Pro is a" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Can implement Wwise integration with switches",
+      "prompt": "How do I use Wwise switch containers to change footstep sounds based on surface material?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Switch" },
+        { "type": "contains", "value": "surface" },
+        { "type": "contains", "value": "SetSwitch" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "References spatial audio guide for HRTF detail",
+      "prompt": "Explain HRTF-based binaural audio rendering for my VR game in full technical detail",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "HRTF" },
+        { "type": "contains", "value": "binaural" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "Does not trigger for non-game audio production",
+      "prompt": "How do I master a podcast episode for Spotify distribution?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "FMOD" },
+        { "type": "not_contains", "value": "Wwise" },
+        { "type": "not_contains", "value": "game audio" }
+      ]
+    }
+  ]
+}

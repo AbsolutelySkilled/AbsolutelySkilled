@@ -1,0 +1,161 @@
+{
+  "skill": "data-warehousing",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on star schema design question",
+      "prompt": "I need to design a data warehouse for our e-commerce analytics. We want to track sales by product, customer, and time. What schema approach should I use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "star schema" },
+        { "type": "contains", "value": "fact" },
+        { "type": "contains", "value": "dimension" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on slowly changing dimension question",
+      "prompt": "Our customer addresses change over time but we need to report on what region they were in when they placed each order. How do I handle this in my warehouse?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "slowly changing dimension" },
+        { "type": "contains", "value": "Type 2" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on Snowflake vs BigQuery comparison",
+      "prompt": "We're choosing between Snowflake and BigQuery for our new analytics warehouse. What are the key differences I should consider?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Snowflake" },
+        { "type": "contains", "value": "BigQuery" },
+        { "type": "contains", "value": "partition" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: designs a star schema with proper grain declaration",
+      "prompt": "Design a star schema for a SaaS subscription analytics warehouse. We need to track monthly recurring revenue, churn, and upgrades by customer, plan, and time.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "dim_" },
+        { "type": "contains", "value": "fct_" },
+        { "type": "contains", "value": "surrogate" },
+        { "type": "contains", "value": "grain" },
+        { "type": "code_valid", "language": "sql" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: implements SCD Type 2 with MERGE statement",
+      "prompt": "Write the SQL to implement SCD Type 2 for a product dimension in Snowflake. Products can change their category and price over time and we need full history.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "MERGE" },
+        { "type": "contains", "value": "is_current" },
+        { "type": "contains", "value": "effective_date" },
+        { "type": "contains", "value": "expiry_date" },
+        { "type": "code_valid", "language": "sql" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: creates a partitioned and clustered BigQuery fact table",
+      "prompt": "Create a BigQuery fact table for website page views partitioned and clustered for cost-efficient querying. We filter by date and user_id most often.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "PARTITION BY" },
+        { "type": "contains", "value": "CLUSTER BY" },
+        { "type": "code_valid", "language": "sql" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: builds a date dimension with fiscal calendar attributes",
+      "prompt": "Generate a complete date dimension table for our warehouse covering 2020-2030 with fiscal year, quarter, day of week, and weekend flag.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "date_sk" },
+        { "type": "contains", "value": "fiscal" },
+        { "type": "contains", "value": "quarter" },
+        { "type": "code_valid", "language": "sql" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: optimizes Snowflake warehouse with clustering keys",
+      "prompt": "Our Snowflake fact table has 2 billion rows and queries filtering by date and region are slow. How do I optimize this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cluster" },
+        { "type": "contains", "value": "CLUSTERING_DEPTH" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about mixed grain in fact tables",
+      "prompt": "Can I add a monthly revenue summary row alongside individual transaction rows in my fct_sales table to make reporting easier?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "grain" },
+        { "type": "contains", "value": "double-counting" },
+        { "type": "not_contains", "value": "you can safely mix" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns against using natural keys as foreign keys in fact tables",
+      "prompt": "Our product table uses the SKU as the primary key. Should I use SKU directly as the foreign key in my fact table instead of creating a surrogate key?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "surrogate" },
+        { "type": "contains", "value": "change" },
+        { "type": "not_contains", "value": "natural keys are fine for fact tables" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns about missing partitioning on large cloud warehouse tables",
+      "prompt": "I created a 500GB fact table in BigQuery without partitioning. Queries cost $2.50 each. Is this normal?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "partition" },
+        { "type": "contains", "value": "bytes scanned" },
+        { "type": "not_contains", "value": "partitioning is optional" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not invent non-existent SCD types",
+      "prompt": "What is SCD Type 7 and how do I implement it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Type 2" },
+        { "type": "not_contains", "value": "SCD Type 7 is a standard pattern" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Anti-hallucination: does not claim BigQuery supports traditional indexes",
+      "prompt": "How do I create a B-tree index on my BigQuery fact table to speed up lookups?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "CREATE INDEX" },
+        { "type": "contains", "value": "cluster" },
+        { "type": "contains", "value": "partition" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "References load test: directs to SCD patterns reference for deep dive",
+      "prompt": "I need a comprehensive guide on all the SCD types including Type 6 hybrid approach with full implementation SQL for both Snowflake and BigQuery.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references" },
+        { "type": "contains", "value": "scd-patterns" }
+      ]
+    }
+  ]
+}

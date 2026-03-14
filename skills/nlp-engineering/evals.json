@@ -1,0 +1,141 @@
+{
+  "skill": "nlp-engineering",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on text preprocessing question",
+      "prompt": "I'm ingesting user reviews from a web scraper and they're full of HTML tags, emoji, and inconsistent casing. What should my text cleaning pipeline look like before I train a classifier?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "HTML" },
+        { "type": "contains", "value": "unicode" },
+        { "type": "contains", "value": "whitespace" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on embedding generation question",
+      "prompt": "I want to generate embeddings for 500,000 product descriptions and store them for semantic search. What model and approach should I use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "sentence-transformer" },
+        { "type": "contains", "value": "batch" },
+        { "type": "contains", "value": "normalize" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on semantic search question",
+      "prompt": "How do I build a semantic search engine over a corpus of 100k support articles so that users can find relevant articles by natural language query, not just keyword match?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "embedding" },
+        { "type": "contains", "value": "vector" },
+        { "type": "contains", "value": "cosine" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: text preprocessing pipeline code",
+      "prompt": "Write a Python function that takes raw HTML text, strips markup, normalizes unicode, lowercases, removes URLs and emails, and collapses whitespace.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "BeautifulSoup" },
+        { "type": "contains", "value": "unicodedata" },
+        { "type": "contains", "value": "re.sub" },
+        { "type": "contains", "value": "strip" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: semantic search with FAISS",
+      "prompt": "Show me how to build a local semantic search index over a list of strings using FAISS and sentence-transformers, then query it.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "faiss" },
+        { "type": "contains", "value": "SentenceTransformer" },
+        { "type": "contains", "value": "encode" },
+        { "type": "contains", "value": "search" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: text classification fine-tuning",
+      "prompt": "I have a dataset of customer support tickets labeled with categories (billing, technical, general). How do I fine-tune a small pretrained model for this classification task using HuggingFace?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "AutoModelForSequenceClassification" },
+        { "type": "contains", "value": "Trainer" },
+        { "type": "contains", "value": "tokenizer" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: NER extraction",
+      "prompt": "I need to extract company names, locations, and person names from news articles. Show me two approaches - one fast and one more accurate.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "spacy" },
+        { "type": "contains", "value": "pipeline" },
+        { "type": "contains", "value": "ORG" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: document chunking for RAG",
+      "prompt": "I'm building a RAG system and need to chunk long PDF documents before embedding them. What's the best chunking strategy and how do I implement it?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "chunk_overlap" },
+        { "type": "contains", "value": "RecursiveCharacterTextSplitter" },
+        { "type": "contains", "value": "separator" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Core task: abstractive summarization",
+      "prompt": "I want to automatically generate a 2-3 sentence summary of each article in my news pipeline. Should I use extractive or abstractive summarization and how do I implement it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "abstractive" },
+        { "type": "contains", "value": "extractive" },
+        { "type": "contains", "value": "BART" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about chunking without overlap",
+      "prompt": "I'm chunking my documents into 512-character blocks with no overlap and my RAG system gives poor answers when the relevant information spans a chunk boundary. What's wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "overlap" },
+        { "type": "contains", "value": "boundary" },
+        { "type": "not_contains", "value": "fixed-size chunks are fine" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns about embedding HTML without preprocessing",
+      "prompt": "My semantic search returns terrible results even though I'm using a good embedding model. I'm embedding the raw HTML from our CMS directly. Could that be the issue?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "HTML" },
+        { "type": "contains", "value": "preprocess" },
+        { "type": "not_contains", "value": "HTML is fine to embed" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: recommends small model first, not GPT-4 for all tasks",
+      "prompt": "I need to classify customer emails into 5 categories. Should I just call GPT-4 for every email?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "fine-tun" },
+        { "type": "contains", "value": "cost" },
+        { "type": "not_contains", "value": "GPT-4 is the only option" },
+        { "type": "not_contains", "value": "always use GPT-4" }
+      ]
+    }
+  ]
+}

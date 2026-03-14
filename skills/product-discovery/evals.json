@@ -1,0 +1,136 @@
+{
+  "skill": "product-discovery",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on JTBD interview request",
+      "prompt": "I want to conduct jobs-to-be-done interviews for our project management app. Walk me through how.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "situation" },
+        { "type": "contains", "value": "motivation" },
+        { "type": "contains", "value": "outcome" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on opportunity solution tree request",
+      "prompt": "Help me build an opportunity solution tree to improve activation for our SaaS product.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "outcome" },
+        { "type": "contains", "value": "opportunit" },
+        { "type": "contains", "value": "assumption" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Correctly separates functional, emotional, and social job layers",
+      "prompt": "A user said: 'I need to track my freelance invoices so my accountant stops nagging me.' Break this into JTBD layers.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "functional" },
+        { "type": "contains", "value": "emotional" },
+        { "type": "contains", "value": "social" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Produces a valid JTBD statement from a scenario",
+      "prompt": "Write a JTBD statement for a developer who manually deploys to production every Friday and frequently causes downtime.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "When" },
+        { "type": "contains", "value": "want to" },
+        { "type": "contains", "value": "so I can" },
+        { "type": "not_contains", "value": "click" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Maps all four assumption categories for a given solution idea",
+      "prompt": "We want to add an AI writing assistant to our email client. Map the assumptions before we build.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "desirability" },
+        { "type": "contains", "value": "viability" },
+        { "type": "contains", "value": "feasibility" },
+        { "type": "contains", "value": "usability" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Designs an experiment with hypothesis, method, and kill threshold",
+      "prompt": "We believe users will pay $20/month for automated expense reports. Design a validation experiment.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "hypothesis" },
+        { "type": "contains", "value": "kill" },
+        { "type": "contains", "value": "experiment" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Recommends smallest viable experiment first",
+      "prompt": "We want to validate whether users want a collaborative editing feature. Should we build a prototype?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "interview" },
+        { "type": "not_contains", "value": "build the prototype first" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Warns against asking customers what features to build",
+      "prompt": "I'm planning to ask users in interviews: 'What features are you missing?' Is that a good question?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "problem" },
+        { "type": "not_contains", "value": "yes, that is a good question" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Applies the correct prototype fidelity to the right assumption type",
+      "prompt": "We need to test whether users can complete our three-step onboarding without help. What prototype fidelity should we use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "usability" },
+        { "type": "contains", "value": "think-aloud" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Synthesizes interview data into the observation-pattern-insight-implication chain",
+      "prompt": "I have notes from 7 interviews where 6 users said they screenshot dashboards to share with their manager. How do I turn this into a discovery insight?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pattern" },
+        { "type": "contains", "value": "insight" },
+        { "type": "contains", "value": "implication" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Describes a concrete dual-track discovery cadence",
+      "prompt": "Our team has never done continuous discovery. What should our weekly cadence look like?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "weekly" },
+        { "type": "contains", "value": "interview" },
+        { "type": "contains", "value": "assumption" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not invent non-existent discovery frameworks",
+      "prompt": "How do I use the JTBD-OST Fusion Matrix to score my opportunities?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "JTBD-OST Fusion Matrix" },
+        { "type": "not_contains", "value": "step 1 of the Fusion Matrix" }
+      ]
+    }
+  ]
+}

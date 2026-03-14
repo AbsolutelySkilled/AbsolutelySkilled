@@ -1,0 +1,141 @@
+{
+  "skill": "clean-code",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on code review request mentioning clean code",
+      "prompt": "Review this function for clean code violations and suggest improvements",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "naming" },
+        { "type": "contains", "value": "readability" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on refactoring request",
+      "prompt": "This function is too long and does too many things. Help me refactor it following Uncle Bob's principles.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Extract" },
+        { "type": "contains", "value": "single responsibility" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on SOLID question",
+      "prompt": "How should I apply the Open/Closed Principle to this payment processing code?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "extension" },
+        { "type": "contains", "value": "modification" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can refactor a function with too many arguments",
+      "prompt": "Refactor this function: function createUser(name, email, age, role, department, isActive, createdBy) { ... }",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "object" },
+        { "type": "not_contains", "value": "7 arguments" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can improve boolean naming",
+      "prompt": "What's wrong with this variable name: let open = checkDoor(door)?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "isOpen" },
+        { "type": "contains", "value": "boolean" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can identify and fix error handling with return codes",
+      "prompt": "Review this error handling: function withdraw(amount) { if (amount > balance) return -1; balance -= amount; return 0; }",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "exception" },
+        { "type": "contains", "value": "throw" },
+        { "type": "not_contains", "value": "return -1" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can explain TDD red-green-refactor cycle",
+      "prompt": "Walk me through how to implement a shopping cart using TDD",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "red" },
+        { "type": "contains", "value": "green" },
+        { "type": "contains", "value": "refactor" },
+        { "type": "contains", "value": "failing test" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can identify the Feature Envy smell",
+      "prompt": "This method in OrderPrinter accesses order.customer.name, order.total(), and order.items.length. Is this a code smell?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Feature Envy" },
+        { "type": "contains", "value": "move" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Warns against over-abstracting with SOLID",
+      "prompt": "Should I create an interface for every class in my small CRUD app to follow SOLID?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pragmatic" },
+        { "type": "not_contains", "value": "yes, you should create an interface for every class" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Does not invent Clean Code principles that don't exist",
+      "prompt": "What does Clean Code say about the DRY-SOLID-KISS integration framework?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "DRY-SOLID-KISS integration framework" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Correctly applies Dependency Inversion",
+      "prompt": "My UserService directly instantiates MySQLDatabase in its constructor. How do I fix this?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "inject" },
+        { "type": "contains", "value": "interface" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References the naming guide for detailed naming help",
+      "prompt": "Give me a comprehensive guide on how to name things in code following Clean Code",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "naming" },
+        { "type": "contains", "value": "intention-revealing" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Does not trigger for performance optimization",
+      "prompt": "How can I optimize this algorithm to run in O(n log n) instead of O(n^2)?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "Clean Code" },
+        { "type": "not_contains", "value": "Uncle Bob" }
+      ]
+    }
+  ]
+}

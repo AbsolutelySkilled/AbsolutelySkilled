@@ -1,0 +1,166 @@
+{
+  "skill": "technical-writing",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when asked to write API documentation",
+      "prompt": "Document the POST /api/v1/orders endpoint for our REST API",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Request body" },
+        { "type": "contains", "value": "Response" },
+        { "type": "contains", "value": "Error" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers when asked to write a tutorial",
+      "prompt": "Write a getting-started tutorial for our Node.js SDK",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Prerequisites" },
+        { "type": "contains", "value": "Step" },
+        { "type": "contains", "value": "Verify" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers when asked to write an ADR",
+      "prompt": "Write an ADR for choosing Redis as our caching layer",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Status" },
+        { "type": "contains", "value": "Context" },
+        { "type": "contains", "value": "Decision" },
+        { "type": "contains", "value": "Consequences" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent produces correct API doc structure with all required fields",
+      "prompt": "Document a DELETE /api/v1/users/:id endpoint that requires admin authentication and returns 204 on success",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "DELETE" },
+        { "type": "contains", "value": "Authentication" },
+        { "type": "contains", "value": "204" },
+        { "type": "contains", "value": "Error" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent writes a tutorial with prerequisites and numbered steps",
+      "prompt": "Write a tutorial for setting up a PostgreSQL database with Docker for local development",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Prerequisites" },
+        { "type": "contains", "value": "docker" },
+        { "type": "contains", "value": "Step 1" },
+        { "type": "contains", "value": "Verify" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent writes an ADR using the Nygard format with consequences",
+      "prompt": "Write an ADR for migrating from REST to GraphQL for our public API",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Context" },
+        { "type": "contains", "value": "Decision" },
+        { "type": "contains", "value": "Consequences" },
+        { "type": "contains", "value": "Positive" },
+        { "type": "contains", "value": "Negative" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent writes a runbook with exact commands and expected output",
+      "prompt": "Write a runbook for restarting a Kubernetes deployment when pods are in CrashLoopBackOff",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "kubectl" },
+        { "type": "contains", "value": "Expected" },
+        { "type": "contains", "value": "Rollback" },
+        { "type": "contains", "value": "Severity" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent writes architecture documentation with C4 model layers",
+      "prompt": "Write architecture documentation for an e-commerce platform with a React frontend, Node.js API, and PostgreSQL database",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "context" },
+        { "type": "contains", "value": "Container" },
+        { "type": "contains", "value": "React" },
+        { "type": "contains", "value": "PostgreSQL" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent handles the gotcha of ADR immutability correctly",
+      "prompt": "We decided to use MongoDB in ADR-003 but now want to switch to PostgreSQL. How do I update the ADR?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "new ADR" },
+        { "type": "contains", "value": "supersede" },
+        { "type": "not_contains", "value": "edit the existing ADR" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent handles the gotcha of runbooks needing exact commands",
+      "prompt": "Review this runbook step: 'Step 2: Restart the service and check if it recovers'",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "exact command" },
+        { "type": "contains", "value": "expected output" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent does not hallucinate a specific documentation standard that does not exist",
+      "prompt": "Write API docs following the IETF RFC 9457 documentation standard for endpoint structure",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "IETF RFC 9457 documentation standard for endpoint structure" },
+        { "type": "contains", "value": "endpoint" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not invent a fictional documentation tool",
+      "prompt": "Should I use DocuForge Pro to generate my API documentation?",
+      "type": "factual",
+      "assertions": [
+        { "type": "not_contains", "value": "DocuForge Pro is a great" },
+        { "type": "not_contains", "value": "DocuForge Pro can" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent correctly references the ADR reference file for detailed templates",
+      "prompt": "What ADR format options are available and when should I use each?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "Nygard" },
+        { "type": "contains", "value": "MADR" },
+        { "type": "contains", "value": "references" }
+      ],
+      "source": "domain-knowledge"
+    }
+  ]
+}

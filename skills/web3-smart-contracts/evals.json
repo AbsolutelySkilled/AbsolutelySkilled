@@ -1,0 +1,156 @@
+{
+  "skill": "web3-smart-contracts",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on Solidity smart contract writing request",
+      "prompt": "Write a Solidity smart contract for an ERC-20 token with minting capabilities",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "ERC20" },
+        { "type": "contains", "value": "pragma solidity" },
+        { "type": "contains", "value": "mint" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on smart contract security review request",
+      "prompt": "Review this smart contract for security vulnerabilities - it has a withdraw function that sends ETH",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "reentrancy" },
+        { "type": "contains", "value": "Checks-Effects-Interactions" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on gas optimization request",
+      "prompt": "How can I optimize gas costs in my Solidity contract that uses a lot of storage?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "SSTORE" },
+        { "type": "contains", "value": "pack" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can write a reentrancy-safe withdraw function",
+      "prompt": "Write a Solidity withdraw function for a vault contract that is safe against reentrancy attacks",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "nonReentrant" },
+        { "type": "contains", "value": "balances[msg.sender]" },
+        { "type": "not_contains", "value": "transfer(" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can implement an ERC-4626 vault using OpenZeppelin",
+      "prompt": "Implement a tokenized yield vault using the ERC-4626 standard",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "ERC4626" },
+        { "type": "contains", "value": "totalAssets" },
+        { "type": "contains", "value": "OpenZeppelin" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can identify oracle manipulation vulnerability",
+      "prompt": "My DeFi contract uses Uniswap V2 pool reserves to get the current token price for liquidation. Is this safe?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "flash loan" },
+        { "type": "contains", "value": "TWAP" },
+        { "type": "contains", "value": "manipulat" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can write Foundry fuzz tests for a contract",
+      "prompt": "Write a Foundry test with fuzz testing for a token transfer function",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "forge-std" },
+        { "type": "contains", "value": "testFuzz" },
+        { "type": "contains", "value": "vm." }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Warns against using tx.origin for authentication",
+      "prompt": "Can I use tx.origin to check if the caller is the contract owner?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "msg.sender" },
+        { "type": "contains", "value": "phishing" },
+        { "type": "not_contains", "value": "tx.origin is safe" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Knows about storage layout and proxy collision risks",
+      "prompt": "I'm upgrading my proxy contract implementation. What should I watch out for regarding storage?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "storage" },
+        { "type": "contains", "value": "collision" },
+        { "type": "contains", "value": "slot" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Can explain gas-efficient struct packing",
+      "prompt": "How should I order the fields in my Solidity struct to save gas?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "32 byte" },
+        { "type": "contains", "value": "pack" },
+        { "type": "contains", "value": "slot" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not invent non-existent Solidity features",
+      "prompt": "How do I use Solidity's built-in ReentrancyGuard modifier without importing anything?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "Solidity has a built-in ReentrancyGuard" },
+        { "type": "contains", "value": "OpenZeppelin" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not hallucinate ERC standards",
+      "prompt": "What does the ERC-9999 standard define for smart contracts?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "ERC-9999 defines" },
+        { "type": "not_contains", "value": "ERC-9999 is a standard for" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "References the security audit guide for comprehensive audit",
+      "prompt": "Give me a complete smart contract audit checklist for a DeFi lending protocol",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "reentrancy" },
+        { "type": "contains", "value": "access control" },
+        { "type": "contains", "value": "oracle" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "Does not trigger for frontend dApp questions",
+      "prompt": "How do I connect a React frontend to MetaMask using ethers.js?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "pragma solidity" },
+        { "type": "not_contains", "value": "SSTORE" }
+      ]
+    }
+  ]
+}

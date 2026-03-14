@@ -1,0 +1,169 @@
+{
+  "skill": "sentry",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers for basic Sentry setup request",
+      "prompt": "Set up Sentry error monitoring in my React app",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Sentry.init" },
+        { "type": "contains", "value": "dsn" },
+        { "type": "contains", "value": "@sentry/browser" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://docs.sentry.io/platforms/javascript/"
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers for Python Sentry setup",
+      "prompt": "Add Sentry to my Django project for error tracking",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "sentry_sdk.init" },
+        { "type": "contains", "value": "dsn" },
+        { "type": "contains", "value": "pip install" },
+        { "type": "code_valid", "language": "python" }
+      ],
+      "source": "https://docs.sentry.io/platforms/python/"
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers for Next.js Sentry integration",
+      "prompt": "How do I integrate Sentry into my Next.js 14 app?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "@sentry/wizard" },
+        { "type": "contains", "value": "withSentryConfig" },
+        { "type": "contains", "value": "@sentry/nextjs" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://docs.sentry.io/platforms/javascript/guides/nextjs/"
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent can capture exceptions manually",
+      "prompt": "How do I manually send an error to Sentry in JavaScript?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "captureException" },
+        { "type": "not_contains", "value": "Raven.captureException" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://docs.sentry.io/platforms/javascript/"
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent configures performance tracing correctly",
+      "prompt": "Enable performance monitoring with Sentry in my Express app",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "tracesSampleRate" },
+        { "type": "contains", "value": "Sentry.init" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://docs.sentry.io/product/performance/"
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent sets up Session Replay with privacy controls",
+      "prompt": "Add Sentry Session Replay to my app but mask all user text and inputs",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "replayIntegration" },
+        { "type": "contains", "value": "maskAllText" },
+        { "type": "contains", "value": "replaysSessionSampleRate" },
+        { "type": "not_contains", "value": "new Replay()" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://docs.sentry.io/platforms/javascript/session-replay/"
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent can upload source maps correctly",
+      "prompt": "How do I upload source maps to Sentry for my webpack project?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "sourcemaps" },
+        { "type": "contains", "value": "@sentry/wizard" },
+        { "type": "code_valid", "language": "bash" }
+      ],
+      "source": "https://docs.sentry.io/platforms/javascript/sourcemaps/"
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent handles custom context and tags",
+      "prompt": "How do I add user info and custom tags to Sentry events?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "setUser" },
+        { "type": "contains", "value": "setTag" },
+        { "type": "not_contains", "value": "Raven.setUserContext" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://docs.sentry.io/platforms/javascript/"
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent configures dynamic sampling correctly",
+      "prompt": "I want to sample 100% of checkout transactions but only 10% of everything else in Sentry",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "tracesSampler" },
+        { "type": "contains", "value": "samplingContext" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://docs.sentry.io/platforms/javascript/"
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent does not hallucinate deprecated Raven.js API",
+      "prompt": "Initialize Sentry in my browser app",
+      "type": "code",
+      "assertions": [
+        { "type": "not_contains", "value": "Raven" },
+        { "type": "not_contains", "value": "raven-js" },
+        { "type": "contains", "value": "@sentry/browser" },
+        { "type": "contains", "value": "Sentry.init" }
+      ],
+      "source": "https://docs.sentry.io/platforms/javascript/"
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent does not invent non-existent SDK methods",
+      "prompt": "How do I create a custom span in Sentry JavaScript?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "startSpan" },
+        { "type": "not_contains", "value": "Sentry.startTransaction" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://docs.sentry.io/product/performance/"
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent references the SDK configuration reference file when needed",
+      "prompt": "What are all the available configuration options for Sentry JavaScript SDK?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/sdk-configuration.md" },
+        { "type": "contains", "value": "dsn" },
+        { "type": "contains", "value": "tracesSampleRate" }
+      ],
+      "source": "https://docs.sentry.io/platforms/javascript/"
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent explains issue vs event distinction correctly",
+      "prompt": "What's the difference between an event and an issue in Sentry?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "event" },
+        { "type": "contains", "value": "issue" },
+        { "type": "contains", "value": "group" }
+      ],
+      "source": "https://docs.sentry.io/product/issues/"
+    }
+  ]
+}

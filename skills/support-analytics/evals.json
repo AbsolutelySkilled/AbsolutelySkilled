@@ -1,0 +1,142 @@
+{
+  "skill": "support-analytics",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger: activates on CSAT setup question",
+      "prompt": "We just launched our support team and need to start measuring customer satisfaction. How should we set up CSAT surveys?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "CSAT" },
+        { "type": "contains", "value": "resolution" },
+        { "type": "contains", "value": "response rate" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger: activates on deflection rate question",
+      "prompt": "Our help center gets a lot of traffic but customers still open tickets for the same questions. How do I measure whether our self-service content is actually preventing tickets?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "deflection" },
+        { "type": "contains", "value": "self-service" },
+        { "type": "contains", "value": "ticket" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger: activates on support metrics dashboard request",
+      "prompt": "I need to build a weekly report for our VP of Customer Success showing how the support team is performing. What metrics should I include?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "CSAT" },
+        { "type": "contains", "value": "resolution time" },
+        { "type": "contains", "value": "volume" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: CSAT formula and segmentation",
+      "prompt": "Design a CSAT measurement program for our SaaS support team. We handle tickets via email, live chat, and phone. Give me the formula, segmentation approach, and alert thresholds.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "4" },
+        { "type": "contains", "value": "5" },
+        { "type": "contains", "value": "segment" },
+        { "type": "contains", "value": "channel" },
+        { "type": "contains", "value": "response rate" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: NPS vs CSAT distinction and correct cadence",
+      "prompt": "What is the difference between CSAT and NPS for measuring support quality? When should I use each one and how do I calculate them?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Promoter" },
+        { "type": "contains", "value": "Detractor" },
+        { "type": "contains", "value": "0" },
+        { "type": "contains", "value": "10" },
+        { "type": "not_contains", "value": "NPS after every ticket" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: resolution time SLAs by priority",
+      "prompt": "Help me define resolution time SLAs for our support team. We handle everything from critical outages to simple how-to questions.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "P1" },
+        { "type": "contains", "value": "priority" },
+        { "type": "contains", "value": "median" },
+        { "type": "contains", "value": "reopen" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: deflection rate measurement framework",
+      "prompt": "We want to increase our self-service deflection rate from 20% to 35%. How do we accurately measure deflection and what is the strategy to improve it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "deflect" },
+        { "type": "contains", "value": "chatbot" },
+        { "type": "contains", "value": "content" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: trend analysis report structure",
+      "prompt": "I need to set up weekly trend analysis for our support operations. What should the report cover and how do I identify emerging issues early?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "volume" },
+        { "type": "contains", "value": "trend" },
+        { "type": "contains", "value": "topic" },
+        { "type": "contains", "value": "trailing" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Anti-pattern: warns against surveying every interaction",
+      "prompt": "We want to maximize our CSAT data so we are planning to send a survey after every single support interaction. Is there any reason not to?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "fatigue" },
+        { "type": "contains", "value": "response rate" },
+        { "type": "not_contains", "value": "survey every interaction is fine" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Anti-pattern: declining resolution time paired with rising reopen rate",
+      "prompt": "Our average resolution time dropped by 30% this quarter. Our team lead is celebrating. Should we be concerned about anything?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "reopen" },
+        { "type": "not_contains", "value": "nothing to worry about" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-pattern: warns against chasing deflection rate without satisfaction signal",
+      "prompt": "Our CFO wants to maximize deflection rate to cut support costs. We are aiming for 80% deflection. Is that a good target?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "satisfaction" },
+        { "type": "not_contains", "value": "80% is a good target" },
+        { "type": "contains", "value": "self-service" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References: points to metrics-benchmarks for detailed industry data",
+      "prompt": "I need industry benchmarks for CSAT, NPS, and resolution time broken down by company size and vertical. Where should I look?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references" },
+        { "type": "contains", "value": "metrics-benchmarks" }
+      ]
+    }
+  ]
+}

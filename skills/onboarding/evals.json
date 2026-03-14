@@ -1,0 +1,138 @@
+{
+  "skill": "onboarding",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to create a 30/60/90 plan",
+      "prompt": "I just hired a senior software engineer. Help me create a 30/60/90 day onboarding plan for them.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "30" },
+        { "type": "contains", "value": "60" },
+        { "type": "contains", "value": "90" },
+        { "type": "contains", "value": "milestone" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on buddy program setup request",
+      "prompt": "We want to set up a buddy program for new hires. How should we structure it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "buddy" },
+        { "type": "contains", "value": "check-in" },
+        { "type": "contains", "value": "peer" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on first week schedule request",
+      "prompt": "My new product manager starts Monday. Can you help me plan their first week day by day?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Day 1" },
+        { "type": "contains", "value": "Day 5" },
+        { "type": "contains", "value": "manager" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Triggers on ramp metrics request",
+      "prompt": "How do I measure whether our onboarding program is actually working?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "metric" },
+        { "type": "contains", "value": "retention" },
+        { "type": "contains", "value": "productivity" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Triggers on knowledge transfer plan request",
+      "prompt": "A key engineer is leaving in 4 weeks. How do I build a knowledge transfer plan?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "shadow" },
+        { "type": "contains", "value": "document" },
+        { "type": "contains", "value": "transfer" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Produces a 30/60/90 plan with three distinct phases",
+      "prompt": "Write a 30/60/90 day plan for a new sales development representative joining a B2B SaaS startup.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "learn" },
+        { "type": "contains", "value": "contribute" },
+        { "type": "contains", "value": "own" },
+        { "type": "contains", "value": "CRM" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Distinguishes buddy from mentor correctly",
+      "prompt": "Should I assign a mentor or a buddy to my new hire? What is the difference?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "buddy" },
+        { "type": "contains", "value": "mentor" },
+        { "type": "contains", "value": "90 days" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Recommends feedback surveys at the right cadence",
+      "prompt": "When and how should I collect feedback from new hires about the onboarding experience?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Day 30" },
+        { "type": "contains", "value": "Day 90" },
+        { "type": "contains", "value": "survey" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Identifies the sink-or-swim anti-pattern",
+      "prompt": "Our onboarding is pretty minimal - we just give new hires a laptop and tell them to figure it out. Is that a problem?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "productivity" },
+        { "type": "contains", "value": "structured" },
+        { "type": "not_contains", "value": "that is fine" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Recommends role-specific onboarding tracks in addition to general onboarding",
+      "prompt": "We have a generic onboarding for everyone. Should we have different tracks for different roles?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "role-specific" },
+        { "type": "contains", "value": "general" },
+        { "type": "contains", "value": "domain" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not trigger for general performance management",
+      "prompt": "How do I put an underperforming employee on a performance improvement plan?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "30/60/90" },
+        { "type": "not_contains", "value": "buddy program" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Provides time-to-productivity as the core ramp metric",
+      "prompt": "What is the single most important metric to track for a new hire's ramp?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "productivity" },
+        { "type": "contains", "value": "contribution" }
+      ]
+    }
+  ]
+}

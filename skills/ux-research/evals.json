@@ -1,0 +1,129 @@
+{
+  "skill": "ux-research",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on user interview planning request",
+      "prompt": "I need to understand why users are dropping off during our onboarding flow. How should I set up user interviews?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "discussion guide" },
+        { "type": "contains", "value": "research question" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Recommends 5 users for formative usability testing",
+      "prompt": "How many participants do I need for a usability test of our new checkout flow?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "5" },
+        { "type": "contains", "value": "80%" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Distinguishes generative from evaluative research",
+      "prompt": "We're about to start a new feature. Should we do user interviews or a usability test first?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "generative" },
+        { "type": "contains", "value": "evaluative" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Provides correct A/B test hypothesis template",
+      "prompt": "Write a hypothesis for an A/B test where we want to test a new CTA button color on our pricing page",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "We believe" },
+        { "type": "contains", "value": "null hypothesis" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Warns against stopping an A/B test early",
+      "prompt": "Our A/B test reached 95% significance after 3 days. Can we call it and ship the variant?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "peeking" },
+        { "type": "contains", "value": "duration" },
+        { "type": "not_contains", "value": "yes, you can ship" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Produces journey map template with correct rows",
+      "prompt": "Create a user journey map template for a customer purchasing a subscription product",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "touchpoints" },
+        { "type": "contains", "value": "pain points" },
+        { "type": "contains", "value": "emotions" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Explains affinity mapping synthesis process",
+      "prompt": "I have notes from 8 user interviews. How do I synthesize them into themes?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "affinity" },
+        { "type": "contains", "value": "cluster" },
+        { "type": "contains", "value": "implication" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Identifies leading question anti-pattern",
+      "prompt": "Is this a good interview question: 'Don't you find it annoying when checkout forms ask for too many fields?'",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "leading" },
+        { "type": "not_contains", "value": "yes, that is a good question" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Recommends behavioral screener criteria over demographics",
+      "prompt": "I want to recruit participants for a study on our mobile banking app. What should I include in the screener?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "behavior" },
+        { "type": "contains", "value": "screener" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Explains think-aloud protocol for usability tests",
+      "prompt": "How do I run a moderated usability test? What should I ask participants to do while they complete tasks?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "think-aloud" },
+        { "type": "contains", "value": "task completion" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Warns against recruiting power users as research participants",
+      "prompt": "Can I just recruit our most engaged users for usability testing? They know the product best.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "power users" },
+        { "type": "not_contains", "value": "yes, that is fine" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for pure data analytics unrelated to user behavior",
+      "prompt": "Help me build a SQL query to calculate monthly recurring revenue from our transactions table",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "user interviews" },
+        { "type": "not_contains", "value": "usability test" }
+      ]
+    }
+  ]
+}

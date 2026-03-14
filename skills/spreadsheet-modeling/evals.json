@@ -1,0 +1,151 @@
+{
+  "skill": "spreadsheet-modeling",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when user asks for help with an Excel formula",
+      "prompt": "I need a formula to look up a product price from a table based on the product name",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "XLOOKUP" },
+        { "type": "contains", "value": "INDEX" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers when user asks about building a dashboard",
+      "prompt": "How do I create a sales dashboard in Google Sheets with KPIs and charts?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "conditional formatting" },
+        { "type": "contains", "value": "chart" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers when user asks about pivot tables",
+      "prompt": "I have a dataset of sales transactions. How do I summarize revenue by region and quarter?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pivot" },
+        { "type": "contains", "value": "row" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent produces correct XLOOKUP formula with error handling",
+      "prompt": "Write me an XLOOKUP formula that finds an employee's department from a lookup table, returning 'Unknown' if not found",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "XLOOKUP" },
+        { "type": "contains", "value": "Unknown" },
+        { "type": "not_contains", "value": "VLOOKUP" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent produces correct SUMIFS formula with multiple criteria",
+      "prompt": "Write a SUMIFS formula that totals sales amount where region is West and date is in 2025",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "SUMIFS" },
+        { "type": "contains", "value": "DATE" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent writes a working VBA macro to format a report",
+      "prompt": "Write a VBA macro that bolds the header row, auto-fits all columns, and formats column D as currency",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Sub " },
+        { "type": "contains", "value": "Font.Bold" },
+        { "type": "contains", "value": "AutoFit" },
+        { "type": "contains", "value": "NumberFormat" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent writes a working Google Apps Script to send an email report",
+      "prompt": "Write a Google Apps Script that reads a value from cell B2 on the Dashboard sheet and emails it as a weekly report",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "SpreadsheetApp" },
+        { "type": "contains", "value": "MailApp.sendEmail" },
+        { "type": "contains", "value": "getRange" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent correctly explains scenario analysis with CHOOSE function",
+      "prompt": "How do I set up a base/bull/bear scenario switcher in my financial model so changing one cell updates everything?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "CHOOSE" },
+        { "type": "contains", "value": "drop" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent warns against VLOOKUP and suggests alternatives",
+      "prompt": "Should I use VLOOKUP to build my lookup table?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "XLOOKUP" },
+        { "type": "contains", "value": "INDEX" },
+        { "type": "contains", "value": "column" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent warns against merged cells",
+      "prompt": "I want to merge the header cells across columns A through E to make my report look nice",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Center Across Selection" },
+        { "type": "contains", "value": "sorting" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent handles volatile function performance concern",
+      "prompt": "My spreadsheet is really slow. I use INDIRECT and OFFSET in hundreds of formulas. What's wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "volatile" },
+        { "type": "contains", "value": "INDEX" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not invent non-existent Excel functions",
+      "prompt": "Can I use REGEXEXTRACT in Excel to parse a string?",
+      "type": "factual",
+      "assertions": [
+        { "type": "not_contains", "value": "=REGEXEXTRACT(" },
+        { "type": "contains", "value": "Google Sheets" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent does not suggest deprecated CONCATENATE for modern Excel",
+      "prompt": "How do I join text from multiple cells with a comma separator in Excel 365?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "TEXTJOIN" },
+        { "type": "not_contains", "value": "CONCATENATE" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "Agent references the formula-patterns file for LAMBDA questions",
+      "prompt": "How do I create a reusable custom function in Excel without VBA?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "LAMBDA" },
+        { "type": "contains", "value": "Name Manager" }
+      ]
+    }
+  ]
+}

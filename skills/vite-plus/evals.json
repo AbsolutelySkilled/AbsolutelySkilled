@@ -1,0 +1,182 @@
+{
+  "skill": "vite-plus",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when user asks about Vite+ project setup",
+      "prompt": "How do I create a new React TypeScript project with Vite+?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "vp create" },
+        { "type": "contains", "value": "react" },
+        { "type": "code_valid", "language": "bash" }
+      ],
+      "source": "https://viteplus.dev/guide/create"
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers when user mentions vp CLI commands",
+      "prompt": "What does vp check do and how is it different from running lint and format separately?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "vp check" },
+        { "type": "contains", "value": "Oxlint" },
+        { "type": "contains", "value": "Oxfmt" }
+      ],
+      "source": "https://viteplus.dev/guide/check"
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers for migration questions",
+      "prompt": "I have an existing Vite project with Vitest. How do I migrate to Vite+?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "vp migrate" },
+        { "type": "contains", "value": "vp install" },
+        { "type": "code_valid", "language": "bash" }
+      ],
+      "source": "https://viteplus.dev/guide/migrate"
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent produces correct unified config with lint and fmt blocks",
+      "prompt": "Set up Vite+ config with single quotes, type-aware linting, and ignore dist folder",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "defineConfig" },
+        { "type": "contains", "value": "vite-plus" },
+        { "type": "contains", "value": "typeAware" },
+        { "type": "contains", "value": "singleQuote" },
+        { "type": "not_contains", "value": ".oxlintrc" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://viteplus.dev/config/"
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent correctly configures library packaging with tsdown",
+      "prompt": "Configure vp pack to build my library in both ESM and CJS with TypeScript declarations",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "pack" },
+        { "type": "contains", "value": "dts" },
+        { "type": "contains", "value": "esm" },
+        { "type": "contains", "value": "cjs" },
+        { "type": "not_contains", "value": "tsdown.config" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://viteplus.dev/guide/pack"
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent sets up monorepo task with caching and dependencies",
+      "prompt": "Create a CI task in vite.config.ts that runs check, test, and build with caching enabled, and depends on a lint task",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "run" },
+        { "type": "contains", "value": "tasks" },
+        { "type": "contains", "value": "dependsOn" },
+        { "type": "contains", "value": "cache" },
+        { "type": "contains", "value": "command" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://viteplus.dev/config/run"
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent runs monorepo builds across workspaces correctly",
+      "prompt": "How do I build all packages in my Vite+ monorepo in dependency order?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "vp run" },
+        { "type": "contains", "value": "-r" },
+        { "type": "code_valid", "language": "bash" }
+      ],
+      "source": "https://viteplus.dev/guide/run"
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent configures test block in vite.config.ts not vitest.config.ts",
+      "prompt": "Set up Vitest in my Vite+ project with coverage reporting",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "test" },
+        { "type": "contains", "value": "coverage" },
+        { "type": "contains", "value": "vite-plus" },
+        { "type": "not_contains", "value": "vitest.config" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://viteplus.dev/config/test"
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent handles vp test watch mode gotcha correctly",
+      "prompt": "Why does vp test exit immediately instead of watching for changes?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "vp test watch" },
+        { "type": "contains", "value": "single-run" }
+      ],
+      "source": "https://viteplus.dev/guide/test"
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent handles vp build vs vp run build distinction",
+      "prompt": "I ran vp build but it's not running my custom build script from package.json",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "vp run build" },
+        { "type": "contains", "value": "vp build" }
+      ],
+      "source": "https://viteplus.dev/guide/build"
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent manages Node.js versions with vp env",
+      "prompt": "Pin my project to Node.js 22 using Vite+",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "vp env pin" },
+        { "type": "contains", "value": ".node-version" },
+        { "type": "code_valid", "language": "bash" }
+      ],
+      "source": "https://viteplus.dev/guide/env"
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not hallucinate vp commands that don't exist",
+      "prompt": "How do I deploy my Vite+ project?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "vp deploy" },
+        { "type": "not_contains", "value": "vp publish" }
+      ],
+      "source": "https://viteplus.dev/guide/"
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent does not recommend separate Oxlint config files",
+      "prompt": "Should I create an .oxlintrc.json file for my Vite+ project?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "vite.config" },
+        { "type": "contains", "value": "lint" }
+      ],
+      "source": "https://viteplus.dev/config/lint"
+    },
+    {
+      "id": "eval-014",
+      "description": "Agent references config.md for detailed configuration questions",
+      "prompt": "What are all the task runner configuration options in Vite+?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "command" },
+        { "type": "contains", "value": "dependsOn" },
+        { "type": "contains", "value": "cache" },
+        { "type": "contains", "value": "env" }
+      ],
+      "source": "https://viteplus.dev/config/run"
+    }
+  ]
+}

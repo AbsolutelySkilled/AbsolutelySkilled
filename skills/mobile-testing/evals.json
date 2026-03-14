@@ -1,0 +1,149 @@
+{
+  "skill": "mobile-testing",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to write a Detox e2e test",
+      "prompt": "Write a Detox test that verifies the onboarding flow completes and lands on the home screen",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "element(by.id(" },
+        { "type": "contains", "value": "toBeVisible" },
+        { "type": "contains", "value": "device.launchApp" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on request to configure Appium for native Android",
+      "prompt": "How do I set up Appium to test my native Android app on a Pixel 7?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "UiAutomator2" },
+        { "type": "contains", "value": "platformName" },
+        { "type": "contains", "value": "appium:app" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on request about mobile device farm setup",
+      "prompt": "What is the best way to run my mobile tests across multiple real devices in CI?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Device Farm" },
+        { "type": "contains", "value": "Firebase Test Lab" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Produces correct Detox test with proper synchronization",
+      "prompt": "Write a Detox test for a checkout flow that adds an item to cart, enters payment info, and confirms the order",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "element(by.id(" },
+        { "type": "contains", "value": "tap()" },
+        { "type": "contains", "value": "typeText(" },
+        { "type": "not_contains", "value": "sleep(" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Correctly configures Firebase Test Lab via gcloud CLI",
+      "prompt": "Write a command to run my Android instrumented tests on Firebase Test Lab against a Pixel 6 and a Samsung Galaxy S22",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "gcloud firebase test android run" },
+        { "type": "contains", "value": "--device" },
+        { "type": "contains", "value": "--type instrumentation" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Sets up Crashlytics dSYM upload in CI correctly",
+      "prompt": "How do I make sure my iOS crash reports in Firebase Crashlytics show actual file names and line numbers instead of memory addresses?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "dSYM" },
+        { "type": "contains", "value": "upload-symbols" },
+        { "type": "contains", "value": "symbolication" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Distributes beta build via Firebase App Distribution",
+      "prompt": "Write a CI script that distributes an Android APK to my QA team using Firebase App Distribution",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "firebase appdistribution:distribute" },
+        { "type": "contains", "value": "--groups" },
+        { "type": "contains", "value": "--release-notes" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Uploads iOS build to TestFlight using Fastlane",
+      "prompt": "Set up Fastlane to build and upload my iOS app to TestFlight automatically",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "upload_to_testflight" },
+        { "type": "contains", "value": "build_app" },
+        { "type": "contains", "value": "lane :beta" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Warns against hardcoded waits in Detox tests",
+      "prompt": "My Detox test is flaky because the screen takes a while to load. I added a sleep(5000) but it still fails on slower devices.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "synchronization" },
+        { "type": "not_contains", "value": "increase the sleep" },
+        { "type": "not_contains", "value": "sleep(10000)" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Recommends real devices over simulator-only testing",
+      "prompt": "Is it enough to just run my mobile tests on the iOS Simulator and Android Emulator?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "real device" },
+        { "type": "not_contains", "value": "simulators are sufficient" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not hallucinate a non-existent Detox method",
+      "prompt": "How do I use Detox's built-in network mocking to stub API responses?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "detox.mockNetwork" },
+        { "type": "not_contains", "value": "detox.intercept" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for web-only testing questions",
+      "prompt": "How do I write a Playwright test for my web app's login page?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "Detox" },
+        { "type": "not_contains", "value": "Appium" },
+        { "type": "not_contains", "value": "device farm" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "References the correct file for Detox deep-dive",
+      "prompt": "I need a complete guide on configuring Detox for my React Native project - all the matchers, actions, and CI setup",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/detox-guide.md" }
+      ]
+    }
+  ]
+}

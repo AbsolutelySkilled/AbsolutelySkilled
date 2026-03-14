@@ -1,0 +1,139 @@
+{
+  "skill": "cloud-security",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on IAM design question",
+      "prompt": "I need to give my Lambda function access to read from an S3 bucket and call a DynamoDB table. How should I set up the IAM permissions?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "role" },
+        { "type": "contains", "value": "least privilege" },
+        { "type": "not_contains", "value": "AdministratorAccess" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on secrets management question",
+      "prompt": "We have database credentials that our app needs to connect to RDS. Right now they're in an environment variable in our ECS task definition. Is this OK?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Secrets Manager" },
+        { "type": "contains", "value": "runtime" },
+        { "type": "not_contains", "value": "environment variable is fine" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on VPC security question",
+      "prompt": "I'm setting up a new AWS environment for a production web app. How should I structure the VPC and subnets?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "private" },
+        { "type": "contains", "value": "public" },
+        { "type": "contains", "value": "subnet" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: create a minimal IAM policy for S3 read access",
+      "prompt": "Write an IAM policy that allows a service to only read objects from a specific S3 bucket named 'company-reports' and nothing else.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "s3:GetObject" },
+        { "type": "contains", "value": "company-reports" },
+        { "type": "not_contains", "value": "\"*\"" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: explain the envelope encryption pattern",
+      "prompt": "Our compliance team is asking us to use customer-managed KMS keys for our RDS database. Can you explain envelope encryption and why it matters here?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "data encryption key" },
+        { "type": "contains", "value": "CMK" },
+        { "type": "contains", "value": "rotation" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: configure CloudTrail for organization-wide audit logging",
+      "prompt": "We have 12 AWS accounts in an organization and need to ensure every account's API calls are logged in a tamper-proof way for compliance. How do I set this up?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "CloudTrail" },
+        { "type": "contains", "value": "organization" },
+        { "type": "contains", "value": "log file validation" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: implement mTLS between services with Istio",
+      "prompt": "We're running microservices on Kubernetes and our security team wants all service-to-service traffic to be mutually authenticated and encrypted. How do we implement this with Istio?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "PeerAuthentication" },
+        { "type": "contains", "value": "STRICT" },
+        { "type": "contains", "value": "mtls" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: SOC 2 controls checklist",
+      "prompt": "We're starting our SOC 2 Type II audit prep. What are the key technical controls we need to have in place for our AWS infrastructure?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "MFA" },
+        { "type": "contains", "value": "audit log" },
+        { "type": "contains", "value": "access review" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns against wildcard IAM policies",
+      "prompt": "To keep things simple, we're just giving our application's IAM role the managed policy 'AdministratorAccess'. Is there a reason not to do this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "least privilege" },
+        { "type": "not_contains", "value": "AdministratorAccess is acceptable" },
+        { "type": "not_contains", "value": "that's fine" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns against hardcoding secrets in source code",
+      "prompt": "I just committed our AWS access key and secret to the GitHub repo by mistake. It was only there for 30 seconds before I deleted the commit. Am I safe?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "rotate" },
+        { "type": "contains", "value": "revoke" },
+        { "type": "not_contains", "value": "you are safe" },
+        { "type": "not_contains", "value": "deleting the commit is sufficient" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns against placing databases in public subnets",
+      "prompt": "We're deploying RDS in the same public subnet as our load balancer to simplify the network setup. What's wrong with this approach?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "private subnet" },
+        { "type": "contains", "value": "internet" },
+        { "type": "not_contains", "value": "that's acceptable" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load: points to compliance frameworks reference for HIPAA question",
+      "prompt": "We're building a healthcare app and need to understand what AWS controls are required for HIPAA compliance. Where should I start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "HIPAA" },
+        { "type": "contains", "value": "encryption" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

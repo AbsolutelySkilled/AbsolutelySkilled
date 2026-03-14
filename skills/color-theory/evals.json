@@ -1,0 +1,153 @@
+{
+  "skill": "color-theory",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on brand color palette generation request",
+      "prompt": "I have a brand color of #4f46e5. Generate a full 10-shade color palette from it.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "oklch" },
+        { "type": "contains", "value": "50" },
+        { "type": "contains", "value": "900" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-002",
+      "description": "Recommends OKLCH over HSL for perceptual uniformity",
+      "prompt": "Should I use HSL or OKLCH when generating a color palette programmatically?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "OKLCH" },
+        { "type": "contains", "value": "perceptual" },
+        { "type": "not_contains", "value": "HSL is fine" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-003",
+      "description": "Correctly states WCAG AA contrast ratio for normal text",
+      "prompt": "What contrast ratio do I need for body text to pass WCAG AA?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "4.5" },
+        { "type": "contains", "value": "AA" },
+        { "type": "contains", "value": "3:1" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-004",
+      "description": "Generates correct dark mode token overrides without pure black",
+      "prompt": "Implement a dark mode color token system using CSS custom properties",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "prefers-color-scheme" },
+        { "type": "contains", "value": "--color-" },
+        { "type": "not_contains", "value": "#000000" },
+        { "type": "not_contains", "value": "#ffffff" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-005",
+      "description": "Defines semantic tokens correctly on top of primitive scale",
+      "prompt": "How do I structure my color tokens so I can easily switch themes?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "var(--color-" },
+        { "type": "contains", "value": "action" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-006",
+      "description": "Warns against raw hex values in components",
+      "prompt": "Is it okay to write `color: #4f46e5` directly in my button component CSS?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "token" },
+        { "type": "not_contains", "value": "yes, that is fine" },
+        { "type": "contains", "value": "var(--" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-007",
+      "description": "Creates accessible data visualization palette with colorblind safety note",
+      "prompt": "Give me a 6-color palette for charts and data visualization that is colorblind safe",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "oklch" },
+        { "type": "contains", "value": "chart" },
+        { "type": "contains", "value": "colorblind" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-008",
+      "description": "Uses color-mix() correctly for tints and shades",
+      "prompt": "How do I create a lighter tint of my brand color using pure CSS without adding new tokens?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "color-mix" },
+        { "type": "contains", "value": "oklch" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-009",
+      "description": "Recommends tinted neutrals over pure gray",
+      "prompt": "What neutral gray should I use in my UI that won't look disconnected from my blue brand color?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "chroma" },
+        { "type": "not_contains", "value": "hsl(0, 0%" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-010",
+      "description": "Explains color harmony options and recommends analogous for product UI",
+      "prompt": "What is the difference between complementary and analogous color schemes, and which should I use for a SaaS dashboard?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "complementary" },
+        { "type": "contains", "value": "analogous" },
+        { "type": "contains", "value": "180" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-011",
+      "description": "Flags red-green only distinction as colorblind accessibility failure",
+      "prompt": "My chart uses red for negative values and green for positive. Is that okay?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "colorblind" },
+        { "type": "contains", "value": "pattern" },
+        { "type": "not_contains", "value": "yes, that is fine" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-012",
+      "description": "Correctly sets status colors lighter in dark mode",
+      "prompt": "What color should I use for a success status badge in dark mode?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "dark" },
+        { "type": "contains", "value": "light" },
+        { "type": "contains", "value": "contrast" }
+      ],
+      "source": "domain-knowledge"
+    }
+  ]
+}

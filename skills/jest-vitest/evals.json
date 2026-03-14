@@ -1,0 +1,140 @@
+{
+  "skill": "jest-vitest",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers when asked to write unit tests with Jest",
+      "prompt": "Write unit tests for this utility function using Jest: function clamp(value, min, max) { return Math.min(Math.max(value, min), max); }",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "describe" },
+        { "type": "contains", "value": "expect" },
+        { "type": "contains", "value": "toBe" },
+        { "type": "code_valid", "language": "ts" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Uses Arrange-Act-Assert structure",
+      "prompt": "Show me how to write a well-structured Vitest test for a shopping cart's addItem method",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Arrange" },
+        { "type": "contains", "value": "Act" },
+        { "type": "contains", "value": "Assert" },
+        { "type": "code_valid", "language": "ts" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Can mock a module with vi.mock",
+      "prompt": "How do I mock an axios HTTP call in Vitest so my tests don't make real network requests?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "vi.mock" },
+        { "type": "contains", "value": "mockResolvedValue" },
+        { "type": "code_valid", "language": "ts" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can test async code with async/await",
+      "prompt": "Write a Vitest test for an async function fetchUser(id) that either returns a user object or throws 'User not found'",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "async" },
+        { "type": "contains", "value": "await" },
+        { "type": "contains", "value": "rejects" },
+        { "type": "code_valid", "language": "ts" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can use fake timers for debounce testing",
+      "prompt": "How do I test a debounced function in Vitest without waiting for real timers?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "vi.useFakeTimers" },
+        { "type": "contains", "value": "vi.advanceTimersByTime" },
+        { "type": "contains", "value": "vi.useRealTimers" },
+        { "type": "code_valid", "language": "ts" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can configure Vitest for a React project",
+      "prompt": "Show me a vitest.config.ts for a React project with jsdom, coverage at 80%, and testing-library setup",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "jsdom" },
+        { "type": "contains", "value": "coverage" },
+        { "type": "contains", "value": "80" },
+        { "type": "contains", "value": "setupFiles" },
+        { "type": "code_valid", "language": "ts" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can test React components with getByRole queries",
+      "prompt": "Write a Vitest + React Testing Library test for a button that shows a success message when clicked",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "render" },
+        { "type": "contains", "value": "getByRole" },
+        { "type": "contains", "value": "userEvent" },
+        { "type": "code_valid", "language": "tsx" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Warns against getByTestId over role-based queries",
+      "prompt": "What query should I use to find a submit button in my React Testing Library tests?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "getByRole" },
+        { "type": "contains", "value": "button" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Explains when and when NOT to use snapshots",
+      "prompt": "Should I use snapshot tests for all my React components?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "yes, snapshot all" },
+        { "type": "contains", "value": "stable" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Can explain coverage metrics and branch coverage",
+      "prompt": "My Jest coverage shows 90% statements but only 60% branches. What does that mean and how do I fix it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "branch" },
+        { "type": "contains", "value": "if" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Identifies the anti-pattern of mocking internal helpers",
+      "prompt": "I'm mocking my own internal helper functions inside the module I'm testing. Is that a good approach?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "boundary" },
+        { "type": "not_contains", "value": "yes, mock internal" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for Playwright or Cypress e2e testing",
+      "prompt": "How do I write a Playwright test that logs into my app and checks the dashboard loads?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "vi.fn" },
+        { "type": "not_contains", "value": "jest.fn" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "skill": "data-quality",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when user asks about data validation in a pipeline",
+      "prompt": "I need to add data validation checks to our ETL pipeline that loads orders into the warehouse",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "validation" },
+        { "type": "contains", "value": "expectation" }
+      ],
+      "source": "https://docs.greatexpectations.io/docs/core/introduction/"
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers when user asks about data contracts",
+      "prompt": "How do I define a data contract between our analytics team and the payments team?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "contract" },
+        { "type": "contains", "value": "schema" },
+        { "type": "contains", "value": "owner" }
+      ],
+      "source": "https://datacontract.com/"
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers when user asks about data lineage",
+      "prompt": "I need to track which tables depend on our raw.orders table so I can assess impact of schema changes",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "lineage" },
+        { "type": "contains", "value": "OpenLineage" }
+      ],
+      "source": "https://openlineage.io/docs/"
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent can write a Great Expectations suite with correct API",
+      "prompt": "Write a Great Expectations expectation suite for a users table with columns user_id, email, created_at, and plan_type",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "ExpectColumnValuesToNotBeNull" },
+        { "type": "contains", "value": "ExpectColumnValuesToBeUnique" },
+        { "type": "contains", "value": "great_expectations" },
+        { "type": "not_contains", "value": "expect_column_values_to_not_be_null(" },
+        { "type": "code_valid", "language": "python" }
+      ],
+      "source": "https://docs.greatexpectations.io/docs/core/define_expectations/"
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent can create a GX checkpoint for pipeline integration",
+      "prompt": "Show me how to run a Great Expectations checkpoint in an Airflow DAG that fails the task if validation fails",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "checkpoint" },
+        { "type": "contains", "value": "result" },
+        { "type": "contains", "value": "success" },
+        { "type": "code_valid", "language": "python" }
+      ],
+      "source": "https://docs.greatexpectations.io/docs/core/validate_data/"
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent can write a SQL freshness check",
+      "prompt": "Write a SQL query to check if the events table has received data in the last 30 minutes",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "MAX" },
+        { "type": "contains", "value": "INTERVAL" },
+        { "type": "code_valid", "language": "bash" }
+      ],
+      "source": "https://docs.greatexpectations.io/docs/core/define_expectations/"
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent can define a data contract YAML spec",
+      "prompt": "Create a data contract for our payments table that the analytics team consumes",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "schema" },
+        { "type": "contains", "value": "owner" },
+        { "type": "contains", "value": "freshness" },
+        { "type": "contains", "value": "consumers" }
+      ],
+      "source": "https://datacontract.com/"
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent can emit OpenLineage events for lineage tracking",
+      "prompt": "Show me how to emit lineage events from a Python transformation job using OpenLineage",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "OpenLineageClient" },
+        { "type": "contains", "value": "RunEvent" },
+        { "type": "contains", "value": "InputDataset" },
+        { "type": "contains", "value": "OutputDataset" },
+        { "type": "code_valid", "language": "python" }
+      ],
+      "source": "https://openlineage.io/docs/"
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent handles volume anomaly detection correctly",
+      "prompt": "How do I detect when a table has significantly fewer rows than usual without hardcoding a threshold?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "z-score" },
+        { "type": "contains", "value": "rolling" },
+        { "type": "not_contains", "value": "hardcode" }
+      ],
+      "source": "https://docs.greatexpectations.io/docs/core/define_expectations/"
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent handles schema drift detection as an edge case",
+      "prompt": "A new column appeared in our source table overnight and broke our pipeline. How do we prevent this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "contract" },
+        { "type": "contains", "value": "schema" },
+        { "type": "contains", "value": "validation" }
+      ],
+      "source": "https://datacontract.com/"
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent does not hallucinate a GX method that does not exist",
+      "prompt": "Use Great Expectations to check if a column has valid JSON format",
+      "type": "code",
+      "assertions": [
+        { "type": "not_contains", "value": "expect_column_values_to_be_valid_json" },
+        { "type": "not_contains", "value": "ExpectColumnValuesToBeValidJson" },
+        { "type": "contains", "value": "custom" }
+      ],
+      "source": "https://docs.greatexpectations.io/docs/core/define_expectations/"
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not invent a non-existent OpenLineage method",
+      "prompt": "Track column-level lineage for a SQL transformation using OpenLineage",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "facet" },
+        { "type": "not_contains", "value": "track_column_lineage" },
+        { "type": "not_contains", "value": "column_lineage_auto" }
+      ],
+      "source": "https://openlineage.io/docs/"
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent correctly references the great-expectations-advanced reference file",
+      "prompt": "I need to write a custom Great Expectations expectation that checks if email addresses match our corporate domain",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/great-expectations-advanced.md" },
+        { "type": "contains", "value": "custom" }
+      ],
+      "source": "https://docs.greatexpectations.io/docs/core/customize_expectations/"
+    }
+  ]
+}

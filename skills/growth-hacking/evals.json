@@ -1,0 +1,132 @@
+{
+  "skill": "growth-hacking",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on growth loop design request",
+      "prompt": "Help me design a viral growth loop for my project management SaaS",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "loop" },
+        { "type": "contains", "value": "invite" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on referral program request",
+      "prompt": "I want to build a referral program for my B2B SaaS. What reward structure should I use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "double-sided" },
+        { "type": "contains", "value": "credits" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Can explain AARRR pirate metrics with correct stages",
+      "prompt": "Explain the AARRR pirate metrics framework and how to use it to diagnose growth problems",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Acquisition" },
+        { "type": "contains", "value": "Activation" },
+        { "type": "contains", "value": "Retention" },
+        { "type": "contains", "value": "Referral" },
+        { "type": "contains", "value": "Revenue" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can calculate and explain viral coefficient",
+      "prompt": "Our app sends an average of 4 invite emails per user and 20% of invited people sign up. What is our viral coefficient and what does it mean?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "0.8" },
+        { "type": "contains", "value": "K" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can prioritize activation funnel optimization steps",
+      "prompt": "My signup funnel has these drop-off rates: signup page 40% drop, email verification 25% drop, profile setup 60% drop, first action 35% drop. Where should I focus first?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "profile" },
+        { "type": "contains", "value": "friction" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can apply the ICE framework to score and prioritize experiments",
+      "prompt": "I have three growth experiments: (A) add social login, (B) redesign onboarding flow, (C) add in-app referral prompt. How do I prioritize them using the ICE framework?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Impact" },
+        { "type": "contains", "value": "Confidence" },
+        { "type": "contains", "value": "Ease" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can explain the difference between growth loops and funnels",
+      "prompt": "What is the difference between a growth funnel and a growth loop? Why does it matter?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "loop" },
+        { "type": "contains", "value": "compound" },
+        { "type": "not_contains", "value": "they are the same" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can use cohort analysis to improve retention",
+      "prompt": "How do I use cohort analysis to figure out why some users retain and others churn?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cohort" },
+        { "type": "contains", "value": "retention curve" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Can identify the aha moment and design onboarding toward it",
+      "prompt": "How do I find the aha moment in my product and use it to redesign onboarding?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "aha moment" },
+        { "type": "contains", "value": "retained" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Correctly identifies retention as prerequisite to scaling acquisition",
+      "prompt": "Our Day-30 retention is 8%. Should we increase our paid acquisition budget to grow faster?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "retention" },
+        { "type": "not_contains", "value": "yes, increase the budget" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Can describe a PLG implementation checklist for a freemium model",
+      "prompt": "We want to adopt a product-led growth motion with a freemium model. What do we need to implement?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "free tier" },
+        { "type": "contains", "value": "upgrade" },
+        { "type": "contains", "value": "PQL" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Warns against dark patterns and vanity metrics",
+      "prompt": "Our growth team wants to add a forced share screen after signup to boost our viral coefficient. Good idea?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "trust" },
+        { "type": "not_contains", "value": "great idea" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "skill": "load-testing",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on k6 load test question",
+      "prompt": "I want to load test my REST API with k6. Where do I start?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "k6" },
+        { "type": "contains", "value": "options" },
+        { "type": "contains", "value": "thresholds" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on stress testing question",
+      "prompt": "How do I find the breaking point of my API under stress?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "stress" },
+        { "type": "contains", "value": "saturation" },
+        { "type": "contains", "value": "ramp" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on soak testing question",
+      "prompt": "We suspect our app has a memory leak but it only shows up after hours of traffic. How should I test this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "soak" },
+        { "type": "contains", "value": "duration" },
+        { "type": "contains", "value": "memory" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: implements ramping stages in k6",
+      "prompt": "Write a k6 script that ramps from 0 to 100 virtual users over 2 minutes, holds for 5 minutes, then ramps back down.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "stages" },
+        { "type": "contains", "value": "target: 100" },
+        { "type": "contains", "value": "target: 0" },
+        { "type": "contains", "value": "duration" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: defines pass/fail thresholds before running",
+      "prompt": "How do I make my k6 test automatically fail if p95 latency exceeds 500ms or the error rate goes above 1%?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "thresholds" },
+        { "type": "contains", "value": "p(95)" },
+        { "type": "contains", "value": "http_req_failed" },
+        { "type": "contains", "value": "rate<0.01" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: uses SharedArray for parameterized test data",
+      "prompt": "My k6 test always hits the same user ID, so it's just testing the cache. How do I load a list of real user IDs and randomize which one each VU uses?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "SharedArray" },
+        { "type": "contains", "value": "open(" },
+        { "type": "contains", "value": "random" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: integrates k6 into GitHub Actions CI",
+      "prompt": "How do I run k6 load tests automatically in GitHub Actions on every push to main?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "k6 run" },
+        { "type": "contains", "value": "actions/checkout" },
+        { "type": "contains", "value": "install k6" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: reads and interprets k6 output correctly",
+      "prompt": "My k6 run shows p95=200ms but p99=1800ms. What does this gap mean and how do I find the root cause?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "tail" },
+        { "type": "contains", "value": "p99" },
+        { "type": "contains", "value": "GC" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Core task: models a realistic multi-step user journey",
+      "prompt": "I need to load test a checkout flow: login, browse products, add to cart, place order. How do I model this as a single k6 scenario?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "group" },
+        { "type": "contains", "value": "sleep" },
+        { "type": "contains", "value": "check" },
+        { "type": "contains", "value": "token" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns against using averages for performance decisions",
+      "prompt": "Our load test shows average response time is 120ms which seems good. Can we say the service passes performance requirements?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "p95" },
+        { "type": "contains", "value": "p99" },
+        { "type": "not_contains", "value": "average is sufficient" },
+        { "type": "not_contains", "value": "average is fine" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns against testing without think time",
+      "prompt": "I set my k6 test to 100 VUs with no sleep between requests to maximize RPS. Is this a good approach?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "think time" },
+        { "type": "contains", "value": "sleep" },
+        { "type": "not_contains", "value": "no sleep is correct" },
+        { "type": "not_contains", "value": "maximizing RPS is the goal" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not recommend testing in production without safeguards",
+      "prompt": "Should I just run my load test against production to get the most realistic results?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "staging" },
+        { "type": "contains", "value": "production-like" },
+        { "type": "not_contains", "value": "yes, test directly in production" },
+        { "type": "not_contains", "value": "production is always the best choice" }
+      ]
+    }
+  ]
+}

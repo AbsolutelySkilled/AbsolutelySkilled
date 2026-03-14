@@ -1,0 +1,141 @@
+{
+  "skill": "customer-success-playbook",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on customer health score build request",
+      "prompt": "I need to build a customer health score model for our B2B SaaS product. What signals should I include and how should I weight them?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "usage" },
+        { "type": "contains", "value": "engagement" },
+        { "type": "contains", "value": "weight" },
+        { "type": "contains", "value": "outcome" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on churn prediction question",
+      "prompt": "How can I predict which customers are about to churn before they actually cancel?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "churn" },
+        { "type": "contains", "value": "leading indicator" },
+        { "type": "contains", "value": "health score" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on QBR preparation request",
+      "prompt": "I have a Quarterly Business Review with our largest enterprise customer next week. Help me prepare the agenda.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "QBR" },
+        { "type": "contains", "value": "outcome" },
+        { "type": "contains", "value": "success plan" },
+        { "type": "contains", "value": "executive" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Correctly identifies expansion signals from usage and org spread",
+      "prompt": "Our customer is using 90% of their seat licenses and two new departments just started using the product. Is this an expansion opportunity?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "expansion" },
+        { "type": "contains", "value": "seat" },
+        { "type": "contains", "value": "signal" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Catches health score with only one dimension",
+      "prompt": "My current health score only looks at login frequency. What am I missing?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "outcome" },
+        { "type": "contains", "value": "engagement" },
+        { "type": "not_contains", "value": "login frequency is sufficient" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Provides correct red account recovery protocol",
+      "prompt": "One of our enterprise accounts just dropped to a red health score. What should I do in the next 72 hours?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "root cause" },
+        { "type": "contains", "value": "executive" },
+        { "type": "contains", "value": "save plan" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Correctly designs CS coverage segmentation",
+      "prompt": "We have 500 customers ranging from $2K to $200K ARR. How should I segment them for CS coverage?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "tech-touch" },
+        { "type": "contains", "value": "enterprise" },
+        { "type": "contains", "value": "ARR" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Understands churn velocity vs stable low score",
+      "prompt": "Account A has a health score of 55 that has been stable for months. Account B dropped from 80 to 60 in one month. Which is higher risk?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "velocity" },
+        { "type": "contains", "value": "Account B" },
+        { "type": "contains", "value": "declining" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Warns against QBR-as-product-demo anti-pattern",
+      "prompt": "For our QBR, I am planning to walk the customer through all the new features we shipped last quarter. Good idea?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "outcome" },
+        { "type": "contains", "value": "strategic" },
+        { "type": "not_contains", "value": "great idea" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Does not invent non-standard CS frameworks",
+      "prompt": "Explain the Customer Success Quantum Matrix and the Retention Elasticity Score frameworks.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "Customer Success Quantum Matrix is a" },
+        { "type": "not_contains", "value": "Retention Elasticity Score is defined as" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Correctly explains expansion timing relative to customer health",
+      "prompt": "When is the right time to have an expansion conversation with a customer?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "outcome" },
+        { "type": "contains", "value": "health" },
+        { "type": "contains", "value": "signal" },
+        { "type": "not_contains", "value": "immediately after signing" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Produces correct NRR definition and benchmark",
+      "prompt": "What is NRR and what is a good NRR benchmark for a B2B SaaS company?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "NRR" },
+        { "type": "contains", "value": "expansion" },
+        { "type": "contains", "value": "churn" },
+        { "type": "contains", "value": "100%" }
+      ]
+    }
+  ]
+}

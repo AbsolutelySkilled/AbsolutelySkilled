@@ -1,0 +1,128 @@
+{
+  "skill": "sales-playbook",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to design an outbound sequence",
+      "prompt": "Help me build a cold outbound email sequence for our SaaS product targeting VP of Engineering",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "touch" },
+        { "type": "contains", "value": "personali" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on objection handling request",
+      "prompt": "A prospect just said our pricing is too high. How do I respond?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "value" },
+        { "type": "contains", "value": "ROI" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on MEDDIC qualification request",
+      "prompt": "How do I use MEDDIC to qualify this enterprise deal?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Economic Buyer" },
+        { "type": "contains", "value": "Champion" },
+        { "type": "contains", "value": "Metrics" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can write a cold email following the correct structure",
+      "prompt": "Write a cold email to the Head of Sales at a fintech company. We sell sales intelligence software.",
+      "type": "code",
+      "assertions": [
+        { "type": "not_contains", "value": "I hope this finds you well" },
+        { "type": "contains", "value": "?" },
+        { "type": "not_contains", "value": "features" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Applies discovery-before-demo principle",
+      "prompt": "A prospect agreed to a call. Should I jump straight into a product demo?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "discovery" },
+        { "type": "not_contains", "value": "yes, start with the demo" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can explain SPIN question framework for discovery",
+      "prompt": "What questions should I ask on a discovery call with a mid-market operations manager?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pain" },
+        { "type": "contains", "value": "implication" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Advises multi-threading when single-threaded deal at risk",
+      "prompt": "My champion just went dark and hasn't replied in 2 weeks. The deal was supposed to close this quarter.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "stakeholder" },
+        { "type": "contains", "value": "champion" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can structure a demo narrative around buyer pain",
+      "prompt": "How should I structure a 30-minute demo for a prospect who said their biggest pain is manual reporting?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pain" },
+        { "type": "contains", "value": "next step" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Warns against discounting without getting something in return",
+      "prompt": "The prospect is asking for a 20% discount. Should I just give it to them to close the deal?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "value" },
+        { "type": "not_contains", "value": "yes, give the discount" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Can score a deal using MEDDIC and identify gaps",
+      "prompt": "We've had two calls. I know their pain and have a champion, but I haven't met the economic buyer and don't know their decision process. How should I forecast this deal?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Economic Buyer" },
+        { "type": "contains", "value": "gap" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Advises adding value in follow-up rather than just checking in",
+      "prompt": "The prospect hasn't replied in a week. Should I just send a quick 'just checking in' email?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "checking in" },
+        { "type": "contains", "value": "value" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for marketing campaign strategy",
+      "prompt": "Help me design a Google Ads campaign to drive top-of-funnel awareness for our brand",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "MEDDIC" },
+        { "type": "not_contains", "value": "outbound sequence" }
+      ]
+    }
+  ]
+}

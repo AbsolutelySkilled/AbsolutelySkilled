@@ -1,0 +1,137 @@
+{
+  "skill": "database-engineering",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on schema design question",
+      "prompt": "I'm building an e-commerce platform and need to model products, orders, and customers. Should I store the product price on the order line item or just reference the product table?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "denormali" },
+        { "type": "contains", "value": "price" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on slow query / performance question",
+      "prompt": "Our orders table has 50 million rows and a query filtering by customer_id and status is taking 8 seconds. How do I figure out what's wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "EXPLAIN" },
+        { "type": "contains", "value": "index" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Core task: composite index design and column order",
+      "prompt": "I have a table with columns (id, org_id, status, created_at). Most queries filter by org_id and status, then sort by created_at descending. What index should I create and why does column order matter?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "composite" },
+        { "type": "contains", "value": "org_id" },
+        { "type": "contains", "value": "leftmost" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: safe zero-downtime migration",
+      "prompt": "I need to add a NOT NULL column with a default to a 200 million row table in production without downtime. How should I approach this?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "expand" },
+        { "type": "contains", "value": "backfill" },
+        { "type": "code_valid", "value": "sql" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: reading an EXPLAIN plan and identifying a Seq Scan",
+      "prompt": "My EXPLAIN ANALYZE shows a Seq Scan on a table with 10 million rows even though I have an index on the column in my WHERE clause. Why is Postgres ignoring my index?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "selectivity" },
+        { "type": "contains", "value": "statistics" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: soft deletes implementation",
+      "prompt": "Should I use soft deletes or hard deletes for a user account deletion feature? We need to comply with GDPR right-to-erasure requests.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "hard delete" },
+        { "type": "contains", "value": "archive" },
+        { "type": "contains", "value": "GDPR" },
+        { "type": "code_valid", "value": "sql" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: connection pooling setup",
+      "prompt": "Our Node.js app opens a new Postgres connection per request and at peak load we're hitting 'too many connections'. What is the right fix?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "PgBouncer" },
+        { "type": "contains", "value": "pool" },
+        { "type": "contains", "value": "transaction mode" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: warns that OFFSET pagination degrades at scale",
+      "prompt": "We have a paginated list endpoint using LIMIT 20 OFFSET N. It works fine for page 1 but by page 5000 it takes 30 seconds. What's happening?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cursor" },
+        { "type": "not_contains", "value": "OFFSET is fine" },
+        { "type": "contains", "value": "scan" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns that dropping a column requires expand-contract, not a direct ALTER",
+      "prompt": "I want to rename a column in a heavily used production table by dropping the old column and adding a new one in a single migration. Is this safe?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "expand-contract" },
+        { "type": "contains", "value": "backward" },
+        { "type": "not_contains", "value": "safe to drop immediately" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about replication lag on read replicas",
+      "prompt": "We're sending all reads after a write to a read replica to reduce load on primary. Users sometimes see their own write disappear. What's going on?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "replication lag" },
+        { "type": "contains", "value": "stale" },
+        { "type": "not_contains", "value": "replicas always return the latest data" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not recommend hash indexes as a general-purpose replacement for B-tree",
+      "prompt": "Someone told me hash indexes are faster than B-tree indexes. Should I switch all my indexes to hash?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "equality" },
+        { "type": "not_contains", "value": "hash indexes are always faster" },
+        { "type": "not_contains", "value": "replace all" },
+        { "type": "contains", "value": "B-tree" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load test: directs user to query-optimization reference for EXPLAIN deep dive",
+      "prompt": "Can you walk me through how to read a complex EXPLAIN ANALYZE output with multiple join nodes, hash batches, and buffer hits? I want to understand every line.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "EXPLAIN" },
+        { "type": "contains", "value": "references" },
+        { "type": "contains", "value": "query-optimization" }
+      ]
+    }
+  ]
+}

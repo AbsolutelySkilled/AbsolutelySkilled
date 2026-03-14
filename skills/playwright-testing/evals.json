@@ -1,0 +1,152 @@
+[
+  {
+    "id": "eval-trigger-001",
+    "description": "Skill triggers when user asks to write a Playwright test",
+    "prompt": "Write a Playwright test that verifies a user can log in to the application",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "import { test, expect }" },
+      { "type": "contains", "value": "async ({ page })" },
+      { "type": "contains", "value": "await page.goto" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://playwright.dev/docs/writing-tests"
+  },
+  {
+    "id": "eval-trigger-002",
+    "description": "Skill triggers on Page Object Model request",
+    "prompt": "Create a Page Object Model class for a checkout page using Playwright",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "class" },
+      { "type": "contains", "value": "constructor" },
+      { "type": "contains", "value": "page: Page" },
+      { "type": "contains", "value": "getByRole" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://playwright.dev/docs/pom"
+  },
+  {
+    "id": "eval-trigger-003",
+    "description": "Skill triggers on visual regression request",
+    "prompt": "Set up visual regression testing for my homepage with Playwright",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "toHaveScreenshot" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://playwright.dev/docs/screenshots"
+  },
+  {
+    "id": "eval-trigger-004",
+    "description": "Skill triggers on API testing with Playwright request",
+    "prompt": "How do I test a REST API endpoint using Playwright without a browser?",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "request" },
+      { "type": "contains", "value": "response" },
+      { "type": "contains", "value": "status()" }
+    ],
+    "source": "https://playwright.dev/docs/api-testing"
+  },
+  {
+    "id": "eval-task-001",
+    "description": "Agent writes a test using user-facing locators (getByRole, getByLabel)",
+    "prompt": "Write a Playwright test that fills out and submits a contact form",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "getByLabel" },
+      { "type": "contains", "value": "getByRole" },
+      { "type": "not_contains", "value": "page.$(" },
+      { "type": "not_contains", "value": "waitForTimeout" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://playwright.dev/docs/locators"
+  },
+  {
+    "id": "eval-task-002",
+    "description": "Agent mocks an API route correctly",
+    "prompt": "Write a Playwright test that mocks an API call to return an error state",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "page.route(" },
+      { "type": "contains", "value": "route.fulfill(" },
+      { "type": "contains", "value": "status:" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://playwright.dev/docs/mock"
+  },
+  {
+    "id": "eval-task-003",
+    "description": "Agent creates a custom fixture for authentication",
+    "prompt": "Create a Playwright fixture that logs in before each test and logs out after",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "base.extend" },
+      { "type": "contains", "value": "await use(" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://playwright.dev/docs/test-fixtures"
+  },
+  {
+    "id": "eval-task-004",
+    "description": "Agent configures playwright.config.ts for CI with retries and sharding",
+    "prompt": "Set up playwright.config.ts for a CI pipeline with 4 shards and retries",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "defineConfig" },
+      { "type": "contains", "value": "retries" },
+      { "type": "contains", "value": "shard" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://playwright.dev/docs/test-sharding"
+  },
+  {
+    "id": "eval-gotcha-001",
+    "description": "Agent avoids waitForTimeout and uses web-first assertions",
+    "prompt": "My Playwright test is flaky - it clicks a button but the next element is not found. How do I fix it?",
+    "type": "text",
+    "assertions": [
+      { "type": "not_contains", "value": "waitForTimeout" },
+      { "type": "contains", "value": "expect(" }
+    ],
+    "source": "https://playwright.dev/docs/actionability"
+  },
+  {
+    "id": "eval-gotcha-002",
+    "description": "Agent uses expect(locator).toHaveText() not raw textContent comparison",
+    "prompt": "How do I assert that a Playwright element has specific text content?",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "toHaveText" },
+      { "type": "not_contains", "value": "textContent()" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://playwright.dev/docs/test-assertions"
+  },
+  {
+    "id": "eval-gotcha-003",
+    "description": "Agent does not use legacy ElementHandle API",
+    "prompt": "Select a dropdown option and verify it is selected in Playwright",
+    "type": "code",
+    "assertions": [
+      { "type": "not_contains", "value": "page.$(" },
+      { "type": "not_contains", "value": "page.$$(" },
+      { "type": "contains", "value": "page.locator(" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://playwright.dev/docs/locators"
+  },
+  {
+    "id": "eval-anti-hallucination-001",
+    "description": "Agent does not invent non-existent Playwright methods",
+    "prompt": "Write a Playwright test that waits for a network request to complete before asserting",
+    "type": "code",
+    "assertions": [
+      { "type": "not_contains", "value": "page.waitForAjax" },
+      { "type": "not_contains", "value": "page.waitForNetwork" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://playwright.dev/docs/network"
+  }
+]

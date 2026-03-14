@@ -1,0 +1,148 @@
+[
+  {
+    "id": "eval-trigger-001",
+    "description": "Skill triggers on topic cluster design request",
+    "prompt": "I want to build a content strategy around the topic of 'project management'. How do I structure the content?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "pillar" },
+      { "type": "contains", "value": "spoke" },
+      { "type": "contains", "value": "cluster" }
+    ]
+  },
+  {
+    "id": "eval-trigger-002",
+    "description": "Skill triggers on keyword cannibalization complaint",
+    "prompt": "Two of my pages keep swapping positions in Google for the same keyword. What is happening and how do I fix it?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "cannibalization" },
+      { "type": "contains", "value": "consolidate" },
+      { "type": "contains", "value": "redirect" }
+    ]
+  },
+  {
+    "id": "eval-trigger-003",
+    "description": "Skill triggers on E-E-A-T improvement request",
+    "prompt": "My health articles are not ranking well even though the content is good. Someone mentioned I need to improve my E-E-A-T signals. What does that mean?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "Experience" },
+      { "type": "contains", "value": "Expertise" },
+      { "type": "contains", "value": "Trustworthiness" },
+      { "type": "contains", "value": "YMYL" }
+    ]
+  },
+  {
+    "id": "eval-task-001",
+    "description": "Agent correctly explains the pillar-spoke internal linking pattern",
+    "prompt": "How should internal links flow between a pillar page and its spoke pages?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "pillar" },
+      { "type": "contains", "value": "anchor text" },
+      { "type": "contains", "value": "spoke" },
+      { "type": "not_contains", "value": "click here" }
+    ]
+  },
+  {
+    "id": "eval-task-002",
+    "description": "Agent provides correct cannibalization detection steps",
+    "prompt": "How do I detect if two of my pages are cannibalizing each other for the same keyword?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "Search Console" },
+      { "type": "contains", "value": "query" },
+      { "type": "contains", "value": "pages" }
+    ]
+  },
+  {
+    "id": "eval-task-003",
+    "description": "Agent gives actionable E-E-A-T audit checklist for YMYL content",
+    "prompt": "I run a personal finance site. Walk me through how to audit my content for E-E-A-T signals.",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "author" },
+      { "type": "contains", "value": "credentials" },
+      { "type": "contains", "value": "YMYL" },
+      { "type": "not_contains", "value": "we are experts" }
+    ]
+  },
+  {
+    "id": "eval-task-004",
+    "description": "Agent explains content gap analysis using competitor method",
+    "prompt": "How do I find content gaps compared to my competitors in the email marketing space?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "competitor" },
+      { "type": "contains", "value": "keyword" },
+      { "type": "contains", "value": "rank" }
+    ]
+  },
+  {
+    "id": "eval-task-005",
+    "description": "Agent explains content freshness strategy with update triggers",
+    "prompt": "How do I decide when a published article needs to be updated for SEO purposes?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "traffic" },
+      { "type": "contains", "value": "freshness" },
+      { "type": "contains", "value": "update" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-001",
+    "description": "Agent correctly identifies search intent mismatch as a root cause problem",
+    "prompt": "I wrote a 5,000 word guide about CRM software but it is ranking on page 5 even though it is very detailed. What could be wrong?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "intent" },
+      { "type": "contains", "value": "SERP" },
+      { "type": "not_contains", "value": "more backlinks" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-002",
+    "description": "Agent warns against thin content padding and explains the fix",
+    "prompt": "I was told to make my articles at least 2,000 words for SEO. My article is only 800 words but covers the topic fully. Should I add more content?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "thin" },
+      { "type": "contains", "value": "intent" },
+      { "type": "not_contains", "value": "word count is a ranking factor" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-003",
+    "description": "Agent advises against declaring E-E-A-T without demonstrating it",
+    "prompt": "Can I improve my E-E-A-T by adding a footer that says our team has 15 years of industry experience?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "demonstrate" },
+      { "type": "contains", "value": "credentials" },
+      { "type": "not_contains", "value": "yes, that will work" }
+    ]
+  },
+  {
+    "id": "eval-anti-hallucination-001",
+    "description": "Agent does not invent specific E-E-A-T score metrics or numerical thresholds",
+    "prompt": "What E-E-A-T score does my site need to rank on the first page of Google?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "not_contains", "value": "E-E-A-T score of" },
+      { "type": "not_contains", "value": "score of 80" },
+      { "type": "contains", "value": "not a direct ranking factor" }
+    ]
+  },
+  {
+    "id": "eval-references-001",
+    "description": "Agent references the content-gap-analysis file when asked about PAA mining methodology",
+    "prompt": "What is People Also Ask mining and how do I use it to find content gaps?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "People Also Ask" },
+      { "type": "contains", "value": "questions" },
+      { "type": "contains", "value": "content-gap-analysis" }
+    ]
+  }
+]

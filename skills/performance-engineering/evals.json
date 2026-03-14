@@ -1,0 +1,146 @@
+{
+  "skill": "performance-engineering",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger: skill activates on P99 latency investigation request",
+      "prompt": "Our API's P99 latency jumped from 80ms to 600ms after the last deploy. How do I diagnose this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "profil" },
+        { "type": "contains", "value": "P99" },
+        { "type": "contains", "value": "measure" },
+        { "type": "not_contains", "value": "just add more servers" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger: skill activates on memory leak investigation",
+      "prompt": "My Node.js service memory grows from 200MB to 2GB over 24 hours then crashes. How do I find the leak?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "heap snapshot" },
+        { "type": "contains", "value": "compare" },
+        { "type": "contains", "value": "Chrome DevTools" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Core task: generate correct Node.js CPU profiling command with 0x",
+      "prompt": "Show me how to generate a flame graph for my Node.js server using 0x.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "npx 0x" },
+        { "type": "contains", "value": "node server" },
+        { "type": "code_valid", "value": "bash" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: correct DataLoader pattern for N+1 fix",
+      "prompt": "I have a GraphQL resolver that calls db.findUser(id) for every post in a list. This causes N+1 queries. Fix it with DataLoader.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "DataLoader" },
+        { "type": "contains", "value": "batchFunction" },
+        { "type": "contains", "value": "findMany" },
+        { "type": "not_contains", "value": "for await" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: move CPU work to worker thread",
+      "prompt": "I have a synchronous image processing function that takes 2 seconds. It's blocking my Express server. How do I fix it?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "worker_threads" },
+        { "type": "contains", "value": "Worker" },
+        { "type": "contains", "value": "isMainThread" },
+        { "type": "not_contains", "value": "setTimeout" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: correct microbenchmark setup with warmup",
+      "prompt": "How do I benchmark two sorting implementations fairly in Node.js?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Benchmark" },
+        { "type": "contains", "value": "warmup" },
+        { "type": "contains", "value": "cycle" },
+        { "type": "not_contains", "value": "Date.now()" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: tree shaking lodash import correction",
+      "prompt": "My bundle is 500KB. I see lodash takes up 70KB. How do I reduce that?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "lodash/" },
+        { "type": "not_contains", "value": "import _ from 'lodash'" },
+        { "type": "contains", "value": "tree shak" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: averages vs percentiles - must recommend percentiles",
+      "prompt": "Our average API response time is 45ms, which seems fine. Why are users complaining about slowness?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "P99" },
+        { "type": "contains", "value": "percentile" },
+        { "type": "contains", "value": "average" },
+        { "type": "contains", "value": "tail" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: WeakRef for cache to avoid memory leak",
+      "prompt": "My in-memory cache keeps growing. I want cached values to be garbage collected when memory is needed. How?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "WeakRef" },
+        { "type": "contains", "value": "deref" },
+        { "type": "contains", "value": "FinalizationRegistry" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: connection pool release in finally block",
+      "prompt": "I'm seeing 'connection timeout' errors under load with pg Pool. What am I likely doing wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "release" },
+        { "type": "contains", "value": "finally" },
+        { "type": "contains", "value": "pool exhaustion" },
+        { "type": "not_contains", "value": "increase max connections" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: must not invent non-existent Node.js profiling flags",
+      "prompt": "What Node.js flags can I use for CPU profiling?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "--prof" },
+        { "type": "contains", "value": "--prof-process" },
+        { "type": "not_contains", "value": "--cpu-profile-interval" },
+        { "type": "not_contains", "value": "--enable-profiler" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load: profiling-tools reference file should be cited for tool selection questions",
+      "prompt": "I need to profile a Node.js service. Should I use clinic.js, 0x, or Chrome DevTools? What are the trade-offs?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "clinic" },
+        { "type": "contains", "value": "0x" },
+        { "type": "contains", "value": "flame" },
+        { "type": "contains", "value": "profiling-tools" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "skill": "cypress-testing",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to write a Cypress e2e test",
+      "prompt": "Write a Cypress test that logs in and verifies the dashboard loads",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "cy.visit" },
+        { "type": "contains", "value": "cy.intercept" },
+        { "type": "contains", "value": "data-testid" },
+        { "type": "code_valid", "language": "ts" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Rejects arbitrary waits and recommends cy.intercept alias",
+      "prompt": "My Cypress test is flaky because the API call takes too long. I added cy.wait(3000) but it still fails sometimes.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cy.intercept" },
+        { "type": "contains", "value": "cy.wait('@" },
+        { "type": "not_contains", "value": "cy.wait(3000)" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Correctly stubs an API response with a fixture",
+      "prompt": "How do I stub a GET /api/users call to return a fixture file in Cypress?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "cy.intercept" },
+        { "type": "contains", "value": "fixture" },
+        { "type": "contains", "value": ".as(" },
+        { "type": "code_valid", "language": "ts" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Uses data-testid for selectors not CSS classes",
+      "prompt": "How should I select elements in my Cypress tests?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "data-testid" },
+        { "type": "not_contains", "value": "cy.get('.btn" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Creates a custom login command with cy.session",
+      "prompt": "Write a Cypress custom command for login that caches the session to avoid logging in via UI for every test",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Cypress.Commands.add" },
+        { "type": "contains", "value": "cy.session" },
+        { "type": "contains", "value": "cy.request" },
+        { "type": "code_valid", "language": "ts" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Explains the Cypress command queue and why async/await is wrong",
+      "prompt": "Can I use async/await inside Cypress tests like I would in Jest?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "command queue" },
+        { "type": "not_contains", "value": "yes, you can use async/await" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Sets up Cypress component testing correctly",
+      "prompt": "How do I set up Cypress component testing for a React + Vite project?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "component" },
+        { "type": "contains", "value": "devServer" },
+        { "type": "contains", "value": "cy.mount" },
+        { "type": "code_valid", "language": "ts" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Warns against shared state between tests",
+      "prompt": "My second Cypress test fails unless the first test runs before it. How do I fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "beforeEach" },
+        { "type": "contains", "value": "independent" },
+        { "type": "not_contains", "value": "run them in order" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Generates valid TypeScript type declarations for custom commands",
+      "prompt": "How do I add TypeScript types for a custom Cypress command called cy.login?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "declare namespace Cypress" },
+        { "type": "contains", "value": "interface Chainable" },
+        { "type": "code_valid", "language": "ts" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Produces a valid GitHub Actions workflow for Cypress CI",
+      "prompt": "Write a GitHub Actions workflow that runs Cypress e2e tests in parallel with 4 containers",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "cypress-io/github-action" },
+        { "type": "contains", "value": "parallel: true" },
+        { "type": "contains", "value": "matrix" },
+        { "type": "code_valid", "language": "yaml" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not trigger for Jest unit testing questions",
+      "prompt": "How do I mock a module import in Jest using jest.mock()?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "cy.intercept" },
+        { "type": "not_contains", "value": "Cypress.Commands" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Applies page object pattern to a real spec",
+      "prompt": "Refactor this Cypress test to use the page object pattern: cy.visit('/checkout'); cy.get('[data-testid=\"cart-total\"]').should('contain', '$50')",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "class" },
+        { "type": "contains", "value": "visit()" },
+        { "type": "contains", "value", "value": "data-testid" },
+        { "type": "code_valid", "language": "ts" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "skill": "sales-enablement",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on battle card creation request",
+      "prompt": "Create a battle card for our product competing against Salesforce",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "where we win" },
+        { "type": "contains", "value": "objection" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on competitive analysis request",
+      "prompt": "I need a competitive intelligence brief comparing us to HubSpot",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pricing" },
+        { "type": "contains", "value": "differentiator" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on case study request",
+      "prompt": "Help me write a customer case study for our biggest enterprise win this quarter",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "challenge" },
+        { "type": "contains", "value": "results" },
+        { "type": "contains", "value": "quote" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Triggers on ROI calculator request",
+      "prompt": "Build an ROI calculator I can use to justify our software to a CFO",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cost" },
+        { "type": "contains", "value": "payback" },
+        { "type": "contains", "value": "assumption" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can produce a structured battle card with required sections",
+      "prompt": "Write a one-page battle card against a competitor called Acme CRM. We win on integrations and support. They win on price.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "where we win" },
+        { "type": "contains", "value": "where they win" },
+        { "type": "contains", "value": "trap" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Includes honest where-they-win section in competitive content",
+      "prompt": "Create a battle card but only include our strengths, skip competitor advantages",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "where they win" },
+        { "type": "not_contains", "value": "skip" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Applies Problem-Solution-Result framework for case studies",
+      "prompt": "A fintech company cut their onboarding from 6 weeks to 10 days using our product. Write a case study.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "challenge" },
+        { "type": "contains", "value": "solution" },
+        { "type": "contains", "value": "10 days" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Recommends quarterly update cadence for battle cards",
+      "prompt": "How often should we update our battle cards?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "quarterly" },
+        { "type": "contains", "value": "stale" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Provides measurable metrics for enablement effectiveness",
+      "prompt": "How do I know if our sales enablement program is working?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "win rate" },
+        { "type": "contains", "value": "usage" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Aligns content type to buyer journey stage",
+      "prompt": "What sales content should I create for buyers who are actively comparing vendors?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "battle card" },
+        { "type": "contains", "value": "consideration" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Addresses the one-page-per-asset principle",
+      "prompt": "Our product one-pager is currently 4 pages. Is that okay?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "one page" },
+        { "type": "not_contains", "value": "four pages is fine" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for demand generation or marketing campaigns",
+      "prompt": "Write a drip email campaign to nurture cold leads over 30 days",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "battle card" },
+        { "type": "not_contains", "value": "win/loss" }
+      ]
+    }
+  ]
+}

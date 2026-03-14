@@ -1,0 +1,170 @@
+{
+  "skill": "developer-advocacy",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "trigger-cfp-request",
+      "type": "trigger",
+      "input": "I need to submit a talk proposal for a developer conference about our new streaming API. Can you help me write the CFP?",
+      "expected": {
+        "skill_activated": true,
+        "assertions": [
+          { "type": "contains", "value": "abstract" },
+          { "type": "contains", "value": "audience" }
+        ]
+      }
+    },
+    {
+      "id": "trigger-community-strategy",
+      "type": "trigger",
+      "input": "We're launching a new open-source SDK and need a plan for building a developer community around it.",
+      "expected": {
+        "skill_activated": true,
+        "assertions": [
+          { "type": "contains", "value": "community" },
+          { "type": "contains_any", "value": ["Discord", "GitHub", "Slack", "forum"] }
+        ]
+      }
+    },
+    {
+      "id": "trigger-negative-marketing",
+      "type": "trigger",
+      "input": "Write a press release announcing our Series B funding round for a general business audience.",
+      "expected": {
+        "skill_activated": false
+      }
+    },
+    {
+      "id": "task-write-cfp",
+      "type": "core-task",
+      "input": "Write a conference talk proposal for a 25-minute talk about using cursor-based pagination in GraphQL APIs. The target conference is GraphQL Conf and the audience is intermediate developers.",
+      "expected": {
+        "assertions": [
+          { "type": "contains", "value": "Title" },
+          { "type": "contains", "value": "Abstract" },
+          { "type": "contains", "value": "cursor" },
+          { "type": "contains", "value": "pagination" },
+          { "type": "contains_any", "value": ["outline", "Outline", "structure", "agenda"] },
+          { "type": "contains_any", "value": ["intermediate", "Intermediate"] }
+        ]
+      }
+    },
+    {
+      "id": "task-demo-script",
+      "type": "core-task",
+      "input": "Script a 5-minute live coding demo showing how to send an email using the Resend API in Node.js. Include safety precautions for presenting live.",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["setup", "Setup", "starting state"] },
+          { "type": "contains_any", "value": ["fallback", "backup", "git branch"] },
+          { "type": "contains_any", "value": ["font", "notifications", "display"] },
+          { "type": "contains", "value": "resend" }
+        ]
+      }
+    },
+    {
+      "id": "task-blog-post-structure",
+      "type": "core-task",
+      "input": "Outline a technical blog post about migrating from REST to GraphQL. Give me the full structure with section descriptions.",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["hook", "Hook", "problem"] },
+          { "type": "contains_any", "value": ["step", "walkthrough", "Step"] },
+          { "type": "contains_any", "value": ["example", "code", "Example"] },
+          { "type": "contains_any", "value": ["next steps", "Next steps", "what's next"] }
+        ]
+      }
+    },
+    {
+      "id": "task-quickstart",
+      "type": "core-task",
+      "input": "Create an SDK quickstart example for a fictional payment API called PayFlow. The quickstart should show how to create a charge in Python.",
+      "expected": {
+        "assertions": [
+          { "type": "contains", "value": "Prerequisites" },
+          { "type": "contains_any", "value": ["install", "Install", "pip"] },
+          { "type": "contains_any", "value": ["import", "from"] },
+          { "type": "contains_any", "value": ["API key", "api_key", "authenticate"] },
+          { "type": "contains_any", "value": ["error", "try", "except", "Error"] }
+        ]
+      }
+    },
+    {
+      "id": "task-devrel-metrics",
+      "type": "core-task",
+      "input": "Help me create a quarterly DevRel report template that my VP of Engineering will actually read.",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["business", "Business", "impact"] },
+          { "type": "contains_any", "value": ["API signups", "adoption", "downloads"] },
+          { "type": "contains_any", "value": ["community", "Community"] },
+          { "type": "contains_any", "value": ["content", "talks", "blog"] }
+        ]
+      }
+    },
+    {
+      "id": "gotcha-offline-demo",
+      "type": "gotcha",
+      "input": "I'm planning a live demo at a conference where I'll call our REST API in real-time to show response times. Any tips?",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["offline", "Wi-Fi", "internet", "network", "cache", "mock", "local"] },
+          { "type": "contains_any", "value": ["backup", "fallback", "pre-record", "video"] }
+        ]
+      }
+    },
+    {
+      "id": "gotcha-outdated-examples",
+      "type": "gotcha",
+      "input": "I wrote SDK examples for our v2 API last year. We just released v3 with breaking changes. What should I do about the old content?",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["update", "pin", "version", "migrate"] },
+          { "type": "contains_any", "value": ["trust", "broken", "outdated", "stale"] }
+        ]
+      }
+    },
+    {
+      "id": "gotcha-vanity-metrics",
+      "type": "gotcha",
+      "input": "My manager wants me to report DevRel success using GitHub stars and Twitter followers. Is that enough?",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["vanity", "business", "lagging", "impact", "insufficient"] },
+          { "type": "contains_any", "value": ["API signups", "adoption", "time-to-first", "conversion"] }
+        ]
+      }
+    },
+    {
+      "id": "anti-hallucination-devrel-tool",
+      "type": "anti-hallucination",
+      "input": "What's the official DevRel certification program by Google that all developer advocates must complete?",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["not aware", "no official", "don't know", "not a standard", "no such", "cannot confirm", "varies"] }
+        ]
+      }
+    },
+    {
+      "id": "anti-hallucination-metric-benchmark",
+      "type": "anti-hallucination",
+      "input": "What's the industry-standard conversion rate from developer blog post reader to API signup?",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["varies", "depends", "no single", "benchmark", "range", "difficult to generalize"] }
+        ]
+      }
+    },
+    {
+      "id": "reference-load-talks",
+      "type": "reference",
+      "input": "I need to structure a 45-minute deep dive talk about database internals. What talk framework should I use and how should I design my slides?",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["talk-frameworks", "references/", "deep dive", "Deep Dive"] },
+          { "type": "contains_any", "value": ["slide", "Slide", "code on slides", "visual"] }
+        ]
+      }
+    }
+  ]
+}

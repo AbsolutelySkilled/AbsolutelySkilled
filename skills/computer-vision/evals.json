@@ -1,0 +1,142 @@
+[
+  {
+    "id": "eval-trigger-001",
+    "description": "Skill triggers on image classification fine-tuning request",
+    "prompt": "Fine-tune a pretrained ResNet on my custom 10-class dataset using PyTorch",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "models." },
+      { "type": "contains", "value": "weights=" },
+      { "type": "contains", "value": "DataLoader" },
+      { "type": "contains", "value": "Normalize" },
+      { "type": "code_valid", "language": "python" }
+    ]
+  },
+  {
+    "id": "eval-trigger-002",
+    "description": "Skill triggers on YOLO object detection request",
+    "prompt": "Run YOLO inference on a folder of images and print bounding boxes",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "YOLO" },
+      { "type": "contains", "value": "predict" },
+      { "type": "contains", "value": "conf" },
+      { "type": "code_valid", "language": "python" }
+    ]
+  },
+  {
+    "id": "eval-task-001",
+    "description": "Agent produces a correct albumentations augmentation pipeline",
+    "prompt": "Write a PyTorch-compatible data augmentation pipeline for training an object detector",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "albumentations" },
+      { "type": "contains", "value": "BboxParams" },
+      { "type": "contains", "value": "ToTensorV2" },
+      { "type": "contains", "value": "Normalize" },
+      { "type": "code_valid", "language": "python" }
+    ]
+  },
+  {
+    "id": "eval-task-002",
+    "description": "Agent exports a PyTorch model to ONNX with dynamic axes",
+    "prompt": "Export a trained PyTorch image classifier to ONNX format for production deployment",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "torch.onnx.export" },
+      { "type": "contains", "value": "dynamic_axes" },
+      { "type": "contains", "value": "opset_version" },
+      { "type": "code_valid", "language": "python" }
+    ]
+  },
+  {
+    "id": "eval-task-003",
+    "description": "Agent computes mAP for object detection evaluation",
+    "prompt": "Compute mAP@0.5 and mAP@0.5:0.95 for my detection model predictions",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "MeanAveragePrecision" },
+      { "type": "contains", "value": "map_50" },
+      { "type": "contains", "value": "map" },
+      { "type": "code_valid", "language": "python" }
+    ]
+  },
+  {
+    "id": "eval-task-004",
+    "description": "Agent implements DeepLabV3 or U-Net for semantic segmentation",
+    "prompt": "Implement semantic segmentation on a custom 5-class dataset using PyTorch",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "cross_entropy" },
+      { "type": "contains", "value": "argmax" },
+      { "type": "contains", "value": "num_classes" },
+      { "type": "code_valid", "language": "python" }
+    ]
+  },
+  {
+    "id": "eval-task-005",
+    "description": "Agent writes a correct image preprocessing pipeline",
+    "prompt": "Write a production image preprocessing pipeline that loads a batch of images and normalizes them",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "Normalize" },
+      { "type": "contains", "value": "Resize" },
+      { "type": "contains", "value": "torch.stack" },
+      { "type": "code_valid", "language": "python" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-001",
+    "description": "Agent applies different transforms to train vs val splits",
+    "prompt": "Set up training and validation data loaders for image classification",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "RandomResizedCrop" },
+      { "type": "contains", "value": "CenterCrop" },
+      { "type": "not_contains", "value": "RandomResizedCrop" }
+    ],
+    "note": "Training uses RandomResizedCrop; val must not - validated separately by presence of CenterCrop for val"
+  },
+  {
+    "id": "eval-gotcha-002",
+    "description": "Agent recommends starting from pretrained weights, not from scratch",
+    "prompt": "I have 2000 labeled images. Should I train a CNN from scratch or use transfer learning?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "pretrained" },
+      { "type": "contains", "value": "transfer" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-003",
+    "description": "Agent uses two-phase training when fine-tuning",
+    "prompt": "Fine-tune an EfficientNet classifier on a small dataset of 500 images per class",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "requires_grad" },
+      { "type": "contains", "value": "classifier" }
+    ]
+  },
+  {
+    "id": "eval-anti-hallucination-001",
+    "description": "Agent does not invent non-existent torchvision or ultralytics APIs",
+    "prompt": "Run YOLO11 inference and classify images with EfficientNet in PyTorch",
+    "type": "code",
+    "assertions": [
+      { "type": "not_contains", "value": "model.classify(" },
+      { "type": "not_contains", "value": "YOLO.infer(" },
+      { "type": "contains", "value": "model.predict(" },
+      { "type": "code_valid", "language": "python" }
+    ]
+  },
+  {
+    "id": "eval-reference-001",
+    "description": "Agent references model-zoo when asked to compare architectures",
+    "prompt": "Which backbone should I use for a real-time object detection system on an edge GPU?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "YOLO" },
+      { "type": "contains", "value": "EfficientNet" }
+    ]
+  }
+]

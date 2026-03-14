@@ -1,0 +1,276 @@
+[
+  {
+    "id": "trigger-script-writing",
+    "type": "trigger",
+    "prompt": "Help me write a script for my YouTube video about learning Python",
+    "expected_skill": "video-production",
+    "assertions": [
+      {
+        "type": "contains",
+        "value": "hook"
+      },
+      {
+        "type": "contains_any",
+        "value": ["HBES", "Hook-Bridge-Body", "script structure", "retention"]
+      }
+    ]
+  },
+  {
+    "id": "trigger-thumbnail",
+    "type": "trigger",
+    "prompt": "I need to design a better thumbnail for my latest video. Any tips?",
+    "expected_skill": "video-production",
+    "assertions": [
+      {
+        "type": "contains_any",
+        "value": ["3-element", "three element", "face", "text overlay", "contrast"]
+      },
+      {
+        "type": "contains",
+        "value": "CTR"
+      }
+    ]
+  },
+  {
+    "id": "trigger-seo",
+    "type": "trigger",
+    "prompt": "How do I optimize my YouTube video for search?",
+    "expected_skill": "video-production",
+    "assertions": [
+      {
+        "type": "contains_any",
+        "value": ["title", "description", "tags", "keyword"]
+      },
+      {
+        "type": "contains_any",
+        "value": ["metadata", "SEO", "algorithm"]
+      }
+    ]
+  },
+  {
+    "id": "task-write-hook",
+    "type": "core_task",
+    "prompt": "Write 3 different hook options for a YouTube video titled 'Why Most Developers Hate CSS'",
+    "expected_skill": "video-production",
+    "assertions": [
+      {
+        "type": "count_gte",
+        "value": 3,
+        "target": "distinct hook options"
+      },
+      {
+        "type": "contains_any",
+        "value": ["curiosity", "bold claim", "story", "pattern interrupt"]
+      },
+      {
+        "type": "not_contains",
+        "value": "Hey guys welcome back"
+      }
+    ]
+  },
+  {
+    "id": "task-full-script",
+    "type": "core_task",
+    "prompt": "Write a 10-minute YouTube script outline about '5 VS Code Extensions Every Developer Needs'",
+    "expected_skill": "video-production",
+    "assertions": [
+      {
+        "type": "contains_any",
+        "value": ["hook", "Hook"]
+      },
+      {
+        "type": "contains_any",
+        "value": ["bridge", "Bridge"]
+      },
+      {
+        "type": "contains_any",
+        "value": ["exit", "Exit", "outro", "Outro", "conclusion"]
+      },
+      {
+        "type": "structure",
+        "value": "Has clear sections with timestamps or segment labels"
+      }
+    ]
+  },
+  {
+    "id": "task-thumbnail-critique",
+    "type": "core_task",
+    "prompt": "My thumbnail has a small photo of me in the corner, 12 words of text in a thin font, and a busy background with lots of objects. What should I fix?",
+    "expected_skill": "video-production",
+    "assertions": [
+      {
+        "type": "contains_any",
+        "value": ["larger", "bigger", "fill", "30%"]
+      },
+      {
+        "type": "contains_any",
+        "value": ["fewer words", "3-5 words", "less text", "reduce text"]
+      },
+      {
+        "type": "contains_any",
+        "value": ["bold", "sans-serif", "thicker font"]
+      },
+      {
+        "type": "contains_any",
+        "value": ["simplify", "declutter", "clean background", "remove"]
+      }
+    ]
+  },
+  {
+    "id": "task-title-optimization",
+    "type": "core_task",
+    "prompt": "Optimize this YouTube title: 'A Comprehensive and Detailed Tutorial on How to Set Up Docker Containers for Local Development on Your MacBook Pro in 2025'",
+    "expected_skill": "video-production",
+    "assertions": [
+      {
+        "type": "max_length",
+        "value": 60,
+        "target": "suggested title"
+      },
+      {
+        "type": "contains_any",
+        "value": ["Docker", "docker"]
+      },
+      {
+        "type": "contains_any",
+        "value": ["shorter", "truncat", "under 60", "front-load", "concise"]
+      }
+    ]
+  },
+  {
+    "id": "task-description-seo",
+    "type": "core_task",
+    "prompt": "Write a YouTube description for a video titled 'How to Color Grade in DaVinci Resolve (Free)'",
+    "expected_skill": "video-production",
+    "assertions": [
+      {
+        "type": "contains",
+        "value": "color grad"
+      },
+      {
+        "type": "contains",
+        "value": "DaVinci Resolve"
+      },
+      {
+        "type": "contains",
+        "value": "0:00"
+      },
+      {
+        "type": "structure",
+        "value": "Has timestamps/chapters section"
+      }
+    ]
+  },
+  {
+    "id": "gotcha-retention-drop",
+    "type": "gotcha",
+    "prompt": "My YouTube retention graph shows a huge drop at 0:15 and another at 2:00. What's going wrong?",
+    "expected_skill": "video-production",
+    "assertions": [
+      {
+        "type": "contains_any",
+        "value": ["hook", "opening", "first 5", "first 15"]
+      },
+      {
+        "type": "contains_any",
+        "value": ["mini-payoff", "pattern interrupt", "2 minute", "second drop"]
+      },
+      {
+        "type": "not_contains",
+        "value": "just keep making content"
+      }
+    ]
+  },
+  {
+    "id": "gotcha-clickbait",
+    "type": "gotcha",
+    "prompt": "Should I make my thumbnail super clickbaity to get more views?",
+    "expected_skill": "video-production",
+    "assertions": [
+      {
+        "type": "contains_any",
+        "value": ["payoff", "deliver", "promise", "trust"]
+      },
+      {
+        "type": "contains_any",
+        "value": ["retention", "AVD", "average view duration", "watch time"]
+      },
+      {
+        "type": "sentiment",
+        "value": "Warns against misleading thumbnails while acknowledging importance of compelling visuals"
+      }
+    ]
+  },
+  {
+    "id": "gotcha-keyword-stuffing",
+    "type": "gotcha",
+    "prompt": "I put the same keyword 15 times in my description and my video isn't ranking. Why?",
+    "expected_skill": "video-production",
+    "assertions": [
+      {
+        "type": "contains_any",
+        "value": ["spam", "keyword stuff", "over-optim"]
+      },
+      {
+        "type": "contains_any",
+        "value": ["natural", "2-3 times", "organic"]
+      }
+    ]
+  },
+  {
+    "id": "anti-hallucination-algorithm",
+    "type": "anti_hallucination",
+    "prompt": "What's the exact YouTube algorithm formula for ranking videos?",
+    "expected_skill": "video-production",
+    "assertions": [
+      {
+        "type": "not_contains",
+        "value": "exact formula"
+      },
+      {
+        "type": "contains_any",
+        "value": ["not public", "not disclosed", "signals", "factors", "approximate", "known signals"]
+      },
+      {
+        "type": "contains_any",
+        "value": ["CTR", "retention", "watch time", "engagement"]
+      }
+    ]
+  },
+  {
+    "id": "anti-hallucination-metrics",
+    "type": "anti_hallucination",
+    "prompt": "What CTR guarantees that YouTube will promote my video to the home page?",
+    "expected_skill": "video-production",
+    "assertions": [
+      {
+        "type": "not_contains",
+        "value": "guarantee"
+      },
+      {
+        "type": "contains_any",
+        "value": ["no guarantee", "no specific", "varies", "depends", "benchmark"]
+      }
+    ]
+  },
+  {
+    "id": "reference-load-editing",
+    "type": "reference_load",
+    "prompt": "I need detailed advice on J-cuts and L-cuts for my YouTube editing workflow in Premiere Pro",
+    "expected_skill": "video-production",
+    "assertions": [
+      {
+        "type": "references_file",
+        "value": "references/editing-workflows.md"
+      },
+      {
+        "type": "contains",
+        "value": "J-cut"
+      },
+      {
+        "type": "contains",
+        "value": "L-cut"
+      }
+    ]
+  }
+]

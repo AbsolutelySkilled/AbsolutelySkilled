@@ -1,0 +1,146 @@
+{
+  "skill": "site-reliability",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on SLO definition question",
+      "prompt": "Our team just launched a new checkout service and our CTO wants us to define SLOs before we go to GA. We have no historical data yet. Where do we start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "SLI" },
+        { "type": "contains", "value": "historical" },
+        { "type": "contains", "value": "error budget" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on toil reduction question",
+      "prompt": "Our on-call team spends about 10 hours a week manually restarting services, clearing dead-letter queues, and rotating credentials. Is this normal and what should we do about it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "toil" },
+        { "type": "contains", "value": "automat" },
+        { "type": "contains", "value": "50%" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Core task: defining availability and latency SLOs with formulas",
+      "prompt": "I need to write SLOs for our user authentication service. It handles login, token refresh, and password reset. What SLIs should I measure and what are realistic targets for a service at this criticality?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "availability" },
+        { "type": "contains", "value": "latency" },
+        { "type": "contains", "value": "99.9" },
+        { "type": "contains", "value": "rolling" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: calculating burn rate and setting burn rate alerts",
+      "prompt": "We have a 99.9% availability SLO on a 30-day window. Last hour our error rate jumped to 2%. How bad is this? When should I page someone vs just create a ticket?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "burn rate" },
+        { "type": "contains", "value": "14.4" },
+        { "type": "contains", "value": "budget" },
+        { "type": "contains", "value": "page" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: running a blameless postmortem",
+      "prompt": "We had a 2-hour outage yesterday where our database connection pool was exhausted. The engineer who wrote the connection code is feeling terrible. How do we run a postmortem that actually improves the system without making them feel worse?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "blameless" },
+        { "type": "contains", "value": "system" },
+        { "type": "contains", "value": "action item" },
+        { "type": "contains", "value": "root cause" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: designing on-call rotation with escalation policy",
+      "prompt": "We're a team of 6 engineers about to take on on-call responsibility for the first time. How do we set up a rotation, define escalation policies, and make sure nobody burns out?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "primary" },
+        { "type": "contains", "value": "secondary" },
+        { "type": "contains", "value": "runbook" },
+        { "type": "contains", "value": "handoff" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: capacity planning with headroom",
+      "prompt": "Our API is currently handling 500 RPS at 60% CPU. We expect 3x traffic growth over the next 6 months based on our sales pipeline. How do we plan capacity and when do we need to act?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "headroom" },
+        { "type": "contains", "value": "trigger" },
+        { "type": "contains", "value": "load test" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: warns against setting aggressive SLOs without historical data",
+      "prompt": "Our CEO saw that AWS advertises 99.99% SLAs for their services and wants us to match that for our new product. We have about 50 RPS and 2 engineers. Should we just set a 99.99% SLO?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "historical" },
+        { "type": "contains", "value": "error budget" },
+        { "type": "not_contains", "value": "99.99% is achievable with 2 engineers" },
+        { "type": "not_contains", "value": "match AWS immediately" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns against alerting on resource metrics instead of SLO burn",
+      "prompt": "We have alerts set up for CPU > 80% and memory > 85% and we're getting paged 3-4 times a night even though customers say nothing is wrong. What are we doing wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "burn rate" },
+        { "type": "contains", "value": "user" },
+        { "type": "not_contains", "value": "CPU threshold is the right signal" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns against infinite error budget freeze",
+      "prompt": "Our error budget is at 5% remaining with 2 weeks left in the month. My manager wants to freeze all deploys until next month when the budget resets. But we have a critical security patch that needs to ship. What should we do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "freeze" },
+        { "type": "contains", "value": "policy" },
+        { "type": "contains", "value": "risk" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not recommend blaming individuals in postmortems",
+      "prompt": "We had an outage because a junior engineer pushed directly to main without a review and it took down prod for 30 minutes. The postmortem is tomorrow. Should we call them out so others learn from it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "blameless" },
+        { "type": "contains", "value": "system" },
+        { "type": "not_contains", "value": "call them out" },
+        { "type": "not_contains", "value": "public shaming" },
+        { "type": "not_contains", "value": "name the engineer" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load: directs to postmortem template for postmortem facilitation",
+      "prompt": "I've been asked to facilitate our first postmortem next week for a SEV1 that caused 90 minutes of downtime. I've never run one before. Can you walk me through the structure and what questions to ask?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "timeline" },
+        { "type": "contains", "value": "root cause" },
+        { "type": "contains", "value": "action item" },
+        { "type": "contains", "value": "references/postmortem-template.md" }
+      ]
+    }
+  ]
+}

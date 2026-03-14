@@ -1,0 +1,162 @@
+{
+  "skill": "react-native",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to create a new React Native project",
+      "prompt": "I want to start a new mobile app for iOS and Android. How do I set up a React Native project?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "create-expo-app" },
+        { "type": "contains", "value": "expo" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on navigation setup question",
+      "prompt": "How do I add tab navigation with a home and profile screen in my Expo app?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Tabs" },
+        { "type": "contains", "value": "expo-router" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on performance optimization question",
+      "prompt": "My React Native FlatList is super laggy when scrolling through 10,000 items. How do I fix it?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "getItemLayout" },
+        { "type": "contains", "value": "windowSize" },
+        { "type": "contains", "value": "memo" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Produces correct OTA update setup with EAS Update",
+      "prompt": "How do I push a hotfix to my React Native app without going through the App Store?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "eas update" },
+        { "type": "contains", "value": "expo-updates" },
+        { "type": "contains", "value": "runtimeVersion" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Provides correct native module creation with Expo Modules API",
+      "prompt": "I need to access a native iOS API that Expo doesn't support. How do I create a custom native module?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "ExpoModulesCore" },
+        { "type": "contains", "value": "ModuleDefinition" },
+        { "type": "contains", "value": "create-expo-module" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Handles deep linking configuration correctly",
+      "prompt": "How do I set up deep linking so that myapp://details/123 opens the right screen?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "expo-router" },
+        { "type": "contains", "value": "[id]" },
+        { "type": "contains", "value": "useLocalSearchParams" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Recommends correct config plugin approach for native customization",
+      "prompt": "I need to add a custom URL scheme to my Expo app without ejecting. How?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "config-plugins" },
+        { "type": "contains", "value": "withInfoPlist" },
+        { "type": "not_contains", "value": "expo eject" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Handles re-render prevention correctly without over-memoizing",
+      "prompt": "My React Native app re-renders too much and feels slow. How do I fix unnecessary re-renders?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "memo" },
+        { "type": "contains", "value": "useCallback" },
+        { "type": "contains", "value": "Profiler" },
+        { "type": "not_contains", "value": "memo everything" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Catches common gotcha with runtime version mismatch in OTA updates",
+      "prompt": "My EAS Update keeps failing with a runtime version mismatch error. What's wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "runtimeVersion" },
+        { "type": "contains", "value": "fingerprint" },
+        { "type": "contains", "value": "native" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Does not recommend deprecated expo eject command",
+      "prompt": "How do I eject from Expo to get access to native code?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "prebuild" },
+        { "type": "not_contains", "value": "expo eject" },
+        { "type": "contains", "value": "npx expo prebuild" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not hallucinate non-existent React Native APIs",
+      "prompt": "How do I use React Native's built-in NativeRouter for navigation?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "NativeRouter" },
+        { "type": "contains", "value": "React Navigation" },
+        { "type": "contains", "value": "Expo Router" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References the correct reference file for advanced performance work",
+      "prompt": "I need to deeply optimize my React Native app startup time and reduce memory usage.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/performance.md" },
+        { "type": "contains", "value": "Hermes" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Provides correct EAS Build configuration",
+      "prompt": "How do I set up cloud builds for my Expo app for both iOS and Android?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "eas build" },
+        { "type": "contains", "value": "eas.json" },
+        { "type": "contains", "value": "production" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "Correctly explains New Architecture concepts",
+      "prompt": "What is the React Native New Architecture and should I enable it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Fabric" },
+        { "type": "contains", "value": "TurboModules" },
+        { "type": "contains", "value": "JSI" }
+      ]
+    }
+  ]
+}

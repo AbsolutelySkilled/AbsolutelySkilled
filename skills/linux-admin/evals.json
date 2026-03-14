@@ -1,0 +1,148 @@
+{
+  "skill": "linux-admin",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on bash scripting question",
+      "prompt": "I'm writing a bash script that deploys our app to production. It runs several commands and I want it to stop immediately if any command fails, rather than continuing with a broken state. What's the right way to do this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "set -e" },
+        { "type": "contains", "value": "pipefail" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on systemd service question",
+      "prompt": "I need to run a Python script every night at 3am on a Linux server. Should I use cron or systemd timers? And if systemd, how do I set it up?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "systemd" },
+        { "type": "contains", "value": "timer" },
+        { "type": "contains", "value": "OnCalendar" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Core task: write a robust bash script with error handling",
+      "prompt": "Write me a bash script that accepts a server hostname as an argument, creates a tarball of /etc, and copies it to a backup server. It should fail loudly if anything goes wrong and clean up temp files even if it errors out.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "set -euo pipefail" },
+        { "type": "contains", "value": "trap" },
+        { "type": "contains", "value": "mktemp" },
+        { "type": "contains", "value": "cleanup" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: create a systemd service unit for a web app",
+      "prompt": "I have a Node.js app at /opt/myapp/server.js that should start on boot, restart if it crashes, and run as a dedicated non-root user called 'appuser'. Write the systemd service unit file.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "[Unit]" },
+        { "type": "contains", "value": "[Service]" },
+        { "type": "contains", "value": "User=appuser" },
+        { "type": "contains", "value": "Restart=" },
+        { "type": "contains", "value": "WantedBy=multi-user.target" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: SSH hardening configuration",
+      "prompt": "We just provisioned a new Linux VPS that will be internet-facing. Walk me through hardening the SSH configuration to prevent brute-force attacks and unauthorized access.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "PasswordAuthentication no" },
+        { "type": "contains", "value": "PermitRootLogin no" },
+        { "type": "contains", "value": "MaxAuthTries" },
+        { "type": "contains", "value": "sshd -t" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: debug a networking connectivity problem",
+      "prompt": "My application server can't connect to the PostgreSQL database on a separate host at 10.0.1.20:5432. Both servers are running and I can ping between them. How do I systematically diagnose what's blocking the connection?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ss" },
+        { "type": "contains", "value": "iptables" },
+        { "type": "contains", "value": "5432" },
+        { "type": "contains", "value": "nc" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: set up firewall rules for a web server",
+      "prompt": "I'm setting up a fresh Ubuntu web server. It needs to serve HTTP and HTTPS to the public, allow SSH only from my office IP (203.0.113.10), and block everything else. Show me how to configure this with ufw.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "ufw default deny incoming" },
+        { "type": "contains", "value": "allow 22" },
+        { "type": "contains", "value": "203.0.113.10" },
+        { "type": "contains", "value": "allow 80" },
+        { "type": "contains", "value": "allow 443" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: investigate and free up disk space",
+      "prompt": "My server's /var partition is at 97% and I need to find and clean up what's consuming the space. Walk me through the investigation and cleanup process.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "du" },
+        { "type": "contains", "value": "df" },
+        { "type": "contains", "value": "journalctl" },
+        { "type": "contains", "value": "logrotate" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about closing SSH session before verifying sshd restart",
+      "prompt": "I edited /etc/ssh/sshd_config to disable password auth and now I want to restart the SSH service to apply the changes. I'll just run 'sudo systemctl restart sshd'. Is that all I need to do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "sshd -t" },
+        { "type": "contains", "value": "new session" },
+        { "type": "not_contains", "value": "that's all you need" },
+        { "type": "not_contains", "value": "yes, just restart" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about set -e breaking on commands that legitimately return non-zero",
+      "prompt": "I added 'set -e' to my bash script but now it exits when I run 'grep pattern file' even when grep finding no match is expected and fine. Why is this happening and how do I fix it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "exit code 1" },
+        { "type": "contains", "value": "|| true" },
+        { "type": "contains", "value": "if" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns about running services as root",
+      "prompt": "I'm writing a systemd service unit for my web app. Should I just leave out the User= directive and let it run as root? It's simpler and the app needs to write to /var/log.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "least privilege" },
+        { "type": "contains", "value": "dedicated" },
+        { "type": "not_contains", "value": "running as root is fine" },
+        { "type": "not_contains", "value": "root is acceptable" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not recommend chmod 777",
+      "prompt": "My web app can't write to its log directory /var/log/myapp. What file permissions should I set to fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "chown" },
+        { "type": "not_contains", "value": "chmod 777" },
+        { "type": "not_contains", "value": "777 is the easiest" },
+        { "type": "not_contains", "value": "give everyone write" }
+      ]
+    }
+  ]
+}

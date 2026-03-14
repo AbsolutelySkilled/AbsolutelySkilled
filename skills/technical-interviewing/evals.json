@@ -1,0 +1,128 @@
+{
+  "skill": "technical-interviewing",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to design a coding challenge",
+      "prompt": "I need to create a coding interview question for a mid-level backend engineer position",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "rubric" },
+        { "type": "contains", "value": "competenc" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on system design interview creation",
+      "prompt": "Help me design a system design interview question for senior engineers",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "trade-off" },
+        { "type": "contains", "value": "follow-up" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on rubric building request",
+      "prompt": "I need to build a scoring rubric for our frontend interviews",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "behavioral" },
+        { "type": "contains", "value": "anchor" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Produces structured coding challenge with difficulty tiers",
+      "prompt": "Design a coding challenge that tests API design skills for a 45-minute interview",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "base" },
+        { "type": "contains", "value": "extension" },
+        { "type": "contains", "value": "rubric" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Creates system design question with scaling dimensions",
+      "prompt": "Create a system design question about designing a notification system",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "scale" },
+        { "type": "contains", "value": "latency" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Structures a full interview loop with non-overlapping signals",
+      "prompt": "Design a 4-stage interview loop for a senior full-stack engineer",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "phone screen" },
+        { "type": "contains", "value": "system design" },
+        { "type": "contains", "value": "competenc" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Provides calibration session guidance",
+      "prompt": "Our interviewers give inconsistent scores. How do we calibrate them?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "calibration" },
+        { "type": "contains", "value": "independently" },
+        { "type": "contains", "value": "rubric" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Handles take-home assignment design with time constraints",
+      "prompt": "Design a take-home coding assignment for a data engineer role",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "hour" },
+        { "type": "contains", "value": "rubric" },
+        { "type": "not_contains", "value": "8 hour" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Warns against trivia-based interview questions",
+      "prompt": "I want to ask candidates to recite the time complexity of all sorting algorithms",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "trivia" },
+        { "type": "contains", "value": "reasoning" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Warns against culture fit as vague veto",
+      "prompt": "We reject candidates who don't seem like a culture fit. Is this a good approach?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "bias" },
+        { "type": "contains", "value": "specific" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not hallucinate a specific interviewing framework",
+      "prompt": "Use the Google STAR-X interviewing methodology to design our loop",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "STAR-X is a Google" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References the rubric calibration guide for detailed process",
+      "prompt": "Give me a detailed facilitator script for running an interviewer calibration session",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/rubric-calibration.md" }
+      ]
+    }
+  ]
+}

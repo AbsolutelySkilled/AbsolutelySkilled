@@ -1,0 +1,140 @@
+[
+  {
+    "id": "eval-trigger-001",
+    "description": "Skill triggers on ReAct agent implementation request",
+    "prompt": "Implement a ReAct agent loop that can use tools to answer questions",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "thought" },
+      { "type": "contains", "value": "observation" },
+      { "type": "contains", "value": "maxIterations" },
+      { "type": "code_valid", "language": "ts" }
+    ]
+  },
+  {
+    "id": "eval-trigger-002",
+    "description": "Skill triggers on tool schema design request",
+    "prompt": "Design a tool schema for an agent that can search the web and read files",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "description" },
+      { "type": "contains", "value": "inputSchema" },
+      { "type": "contains", "value": "outputSchema" },
+      { "type": "code_valid", "language": "ts" }
+    ]
+  },
+  {
+    "id": "eval-trigger-003",
+    "description": "Skill triggers on multi-agent orchestration request",
+    "prompt": "Build a multi-agent system where a planner agent delegates to specialist agents",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "orchestrat" },
+      { "type": "contains", "value": "agent" },
+      { "type": "code_valid", "language": "ts" }
+    ]
+  },
+  {
+    "id": "eval-trigger-004",
+    "description": "Skill triggers on agent memory design",
+    "prompt": "How should I implement memory for an AI agent that needs to remember user preferences across sessions?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "working memory" },
+      { "type": "contains", "value": "episodic" },
+      { "type": "contains", "value": "semantic" }
+    ]
+  },
+  {
+    "id": "eval-trigger-005",
+    "description": "Skill triggers on agent planning strategy question",
+    "prompt": "What planning strategy should I use for an agent that needs to complete long multi-step research tasks?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "plan" },
+      { "type": "contains", "value": "decompos" }
+    ]
+  },
+  {
+    "id": "eval-task-001",
+    "description": "Agent produces a ReAct loop with correct structure",
+    "prompt": "Write a TypeScript ReAct agent that loops through thought, action, and observation phases",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "Thought" },
+      { "type": "contains", "value": "Action" },
+      { "type": "contains", "value": "Observation" },
+      { "type": "contains", "value": "Final Answer" },
+      { "type": "contains", "value": "maxIterations" },
+      { "type": "code_valid", "language": "ts" }
+    ]
+  },
+  {
+    "id": "eval-task-002",
+    "description": "Agent designs parallel multi-agent topology correctly",
+    "prompt": "Implement a fan-out pattern where 3 research agents run in parallel and a synthesizer merges their outputs",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "Promise.all" },
+      { "type": "contains", "value": "synthes" },
+      { "type": "code_valid", "language": "ts" }
+    ]
+  },
+  {
+    "id": "eval-task-003",
+    "description": "Agent adds safety guardrails with iteration limits",
+    "prompt": "Add safety guardrails to an agent including max iteration limits, timeout, and tool allowlist",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "maxIterations" },
+      { "type": "contains", "value": "timeout" },
+      { "type": "contains", "value": "allowed" },
+      { "type": "code_valid", "language": "ts" }
+    ]
+  },
+  {
+    "id": "eval-task-004",
+    "description": "Agent implements task decomposition with dependency tracking",
+    "prompt": "Implement a plan-and-execute agent that decomposes a goal into subtasks and respects dependencies",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "dependsOn" },
+      { "type": "contains", "value": "pending" },
+      { "type": "contains", "value": "done" },
+      { "type": "code_valid", "language": "ts" }
+    ]
+  },
+  {
+    "id": "eval-task-005",
+    "description": "Agent evaluates trace quality, not just final answer",
+    "prompt": "Write an evaluation function that scores an agent's trace for tool selection accuracy and step efficiency",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "trace" },
+      { "type": "contains", "value": "score" },
+      { "type": "contains", "value": "steps" },
+      { "type": "code_valid", "language": "ts" }
+    ]
+  },
+  {
+    "id": "eval-principle-001",
+    "description": "Agent recommends narrow agent scope over monolithic design",
+    "prompt": "Should I build one agent that handles all tasks or multiple specialized agents?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "speciali" },
+      { "type": "not_contains", "value": "one agent" }
+    ]
+  },
+  {
+    "id": "eval-principle-002",
+    "description": "Agent warns about unbounded loops",
+    "prompt": "I'm building an agent loop - what are the most important safety concerns?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "max" },
+      { "type": "contains", "value": "iteration" },
+      { "type": "contains", "value": "limit" }
+    ]
+  }
+]

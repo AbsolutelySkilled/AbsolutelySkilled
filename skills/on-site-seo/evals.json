@@ -1,0 +1,174 @@
+{
+  "skill": "on-site-seo",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers on a request to add meta tags to a page",
+      "prompt": "My blog post page is missing meta tags. Can you help me add a title tag, meta description, and canonical URL?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "title" },
+        { "type": "contains", "value": "description" },
+        { "type": "contains", "value": "canonical" },
+        { "type": "not_contains", "value": "keyword research" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers on heading structure question",
+      "prompt": "I have multiple H1 tags on my landing page. Is that a problem for SEO?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "one H1" },
+        { "type": "contains", "value": "primary keyword" },
+        { "type": "not_contains", "value": "Core Web Vitals" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers on image alt text request",
+      "prompt": "How should I write alt text for product images on my e-commerce site?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "alt" },
+        { "type": "not_contains", "value": "keyword stuffing" },
+        { "type": "contains", "value": "descriptive" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent can produce a complete HTML meta tag block",
+      "prompt": "Write the complete set of HTML meta tags for a blog post about 'Top 10 JavaScript Frameworks in 2025' on a site called TechPulse at techpulse.io.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "<title>" },
+        { "type": "contains", "value": "meta name=\"description\"" },
+        { "type": "contains", "value": "rel=\"canonical\"" },
+        { "type": "contains", "value": "og:title" },
+        { "type": "contains", "value": "og:image" },
+        { "type": "contains", "value": "twitter:card" },
+        { "type": "contains", "value": "summary_large_image" },
+        { "type": "code_valid", "language": "html" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent produces correct Next.js generateMetadata for a dynamic blog post",
+      "prompt": "Show me how to implement generateMetadata in Next.js App Router for a blog post page at app/blog/[slug]/page.tsx. The post has title, excerpt, ogImage, and publishedAt fields.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "generateMetadata" },
+        { "type": "contains", "value": "Metadata" },
+        { "type": "contains", "value": "alternates" },
+        { "type": "contains", "value": "canonical" },
+        { "type": "contains", "value": "openGraph" },
+        { "type": "contains", "value": "twitter" },
+        { "type": "not_contains", "value": "getServerSideProps" },
+        { "type": "not_contains", "value": "Head from 'next/head'" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent produces correct Nuxt 3 useSeoMeta pattern",
+      "prompt": "How do I set the title, description, and Open Graph tags for a dynamic product page in Nuxt 3? The data comes from a useFetch call.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "useSeoMeta" },
+        { "type": "contains", "value": "ogTitle" },
+        { "type": "contains", "value": "ogDescription" },
+        { "type": "contains", "value": "ogImage" },
+        { "type": "not_contains", "value": "useNuxtApp" },
+        { "type": "not_contains", "value": "vue-meta" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent produces correct Remix V2 meta function with loader data",
+      "prompt": "Write a Remix meta function for a blog post route that uses loader data to set the page title, description, og:image, and canonical URL.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "MetaFunction" },
+        { "type": "contains", "value": "typeof loader" },
+        { "type": "contains", "value": "tagName" },
+        { "type": "contains", "value": "canonical" },
+        { "type": "contains", "value": "og:image" },
+        { "type": "not_contains", "value": "v1" },
+        { "type": "not_contains", "value": "HtmlMetaDescriptor" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent produces a correct semantic HTML page structure",
+      "prompt": "Rewrite this div-soup page structure to use proper semantic HTML5 elements for SEO: <div id='header'>, <div id='nav'>, <div id='main'>, <div class='article'>, <div id='sidebar'>, <div id='footer'>.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "<header>" },
+        { "type": "contains", "value": "<nav" },
+        { "type": "contains", "value": "<main>" },
+        { "type": "contains", "value": "<article>" },
+        { "type": "contains", "value": "<aside>" },
+        { "type": "contains", "value": "<footer>" },
+        { "type": "code_valid", "language": "html" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent correctly identifies and fixes multiple H1 anti-pattern",
+      "prompt": "Review this page structure - it has an H1 for the site logo, another H1 for the page title, and a third H1 for a featured section. What's wrong and how do I fix it?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "one H1" },
+        { "type": "contains", "value": "primary keyword" },
+        { "type": "contains", "value": "h2" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent flags missing canonical as a duplicate content risk",
+      "prompt": "My product pages are accessible at both /products/widget and /products/widget/ (with trailing slash) and also with UTM parameters like /products/widget?utm_source=email. Is this a problem?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "canonical" },
+        { "type": "contains", "value": "duplicate content" },
+        { "type": "contains", "value": "rel=\"canonical\"" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent correctly flags title tag too long",
+      "prompt": "My title tag is: 'The Ultimate Complete Comprehensive Guide to JavaScript Frameworks for Modern Web Development in 2025 | TechPulse Blog'. Is this OK for SEO?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "60" },
+        { "type": "contains", "value": "truncat" },
+        { "type": "not_contains", "value": "160" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not hallucinate a Next.js SEO plugin that does not exist",
+      "prompt": "What Next.js plugin should I install to automatically handle all my SEO meta tags?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "Metadata" },
+        { "type": "not_contains", "value": "next-seo" },
+        { "type": "not_contains", "value": "npm install next-seo" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent correctly loads the Astro reference file for Astro SEO questions",
+      "prompt": "How do I set up SEO meta tags in an Astro site with content collections? I want title, description, and OG tags driven by the frontmatter of each Markdown post.",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "references/astro-seo.md" },
+        { "type": "contains", "value": "frontmatter" },
+        { "type": "contains", "value": "content collections" }
+      ]
+    }
+  ]
+}

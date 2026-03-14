@@ -1,0 +1,165 @@
+{
+  "skill": "project-execution",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when user asks about project risk assessment",
+      "prompt": "I need to identify the biggest risks for our upcoming API migration project",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "risk" },
+        { "type": "contains", "value": "likelihood" },
+        { "type": "contains", "value": "impact" },
+        { "type": "contains", "value": "mitigation" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers when user asks about dependency tracking",
+      "prompt": "How should I track dependencies between my team and the platform team for our Q2 launch?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "dependency" },
+        { "type": "contains", "value": "contact" },
+        { "type": "contains", "value": "fallback" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers when user needs a status update",
+      "prompt": "Help me write a weekly status update for my project sponsor",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "status" },
+        { "type": "contains", "value": "GREEN" },
+        { "type": "contains", "value": "risk" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent can build a risk register with correct structure",
+      "prompt": "Create a risk register for a project that involves migrating our monolith to microservices",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Risk ID" },
+        { "type": "contains", "value": "Likelihood" },
+        { "type": "contains", "value": "Impact" },
+        { "type": "contains", "value": "Owner" },
+        { "type": "contains", "value": "Mitigation" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent can map dependencies with correct attributes",
+      "prompt": "Map the dependencies for a project where frontend needs API specs from backend, backend needs schema from data team, and QA needs both frontend and backend to be complete",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "critical path" },
+        { "type": "contains", "value": "dependency" },
+        { "type": "not_contains", "value": "Gantt chart software" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent can write a proper escalation with options",
+      "prompt": "Our key dependency from the auth team is 2 weeks late and blocking our launch. Help me write an escalation to my VP",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "impact" },
+        { "type": "contains", "value": "option" },
+        { "type": "contains", "value": "recommend" },
+        { "type": "contains", "value": "decision" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent can create a stakeholder communication plan",
+      "prompt": "Create a communication plan for a project with a VP sponsor, 2 product managers, a platform team dependency, and a 6-person dev team",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "frequency" },
+        { "type": "contains", "value": "stakeholder" },
+        { "type": "contains", "value": "channel" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent uses RAID log structure correctly",
+      "prompt": "Set up a RAID log for our new payment integration project",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Risk" },
+        { "type": "contains", "value": "Assumption" },
+        { "type": "contains", "value": "Issue" },
+        { "type": "contains", "value": "Dependency" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent handles the gotcha of skipping amber status",
+      "prompt": "My project was green last week but now we've discovered a major blocker. Should I report it as red?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "amber" },
+        { "type": "contains", "value": "mitigation" },
+        { "type": "not_contains", "value": "skip amber" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent correctly advises against escalating without options",
+      "prompt": "I need to tell my VP that the project is going to be late. What should I say?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "option" },
+        { "type": "contains", "value": "trade-off" },
+        { "type": "contains", "value": "recommend" },
+        { "type": "not_contains", "value": "just tell them it's late" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent does not hallucinate specific project management software requirements",
+      "prompt": "What tools do I need to track project risks?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "risk register" },
+        { "type": "not_contains", "value": "you must use Jira" },
+        { "type": "not_contains", "value": "you must use Monday.com" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not recommend waterfall-specific or methodology-locked advice",
+      "prompt": "How do I manage risks in my project?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "risk" },
+        { "type": "contains", "value": "owner" },
+        { "type": "not_contains", "value": "waterfall phase gate" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent correctly references the risk-management reference file for deep risk analysis",
+      "prompt": "I need a detailed quantitative risk analysis framework for my project with probability-weighted delay estimates",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "risk" },
+        { "type": "contains", "value": "references/risk-management.md" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "Agent can conduct a pre-mortem exercise",
+      "prompt": "Run a pre-mortem for our project to launch a new checkout flow by end of Q2",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "failed" },
+        { "type": "contains", "value": "risk" },
+        { "type": "contains", "value": "mitigation" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "skill": "ml-ops",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on model deployment question",
+      "prompt": "We just finished training a new recommendation model and want to release it to production without taking down the existing one. How should we approach this rollout?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "canary" },
+        { "type": "contains", "value": "shadow" },
+        { "type": "contains", "value": "rollback" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on feature store question",
+      "prompt": "Our data scientists keep recomputing the same features in every training notebook and the feature logic is diverging between notebooks. What's the right architecture fix?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "feature store" },
+        { "type": "contains", "value": "reuse" },
+        { "type": "contains", "value": "online" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Core task: setting up experiment tracking",
+      "prompt": "I have 5 data scientists running training experiments independently. We're losing track of which hyperparameters produced which results and we can't reproduce last month's best model. How do we fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "MLflow" },
+        { "type": "contains", "value": "parameters" },
+        { "type": "contains", "value": "reproducib" },
+        { "type": "contains", "value": "artifact" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: designing a model monitoring strategy",
+      "prompt": "Our fraud detection model was performing well for 3 months but the precision just dropped by 15 percentage points. We have no idea what changed. How should we have set up monitoring to catch this earlier?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "drift" },
+        { "type": "contains", "value": "distribution" },
+        { "type": "contains", "value": "baseline" },
+        { "type": "contains", "value": "feature" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: implementing point-in-time correct feature retrieval",
+      "prompt": "Our churn prediction model has suspiciously high accuracy on backtesting but terrible performance in production. A data scientist suspects target leakage in our feature pipeline. How do we diagnose and fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "point-in-time" },
+        { "type": "contains", "value": "leakage" },
+        { "type": "contains", "value": "timestamp" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: setting up an A/B test between model versions",
+      "prompt": "We have a new ranking model that shows a 3% improvement in offline NDCG. Our product team wants to ship it immediately, but we want to verify it actually improves the business metric (click-through rate). How should we test this in production?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "sample size" },
+        { "type": "contains", "value": "statistical" },
+        { "type": "contains", "value": "business metric" },
+        { "type": "contains", "value": "control" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: versioning models and datasets with DVC",
+      "prompt": "Our team trains models against CSV files sitting in S3. Nobody tracks which model was trained on which data snapshot. An audit question came up and we can't answer it. How do we set up proper versioning?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "DVC" },
+        { "type": "contains", "value": "lineage" },
+        { "type": "contains", "value": "registry" },
+        { "type": "contains", "value": "git" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: warns about training/serving skew",
+      "prompt": "Our model performs great in offline evaluation but significantly worse in production A/B tests. We use the same feature names in both training and serving. What could explain the gap?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "skew" },
+        { "type": "contains", "value": "feature computation" },
+        { "type": "contains", "value": "serving" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about peeking at A/B test results",
+      "prompt": "We launched an A/B test for a new pricing model yesterday. The p-value is already below 0.05 for the treatment group. Can we stop the test and ship?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "peeking" },
+        { "type": "contains", "value": "sample size" },
+        { "type": "not_contains", "value": "yes, you can ship" },
+        { "type": "not_contains", "value": "safe to stop" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about monitoring only model accuracy without data drift",
+      "prompt": "We check our model's accuracy every week by sampling predictions and comparing to ground truth labels, which come in with a 2-week delay. Is this sufficient for production monitoring?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "drift" },
+        { "type": "contains", "value": "input" },
+        { "type": "contains", "value": "2-week" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not recommend testing on the test set during development",
+      "prompt": "I want to choose the best model from 10 experiments. Should I evaluate all of them on the test set and pick the one with the highest score?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "validation" },
+        { "type": "not_contains", "value": "use the test set for selection" },
+        { "type": "not_contains", "value": "evaluate all on test" },
+        { "type": "contains", "value": "contaminate" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load: points to tool-landscape reference for platform selection",
+      "prompt": "Our ML team is evaluating whether to use MLflow, Weights & Biases, or Vertex AI for experiment tracking and model registry. We also want to understand the trade-offs for feature stores. Can you walk us through the comparison?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "MLflow" },
+        { "type": "contains", "value": "Vertex AI" },
+        { "type": "contains", "value": "references" },
+        { "type": "contains", "value": "tool-landscape" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "skill": "appsec-owasp",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on XSS question",
+      "prompt": "A user submits a comment containing <script>alert('xss')</script> and it executes in the browser for other users. How do I fix this?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "escap" },
+        { "type": "contains", "value": "encod" },
+        { "type": "contains", "value": "Content-Security-Policy" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on SQL injection question",
+      "prompt": "I'm building a search endpoint that takes a name query param and puts it directly in the SQL query string. Is that safe?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "parameterized" },
+        { "type": "not_contains", "value": "safe" },
+        { "type": "contains", "value": "injection" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on CSRF question",
+      "prompt": "Our banking app has a transfer funds form. How do we prevent CSRF attacks against it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "token" },
+        { "type": "contains", "value": "SameSite" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: correct SQL parameterization with dynamic ORDER BY",
+      "prompt": "I need to let users sort a results table by any column they choose. The column name comes from a query string. How do I do this safely with parameterized queries?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "allowlist" },
+        { "type": "contains", "value": "Set" },
+        { "type": "not_contains", "value": "parameterize the column name" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: secure authentication setup",
+      "prompt": "Walk me through implementing a secure login endpoint in Node.js. I need to hash passwords, issue tokens, and make sure I'm not leaking user existence via timing.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "bcrypt" },
+        { "type": "contains", "value": "httpOnly" },
+        { "type": "contains", "value": "timing" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: setting up CSP and other security headers",
+      "prompt": "What HTTP security headers should I add to my Node.js Express app and how do I configure them correctly?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "helmet" },
+        { "type": "contains", "value": "Content-Security-Policy" },
+        { "type": "contains", "value": "Strict-Transport-Security" },
+        { "type": "contains", "value": "X-Frame-Options" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: preventing SSRF",
+      "prompt": "My app lets users enter a webhook URL and we POST to it when events happen. A security researcher says this is vulnerable to SSRF. How do I fix it?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "allowlist" },
+        { "type": "contains", "value": "private" },
+        { "type": "contains", "value": "169.254" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: input validation with allowlists",
+      "prompt": "I have a user registration endpoint. What's the right way to validate the input fields like email, username, and role?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "allowlist" },
+        { "type": "contains", "value": "schema" },
+        { "type": "contains", "value": "enum" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns against localStorage for JWTs",
+      "prompt": "I'm storing JWT tokens in localStorage for my React SPA. Is this fine?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "httpOnly" },
+        { "type": "contains", "value": "XSS" },
+        { "type": "not_contains", "value": "localStorage is safe" },
+        { "type": "not_contains", "value": "localStorage is fine" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns against MD5 for passwords",
+      "prompt": "We currently store passwords hashed with MD5. A dev suggested just adding a salt to make it secure. Will that work?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "bcrypt" },
+        { "type": "not_contains", "value": "salted MD5 is secure" },
+        { "type": "not_contains", "value": "MD5 with salt is fine" },
+        { "type": "contains", "value": "brute" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns against reflecting Origin header in CORS",
+      "prompt": "To make our CORS setup flexible I'm just reflecting whatever Origin header the client sends back in Access-Control-Allow-Origin. Is there any issue with that?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "allowlist" },
+        { "type": "not_contains", "value": "reflecting the origin is safe" },
+        { "type": "contains", "value": "wildcard" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: recommends defense in depth, not a single control",
+      "prompt": "I added a Web Application Firewall in front of my app. Does that mean I no longer need to sanitize inputs in my application code?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "defense in depth" },
+        { "type": "not_contains", "value": "WAF is sufficient" },
+        { "type": "not_contains", "value": "no longer need" },
+        { "type": "contains", "value": "application layer" }
+      ]
+    }
+  ]
+}

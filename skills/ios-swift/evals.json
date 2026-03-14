@@ -1,0 +1,163 @@
+{
+  "skill": "ios-swift",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on SwiftUI layout question",
+      "prompt": "How do I create a two-column grid layout in SwiftUI?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "LazyVGrid" },
+        { "type": "contains", "value": "GridItem" },
+        { "type": "code_valid", "language": "swift" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on Core Data question",
+      "prompt": "How should I set up Core Data in a new iOS project with background saving?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "NSPersistentContainer" },
+        { "type": "contains", "value": "newBackgroundContext" },
+        { "type": "contains", "value": "perform" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on App Store submission question",
+      "prompt": "What do I need to prepare before submitting my app to the App Store?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "privacy" },
+        { "type": "contains", "value": "App Store Review" },
+        { "type": "contains", "value": "Info.plist" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Produces correct NavigationStack pattern for iOS 16+",
+      "prompt": "Build a SwiftUI list that navigates to a detail screen when tapping an item",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "NavigationStack" },
+        { "type": "contains", "value": "navigationDestination" },
+        { "type": "not_contains", "value": "NavigationView" },
+        { "type": "code_valid", "language": "swift" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Provides correct async/await networking pattern",
+      "prompt": "Write a network service in Swift that fetches a list of users from an API using async/await",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "async throws" },
+        { "type": "contains", "value": "URLSession" },
+        { "type": "contains", "value": "await" },
+        { "type": "not_contains", "value": "completionHandler" },
+        { "type": "code_valid", "language": "swift" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Handles UIKit and SwiftUI interop correctly",
+      "prompt": "How do I use a UIKit MKMapView inside a SwiftUI view?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "UIViewRepresentable" },
+        { "type": "contains", "value": "makeUIView" },
+        { "type": "contains", "value": "updateUIView" },
+        { "type": "code_valid", "language": "swift" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Recommends correct state management property wrapper",
+      "prompt": "I have an ObservableObject view model. Should I use @StateObject or @ObservedObject in my SwiftUI view?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "@StateObject" },
+        { "type": "contains", "value": "@ObservedObject" },
+        { "type": "contains", "value": "ownership" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Catches retain cycle gotcha in closures",
+      "prompt": "My iOS app is leaking memory. The view controller is never deallocated after dismissing.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "weak self" },
+        { "type": "contains", "value": "retain cycle" },
+        { "type": "contains", "value": "Instruments" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Catches Core Data thread safety gotcha",
+      "prompt": "My app crashes with 'Collection was mutated while being enumerated' when saving Core Data objects from a background thread",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "perform" },
+        { "type": "contains", "value": "thread" },
+        { "type": "contains", "value": "context" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Handles App Tracking Transparency requirement",
+      "prompt": "My app got rejected because of tracking. What do I need to add?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ATTrackingManager" },
+        { "type": "contains", "value": "requestTrackingAuthorization" },
+        { "type": "contains", "value": "Info.plist" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not recommend deprecated navigation APIs",
+      "prompt": "How do I implement navigation in SwiftUI?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "NavigationStack" },
+        { "type": "not_contains", "value": "NavigationView" },
+        { "type": "code_valid", "language": "swift" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not hallucinate non-existent SwiftUI modifiers",
+      "prompt": "How do I make a SwiftUI view respond to shake gestures?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": ".onShake" },
+        { "type": "not_contains", "value": "ShakeGesture" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "References the correct reference file for performance tuning",
+      "prompt": "My iOS app has rendering hitches and high memory usage. Walk me through profiling it.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/performance-tuning.md" },
+        { "type": "contains", "value": "Instruments" },
+        { "type": "contains", "value": "Allocations" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "Provides correct LazyVStack usage for large scrollable lists",
+      "prompt": "My SwiftUI ScrollView with 10,000 items is very slow and uses tons of memory",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "LazyVStack" },
+        { "type": "not_contains", "value": "VStack" },
+        { "type": "code_valid", "language": "swift" }
+      ]
+    }
+  ]
+}

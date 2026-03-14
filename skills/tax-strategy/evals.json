@@ -1,0 +1,136 @@
+{
+  "skill": "tax-strategy",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on R&D credit eligibility question",
+      "prompt": "Does our software startup qualify for the R&D tax credit? We build a SaaS product and our engineers spend most of their time writing and testing code.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "four-part" },
+        { "type": "contains", "value": "technical uncertainty" },
+        { "type": "contains", "value": "wages" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on sales tax nexus question",
+      "prompt": "We are a SaaS company based in California. Do we need to collect sales tax in other states?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "nexus" },
+        { "type": "contains", "value": "economic nexus" },
+        { "type": "contains", "value": "100,000" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on transfer pricing strategy",
+      "prompt": "We are setting up an Irish subsidiary to hold our IP. How do we price the intercompany license between the US parent and the Irish entity?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "arm's length" },
+        { "type": "contains", "value": "transfer pricing" },
+        { "type": "contains", "value": "substance" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Triggers on international tax structuring",
+      "prompt": "We are expanding to the EU. What are the tax implications of setting up a subsidiary in Germany vs. Ireland?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "permanent establishment" },
+        { "type": "contains", "value": "withholding" },
+        { "type": "contains", "value": "treaty" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can explain the startup R&D payroll tax offset",
+      "prompt": "Our startup has no income tax liability yet. Can we still benefit from the R&D credit?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "payroll" },
+        { "type": "contains", "value": "500,000" },
+        { "type": "contains", "value": "FICA" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can explain QSBS benefits for founders",
+      "prompt": "We are incorporating as a C-Corp. What is the biggest tax benefit available to us and early investors if the company succeeds?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "QSBS" },
+        { "type": "contains", "value": "Section 1202" },
+        { "type": "contains", "value": "10 million" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can explain VAT obligations for digital services sold to EU",
+      "prompt": "We sell a SaaS product to customers across the EU. Do we need to charge VAT?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "VAT" },
+        { "type": "contains", "value": "OSS" },
+        { "type": "contains", "value": "reverse charge" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can advise on quarterly estimated tax safe harbor",
+      "prompt": "How much should we pay in quarterly estimated corporate taxes to avoid an underpayment penalty?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "prior year" },
+        { "type": "contains", "value": "safe harbor" },
+        { "type": "contains", "value": "100%" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Can advise on S-Corp reasonable salary requirement",
+      "prompt": "I own an S-Corp and want to minimize payroll taxes by taking a low salary and high distributions. Is this allowed?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "reasonable salary" },
+        { "type": "contains", "value": "IRS" },
+        { "type": "not_contains", "value": "zero salary is fine" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Applies the four-part R&D test to routine software work",
+      "prompt": "Our engineers are rewriting our database query layer to improve performance. Does that qualify as R&D?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "uncertainty" },
+        { "type": "contains", "value": "experimentation" },
+        { "type": "contains", "value": "qualif" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Appropriately defers to professional advice",
+      "prompt": "Tell me exactly how to structure our holding company to pay zero taxes.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "consult" },
+        { "type": "not_contains", "value": "guaranteed" },
+        { "type": "not_contains", "value": "zero taxes" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References the R&D credits file for deep qualification detail",
+      "prompt": "I need a detailed breakdown of how to apply the four-part R&D test to our software development activities. Which reference file covers this?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "references/r-and-d-credits.md" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "skill": "competitive-analysis",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when user asks to map a competitive landscape",
+      "prompt": "Map the competitive landscape for our project management tool targeting engineering teams",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "direct" },
+        { "type": "contains", "value": "landscape" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers on SWOT analysis request and outputs all four quadrants",
+      "prompt": "Run a SWOT analysis for our analytics platform before we enter the enterprise market",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Strengths" },
+        { "type": "contains", "value": "Weaknesses" },
+        { "type": "contains", "value": "Opportunities" },
+        { "type": "contains", "value": "Threats" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "SWOT output includes cross-quadrant strategic implications, not just a grid",
+      "prompt": "Do a SWOT analysis for our email marketing platform competing against Mailchimp and SendGrid",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "SO" },
+        { "type": "contains", "value": "ST" },
+        { "type": "contains", "value": "implication" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent produces a feature comparison matrix using Full/Partial/No scale",
+      "prompt": "Build a feature comparison matrix for our CRM against Salesforce, HubSpot, and Pipedrive",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Full" },
+        { "type": "contains", "value": "Partial" },
+        { "type": "not_contains", "value": "checkmark" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent creates a 2x2 positioning map with meaningful axis choices and identifies open space",
+      "prompt": "Create a positioning map for our developer tool in the observability market",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "axis" },
+        { "type": "contains", "value": "open" },
+        { "type": "contains", "value": "space" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent frames competitive landscape using jobs-to-be-done, not just categories",
+      "prompt": "How should I think about who our real competitors are for our task management app?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "job" },
+        { "type": "contains", "value": "alternative" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent includes indirect competitors and substitutes when mapping the landscape",
+      "prompt": "Map the competitive landscape for our no-code workflow automation tool",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "indirect" },
+        { "type": "contains", "value": "substitute" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent produces a competitive brief with honest assessment including why customers choose the competitor",
+      "prompt": "Write a competitive brief on Datadog for our sales and product teams",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "TL;DR" },
+        { "type": "contains", "value": "customers choose" },
+        { "type": "contains", "value": "response" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent recommends a monitoring cadence and signal sources, not a one-time analysis",
+      "prompt": "How should we keep track of what our competitors are doing on an ongoing basis?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "quarterly" },
+        { "type": "contains", "value": "weekly" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent warns against feature-copying and recommends differentiation instead",
+      "prompt": "Our competitor just launched a new AI assistant feature. Should we build the same thing?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "differentiat" },
+        { "type": "not_contains", "value": "yes, you should immediately build" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent explains Porter's Five Forces correctly without inventing extra forces",
+      "prompt": "Walk me through Porter's Five Forces for the cloud storage market",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "new entrants" },
+        { "type": "contains", "value": "suppliers" },
+        { "type": "contains", "value": "buyers" },
+        { "type": "contains", "value": "substitutes" },
+        { "type": "contains", "value": "rivalry" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not invent fake competitive frameworks or hallucinate competitor data",
+      "prompt": "Use the Henderson Competitive Matrix to analyze our market position",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "Henderson Competitive Matrix is a widely used" },
+        { "type": "not_contains", "value": "The Henderson Matrix consists of" }
+      ]
+    }
+  ]
+}

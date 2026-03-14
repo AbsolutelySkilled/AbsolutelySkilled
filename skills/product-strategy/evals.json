@@ -1,0 +1,139 @@
+{
+  "skill": "product-strategy",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on product vision request",
+      "prompt": "Help me write a product vision statement for a B2B project management tool targeting small engineering teams.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "target customer" },
+        { "type": "contains", "value": "outcome" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on roadmap building request",
+      "prompt": "How do I build a product roadmap that focuses on outcomes instead of features?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "outcome" },
+        { "type": "contains", "value": "metric" },
+        { "type": "not_contains", "value": "feature list" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on RICE scoring request",
+      "prompt": "Walk me through how to prioritize these 5 features using RICE scoring.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Reach" },
+        { "type": "contains", "value": "Impact" },
+        { "type": "contains", "value": "Confidence" },
+        { "type": "contains", "value": "Effort" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can produce a filled RICE scoring table",
+      "prompt": "Score these two features with RICE: (1) Bulk CSV import - estimated 500 users/quarter, and (2) Dark mode - estimated 2000 users/quarter. Both take 2 person-months.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Score" },
+        { "type": "contains", "value": "Effort" },
+        { "type": "contains", "value": "Confidence" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Explains MoSCoW categorization correctly",
+      "prompt": "What is MoSCoW prioritization and when should I use it over RICE?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Must" },
+        { "type": "contains", "value": "Should" },
+        { "type": "contains", "value": "Could" },
+        { "type": "contains", "value": "Won't" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can write well-formed product OKRs",
+      "prompt": "Write product OKRs for a team focused on improving user onboarding this quarter. Current 7-day activation rate is 35%.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Objective" },
+        { "type": "contains", "value", "value": "KR" },
+        { "type": "contains", "value": "activation" },
+        { "type": "not_contains", "value": "Launch" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Distinguishes vision, strategy, and roadmap correctly",
+      "prompt": "What is the difference between a product vision, a product strategy, and a product roadmap?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "vision" },
+        { "type": "contains", "value": "strategy" },
+        { "type": "contains", "value": "roadmap" },
+        { "type": "contains", "value": "outcome" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can advise on build vs. buy decision",
+      "prompt": "Should we build our own search functionality or integrate Algolia? We are an early-stage startup with 3 engineers.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "differentiator" },
+        { "type": "contains", "value": "time" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Explains north star metric concept",
+      "prompt": "How do I choose a north star metric for my SaaS product?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "north star" },
+        { "type": "contains", "value": "value" },
+        { "type": "contains", "value": "leading" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Identifies roadmap as feature wish list anti-pattern",
+      "prompt": "My roadmap has 60 features across 4 quarters that stakeholders requested. Is this a good roadmap?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "outcome" },
+        { "type": "not_contains", "value": "yes, this is a good roadmap" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Can structure a stakeholder roadmap communication",
+      "prompt": "How should I present the product roadmap differently to executives vs. the engineering team?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "executive" },
+        { "type": "contains", "value": "engineering" },
+        { "type": "contains", "value": "outcome" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for sprint velocity or estimation",
+      "prompt": "How do I calculate story points for a sprint and improve our velocity over time?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "RICE" },
+        { "type": "not_contains", "value": "product vision" },
+        { "type": "not_contains", "value": "north star" }
+      ]
+    }
+  ]
+}

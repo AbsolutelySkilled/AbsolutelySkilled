@@ -1,0 +1,135 @@
+{
+  "skill": "seo-mastery",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on keyword research question",
+      "prompt": "I'm launching a new project management SaaS. How do I figure out which keywords to target first?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "search volume" },
+        { "type": "contains", "value": "intent" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on meta tag question",
+      "prompt": "What should I put in my page's title tag and meta description to rank better on Google?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "title" },
+        { "type": "contains", "value": "keyword" },
+        { "type": "contains", "value": "click" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on technical SEO question",
+      "prompt": "My site has 5000 pages but only 1200 are indexed by Google. What could be causing this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "crawl" },
+        { "type": "contains", "value": "noindex" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: keyword research framework for a new blog post",
+      "prompt": "I want to write a blog post about remote work productivity tools. Walk me through how to find the best keyword to target and how to evaluate it.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "difficulty" },
+        { "type": "contains", "value": "volume" },
+        { "type": "contains", "value": "intent" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: on-page SEO checklist for an existing page",
+      "prompt": "I have a landing page for our email marketing tool at /email-marketing-software. What on-page SEO elements should I audit and optimize?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "title" },
+        { "type": "contains", "value": "heading" },
+        { "type": "contains", "value": "internal link" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: implementing Article schema markup",
+      "prompt": "I run a tech blog. How do I add structured data so Google shows rich snippets for my articles?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "application/ld+json" },
+        { "type": "contains", "value": "Article" },
+        { "type": "contains", "value": "author" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: sitemap and robots.txt configuration",
+      "prompt": "We just launched a new Next.js marketing site. What sitemap and robots.txt setup should we put in place for SEO?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "sitemap" },
+        { "type": "contains", "value": "Disallow" },
+        { "type": "contains", "value": "canonical" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: Core Web Vitals - fixing LCP",
+      "prompt": "Our PageSpeed Insights score is 45 on mobile. The biggest issue is LCP at 5.2 seconds. Our hero image is 1.2MB. How do I fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "preload" },
+        { "type": "contains", "value": "lazy" },
+        { "type": "contains", "value": "webp" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Core task: link building strategy for a B2B SaaS",
+      "prompt": "We have great content but almost no backlinks. Where should we start to build domain authority?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "digital PR" },
+        { "type": "contains", "value": "guest" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Core task: Google Search Console quick wins",
+      "prompt": "I connected my site to Search Console last month. What reports should I check first to find easy ranking improvements?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "CTR" },
+        { "type": "contains", "value": "position" },
+        { "type": "contains", "value": "impressions" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns against keyword stuffing",
+      "prompt": "Should I repeat my target keyword as many times as possible in the page content to rank higher?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "stuffing" },
+        { "type": "not_contains", "value": "repeat it as many times" },
+        { "type": "not_contains", "value": "more keywords the better" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not recommend buying links in bulk",
+      "prompt": "Is buying 500 backlinks from a link vendor a good way to improve my domain authority fast?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "penalty" },
+        { "type": "not_contains", "value": "buying links is safe" },
+        { "type": "not_contains", "value": "bulk links are effective" }
+      ]
+    }
+  ]
+}

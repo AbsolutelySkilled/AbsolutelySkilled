@@ -1,0 +1,138 @@
+{
+  "skill": "design-systems",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to define design tokens",
+      "prompt": "How should I structure design tokens for my component library?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "primitive" },
+        { "type": "contains", "value": "semantic" },
+        { "type": "contains", "value": "CSS variables" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on Storybook setup request",
+      "prompt": "How do I set up Storybook for my React component library?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "storybook" },
+        { "type": "contains", "value": "autodocs" },
+        { "type": "contains", "value": "controls" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Produces correct variant-based Button with CVA",
+      "prompt": "Build a Button component with primary, secondary, and destructive variants using CVA",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "cva" },
+        { "type": "contains", "value": "VariantProps" },
+        { "type": "contains", "value": "defaultVariants" },
+        { "type": "code_valid", "language": "typescript" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Recommends semantic tokens over primitives in components",
+      "prompt": "Should I use --blue-500 directly in my Button styles or something else?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "semantic" },
+        { "type": "not_contains", "value": "--blue-500 directly" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Produces correct dark mode implementation with data-theme attribute",
+      "prompt": "Implement dark mode for my design system",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "data-theme" },
+        { "type": "contains", "value": "prefers-color-scheme" },
+        { "type": "code_valid", "language": "css" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Produces correct compound component pattern with context",
+      "prompt": "How do I build a compound Tabs component in React?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "createContext" },
+        { "type": "contains", "value": "role=\"tablist\"" },
+        { "type": "contains", "value": "aria-selected" },
+        { "type": "code_valid", "language": "typescript" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Recommends Style Dictionary for token pipeline",
+      "prompt": "I want to share design tokens between Figma and my codebase. What tooling should I use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Style Dictionary" },
+        { "type": "contains", "value": "transform" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Recommends changesets for component library versioning",
+      "prompt": "How should I version and publish my component library?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "changesets" },
+        { "type": "contains", "value": "semantic" },
+        { "type": "contains", "value": "CHANGELOG" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Flags token rename as a breaking change",
+      "prompt": "I want to rename --color-primary to --color-brand. Is that a patch or minor change?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "breaking" },
+        { "type": "contains", "value": "major" },
+        { "type": "not_contains", "value": "patch" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Catches anti-pattern of hardcoded hex in component",
+      "prompt": "Review this CSS: .btn { background: #3b82f6; color: #ffffff; }",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "token" },
+        { "type": "contains", "value": "theming" },
+        { "type": "not_contains", "value": "looks good" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Recommends accessibility-first approach when building form components",
+      "prompt": "I'm building a custom Select dropdown for my design system. Any advice?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "keyboard" },
+        { "type": "contains", "value": "aria" },
+        { "type": "contains", "value": "Radix" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References the token-architecture reference file for deep token work",
+      "prompt": "Walk me through designing a full token architecture for a multi-brand design system",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/token-architecture.md" },
+        { "type": "contains", "value": "primitive" },
+        { "type": "contains", "value": "brand" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "skill": "superhuman",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "trigger-build-e2e",
+      "description": "Should trigger Superhuman when user asks to build a feature end-to-end",
+      "prompt": "Build a user authentication system end-to-end for my Next.js app",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "INTAKE" },
+        { "type": "contains", "value": "DECOMPOSE" }
+      ]
+    },
+    {
+      "id": "trigger-break-into-tasks",
+      "description": "Should trigger Superhuman when user asks to break work into tasks",
+      "prompt": "Break this feature into tasks and execute them: add a commenting system to blog posts",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "sub-task" },
+        { "type": "contains", "value": "wave" }
+      ]
+    },
+    {
+      "id": "anti-trigger-simple-fix",
+      "description": "Should NOT trigger Superhuman for a simple single-file fix",
+      "prompt": "Fix the typo on line 5 of src/utils/helpers.ts - change 'recieve' to 'receive'",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "INTAKE" },
+        { "type": "not_contains", "value": "DECOMPOSE" },
+        { "type": "not_contains", "value": ".superhuman" }
+      ]
+    },
+    {
+      "id": "core-intake-questions",
+      "description": "Should produce structured intake questions when given a feature request",
+      "prompt": "I want to add real-time notifications to my app. Use the Superhuman workflow.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "problem" },
+        { "type": "contains", "value": "success criteria" },
+        { "type": "contains", "value": "constraint" }
+      ]
+    },
+    {
+      "id": "core-dependency-dag",
+      "description": "Should produce a dependency DAG with wave assignments given intake answers",
+      "prompt": "Using Superhuman, decompose this task: Add a REST API with user CRUD, auth middleware, and integration tests. The auth middleware depends on the user model, and tests depend on both the API and middleware.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "SH-" },
+        { "type": "contains", "value": "Wave" },
+        { "type": "contains", "value": "depend" }
+      ]
+    },
+    {
+      "id": "core-ascii-graph",
+      "description": "Should generate an ASCII dependency graph for user approval",
+      "prompt": "Using Superhuman, show me the task graph for: Create a database model, then build CRUD API endpoints, then write integration tests. The API depends on the model, tests depend on the API.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "-->" },
+        { "type": "contains", "value": "Wave" }
+      ]
+    },
+    {
+      "id": "core-tdd-plan",
+      "description": "Should create a TDD plan with tests written before implementation",
+      "prompt": "Using Superhuman, plan the execution for sub-task SH-003: Create user authentication middleware. Show the TDD approach.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "test" },
+        { "type": "contains", "value": "red" },
+        { "type": "contains", "value": "green" }
+      ]
+    },
+    {
+      "id": "core-board-format",
+      "description": "Should produce a valid board.md file with correct structure",
+      "prompt": "Using Superhuman, show me what the .superhuman/board.md file looks like after the DECOMPOSE phase for adding a payment system.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": ".superhuman/board.md" },
+        { "type": "contains", "value": "Intake Summary" },
+        { "type": "contains", "value": "Task Graph" },
+        { "type": "contains", "value": "status" }
+      ]
+    },
+    {
+      "id": "gotcha-no-skip-intake",
+      "description": "Should not skip intake even for seemingly obvious tasks",
+      "prompt": "Using Superhuman, just build a login page. It's simple, skip the questions.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "INTAKE" },
+        { "type": "contains", "value": "question" }
+      ]
+    },
+    {
+      "id": "gotcha-no-flat-lists",
+      "description": "Should always use dependency graphs, never flat task lists",
+      "prompt": "Using Superhuman, create a task list for building a blog with posts, comments, and search.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "depend" },
+        { "type": "contains", "value": "Wave" },
+        { "type": "not_contains", "value": "flat list" }
+      ]
+    },
+    {
+      "id": "gotcha-approval-before-execute",
+      "description": "Should present wave plan for user approval before execution",
+      "prompt": "Using Superhuman, decompose and immediately start building a user dashboard with charts and filters.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "approv" },
+        { "type": "contains", "value": "Wave" }
+      ]
+    },
+    {
+      "id": "anti-hallucination-no-realtime-collab",
+      "description": "Should not claim agents can collaborate in real-time during execution",
+      "prompt": "Using Superhuman, can the parallel agents communicate with each other during execution to coordinate their work?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "independent" },
+        { "type": "not_contains", "value": "real-time communication between agents" }
+      ]
+    },
+    {
+      "id": "reference-load-board-format",
+      "description": "Should reference the board-format.md file when asked about board structure",
+      "prompt": "Using Superhuman, explain the full board.md specification in detail.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "board-format.md" },
+        { "type": "contains", "value": "frontmatter" },
+        { "type": "contains", "value": "status" }
+      ]
+    }
+  ]
+}

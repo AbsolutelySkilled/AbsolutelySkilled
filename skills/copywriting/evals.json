@@ -1,0 +1,132 @@
+{
+  "skill": "copywriting",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on headline writing request",
+      "prompt": "Write me 5 headline options for a SaaS tool that automates invoice generation for freelancers",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "invoice" },
+        { "type": "contains", "value": "freelancer" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Applies AIDA framework correctly",
+      "prompt": "Write landing page copy for a project management app using the AIDA framework",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Attention" },
+        { "type": "contains", "value": "Interest" },
+        { "type": "contains", "value": "Desire" },
+        { "type": "contains", "value": "Action" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Applies PAS framework correctly",
+      "prompt": "Use the PAS framework to write copy for a productivity app targeting burnt-out founders",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Problem" },
+        { "type": "contains", "value": "Agitate" },
+        { "type": "contains", "value": "Solve" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Writes CTAs using first-person ownership principle",
+      "prompt": "Write 5 CTA button variants for a free trial signup page",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "My" },
+        { "type": "not_contains", "value": "Submit" },
+        { "type": "not_contains", "value": "Click Here" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Translates features into benefits correctly",
+      "prompt": "Our email tool has a drag-and-drop editor, sends 1 million emails per hour, and has 99.9% uptime. Write copy that sells these features.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "drag-and-drop editor" },
+        { "type": "contains", "value": "without" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Writes value proposition using the correct template structure",
+      "prompt": "Write a value proposition for a tool that helps sales teams track pipeline deals",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "helps" },
+        { "type": "contains", "value": "so" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Generates email subject line variants with formulas",
+      "prompt": "Write 6 email subject line variants for a re-engagement campaign for users who haven't logged in for 30 days",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "?" },
+        { "type": "not_contains", "value": "OPEN THIS EMAIL" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Structures landing page using the section framework",
+      "prompt": "Give me the full copy structure for a landing page for a time-tracking app for agencies",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "hero" },
+        { "type": "contains", "value": "testimonial" },
+        { "type": "contains", "value": "CTA" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Provides A/B testing process, not just variants",
+      "prompt": "I want to A/B test my signup page headline. Walk me through how to do it properly.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "one variable" },
+        { "type": "contains", "value": "hypothesis" },
+        { "type": "contains", "value": "statistical" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Flags weak CTA anti-pattern",
+      "prompt": "Is 'Click here to learn more' a good CTA? Why or why not?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "yes, it is a good" },
+        { "type": "contains", "value": "specific" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not trigger for technical documentation",
+      "prompt": "Write API documentation for our REST endpoint that returns a list of users",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "AIDA" },
+        { "type": "not_contains", "value": "conversion rate" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Recommends voice of customer research before writing",
+      "prompt": "I need to rewrite my homepage headline. Where do I start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "customer" },
+        { "type": "contains", "value": "research" }
+      ]
+    }
+  ]
+}

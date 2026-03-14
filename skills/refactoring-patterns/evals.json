@@ -1,0 +1,132 @@
+{
+  "skill": "refactoring-patterns",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on explicit extract method request",
+      "prompt": "This function is 80 lines long with section comments. Help me apply extract method refactoring.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "extract" },
+        { "type": "contains", "value": "named" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on replace conditional request",
+      "prompt": "I keep adding cases to this switch statement every time we add a new payment type. How should I refactor this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "polymorphism" },
+        { "type": "contains", "value": "strategy" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Can produce extract method refactoring with valid TypeScript",
+      "prompt": "Refactor this TypeScript function using extract method: function process(data: number[]): number { let sum = 0; for (const n of data) { if (n > 0) sum += n; } const avg = sum / data.length; return avg * 1.1; }",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "function" },
+        { "type": "not_contains", "value": "for (const n of data)" },
+        { "type": "code_valid", "language": "typescript" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can introduce a parameter object for a function with many params",
+      "prompt": "Refactor this TypeScript function signature: function sendEmail(to: string, from: string, subject: string, body: string, cc: string, bcc: string, priority: number): void",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "interface" },
+        { "type": "not_contains", "value": "to: string, from: string" },
+        { "type": "code_valid", "language": "typescript" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can replace magic numbers with named constants",
+      "prompt": "What's wrong with this code and how do I fix it: if (user.age >= 18 && order.total > 49.99) { applyDiscount(0.15); }",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "const" },
+        { "type": "not_contains", "value": "49.99" },
+        { "type": "code_valid", "language": "typescript" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can decompose a complex conditional into named predicates",
+      "prompt": "Refactor this condition to be more readable: if (user.role === 'admin' && !user.isSuspended && user.loginAttempts < 5 && Date.now() - user.lastLogin < 86400000)",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "function" },
+        { "type": "contains", "value": "86400000" },
+        { "type": "code_valid", "language": "typescript" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can apply replace conditional with polymorphism and produce valid TypeScript",
+      "prompt": "Refactor this switch to use polymorphism: function render(type: string, data: unknown): string { switch(type) { case 'json': return JSON.stringify(data); case 'csv': return toCSV(data); case 'xml': return toXML(data); } }",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "interface" },
+        { "type": "contains", "value": "implements" },
+        { "type": "not_contains", "value": "switch" },
+        { "type": "code_valid", "language": "typescript" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Correctly identifies data clumps smell and suggests parameter object",
+      "prompt": "I see lat, lng, and altitude passed together to five different functions. Is this a code smell? What should I do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Data Clumps" },
+        { "type": "contains", "value": "parameter object" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Correctly explains the safety net requirement before refactoring",
+      "prompt": "I want to refactor a large legacy class but there are no tests. What should I do first?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "test" },
+        { "type": "contains", "value": "behavior" },
+        { "type": "not_contains", "value": "start refactoring immediately" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Warns against mixing refactoring with feature work",
+      "prompt": "I want to add a new payment method and also clean up the messy PaymentProcessor class at the same time. Can I do both in one PR?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "separate" },
+        { "type": "not_contains", "value": "yes, do both at once" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not invent refactoring patterns that do not exist",
+      "prompt": "How do I apply the Composite-Strategy-Observer unified refactoring pattern from Fowler's catalog?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "Composite-Strategy-Observer unified refactoring pattern" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References code-smells.md for smell identification",
+      "prompt": "Give me a complete catalog of code smells with their recommended refactoring moves.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "code-smells" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

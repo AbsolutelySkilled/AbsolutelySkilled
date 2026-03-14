@@ -1,0 +1,157 @@
+{
+  "skill": "user-stories",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on user story writing request",
+      "prompt": "Help me write a user story for a password reset feature",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "As a" },
+        { "type": "contains", "value": "I want" },
+        { "type": "contains", "value": "so that" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Improves a weak user story with a vague persona",
+      "prompt": "Is this a good user story? 'As a user, I want to search, so that I can find things.'",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "persona" },
+        { "type": "contains", "value": "specific" },
+        { "type": "not_contains", "value": "looks good" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Writes acceptance criteria in Given/When/Then format",
+      "prompt": "Write acceptance criteria for: As a shopper, I want to apply a promo code at checkout, so that I receive the discount.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Given" },
+        { "type": "contains", "value": "When" },
+        { "type": "contains", "value": "Then" },
+        { "type": "contains", "value": "expired" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Applies INVEST criteria to evaluate a story",
+      "prompt": "Evaluate this story against INVEST: 'As a user, I want the backend to be refactored to use microservices.'",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Valuable" },
+        { "type": "contains", "value": "Testable" },
+        { "type": "contains", "value": "INVEST" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Identifies and fixes a horizontal story slice",
+      "prompt": "What's wrong with this story: 'Build the API endpoints for the shopping cart feature'?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "vertical" },
+        { "type": "contains", "value": "value" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Explains story mapping steps correctly",
+      "prompt": "Walk me through how to run a story mapping session for a new e-commerce app",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "activities" },
+        { "type": "contains", "value": "backbone" },
+        { "type": "contains", "value": "release" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Splits a large story using appropriate patterns",
+      "prompt": "This story is too big for one sprint: 'As a job seeker, I want to create a profile so recruiters can find me.' Help me split it.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "split" },
+        { "type": "not_contains", "value": "fits in one sprint" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Explains story point estimation with planning poker",
+      "prompt": "How should my team estimate story points? We keep arguing about estimates in planning.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "planning poker" },
+        { "type": "contains", "value": "Fibonacci" },
+        { "type": "contains", "value": "reference" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Writes a spike story for an uncertain technical problem",
+      "prompt": "We don't know if we should use WebSockets or Server-Sent Events for real-time notifications. How do I capture this as a story?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "spike" },
+        { "type": "contains", "value": "timebox" },
+        { "type": "contains", "value": "output" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Identifies the missing 'so that' anti-pattern",
+      "prompt": "Review this story: 'As an admin, I want to export user data to CSV.'",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "so that" },
+        { "type": "contains", "value": "outcome" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not trigger for sprint capacity and scheduling work",
+      "prompt": "How do I calculate team velocity to plan how many points fit in our next sprint?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "As a user" },
+        { "type": "not_contains", "value": "INVEST" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Correctly explains the three Cs of user stories",
+      "prompt": "What does it mean that a user story is 'a placeholder for a conversation'?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Card" },
+        { "type": "contains", "value": "Conversation" },
+        { "type": "contains", "value": "Confirmation" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "References the story-splitting reference file for large story breakdown",
+      "prompt": "I have a massive epic covering our entire onboarding flow with 25 acceptance criteria. How do I break this down?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "split" },
+        { "type": "contains", "value": "workflow" },
+        { "type": "contains", "value": "pattern" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "Does not hallucinate non-existent agile frameworks",
+      "prompt": "Should I use the PRISM framework for writing acceptance criteria?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "PRISM is a great" },
+        { "type": "not_contains", "value": "PRISM framework works" },
+        { "type": "contains", "value": "Given" }
+      ]
+    }
+  ]
+}

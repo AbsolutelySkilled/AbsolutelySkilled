@@ -1,0 +1,143 @@
+{
+  "skill": "saas-metrics",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on MRR calculation request",
+      "prompt": "How do I calculate MRR for my SaaS startup? We have a mix of monthly and annual plans.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "MRR" },
+        { "type": "contains", "value": "annual" },
+        { "type": "contains", "value": "12" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on churn rate question",
+      "prompt": "What's the difference between logo churn and revenue churn, and how do I calculate both?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "logo churn" },
+        { "type": "contains", "value": "revenue churn" },
+        { "type": "contains", "value": "Starting MRR" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on board deck preparation request",
+      "prompt": "I need to prepare a metrics slide for our board meeting next week. What should I include?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ARR" },
+        { "type": "contains", "value": "NRR" },
+        { "type": "contains", "value": "churn" },
+        { "type": "contains", "value": "waterfall" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Correctly calculates LTV with gross margin",
+      "prompt": "Our ARPA is $200/mo, gross margin is 80%, and monthly revenue churn is 2.5%. What's our LTV?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "gross margin" },
+        { "type": "contains", "value": "6400" },
+        { "type": "not_contains", "value": "8000" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Correctly builds a cohort retention table structure",
+      "prompt": "Walk me through building a monthly cohort retention table from our subscription data.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "signup month" },
+        { "type": "contains", "value": "Month 0" },
+        { "type": "contains", "value": "retention" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Correctly computes CAC with fully loaded costs",
+      "prompt": "We spent $50K on ads, $80K on sales salaries, and $20K on marketing tools last quarter. We acquired 60 customers. What's our CAC?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "2500" },
+        { "type": "contains", "value": "fully loaded" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Calculates NRR correctly and provides benchmark context",
+      "prompt": "Our starting MRR was $100K. This month we had $5K expansion, $2K contraction, and $3K churned MRR. What's our NRR?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "100%" },
+        { "type": "contains", "value": "expansion" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Warns against using revenue instead of gross margin in LTV",
+      "prompt": "I calculated our LTV as ARPA divided by churn rate. Is that correct?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "gross margin" },
+        { "type": "contains", "value": "overstate" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Handles edge case of annualizing a single month of churn",
+      "prompt": "We had 5% churn last month. Does that mean our annual churn is 46%?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "trailing" },
+        { "type": "contains", "value": "anomal" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Does not invent non-standard SaaS metrics",
+      "prompt": "How do I calculate the SaaS Velocity Index and the Customer Momentum Score?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "SaaS Velocity Index =" },
+        { "type": "not_contains", "value": "Customer Momentum Score =" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not hallucinate specific benchmark numbers with false precision",
+      "prompt": "What's the exact median churn rate for Series B SaaS companies in 2025?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "exactly" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Correctly explains Quick Ratio with thresholds",
+      "prompt": "What is the SaaS Quick Ratio and what's considered a healthy value?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "New MRR" },
+        { "type": "contains", "value": "Expansion" },
+        { "type": "contains", "value": "Churned" },
+        { "type": "contains", "value": "4" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "References board-reporting.md for detailed deck template",
+      "prompt": "Give me a complete board deck template with all the chart specifications for each slide.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "board" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "skill": "content-marketing",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on content strategy request",
+      "prompt": "Help me build a content strategy for our B2B SaaS product targeting engineering managers",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "audience" },
+        { "type": "contains", "value": "pillar" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on content calendar request",
+      "prompt": "Create a content calendar template for a startup publishing 2 blog posts per week",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "keyword" },
+        { "type": "contains", "value": "publish date" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on SEO blog post request",
+      "prompt": "Write an SEO-optimized blog post outline for the keyword 'api rate limiting best practices'",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "keyword" },
+        { "type": "contains", "value": "introduction" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can explain the pillar-cluster model",
+      "prompt": "What is the pillar-cluster content model and how do I implement it for a DevOps blog?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pillar" },
+        { "type": "contains", "value": "cluster" },
+        { "type": "contains", "value": "internal link" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can produce a repurposing playbook",
+      "prompt": "I published a 2,000-word blog post about CI/CD pipelines. What other content can I create from it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "thread" },
+        { "type": "contains", "value": "video" },
+        { "type": "contains", "value": "newsletter" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can define content funnel stages",
+      "prompt": "Explain TOFU, MOFU, and BOFU and give me a content example for each stage for a project management SaaS",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "TOFU" },
+        { "type": "contains", "value": "MOFU" },
+        { "type": "contains", "value": "BOFU" },
+        { "type": "contains", "value": "awareness" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can set up an editorial workflow",
+      "prompt": "Design an editorial workflow for a 3-person content team publishing 8 posts per month",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "brief" },
+        { "type": "contains", "value": "review" },
+        { "type": "contains", "value": "publish" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can recommend content KPIs",
+      "prompt": "What metrics should I track to prove the ROI of our content marketing program to the CEO?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pipeline" },
+        { "type": "contains", "value": "organic" },
+        { "type": "contains", "value": "attribution" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Warns against vanity metrics",
+      "prompt": "Our blog gets 100,000 pageviews a month but generates no leads. What are we doing wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "CTA" },
+        { "type": "not_contains", "value": "pageviews are enough" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Recommends long-tail keywords for new sites",
+      "prompt": "We just launched a new blog. Should we target high-volume keywords like 'project management'?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "long-tail" },
+        { "type": "contains", "value": "competition" },
+        { "type": "not_contains", "value": "yes, target high-volume keywords immediately" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not trigger for paid advertising copy",
+      "prompt": "Write Google Ads copy for our landing page targeting 'CRM software' with a $50 CPC bid",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "topic cluster" },
+        { "type": "not_contains", "value": "pillar page" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Can explain consistency over virality principle",
+      "prompt": "Should we focus on creating one viral piece of content per month or publishing consistently every week?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "consistent" },
+        { "type": "contains", "value": "compound" }
+      ]
+    }
+  ]
+}

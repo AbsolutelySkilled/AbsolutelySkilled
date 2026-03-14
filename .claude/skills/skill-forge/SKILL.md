@@ -367,3 +367,4 @@ you need it for the current phase.
 - `references/evals-schema.md` - JSON schema, assertion types, worked example (read during Phase 4)
 - `references/sources-schema.md` - YAML schema for sources.yaml (read during Phase 5)
 - `references/worked-example.md` - Resend end-to-end worked example (read for first-time orientation)
+- `references/skill-registry.md` - Full catalog of existing and planned skills by category (read when choosing what to build next or checking for duplicates)

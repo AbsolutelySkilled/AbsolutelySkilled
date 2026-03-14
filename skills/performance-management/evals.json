@@ -1,0 +1,137 @@
+{
+  "skill": "performance-management",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on OKR system design request",
+      "prompt": "Help me design an OKR system for my 20-person engineering department",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Objective" },
+        { "type": "contains", "value": "Key Result" },
+        { "type": "contains", "value": "quarterly" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on performance review writing request",
+      "prompt": "I need to write a performance review for an engineer who shipped a major feature but struggled with communication",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "specific" },
+        { "type": "contains", "value": "example" },
+        { "type": "contains", "value": "development" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on calibration session facilitation request",
+      "prompt": "I'm facilitating a calibration session next week for 8 managers. How should I structure it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "distribution" },
+        { "type": "contains", "value": "evidence" },
+        { "type": "contains", "value": "facilitator" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Triggers on career ladder creation request",
+      "prompt": "We don't have a career ladder for our engineering team. Can you help me build one?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "level" },
+        { "type": "contains", "value": "scope" },
+        { "type": "contains", "value": "impact" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Triggers on PIP design request",
+      "prompt": "I need to put an underperforming engineer on a PIP. What should it include?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "milestone" },
+        { "type": "contains", "value": "measurable" },
+        { "type": "contains", "value": "coaching" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can write a well-structured OKR for an engineering team",
+      "prompt": "Write a Q3 OKR for an engineering team focused on improving API reliability",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Objective" },
+        { "type": "contains", "value": "Key Result" },
+        { "type": "not_contains", "value": "Launch" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Correctly flags OKR anti-pattern of task-as-KR",
+      "prompt": "Is this a good Key Result: 'Ship the new onboarding flow by end of Q2'?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "task" },
+        { "type": "contains", "value": "measurable" },
+        { "type": "not_contains", "value": "yes, that is a good Key Result" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Correctly explains why OKRs should not be tied to bonuses",
+      "prompt": "Should we tie OKR scores directly to our annual bonus payout?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "sandbagging" },
+        { "type": "contains", "value": "decouple" },
+        { "type": "not_contains", "value": "yes, tying OKRs to bonuses is best practice" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Recommends SBI model for delivering feedback",
+      "prompt": "How should I give a direct report feedback that they are dismissive in meetings?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Situation" },
+        { "type": "contains", "value": "Behavior" },
+        { "type": "contains", "value": "Impact" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Warns against issuing a PIP without prior coaching",
+      "prompt": "An engineer has been underperforming for 3 weeks. Should I put them on a PIP now?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "coaching" },
+        { "type": "contains", "value": "feedback" },
+        { "type": "not_contains", "value": "yes, issue the PIP immediately" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Identifies forced ranking as an anti-pattern",
+      "prompt": "Our CEO wants to implement rank-and-yank - fire the bottom 10% every year. Is this a good practice?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "collaboration" },
+        { "type": "contains", "value": "attrition" },
+        { "type": "not_contains", "value": "yes, rank-and-yank improves performance" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for unrelated recruiting task",
+      "prompt": "Help me design a technical interview loop for senior engineers with a take-home assignment",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "calibration session" },
+        { "type": "not_contains", "value": "performance review rating" }
+      ]
+    }
+  ]
+}

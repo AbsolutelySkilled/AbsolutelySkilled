@@ -1,0 +1,166 @@
+{
+  "skill": "cli-design",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on CLI argument parsing question",
+      "prompt": "How should I parse command-line arguments in my Node.js CLI tool?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "commander" },
+        { "type": "contains", "value": "option" },
+        { "type": "contains", "value": "--help" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on CLI distribution question",
+      "prompt": "How do I distribute my CLI tool so users can install it globally with npm?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "bin" },
+        { "type": "contains", "value": "package.json" },
+        { "type": "contains", "value": "#!/usr/bin/env node" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on interactive prompt question",
+      "prompt": "I want to add an interactive setup wizard to my CLI. What library should I use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "inquirer" },
+        { "type": "contains", "value": "prompt" },
+        { "type": "contains", "value": "TTY" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can write a Commander.js CLI with subcommands and options",
+      "prompt": "Write a Node.js CLI using Commander.js with a 'build' subcommand that accepts --output and --watch flags.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "commander" },
+        { "type": "contains", "value": ".command(" },
+        { "type": "contains", "value": "--output" },
+        { "type": "contains", "value": "--watch" },
+        { "type": "contains", "value": ".action(" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can write a Python CLI with click decorators",
+      "prompt": "Write a Python CLI using click with a 'deploy' command that takes an environment argument and a --dry-run flag.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "import click" },
+        { "type": "contains", "value": "@click" },
+        { "type": "contains", "value": "is_flag=True" },
+        { "type": "contains", "value": "def deploy" },
+        { "type": "code_valid", "language": "python" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can implement config file loading with proper merge hierarchy",
+      "prompt": "Write a config loader for my Node.js CLI that reads from a dotfile, environment variables, and CLI flags with proper precedence.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "cosmiconfig" },
+        { "type": "contains", "value": "process.env" },
+        { "type": "contains", "value": "searchPlaces" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can handle stdin piping correctly",
+      "prompt": "Write a Node.js function that reads from a file argument or falls back to stdin when piped.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "stdin" },
+        { "type": "contains", "value": "isTTY" },
+        { "type": "contains", "value": "createReadStream" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can produce correct exit codes for error scenarios",
+      "prompt": "What exit code should my CLI return when the user passes an invalid flag?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "2" },
+        { "type": "contains", "value": "misuse" },
+        { "type": "not_contains", "value": "exit code 1" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns against printing errors to stdout",
+      "prompt": "In my CLI I use console.log to print error messages. Is that okay?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "stderr" },
+        { "type": "contains", "value": "console.error" },
+        { "type": "contains", "value": "pipe" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns against requiring interactivity without fallback",
+      "prompt": "My CLI always asks for confirmation before deploying. Is there anything wrong with that?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "--yes" },
+        { "type": "contains", "value": "CI" },
+        { "type": "contains", "value": "TTY" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: recommends kebab-case flags over camelCase",
+      "prompt": "Should I name my CLI flag --dryRun or --dry-run?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "kebab-case" },
+        { "type": "contains", "value": "--dry-run" },
+        { "type": "not_contains", "value": "either is fine" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not invent non-standard flag conventions",
+      "prompt": "Should I use /verbose or +v as a flag in my CLI tool?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "--verbose" },
+        { "type": "contains", "value": "POSIX" },
+        { "type": "not_contains", "value": "that works" },
+        { "type": "not_contains", "value": "acceptable" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Anti-hallucination: does not recommend argparse for complex Node.js CLIs",
+      "prompt": "What is the best argument parser for building a complex Node.js CLI with subcommands?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "commander" },
+        { "type": "not_contains", "value": "argparse" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "References load: skill references argument-parsing-patterns file",
+      "prompt": "Where can I find detailed patterns for mutually exclusive flags and variadic arguments across multiple languages?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "argument-parsing-patterns" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

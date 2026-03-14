@@ -1,0 +1,148 @@
+{
+  "skill": "figma-to-code",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Translates Figma horizontal auto layout to CSS flexbox",
+      "prompt": "I have a Figma frame with auto layout: Horizontal direction, 16px gap, 12px 24px padding, align items center. What CSS should I write?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "flex-direction: row" },
+        { "type": "contains", "value": "gap: 16px" },
+        { "type": "contains", "value": "align-items: center" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-002",
+      "description": "Maps Figma Fill Container width to CSS flex or 100% width",
+      "prompt": "In Figma, a child element inside auto layout has its width set to 'Fill container'. What CSS should I apply?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "flex: 1" },
+        { "type": "contains", "value": "width: 100%" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-003",
+      "description": "Maps Figma Hug contents to CSS fit-content",
+      "prompt": "A Figma element has 'Hug contents' for its width. What does that mean in CSS?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "fit-content" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-004",
+      "description": "Converts Figma component variants to React component props",
+      "prompt": "I have a Figma Button component with variant properties: Size (sm, md, lg), Type (primary, secondary, ghost), State (default, disabled). How do I implement this in React?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "size" },
+        { "type": "contains", "value": "variant" },
+        { "type": "contains", "value": "disabled" },
+        { "type": "contains", "value": "interface" },
+        { "type": "code_valid", "language": "tsx" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-005",
+      "description": "Correctly converts Figma line-height from px to unitless",
+      "prompt": "Figma shows font-size: 16px and line-height: 24px. How do I write this in CSS?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "1.5" },
+        { "type": "not_contains", "value": "line-height: 24px" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-006",
+      "description": "Handles Figma Left+Right constraints as stretching element",
+      "prompt": "A Figma element has constraints: Left and Right (both set). What responsive CSS does this imply?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "width: 100%" },
+        { "type": "contains", "value": "left" },
+        { "type": "contains", "value": "right" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-007",
+      "description": "Extracts and implements design tokens as CSS custom properties",
+      "prompt": "I need to implement Figma's color variables as CSS. The collection has primitive colors (blue-500: #3b82f6) and semantic aliases (action-primary -> blue-500). How do I structure this?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "--" },
+        { "type": "contains", "value": "var(" },
+        { "type": "contains", "value": ":root" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-008",
+      "description": "Advises inspecting Figma panel over eyeballing values",
+      "prompt": "Should I eyeball spacing values from the Figma design screenshot or use the inspect panel?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "inspect" },
+        { "type": "not_contains", "value": "eyeball" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-009",
+      "description": "Maps Figma vertical auto layout to CSS flex-direction column",
+      "prompt": "Figma auto layout is set to Vertical direction with 8px gap and 24px padding. What CSS do I write?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "flex-direction: column" },
+        { "type": "contains", "value": "gap: 8px" },
+        { "type": "contains", "value": "padding: 24px" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-010",
+      "description": "Warns against off-scale spacing values",
+      "prompt": "The Figma design shows 13px padding between elements. Should I just hard-code that value?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "design" },
+        { "type": "contains", "value": "scale" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-011",
+      "description": "Correctly converts Figma letter-spacing percent to em",
+      "prompt": "Figma shows letter-spacing: 2% on a text label. How do I write this in CSS?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "0.02em" },
+        { "type": "contains", "value": "letter-spacing" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-012",
+      "description": "References figma-css-mapping.md for detailed property reference",
+      "prompt": "I need a full reference of how Figma blend modes, effects, and shadows map to CSS. Where should I look?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/figma-css-mapping.md" }
+      ],
+      "source": "domain-knowledge"
+    }
+  ]
+}

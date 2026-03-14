@@ -1,0 +1,154 @@
+{
+  "skill": "no-code-automation",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill activates when user asks about connecting two SaaS tools",
+      "prompt": "I want to automatically create a HubSpot contact whenever someone fills out my Typeform. What's the best way?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Zapier" },
+        { "type": "contains", "value": "trigger" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill activates when user asks about workflow automation platforms",
+      "prompt": "Should I use Zapier or Make for my automation? I need to route leads to different Slack channels based on their country.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Make" },
+        { "type": "contains", "value": "router" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill activates for n8n-specific questions",
+      "prompt": "How do I set up an n8n workflow that triggers on a webhook and transforms the data before sending it to a database?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "n8n" },
+        { "type": "contains", "value": "webhook" },
+        { "type": "contains", "value": "node" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent can recommend correct platform for a simple linear automation",
+      "prompt": "I need a simple automation: when a new row is added to Google Sheets, send a Slack message. Which tool should I use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Zapier" },
+        { "type": "contains", "value": "trigger" },
+        { "type": "contains", "value": "action" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent can recommend Make for complex branching scenarios",
+      "prompt": "I need to process incoming orders, split them by region, apply different tax calculations, and send to different fulfillment services. Which no-code tool handles this best?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Make" },
+        { "type": "contains", "value": "router" },
+        { "type": "contains", "value": "branch" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent correctly describes n8n webhook setup with expressions",
+      "prompt": "Show me how to set up an n8n webhook trigger that routes data based on a JSON field",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "webhook" },
+        { "type": "contains", "value": "$json" },
+        { "type": "contains", "value": "n8n" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent provides correct error handling guidance for automations",
+      "prompt": "My Zapier Zap keeps failing silently. How do I add error handling and monitoring?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Task History" },
+        { "type": "contains", "value": "error" },
+        { "type": "contains", "value": "retry" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent handles webhook reliability edge cases correctly",
+      "prompt": "How do I handle duplicate webhook deliveries in my Make automation?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "idempoten" },
+        { "type": "contains", "value": "deduplic" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent warns about rate limits in automation context",
+      "prompt": "I want to use Zapier to process 10,000 rows from a spreadsheet and create contacts in HubSpot for each one",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "rate limit" },
+        { "type": "contains", "value": "batch" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent recommends self-hosted n8n when data privacy is a concern",
+      "prompt": "We handle sensitive patient data and need workflow automation but can't send data to third-party cloud services. What should we use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "n8n" },
+        { "type": "contains", "value": "self-host" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent does not hallucinate a Zapier code step supporting Python",
+      "prompt": "Can I write a Python code step in Zapier to transform my data?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "JavaScript" },
+        { "type": "not_contains", "value": "Zapier supports Python" },
+        { "type": "not_contains", "value": "Python code step in Zapier" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not invent a non-existent Make feature",
+      "prompt": "Does Make have a built-in AI module that can automatically generate scenarios from natural language descriptions?",
+      "type": "factual",
+      "assertions": [
+        { "type": "not_contains", "value": "Make has a built-in AI scenario generator" },
+        { "type": "not_contains", "value": "generate scenarios from natural language" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent correctly references platform-specific reference file",
+      "prompt": "I need detailed guidance on using Make routers, iterators, and aggregators for a complex data pipeline",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/make-patterns.md" },
+        { "type": "contains", "value": "router" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "Agent provides internal tooling automation pattern",
+      "prompt": "I want to build an approval workflow where my team submits requests via a form, a manager approves in Slack, and the result updates a spreadsheet",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Slack" },
+        { "type": "contains", "value": "webhook" },
+        { "type": "contains", "value": "approval" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "skill": "link-building",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on digital PR outreach request",
+      "prompt": "I want to earn editorial backlinks through digital PR. How do I start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "linkable asset" },
+        { "type": "contains", "value": "journalist" },
+        { "type": "contains", "value": "outreach" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on HARO pitching request",
+      "prompt": "How do I pitch HARO or Connectively queries to earn backlinks?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pitch" },
+        { "type": "contains", "value": "response time" },
+        { "type": "contains", "value": "credentials" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Can explain broken link building process end-to-end",
+      "prompt": "Walk me through the broken link building process step by step",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "404" },
+        { "type": "contains", "value": "outreach" },
+        { "type": "contains", "value": "replacement" },
+        { "type": "contains", "value": "Ahrefs" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can write a broken link outreach email",
+      "prompt": "Write an outreach email for broken link building to a resource page owner",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "broken" },
+        { "type": "not_contains", "value": "please give me a link" },
+        { "type": "contains", "value": "404" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can explain anchor text distribution best practices",
+      "prompt": "What should a healthy anchor text profile look like for a site with 500 backlinks?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "branded" },
+        { "type": "contains", "value": "exact match" },
+        { "type": "contains", "value": "natural" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can explain how to audit a backlink profile for toxic links",
+      "prompt": "How do I identify toxic links in my backlink profile?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "spam" },
+        { "type": "contains", "value": "Spam Score" },
+        { "type": "contains", "value": "manual" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can produce a valid disavow file format",
+      "prompt": "Show me how to create a Google disavow file for a list of toxic domains",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "domain:" },
+        { "type": "contains", "value": ".txt" },
+        { "type": "contains", "value": "Search Console" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha - warns against over-disavowing legitimate links",
+      "prompt": "Should I disavow all low domain authority links pointing to my site?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "editorial" },
+        { "type": "not_contains", "value": "yes, disavow all low DR" },
+        { "type": "contains", "value": "legitimate" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha - warns against paid links without nofollow",
+      "prompt": "I can pay a site $200 to get a dofollow link on their homepage. Is this a good strategy?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "manual action" },
+        { "type": "contains", "value": "sponsored" },
+        { "type": "not_contains", "value": "yes, that is fine" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Anti-hallucination - does not invent link building metrics or tools",
+      "prompt": "What is the Google Link Score metric and how does it affect my site's PageRank?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "Google Link Score" },
+        { "type": "contains", "value": "not a Google metric" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "References link-audit.md for full audit process",
+      "prompt": "Give me a comprehensive guide to auditing my backlink profile for a recovery from a possible Google penalty",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "link-audit" },
+        { "type": "contains", "value": "disavow" },
+        { "type": "contains", "value": "toxic" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "skill": "clean-architecture",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on project structure question",
+      "prompt": "How should I structure my new Node.js application following Clean Architecture?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "entities" },
+        { "type": "contains", "value": "use cases" },
+        { "type": "contains", "value": "adapters" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on dependency direction question",
+      "prompt": "My use case is importing the Express Request type. Is this a problem?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Dependency Rule" },
+        { "type": "contains", "value": "inward" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on business logic isolation question",
+      "prompt": "How do I separate my business logic from the database in a clean way?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "interface" },
+        { "type": "contains", "value": "gateway" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can define a use case with proper ports",
+      "prompt": "Write a use case for user registration following Clean Architecture",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "interface" },
+        { "type": "contains", "value": "execute" },
+        { "type": "contains", "value": "Gateway" },
+        { "type": "not_contains", "value": "import express" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can cross a boundary with dependency inversion",
+      "prompt": "My use case needs to save to a database. Show me how to do this without the use case knowing about PostgreSQL.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "interface" },
+        { "type": "contains", "value": "implements" },
+        { "type": "contains", "value": "constructor" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can structure a project with domain-screaming folders",
+      "prompt": "Reorganize my project that has controllers/, models/, services/ folders to follow Clean Architecture",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "entities" },
+        { "type": "contains", "value": "usecases" },
+        { "type": "not_contains", "value": "models/" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can design a controller as an interface adapter",
+      "prompt": "Write an Express controller for creating orders that follows Clean Architecture",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Controller" },
+        { "type": "contains", "value": "execute" },
+        { "type": "not_contains", "value": "business logic" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Warns against over-engineering small apps",
+      "prompt": "I'm building a simple TODO app with 3 endpoints. Should I use full Clean Architecture with all 4 layers?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "over-engineering" },
+        { "type": "contains", "value": "complexity" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Identifies framework coupling as a violation",
+      "prompt": "Is it okay to use @Entity decorators from TypeORM directly on my domain entities?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Dependency Rule" },
+        { "type": "contains", "value": "separate" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Does not invent non-existent Clean Architecture concepts",
+      "prompt": "What does Clean Architecture say about the Service Mesh Integration Layer?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "Service Mesh Integration Layer is" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not confuse Clean Architecture with microservices",
+      "prompt": "Does Clean Architecture require microservices?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "monolith" },
+        { "type": "not_contains", "value": "Clean Architecture requires microservices" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Can explain component principles when asked",
+      "prompt": "Explain the Acyclic Dependencies Principle and how to break dependency cycles between packages",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cycle" },
+        { "type": "contains", "value": "Dependency Inversion" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Does not trigger for CI/CD pipeline questions",
+      "prompt": "How should I set up my GitHub Actions CI/CD pipeline for deploying to AWS?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "Dependency Rule" },
+        { "type": "not_contains", "value": "Clean Architecture" }
+      ]
+    }
+  ]
+}

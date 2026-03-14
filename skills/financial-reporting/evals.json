@@ -1,0 +1,133 @@
+{
+  "skill": "financial-reporting",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on P&L preparation request",
+      "prompt": "Help me prepare a P&L statement for Q3. I have actuals from the GL and want to compare them against budget.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "revenue" },
+        { "type": "contains", "value": "variance" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on balance sheet request",
+      "prompt": "I need to build a balance sheet for our board pack. What's the correct structure and what do I need to verify?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "assets" },
+        { "type": "contains", "value": "liabilities" },
+        { "type": "contains", "value": "equity" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on board deck request",
+      "prompt": "We have a board meeting in two weeks. What should our board deck include and how should we structure it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "executive summary" },
+        { "type": "contains", "value": "metrics" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: correctly explains cash flow indirect method",
+      "prompt": "We had $500K net income but only $120K cash from operations. Why would that happen? Walk me through the indirect method cash flow.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "working capital" },
+        { "type": "contains", "value": "depreciation" },
+        { "type": "contains", "value": "accounts receivable" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: explains how the three statements connect",
+      "prompt": "How do the income statement, balance sheet, and cash flow statement connect to each other?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "net income" },
+        { "type": "contains", "value": "retained earnings" },
+        { "type": "contains", "value": "cash" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: KPI dashboard for investors vs operators",
+      "prompt": "What KPIs should I put on a dashboard for our Series B investors versus the one I show my head of sales?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ARR" },
+        { "type": "contains", "value": "burn" },
+        { "type": "contains", "value": "churn" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: writes management commentary with drivers",
+      "prompt": "Revenue came in at $3.8M vs $4.2M budget. Help me write the management commentary for this miss.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "driver" },
+        { "type": "contains", "value": "budget" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: explains GAAP vs non-GAAP reconciliation",
+      "prompt": "Our EBITDA is positive but GAAP net income is negative. An investor asked for a reconciliation. How do I produce one?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "reconciliation" },
+        { "type": "contains", "value": "GAAP" },
+        { "type": "contains", "value": "depreciation" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Core task: investor update structure",
+      "prompt": "I need to send our monthly investor update. What should I include and how long should it be?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "highlights" },
+        { "type": "contains", "value": "lowlights" },
+        { "type": "contains", "value": "runway" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Anti-pattern detection: EBITDA confusion with cash flow",
+      "prompt": "Our EBITDA is $2M so we must have $2M of cash generation this quarter, right?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "working capital" },
+        { "type": "not_contains", "value": "yes, EBITDA equals cash" },
+        { "type": "contains", "value": "free cash flow" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-pattern detection: silent metric definition change",
+      "prompt": "We changed how we calculate gross margin to exclude some customer success costs. Do we need to disclose this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "disclose" },
+        { "type": "contains", "value": "restate" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for tax or audit topics",
+      "prompt": "How do I minimize our corporate tax liability through R&D credits and loss carryforwards?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "P&L statement" },
+        { "type": "not_contains", "value": "board deck" }
+      ]
+    }
+  ]
+}

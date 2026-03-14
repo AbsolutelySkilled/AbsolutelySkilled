@@ -1,0 +1,141 @@
+{
+  "skill": "ci-cd-pipelines",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on GitHub Actions setup question",
+      "prompt": "I want to add a GitHub Actions workflow that runs my tests on every pull request and blocks merging if they fail. Where do I start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pull_request" },
+        { "type": "contains", "value": "status check" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on deployment strategy question",
+      "prompt": "We're about to deploy a new version of our API to production. We can't afford downtime and we want to be able to roll back in seconds if something goes wrong. What deployment strategy should we use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "blue-green" },
+        { "type": "contains", "value": "rollback" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Core task: write a Node.js CI workflow with caching",
+      "prompt": "Write a GitHub Actions workflow for a Node.js app that runs lint, tests, and builds. Make sure dependencies are cached so the pipeline is fast.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "actions/cache" },
+        { "type": "contains", "value": "npm ci" },
+        { "type": "contains", "value": "hashFiles" },
+        { "type": "contains", "value": "package-lock.json" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: set up staging and production environments with approval gate",
+      "prompt": "I want my GitHub Actions deploy workflow to automatically deploy to staging on every merge to main, but require a manual approval before deploying to production. How do I set this up?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "environment" },
+        { "type": "contains", "value": "approval" },
+        { "type": "contains", "value": "needs" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: implement blue-green deployment in a workflow",
+      "prompt": "Show me a GitHub Actions job that implements a blue-green deployment. It should deploy to the inactive slot, run smoke tests, then switch traffic, and roll back automatically if anything fails.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "blue" },
+        { "type": "contains", "value": "green" },
+        { "type": "contains", "value": "if: failure()" },
+        { "type": "contains", "value": "smoke" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: set up a matrix build for multiple Node versions",
+      "prompt": "My npm library needs to support Node 18, 20, and 22. How do I write a GitHub Actions workflow that tests against all three versions in parallel?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "matrix" },
+        { "type": "contains", "value": "node-version" },
+        { "type": "contains", "value": "18" },
+        { "type": "contains", "value": "fail-fast" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: canary release with automatic rollback",
+      "prompt": "We want to roll out our new service version to 10% of traffic first, monitor error rates for a few minutes, and only promote to 100% if things look good. How do we wire this into GitHub Actions?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "canary" },
+        { "type": "contains", "value": "error rate" },
+        { "type": "contains", "value": "rollback" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: warns about rebuilding from source at deploy time",
+      "prompt": "Our current pipeline builds the Docker image in the CI job and then rebuilds it again in the deploy job to make sure we're using the right code. Is that the right approach?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "immutable" },
+        { "type": "contains", "value": "build once" },
+        { "type": "not_contains", "value": "rebuilding is fine" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about slow pipelines causing batching behavior",
+      "prompt": "Our CI pipeline takes 35 minutes to run. Developers have started waiting until end of day to push all their commits at once so they don't have to sit through multiple runs. How do we fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "parallel" },
+        { "type": "contains", "value": "cache" },
+        { "type": "contains", "value": "10 min" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about secrets exposure in fork PRs",
+      "prompt": "Our workflow uses secrets to deploy. A contributor from a fork opened a PR and the workflow failed saying the secret wasn't available. Why does this happen and what's the safe way to handle it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "fork" },
+        { "type": "contains", "value": "pull_request_target" },
+        { "type": "contains", "value": "approval" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not recommend committing secrets to the repository",
+      "prompt": "I need my GitHub Actions workflow to access an API key. Is it okay to just put the key directly in the workflow YAML file since the repo is private?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "GitHub Secrets" },
+        { "type": "not_contains", "value": "it is safe to commit" },
+        { "type": "not_contains", "value": "private repos are secure" },
+        { "type": "not_contains", "value": "hardcode" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load: points to deployment-strategies reference for strategy comparison",
+      "prompt": "I need to choose between blue-green, canary, and rolling deployments for our e-commerce checkout service. We want zero downtime and fast rollback. Can you help me compare them?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "blue-green" },
+        { "type": "contains", "value": "canary" },
+        { "type": "contains", "value": "rolling" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

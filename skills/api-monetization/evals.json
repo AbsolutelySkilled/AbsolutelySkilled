@@ -1,0 +1,166 @@
+{
+  "skill": "api-monetization",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when user asks about API pricing models",
+      "prompt": "How should I design pricing tiers for my REST API?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "free" },
+        { "type": "contains", "value": "rate limit" },
+        { "type": "contains", "value": "usage" }
+      ],
+      "source": "https://docs.stripe.com/billing/subscriptions/usage-based"
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers when user asks about metered billing",
+      "prompt": "I want to charge customers per API call using Stripe. How do I set that up?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "metered" },
+        { "type": "contains", "value": "usage_type" },
+        { "type": "contains", "value": "createUsageRecord" }
+      ],
+      "source": "https://docs.stripe.com/billing/subscriptions/usage-based"
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers on rate limiting questions",
+      "prompt": "What rate limiting strategy should I use for a paid API with multiple tiers?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "token bucket" },
+        { "type": "contains", "value": "429" },
+        { "type": "contains", "value": "X-RateLimit" }
+      ],
+      "source": "https://docs.stripe.com/billing/subscriptions/usage-based"
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent can create a Stripe metered price",
+      "prompt": "Create a Stripe metered price for my API that charges $0.01 per API call billed monthly",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "stripe.prices.create" },
+        { "type": "contains", "value": "usage_type" },
+        { "type": "contains", "value": "metered" },
+        { "type": "contains", "value": "aggregate_usage" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://docs.stripe.com/api/prices/create"
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent can report usage records to Stripe correctly",
+      "prompt": "Write code to report 500 API calls to Stripe for a subscription item",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "createUsageRecord" },
+        { "type": "contains", "value": "increment" },
+        { "type": "contains", "value": "quantity" },
+        { "type": "not_contains", "value": "action: 'set'" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://docs.stripe.com/api/usage-records/create"
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent can implement rate limiting middleware",
+      "prompt": "Write Express middleware for rate limiting with Redis that returns proper headers",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "429" },
+        { "type": "contains", "value": "X-RateLimit-Limit" },
+        { "type": "contains", "value": "Retry-After" },
+        { "type": "contains", "value": "redis" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://docs.stripe.com/billing/subscriptions/usage-based"
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent can set up tiered pricing with graduated tiers in Stripe",
+      "prompt": "Set up graduated tiered pricing in Stripe: first 10k calls free, next 90k at $0.01, rest at $0.005",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "tiers_mode" },
+        { "type": "contains", "value": "graduated" },
+        { "type": "contains", "value": "up_to" },
+        { "type": "contains", "value": "billing_scheme" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://docs.stripe.com/api/prices/create"
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent handles the overage notification pattern",
+      "prompt": "How do I notify customers when they are approaching their API quota limit?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "threshold" },
+        { "type": "contains", "value": "80" },
+        { "type": "contains", "value": "100" }
+      ],
+      "source": "https://docs.stripe.com/billing/subscriptions/usage-based"
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent warns against using action set for usage records",
+      "prompt": "Should I use action set or increment when reporting Stripe usage records?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "increment" },
+        { "type": "contains", "value": "idempotent" },
+        { "type": "contains", "value": "retry" }
+      ],
+      "source": "https://docs.stripe.com/api/usage-records/create"
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent warns about reporting usage too frequently to Stripe",
+      "prompt": "Should I report usage to Stripe on every single API request?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "batch" },
+        { "type": "contains", "value": "hourly" },
+        { "type": "not_contains", "value": "per-request is recommended" }
+      ],
+      "source": "https://docs.stripe.com/billing/subscriptions/usage-based"
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent does not hallucinate a Stripe metering API that does not exist",
+      "prompt": "Use stripe.metering.report() to send usage data",
+      "type": "code",
+      "assertions": [
+        { "type": "not_contains", "value": "stripe.metering.report" },
+        { "type": "contains", "value": "createUsageRecord" }
+      ],
+      "source": "https://docs.stripe.com/api/usage-records/create"
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not invent a stripe.rateLimits API",
+      "prompt": "Use the Stripe rate limits API to set per-customer rate limits",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "stripe.rateLimits" },
+        { "type": "contains", "value": "API gateway" }
+      ],
+      "source": "https://docs.stripe.com/billing/subscriptions/usage-based"
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent correctly references the stripe-metering reference file",
+      "prompt": "I need detailed information about Stripe tiered pricing configuration with graduated tiers and test clocks",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/stripe-metering.md" }
+      ],
+      "source": "https://docs.stripe.com/billing/subscriptions/usage-based"
+    }
+  ]
+}

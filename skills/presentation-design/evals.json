@@ -1,0 +1,74 @@
+[
+  {
+    "id": "trigger-create-presentation",
+    "category": "trigger",
+    "prompt": "Help me create a presentation for our quarterly business review",
+    "expected_behavior": "Skill activates. Agent asks about audience and objective, then applies a storytelling framework (likely SCR) to outline slide titles with assertion headlines."
+  },
+  {
+    "id": "trigger-pitch-deck",
+    "category": "trigger",
+    "prompt": "I need to build a pitch deck for our Series A fundraise",
+    "expected_behavior": "Skill activates. Agent produces a 10-12 slide pitch deck structure following the Problem-Solution-Benefit framework with standard sections: problem, solution, market, traction, team, ask."
+  },
+  {
+    "id": "trigger-data-visualization",
+    "category": "trigger",
+    "prompt": "What's the best chart type to show revenue breakdown by region?",
+    "expected_behavior": "Skill activates. Agent identifies this as a comparison or part-to-whole question and recommends horizontal bar chart (comparison) or stacked bar (part-to-whole), not a pie chart with many segments."
+  },
+  {
+    "id": "core-slide-structure",
+    "category": "core-task",
+    "prompt": "Structure a 15-minute presentation about our migration from monolith to microservices for the engineering all-hands",
+    "expected_behavior": "Agent defines the objective, selects an appropriate framework (likely What-So What-Now What or SCR), writes 8-12 assertion headlines that tell the story sequentially, classifies each slide by type, and validates the title-only narrative."
+  },
+  {
+    "id": "core-assertion-headlines",
+    "category": "core-task",
+    "prompt": "My slide titles are: 'Revenue', 'Customers', 'Market', 'Product Roadmap', 'Team'. Improve them.",
+    "expected_behavior": "Agent transforms each label headline into an assertion headline that states a specific takeaway, e.g., 'Revenue' becomes 'Revenue grew 40% YoY to $8M ARR'. Explains the principle of assertion headlines."
+  },
+  {
+    "id": "core-chart-selection",
+    "category": "core-task",
+    "prompt": "I have data showing how our customer base shifted from SMB to enterprise over 8 quarters. How should I visualize this?",
+    "expected_behavior": "Agent recommends a stacked bar chart (part-to-whole over time) or 100% stacked bar to show the proportion shift. Advises against pie charts. Mentions using consistent color coding and adding annotations at key inflection points."
+  },
+  {
+    "id": "core-read-ahead-deck",
+    "category": "core-task",
+    "prompt": "I need to send a strategy deck to the board before our meeting - they'll read it without me presenting. How should I structure it differently?",
+    "expected_behavior": "Agent explains read-ahead deck rules: full assertion headlines, more text per slide, executive summary on slide 2, page numbers, table of contents for longer decks, strong appendix, and no animations."
+  },
+  {
+    "id": "gotcha-pie-chart",
+    "category": "gotcha",
+    "prompt": "I want to show our revenue split across 8 product lines using a pie chart. Can you help design that slide?",
+    "expected_behavior": "Agent flags that pie charts with 8 segments are unreadable and recommends a horizontal bar chart sorted by value instead. Explains that humans cannot accurately compare arc angles beyond 2-3 segments."
+  },
+  {
+    "id": "gotcha-wall-of-bullets",
+    "category": "gotcha",
+    "prompt": "Here's my slide - it has 12 bullet points covering all our product features. How can I make it look better?",
+    "expected_behavior": "Agent does NOT just suggest formatting changes. Instead, advises splitting into 3-4 slides with one idea per slide, grouping features into categories, using assertion headlines, and replacing bullets with visuals where possible."
+  },
+  {
+    "id": "gotcha-no-cta",
+    "category": "gotcha",
+    "prompt": "My last slide says 'Thank You! Questions?' - is that fine?",
+    "expected_behavior": "Agent recommends replacing with a specific call-to-action slide that states what the audience should do next. The 'Questions?' slide can follow as a discussion prompt, but the CTA should be the real closing slide."
+  },
+  {
+    "id": "anti-hallucination-framework",
+    "category": "anti-hallucination",
+    "prompt": "What is the SCQA framework and how does it differ from SCR?",
+    "expected_behavior": "Agent accurately explains that SCQA (Situation, Complication, Question, Answer) is the full Minto framework where SCR is a simplified variant. Does not invent false details or confuse it with unrelated frameworks."
+  },
+  {
+    "id": "references-storytelling",
+    "category": "references",
+    "prompt": "I'm giving a keynote at a tech conference about how we rebuilt our platform. Which storytelling framework should I use and how should I structure the talk?",
+    "expected_behavior": "Agent recommends the Hero's Journey framework (adapted for presentations) given the keynote/conference context. Provides the 5-act structure: Ordinary World, Challenge, Journey, Transformation, New World. Loads references/storytelling-frameworks.md for detailed guidance."
+  }
+]

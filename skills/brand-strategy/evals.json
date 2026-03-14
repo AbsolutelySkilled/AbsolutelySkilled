@@ -1,0 +1,132 @@
+{
+  "skill": "brand-strategy",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on brand positioning request and produces a structured statement",
+      "prompt": "Write a brand positioning statement for a project management tool aimed at remote engineering teams who hate too many meetings.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "For" },
+        { "type": "contains", "value": "Unlike" },
+        { "type": "contains", "value": "target" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Correctly distinguishes voice (constant) from tone (contextual)",
+      "prompt": "What is the difference between brand voice and brand tone, and why does it matter?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "voice" },
+        { "type": "contains", "value": "tone" },
+        { "type": "contains", "value": "context" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Produces a three-level messaging hierarchy",
+      "prompt": "Build a messaging hierarchy for a cybersecurity startup that monitors cloud infrastructure for unusual behavior.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "primary" },
+        { "type": "contains", "value": "supporting" },
+        { "type": "contains", "value": "proof" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Identifies the customer as hero, brand as guide in brand storytelling",
+      "prompt": "Help me write a brand story for our onboarding tool. Our founders were frustrated PMs before building it.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "customer" },
+        { "type": "not_contains", "value": "brand is the hero" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can select meaningful 2x2 axes for competitive positioning map",
+      "prompt": "I need to map our email marketing platform against Mailchimp, ConvertKit, and Klaviyo. Help me build a competitive positioning map.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "axis" },
+        { "type": "contains", "value": "whitespace" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Correctly applies the brand pyramid concept (functional to emotional)",
+      "prompt": "Explain the brand pyramid and how it should influence how we write our homepage copy.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "functional" },
+        { "type": "contains", "value": "emotional" },
+        { "type": "contains", "value": "benefit" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Advises against positioning to everyone as a red flag",
+      "prompt": "Our target audience is anyone who wants to save time at work. Is that a good positioning?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "specific" },
+        { "type": "not_contains", "value": "that is a great positioning" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Produces four voice dimensions with we-are / we-are-not pairs",
+      "prompt": "Define brand voice guidelines for a fintech app targeting first-time investors aged 25-35.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "personality" },
+        { "type": "contains", "value": "vocabulary" },
+        { "type": "contains", "value": "not" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Can explain brand archetypes and recommend one with rationale",
+      "prompt": "Which brand archetype fits a B2B developer tools company that values radical transparency and open source?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "archetype" },
+        { "type": "contains", "value": "voice" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Advises against changing positioning on every bad quarter",
+      "prompt": "Our conversion rate dropped 15% this quarter. Should we reposition our brand?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "conversion" },
+        { "type": "not_contains", "value": "yes, reposition immediately" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Audit framework covers at least voice, message, and positioning dimensions",
+      "prompt": "We have a website, a weekly email, and a LinkedIn presence. How do I audit whether our brand is consistent across all three?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "voice" },
+        { "type": "contains", "value": "message" },
+        { "type": "contains", "value": "positioning" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for visual identity / logo design requests",
+      "prompt": "Help me choose the right font and color palette for my brand refresh.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "brand positioning statement" },
+        { "type": "not_contains", "value": "messaging hierarchy" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "skill": "technical-seo",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on indexing problem",
+      "prompt": "I published a new product page two weeks ago but it still doesn't show up in Google search. It has good content and internal links pointing to it. What should I investigate?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Search Console" },
+        { "type": "contains", "value": "robots.txt" },
+        { "type": "contains", "value": "canonical" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on rendering strategy question with SEO context",
+      "prompt": "We are rebuilding our e-commerce catalog in Next.js. We have 200,000 product pages. Should we use SSG, SSR, or ISR? SEO is critical for us.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ISR" },
+        { "type": "contains", "value": "crawl" },
+        { "type": "contains", "value": "index" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on robots.txt configuration question",
+      "prompt": "We want to prevent Google from crawling our staging subdirectory /staging/ and all our internal search result pages at /search?q=. How do I configure robots.txt for this?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Disallow" },
+        { "type": "contains", "value": "/staging/" },
+        { "type": "contains", "value": "User-agent" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: generate a valid XML sitemap with sitemap index for a large site",
+      "prompt": "Our site has 80,000 product pages and 5,000 blog posts. Show me how to structure the XML sitemaps correctly, including the sitemap index format.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "sitemapindex" },
+        { "type": "contains", "value": "<sitemap>" },
+        { "type": "contains", "value": "50,000" },
+        { "type": "contains", "value": "lastmod" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: explain how to handle canonical URLs for a site with www/non-www and HTTP/HTTPS variants",
+      "prompt": "Our old site was on http://www.example.com. We migrated to HTTPS and dropped www, so now we are on https://example.com. But we still see the old URLs getting crawled. How do we consolidate signals to the new canonical form?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "301" },
+        { "type": "contains", "value": "canonical" },
+        { "type": "contains", "value": "link equity" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: code implementation for canonical tag setup in Next.js",
+      "prompt": "Show me how to set a self-referencing canonical URL in a Next.js App Router page component. The URL must be absolute and handle dynamic routes.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "canonical" },
+        { "type": "contains", "value": "metadata" },
+        { "type": "contains", "value": "https://" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: explain redirect chain detection and fix",
+      "prompt": "Our SEO audit tool is reporting redirect chains. Some old URLs go through 3 or 4 hops before reaching the final destination. Why is this a problem and how do we fix it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "crawl budget" },
+        { "type": "contains", "value": "link equity" },
+        { "type": "contains", "value": "301" },
+        { "type": "contains", "value": "single hop" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: handle faceted navigation URL explosion",
+      "prompt": "Our fashion e-commerce site has faceted filters: color, size, brand, price range. Each combination creates a new URL like /dresses?color=red&size=M&brand=zara. We have millions of potential URLs. How should we handle this for SEO?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "canonical" },
+        { "type": "contains", "value": "crawl budget" },
+        { "type": "contains", "value": "noindex" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: robots.txt vs noindex confusion",
+      "prompt": "I added all our low-quality pages to robots.txt Disallow so Google won't index them. Is that the right approach?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "noindex" },
+        { "type": "not_contains", "value": "robots.txt is sufficient to prevent indexing" },
+        { "type": "contains", "value": "still be indexed" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: CSR indexing risk",
+      "prompt": "We built our entire blog with React and all the article content is fetched client-side via API after the page loads. Our articles are not showing up well in Google Search. Could the rendering be the cause?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "JavaScript" },
+        { "type": "contains", "value": "second wave" },
+        { "type": "contains", "value": "SSR" },
+        { "type": "not_contains", "value": "client-side rendering is fine for SEO" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: blocking CSS/JS in robots.txt harms rendering",
+      "prompt": "To save crawl budget, we added Disallow: /*.js$ and Disallow: /*.css$ to our robots.txt. Is that a good idea?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "render" },
+        { "type": "not_contains", "value": "good idea" },
+        { "type": "contains", "value": "Allow" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not recommend 302 redirects for permanent SEO migrations",
+      "prompt": "We permanently moved our blog from /news/ to /blog/ six months ago. We set up 302 redirects. Why are our old URLs still competing with the new ones in search?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "301" },
+        { "type": "not_contains", "value": "302 is equivalent to 301" },
+        { "type": "not_contains", "value": "302 redirects pass full link equity" },
+        { "type": "contains", "value": "permanent" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Anti-hallucination: does not recommend meta refresh or JS redirect for SEO purposes",
+      "prompt": "I want to redirect old product URLs to new ones. Can I just use window.location.replace() in JavaScript or a meta refresh tag instead of server-side redirects?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "server" },
+        { "type": "not_contains", "value": "window.location is fine for SEO" },
+        { "type": "not_contains", "value": "meta refresh passes link equity" },
+        { "type": "contains", "value": "301" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "Reference load: points to rendering strategies reference for framework-specific implementation",
+      "prompt": "We are migrating from a CRA (Create React App) single-page app to a server-rendered framework. We need a detailed comparison of how Next.js, Nuxt, and Astro handle rendering for SEO, including the specific APIs to use for each rendering mode.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references" },
+        { "type": "contains", "value": "rendering" },
+        { "type": "contains", "value": "Next.js" }
+      ]
+    }
+  ]
+}

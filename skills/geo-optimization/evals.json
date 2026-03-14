@@ -1,0 +1,146 @@
+[
+  {
+    "id": "eval-trigger-001",
+    "description": "Skill triggers on request to improve AI search visibility",
+    "prompt": "Our content ranks well on Google but never shows up in Perplexity or ChatGPT answers. How do we fix this?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "GEO" },
+      { "type": "contains", "value": "citation" },
+      { "type": "contains", "value": "citab" }
+    ]
+  },
+  {
+    "id": "eval-trigger-002",
+    "description": "Skill triggers on Google AI Overviews optimization request",
+    "prompt": "How do I get my page cited in Google AI Overviews for my target keywords?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "rank" },
+      { "type": "contains", "value": "E-E-A-T" },
+      { "type": "contains", "value": "schema" }
+    ]
+  },
+  {
+    "id": "eval-trigger-003",
+    "description": "Skill triggers on LLMs.txt implementation request",
+    "prompt": "What is llms.txt and should I add one to my documentation site?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "llms.txt" },
+      { "type": "contains", "value": "AI" },
+      { "type": "contains", "value": "crawl" }
+    ]
+  },
+  {
+    "id": "eval-task-001",
+    "description": "Agent explains Princeton GEO research citation strategies correctly",
+    "prompt": "What does the Princeton GEO research say about which content strategies increase AI citation rates?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "statistic" },
+      { "type": "contains", "value": "quot" },
+      { "type": "contains", "value": "30" }
+    ]
+  },
+  {
+    "id": "eval-task-002",
+    "description": "Agent correctly explains the GEO and traditional SEO relationship",
+    "prompt": "Do I need to do traditional SEO if I am focusing on GEO for AI search?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "rank" },
+      { "type": "contains", "value": "prerequisite" },
+      { "type": "not_contains", "value": "replace" }
+    ]
+  },
+  {
+    "id": "eval-task-003",
+    "description": "Agent provides correct llms.txt file structure with required elements",
+    "prompt": "Show me a complete llms.txt file for a developer documentation site that sells an API product.",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "# " },
+      { "type": "contains", "value": "> " },
+      { "type": "contains", "value": "## " },
+      { "type": "contains", "value": "https://" }
+    ]
+  },
+  {
+    "id": "eval-task-004",
+    "description": "Agent explains entity authority and how to build it for GEO",
+    "prompt": "What is entity authority in AI search and how do I build it for my brand?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "Wikipedia" },
+      { "type": "contains", "value": "schema" },
+      { "type": "contains", "value": "sameAs" }
+    ]
+  },
+  {
+    "id": "eval-task-005",
+    "description": "Agent gives actionable content transformation advice using citation-boosting patterns",
+    "prompt": "How do I rewrite my existing blog posts to be more likely cited in AI search results?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "statistic" },
+      { "type": "contains", "value": "specific" },
+      { "type": "contains", "value": "definition" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-001",
+    "description": "Agent warns against blocking AI crawlers and explains the consequence",
+    "prompt": "Should I block GPTBot and PerplexityBot in my robots.txt to protect my content from being scraped?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "block" },
+      { "type": "contains", "value": "visibility" },
+      { "type": "not_contains", "value": "safe to block" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-002",
+    "description": "Agent correctly explains that GEO cannot substitute for traditional ranking",
+    "prompt": "My site has no backlinks and doesn't rank on Google yet. If I add llms.txt and optimize for GEO, will I start appearing in AI Overviews?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "rank" },
+      { "type": "contains", "value": "authority" },
+      { "type": "not_contains", "value": "yes, llms.txt alone" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-003",
+    "description": "Agent warns that GEO best practices are nascent and evolving",
+    "prompt": "What GEO strategies should I commit to for the next 2 years?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "evolv" },
+      { "type": "contains", "value": "nasc" },
+      { "type": "contains", "value": "revisit" }
+    ]
+  },
+  {
+    "id": "eval-anti-hallucination-001",
+    "description": "Agent does not invent a GEO score API or official AI citation tracking API",
+    "prompt": "Is there an official API from Google or Perplexity I can use to check my GEO citation score?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "not_contains", "value": "official API" },
+      { "type": "contains", "value": "manual" },
+      { "type": "contains", "value": "no official" }
+    ]
+  },
+  {
+    "id": "eval-references-001",
+    "description": "Agent loads ai-search-engines.md when asked engine-specific strategy",
+    "prompt": "How does ChatGPT Search decide which pages to cite, and is it different from how Perplexity does it?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "Bing" },
+      { "type": "contains", "value": "PerplexityBot" },
+      { "type": "contains", "value": "ai-search-engines" }
+    ]
+  }
+]

@@ -1,0 +1,149 @@
+{
+  "skill": "incident-management",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when user asks about on-call rotation design",
+      "prompt": "How should I set up an on-call rotation for my team of 6 engineers?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "rotation" },
+        { "type": "contains", "value": "primary" },
+        { "type": "contains", "value": "secondary" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers when user asks about running a post-mortem",
+      "prompt": "We had a production outage last night. How do I run a post-mortem?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "blameless" },
+        { "type": "contains", "value": "action item" },
+        { "type": "contains", "value": "timeline" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers when user asks about war room coordination",
+      "prompt": "We have a SEV1 incident right now. How do I run the war room?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Incident Commander" },
+        { "type": "contains", "value": "status page" },
+        { "type": "contains", "value": "scribe" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent can produce a runbook structure for an alert",
+      "prompt": "Write a runbook for a high CPU alert on our payment service",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "SYMPTOM" },
+        { "type": "contains", "value": "IMPACT" },
+        { "type": "contains", "value": "INVESTIGATION" },
+        { "type": "contains", "value": "MITIGATION" },
+        { "type": "contains", "value": "ESCALATION" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent correctly classifies incident severity levels",
+      "prompt": "Our checkout page is returning 500 errors for about 20% of users. What severity is this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "SEV2" },
+        { "type": "contains", "value": "degraded" },
+        { "type": "not_contains", "value": "SEV4" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent provides correct status page communication guidance",
+      "prompt": "How should I communicate a partial outage to customers on our status page?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "30 min" },
+        { "type": "contains", "value": "plain language" },
+        { "type": "contains", "value": "customer impact" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent can design an escalation policy",
+      "prompt": "Design an escalation policy for our engineering team's incident response",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "primary" },
+        { "type": "contains", "value": "secondary" },
+        { "type": "contains", "value": "manager" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent provides post-mortem action item guidance with correct format",
+      "prompt": "How should I write action items for a post-mortem?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "owner" },
+        { "type": "contains", "value": "due date" },
+        { "type": "contains", "value": "definition of done" },
+        { "type": "not_contains", "value": "Improve monitoring" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent warns against blameful post-mortems",
+      "prompt": "Our developer John caused the outage by deploying bad code. How do I address this in the post-mortem?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "blameless" },
+        { "type": "contains", "value": "system" },
+        { "type": "not_contains", "value": "John should be" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent identifies unsustainable on-call as a problem",
+      "prompt": "Our on-call engineer got paged 15 times last week. Is that normal?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "unsustainable" },
+        { "type": "contains", "value": "5" },
+        { "type": "contains", "value": "burnout" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent does not invent incident management tools or APIs",
+      "prompt": "What is the standard IncidentManager.createWarRoom() API call?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "IncidentManager.createWarRoom()" },
+        { "type": "not_contains", "value": "import IncidentManager" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not confuse incident management with SLO definition",
+      "prompt": "Help me define SLOs for my payment service",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "war room" },
+        { "type": "not_contains", "value": "runbook" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent references the postmortem template file when asked for details",
+      "prompt": "Give me a detailed post-mortem template I can use for our next incident review",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "postmortem-template.md" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

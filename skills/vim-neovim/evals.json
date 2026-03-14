@@ -1,0 +1,155 @@
+[
+  {
+    "id": "eval-trigger-001",
+    "description": "Skill triggers on Neovim init.lua bootstrap request",
+    "prompt": "Bootstrap a new Neovim config with lazy.nvim as the plugin manager",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "lazy.nvim" },
+      { "type": "contains", "value": "vim.fn.stdpath" },
+      { "type": "contains", "value": "require(\"lazy\").setup" },
+      { "type": "code_valid", "language": "lua" }
+    ],
+    "source": "https://lazy.folke.io/installation"
+  },
+  {
+    "id": "eval-trigger-002",
+    "description": "Skill triggers on LSP setup question",
+    "prompt": "How do I set up LSP for TypeScript in Neovim?",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "mason" },
+      { "type": "contains", "value": "nvim-lspconfig" },
+      { "type": "contains", "value": "ts_ls" },
+      { "type": "code_valid", "language": "lua" }
+    ],
+    "source": "https://github.com/neovim/nvim-lspconfig"
+  },
+  {
+    "id": "eval-trigger-003",
+    "description": "Skill triggers on keymap configuration request",
+    "prompt": "Add a keymap in Neovim to open a file finder with space+ff",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "vim.keymap.set" },
+      { "type": "contains", "value": "<leader>ff" },
+      { "type": "code_valid", "language": "lua" }
+    ],
+    "source": "https://neovim.io/doc/user/lua.html"
+  },
+  {
+    "id": "eval-trigger-004",
+    "description": "Skill triggers on treesitter configuration request",
+    "prompt": "Configure nvim-treesitter to highlight Lua, Python, and TypeScript",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "nvim-treesitter" },
+      { "type": "contains", "value": "ensure_installed" },
+      { "type": "contains", "value": "highlight" },
+      { "type": "code_valid", "language": "lua" }
+    ],
+    "source": "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  {
+    "id": "eval-trigger-005",
+    "description": "Skill triggers on telescope setup request",
+    "prompt": "Set up telescope.nvim with fzf native extension and keybindings",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "telescope" },
+      { "type": "contains", "value": "fzf" },
+      { "type": "contains", "value": "load_extension" },
+      { "type": "code_valid", "language": "lua" }
+    ],
+    "source": "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  {
+    "id": "eval-task-001",
+    "description": "Agent writes a correct autocommand with a named augroup",
+    "prompt": "Write a Neovim autocommand that highlights yanked text for 200ms",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "TextYankPost" },
+      { "type": "contains", "value": "vim.highlight.on_yank" },
+      { "type": "contains", "value": "nvim_create_augroup" },
+      { "type": "contains", "value": "clear = true" },
+      { "type": "code_valid", "language": "lua" }
+    ],
+    "source": "https://neovim.io/doc/user/lua.html#vim.highlight.on_yank()"
+  },
+  {
+    "id": "eval-task-002",
+    "description": "Agent writes a lazy-loadable plugin spec correctly",
+    "prompt": "Add nvim-autopairs to my lazy.nvim config so it only loads on InsertEnter",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "event" },
+      { "type": "contains", "value": "InsertEnter" },
+      { "type": "contains", "value": "autopairs" },
+      { "type": "code_valid", "language": "lua" }
+    ],
+    "source": "https://lazy.folke.io/spec"
+  },
+  {
+    "id": "eval-task-003",
+    "description": "Agent creates a minimal Lua plugin module correctly",
+    "prompt": "Write a minimal Neovim plugin in Lua that adds a :SayHello command",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "local M = {}" },
+      { "type": "contains", "value": "M.setup" },
+      { "type": "contains", "value": "nvim_create_user_command" },
+      { "type": "contains", "value": "return M" },
+      { "type": "code_valid", "language": "lua" }
+    ],
+    "source": "https://neovim.io/doc/user/lua.html"
+  },
+  {
+    "id": "eval-task-004",
+    "description": "Agent uses vim.opt instead of vim.cmd for options",
+    "prompt": "Set Neovim options: line numbers, relative numbers, 2-space indent, no swap file",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "vim.opt" },
+      { "type": "not_contains", "value": "vim.cmd(\"set" },
+      { "type": "code_valid", "language": "lua" }
+    ],
+    "source": "https://neovim.io/doc/user/lua.html#vim.opt"
+  },
+  {
+    "id": "eval-gotcha-001",
+    "description": "Agent knows leader must be set before lazy.setup",
+    "prompt": "Set up lazy.nvim and use space as the leader key",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "vim.g.mapleader" },
+      { "type": "code_valid", "language": "lua" }
+    ],
+    "source": "https://lazy.folke.io/installation"
+  },
+  {
+    "id": "eval-gotcha-002",
+    "description": "Agent always uses named augroup with clear=true",
+    "prompt": "Create a Neovim autocommand to remove trailing whitespace on save",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "nvim_create_augroup" },
+      { "type": "contains", "value": "clear = true" },
+      { "type": "not_contains", "value": "nvim_create_autocmd(\"BufWritePre\", {}" },
+      { "type": "code_valid", "language": "lua" }
+    ],
+    "source": "https://neovim.io/doc/user/lua.html#nvim_create_augroup()"
+  },
+  {
+    "id": "eval-anti-hallucination-001",
+    "description": "Agent does not use deprecated nvim_set_keymap instead of vim.keymap.set",
+    "prompt": "Map jk to Escape in insert mode in Neovim using Lua",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "vim.keymap.set" },
+      { "type": "not_contains", "value": "nvim_set_keymap" },
+      { "type": "code_valid", "language": "lua" }
+    ],
+    "source": "https://neovim.io/doc/user/lua.html#vim.keymap.set()"
+  }
+]

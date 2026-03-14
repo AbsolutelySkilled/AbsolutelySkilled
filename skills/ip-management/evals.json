@@ -1,0 +1,138 @@
+{
+  "skill": "ip-management",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on open-source license selection for a new library",
+      "prompt": "I'm publishing a new JavaScript utility library to npm. Which open-source license should I use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "MIT" },
+        { "type": "contains", "value": "Apache" },
+        { "type": "contains", "value": "attribution" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on AGPL compliance question for SaaS",
+      "prompt": "We're building a SaaS product and one of our dependencies uses the AGPL-3.0 license. Is this a problem?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "disclose" },
+        { "type": "contains", "value": "network" },
+        { "type": "contains", "value": "source" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on trade secret protection request",
+      "prompt": "How do I protect our proprietary recommendation algorithm as a trade secret?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "NDA" },
+        { "type": "contains", "value": "access" },
+        { "type": "contains", "value": "confidential" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Triggers on contractor IP agreement question",
+      "prompt": "We're hiring a freelance developer to build a feature. What IP clauses do we need in the contract?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "assignment" },
+        { "type": "contains", "value": "work-for-hire" },
+        { "type": "contains", "value": "prior IP" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Triggers on trademark filing process question",
+      "prompt": "We want to register our startup name as a trademark in the US. What is the process?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "USPTO" },
+        { "type": "contains", "value": "clearance" },
+        { "type": "contains", "value": "class" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Triggers on open-source dependency audit",
+      "prompt": "How do I audit all the open-source licenses in our Node.js monorepo for compliance?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "license-checker" },
+        { "type": "contains", "value": "GPL" },
+        { "type": "contains", "value": "CI" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Correctly explains the difference between patent and trade secret protection",
+      "prompt": "Should we patent our machine learning model or keep it as a trade secret?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "disclose" },
+        { "type": "contains", "value": "reverse engineer" },
+        { "type": "contains", "value": "20 years" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Correctly distinguishes GPL from LGPL for library linking",
+      "prompt": "We want to use a library licensed under LGPL in our proprietary application. Are we allowed to do that?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "linking" },
+        { "type": "contains", "value": "proprietary" },
+        { "type": "not_contains", "value": "you must open-source your entire application" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Correctly explains IP ownership for employee-created code",
+      "prompt": "An employee wrote code for a side project on a weekend using their personal laptop but it is related to our business. Who owns it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "scope" },
+        { "type": "contains", "value": "assignment" },
+        { "type": "contains", "value": "attorney" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Recommends provisional patent application for cost-effective priority date",
+      "prompt": "We have a novel technical invention but cannot afford to file a full patent application right now. What can we do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "provisional" },
+        { "type": "contains", "value": "12 months" },
+        { "type": "contains", "value": "priority date" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not give legal advice as definitive legal conclusions",
+      "prompt": "Is our use of this GPL library definitely legal?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "attorney" },
+        { "type": "not_contains", "value": "definitely legal" },
+        { "type": "not_contains", "value": "guaranteed" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for general software licensing questions unrelated to IP strategy",
+      "prompt": "What is the best pricing model for our SaaS subscription tiers?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "patent" },
+        { "type": "not_contains", "value": "trademark" },
+        { "type": "not_contains", "value": "copyright" }
+      ]
+    }
+  ]
+}

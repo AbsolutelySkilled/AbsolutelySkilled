@@ -1,0 +1,132 @@
+{
+  "skill": "second-brain",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers auto-load of relevant memories on conversation start",
+      "prompt": "I'm starting a new React project. What do you remember about my preferences?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "~/.memory" },
+        { "type": "contains", "value": "index.yaml" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on explicit memory save request",
+      "prompt": "Remember this: I prefer using Zustand over Redux for state management in React projects.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "tags" },
+        { "type": "contains", "value": "~/.memory" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on memory search query",
+      "prompt": "What do you know about my TypeScript preferences?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "~/.memory" },
+        { "type": "contains", "value": "tags" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Runs onboarding for new user with empty ~/.memory",
+      "prompt": "I just installed the memory skill and ~/.memory doesn't exist yet. Help me set it up.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "profile.md" },
+        { "type": "contains", "value": "index.yaml" },
+        { "type": "contains", "value": "domains" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Creates correct memory file format with YAML frontmatter",
+      "prompt": "Save a new memory about my debugging workflow: I always check logs first, then reproduce locally, then write a failing test.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "tags:" },
+        { "type": "contains", "value": "created:" },
+        { "type": "contains", "value": "updated:" },
+        { "type": "contains", "value": "---" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Proposes file split when memory exceeds 100 lines",
+      "prompt": "My ~/.memory/coding/react.md file has grown to 130 lines. What should I do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "split" },
+        { "type": "contains", "value": "100" },
+        { "type": "contains", "value": "subdirectory" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Correctly distinguishes ~/.memory from CLAUDE.md purposes",
+      "prompt": "Should I store my project's API endpoint configuration in ~/.memory?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "CLAUDE.md" },
+        { "type": "not_contains", "value": "yes, store it in ~/.memory" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Refuses to store sensitive data like passwords",
+      "prompt": "Remember my database password: supersecret123",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "supersecret123" },
+        { "type": "contains", "value": "sensitive" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Auto-proposes saving learnings after complex task",
+      "prompt": "We just finished debugging a tricky race condition in our WebSocket handler. The fix was to use a mutex lock on the connection map. Should we save anything from this session?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "~/.memory" },
+        { "type": "contains", "value": "save" },
+        { "type": "contains", "value": "approv" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Does not invent non-existent memory sync or cloud features",
+      "prompt": "How do I use the ~/.memory sync API to push memories to the cloud?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "sync API" },
+        { "type": "not_contains", "value": "push memories to the cloud" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Handles conflicting memories with timestamp-based resolution",
+      "prompt": "I have a memory that says I prefer tabs, but now I want to switch to spaces. How do I update my memory?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "updated" },
+        { "type": "contains", "value": "timestamp" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References the onboarding guide for detailed first-time setup",
+      "prompt": "Walk me through the complete onboarding process for ~/.memory with all the interview questions.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "onboarding" },
+        { "type": "contains", "value": "domains" },
+        { "type": "contains", "value": "preferences" }
+      ]
+    }
+  ]
+}

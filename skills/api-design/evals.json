@@ -1,0 +1,147 @@
+{
+  "skill": "api-design",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on REST endpoint naming question",
+      "prompt": "How should I name my API endpoints for managing blog articles?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "/articles" },
+        { "type": "contains", "value": "GET" },
+        { "type": "contains", "value": "POST" },
+        { "type": "not_contains", "value": "createArticle" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on REST vs GraphQL decision question",
+      "prompt": "Should I use REST or GraphQL for my new public-facing API?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "REST" },
+        { "type": "contains", "value": "GraphQL" },
+        { "type": "contains", "value": "over-fetching" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Can produce correct HTTP status codes for common scenarios",
+      "prompt": "What HTTP status code should I return when a user tries to create a resource that already exists?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "409" },
+        { "type": "contains", "value": "Conflict" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can write a cursor-based pagination implementation",
+      "prompt": "Write a cursor-based pagination function for a Node.js API endpoint that lists users.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "cursor" },
+        { "type": "contains", "value": "hasMore" },
+        { "type": "contains", "value": "nextCursor" },
+        { "type": "contains", "value": "base64" },
+        { "type": "not_contains", "value": "offset" },
+        { "type": "code_valid", "value": "typescript" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can write a valid OpenAPI 3.1 spec snippet",
+      "prompt": "Write an OpenAPI 3.1 spec for a POST /v1/users endpoint that creates a user with name and email fields.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "openapi: 3.1" },
+        { "type": "contains", "value": "requestBody" },
+        { "type": "contains", "value": "required:" },
+        { "type": "contains", "value": "'201'" },
+        { "type": "contains", "value": "application/json" },
+        { "type": "code_valid", "value": "yaml" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can implement RFC 7807 error response format",
+      "prompt": "Show me how to return a structured validation error from an Express.js API endpoint.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "application/problem+json" },
+        { "type": "contains", "value": "title" },
+        { "type": "contains", "value": "status" },
+        { "type": "contains", "value": "422" },
+        { "type": "code_valid", "value": "typescript" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can implement JWT auth middleware",
+      "prompt": "Write a JWT authentication middleware for Express that returns proper error responses.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Authorization" },
+        { "type": "contains", "value": "Bearer" },
+        { "type": "contains", "value": "401" },
+        { "type": "contains", "value": "verify" },
+        { "type": "code_valid", "value": "typescript" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: does not recommend verbs in REST endpoint paths",
+      "prompt": "Is it okay to use POST /v1/deleteUser to delete a user?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "DELETE" },
+        { "type": "not_contains", "value": "that's fine" },
+        { "type": "not_contains", "value": "acceptable" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns against offset pagination for large datasets",
+      "prompt": "I'm implementing pagination using OFFSET and LIMIT in SQL. What should I know?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cursor" },
+        { "type": "contains", "value": "performance" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: recommends versioning from day one, not after breaking changes",
+      "prompt": "My API is live and I need to make a breaking change. I haven't used versioning yet. What do I do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "v1" },
+        { "type": "contains", "value": "version" },
+        { "type": "contains", "value": "breaking" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not invent non-standard HTTP status codes",
+      "prompt": "What is the correct HTTP status code for a request that passes auth but the user's account is suspended?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "403" },
+        { "type": "not_contains", "value": "407" },
+        { "type": "not_contains", "value": "412" },
+        { "type": "not_contains", "value": "450" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load: skill references OpenAPI patterns reference file",
+      "prompt": "Where can I find detailed OpenAPI 3.1 component patterns like discriminators and reusable security schemes?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "openapi-patterns" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

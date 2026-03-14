@@ -1,0 +1,141 @@
+{
+  "skill": "international-seo",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers for a clear hreflang implementation request",
+      "prompt": "I'm building a site for US, UK, and German markets. How do I set up hreflang tags?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "hreflang" },
+        { "type": "contains", "value": "x-default" },
+        { "type": "contains", "value": "en-US" },
+        { "type": "contains", "value": "en-GB" },
+        { "type": "contains", "value": "rel=\"alternate\"" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers for an international URL structure decision",
+      "prompt": "We're expanding our SaaS to Europe. Should we use ccTLD, subdomains, or subdirectories for our international URLs?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ccTLD" },
+        { "type": "contains", "value": "subdomain" },
+        { "type": "contains", "value": "subdirector" },
+        { "type": "contains", "value": "domain authority" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Agent produces valid hreflang HTML for a multi-language page",
+      "prompt": "Write the hreflang link tags for a pricing page that targets US English, British English, German, and French users. The base URL is https://acme.com/pricing/",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "hreflang=\"en-US\"" },
+        { "type": "contains", "value": "hreflang=\"en-GB\"" },
+        { "type": "contains", "value": "hreflang=\"de\"" },
+        { "type": "contains", "value": "hreflang=\"fr\"" },
+        { "type": "contains", "value": "hreflang=\"x-default\"" },
+        { "type": "contains", "value": "rel=\"alternate\"" },
+        { "type": "not_contains", "value": "hreflang=\"en-UK\"" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent produces valid hreflang XML sitemap entries",
+      "prompt": "Show me how to implement hreflang in an XML sitemap for English and German versions of my homepage.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "xmlns:xhtml" },
+        { "type": "contains", "value": "xhtml:link" },
+        { "type": "contains", "value": "rel=\"alternate\"" },
+        { "type": "contains", "value": "hreflang=\"x-default\"" },
+        { "type": "not_contains", "value": "xmlns:xhtml=\"http://www.w3.org/1999/html\"" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent implements hreflang correctly in Next.js App Router",
+      "prompt": "How do I add hreflang tags in a Next.js 13 app router project with English and French locale routes?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "alternates" },
+        { "type": "contains", "value": "languages" },
+        { "type": "contains", "value": "x-default" },
+        { "type": "contains", "value": "generateMetadata" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent explains URL structure trade-offs with correct domain authority guidance",
+      "prompt": "What are the SEO pros and cons of using subdirectories vs subdomains for international versions of my site?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "domain authority" },
+        { "type": "contains", "value": "geo" },
+        { "type": "contains", "value": "Google Search Console" },
+        { "type": "not_contains", "value": "subdomains pass full link equity" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent correctly explains the asymmetric hreflang gotcha",
+      "prompt": "My hreflang tags seem to be ignored by Google. What are the most common reasons hreflang doesn't work?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "return tag" },
+        { "type": "contains", "value": "x-default" },
+        { "type": "contains", "value": "reciprocal" },
+        { "type": "contains", "value": "canonical" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent correctly handles the IP-redirect anti-pattern gotcha",
+      "prompt": "Our site automatically redirects German IP addresses to example.com/de/ - is that good for SEO?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Googlebot" },
+        { "type": "contains", "value": "crawl" },
+        { "type": "not_contains", "value": "IP redirect is fine for SEO" },
+        { "type": "not_contains", "value": "recommended approach" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Anti-hallucination: agent does not invent a hreflang directive type",
+      "prompt": "Can I use hreflang in a meta tag in the HTML body instead of the head?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "meta hreflang" },
+        { "type": "not_contains", "value": "<meta name=\"hreflang\"" },
+        { "type": "contains", "value": "<head>" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Anti-hallucination: agent uses correct ISO code for UK English",
+      "prompt": "What hreflang code should I use for the United Kingdom?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "en-GB" },
+        { "type": "not_contains", "value": "en-UK" },
+        { "type": "not_contains", "value": "en-uk" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "References load: agent correctly points to hreflang reference file for deep implementation",
+      "prompt": "I need a complete guide to implementing hreflang including framework examples and debugging. Where should I look?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "hreflang-implementation.md" },
+        { "type": "contains", "value": "references/" }
+      ]
+    }
+  ]
+}

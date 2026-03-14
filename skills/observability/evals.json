@@ -1,0 +1,143 @@
+{
+  "skill": "observability",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on structured logging question",
+      "prompt": "I'm starting a new Node.js service and want to set up logging properly from day one. What library should I use and what fields should every log line include?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "structured" },
+        { "type": "contains", "value": "correlation" },
+        { "type": "contains", "value": "JSON" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on SLO definition question",
+      "prompt": "My team needs to define SLOs for our payment API before the next quarter planning. We've never done this before. Where do we start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "SLI" },
+        { "type": "contains", "value": "error budget" },
+        { "type": "contains", "value": "availability" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Core task: set up pino structured logging with correlation ID",
+      "prompt": "Set up structured logging in a Node.js Express app using pino. Every log line should automatically include the traceId from the incoming request headers.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "pino" },
+        { "type": "contains", "value": "traceId" },
+        { "type": "contains", "value": "child" },
+        { "type": "contains", "value": "traceparent" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: instrument with OpenTelemetry Node.js SDK",
+      "prompt": "How do I set up OpenTelemetry in a Node.js microservice to export traces to an OTLP collector? I want auto-instrumentation for HTTP and Express, plus a way to add custom spans for my business logic.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "NodeSDK" },
+        { "type": "contains", "value": "OTLPTraceExporter" },
+        { "type": "contains", "value": "startActiveSpan" },
+        { "type": "contains", "value": "instrumentation" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: define SLOs with error budgets",
+      "prompt": "Define SLOs for a checkout API that needs to be highly reliable. Include availability and latency SLOs, and explain how to calculate the error budget and burn rate.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "99.9" },
+        { "type": "contains", "value": "error budget" },
+        { "type": "contains", "value": "burn rate" },
+        { "type": "contains", "value": "window" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: create RED method dashboard layout",
+      "prompt": "I need to create a Grafana dashboard for our order service. What panels should it have and what Prometheus queries back each one?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Rate" },
+        { "type": "contains", "value": "Error" },
+        { "type": "contains", "value": "Duration" },
+        { "type": "contains", "value": "p99" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: write Prometheus alerting rules without alert fatigue",
+      "prompt": "Write Prometheus alerting rules for an API service with a 99.9% availability SLO. I want to page on-call for serious issues but not get woken up for every blip.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "burn" },
+        { "type": "contains", "value": "runbook" },
+        { "type": "contains", "value": "severity" },
+        { "type": "contains", "value": "14.4" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: warns about high-cardinality metric labels",
+      "prompt": "I want to add a label to my Prometheus metrics that includes the user_id so I can see per-user request rates. Is that a good idea?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cardinality" },
+        { "type": "not_contains", "value": "user_id is a good label" },
+        { "type": "contains", "value": "time series" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns against alerting on CPU spikes instead of symptoms",
+      "prompt": "Our monitoring sends a page whenever CPU goes above 80% for more than 2 minutes. Our on-call is getting woken up 3-4 times per week but most of the time there's no user impact. How do we fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "symptom" },
+        { "type": "contains", "value": "SLO" },
+        { "type": "not_contains", "value": "CPU threshold is correct" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about missing context propagation in async flows",
+      "prompt": "We have distributed tracing working for our HTTP services, but when a request goes through an SQS queue, the trace gets broken - the consumer starts a new trace with no parent. How do we fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "propagat" },
+        { "type": "contains", "value": "traceparent" },
+        { "type": "contains", "value": "attributes" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not recommend logging PII or full request bodies",
+      "prompt": "For debugging production issues, should I log the full request body including the user's email, address, and payment details so I have everything I need when something goes wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "log the full request body" },
+        { "type": "not_contains", "value": "logging PII is fine" },
+        { "type": "contains", "value": "PII" },
+        { "type": "contains", "value": "redact" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load: points to opentelemetry-setup reference for SDK wiring",
+      "prompt": "I need to set up OpenTelemetry from scratch for a Python Flask service and a Node.js service, including configuring the OTLP exporter, a batch span processor, and tail-based sampling. Can you walk me through both?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references" },
+        { "type": "contains", "value": "opentelemetry-setup" }
+      ]
+    }
+  ]
+}

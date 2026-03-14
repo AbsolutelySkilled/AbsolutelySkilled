@@ -1,0 +1,152 @@
+{
+  "skill": "real-time-streaming",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when user asks about Kafka topic configuration",
+      "prompt": "How should I configure a Kafka topic for high-throughput order processing?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "partition" },
+        { "type": "contains", "value": "replication" },
+        { "type": "contains", "value": "min.insync.replicas" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers when user asks about Flink windowing",
+      "prompt": "I need to count page views per user in 5-minute windows using Flink",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "TumblingEventTimeWindows" },
+        { "type": "contains", "value": "keyBy" },
+        { "type": "contains", "value": "WatermarkStrategy" },
+        { "type": "code_valid", "language": "java" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers when user asks about CDC setup",
+      "prompt": "Set up change data capture from our PostgreSQL orders table to Kafka",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "debezium" },
+        { "type": "contains", "value": "PostgresConnector" },
+        { "type": "contains", "value": "pgoutput" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent configures an idempotent Kafka producer correctly",
+      "prompt": "Write a Java Kafka producer that guarantees no duplicate messages on retries",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "enable.idempotence" },
+        { "type": "contains", "value": "acks" },
+        { "type": "contains", "value": "all" },
+        { "type": "code_valid", "language": "java" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent implements exactly-once semantics with Kafka transactions",
+      "prompt": "How do I achieve exactly-once processing between a Kafka consumer and producer?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "initTransactions" },
+        { "type": "contains", "value": "beginTransaction" },
+        { "type": "contains", "value": "sendOffsetsToTransaction" },
+        { "type": "contains", "value": "commitTransaction" },
+        { "type": "contains", "value": "read_committed" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent builds a stream-table join in Kafka Streams",
+      "prompt": "Enrich an orders stream with customer data using Kafka Streams KTable join",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "KTable" },
+        { "type": "contains", "value": ".join(" },
+        { "type": "contains", "value": "cleanup.policy=compact" },
+        { "type": "code_valid", "language": "java" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent correctly handles late data in Flink windows",
+      "prompt": "My Flink job drops events that arrive 30 seconds after the window closes. How do I handle late data?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "allowedLateness" },
+        { "type": "contains", "value": "sideOutput" },
+        { "type": "contains", "value": "watermark" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent diagnoses consumer lag and rebalancing issues",
+      "prompt": "Our Kafka consumers keep getting kicked out of the group and rebalancing. Consumer lag is growing. What's wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "max.poll.interval.ms" },
+        { "type": "contains", "value": "max.poll.records" },
+        { "type": "contains", "value": "session.timeout.ms" },
+        { "type": "contains", "value": "CooperativeStickyAssignor" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent warns about CDC replication slot risks",
+      "prompt": "We set up Debezium CDC but our PostgreSQL disk keeps filling up. What could cause this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "replication slot" },
+        { "type": "contains", "value": "WAL" },
+        { "type": "contains", "value": "slot.name" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent recommends schema registry for stream evolution",
+      "prompt": "Our Kafka consumers break every time the producer team changes the message format. How do we fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "schema registry" },
+        { "type": "contains", "value": "Avro" },
+        { "type": "contains", "value": "compatibility" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent does not hallucinate a non-existent Kafka API",
+      "prompt": "Use Kafka's built-in exactly-once consumer API to process messages",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "consumer.enableExactlyOnce()" },
+        { "type": "not_contains", "value": "ConsumerConfig.EXACTLY_ONCE" },
+        { "type": "contains", "value": "transaction" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not invent a Flink auto-scaling API",
+      "prompt": "How do I use Flink's autoscale() method to dynamically adjust parallelism?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": ".autoscale(" },
+        { "type": "contains", "value": "parallelism" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent references the CDC reference file for advanced Debezium config",
+      "prompt": "I need to configure Debezium for MySQL with GTIDs and handle schema changes across multiple databases",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/cdc-debezium.md" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "skill": "cloud-aws",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on compute service selection question",
+      "prompt": "I'm building a new backend service that processes HTTP requests. It's a Node.js app. Should I deploy it on EC2, ECS Fargate, Lambda, or App Runner?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Fargate" },
+        { "type": "contains", "value": "Lambda" },
+        { "type": "contains", "value": "workload" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on cost optimization question",
+      "prompt": "Our AWS bill jumped 40% last month and we're not sure why. Where should we start investigating and what are the quickest wins to reduce costs?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Cost Explorer" },
+        { "type": "contains", "value": "tag" },
+        { "type": "contains", "value": "right-siz" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Core task: designing a VPC with public and private subnets",
+      "prompt": "I need to design a VPC for a web application with a load balancer, application servers, and an RDS database. How should I structure the subnets and what goes where?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "public subnet" },
+        { "type": "contains", "value": "private subnet" },
+        { "type": "contains", "value": "NAT" },
+        { "type": "contains", "value": "availability zone" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: IAM least privilege policy for Lambda",
+      "prompt": "I have a Lambda function that reads objects from one S3 bucket and writes records to a DynamoDB table. What IAM policy should I create for it?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "s3:GetObject" },
+        { "type": "contains", "value": "dynamodb:" },
+        { "type": "not_contains", "value": "\"*\"" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: serverless API architecture",
+      "prompt": "I want to build a REST API for a mobile app using serverless. It needs authentication, handles maybe 500 requests per second at peak, and stores user data. What AWS services should I use and how should they connect?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "API Gateway" },
+        { "type": "contains", "value": "Lambda" },
+        { "type": "contains", "value": "DynamoDB" },
+        { "type": "contains", "value": "Cognito" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: choosing between RDS and DynamoDB",
+      "prompt": "Our app stores user profiles, orders, and product inventory. Traffic is expected to hit 50k reads per second for product lookups but orders and profiles are lower volume. Should we use RDS PostgreSQL or DynamoDB or both?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "DynamoDB" },
+        { "type": "contains", "value": "access pattern" },
+        { "type": "contains", "value": "RDS" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: setting up CloudWatch alarms for a Lambda function",
+      "prompt": "How do I set up monitoring and alerting for my production Lambda functions? I want to know when there are errors or when the function is being throttled.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "CloudWatch" },
+        { "type": "contains", "value": "Errors" },
+        { "type": "contains", "value": "Throttles" },
+        { "type": "contains", "value": "SNS" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: warns about hardcoding credentials",
+      "prompt": "To get my EC2 instance to write to S3, I was planning to set the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY environment variables on the instance. Is this a good approach?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "IAM role" },
+        { "type": "not_contains", "value": "access key is fine" },
+        { "type": "not_contains", "value": "that works" },
+        { "type": "contains", "value": "credentials" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about single-AZ RDS in production",
+      "prompt": "We're launching our production app next week. Our RDS PostgreSQL instance is in a single AZ to save costs. Is there anything to be concerned about?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Multi-AZ" },
+        { "type": "contains", "value": "failover" },
+        { "type": "contains", "value": "downtime" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about overly permissive IAM",
+      "prompt": "To keep things simple, I gave our application's IAM role the AdministratorAccess managed policy. It has everything it needs now. Is this okay for production?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "least privilege" },
+        { "type": "not_contains", "value": "AdministratorAccess is fine" },
+        { "type": "contains", "value": "scope" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not recommend putting the database in a public subnet",
+      "prompt": "Should I put my RDS database in a public subnet so my application can connect to it easily?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "public subnet is fine" },
+        { "type": "not_contains", "value": "you can put the database in a public subnet" },
+        { "type": "contains", "value": "private subnet" },
+        { "type": "contains", "value": "security group" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load: points to service-map reference for service selection",
+      "prompt": "We're building a new platform from scratch on AWS. We need compute, a relational database, a message queue, a CDN, and a search service. Can you give me a quick overview of what AWS services to use for each?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "service-map" },
+        { "type": "contains", "value": "CloudFront" },
+        { "type": "contains", "value": "SQS" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

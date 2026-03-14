@@ -1,0 +1,140 @@
+{
+  "skill": "terraform-iac",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on Terraform backend setup question",
+      "prompt": "I'm starting a new Terraform project for our AWS infrastructure. What files should I create first and how do I set up remote state so the whole team can collaborate safely?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "backend" },
+        { "type": "contains", "value": "S3" },
+        { "type": "contains", "value": "lock" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on drift detection question",
+      "prompt": "Someone on our team made manual changes in the AWS console to a security group that Terraform manages. How do I detect and fix this drift?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "drift" },
+        { "type": "contains", "value": "terraform plan" },
+        { "type": "contains", "value": "refresh" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Core task: writing a reusable VPC module",
+      "prompt": "I need to create a reusable Terraform module for a VPC with public and private subnets that I can use across dev, staging, and prod. What should the module structure look like and what variables and outputs should it expose?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "variable" },
+        { "type": "contains", "value": "output" },
+        { "type": "contains", "value": "aws_subnet" },
+        { "type": "contains", "value": "modules/" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: importing existing resources into state",
+      "prompt": "We have an S3 bucket that was created manually and I want Terraform to start managing it without destroying and recreating it. How do I do this safely?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "import" },
+        { "type": "contains", "value": "terraform plan" },
+        { "type": "contains", "value": "zero diff" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: handling state move after refactor",
+      "prompt": "I refactored my Terraform config to move an aws_instance resource into a module. Now terraform plan wants to destroy and recreate the instance. How do I fix this without downtime?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "state mv" },
+        { "type": "contains", "value": "module." },
+        { "type": "contains", "value": "backup" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: setting up multi-environment strategy",
+      "prompt": "We need separate dev, staging, and production environments with Terraform. Should I use workspaces or separate state files? What are the trade-offs?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "workspace" },
+        { "type": "contains", "value": "separate" },
+        { "type": "contains", "value": "state" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: using dynamic blocks to avoid repetition",
+      "prompt": "I have a security group where the ingress rules vary by environment. Right now I'm copy-pasting ingress blocks. Is there a cleaner way to define these rules dynamically in Terraform?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "dynamic" },
+        { "type": "contains", "value": "for_each" },
+        { "type": "contains", "value": "content" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: warns about hardcoding AMI IDs",
+      "prompt": "My Terraform config has ami = 'ami-0abcdef1234567890' hardcoded. My colleague said this is bad practice. Why, and what should I do instead?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "data" },
+        { "type": "contains", "value": "aws_ami" },
+        { "type": "not_contains", "value": "hardcode" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns against using local state in production",
+      "prompt": "I've been running terraform apply from my laptop and the state file is just in my project folder. Everything works fine - do I really need to set up remote state?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "remote" },
+        { "type": "contains", "value": "lock" },
+        { "type": "contains", "value": "concurrent" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about force-unlocking state without verifying",
+      "prompt": "Terraform is saying the state is locked and I need to apply urgently. Can I just run terraform force-unlock to clear it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "concurrent" },
+        { "type": "contains", "value": "verify" },
+        { "type": "not_contains", "value": "safe to force-unlock anytime" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not recommend AdministratorAccess for Terraform provider credentials",
+      "prompt": "What IAM permissions does Terraform need to manage our AWS infrastructure? Should I just give it AdministratorAccess to keep things simple?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "least privilege" },
+        { "type": "not_contains", "value": "AdministratorAccess is fine" },
+        { "type": "not_contains", "value": "AdministratorAccess is acceptable" },
+        { "type": "not_contains", "value": "simplest approach is AdministratorAccess" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load: points to module-patterns reference for module design question",
+      "prompt": "We're building a Terraform module library that multiple teams will share. I need to understand patterns like composition vs wrapper modules and how to version them. Where should I look?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "module" },
+        { "type": "contains", "value": "references" },
+        { "type": "contains", "value": "module-patterns" }
+      ]
+    }
+  ]
+}

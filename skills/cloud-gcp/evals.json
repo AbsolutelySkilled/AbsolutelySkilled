@@ -1,0 +1,141 @@
+{
+  "skill": "cloud-gcp",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on Cloud Run deployment question",
+      "prompt": "I have a Node.js API packaged as a Docker container. What's the fastest way to get it running on GCP with auto-scaling and no server management?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Cloud Run" },
+        { "type": "contains", "value": "gcloud run deploy" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on GCP service selection question",
+      "prompt": "We're moving our analytics stack to GCP. We have 500 GB of event data and need to run ad-hoc SQL queries on it. What service should we use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "BigQuery" },
+        { "type": "contains", "value": "serverless" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Core task: deploy Cloud Run with correct production flags",
+      "prompt": "Show me the gcloud command to deploy a Cloud Run service called 'payments-api' with a custom service account, 512MB memory, max 20 instances, and only allow authenticated callers.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "--service-account" },
+        { "type": "contains", "value": "--max-instances 20" },
+        { "type": "contains", "value": "--no-allow-unauthenticated" },
+        { "type": "contains", "value": "--memory 512Mi" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: BigQuery table design for cost control",
+      "prompt": "We're loading 10 million event rows per day into BigQuery and our query costs are skyrocketing. How should we structure the table to reduce scan costs?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "partition" },
+        { "type": "contains", "value": "cluster" },
+        { "type": "not_contains", "value": "SELECT *" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: Pub/Sub event-driven setup with dead-letter queue",
+      "prompt": "I want Cloud Functions to process messages from a Pub/Sub topic when orders are placed. Some messages might fail - how do I prevent one bad message from blocking the whole subscription?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "dead-letter" },
+        { "type": "contains", "value": "max-delivery-attempts" },
+        { "type": "contains", "value": "ack-deadline" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: IAM service account setup without key files",
+      "prompt": "My Cloud Run service needs to read from BigQuery and publish to a Pub/Sub topic. How do I set this up securely without downloading any credentials?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "service account" },
+        { "type": "contains", "value": "roles/bigquery" },
+        { "type": "contains", "value": "roles/pubsub.publisher" },
+        { "type": "not_contains", "value": "key file" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: database selection decision",
+      "prompt": "We're building a global e-commerce platform that handles financial transactions. Orders must be strongly consistent, written from multiple continents, and queryable with complex SQL joins. Which GCP database should we use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Spanner" },
+        { "type": "contains", "value": "global" },
+        { "type": "contains", "value": "consistency" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: warns about Spanner cost over-engineering",
+      "prompt": "We have a single-region Postgres app on Cloud SQL and someone suggested migrating to Spanner. We have about 50 GB of data and all our users are in the US. Should we do it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cost" },
+        { "type": "contains", "value": "Cloud SQL" },
+        { "type": "not_contains", "value": "Spanner is the right choice" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns against downloading service account key files",
+      "prompt": "I need my GKE pod to access Cloud Storage. The easiest thing I can think of is to create a service account, download the JSON key, and mount it as a Kubernetes secret. Is that fine?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Workload Identity" },
+        { "type": "contains", "value": "key" },
+        { "type": "not_contains", "value": "that is fine" },
+        { "type": "not_contains", "value": "download" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about Cloud Run without max-instances",
+      "prompt": "My Cloud Run service connects to Cloud SQL. During a traffic spike yesterday the database started refusing connections. I have no max-instances set. What's happening and how do I fix it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "max-instances" },
+        { "type": "contains", "value": "connection pool" },
+        { "type": "contains", "value": "concurrency" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not recommend basic IAM roles for production service accounts",
+      "prompt": "What IAM role should I give my Cloud Run service account so it can access everything it might need - storage, databases, Pub/Sub? I want to keep it simple.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "roles/editor" },
+        { "type": "not_contains", "value": "roles/owner" },
+        { "type": "contains", "value": "least privilege" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load: points to service-map reference for service selection",
+      "prompt": "We're architecting a new platform on GCP from scratch - we need compute, a relational database, a message queue, object storage, and a CDN. Can you map each need to the right GCP service?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Cloud Run" },
+        { "type": "contains", "value": "Cloud SQL" },
+        { "type": "contains", "value": "Pub/Sub" },
+        { "type": "contains", "value": "Cloud Storage" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

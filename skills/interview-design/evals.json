@@ -1,0 +1,134 @@
+{
+  "skill": "interview-design",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to design an interview loop",
+      "prompt": "I'm hiring a senior backend engineer. Help me design the interview loop - what rounds should I include and what should each one test?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "competencies" },
+        { "type": "contains", "value": "system design" },
+        { "type": "contains", "value": "behavioral" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on rubric creation request",
+      "prompt": "Create a scoring rubric for a coding interview round that I can use across all candidates consistently.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Strong Yes" },
+        { "type": "contains", "value": "evidence" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Explains the principle that scores must be submitted independently before debrief",
+      "prompt": "What's the right way to run a hiring debrief to avoid groupthink?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "independently" },
+        { "type": "contains", "value": "scorecard" },
+        { "type": "contains", "value": "anchor" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can generate behavioral questions in STAR format for a given competency",
+      "prompt": "Write three behavioral interview questions to assess a candidate's ability to handle ambiguity, following STAR format.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Tell me about a time" },
+        { "type": "contains", "value": "Result" },
+        { "type": "contains", "value": "follow-up" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can design a take-home coding challenge with evaluation criteria",
+      "prompt": "I want to replace our whiteboard coding round with a take-home assignment for a full-stack engineer role. How should I design it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "hours" },
+        { "type": "contains", "value": "follow-up" },
+        { "type": "contains", "value": "evaluation" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Explains how to structure a system design interview",
+      "prompt": "Walk me through how to run a 45-minute system design interview. What structure should the interviewer follow?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "clarifying questions" },
+        { "type": "contains", "value": "trade-off" },
+        { "type": "contains", "value": "deep dive" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can explain how to run calibration sessions",
+      "prompt": "Two of my interviewers gave the same candidate a 4 and a 1 for problem decomposition. How do I prevent this going forward?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "calibration" },
+        { "type": "contains", "value": "rubric" },
+        { "type": "contains", "value": "independently" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Identifies gut-feel interviews as an anti-pattern",
+      "prompt": "My co-founder wants to skip rubrics and just have engineers interview people they'd want to work with. Is that a good idea?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "bias" },
+        { "type": "not_contains", "value": "great idea" },
+        { "type": "contains", "value": "structured" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Identifies brainteasers as an anti-pattern",
+      "prompt": "Should I use classic brainteaser questions like 'how many ping pong balls fit in a 747' to test problem-solving skills?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "relevant" },
+        { "type": "not_contains", "value": "yes, brainteasers" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gives concrete advice on structuring culture fit assessment without bias",
+      "prompt": "How do I assess culture fit without using it as a proxy for bias?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "criteria" },
+        { "type": "contains", "value": "behavioral" },
+        { "type": "contains", "value": "evidence" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not trigger for candidate interview prep",
+      "prompt": "I have a Google system design interview next week. How should I prepare?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "scoring rubric" },
+        { "type": "not_contains", "value": "calibration session" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for compensation or offer negotiation",
+      "prompt": "A candidate passed all interviews. What salary should we offer them?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "STAR format" },
+        { "type": "not_contains", "value": "behavioral round" }
+      ]
+    }
+  ]
+}

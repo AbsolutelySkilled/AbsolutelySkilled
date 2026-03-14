@@ -1,0 +1,137 @@
+{
+  "skill": "budgeting-planning",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on annual budget build request",
+      "prompt": "Help me build an annual operating budget for my SaaS company. We have $4M in ARR and want to plan for next year.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "revenue" },
+        { "type": "contains", "value": "headcount" },
+        { "type": "contains", "value": "EBITDA" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on variance analysis request",
+      "prompt": "Our Q2 marketing spend came in at $850K against a $600K budget. Help me structure a variance analysis for the CFO.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "favorable" },
+        { "type": "contains", "value": "root cause" },
+        { "type": "contains", "value": "unfavorable" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on rolling forecast question",
+      "prompt": "What is a rolling forecast and how is it different from an annual budget?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "rolling" },
+        { "type": "contains", "value": "annual" },
+        { "type": "contains", "value": "current" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can build a headcount cost model",
+      "prompt": "I need to budget for 3 new software engineers starting in Q2. Salaries are $150K each. How do I model the fully-loaded cost?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "benefits" },
+        { "type": "contains", "value": "payroll tax" },
+        { "type": "contains", "value": "partial" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can recommend an appropriate cost allocation method",
+      "prompt": "We have a $2M annual IT infrastructure cost shared across 5 departments. Engineering uses 70% of the servers. How should we allocate this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "activity" },
+        { "type": "contains", "value": "driver" },
+        { "type": "not_contains", "value": "headcount equally" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can explain variance decomposition into volume and price components",
+      "prompt": "Revenue came in at $1.2M vs a $1.0M budget. We sold 10% more units than planned but at a 5% lower price. How do I decompose this variance?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "volume" },
+        { "type": "contains", "value": "price" },
+        { "type": "contains", "value": "favorable" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Warns against sandbagging and padding",
+      "prompt": "My manager always pads the budget by 20% so we look good at year-end. Is this a good approach?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "sandbag" },
+        { "type": "not_contains", "value": "yes, padding is a good strategy" },
+        { "type": "contains", "value": "stretch" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can structure a budget presentation for leadership",
+      "prompt": "I need to present our 2025 budget to the executive team next week. What should the deck look like?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "executive summary" },
+        { "type": "contains", "value": "scenario" },
+        { "type": "contains", "value": "headcount" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Can recommend when to use zero-based budgeting",
+      "prompt": "Our G&A costs have grown 30% year-over-year for three years running but revenue only grew 15%. What budgeting approach should we use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "zero" },
+        { "type": "contains", "value": "justify" },
+        { "type": "not_contains", "value": "add 5% to last year" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Can outline a rolling forecast implementation cadence",
+      "prompt": "We want to switch from an annual budget to a rolling 12-month forecast. What does the monthly process look like?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "actuals" },
+        { "type": "contains", "value": "lock" },
+        { "type": "contains", "value": "assumptions" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Can build a department budget template",
+      "prompt": "I am a department head building my first budget for our customer success team of 12 people. Walk me through it.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "headcount" },
+        { "type": "contains", "value": "non-headcount" },
+        { "type": "contains", "value": "software" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for accounting close or ERP processes",
+      "prompt": "How do I close the month-end books in NetSuite and reconcile AR to the general ledger?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "rolling forecast" },
+        { "type": "not_contains", "value": "annual budget" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "skill": "monorepo-management",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on monorepo setup question",
+      "prompt": "I want to set up a monorepo with multiple Next.js apps and shared UI packages. Where do I start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pnpm-workspace" },
+        { "type": "contains", "value": "workspace" },
+        { "type": "contains", "value": "packages" },
+        { "type": "contains", "value": "turbo" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on Turborepo vs Nx decision question",
+      "prompt": "Should I use Turborepo or Nx for my JavaScript monorepo?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Turborepo" },
+        { "type": "contains", "value": "Nx" },
+        { "type": "contains", "value": "caching" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Can write a correct turbo.json with proper task pipeline",
+      "prompt": "Write a turbo.json for a monorepo that has build, test, lint, and dev tasks with correct dependency ordering.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "\"dependsOn\": [\"^build\"]" },
+        { "type": "contains", "value": "\"outputs\"" },
+        { "type": "contains", "value": "\"cache\": false" },
+        { "type": "contains", "value": "\"persistent\": true" },
+        { "type": "code_valid", "value": "json" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can write a correct pnpm-workspace.yaml and root package.json",
+      "prompt": "Show me how to configure pnpm workspaces for a monorepo with apps and packages directories.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "packages:" },
+        { "type": "contains", "value": "apps/*" },
+        { "type": "contains", "value": "packages/*" },
+        { "type": "contains", "value": "\"private\": true" },
+        { "type": "code_valid", "value": "yaml" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can explain and implement workspace:* protocol for internal deps",
+      "prompt": "How do I reference one internal package from another in my pnpm monorepo?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "workspace:*" },
+        { "type": "contains", "value": "@" },
+        { "type": "not_contains", "value": "file:" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can set up a shared TypeScript base config",
+      "prompt": "How do I share a TypeScript config across all packages in my monorepo?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "extends" },
+        { "type": "contains", "value": "tsconfig" },
+        { "type": "contains", "value": "\"strict\": true" },
+        { "type": "code_valid", "value": "json" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can configure an internal package with proper exports using tsup",
+      "prompt": "How do I set up an internal utility package in my monorepo so other packages can import from it with proper types?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "exports" },
+        { "type": "contains", "value": "dist" },
+        { "type": "contains", "value": "tsup" },
+        { "type": "contains", "value": "dts" },
+        { "type": "code_valid", "value": "typescript" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: warns about outputs being too broad in turbo.json",
+      "prompt": "My Turborepo cache seems to be huge and slow. I set outputs to '**' to make sure everything is cached. Is that correct?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "dist" },
+        { "type": "not_contains", "value": "that's correct" },
+        { "type": "contains", "value": "node_modules" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns against relying on hoisted undeclared dependencies",
+      "prompt": "I use lodash in my app package but I only declared it in the root package.json. It works fine. Is this okay?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "hoist" },
+        { "type": "contains", "value": "declare" },
+        { "type": "not_contains", "value": "that's fine" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about circular workspace dependencies",
+      "prompt": "My monorepo builds are hanging and I get weird task ordering errors. How do I debug this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "circular" },
+        { "type": "contains", "value": "graph" },
+        { "type": "contains", "value": "DAG" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not recommend Lerna as a primary monorepo tool",
+      "prompt": "Should I use Lerna for my new monorepo in 2024?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "deprecated" },
+        { "type": "contains", "value": "Turborepo" },
+        { "type": "not_contains", "value": "Lerna is the best" },
+        { "type": "not_contains", "value": "actively maintained" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load: skill references tool-comparison reference file",
+      "prompt": "Where can I find a detailed feature comparison between Turborepo, Nx, and Bazel?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "tool-comparison" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

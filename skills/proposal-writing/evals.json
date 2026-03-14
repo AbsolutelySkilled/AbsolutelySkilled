@@ -1,0 +1,140 @@
+{
+  "skill": "proposal-writing",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on RFP response request",
+      "prompt": "We just received an RFP from a government agency for a 3-year IT services contract. Help me structure our response.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "compliance matrix" },
+        { "type": "contains", "value": "win themes" },
+        { "type": "contains", "value": "executive summary" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on executive summary request",
+      "prompt": "Write an executive summary for our proposal to replace a hospital's legacy EHR system. Budget is $2.4M over 18 months.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "problem" },
+        { "type": "contains", "value": "value" },
+        { "type": "contains", "value": "next step" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on SOW draft request",
+      "prompt": "Draft a statement of work for a 6-week UX audit and redesign of our client's e-commerce checkout flow.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "scope" },
+        { "type": "contains", "value": "out of scope" },
+        { "type": "contains", "value": "acceptance criteria" },
+        { "type": "contains", "value": "assumptions" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Triggers on win theme creation",
+      "prompt": "The RFP weights security (40%), implementation speed (35%), and cost (25%). Our top differentiators are ISO 27001 certification and a pre-built connector library. Help me write win themes.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ISO 27001" },
+        { "type": "contains", "value": "proof" },
+        { "type": "contains", "value": "buyer benefit" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Triggers on pricing strategy question",
+      "prompt": "Should I price this cloud migration engagement as fixed price or time and materials? The client has a vague scope and wants a hard number.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "not-to-exceed" },
+        { "type": "contains", "value": "scope" },
+        { "type": "contains", "value": "risk" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can produce a three-tier pricing table",
+      "prompt": "Create a three-tier pricing structure for a data analytics platform implementation. Core option around $80K, full option around $150K.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Core" },
+        { "type": "contains", "value": "Recommended" },
+        { "type": "contains", "value": "Premium" },
+        { "type": "contains", "value": "$" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Leads with buyer problem not seller credentials",
+      "prompt": "Review this executive summary opening: 'Acme Consulting has 20 years of experience and 500 employees across 12 offices. We are pleased to submit this proposal.'",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "problem" },
+        { "type": "not_contains", "value": "years of experience" },
+        { "type": "contains", "value": "buyer" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Insists on quantified claims",
+      "prompt": "Is 'Our solution significantly reduces deployment time and improves team productivity' a strong proposal claim?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "quantif" },
+        { "type": "contains", "value": "number" },
+        { "type": "not_contains", "value": "strong claim" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Explains compliance matrix structure correctly",
+      "prompt": "What is a compliance matrix in an RFP response and what columns should it have?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "requirement" },
+        { "type": "contains", "value": "Compliant" },
+        { "type": "contains", "value": "proposal section" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Can write a technical approach section outline",
+      "prompt": "Outline the technical approach section for a proposal to migrate a retail company's on-prem inventory system to AWS.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "risk" },
+        { "type": "contains", "value": "methodology" },
+        { "type": "contains", "value": "staffing" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Flags vague acceptance criteria as an anti-pattern",
+      "prompt": "Our SOW says deliverables are 'accepted upon client approval.' Is this sufficient?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "measurable" },
+        { "type": "contains", "value": "dispute" },
+        { "type": "not_contains", "value": "sufficient" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for internal project planning",
+      "prompt": "Help me write a project plan with sprint schedules and internal resource allocation for our engineering team.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "win themes" },
+        { "type": "not_contains", "value": "RFP" },
+        { "type": "not_contains", "value": "executive summary" }
+      ]
+    }
+  ]
+}

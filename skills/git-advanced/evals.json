@@ -1,0 +1,136 @@
+{
+  "skill": "git-advanced",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on interactive rebase request to clean up commits",
+      "prompt": "I have 6 messy WIP commits I want to squash into 2 clean commits before pushing my feature branch. How do I do that?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "rebase -i" },
+        { "type": "contains", "value": "squash" },
+        { "type": "contains", "value": "HEAD~" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on git bisect request",
+      "prompt": "A bug appeared somewhere in the last 200 commits. I know it worked in the v3.0.0 tag. How do I find the exact commit that broke it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "bisect" },
+        { "type": "contains", "value": "git bisect good" },
+        { "type": "contains", "value": "git bisect bad" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Can automate bisect with a test script",
+      "prompt": "How can I run git bisect automatically using my existing test suite instead of manually marking commits good or bad?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "git bisect run" },
+        { "type": "contains", "value": "exit 0" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Triggers on worktree request for parallel development",
+      "prompt": "I'm in the middle of a big feature and an urgent hotfix just came in. How can I work on both without losing my current state?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "worktree" },
+        { "type": "contains", "value": "git worktree add" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can set up pre-commit hooks with Husky and lint-staged",
+      "prompt": "How do I automatically run ESLint and Prettier on staged files before every commit, and share that config with my whole team?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "husky" },
+        { "type": "contains", "value": "lint-staged" },
+        { "type": "contains", "value": "pre-commit" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can recover lost commits using reflog",
+      "prompt": "I ran git rebase and now some of my commits are gone. Is there any way to get them back?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "reflog" },
+        { "type": "contains", "value": "git checkout" },
+        { "type": "not_contains", "value": "permanently lost" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Correctly advises against force-pushing shared branches",
+      "prompt": "I rebased my main branch locally and now git push is failing with 'rejected'. Should I use git push --force?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "shared" },
+        { "type": "contains", "value": "force-with-lease" },
+        { "type": "not_contains", "value": "git push --force\n" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can cherry-pick a commit range across branches",
+      "prompt": "I made 3 commits on my feature branch that fix a bug. I need those same 3 commits on the release branch without merging the entire feature.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "cherry-pick" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Explains DAG model and detached HEAD correctly",
+      "prompt": "After running git checkout on an old commit SHA, git says I'm in 'detached HEAD state'. What does that mean and what should I do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "HEAD" },
+        { "type": "contains", "value": "branch" },
+        { "type": "contains", "value": "git checkout -b" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Correctly explains rebase vs merge tradeoffs",
+      "prompt": "Should I use git merge or git rebase to keep my feature branch up to date with main? What are the tradeoffs?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "linear" },
+        { "type": "contains", "value": "history" },
+        { "type": "contains", "value": "shared" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Can resolve merge conflict using ours/theirs strategies",
+      "prompt": "I have a merge conflict in package-lock.json and I just want to keep the version from the branch I'm merging in. What's the fastest way?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "git checkout --theirs" },
+        { "type": "contains", "value": "git add" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for basic git operations",
+      "prompt": "How do I clone a repository and make my first commit?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "interactive rebase" },
+        { "type": "not_contains", "value": "git bisect" },
+        { "type": "not_contains", "value": "worktree" }
+      ]
+    }
+  ]
+}

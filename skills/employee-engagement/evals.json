@@ -1,0 +1,127 @@
+{
+  "skill": "employee-engagement",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to design an engagement survey",
+      "prompt": "Help me design an employee engagement survey for a 200-person engineering company",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "question" },
+        { "type": "contains", "value": "driver" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on eNPS question",
+      "prompt": "What is eNPS and how do I calculate and interpret it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Promoters" },
+        { "type": "contains", "value": "Detractors" },
+        { "type": "contains", "value": "recommend" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on pulse check cadence question",
+      "prompt": "How often should we run employee pulse surveys and how long should they be?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "monthly" },
+        { "type": "contains", "value": "questions" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can explain manager as top engagement lever",
+      "prompt": "What is the single most important factor in employee engagement?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "manager" },
+        { "type": "not_contains", "value": "compensation is the most important" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can build an action plan from survey results",
+      "prompt": "Our latest engagement survey came back and psychological safety scored 58% favorable. What should we do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "action" },
+        { "type": "contains", "value": "manager" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can identify retention risk factors",
+      "prompt": "Which employees are most at risk of leaving and how do I identify them?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "growth" },
+        { "type": "contains", "value": "manager" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can provide stay interview questions",
+      "prompt": "Give me a set of stay interview questions to run with my top performers",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "keep" },
+        { "type": "contains", "value": "leave" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Warns against annual-only surveying anti-pattern",
+      "prompt": "We run an annual engagement survey every December. Is that enough?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pulse" },
+        { "type": "not_contains", "value": "yes, annual is sufficient" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Can explain segmentation framework for survey results",
+      "prompt": "We got our engagement survey results back. How should we analyze and present them?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "segment" },
+        { "type": "contains", "value": "team" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Can explain the principle of acting on results",
+      "prompt": "Our employees say they don't trust engagement surveys and don't fill them in honestly anymore. Why might this happen?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "action" },
+        { "type": "contains", "value": "results" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Can explain culture leading indicators",
+      "prompt": "What metrics should I track to measure whether our culture is healthy?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "attrition" },
+        { "type": "contains", "value": "manager" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for compensation benchmarking",
+      "prompt": "How do I benchmark our salaries against the market to make sure we're competitive?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "engagement survey" },
+        { "type": "not_contains", "value": "eNPS" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "skill": "internal-docs",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when asked to write an RFC",
+      "prompt": "I need to write an RFC for migrating our authentication system from session-based to JWT tokens",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Motivation" },
+        { "type": "contains", "value": "Alternatives" },
+        { "type": "contains", "value": "Tradeoffs" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers when asked to write a post-mortem",
+      "prompt": "We had a production outage yesterday where the payment service was down for 45 minutes. Help me write the post-mortem.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Timeline" },
+        { "type": "contains", "value": "Root cause" },
+        { "type": "contains", "value": "Action items" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers when asked about documentation structure",
+      "prompt": "How should I organize our team's internal documentation?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Tutorial" },
+        { "type": "contains", "value": "How-to" },
+        { "type": "contains", "value": "Reference" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "RFC includes required sections with alternatives",
+      "prompt": "Draft an RFC for introducing a message queue between our order service and notification service",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "TL;DR" },
+        { "type": "contains", "value": "Motivation" },
+        { "type": "contains", "value": "Proposal" },
+        { "type": "contains", "value": "Alternatives considered" },
+        { "type": "contains", "value": "Rollout plan" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Post-mortem follows blameless methodology",
+      "prompt": "Write a post-mortem for an incident where a developer pushed a config change that took down the staging database",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Root cause" },
+        { "type": "contains", "value": "Contributing factors" },
+        { "type": "not_contains", "value": "the developer should have" },
+        { "type": "contains", "value": "Action items" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Runbook includes copy-pasteable commands and decision trees",
+      "prompt": "Create a runbook for when our Redis cluster shows high memory usage alerts",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Prerequisites" },
+        { "type": "contains", "value": "Steps" },
+        { "type": "contains", "value": "Expected output" },
+        { "type": "contains", "value": "Rollback" },
+        { "type": "contains", "value": "Escalation" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "ADR follows the correct immutable format",
+      "prompt": "Write an ADR for our decision to use PostgreSQL instead of MongoDB for the new inventory service",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Context" },
+        { "type": "contains", "value": "Decision" },
+        { "type": "contains", "value": "Consequences" },
+        { "type": "contains", "value": "Status" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Post-mortem action items are specific and assigned",
+      "prompt": "Our checkout service had a 2-hour outage due to a database migration that locked a critical table. Write the action items section of the post-mortem.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Owner" },
+        { "type": "contains", "value": "Priority" },
+        { "type": "contains", "value": "Due date" },
+        { "type": "not_contains", "value": "improve monitoring" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Handles gotcha of RFC without genuine alternatives",
+      "prompt": "Here's my RFC - it proposes using Kafka. The only alternative I listed is 'do nothing'. Is this good enough?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "alternative" },
+        { "type": "contains", "value": "at least" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Handles gotcha of stale documentation",
+      "prompt": "Our team wiki has pages that haven't been updated in over a year. What should we do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "audit" },
+        { "type": "contains", "value": "owner" },
+        { "type": "contains", "value": "archive" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination - does not invent documentation standards",
+      "prompt": "What is the ISO standard number for internal engineering documentation?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "ISO 29148" },
+        { "type": "not_contains", "value": "ISO 26514" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination - does not invent specific tooling requirements",
+      "prompt": "What tool is required for writing RFCs?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "required tool" },
+        { "type": "not_contains", "value": "you must use" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "References the runbooks reference file for detailed operational docs",
+      "prompt": "I need to create a comprehensive runbook for our database failover procedure with very detailed steps",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/runbooks.md" }
+      ]
+    }
+  ]
+}

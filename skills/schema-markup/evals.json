@@ -1,0 +1,146 @@
+{
+  "skill": "schema-markup",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to add FAQ schema to a page",
+      "prompt": "I have a FAQ section on my pricing page. How do I add schema markup so it shows up as rich results in Google?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "FAQPage" },
+        { "type": "contains", "value": "application/ld+json" },
+        { "type": "contains", "value": "schema.org" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on request to implement structured data for a product",
+      "prompt": "Add JSON-LD structured data to my e-commerce product page so Google can show star ratings and price in the search results.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Product" },
+        { "type": "contains", "value": "aggregateRating" },
+        { "type": "contains", "value": "@context" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on rich snippet debugging request",
+      "prompt": "My product page has schema markup but I'm not seeing star ratings in Google. How do I debug this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Rich Results Test" },
+        { "type": "contains", "value": "validation" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can produce valid Product JSON-LD with offers",
+      "prompt": "Write the JSON-LD structured data for a product named 'Wireless Speaker' priced at $89.99 USD, in stock, with a 4.3 star rating from 150 reviews.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "@context" },
+        { "type": "contains", "value": "schema.org" },
+        { "type": "contains", "value": "\"Product\"" },
+        { "type": "contains", "value": "AggregateRating" },
+        { "type": "contains", "value": "Offer" },
+        { "type": "contains", "value": "https://schema.org/InStock" },
+        { "type": "contains", "value": "application/ld+json" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can produce valid FAQPage JSON-LD",
+      "prompt": "Generate JSON-LD for a FAQ page with two questions: 'What is your return policy?' (answer: 30 days) and 'Do you ship internationally?' (answer: yes, to 50 countries).",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "\"FAQPage\"" },
+        { "type": "contains", "value": "mainEntity" },
+        { "type": "contains", "value": "\"Question\"" },
+        { "type": "contains", "value": "acceptedAnswer" },
+        { "type": "contains", "value": "\"Answer\"" },
+        { "type": "contains", "value": "schema.org" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can produce valid BreadcrumbList JSON-LD",
+      "prompt": "Write the JSON-LD for breadcrumbs: Home > Electronics > Headphones > Sony WH-1000XM5",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "\"BreadcrumbList\"" },
+        { "type": "contains", "value": "itemListElement" },
+        { "type": "contains", "value": "\"ListItem\"" },
+        { "type": "contains", "value": "position" },
+        { "type": "contains", "value": "schema.org" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can integrate JSON-LD into Next.js App Router",
+      "prompt": "Show me how to add Product structured data to a Next.js 14 App Router product page.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "application/ld+json" },
+        { "type": "contains", "value": "dangerouslySetInnerHTML" },
+        { "type": "contains", "value": "JSON.stringify" },
+        { "type": "contains", "value": "schema.org" },
+        { "type": "contains", "value": "\"Product\"" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can produce valid Article/BlogPosting schema",
+      "prompt": "Create JSON-LD for a blog post titled '10 JavaScript Tips', published on 2025-01-15, authored by 'Alice Chen', published by 'Dev Blog'.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "\"BlogPosting\"" },
+        { "type": "contains", "value": "headline" },
+        { "type": "contains", "value": "datePublished" },
+        { "type": "contains", "value": "author" },
+        { "type": "contains", "value": "schema.org" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Knows that availability values require full schema.org URLs",
+      "prompt": "I have availability: 'InStock' in my Product schema but the Rich Results Test shows an error. What's wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "https://schema.org/InStock" },
+        { "type": "not_contains", "value": "\"InStock\"" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Knows schema does not directly boost rankings",
+      "prompt": "Will adding schema markup to my pages help them rank higher in Google search results?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ranking" },
+        { "type": "contains", "value": "rich result" },
+        { "type": "not_contains", "value": "yes, schema improves rankings" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not invent schema.org types that do not exist",
+      "prompt": "Is there a Schema.org type called 'LandingPage' or 'MarketingPage' I can use for my homepage?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "\"LandingPage\"" },
+        { "type": "not_contains", "value": "\"MarketingPage\"" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References the schema-types-catalog for type selection detail",
+      "prompt": "What Schema.org types support rich results in Google? Give me a comprehensive list with their required fields.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "schema-types-catalog" }
+      ]
+    }
+  ]
+}

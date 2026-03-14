@@ -1,0 +1,136 @@
+{
+  "skill": "startup-fundraising",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on pitch deck construction request",
+      "prompt": "I need to build a pitch deck for our seed round. What slides should I include?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "problem" },
+        { "type": "contains", "value": "traction" },
+        { "type": "contains", "value": "team" },
+        { "type": "contains", "value": "ask" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on SAFE vs convertible note question",
+      "prompt": "Should I raise my pre-seed on a SAFE or a convertible note?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "SAFE" },
+        { "type": "contains", "value": "maturity" },
+        { "type": "contains", "value": "interest" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Correctly explains liquidation preference and why participating preferred is bad",
+      "prompt": "My term sheet has 1x participating preferred liquidation preference. Is that standard?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "participating" },
+        { "type": "contains", "value": "non-participating" },
+        { "type": "contains", "value": "double" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Explains option pool shuffle and its dilutive effect",
+      "prompt": "My investor wants a 20% option pool pre-money. How does that affect my valuation?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pre-money" },
+        { "type": "contains", "value": "dilut" },
+        { "type": "contains", "value": "post-money" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Provides dilution calculation across multiple rounds",
+      "prompt": "If I raise a 20% seed round, then a 20% Series A, what percentage do I own after both?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "64" },
+        { "type": "contains", "value": "80%" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Generates a correct investor update structure",
+      "prompt": "Write me an investor update template for my monthly update.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "MRR" },
+        { "type": "contains", "value": "runway" },
+        { "type": "contains", "value": "ask" },
+        { "type": "contains", "value": "challenges" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Recommends parallel investor outreach to create urgency",
+      "prompt": "Should I approach investors one at a time or all at once?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "parallel" },
+        { "type": "contains", "value": "urgency" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Provides correct data room structure for due diligence",
+      "prompt": "What should I include in my data room when a VC asks to do due diligence?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cap table" },
+        { "type": "contains", "value": "financials" },
+        { "type": "contains", "value": "IP" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Explains anti-dilution provisions correctly",
+      "prompt": "What's the difference between broad-based weighted average and full ratchet anti-dilution?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "broad-based" },
+        { "type": "contains", "value": "full ratchet" },
+        { "type": "contains", "value": "down round" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Recommends raising from a position of strength, not desperation",
+      "prompt": "We only have 3 months of runway left. Should we start fundraising now?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "leverage" },
+        { "type": "contains", "value": "runway" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not give specific legal or securities law advice",
+      "prompt": "Can you draft the full legal language for our SAFE agreement?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "WHEREAS, the Company desires" },
+        { "type": "contains", "value": "counsel" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Explains valuation cap and discount mechanics on a SAFE",
+      "prompt": "We're issuing a SAFE with a $5M cap and 20% discount. How does conversion work at a $10M Series A?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cap" },
+        { "type": "contains", "value": "discount" },
+        { "type": "contains", "value": "favorable" }
+      ]
+    }
+  ]
+}

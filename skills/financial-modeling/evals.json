@@ -1,0 +1,140 @@
+{
+  "skill": "financial-modeling",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on DCF valuation question",
+      "prompt": "I need to value a B2B SaaS company with $5M ARR growing at 80% year-over-year. How do I build a DCF for it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "discount rate" },
+        { "type": "contains", "value": "terminal value" },
+        { "type": "contains", "value": "free cash flow" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on revenue forecasting question",
+      "prompt": "My startup is raising a Series A and investors want a 3-year financial model. How do I build a revenue forecast that's credible?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "bottoms-up" },
+        { "type": "contains", "value": "assumption" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on cap table question",
+      "prompt": "We're closing a $3M seed round at a $9M pre-money valuation. We also need to create a 10% option pool. How do I model the dilution?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pre-money" },
+        { "type": "contains", "value": "option pool" },
+        { "type": "contains", "value": "dilut" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: modeling LTV and CAC correctly",
+      "prompt": "Our SaaS product has $600 ARPU, 70% gross margin, 2.5% monthly churn, and we spend $1.2M per quarter on sales and marketing to acquire 150 new customers. Walk me through the unit economics.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "LTV" },
+        { "type": "contains", "value": "CAC" },
+        { "type": "contains", "value": "payback" },
+        { "type": "contains", "value": "3" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: building scenario analysis",
+      "prompt": "I have a base case model for my company. My board wants to see bear and bull cases too. How should I structure scenario analysis without duplicating the whole model?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "assumption" },
+        { "type": "contains", "value": "scenario" },
+        { "type": "contains", "value": "toggle" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: DCF terminal value approaches",
+      "prompt": "I'm building a DCF and I'm not sure whether to use a Gordon Growth Model or an exit multiple for terminal value. What are the trade-offs and which should I use for an early-stage SaaS company?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "exit multiple" },
+        { "type": "contains", "value": "Gordon" },
+        { "type": "contains", "value": "comps" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: building a SaaS MRR model",
+      "prompt": "Walk me through building a monthly MRR model for a SaaS business with new bookings, expansion, and churn. What are the key formulas?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "new MRR" },
+        { "type": "contains", "value": "churned" },
+        { "type": "contains", "value": "expansion" },
+        { "type": "contains", "value": "ending MRR" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: opex modeling by department",
+      "prompt": "How should I model operating expenses for a 30-person startup in my financial model? I have Engineering, Sales, Marketing, and G&A teams.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "headcount" },
+        { "type": "contains", "value": "fully-loaded" },
+        { "type": "contains", "value": "department" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about top-down market share forecasts",
+      "prompt": "I'm building a pitch deck and my revenue model says: 'The TAM is $50B. We just need 1% market share to hit $500M.' Is this a good way to forecast revenue?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "bottoms-up" },
+        { "type": "not_contains", "value": "1% of TAM is a solid" },
+        { "type": "not_contains", "value": "market share approach is valid" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about ignoring churn in SaaS models",
+      "prompt": "My SaaS model projects we'll grow MRR by 10% every month and never lose any customers. By month 36 we'll have $20M MRR. Does this look right?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "churn" },
+        { "type": "not_contains", "value": "looks correct" },
+        { "type": "not_contains", "value": "zero churn is reasonable" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: option pool shuffle dilution trap",
+      "prompt": "An investor is offering $5M on a $15M pre-money valuation, but they want us to create a 15% option pool before the investment closes. My co-founder says we're raising at a $15M valuation so we're fine. Is she right?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pre-money" },
+        { "type": "contains", "value": "dilut" },
+        { "type": "contains", "value": "founder" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not conflate accounting profit with cash flow",
+      "prompt": "Our income statement shows we were profitable last quarter with $200K net income, but we ran out of cash. How is that possible - shouldn't being profitable mean we have cash?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "working capital" },
+        { "type": "contains", "value": "cash flow" },
+        { "type": "not_contains", "value": "profitable means you have cash" },
+        { "type": "not_contains", "value": "net income equals cash" }
+      ]
+    }
+  ]
+}

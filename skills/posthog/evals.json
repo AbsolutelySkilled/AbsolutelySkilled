@@ -1,0 +1,193 @@
+{
+  "skill": "posthog",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers for PostHog event tracking question",
+      "prompt": "How do I track a custom event in PostHog?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "posthog.capture" },
+        { "type": "contains", "value": "distinct_id" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://posthog.com/docs/libraries/js"
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers for PostHog feature flag question",
+      "prompt": "I want to set up a feature flag with PostHog in my Node.js app",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "isFeatureEnabled" },
+        { "type": "contains", "value": "posthog-node" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://posthog.com/docs/libraries/node"
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers for PostHog Python setup",
+      "prompt": "Set up PostHog analytics in my Python Django app",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "posthog" },
+        { "type": "contains", "value": "capture" },
+        { "type": "code_valid", "language": "python" }
+      ],
+      "source": "https://posthog.com/docs/libraries/python"
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent can capture a custom event with properties in JavaScript",
+      "prompt": "Capture a PostHog event called 'checkout_completed' with amount and currency properties using the JS SDK",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "posthog.capture" },
+        { "type": "contains", "value": "checkout_completed" },
+        { "type": "contains", "value": "amount" },
+        { "type": "not_contains", "value": "posthog.track" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://posthog.com/docs/libraries/js"
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent can identify a user with person properties",
+      "prompt": "Identify a PostHog user with their email and subscription plan",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "posthog.identify" },
+        { "type": "contains", "value": "email" },
+        { "type": "not_contains", "value": "posthog.setUser" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://posthog.com/docs/libraries/js"
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent can evaluate a multivariate feature flag",
+      "prompt": "Get the current variant of a PostHog A/B test feature flag called 'pricing-experiment' in Node.js",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "getFeatureFlag" },
+        { "type": "contains", "value": "pricing-experiment" },
+        { "type": "not_contains", "value": "getVariant" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://posthog.com/docs/feature-flags/creating-feature-flags"
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent can set up local feature flag evaluation with personal API key",
+      "prompt": "Set up PostHog feature flags with local evaluation in Node.js to avoid network latency",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "personalApiKey" },
+        { "type": "contains", "value": "PostHog" },
+        { "type": "contains", "value": "posthog-node" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://posthog.com/docs/libraries/node"
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent can set up PostHog for serverless environment",
+      "prompt": "How do I use PostHog in an AWS Lambda function without losing events?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "shutdown" },
+        { "type": "contains", "value": "flushAt" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://posthog.com/docs/libraries/node"
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent handles API authentication correctly with correct key types",
+      "prompt": "How do I authenticate with the PostHog private API to list feature flags?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "phx_" },
+        { "type": "contains", "value": "Authorization" },
+        { "type": "contains", "value": "Bearer" },
+        { "type": "not_contains", "value": "phc_" }
+      ],
+      "source": "https://posthog.com/docs/api"
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent knows the correct API rate limits",
+      "prompt": "What are the PostHog API rate limits?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "240" },
+        { "type": "contains", "value": "organization" }
+      ],
+      "source": "https://posthog.com/docs/api"
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent does not hallucinate a posthog.track method",
+      "prompt": "Track an event in PostHog using JavaScript",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "posthog.capture" },
+        { "type": "not_contains", "value": "posthog.track" },
+        { "type": "not_contains", "value": "posthog.logEvent" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://posthog.com/docs/libraries/js"
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not hallucinate deprecated Stripe-like API patterns",
+      "prompt": "Create a PostHog person via the API",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "persons" },
+        { "type": "not_contains", "value": "posthog.persons.create" },
+        { "type": "not_contains", "value": "createPerson" }
+      ],
+      "source": "https://posthog.com/docs/api"
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent references feature-flags.md for advanced flag patterns",
+      "prompt": "How do I bootstrap PostHog feature flags to avoid UI flickering?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "bootstrap" },
+        { "type": "contains", "value": "distinctID" },
+        { "type": "contains", "value": "featureFlags" }
+      ],
+      "source": "https://posthog.com/docs/feature-flags/creating-feature-flags"
+    },
+    {
+      "id": "eval-014",
+      "description": "Agent can set up error tracking in Python",
+      "prompt": "Set up PostHog error tracking to capture exceptions in my Python app",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "enable_exception_autocapture" },
+        { "type": "contains", "value": "capture_exception" },
+        { "type": "code_valid", "language": "python" }
+      ],
+      "source": "https://posthog.com/docs/libraries/python"
+    },
+    {
+      "id": "eval-015",
+      "description": "Agent can set up group analytics",
+      "prompt": "Track events at the company level using PostHog group analytics in JavaScript",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "posthog.group" },
+        { "type": "contains", "value": "company" },
+        { "type": "not_contains", "value": "posthog.setGroup" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://posthog.com/docs/libraries/js"
+    }
+  ]
+}

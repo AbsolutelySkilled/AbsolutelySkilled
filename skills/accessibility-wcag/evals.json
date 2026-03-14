@@ -1,0 +1,144 @@
+{
+  "skill": "accessibility-wcag",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to make a component accessible",
+      "prompt": "Make this dropdown menu accessible for keyboard users and screen readers",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "role" },
+        { "type": "contains", "value": "keyboard" },
+        { "type": "contains", "value": "aria" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Rejects div-as-button and recommends native element",
+      "prompt": "Review this code: <div class=\"btn\" onclick=\"handleClick()\">Submit</div>",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "<button" },
+        { "type": "contains", "value": "keyboard" },
+        { "type": "contains", "value": "semantic" },
+        { "type": "not_contains", "value": "tabindex=\"0\"" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Produces correct accessible dialog implementation",
+      "prompt": "Write an accessible modal dialog component in React",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "role=\"dialog\"" },
+        { "type": "contains", "value": "aria-modal" },
+        { "type": "contains", "value": "aria-labelledby" },
+        { "type": "contains", "value": "focus" },
+        { "type": "contains", "value": "Escape" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Produces correct accessible tabs with roving tabindex",
+      "prompt": "How do I implement accessible tabs with keyboard navigation?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "role=\"tablist\"" },
+        { "type": "contains", "value": "role=\"tab\"" },
+        { "type": "contains", "value": "role=\"tabpanel\"" },
+        { "type": "contains", "value": "aria-selected" },
+        { "type": "contains", "value": "tabIndex" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Gives correct WCAG contrast ratio requirements",
+      "prompt": "What color contrast ratio do I need for body text to meet WCAG AA?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "4.5:1" },
+        { "type": "contains", "value": "AA" },
+        { "type": "contains", "value": "3:1" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Explains alt text rules correctly including decorative images",
+      "prompt": "When should I use an empty alt attribute on an image?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "decorative" },
+        { "type": "contains", "value": "alt=\"\"" },
+        { "type": "not_contains", "value": "omit the alt" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Recommends axe-core and Lighthouse for automated auditing",
+      "prompt": "How do I audit my site for accessibility issues programmatically?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "axe" },
+        { "type": "contains", "value": "Lighthouse" },
+        { "type": "contains", "value": "30%" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Handles SPA focus management on route change correctly",
+      "prompt": "My single-page app doesn't announce page changes to screen reader users. How do I fix it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "focus" },
+        { "type": "contains", "value": "document.title" },
+        { "type": "contains", "value": "h1" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Correctly explains aria-live region usage",
+      "prompt": "How do I make dynamic content like toast notifications accessible?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "aria-live" },
+        { "type": "contains", "value": "polite" },
+        { "type": "contains", "value": "assertive" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Warns against aria-hidden on focusable elements",
+      "prompt": "Is it okay to add aria-hidden to a button that I want screen readers to skip?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "focusable" },
+        { "type": "not_contains", "value": "yes" },
+        { "type": "contains", "value": "tabindex=\"-1\"" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Produces correct form labeling with error association",
+      "prompt": "Write an accessible email input with inline validation error",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "<label" },
+        { "type": "contains", "value": "aria-describedby" },
+        { "type": "contains", "value": "aria-invalid" },
+        { "type": "contains", "value": "role=\"alert\"" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References the aria-patterns reference file for deep widget work",
+      "prompt": "I need to build an accessible combobox with autocomplete suggestions. Walk me through the full ARIA pattern.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/aria-patterns.md" },
+        { "type": "contains", "value": "role=\"combobox\"" },
+        { "type": "contains", "value": "aria-expanded" }
+      ]
+    }
+  ]
+}

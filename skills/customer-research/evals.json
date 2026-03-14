@@ -1,0 +1,139 @@
+{
+  "skill": "customer-research",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on a survey design request",
+      "prompt": "I need to create a customer satisfaction survey for our SaaS product. Can you help me design one?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "research question" },
+        { "type": "contains", "value": "Likert" },
+        { "type": "contains", "value": "screener" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on an interview guide request",
+      "prompt": "I need to run user interviews to understand why customers are churning. Help me build an interview guide.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "open-ended" },
+        { "type": "contains", "value": "consent" },
+        { "type": "contains", "value": "tell me about" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on NPS analysis request",
+      "prompt": "Our NPS dropped from 42 to 35 this quarter. How should I analyze what's going on?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Detractor" },
+        { "type": "contains", "value": "segment" },
+        { "type": "contains", "value": "verbatim" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Produces correct survey structure with question ordering",
+      "prompt": "Design a 10-question survey to understand why free trial users don't convert to paid plans.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "screener" },
+        { "type": "contains", "value": "demographics" },
+        { "type": "not_contains", "value": "demographics first" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Correctly structures a semi-structured interview with time blocks",
+      "prompt": "Create a 45-minute interview script to understand how product managers use our analytics dashboard.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "introduction" },
+        { "type": "contains", "value": "wrap-up" },
+        { "type": "contains", "value": "5 min" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Builds a data-driven persona with all required fields",
+      "prompt": "We've completed 12 user interviews and have survey data from 300 users. Help me build user personas.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pain point" },
+        { "type": "contains", "value": "JTBD" },
+        { "type": "contains", "value": "behavioral pattern" },
+        { "type": "contains", "value": "quote" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Correctly defines activation metrics and retention cohorts",
+      "prompt": "Help me set up behavioral analytics for our new mobile app. What metrics should I track and how do I measure retention?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "activation" },
+        { "type": "contains", "value": "cohort" },
+        { "type": "contains", "value": "Day 7" },
+        { "type": "contains", "value": "Day 30" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Produces a research plan with all required components",
+      "prompt": "We're launching a new enterprise feature. Write a research plan to validate demand before we build it.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "research question" },
+        { "type": "contains", "value": "method" },
+        { "type": "contains", "value": "sample" },
+        { "type": "contains", "value": "timeline" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Catches leading question anti-pattern in survey review",
+      "prompt": "Review this survey question: 'Don't you agree that our onboarding experience is frustrating and needs improvement?'",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "leading" },
+        { "type": "contains", "value": "bias" },
+        { "type": "contains", "value": "neutral" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Warns against using NPS as the sole customer metric",
+      "prompt": "We're thinking of using NPS as our single source of truth for customer health. Is that a good idea?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "not sufficient" },
+        { "type": "contains", "value": "behavioral" },
+        { "type": "not_contains", "value": "NPS is all you need" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not invent fictional research tools or APIs",
+      "prompt": "How do I use the NPS Cloud API to automatically segment my detractors and send follow-up emails?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "NPS Cloud API" },
+        { "type": "not_contains", "value": "npscloud.com" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References the personas reference file for detailed template",
+      "prompt": "I need a detailed persona template with all the fields and a worked example. Where can I find that?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/personas.md" },
+        { "type": "contains", "value": "template" }
+      ]
+    }
+  ]
+}

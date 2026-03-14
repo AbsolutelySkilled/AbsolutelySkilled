@@ -1,0 +1,168 @@
+{
+  "skill": "partnership-strategy",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "trigger-co-marketing",
+      "type": "trigger",
+      "input": "We want to run a joint webinar with a partner company to generate leads. How should we structure this?",
+      "expected": {
+        "skill_activated": true,
+        "assertions": [
+          { "type": "contains_any", "value": ["co-marketing", "joint", "webinar"] },
+          { "type": "contains_any", "value": ["lead", "registration", "audience"] }
+        ]
+      }
+    },
+    {
+      "id": "trigger-channel-program",
+      "type": "trigger",
+      "input": "I need to build a reseller partner program with different tiers and margin structures.",
+      "expected": {
+        "skill_activated": true,
+        "assertions": [
+          { "type": "contains_any", "value": ["tier", "margin", "channel", "reseller"] },
+          { "type": "contains_any", "value": ["Silver", "Gold", "Platinum", "certification", "deal registration"] }
+        ]
+      }
+    },
+    {
+      "id": "trigger-negative-internal-sales",
+      "type": "trigger",
+      "input": "Help me write a cold outreach email sequence for our direct sales team to prospect new accounts.",
+      "expected": {
+        "skill_activated": false
+      }
+    },
+    {
+      "id": "task-partner-evaluation",
+      "type": "core-task",
+      "input": "We're considering a partnership with a company that has a complementary product. How should we evaluate if this is the right partner?",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["scorecard", "evaluation", "criteria"] },
+          { "type": "contains_any", "value": ["ICP", "overlap", "ideal customer"] },
+          { "type": "contains_any", "value": ["complementary", "product", "value"] },
+          { "type": "contains_any", "value": ["brand", "reputation", "alignment"] }
+        ]
+      }
+    },
+    {
+      "id": "task-affiliate-program",
+      "type": "core-task",
+      "input": "Design an affiliate program for our SaaS product that costs $99/month. Include commission structure, cookie duration, and fraud prevention.",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["commission", "percentage", "recurring", "%"] },
+          { "type": "contains_any", "value": ["cookie", "30", "60", "90", "duration"] },
+          { "type": "contains_any", "value": ["fraud", "self-referral", "clawback", "prevention"] },
+          { "type": "contains_any", "value": ["payout", "threshold", "review"] }
+        ]
+      }
+    },
+    {
+      "id": "task-joint-gtm",
+      "type": "core-task",
+      "input": "Create a joint go-to-market plan for our integration partnership with a CRM company. We want to co-sell into mid-market accounts.",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["co-selling", "co-sell", "joint", "GTM", "go-to-market"] },
+          { "type": "contains_any", "value": ["target", "accounts", "ICP", "mid-market"] },
+          { "type": "contains_any", "value": ["attribution", "revenue", "pipeline"] },
+          { "type": "contains_any", "value": ["cadence", "sync", "quarterly", "review"] }
+        ]
+      }
+    },
+    {
+      "id": "task-integration-partnership",
+      "type": "core-task",
+      "input": "We want to build a technology integration with a payments provider. What should the partnership agreement cover?",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["integration", "API", "technical"] },
+          { "type": "contains_any", "value": ["maintenance", "ownership", "update"] },
+          { "type": "contains_any", "value": ["revenue", "share", "exclusivity"] },
+          { "type": "contains_any", "value": ["launch", "documentation", "go-to-market"] }
+        ]
+      }
+    },
+    {
+      "id": "task-partner-onboarding",
+      "type": "core-task",
+      "input": "Design a 30-day onboarding program for new channel partners that gets them selling quickly.",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["certification", "training", "enablement"] },
+          { "type": "contains_any", "value": ["portal", "access", "playbook"] },
+          { "type": "contains_any", "value": ["30", "day", "onboarding", "sequence"] },
+          { "type": "contains_any", "value": ["demo", "sales", "pitch"] }
+        ]
+      }
+    },
+    {
+      "id": "gotcha-no-icp-overlap",
+      "type": "gotcha",
+      "input": "A large enterprise company wants to partner with us. They have a huge brand but their customers are mostly Fortune 500 while ours are SMBs. Should we do it?",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["ICP", "overlap", "mismatch", "alignment"] },
+          { "type": "contains_any", "value": ["caution", "risk", "careful", "limited", "narrow", "pilot"] }
+        ]
+      }
+    },
+    {
+      "id": "gotcha-channel-conflict",
+      "type": "gotcha",
+      "input": "Two of our channel partners are fighting over the same deal. Both claim they brought the customer. How do we resolve this?",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["deal registration", "conflict", "first to register"] },
+          { "type": "contains_any", "value": ["referral fee", "mediate", "resolution", "compensate"] }
+        ]
+      }
+    },
+    {
+      "id": "gotcha-affiliate-fraud",
+      "type": "gotcha",
+      "input": "We noticed one affiliate has an unusually high click count but very low conversions. Is this a problem?",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["fraud", "click", "bot", "suspicious", "anomaly"] },
+          { "type": "contains_any", "value": ["investigate", "review", "block", "monitor", "flag"] }
+        ]
+      }
+    },
+    {
+      "id": "anti-hallucination-standard-rate",
+      "type": "anti-hallucination",
+      "input": "What is the industry-standard affiliate commission rate that all SaaS companies use?",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["varies", "range", "depends", "no single", "no universal", "typically"] }
+        ]
+      }
+    },
+    {
+      "id": "anti-hallucination-partnership-certification",
+      "type": "anti-hallucination",
+      "input": "What is the official Global Partnership Management certification that all partnership professionals need?",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["not aware", "no single", "no official", "no universal", "varies", "several", "cannot confirm", "not a standard"] }
+        ]
+      }
+    },
+    {
+      "id": "reference-load-affiliate",
+      "type": "reference",
+      "input": "I need to set up fraud prevention for our affiliate program and choose between PartnerStack and FirstPromoter. Give me a detailed comparison and fraud controls.",
+      "expected": {
+        "assertions": [
+          { "type": "contains_any", "value": ["affiliate-program-design", "references/"] },
+          { "type": "contains_any", "value": ["fraud", "prevention", "detection"] },
+          { "type": "contains_any", "value": ["PartnerStack", "FirstPromoter"] }
+        ]
+      }
+    }
+  ]
+}

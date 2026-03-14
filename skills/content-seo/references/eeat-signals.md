@@ -1,0 +1,335 @@
+<!-- Part of the content-seo AbsolutelySkilled skill. Load this file when
+     auditing or improving E-E-A-T signals, building author pages, or working
+     with content in YMYL verticals (health, finance, legal, safety). -->
+
+# E-E-A-T Signals
+
+A practical implementation guide for Google's E-E-A-T quality framework. Covers what
+each dimension means, how to demonstrate it concretely, YMYL thresholds, and the
+supporting infrastructure (author pages, about pages, editorial policies) that Google's
+Quality Raters look for.
+
+---
+
+## What E-E-A-T is
+
+E-E-A-T stands for **Experience, Expertise, Authoritativeness, and Trustworthiness**.
+It is the framework Google's Search Quality Rater Guidelines use to evaluate content
+quality. Quality Raters are human contractors who assess search results and provide
+feedback that informs algorithm training. While E-E-A-T is not a direct ranking factor
+(there is no "E-E-A-T score" in the algorithm), pages with weak E-E-A-T signals
+consistently underperform compared to pages with strong signals, because the same
+factors that impress quality raters are the signals the algorithm is trained to reward.
+
+The fourth E (Experience) was added in December 2022, distinguishing personal,
+firsthand involvement with a topic from general subject-matter expertise.
+
+---
+
+## The four dimensions
+
+### Experience
+
+**What it means:** The content creator has direct, personal experience with the subject
+matter. They have used the product, visited the place, undergone the procedure, or
+lived the situation they are writing about.
+
+**Why it matters:** Experience is distinct from expertise. A doctor has expertise in
+medicine. A patient who has undergone a specific procedure has experience. Google
+wants to see both: medical accuracy AND the perspective of someone who has been there.
+
+**How to demonstrate Experience:**
+
+- **First-person account details** - specific dates, quantities, model numbers, or
+  observations that only someone with direct experience would know. "I tested this
+  on my 2022 MacBook Pro M1 in March 2024 and achieved 3.2ms latency" is experiential.
+  "This tool is fast" is not.
+- **Original photographs or screenshots** - images taken by the author during their
+  own use of the product/service/place, not stock photography
+- **Personal results and data** - "After 90 days using this approach, our organic
+  traffic grew 34%" with supporting screenshots
+- **Acknowledgment of limitations** - experienced writers know what they do not know.
+  Noting edge cases or situations where your experience may not generalise signals
+  genuine firsthand knowledge
+- **"Last tested / last updated" dates** - shows the experience is current, not
+  based on an outdated encounter
+
+**Red flags (absence of Experience):**
+
+- Generic descriptions that could apply to any product in the category
+- No specific details that require firsthand access to know
+- Stock images instead of original photography
+- No update/testing dates
+
+---
+
+### Expertise
+
+**What it means:** The content creator has substantial knowledge, skill, or education
+in the subject area. Expertise can be formal (credentials, degrees, certifications)
+or informal (demonstrated through the depth and accuracy of the content itself).
+
+**Why it matters:** For some queries, depth and accuracy are non-negotiable. A guide
+to drug interactions written by someone without medical training is dangerous. A guide
+to TypeScript generics written by someone who has never used them will contain errors.
+
+**How to demonstrate Expertise:**
+
+- **Author credentials** - professional qualifications, degrees, certifications visible
+  on the author byline and/or author page. Be specific: "Registered Dietitian (RD),
+  10 years clinical practice" not "health writer"
+- **Technical accuracy and depth** - content that covers the topic at a level only
+  an expert could reach. Shallow, generic, or factually incorrect content is evidence
+  of low expertise regardless of claimed credentials
+- **Citing primary sources** - research papers, official guidelines, government data.
+  Not Wikipedia or other secondary sources for YMYL content
+- **Content peer-reviewed or fact-checked** - for medical, financial, and legal content,
+  note explicitly that the content was reviewed by a credentialed expert in the field
+- **Formal credentials displayed where relevant** - the author page for a financial
+  advice column should show CFA, CFP, or similar if applicable
+
+**Informal expertise signals:**
+
+Not every topic requires formal credentials. For product reviews, travel guides, or
+hobby content, informal expertise demonstrated through content depth is sufficient.
+A travel writer without a journalism degree who has visited 80 countries and writes
+with specific, accurate detail demonstrates expertise.
+
+**Red flags (absence of Expertise):**
+
+- Vague author bio ("content writer" or "passionate about health")
+- Factual inaccuracies or outdated information
+- Content that could be generated by someone with only surface-level knowledge
+- No credentials for YMYL content
+
+---
+
+### Authoritativeness
+
+**What it means:** The content creator and/or the site are recognised as an authority
+by others in the field. This is the externally-verified dimension - it cannot be
+self-declared.
+
+**Why it matters:** Authoritativeness is essentially the reputation signal. It tells
+Google that the broader ecosystem has validated the creator's expertise.
+
+**How to build Authoritativeness:**
+
+- **Backlinks from authoritative sites** - links from established publishers,
+  government (.gov) or educational (.edu) domains, industry trade publications, and
+  other recognized authorities in your vertical
+- **Brand mentions and citations** - your site or author being cited (even without a
+  link) in reputable publications. Google's knowledge graph tracks brand entity mentions
+- **Press coverage** - articles in established media outlets mentioning the creator
+  or publication as a source
+- **Author's external publication record** - the author is published in recognised
+  industry journals, major publications, or has given talks at established conferences
+- **Wikipedia citations** - your content or organisation cited in Wikipedia entries
+  (not created by you)
+- **Social proof** - high follower counts on professional platforms (LinkedIn), though
+  this is a weaker signal than editorial citations
+
+**Important distinction:** Authoritativeness is a lagging indicator built through
+consistent production of quality, trustworthy content. It cannot be manufactured
+quickly. Thin-content link schemes are antithetical to it.
+
+**Red flags (absence of Authoritativeness):**
+
+- No backlinks from recognised sites in the vertical
+- Author has no external publication record or professional presence
+- Site has no brand mentions outside its own properties
+
+---
+
+### Trustworthiness
+
+**What it means:** The site and its content are accurate, honest, transparent, and
+safe to use. Trustworthiness is the foundation - Google says it is the most important
+of the four dimensions. A page can have experience, expertise, and authority but still
+be untrustworthy (e.g., it is accurate but has undisclosed conflicts of interest).
+
+**How to demonstrate Trustworthiness:**
+
+- **Factual accuracy** - all claims can be verified. Outdated or incorrect information
+  is immediately corrected with a visible corrections notice
+- **Clear corrections policy** - how and when errors are corrected, displayed on the
+  About page or editorial policy page
+- **Transparent authorship** - every article has a named author. No anonymous content,
+  especially for YMYL topics
+- **About page** - who runs the site, their background, how content is produced.
+  Comprehensive and honest, not just a marketing paragraph
+- **Contact information** - a real address, phone number, or verified contact form.
+  Signals accountability
+- **Privacy policy and terms of service** - present, up to date, and compliant
+- **HTTPS** - not optional in 2024; non-HTTPS sites are inherently less trusted
+- **Affiliate disclosure / sponsored content disclosure** - clearly disclosed where
+  applicable. Undisclosed commercial relationships damage trust
+- **Editorial independence** - if advertisers influence content, that is a trust signal
+  reduction. State explicitly that editorial decisions are independent
+- **Review and rating transparency** - if you aggregate reviews, show methodology.
+  If you do your own testing, show methodology
+
+**Red flags (absence of Trustworthiness):**
+
+- Anonymous content on YMYL topics
+- No About page or only a generic one
+- No way to contact the organisation
+- No corrections policy
+- Sponsored content not clearly disclosed
+- Outdated information presented as current
+
+---
+
+## YMYL: higher E-E-A-T thresholds
+
+YMYL stands for **Your Money or Your Life**. These are topics where incorrect or
+misleading information could cause real-world harm - financial loss, health damage,
+legal consequences, or threats to safety. Google holds YMYL pages to a significantly
+higher E-E-A-T bar.
+
+**YMYL categories:**
+
+| Category | Examples |
+|---|---|
+| Health & medical | Symptoms, diagnoses, treatments, medications, mental health |
+| Finance | Investments, taxes, insurance, retirement planning, loans |
+| Legal | Laws, regulations, legal advice, rights, contracts |
+| Safety | Emergency procedures, dangerous activities, product safety |
+| News & current events | Breaking news, political reporting, public policy |
+| Civic | Elections, government, social issues |
+
+**What higher E-E-A-T means for YMYL:**
+
+- **Expertise must be formal** - a personal finance site needs authors with CFP, CFA,
+  or equivalent credentials. "Passionate about personal finance" is insufficient
+- **Medical content must be reviewed by clinicians** - with the reviewer named,
+  their credentials shown, and the review date visible
+- **Legal content must be reviewed by licensed attorneys** - and include a clear
+  disclaimer that it is not legal advice for the reader's specific situation
+- **Sources must be primary** - government health agencies, peer-reviewed research,
+  official regulatory guidance. Not other blogs
+- **Corrections must be rapid** - an error on a YMYL page that causes someone to
+  take a dangerous action is a serious failure; correct and disclose within hours
+
+---
+
+## Author pages
+
+Every author who produces content for a site should have a dedicated author page.
+This is one of the primary ways quality raters verify credentials.
+
+**Required elements of an author page:**
+
+```
+Author Name
+[Professional headshot]
+[Current title and organization]
+[Formal credentials / certifications] (essential for YMYL)
+[Brief bio: 150-250 words covering expertise, background, focus areas]
+[Links to external profiles: LinkedIn, Google Scholar, professional associations]
+[Published work: list of or links to major publications, studies, or books]
+[Publication history on your own site: list of articles by this author]
+[Contact method: email or contact form]
+```
+
+**Author page URL pattern:**
+`/author/[author-slug]/` - avoid `/users/123/` style URLs which look auto-generated
+and provide no semantic signal.
+
+**Schema markup for authors:**
+
+Use `Person` schema on the author page. Key properties:
+
+```json
+{
+  "@type": "Person",
+  "name": "Dr. Jane Smith",
+  "jobTitle": "Registered Dietitian",
+  "description": "Jane is a Registered Dietitian with 12 years...",
+  "url": "https://example.com/author/jane-smith/",
+  "sameAs": [
+    "https://www.linkedin.com/in/janesmith",
+    "https://scholar.google.com/citations?user=abc123"
+  ],
+  "credential": [
+    "Registered Dietitian (RD)",
+    "Board Certified Specialist in Sports Dietetics (CSSD)"
+  ]
+}
+```
+
+---
+
+## About pages
+
+The About page signals the organisation's identity, purpose, and trustworthiness.
+Quality raters check About pages when assessing the site's overall E-E-A-T.
+
+**Required elements:**
+
+- **Organisation name and legal entity** - who actually runs the site
+- **Mission or purpose** - what the site is for, who it serves
+- **Founding/launch date** - demonstrates longevity
+- **Key personnel** - named founders or editors, with roles and credentials
+- **Editorial process** - how content is researched, written, reviewed, and updated
+- **Corrections policy** - how errors are handled
+- **Advertising/affiliate disclosure** - how commercial relationships are handled
+  and how they do or do not influence content
+- **Funding/ownership disclosure** (for news/civic content) - who funds the organisation
+- **Physical address** (for local businesses or organisations with physical operations)
+
+---
+
+## Editorial policy
+
+For content-heavy sites, especially in YMYL verticals, a standalone editorial policy
+page is strongly recommended. It can be linked from the footer, About page, and author
+bylines.
+
+**Sections to include:**
+
+1. **Editorial independence** - how editorial decisions are made, who has final say
+2. **Research and sourcing standards** - what sources are acceptable, how claims are
+   verified, citation requirements
+3. **Expert review process** - who reviews content, their qualifications, how often
+   content is reviewed
+4. **Corrections policy** - what triggers a correction, how quickly, how it is disclosed,
+   whether major corrections are logged
+5. **Sponsorship and affiliate disclosure** - what commercial relationships exist, how
+   they are disclosed inline, how they do not influence editorial decisions
+6. **AI content policy** (increasingly important) - whether AI is used in content
+   creation, in what capacity, and how AI-assisted content is reviewed by humans
+   before publication
+
+---
+
+## E-E-A-T audit checklist
+
+Use this for a systematic E-E-A-T audit of any page or site:
+
+**Experience**
+- [ ] Content includes specific, firsthand details (dates, measurements, personal observations)
+- [ ] Original images or data, not stock photography
+- [ ] "Last tested" or "last updated" date visible
+- [ ] Author discloses the nature of their experience with the topic
+
+**Expertise**
+- [ ] Author credentials are visible in the byline
+- [ ] Author page exists with full background
+- [ ] Content is technically accurate and goes beyond surface-level coverage
+- [ ] For YMYL: content reviewed by a credentialed professional, with reviewer named
+
+**Authoritativeness**
+- [ ] Site has backlinks from recognised publications in the vertical
+- [ ] Author has an external presence (published elsewhere, LinkedIn, etc.)
+- [ ] Brand mentions exist outside the site's own properties
+
+**Trustworthiness**
+- [ ] All articles have a named author
+- [ ] About page is comprehensive, not just a marketing pitch
+- [ ] Contact information is present and functional
+- [ ] Corrections policy exists and is accessible
+- [ ] Affiliate and sponsored content is clearly disclosed
+- [ ] Site uses HTTPS
+- [ ] Privacy policy and terms are current
+- [ ] For YMYL: disclaimer about consulting a professional (where appropriate)

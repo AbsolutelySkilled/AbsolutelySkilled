@@ -1,0 +1,153 @@
+{
+  "skill": "localization-i18n",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to add i18n to a React app",
+      "prompt": "How do I add internationalization support to my React application?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "react-intl" },
+        { "type": "contains", "value": "locale" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on ICU message format question",
+      "prompt": "How do I write a translatable string that handles plural forms correctly?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "plural" },
+        { "type": "contains", "value": "other" },
+        { "type": "contains", "value": "ICU" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on RTL layout support question",
+      "prompt": "I need to add Arabic language support to my web app. How do I handle the RTL layout?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "dir" },
+        { "type": "contains", "value": "inline-start" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can write a correct ICU plural message",
+      "prompt": "Write an ICU MessageFormat string for 'You have N unread emails' that handles zero, singular, and plural correctly",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "plural" },
+        { "type": "contains", "value": "other" },
+        { "type": "contains", "value": "#" },
+        { "type": "not_contains", "value": "=== 1" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can write an ICU select message for gender",
+      "prompt": "Write an ICU message that changes the pronoun based on the user's gender: he/she/they liked your photo",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "select" },
+        { "type": "contains", "value": "male" },
+        { "type": "contains", "value": "female" },
+        { "type": "contains", "value": "other" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can set up i18next with proper configuration",
+      "prompt": "Set up i18next in a React app with English and Japanese locales, language detection, and a fallback language",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "i18next" },
+        { "type": "contains", "value": "fallbackLng" },
+        { "type": "contains", "value": "LanguageDetector" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can format currency for a specific locale using Intl API",
+      "prompt": "How do I format a price of 1234.56 as Japanese Yen using JavaScript's Intl API?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Intl.NumberFormat" },
+        { "type": "contains", "value": "currency" },
+        { "type": "contains", "value": "JPY" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can migrate CSS from physical to logical properties for RTL",
+      "prompt": "Convert this CSS to support RTL: .sidebar { margin-left: 16px; padding-right: 8px; text-align: left; border-left: 1px solid gray; }",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "margin-inline-start" },
+        { "type": "contains", "value": "padding-inline-end" },
+        { "type": "contains", "value": "text-align: start" },
+        { "type": "not_contains", "value": "margin-left" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Knows that Arabic has 6 plural forms",
+      "prompt": "How many plural forms does Arabic have and what are the CLDR categories?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "6" },
+        { "type": "contains", "value": "zero" },
+        { "type": "contains", "value": "one" },
+        { "type": "contains", "value": "two" },
+        { "type": "contains", "value": "few" },
+        { "type": "contains", "value": "many" },
+        { "type": "contains", "value": "other" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Warns against string concatenation for translations",
+      "prompt": "I'm building translations like this: 'Welcome to ' + cityName + ', ' + userName. Is this okay?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "word order" },
+        { "type": "contains", "value": "placeholder" },
+        { "type": "not_contains", "value": "this approach is fine" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not invent non-existent ICU syntax",
+      "prompt": "How do I use ICU MessageFormat's arrayFormat function to translate lists?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "arrayFormat" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Knows French zero is singular, not plural",
+      "prompt": "In French, is zero singular or plural? How does this affect ICU plural messages?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "singular" },
+        { "type": "contains", "value": "one" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "References the pluralization guide for detailed rules",
+      "prompt": "Give me the complete CLDR plural rules for Russian with all the modular arithmetic",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "mod" },
+        { "type": "contains", "value": "few" },
+        { "type": "contains", "value": "many" }
+      ]
+    }
+  ]
+}

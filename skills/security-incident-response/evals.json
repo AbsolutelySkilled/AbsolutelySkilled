@@ -1,0 +1,141 @@
+{
+  "skill": "security-incident-response",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on a security incident report",
+      "prompt": "We just got an alert that someone logged into our admin panel from an IP in a country we've never seen before and downloaded our entire user database. What do I do right now?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "contain" },
+        { "type": "contains", "value": "credentials" },
+        { "type": "contains", "value": "isolat" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on breach response question",
+      "prompt": "Our security team thinks we had a breach three weeks ago. We're not sure what was accessed. How do we start a formal incident response?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "severity" },
+        { "type": "contains", "value": "timeline" },
+        { "type": "contains", "value": "evidence" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on ransomware incident",
+      "prompt": "Files on our file server are being encrypted and a ransom note appeared. What are the first five things we should do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "isolat" },
+        { "type": "contains", "value": "backup" },
+        { "type": "contains", "value": "network" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: severity classification",
+      "prompt": "We received a report from a researcher that a read-only API key was exposed in a public GitHub repo for about 6 hours. The key only has access to non-PII analytics data. How do I classify the severity of this incident?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "P" },
+        { "type": "contains", "value": "revok" },
+        { "type": "contains", "value": "log" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: preserving forensic evidence correctly",
+      "prompt": "We believe a Linux server was compromised. Before we reimage it, what forensic evidence do I need to collect and in what order?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "memory" },
+        { "type": "contains", "value": "volatile" },
+        { "type": "contains", "value": "hash" },
+        { "type": "contains", "value": "chain of custody" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: stakeholder communication template",
+      "prompt": "We have a confirmed P1 breach in progress. Our VP of Engineering is asking for an update to send to the CEO. What should that message contain?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "status" },
+        { "type": "contains", "value": "impact" },
+        { "type": "contains", "value": "next update" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: writing an incident report",
+      "prompt": "Our P2 security incident is resolved. I need to write the formal incident report. What sections should it include and what level of detail is expected?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "timeline" },
+        { "type": "contains", "value": "root cause" },
+        { "type": "contains", "value": "action items" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: IOC analysis and MITRE ATT&CK mapping",
+      "prompt": "During our investigation we found a scheduled task calling out to an unusual domain every 10 minutes, a new local admin account, and several files with randomized names in the Windows temp folder. How do I analyze these IOCs?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "persistence" },
+        { "type": "contains", "value": "command" },
+        { "type": "contains", "value": "MITRE" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Core task: conducting a blameless lessons learned",
+      "prompt": "A developer accidentally committed AWS credentials to a public repo which led to a P2 incident. How should we run the post-mortem without it turning into a blame session?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "blameless" },
+        { "type": "contains", "value": "process" },
+        { "type": "contains", "value": "detect" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns against rebooting a compromised system immediately",
+      "prompt": "We found a server that we think has malware on it. Our first instinct was to reboot it to clear the malware. Is that the right call?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "memory" },
+        { "type": "contains", "value": "volatile" },
+        { "type": "not_contains", "value": "reboot is fine" },
+        { "type": "not_contains", "value": "go ahead and reboot" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns against speculating in external communications",
+      "prompt": "We're not sure how many customer records were accessed in the breach. Our CEO wants to send a customer notification email today saying 'no customer data was compromised.' Should we send it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "speculate" },
+        { "type": "contains", "value": "confirm" },
+        { "type": "contains", "value": "legal" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: correctly states GDPR notification window and advises legal consultation",
+      "prompt": "We discovered a breach yesterday that may have exposed EU customer data. When do we need to notify the data protection authority and who should be involved in that decision?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "72 hours" },
+        { "type": "contains", "value": "legal" },
+        { "type": "not_contains", "value": "30 days" },
+        { "type": "not_contains", "value": "no need to notify" }
+      ]
+    }
+  ]
+}

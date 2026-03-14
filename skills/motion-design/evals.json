@@ -1,0 +1,156 @@
+{
+  "skill": "motion-design",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to add entrance animation to a component",
+      "prompt": "Add a fade-in animation when my card component mounts in React",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "motion" },
+        { "type": "contains", "value": "opacity" },
+        { "type": "contains", "value": "animate" },
+        { "type": "code_valid", "language": "tsx" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on Framer Motion AnimatePresence for exit animations",
+      "prompt": "My modal disappears instantly when I close it. How do I animate it out with Framer Motion?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "AnimatePresence" },
+        { "type": "contains", "value": "exit" },
+        { "type": "contains", "value": "mode" },
+        { "type": "code_valid", "language": "tsx" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-003",
+      "description": "Recommends transform over layout properties for animation",
+      "prompt": "I'm animating a card's width and height on hover but it feels janky. How do I fix it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "transform" },
+        { "type": "contains", "value": "scale" },
+        { "type": "not_contains", "value": "animate width" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-004",
+      "description": "Correctly implements prefers-reduced-motion",
+      "prompt": "How do I make my animations accessible for users with vestibular disorders?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "prefers-reduced-motion" },
+        { "type": "contains", "value": "reduce" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-005",
+      "description": "Implements GSAP timeline with correct overlap offsets",
+      "prompt": "Build a hero section entrance animation where headline, subtext, and CTA animate in sequence with GSAP",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "gsap.timeline" },
+        { "type": "contains", "value": "-=" },
+        { "type": "contains", "value": "ease" },
+        { "type": "code_valid", "language": "ts" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-006",
+      "description": "Recommends CSS transitions for simple hover effects instead of GSAP",
+      "prompt": "Should I use GSAP or CSS for a simple button hover effect?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "CSS" },
+        { "type": "contains", "value": "transition" },
+        { "type": "not_contains", "value": "use GSAP for hover" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-007",
+      "description": "Implements scroll-driven animation with IntersectionObserver",
+      "prompt": "Animate elements as they scroll into the viewport without any libraries",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "IntersectionObserver" },
+        { "type": "contains", "value": "threshold" },
+        { "type": "contains", "value": "transform" },
+        { "type": "code_valid", "language": "ts" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-008",
+      "description": "Knows correct animation duration for interactive UI feedback",
+      "prompt": "How long should a button press animation take?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "100" },
+        { "type": "not_contains", "value": "500ms" },
+        { "type": "not_contains", "value": "1000ms" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-009",
+      "description": "Implements animated accordion using grid-template-rows trick",
+      "prompt": "Create an accordion component that animates open and close smoothly without animating height directly",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "grid-template-rows" },
+        { "type": "contains", "value": "0fr" },
+        { "type": "contains", "value": "1fr" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-010",
+      "description": "Applies correct spring physics for interactive button",
+      "prompt": "Add a spring-based scale animation to a button in Framer Motion that feels snappy",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "spring" },
+        { "type": "contains", "value": "stiffness" },
+        { "type": "contains", "value": "damping" },
+        { "type": "code_valid", "language": "tsx" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-011",
+      "description": "Avoids recommending transition: all",
+      "prompt": "What transition should I put on my card component for hover effects?",
+      "type": "code",
+      "assertions": [
+        { "type": "not_contains", "value": "transition: all" },
+        { "type": "contains", "value": "transform" },
+        { "type": "contains", "value": "ms" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-012",
+      "description": "References the easing-library for spring configuration guidance",
+      "prompt": "I need to pick the right spring settings for different animation personalities in my app. Walk me through the options.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/easing-library.md" },
+        { "type": "contains", "value": "stiffness" },
+        { "type": "contains", "value": "damping" }
+      ],
+      "source": "domain-knowledge"
+    }
+  ]
+}

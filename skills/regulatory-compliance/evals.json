@@ -1,0 +1,138 @@
+{
+  "skill": "regulatory-compliance",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on SOC 2 audit preparation question",
+      "prompt": "We're a B2B SaaS company and our enterprise prospects keep asking for a SOC 2 report. We've never done this before. Where do we start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "gap analysis" },
+        { "type": "contains", "value": "Type II" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on HIPAA safeguards question",
+      "prompt": "Our startup just signed a contract with a hospital system and now we need to sign a Business Associate Agreement. What does HIPAA actually require us to implement technically?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "PHI" },
+        { "type": "contains", "value": "encryption" },
+        { "type": "contains", "value": "audit" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on PCI-DSS scoping question",
+      "prompt": "We're building an e-commerce site that takes credit card payments via Stripe. Do we need to be PCI-DSS compliant and if so what level?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "scope" },
+        { "type": "contains", "value": "SAQ" },
+        { "type": "contains", "value": "tokeniz" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: building a SOC 2 Type II timeline",
+      "prompt": "Our CEO committed to having a SOC 2 Type II report ready in 12 months. We have nothing in place today - no formal policies, no compliance tooling. Is 12 months realistic and what's the roadmap?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "gap analysis" },
+        { "type": "contains", "value": "observation period" },
+        { "type": "contains", "value": "remediation" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: conducting a risk assessment",
+      "prompt": "Our auditor says we need a formal risk assessment before the SOC 2 audit. What does that involve and how do we document it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "likelihood" },
+        { "type": "contains", "value": "impact" },
+        { "type": "contains", "value": "risk register" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: automating compliance evidence collection",
+      "prompt": "We're drowning in manual work every time our auditor asks for evidence - exporting user lists, taking screenshots of settings, chasing managers for sign-offs. How do we automate this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "automat" },
+        { "type": "contains", "value": "access review" },
+        { "type": "contains", "value": "evidence" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: scoping PCI-DSS cardholder data environment",
+      "prompt": "We just found out our payment processing flow actually sends raw card numbers through our API before forwarding to our processor. How does this affect our PCI-DSS scope and what should we do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "scope" },
+        { "type": "contains", "value": "tokeniz" },
+        { "type": "contains", "value": "cardholder data environment" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: managing an active audit",
+      "prompt": "Our SOC 2 auditor just sent us a 60-item evidence request list and wants everything in 2 weeks. How do we organize this and avoid common mistakes that delay the report?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "PBC" },
+        { "type": "contains", "value": "evidence" },
+        { "type": "contains", "value": "auditor" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about treating compliance as one-time project",
+      "prompt": "We just passed our SOC 2 audit. We're thinking of shutting down our compliance tooling to save money and spinning it back up next year before the renewal. Is that a good idea?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "continuous" },
+        { "type": "contains", "value": "evidence" },
+        { "type": "not_contains", "value": "good idea" },
+        { "type": "not_contains", "value": "perfectly fine" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about shared accounts in regulated systems",
+      "prompt": "Our engineering team uses a shared admin account to access the production database for debugging. Our compliance team says this is a problem. Is it really a big deal?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "individual" },
+        { "type": "contains", "value": "accountability" },
+        { "type": "not_contains", "value": "not a big deal" },
+        { "type": "not_contains", "value": "acceptable practice" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns against skipping gap analysis before buying tools",
+      "prompt": "We're about to sign a $30k contract with a compliance automation platform. Should we just get started with the platform and figure out our controls as we go?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "gap analysis" },
+        { "type": "contains", "value": "control" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load: points to controls-matrix reference for SOC 2 mapping",
+      "prompt": "I need to build a controls matrix for our SOC 2 Type II audit that maps Trust Services Criteria to our specific controls and the evidence we'll collect. Where do I start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Trust Services Criteria" },
+        { "type": "contains", "value": "controls-matrix" },
+        { "type": "contains", "value": "evidence" }
+      ]
+    }
+  ]
+}

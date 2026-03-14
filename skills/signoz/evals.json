@@ -1,0 +1,158 @@
+{
+  "skill": "signoz",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when user asks about SigNoz setup",
+      "prompt": "How do I set up SigNoz for monitoring my microservices?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "OpenTelemetry" },
+        { "type": "contains", "value": "SigNoz" }
+      ],
+      "source": "https://signoz.io/docs/introduction/"
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers for SigNoz-specific log management questions",
+      "prompt": "I want to send my application logs to SigNoz. What are my options?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "OTLP" },
+        { "type": "contains", "value": "FluentBit" }
+      ],
+      "source": "https://signoz.io/docs/logs-management/overview/"
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill does not trigger for generic observability questions",
+      "prompt": "What are the three pillars of observability?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "signoz-ingestion-key" }
+      ],
+      "source": "https://signoz.io/docs/introduction/"
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent can produce OTel Collector config for SigNoz Cloud",
+      "prompt": "Write an OpenTelemetry Collector config that sends traces, metrics, and logs to SigNoz Cloud in the US region",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "receivers" },
+        { "type": "contains", "value": "otlp" },
+        { "type": "contains", "value": "signoz-ingestion-key" },
+        { "type": "contains", "value": "ingest" },
+        { "type": "contains", "value": "pipelines" },
+        { "type": "contains", "value": "4317" }
+      ],
+      "source": "https://signoz.io/docs/opentelemetry-collection-agents/vm/install/"
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent can instrument a Node.js app for SigNoz",
+      "prompt": "Instrument my Express.js application to send traces to SigNoz",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "NodeSDK" },
+        { "type": "contains", "value": "OTLPTraceExporter" },
+        { "type": "contains", "value": "getNodeAutoInstrumentations" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "https://signoz.io/docs/instrumentation/"
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent can instrument a Python app for SigNoz",
+      "prompt": "How do I auto-instrument my Django app to send traces to SigNoz?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "opentelemetry-distro" },
+        { "type": "contains", "value": "opentelemetry-instrument" },
+        { "type": "contains", "value": "OTEL_SERVICE_NAME" }
+      ],
+      "source": "https://signoz.io/docs/instrumentation/"
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent can configure SigNoz alerts correctly",
+      "prompt": "Set up a SigNoz alert that notifies Slack when error rate exceeds 100 per 5 minutes",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Log" },
+        { "type": "contains", "value": "Count" },
+        { "type": "contains", "value": "Slack" }
+      ],
+      "source": "https://signoz.io/docs/alerts/"
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent can record exceptions for SigNoz monitoring",
+      "prompt": "How do I manually record exceptions in my Go application so they show up in SigNoz?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "RecordError" },
+        { "type": "contains", "value": "SetStatus" }
+      ],
+      "source": "https://signoz.io/docs/userguide/exceptions/"
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent handles Docker hostmetrics gotcha correctly",
+      "prompt": "My SigNoz host metrics are showing zeros even though the collector is running in Docker. What's wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "root_path" },
+        { "type": "contains", "value": "/hostfs" }
+      ],
+      "source": "https://signoz.io/docs/userguide/hostmetrics/"
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent handles missing data troubleshooting correctly",
+      "prompt": "I set up the OTel Collector but no data appears in SigNoz. How do I debug this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "debug" },
+        { "type": "contains", "value": "exporter" }
+      ],
+      "source": "https://signoz.io/docs/opentelemetry-collection-agents/vm/install/"
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent does not hallucinate a SigNoz REST API for data ingestion",
+      "prompt": "What's the SigNoz REST API endpoint to POST trace data directly?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "OpenTelemetry" },
+        { "type": "contains", "value": "OTLP" },
+        { "type": "not_contains", "value": "/api/v1/traces" }
+      ],
+      "source": "https://signoz.io/docs/introduction/"
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not invent a SigNoz CLI tool",
+      "prompt": "Install the SigNoz CLI and use it to query my traces",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "signoz-cli" },
+        { "type": "not_contains", "value": "npm install signoz" }
+      ],
+      "source": "https://signoz.io/docs/introduction/"
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent correctly references the query builder reference file",
+      "prompt": "I need to build a complex SigNoz dashboard with EWMA smoothing and time shift comparisons",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "EWMA" },
+        { "type": "contains", "value": "Time Shift" },
+        { "type": "contains", "value": "query-builder" }
+      ],
+      "source": "https://signoz.io/docs/userguide/query-builder/"
+    }
+  ]
+}

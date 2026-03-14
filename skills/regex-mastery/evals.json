@@ -1,0 +1,144 @@
+[
+  {
+    "id": "eval-trigger-001",
+    "description": "Skill triggers on writing a validation regex",
+    "prompt": "Write a regex to validate an email address in JavaScript",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "@" },
+      { "type": "contains", "value": "test(" },
+      { "type": "code_valid", "language": "js" }
+    ],
+    "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
+  },
+  {
+    "id": "eval-trigger-002",
+    "description": "Skill triggers on named capture group questions",
+    "prompt": "How do I use named capture groups in a JavaScript regex?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "?<" },
+      { "type": "contains", "value": "groups" },
+      { "type": "contains", "value": "match" }
+    ],
+    "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group"
+  },
+  {
+    "id": "eval-trigger-003",
+    "description": "Skill triggers on lookahead/lookbehind questions",
+    "prompt": "What is the difference between a lookahead and a lookbehind in regex?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "?=" },
+      { "type": "contains", "value": "?<=" },
+      { "type": "contains", "value": "zero-width" }
+    ],
+    "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion"
+  },
+  {
+    "id": "eval-task-001",
+    "description": "Agent can write a URL validation regex",
+    "prompt": "Write a JavaScript function to validate whether a string is a valid HTTP or HTTPS URL",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "https?" },
+      { "type": "code_valid", "language": "js" }
+    ],
+    "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions"
+  },
+  {
+    "id": "eval-task-002",
+    "description": "Agent can extract data with named capture groups from log lines",
+    "prompt": "Parse Apache access log lines and extract the IP address, HTTP method, path, and status code using a JavaScript regex",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "?<ip>" },
+      { "type": "contains", "value": "?<method>" },
+      { "type": "contains", "value": "?<status>" },
+      { "type": "contains", "value": "match.groups" },
+      { "type": "code_valid", "language": "js" }
+    ],
+    "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group"
+  },
+  {
+    "id": "eval-task-003",
+    "description": "Agent can use matchAll to iterate all matches",
+    "prompt": "Extract all @mentions from a string using JavaScript regex and return them as an array",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "matchAll" },
+      { "type": "contains", "value": "/g" },
+      { "type": "code_valid", "language": "js" }
+    ],
+    "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll"
+  },
+  {
+    "id": "eval-task-004",
+    "description": "Agent can reformat strings using replace with named groups",
+    "prompt": "Use a JavaScript regex to reformat a date string from MM/DD/YYYY to YYYY-MM-DD",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": ".replace(" },
+      { "type": "contains", "value": "$<year>" },
+      { "type": "code_valid", "language": "js" }
+    ],
+    "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace"
+  },
+  {
+    "id": "eval-task-005",
+    "description": "Agent uses the u flag for Unicode-correct regex",
+    "prompt": "Write a JavaScript regex that correctly counts Unicode characters including emoji",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "/u" },
+      { "type": "code_valid", "language": "js" }
+    ],
+    "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode"
+  },
+  {
+    "id": "eval-gotcha-001",
+    "description": "Agent warns about catastrophic backtracking with nested quantifiers",
+    "prompt": "Is the regex /^(a+)+$/ safe to use in production JavaScript?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "backtrack" },
+      { "type": "contains", "value": "exponential" }
+    ],
+    "source": "https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS"
+  },
+  {
+    "id": "eval-gotcha-002",
+    "description": "Agent recommends anchoring validation patterns",
+    "prompt": "Why does my email validation regex /[a-z]+@[a-z]+\\.[a-z]+/ match the string 'hello notanemail@example.com world'?",
+    "type": "explanation",
+    "assertions": [
+      { "type": "contains", "value": "^" },
+      { "type": "contains", "value": "$" },
+      { "type": "contains", "value": "anchor" }
+    ],
+    "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions"
+  },
+  {
+    "id": "eval-gotcha-003",
+    "description": "Agent warns about lookbehind browser compatibility",
+    "prompt": "Use a lookbehind assertion to extract dollar amounts from a string in JavaScript",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "?<=" },
+      { "type": "contains", "value": "\\$" },
+      { "type": "code_valid", "language": "js" }
+    ],
+    "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion"
+  },
+  {
+    "id": "eval-anti-hallucination-001",
+    "description": "Agent does not recommend regex for full HTML parsing",
+    "prompt": "Write a regex to parse all href attributes from anchor tags in an HTML document",
+    "type": "explanation",
+    "assertions": [
+      { "type": "not_contains", "value": "/<a[^>]*href=\"([^\"]+)\"[^>]*>.*?<\\/a>/gis" },
+      { "type": "contains", "value": "parser" }
+    ],
+    "source": "https://developer.mozilla.org/en-US/docs/Web/API/DOMParser"
+  }
+]

@@ -1,0 +1,169 @@
+{
+  "skill": "developer-experience",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on SDK design request",
+      "prompt": "I'm building a Node.js SDK for our payment API. How should I design the public interface?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "verb-noun" },
+        { "type": "contains", "value": "options object" },
+        { "type": "contains", "value": "defaults" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on onboarding/quickstart request",
+      "prompt": "Write a getting-started guide for our new CLI tool",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "prerequisites" },
+        { "type": "contains", "value": "install" },
+        { "type": "contains", "value": "next steps" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on changelog writing request",
+      "prompt": "We renamed the createPayment method to createPaymentIntent. Write the changelog entry.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Changed" },
+        { "type": "contains", "value": "createPayment" },
+        { "type": "contains", "value": "createPaymentIntent" },
+        { "type": "contains", "value": "migration" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-004",
+      "description": "Can design an SDK constructor with sensible defaults",
+      "prompt": "Design the constructor for a TypeScript SDK client that needs an API key and optional base URL, timeout, and retry config",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "apiKey" },
+        { "type": "contains", "value": "baseUrl" },
+        { "type": "contains", "value": "timeout" },
+        { "type": "not_contains", "value": "any" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-005",
+      "description": "Can write a migration guide for a breaking change",
+      "prompt": "Write a migration guide section for renaming our SDK's `sendEmail` method to `emails.send` in v3",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Before" },
+        { "type": "contains", "value": "After" },
+        { "type": "contains", "value": "sendEmail" },
+        { "type": "contains", "value": "emails.send" },
+        { "type": "contains", "value": "Why" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-006",
+      "description": "Can design SDK error hierarchy",
+      "prompt": "Design an error handling strategy for our Python SDK that wraps a REST API",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "NotFound" },
+        { "type": "contains", "value": "Auth" },
+        { "type": "contains", "value": "RateLimit" },
+        { "type": "not_contains", "value": "return None" },
+        { "type": "code_valid", "language": "python" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-007",
+      "description": "Can structure a developer portal",
+      "prompt": "How should I organize our developer documentation site? We have an API, SDKs in 3 languages, and webhooks.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "quickstart" },
+        { "type": "contains", "value": "api-reference" },
+        { "type": "contains", "value": "guides" },
+        { "type": "contains", "value": "changelog" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-008",
+      "description": "Handles deprecation communication correctly",
+      "prompt": "We need to deprecate our v1 webhooks format. How should we communicate this to developers?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "timeline" },
+        { "type": "contains", "value": "migration" },
+        { "type": "contains", "value": "deprecat" },
+        { "type": "not_contains", "value": "just remove it" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: knows changelog entries need migration paths",
+      "prompt": "Write a changelog for removing the `legacyMode` config option in our SDK v4 release",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Removed" },
+        { "type": "contains", "value": "legacyMode" },
+        { "type": "contains", "value": "instead" },
+        { "type": "not_contains", "value": "various improvements" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: knows quickstart should be under 5 minutes",
+      "prompt": "Our quickstart guide requires setting up Docker, creating a database, and configuring 3 environment variables before the first API call. Is this okay?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "5 minute" },
+        { "type": "contains", "value": "sandbox" },
+        { "type": "contains", "value": "friction" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not invent DX metrics that don't exist",
+      "prompt": "What is the standard DX-Score framework for measuring developer experience?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "DX-Score is a standardized" },
+        { "type": "contains", "value": "time to first" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not recommend nonexistent tools",
+      "prompt": "Should I use the official DX-Lint tool to validate my SDK design?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "npm install dx-lint" },
+        { "type": "not_contains", "value": "DX-Lint is a popular" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-013",
+      "description": "References load: points to SDK design reference for deep questions",
+      "prompt": "Give me a comprehensive checklist for designing our new TypeScript SDK from scratch",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "sdk-design" },
+        { "type": "contains", "value": "references" }
+      ],
+      "source": "domain-knowledge"
+    }
+  ]
+}

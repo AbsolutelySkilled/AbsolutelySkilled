@@ -1,0 +1,146 @@
+{
+  "skill": "pricing-strategy",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on a pricing page design request",
+      "prompt": "I need to design the pricing page for my SaaS product. We have three plans. How should I structure it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "anchor" },
+        { "type": "contains", "value": "Most Popular" },
+        { "type": "contains", "value": "middle tier" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on monetization strategy question",
+      "prompt": "What pricing model should I use for my developer API platform?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "usage-based" },
+        { "type": "contains", "value": "value metric" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on freemium vs free trial decision",
+      "prompt": "Should my product offer a freemium plan or a 14-day free trial?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "freemium" },
+        { "type": "contains", "value": "free trial" },
+        { "type": "contains", "value": "network effect" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can design a three-tier packaging structure",
+      "prompt": "Package our project management tool into pricing tiers. We have task boards, time tracking, resource planning, Gantt charts, SSO, and an API.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Starter" },
+        { "type": "contains", "value": "SSO" },
+        { "type": "contains", "value": "Enterprise" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can structure usage-based pricing with committed tiers",
+      "prompt": "Design usage-based pricing for our email API that sends 500M emails per month across all customers.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "per-unit" },
+        { "type": "contains", "value": "volume" },
+        { "type": "contains", "value": "committed" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can structure enterprise pricing with negotiation levers",
+      "prompt": "We are about to close a 500-seat enterprise deal. How should we structure the pricing and what discount levers do we have?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "annual" },
+        { "type": "contains", "value": "multi-year" },
+        { "type": "contains", "value": "30%" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can design a price test using Van Westendorp methodology",
+      "prompt": "How do I run a willingness-to-pay study for my new product?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Van Westendorp" },
+        { "type": "contains", "value": "too cheap" },
+        { "type": "contains", "value": "too expensive" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Handles the gotcha of A/B testing prices safely",
+      "prompt": "Can I A/B test different prices on my pricing page?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "trust" },
+        { "type": "contains", "value": "geographic" },
+        { "type": "not_contains", "value": "show different prices to the same users" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Handles the gotcha of changing prices on existing customers",
+      "prompt": "We want to raise prices by 40% next month. How should we handle existing customers?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "grandfather" },
+        { "type": "contains", "value": "notice" },
+        { "type": "not_contains", "value": "just update the price for everyone" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Avoids hallucinating a specific optimal conversion rate",
+      "prompt": "What is the exact optimal freemium conversion rate I should target?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "2" },
+        { "type": "contains", "value": "5%" },
+        { "type": "not_contains", "value": "the optimal rate is exactly" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not invent a universal pricing formula",
+      "prompt": "Give me the formula to calculate the perfect price for any SaaS product",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "perfect price formula" },
+        { "type": "contains", "value": "value" },
+        { "type": "contains", "value": "willingness to pay" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References the pricing-models file for deep model comparison",
+      "prompt": "I need a detailed comparison of all the different pricing models available for SaaS. Which reference file should I look at?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "references/pricing-models.md" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Can design freemium upgrade triggers",
+      "prompt": "Our freemium conversion rate is only 1%. How do we get more free users to upgrade?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "usage limit" },
+        { "type": "contains", "value": "feature gate" },
+        { "type": "contains", "value": "upgrade" }
+      ]
+    }
+  ]
+}

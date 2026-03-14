@@ -1,0 +1,135 @@
+[
+  {
+    "id": "eval-trigger-001",
+    "description": "Skill triggers on system prompt design request",
+    "prompt": "Write a system prompt for a customer support agent that handles refunds and technical issues",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "system" },
+      { "type": "contains", "value": "constraints" },
+      { "type": "not_contains", "value": "Be helpful, harmless, and honest" }
+    ]
+  },
+  {
+    "id": "eval-trigger-002",
+    "description": "Skill triggers on RAG pipeline request",
+    "prompt": "How do I build a RAG pipeline to answer questions from my documentation?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "retrieval" },
+      { "type": "contains", "value": "chunk" },
+      { "type": "contains", "value": "embed" }
+    ]
+  },
+  {
+    "id": "eval-task-001",
+    "description": "Agent provides correct chain-of-thought prompting pattern",
+    "prompt": "How do I use chain-of-thought prompting to improve accuracy on math problems?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "step by step" },
+      { "type": "contains", "value": "reasoning" },
+      { "type": "contains", "value": "temperature" }
+    ]
+  },
+  {
+    "id": "eval-task-002",
+    "description": "Agent explains few-shot example design correctly",
+    "prompt": "How many few-shot examples should I include in my prompt and how should I order them?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "3" },
+      { "type": "contains", "value": "8" },
+      { "type": "contains", "value": "representative" }
+    ]
+  },
+  {
+    "id": "eval-task-003",
+    "description": "Agent gives correct structured JSON output pattern with validation",
+    "prompt": "How do I reliably get JSON output from an LLM in my Python application?",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "json" },
+      { "type": "contains", "value": "retry" },
+      { "type": "contains", "value": "validate" },
+      { "type": "not_contains", "value": "trust" }
+    ]
+  },
+  {
+    "id": "eval-task-004",
+    "description": "Agent explains RAG context injection with proper delimiters",
+    "prompt": "Show me how to inject retrieved document chunks into a prompt for a QA bot",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "---" },
+      { "type": "contains", "value": "context" },
+      { "type": "contains", "value": "only" }
+    ]
+  },
+  {
+    "id": "eval-task-005",
+    "description": "Agent explains prompt chaining decomposition pattern",
+    "prompt": "I need to research a topic, write an outline, and then generate an article. Should I do this in one prompt?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "chain" },
+      { "type": "contains", "value": "sequential" },
+      { "type": "contains", "value": "separate" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-001",
+    "description": "Agent warns against high temperature for structured extraction",
+    "prompt": "I keep getting JSON parse errors when extracting data from text. What am I doing wrong?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "temperature" },
+      { "type": "contains", "value": "0" },
+      { "type": "contains", "value": "validate" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-002",
+    "description": "Agent warns about lost-in-the-middle problem for long context RAG",
+    "prompt": "Should I just dump my entire knowledge base into the context window for RAG?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "lost in the middle" },
+      { "type": "contains", "value": "chunk" },
+      { "type": "contains", "value": "retrieve" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-003",
+    "description": "Agent recommends eval set before production deployment",
+    "prompt": "How do I know if my updated system prompt is better than the previous version?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "eval" },
+      { "type": "contains", "value": "golden" },
+      { "type": "contains", "value": "regression" }
+    ]
+  },
+  {
+    "id": "eval-anti-hallucination-001",
+    "description": "Agent does not recommend injecting unconstrained model output without validation",
+    "prompt": "Build a pipeline that takes LLM output and passes it directly to a database insert",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "validate" },
+      { "type": "not_contains", "value": "trust the model" },
+      { "type": "not_contains", "value": "no need to validate" }
+    ]
+  },
+  {
+    "id": "eval-references-001",
+    "description": "Agent references the techniques catalog when asked about specific advanced techniques",
+    "prompt": "What is the Tree of Thoughts prompting technique and when should I use it?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "Tree of Thoughts" },
+      { "type": "contains", "value": "branch" },
+      { "type": "contains", "value": "techniques-catalog" }
+    ]
+  }
+]

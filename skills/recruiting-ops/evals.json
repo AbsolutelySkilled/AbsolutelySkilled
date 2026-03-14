@@ -1,0 +1,136 @@
+{
+  "skill": "recruiting-ops",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when user asks how to write a job description",
+      "prompt": "Help me write a job description for a senior software engineer role",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "must-have" },
+        { "type": "contains", "value": "salary" },
+        { "type": "contains", "value": "inclusive" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers when user asks about sourcing candidates",
+      "prompt": "We are struggling to find senior ML engineers. What sourcing channels should we use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "LinkedIn" },
+        { "type": "contains", "value": "referral" },
+        { "type": "contains", "value": "channel" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Agent can design a structured interview loop",
+      "prompt": "Design an interview loop for a product manager role at a Series B startup",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "screen" },
+        { "type": "contains", "value": "competenc" },
+        { "type": "contains", "value": "debrief" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent provides structured offer management guidance",
+      "prompt": "A candidate finished their final round yesterday. How do I run the offer process?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "verbal offer" },
+        { "type": "contains", "value": "24 hours" },
+        { "type": "contains", "value": "comp" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent provides recruiting funnel metrics guidance",
+      "prompt": "What metrics should I track to know if my recruiting pipeline is healthy?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "time-to" },
+        { "type": "contains", "value": "offer acceptance" },
+        { "type": "contains", "value": "conversion" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent warns against unstructured interviews",
+      "prompt": "Our interviewers just have free-form conversations with candidates. Is that OK?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "bias" },
+        { "type": "contains", "value": "structured" },
+        { "type": "contains", "value": "scorecard" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent generates an inclusive job description checklist",
+      "prompt": "How do I make sure my job description is inclusive and not discouraging underrepresented candidates?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "salary range" },
+        { "type": "contains", "value": "gendered" },
+        { "type": "contains", "value": "must-have" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent provides closing tactics for reluctant candidates",
+      "prompt": "A candidate got our offer but seems hesitant and has not responded in 4 days. How do I close them?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "hesitation" },
+        { "type": "contains", "value": "hiring manager" },
+        { "type": "contains", "value": "competing offer" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent recommends multi-channel sourcing, not single-channel",
+      "prompt": "We only post on LinkedIn and hope for applicants. Is that a good strategy?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "three channel" },
+        { "type": "contains", "value": "referral" },
+        { "type": "not_contains", "value": "sufficient" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent explains employer brand building tactics",
+      "prompt": "How do we build an employer brand to attract better candidates passively?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "careers page" },
+        { "type": "contains", "value": "Glassdoor" },
+        { "type": "contains", "value": "blog" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent does not trigger for performance management questions",
+      "prompt": "One of my engineers is underperforming. How do I put them on a PIP?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "job description" },
+        { "type": "not_contains", "value": "sourcing" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent references job-description-templates.md for detailed templates",
+      "prompt": "Give me a full job description template I can use for a marketing hire",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "job-description-templates.md" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "skill": "pixel-art-sprites",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers on sprite creation request",
+      "prompt": "I need to create a 32x32 pixel art character sprite for my game. Where do I start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "silhouette" },
+        { "type": "contains", "value": "palette" },
+        { "type": "contains", "value": "shading" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers on tileset design question",
+      "prompt": "How do I design a tileset for my 2D RPG game?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "seamless" },
+        { "type": "contains", "value": "16x16" },
+        { "type": "contains", "value": "transition" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers on pixel art palette question",
+      "prompt": "How many colors should I use for my pixel art game and how do I pick them?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "hue shift" },
+        { "type": "contains", "value": "ramp" },
+        { "type": "contains", "value": "16" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent can explain walk cycle frame structure",
+      "prompt": "Create a walk cycle for my 16x16 pixel art character. How many frames do I need and what are the key poses?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "contact" },
+        { "type": "contains", "value": "passing" },
+        { "type": "contains", "value": "4" },
+        { "type": "contains", "value": "volume" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent provides correct Phaser sprite sheet loading code",
+      "prompt": "Show me how to load and animate a pixel art sprite sheet in Phaser 3",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "spritesheet" },
+        { "type": "contains", "value": "frameWidth" },
+        { "type": "contains", "value": "pixelArt" },
+        { "type": "contains", "value": "anims.create" },
+        { "type": "code_valid", "language": "js" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent explains hue shifting for color ramps",
+      "prompt": "How do I shade my pixel art sprite? It looks flat when I just darken the colors.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "hue shift" },
+        { "type": "contains", "value": "shadow" },
+        { "type": "contains", "value": "cool" },
+        { "type": "contains", "value": "warm" },
+        { "type": "not_contains", "value": "opacity" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent correctly explains auto-tiling bitmask system",
+      "prompt": "How does auto-tiling work? I want my terrain to automatically pick the right tile based on neighbors.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "bitmask" },
+        { "type": "contains", "value": "neighbor" },
+        { "type": "contains", "value": "16" },
+        { "type": "contains", "value": "47" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent warns against bilinear filtering for pixel art",
+      "prompt": "My pixel art looks blurry in Unity. What's wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "nearest" },
+        { "type": "contains", "value": "Point" },
+        { "type": "contains", "value": "filter" },
+        { "type": "not_contains", "value": "bilinear" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent explains sub-pixel animation correctly",
+      "prompt": "What is sub-pixel animation in pixel art and when should I use it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "brightness" },
+        { "type": "contains", "value": "adjacent" },
+        { "type": "contains", "value": "integer scale" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent warns against pure black outlines",
+      "prompt": "Should I use black outlines for my pixel art character?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "dark" },
+        { "type": "contains", "value": "saturated" },
+        { "type": "not_contains", "value": "always use black" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent does not invent non-existent pixel art tools or APIs",
+      "prompt": "Can I use the PixelForge.autoShade() API to automatically shade my sprites?",
+      "type": "factual",
+      "assertions": [
+        { "type": "not_contains", "value": "PixelForge.autoShade" },
+        { "type": "not_contains", "value": "import PixelForge" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not recommend lossy formats for pixel art",
+      "prompt": "What format should I save my pixel art sprites in?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "PNG" },
+        { "type": "not_contains", "value": "JPEG is fine" },
+        { "type": "not_contains", "value": "use JPG" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent references palette-recipes.md for detailed palette info",
+      "prompt": "I need a full color palette for a fantasy RPG pixel art game. Can you give me specific hex values?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "palette" },
+        { "type": "contains", "value": "ramp" },
+        { "type": "contains", "value": "references" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "Agent provides correct attack animation frame timing",
+      "prompt": "How do I animate a sword attack for my pixel art character? It feels too slow.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "anticipation" },
+        { "type": "contains", "value": "strike" },
+        { "type": "contains", "value": "recovery" },
+        { "type": "contains", "value": "shortest" }
+      ]
+    },
+    {
+      "id": "eval-015",
+      "description": "Agent explains dithering usage and limitations",
+      "prompt": "When should I use dithering in my pixel art?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "checkerboard" },
+        { "type": "contains", "value": "gradient" },
+        { "type": "contains", "value": "16x16" }
+      ]
+    }
+  ]
+}

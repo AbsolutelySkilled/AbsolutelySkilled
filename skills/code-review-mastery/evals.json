@@ -1,0 +1,135 @@
+{
+  "skill": "code-review-mastery",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on explicit PR review request",
+      "prompt": "Can you review this pull request? It adds a new user registration endpoint.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "correctness" },
+        { "type": "contains", "value": "security" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on request to improve review comment quality",
+      "prompt": "My code review comments keep starting arguments. How do I give better feedback without upsetting people?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "blocking" },
+        { "type": "contains", "value": "suggestion" },
+        { "type": "contains", "value": "nit" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Can produce a systematic review sequence for a PR",
+      "prompt": "Walk me through how to review a pull request that touches authentication logic.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "security" },
+        { "type": "contains", "value": "tests" },
+        { "type": "contains", "value": "correctness" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can write a blocking comment with correct template structure",
+      "prompt": "Write a code review comment for this code: users.forEach(user => { db.query('SELECT * FROM orders WHERE user_id = ' + user.id); })",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "blocking" },
+        { "type": "contains", "value": "N+1" },
+        { "type": "contains", "value": "loop" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can identify SQL injection vulnerability as a blocking security issue",
+      "prompt": "Review this function: function getUser(id) { return db.query('SELECT * FROM users WHERE id = ' + id); }",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "injection" },
+        { "type": "contains", "value": "blocking" },
+        { "type": "contains", "value": "parameterized" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can categorize a style comment correctly as a nit, not a blocker",
+      "prompt": "Should I block a PR because the developer used let instead of const for a variable that is never reassigned?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "nit" },
+        { "type": "not_contains", "value": "block" },
+        { "type": "contains", "value": "linter" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can explain how to handle a reviewer-author disagreement",
+      "prompt": "The author of a PR disagrees with my blocking comment and says my feedback is just a personal preference. How do I handle this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "standard" },
+        { "type": "contains", "value": "third" },
+        { "type": "contains", "value": "reasoning" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can detect a missing authorization check as a security issue",
+      "prompt": "Review this endpoint: app.get('/api/documents/:id', async (req, res) => { const doc = await Document.findById(req.params.id); res.json(doc); })",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "auth" },
+        { "type": "contains", "value": "blocking" },
+        { "type": "contains", "value": "IDOR" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Correctly advises against rubber-stamp approvals",
+      "prompt": "We have a big PR with 1200 lines changed. The author is a senior engineer I trust. Can I just approve it quickly?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "read" },
+        { "type": "not_contains", "value": "yes, just approve" },
+        { "type": "contains", "value": "split" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Does not invent a non-existent code review standard or framework",
+      "prompt": "What does the Google-Atlassian Unified Code Review Standard say about comment tone?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "Google-Atlassian Unified Code Review Standard" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Can recommend CODEOWNERS and branch protection setup for team review process",
+      "prompt": "How do I set up our GitHub repo so that the security team is always required to review changes to the auth directory?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "CODEOWNERS" },
+        { "type": "contains", "value": "branch protection" },
+        { "type": "contains", "value": "@security-team" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References the review checklist for detailed structured review setup",
+      "prompt": "Give me a comprehensive checklist I can use every time I review a pull request",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "review-checklist" },
+        { "type": "contains", "value": "security" },
+        { "type": "contains", "value": "testing" }
+      ]
+    }
+  ]
+}

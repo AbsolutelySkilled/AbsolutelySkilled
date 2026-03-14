@@ -1,0 +1,166 @@
+{
+  "skill": "agile-scrum",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: skill activates for sprint planning question",
+      "prompt": "How should I run sprint planning for my team's upcoming 2-week sprint?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "sprint goal" },
+        { "type": "contains", "value": "velocity" },
+        { "type": "contains", "value": "backlog" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: skill activates for estimation question",
+      "prompt": "What's the best way to estimate user stories with my dev team?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "story points" },
+        { "type": "contains", "value": "Fibonacci" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: skill activates for Kanban setup",
+      "prompt": "I want to set up a Kanban board for my engineering team of 6 people",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "WIP" },
+        { "type": "contains", "value": "In Progress" },
+        { "type": "contains", "value": "Done" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: can produce a sprint planning agenda",
+      "prompt": "Create a sprint planning agenda for a 2-week sprint with a team of 5 developers",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "sprint goal" },
+        { "type": "contains", "value": "capacity" },
+        { "type": "contains", "value": "backlog" },
+        { "type": "contains", "value": "2 hour" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: can explain story point estimation with reference table",
+      "prompt": "Explain story point estimation using the Fibonacci scale with examples for each level",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "1" },
+        { "type": "contains", "value": "3" },
+        { "type": "contains", "value": "5" },
+        { "type": "contains", "value": "8" },
+        { "type": "contains", "value": "13" },
+        { "type": "contains", "value": "complexity" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: can design a retrospective session",
+      "prompt": "Design a 45-minute retrospective for my team after a rough sprint where we only completed 60% of committed work",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "action item" },
+        { "type": "contains", "value": "vote" },
+        { "type": "contains", "value": "owner" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: can recommend velocity tracking metrics",
+      "prompt": "What metrics should I track each sprint to monitor my team's health and velocity?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "velocity" },
+        { "type": "contains", "value": "completion rate" },
+        { "type": "contains", "value": "carry-over" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: can write a well-structured user story",
+      "prompt": "Write a user story with acceptance criteria for a password reset feature",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "As a" },
+        { "type": "contains", "value": "I want" },
+        { "type": "contains", "value": "so that" },
+        { "type": "contains", "value": "Given" },
+        { "type": "contains", "value": "When" },
+        { "type": "contains", "value": "Then" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns against using velocity to compare teams",
+      "prompt": "Team A has velocity 45 and Team B has velocity 30. How do I make Team B as productive as Team A?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "compare" },
+        { "type": "not_contains", "value": "Team B is less productive" },
+        { "type": "not_contains", "value": "Team B should increase their velocity to match" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns against skipping retrospectives",
+      "prompt": "We're behind on our deliverables this sprint. Should we skip the retrospective to save time?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "never skip" },
+        { "type": "not_contains", "value": "yes, skip the retrospective" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: correctly handles WIP limit violations",
+      "prompt": "All our Kanban columns are full but I have a new urgent feature to start. What should I do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "WIP limit" },
+        { "type": "contains", "value": "finish" },
+        { "type": "not_contains", "value": "just add it anyway" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not invent Scrum roles that don't exist",
+      "prompt": "What are the roles in a Scrum team?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "Product Owner" },
+        { "type": "contains", "value": "Scrum Master" },
+        { "type": "contains", "value": "Developer" },
+        { "type": "not_contains", "value": "Project Manager" },
+        { "type": "not_contains", "value": "Sprint Manager" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Anti-hallucination: does not confuse story points with hours",
+      "prompt": "A 5-point story should take about 5 hours, right?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "complexity" },
+        { "type": "not_contains", "value": "yes, 5 hours" },
+        { "type": "not_contains", "value": "1 point equals 1 hour" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "References load: correctly points to estimation reference for deep dive",
+      "prompt": "I want to learn about all the different estimation techniques beyond story points - T-shirt sizing, affinity estimation, and #NoEstimates",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "T-shirt" },
+        { "type": "contains", "value": "estimation" }
+      ]
+    }
+  ]
+}

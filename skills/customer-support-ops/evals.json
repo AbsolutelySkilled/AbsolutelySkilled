@@ -1,0 +1,137 @@
+{
+  "skill": "customer-support-ops",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers when user asks about designing a ticket triage system",
+      "prompt": "How should I set up a ticket triage system for our growing support team?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "priority" },
+        { "type": "contains", "value": "triage" },
+        { "type": "contains", "value": "routing" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers when user asks about SLA targets",
+      "prompt": "We need to define SLA targets for our customer support. What should our first response and resolution times be?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "first response" },
+        { "type": "contains", "value": "resolution" },
+        { "type": "contains", "value": "tier" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers when user asks about building a macro library",
+      "prompt": "I want to create a library of canned responses for our support agents. Where do I start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "macro" },
+        { "type": "contains", "value": "personalization" },
+        { "type": "contains", "value": "category" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Correctly classifies a critical service outage ticket as P1",
+      "prompt": "Our payment processing is completely down and customers cannot check out. What priority should this ticket be and what is our FRT target?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "P1" },
+        { "type": "contains", "value": "1 hour" },
+        { "type": "not_contains", "value": "P4" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Designs a tiered escalation workflow with clear handoff requirements",
+      "prompt": "Design an escalation workflow for our support team. We have L1 generalists and L2 specialists.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Tier 1" },
+        { "type": "contains", "value": "Tier 2" },
+        { "type": "contains", "value": "escalation" },
+        { "type": "contains", "value": "handoff" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Provides correct SLA breach alerting guidance with percentage thresholds",
+      "prompt": "How should we alert our team when SLA breaches are about to happen?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "75%" },
+        { "type": "contains", "value": "breach" },
+        { "type": "contains", "value": "escalate" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Identifies root cause of CSAT drop after introducing macros",
+      "prompt": "Our CSAT dropped after we introduced canned responses. What might be wrong with our macros?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "personalization" },
+        { "type": "contains", "value": "review" },
+        { "type": "not_contains", "value": "Dear Customer" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Recommends correct queue health metrics to track",
+      "prompt": "What metrics should I track to know if my support queue is healthy?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "first response" },
+        { "type": "contains", "value": "resolution" },
+        { "type": "contains", "value": "CSAT" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Warns against measuring agents purely on ticket close speed",
+      "prompt": "We are going to measure our support team purely on how fast they close tickets. Good idea?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "CSAT" },
+        { "type": "contains", "value": "first response" },
+        { "type": "not_contains", "value": "yes, that is fine" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Explains VIP support protocol with correct routing and response times",
+      "prompt": "We just signed a $200k enterprise deal. How should we handle their support tickets differently?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "VIP" },
+        { "type": "contains", "value": "dedicated" },
+        { "type": "contains", "value": "CSM" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not invent support tool APIs or fictional platform methods",
+      "prompt": "What is the standard SupportOps.triageTicket() API method for auto-triage in enterprise helpdesks?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "SupportOps.triageTicket()" },
+        { "type": "not_contains", "value": "import SupportOps" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References macro-templates.md when user asks for ready-to-use templates",
+      "prompt": "Give me a complete set of macro templates I can use for our support team right now.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "macro-templates.md" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

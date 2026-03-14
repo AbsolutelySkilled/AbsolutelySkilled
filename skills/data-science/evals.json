@@ -1,0 +1,142 @@
+{
+  "skill": "data-science",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on EDA question",
+      "prompt": "I just got a new CSV dataset with 50 columns and 200k rows. Where do I even start? I want to understand what's in it before doing anything else.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "describe" },
+        { "type": "contains", "value": "isnull" },
+        { "type": "contains", "value": "hist" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on hypothesis testing question",
+      "prompt": "I want to know if users who see a red button convert more than users who see a blue button. How do I test this statistically?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "chi-square" },
+        { "type": "contains", "value": "p-value" },
+        { "type": "contains", "value": "null hypothesis" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on A/B test analysis",
+      "prompt": "Our A/B test ran for two weeks. Control had 12,400 users and 620 conversions. Treatment had 12,600 users and 693 conversions. Is this statistically significant?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "proportions_ztest" },
+        { "type": "contains", "value": "p_value" },
+        { "type": "contains", "value": "lift" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: data cleaning pipeline with missing values",
+      "prompt": "My DataFrame has 30% missing values in some columns, inconsistent column names with spaces, and duplicates. Give me a clean, reusable function to fix all of this.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "df.copy" },
+        { "type": "contains", "value": "drop_duplicates" },
+        { "type": "contains", "value": "fillna" },
+        { "type": "contains", "value": "median" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: choosing the right statistical test",
+      "prompt": "I have three groups (A, B, C) and a continuous outcome variable. I want to know if the means are different across groups. What test should I run?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ANOVA" },
+        { "type": "contains", "value": "normality" },
+        { "type": "contains", "value": "Kruskal" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: feature engineering without data leakage",
+      "prompt": "I'm building a churn prediction model. I have a date column, some categorical features, and numeric features. Walk me through feature engineering correctly.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "train_test_split" },
+        { "type": "contains", "value": "fit_transform" },
+        { "type": "contains", "value": "transform" },
+        { "type": "contains", "value": "leakage" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: visualizing distributions and correlations",
+      "prompt": "I want to visualize the distribution of my numeric features and see which ones are correlated. Give me clean, production-quality matplotlib/seaborn code.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "heatmap" },
+        { "type": "contains", "value": "corr" },
+        { "type": "contains", "value": "hist" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: interpret linear regression coefficients",
+      "prompt": "I ran an OLS regression and got a coefficient of 2.3 for 'years_experience' with p=0.001 and a coefficient of -0.5 for 'remote_work' with p=0.38. What does this mean?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "statistically significant" },
+        { "type": "contains", "value": "p=0.38" },
+        { "type": "contains", "value": "holding" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about p-hacking / peeking at A/B test",
+      "prompt": "Our A/B test has been running for 3 days and the p-value just hit 0.04. Should I call it a win and stop the test now to ship the feature?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "false positive" },
+        { "type": "contains", "value": "sample size" },
+        { "type": "not_contains", "value": "yes, stop" },
+        { "type": "not_contains", "value": "safe to stop" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about data leakage from fitting on full dataset",
+      "prompt": "I scaled all my features using StandardScaler, then split into train and test, and got 98% accuracy. My manager is excited but I'm not sure this is real. Am I missing something?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "leakage" },
+        { "type": "contains", "value": "split first" },
+        { "type": "contains", "value": "fit_transform" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns about correlation vs causation",
+      "prompt": "I found that ice cream sales are strongly correlated (r=0.92) with drowning deaths. Does this mean ice cream causes drowning? What should I conclude?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "causation" },
+        { "type": "contains", "value": "confound" },
+        { "type": "not_contains", "value": "ice cream causes" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not recommend using mean for skewed salary data",
+      "prompt": "Our dataset has salary values ranging from $30k to $2M with a very long right tail. I want to report the 'typical' salary. Should I use the mean?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "median" },
+        { "type": "contains", "value": "skew" },
+        { "type": "not_contains", "value": "mean is appropriate" },
+        { "type": "not_contains", "value": "use the mean" }
+      ]
+    }
+  ]
+}

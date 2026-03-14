@@ -1,0 +1,168 @@
+[
+  {
+    "id": "eval-trigger-001",
+    "description": "Skill triggers on full SEO audit request",
+    "prompt": "Run a full SEO audit on my e-commerce site and tell me what needs fixing",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "scorecard" },
+      { "type": "contains", "value": "PASS" },
+      { "type": "contains", "value": "FAIL" },
+      { "type": "contains", "value": "Technical" }
+    ]
+  },
+  {
+    "id": "eval-trigger-002",
+    "description": "Skill triggers on quick SEO health check request",
+    "prompt": "Can you do a quick SEO health check on my website before we launch?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "robots.txt" },
+      { "type": "contains", "value": "sitemap" },
+      { "type": "contains", "value": "HTTPS" },
+      { "type": "contains", "value": "Core Web Vitals" }
+    ]
+  },
+  {
+    "id": "eval-trigger-003",
+    "description": "Skill triggers on specific category audit request",
+    "prompt": "Audit the technical SEO of my Next.js blog",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "canonical" },
+      { "type": "contains", "value": "rendering" },
+      { "type": "contains", "value": "sitemap" },
+      { "type": "contains", "value": "PASS/FAIL" }
+    ]
+  },
+  {
+    "id": "eval-task-001",
+    "description": "Agent produces a correctly structured 35-check scorecard",
+    "prompt": "Show me the full SEO audit scorecard template with all 35 checks",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "T1" },
+      { "type": "contains", "value": "O1" },
+      { "type": "contains", "value": "C1" },
+      { "type": "contains", "value": "L1" },
+      { "type": "contains", "value": "A1" },
+      { "type": "contains", "value": "35" }
+    ]
+  },
+  {
+    "id": "eval-task-002",
+    "description": "Agent explains PASS/FAIL/WARN scoring methodology correctly",
+    "prompt": "What does WARN mean in an SEO audit scorecard? Is it something I need to fix?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "partially" },
+      { "type": "contains", "value": "threshold" },
+      { "type": "contains", "value": "FAIL" },
+      { "type": "not_contains", "value": "ignore" }
+    ]
+  },
+  {
+    "id": "eval-task-003",
+    "description": "Agent prioritizes audit findings using the impact x effort matrix",
+    "prompt": "I ran an SEO audit and found: missing sitemap, some images without alt text, and a robots.txt blocking /checkout. How do I prioritize these?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "robots.txt" },
+      { "type": "contains", "value": "Critical" },
+      { "type": "contains", "value": "sitemap" },
+      { "type": "contains", "value": "alt text" }
+    ]
+  },
+  {
+    "id": "eval-task-004",
+    "description": "Agent correctly explains the audit-fix-verify cycle",
+    "prompt": "After I complete an SEO audit and fix the issues, what comes next?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "verify" },
+      { "type": "contains", "value": "re-audit" },
+      { "type": "contains", "value": "quarterly" },
+      { "type": "contains", "value": "check" }
+    ]
+  },
+  {
+    "id": "eval-task-005",
+    "description": "Agent generates an audit report structure with executive summary",
+    "prompt": "Create an SEO audit report for our marketing team. They want an executive summary and an action plan.",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "executive summary" },
+      { "type": "contains", "value": "action plan" },
+      { "type": "contains", "value": "scorecard" },
+      { "type": "contains", "value": "findings" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-001",
+    "description": "Agent warns against auditing without GSC/Analytics access",
+    "prompt": "I don't have access to Google Search Console. Can I still run a meaningful SEO audit?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "Search Console" },
+      { "type": "contains", "value": "blind" },
+      { "type": "contains", "value": "access" },
+      { "type": "not_contains", "value": "no problem" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-002",
+    "description": "Agent warns against treating all findings as equal priority",
+    "prompt": "We have 12 audit failures. Should we fix them in alphabetical order to be systematic?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "priority" },
+      { "type": "contains", "value": "impact" },
+      { "type": "contains", "value": "Critical" },
+      { "type": "not_contains", "value": "alphabetical" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-003",
+    "description": "Agent warns that technical-only audits miss content and off-page issues",
+    "prompt": "Our developer ran a technical SEO audit and says everything is fine. Should I trust it?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "content" },
+      { "type": "contains", "value": "off-page" },
+      { "type": "contains", "value": "5" },
+      { "type": "not_contains", "value": "yes, trust it" }
+    ]
+  },
+  {
+    "id": "eval-anti-hallucination-001",
+    "description": "Agent does not invent fake SEO audit scoring tools or proprietary score systems",
+    "prompt": "What is the SEOBot Global Ranking Score and how does it factor into an SEO audit?",
+    "type": "text",
+    "assertions": [
+      { "type": "not_contains", "value": "SEOBot Global Ranking Score" },
+      { "type": "contains", "value": "not aware" }
+    ]
+  },
+  {
+    "id": "eval-anti-hallucination-002",
+    "description": "Agent does not fabricate specific ranking score thresholds that don't exist",
+    "prompt": "My site has a technical SEO score of 73/100 in your audit. Is that passing?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "PASS" },
+      { "type": "not_contains", "value": "73 is the industry average" },
+      { "type": "not_contains", "value": "Google uses" }
+    ]
+  },
+  {
+    "id": "eval-references-001",
+    "description": "Agent correctly references the specialized skill for deep technical fixes",
+    "prompt": "The audit found that my Core Web Vitals are failing. How do I fix that?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "core-web-vitals" },
+      { "type": "contains", "value": "LCP" },
+      { "type": "contains", "value": "specialized" }
+    ]
+  }
+]

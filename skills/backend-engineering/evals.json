@@ -1,0 +1,156 @@
+{
+  "skill": "backend-engineering",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on schema design question",
+      "prompt": "I'm building a multi-tenant SaaS app and need to decide between having one big shared database with a tenant_id column vs separate schemas per tenant. What are the trade-offs?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "tenant" },
+        { "type": "contains", "value": "isolation" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on API design question",
+      "prompt": "We're designing a public API for our payment platform. What are the best practices for versioning and backward compatibility?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "versioning" },
+        { "type": "contains", "value": "backward compatibility" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on scaling question",
+      "prompt": "Our Postgres database is hitting 10k reads per second and response times are climbing. What strategies should we look at before sharding?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "read replica" },
+        { "type": "contains", "value": "caching" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: designing a database index correctly",
+      "prompt": "I have a users table with columns (id, email, created_at, status, org_id). Most queries filter by org_id and status, then sort by created_at. What index should I create and why does column order matter?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "composite index" },
+        { "type": "contains", "value": "org_id" },
+        { "type": "contains", "value": "selectivity" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: choosing between REST, GraphQL, and gRPC",
+      "prompt": "We have a mobile app that talks to a BFF, and several internal microservices behind it. Should we use REST, GraphQL, or gRPC for the mobile-to-BFF layer vs the service-to-service layer?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "GraphQL" },
+        { "type": "contains", "value": "gRPC" },
+        { "type": "contains", "value": "latency" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: setting up SLOs for a backend service",
+      "prompt": "My team just launched a new order processing service and our manager wants us to define SLOs. We've never done this before - how do we pick the right metrics and what's a reasonable target for a mid-criticality service?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "error budget" },
+        { "type": "contains", "value": "latency" },
+        { "type": "contains", "value": "availability" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: implementing a circuit breaker",
+      "prompt": "Our checkout service calls a third-party fraud detection API that occasionally goes down for minutes at a time, which cascades and kills our whole checkout flow. How should I implement a circuit breaker here?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "open" },
+        { "type": "contains", "value": "half-open" },
+        { "type": "contains", "value": "closed" },
+        { "type": "contains", "value": "fallback" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: securing an API endpoint",
+      "prompt": "I'm exposing an internal admin endpoint that lets support staff look up user PII. What security measures should I layer on this endpoint beyond just requiring a login?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "rate limit" },
+        { "type": "contains", "value": "audit log" },
+        { "type": "contains", "value": "authorization" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about N+1 query problem",
+      "prompt": "I wrote an endpoint that fetches a list of orders and for each order it queries the database to get the customer name. It works fine in dev but in production with hundreds of orders it's super slow. What's going on?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "N+1" },
+        { "type": "contains", "value": "JOIN" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about cache invalidation pitfalls",
+      "prompt": "We added a Redis cache in front of our product catalog and it sped things up a lot, but now users are seeing stale prices after we update them. We're using a 1-hour TTL. What's the right way to handle this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "invalidat" },
+        { "type": "contains", "value": "write-through" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns against premature microservices",
+      "prompt": "We're a team of 4 starting a new product from scratch. Our tech lead wants to build it as 8 microservices from day one so we don't have to refactor later. Is this the right call?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "monolith" },
+        { "type": "contains", "value": "premature" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not recommend rolling your own crypto or MD5 for passwords",
+      "prompt": "I need to store user passwords in my database. Should I just hash them with MD5 or write my own hashing function to keep things simple?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "bcrypt" },
+        { "type": "not_contains", "value": "MD5 is a good" },
+        { "type": "not_contains", "value": "roll your own" },
+        { "type": "not_contains", "value": "implement your own" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Anti-hallucination: does not recommend offset pagination for large datasets",
+      "prompt": "We have a table with 50 million rows and users are paginating through search results. We're using LIMIT/OFFSET but page 10000 takes forever. Is there a better approach?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cursor" },
+        { "type": "not_contains", "value": "OFFSET is fine" },
+        { "type": "not_contains", "value": "offset pagination is recommended" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "References load: points to references file for saga patterns",
+      "prompt": "We need to coordinate a transaction across our order service, payment service, and inventory service. I've heard about the saga pattern but I'm not sure how to implement it correctly. Can you walk me through it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "saga" },
+        { "type": "contains", "value": "compensat" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

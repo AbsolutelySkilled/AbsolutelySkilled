@@ -1,0 +1,126 @@
+{
+  "skill": "social-media-strategy",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to build a social media strategy",
+      "prompt": "Help me build a social media strategy for my B2B SaaS startup",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "content pillars" },
+        { "type": "contains", "value": "platform" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Recommends platform-native content adaptation",
+      "prompt": "I want to post the same content on LinkedIn and Instagram to save time. Is that okay?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "adapt" },
+        { "type": "not_contains", "value": "yes, that is fine" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Can write a LinkedIn post in the correct format",
+      "prompt": "Write a LinkedIn post about the importance of async communication for remote teams",
+      "type": "content",
+      "assertions": [
+        { "type": "contains", "value": "hashtag" },
+        { "type": "max_length", "value": 1500 }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can write an X (Twitter) thread in the correct format",
+      "prompt": "Write a Twitter thread explaining why most content calendars fail",
+      "type": "content",
+      "assertions": [
+        { "type": "contains", "value": "1/" },
+        { "type": "min_items", "value": 5 }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can create a weekly content calendar with pillar structure",
+      "prompt": "Create a one-week content calendar for an indie developer building a project management tool",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Monday" },
+        { "type": "contains", "value": "pillar" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Applies 80/20 value-to-promotion principle",
+      "prompt": "My followers are dropping off. I've been posting product updates and sales promotions every day. What am I doing wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "value" },
+        { "type": "contains", "value": "promotion" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Explains engagement rate benchmarks correctly",
+      "prompt": "My Instagram posts are getting 2.5% engagement rate. Is that good or bad?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "healthy" },
+        { "type": "not_contains", "value": "terrible" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Provides crisis communication guidance in correct order",
+      "prompt": "A viral tweet is falsely claiming our product caused data loss. We have 200 angry replies. What do we do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pause" },
+        { "type": "contains", "value": "acknowledge" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Recommends consistency over frequency",
+      "prompt": "Should I post 3 times a day to grow faster or post less frequently but more consistently?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "consistent" },
+        { "type": "not_contains", "value": "post as often as possible" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Warns against hashtag stuffing",
+      "prompt": "Should I use all 30 hashtags on every Instagram post to maximize reach?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "yes, use all 30" },
+        { "type": "contains", "value": "targeted" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Guides metrics analysis toward signal metrics not vanity metrics",
+      "prompt": "We hit 100,000 impressions last month. Is our social media strategy working?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "engagement" },
+        { "type": "contains", "value": "saves" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not trigger for paid social advertising setup",
+      "prompt": "Set up a Facebook Ads campaign with a $500 budget targeting 25-35 year olds interested in fitness",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "content pillar" },
+        { "type": "not_contains", "value": "organic" }
+      ]
+    }
+  ]
+}

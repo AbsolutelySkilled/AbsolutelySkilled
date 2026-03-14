@@ -1,0 +1,158 @@
+{
+  "skill": "analytics-engineering",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on dbt model layering question",
+      "prompt": "I'm setting up a new dbt project for our e-commerce data. Where should I put staging vs mart models and how should I name them?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "stg_" },
+        { "type": "contains", "value": "fct_" },
+        { "type": "contains", "value": "dim_" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on metrics definition question",
+      "prompt": "We have five dashboards that each calculate revenue differently. How do I create a single source of truth for our revenue metric?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "metric" },
+        { "type": "contains", "value": "semantic" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on self-serve analytics question",
+      "prompt": "Our analysts keep filing tickets asking data engineers what columns mean. How can I make our data warehouse self-serve?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "description" },
+        { "type": "contains", "value": "documentation" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: write a staging model with proper rename and cast",
+      "prompt": "Write a dbt staging model for a raw Stripe payments table that has columns: id, order_id, amount, created, status, currency",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "source(" },
+        { "type": "contains", "value": "cast" },
+        { "type": "contains", "value": "renamed" },
+        { "type": "code_valid", "language": "sql" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: define a MetricFlow semantic model with entities, dimensions, and measures",
+      "prompt": "Define a dbt MetricFlow semantic model for our orders fact table that has order_id, customer_id, order_date, status, and total_amount_cents",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "semantic_models" },
+        { "type": "contains", "value": "entities" },
+        { "type": "contains", "value": "dimensions" },
+        { "type": "contains", "value": "measures" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: build an incremental mart model",
+      "prompt": "Create a dbt incremental model for fct_orders that joins orders with payments and only processes new rows on each run",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "incremental" },
+        { "type": "contains", "value": "is_incremental()" },
+        { "type": "contains", "value": "ref(" },
+        { "type": "contains", "value": "unique_key" },
+        { "type": "code_valid", "language": "sql" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: write dbt tests for a mart model",
+      "prompt": "What dbt tests should I add for a fct_orders model with columns order_id, customer_id, and total_amount_cents?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "unique" },
+        { "type": "contains", "value": "not_null" },
+        { "type": "contains", "value": "relationships" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: configure source freshness",
+      "prompt": "How do I set up dbt source freshness checks so we get alerted when our Stripe data hasn't been loaded in 24 hours?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "freshness" },
+        { "type": "contains", "value": "loaded_at_field" },
+        { "type": "contains", "value": "error_after" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns against putting business logic in staging models",
+      "prompt": "I want to add a CASE WHEN statement and a JOIN to my staging model to categorize payments. Is that the right place for it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "staging" },
+        { "type": "contains", "value": "intermediate" },
+        { "type": "not_contains", "value": "staging is the right place for business logic" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about averaging averages in metrics",
+      "prompt": "I defined an average_order_value metric. Now I want to get the average AOV across all regions. Can I just average the per-region AOVs?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "average" },
+        { "type": "not_contains", "value": "yes, averaging averages is correct" },
+        { "type": "contains", "value": "sum" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns about missing grain documentation",
+      "prompt": "My analyst built a report by joining fct_orders with fct_order_items and the revenue numbers are way too high. What went wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "grain" },
+        { "type": "contains", "value": "fanout" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not invent a dbt command that does not exist",
+      "prompt": "How do I run dbt metrics query from the command line to test my metric definitions?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "dbt metrics query" },
+        { "type": "contains", "value": "MetricFlow" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Anti-hallucination: does not recommend SELECT * in staging models",
+      "prompt": "Should I use SELECT * in my dbt staging models to automatically pick up new columns from the source?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "SELECT * is recommended" },
+        { "type": "contains", "value": "explicitly" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "References load test: directs to semantic-layer reference for MetricFlow deep dive",
+      "prompt": "I need to understand all the MetricFlow metric types - simple, derived, ratio, cumulative - with full YAML examples for each. Can you walk me through the complete configuration?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references" },
+        { "type": "contains", "value": "semantic-layer" }
+      ]
+    }
+  ]
+}

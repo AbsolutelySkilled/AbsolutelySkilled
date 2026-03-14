@@ -1,0 +1,137 @@
+{
+  "skill": "shell-scripting",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on request to write a bash script",
+      "prompt": "Write a bash script that backs up a directory to a timestamped tarball",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "set -euo pipefail" },
+        { "type": "contains", "value": "#!/usr/bin/env bash" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Includes set -euo pipefail in every non-trivial script",
+      "prompt": "Create a shell script that deploys my app by SSHing into three servers and running a deploy command",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "set -euo pipefail" },
+        { "type": "contains", "value": "trap" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Quotes all variable expansions",
+      "prompt": "Review this script for bugs: rm -rf $OUTPUT_DIR && cp $SRC $OUTPUT_DIR",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "quote" },
+        { "type": "contains", "value": "\"$OUTPUT_DIR\"" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Uses getopts or long-opt parsing for argument handling",
+      "prompt": "Write a script that accepts --input, --output, and --verbose flags",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "--input" },
+        { "type": "contains", "value": "--output" },
+        { "type": "contains", "value": "shift" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Reads files safely with IFS= read -r",
+      "prompt": "How do I read a file line by line in bash without losing leading whitespace?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "IFS=" },
+        { "type": "contains", "value": "read -r" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Uses trap for cleanup on exit",
+      "prompt": "My script creates temp files. How do I make sure they're always cleaned up even if the script fails?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "trap" },
+        { "type": "contains", "value": "EXIT" },
+        { "type": "contains", "value": "mktemp" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can explain exit codes and how to use them",
+      "prompt": "What are exit codes in shell scripts and how should I use them properly?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "0" },
+        { "type": "contains", "value": "non-zero" },
+        { "type": "contains", "value": "exit" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Warns against parsing ls output",
+      "prompt": "Is this safe? for f in $(ls *.txt); do process $f; done",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ls" },
+        { "type": "contains", "value": "glob" },
+        { "type": "not_contains", "value": "yes, that is safe" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Uses string built-ins instead of external commands",
+      "prompt": "How do I get just the filename without extension from a path like /usr/local/bin/myapp.sh?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "##" },
+        { "type": "not_contains", "value": "basename | sed" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Provides parallel execution with xargs or background jobs",
+      "prompt": "I need to compress 500 log files in parallel using bash. What's the best approach?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "xargs" },
+        { "type": "contains", "value": "-P" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not trigger for Python CLI tool request",
+      "prompt": "I want to build a CLI tool in Python with argparse that processes JSON files",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "set -euo pipefail" },
+        { "type": "not_contains", "value": "#!/usr/bin/env bash" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Adds colored output with terminal detection",
+      "prompt": "How do I add colored output to my bash script without breaking CI pipelines that capture stdout?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "-t 1" },
+        { "type": "contains", "value": "\\033[" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    }
+  ]
+}

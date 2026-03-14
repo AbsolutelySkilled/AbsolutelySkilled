@@ -1,0 +1,131 @@
+[
+  {
+    "id": "eval-trigger-001",
+    "description": "Skill triggers on creating a split pane",
+    "prompt": "Create a new split pane to the right in cmux",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "cmux" },
+      { "type": "contains", "value": "new-pane" },
+      { "type": "contains", "value": "--direction right" }
+    ]
+  },
+  {
+    "id": "eval-trigger-002",
+    "description": "Skill triggers on sending commands to a surface",
+    "prompt": "Send 'npm test' to a cmux surface and press Enter",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "cmux send" },
+      { "type": "contains", "value": "--surface" },
+      { "type": "contains", "value": "send-key" },
+      { "type": "contains", "value": "Enter" }
+    ]
+  },
+  {
+    "id": "eval-trigger-003",
+    "description": "Skill triggers on reading terminal output",
+    "prompt": "Read the screen output from a cmux surface",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "cmux" },
+      { "type": "contains", "value": "read-screen" },
+      { "type": "contains", "value": "--surface" }
+    ]
+  },
+  {
+    "id": "eval-task-001",
+    "description": "Agent can set up a subagent pane workflow",
+    "prompt": "Spawn a new cmux pane, run 'make build' in it, read the output, and close it when done",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "new-pane" },
+      { "type": "contains", "value": "cmux send" },
+      { "type": "contains", "value": "read-screen" },
+      { "type": "contains", "value": "close-surface" }
+    ]
+  },
+  {
+    "id": "eval-task-002",
+    "description": "Agent can create a workspace and manage it",
+    "prompt": "Create a new cmux workspace named 'Build Task', run a command in it, then close it",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "new-workspace" },
+      { "type": "contains", "value": "rename-workspace" },
+      { "type": "contains", "value": "close-workspace" }
+    ]
+  },
+  {
+    "id": "eval-task-003",
+    "description": "Agent uses --json for programmatic output",
+    "prompt": "List all cmux workspaces and parse the output",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "--json" },
+      { "type": "contains", "value": "list-workspaces" }
+    ]
+  },
+  {
+    "id": "eval-task-004",
+    "description": "Agent can identify current cmux context",
+    "prompt": "Find out which cmux surface and pane I'm currently in",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "cmux" },
+      { "type": "contains", "value": "identify" }
+    ]
+  },
+  {
+    "id": "eval-task-005",
+    "description": "Agent can open a browser surface",
+    "prompt": "Open a browser in cmux showing localhost:3000 next to my terminal",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "browser" },
+      { "type": "contains", "value": "localhost:3000" }
+    ]
+  },
+  {
+    "id": "eval-task-006",
+    "description": "Agent can run parallel tasks in multiple panes",
+    "prompt": "Create two cmux panes side by side and run different test suites in each",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "new-pane" },
+      { "type": "contains", "value": "--direction" },
+      { "type": "contains", "value": "cmux send" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-001",
+    "description": "Agent knows send does not press Enter automatically",
+    "prompt": "Send a command to a cmux pane and execute it",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "cmux send" },
+      { "type": "contains", "value": "send-key" },
+      { "type": "contains", "value": "Enter" }
+    ]
+  },
+  {
+    "id": "eval-gotcha-002",
+    "description": "Agent cleans up panes after use",
+    "prompt": "Run a build command in a new cmux pane and clean up afterward",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "new-pane" },
+      { "type": "contains", "value": "close-surface" }
+    ]
+  },
+  {
+    "id": "eval-anti-hallucination-001",
+    "description": "Agent does not confuse cmux with tmux",
+    "prompt": "Create a new split pane in cmux",
+    "type": "code",
+    "assertions": [
+      { "type": "not_contains", "value": "tmux" },
+      { "type": "contains", "value": "cmux" }
+    ]
+  }
+]

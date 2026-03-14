@@ -1,0 +1,141 @@
+{
+  "skill": "crm-management",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on pipeline design question",
+      "prompt": "Our sales team is complaining that our CRM pipeline stages don't reflect what's actually happening in deals. We have 12 stages right now and reps skip most of them. How do I fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "exit criteria" },
+        { "type": "contains", "value": "buyer" },
+        { "type": "contains", "value": "stage" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on lead scoring question",
+      "prompt": "We want to set up lead scoring in HubSpot. What properties should we score on and how do we decide when a lead is sales-ready?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "profile" },
+        { "type": "contains", "value": "engagement" },
+        { "type": "contains", "value": "MQL" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on forecasting question",
+      "prompt": "Our VP of Sales wants a reliable monthly forecast but our current process is just asking reps to gut-feel their number. What's the right way to build a forecast model in Salesforce?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "weighted" },
+        { "type": "contains", "value": "categorical" },
+        { "type": "contains", "value": "commit" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: designing pipeline exit criteria",
+      "prompt": "Walk me through how to define exit criteria for a SaaS B2B pipeline. What makes a good exit criterion vs a bad one?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "observable" },
+        { "type": "contains", "value": "buyer" },
+        { "type": "contains", "value": "verif" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: lead vs contact data model decision",
+      "prompt": "We're debating whether to use the Lead object in Salesforce at all or just create Contacts from the start. What's the right approach and when should we convert leads?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Lead" },
+        { "type": "contains", "value": "Contact" },
+        { "type": "contains", "value": "convert" },
+        { "type": "contains", "value": "qualif" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: data deduplication strategy",
+      "prompt": "Our Salesforce has thousands of duplicate accounts and contacts after merging with an acquired company. How do we clean this up without breaking existing deal history?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "dedup" },
+        { "type": "contains", "value": "merge" },
+        { "type": "contains", "value": "email" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: automating deal workflows",
+      "prompt": "I want to automate our deal follow-up process in HubSpot. When a deal moves to the Proposal stage, the rep should get a task to send a follow-up within 24 hours and the manager should be notified. How do I build this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "trigger" },
+        { "type": "contains", "value": "task" },
+        { "type": "contains", "value": "stage" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: building a pipeline health dashboard",
+      "prompt": "What metrics should be on a weekly pipeline review dashboard for a sales manager? We're using Salesforce and want to see the most important signals in one view.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "coverage" },
+        { "type": "contains", "value": "conversion" },
+        { "type": "contains", "value": "stale" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about activity-based stages",
+      "prompt": "Our pipeline stages are: Lead In, Email Sent, Call Made, Demo Scheduled, Demo Done, Proposal Sent, Follow Up, Negotiating, Won, Lost. Is this a good structure?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "activity" },
+        { "type": "contains", "value": "buyer" },
+        { "type": "not_contains", "value": "looks good" },
+        { "type": "not_contains", "value": "great structure" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about manual probability fields",
+      "prompt": "We ask reps to set the close probability percentage on every deal in Salesforce. Our forecast accuracy is terrible even though reps are updating it. What could be going wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "stage" },
+        { "type": "contains", "value": "sandbag" },
+        { "type": "not_contains", "value": "probability field is the right approach" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns against enrichment overwriting sales data",
+      "prompt": "We set up Clearbit enrichment to auto-update all contact and account fields every week. Now our sales reps are furious because their edits keep getting overwritten. How do I fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "empty" },
+        { "type": "contains", "value": "overwrite" },
+        { "type": "contains", "value": "trust" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not recommend AI forecasting for small or dirty datasets",
+      "prompt": "We just launched 6 months ago and have 40 closed deals total. Our CRM data is a bit messy. Should we turn on Salesforce Einstein AI forecasting?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "go ahead and enable" },
+        { "type": "not_contains", "value": "Einstein is a great choice" },
+        { "type": "contains", "value": "historical" },
+        { "type": "contains", "value": "data quality" }
+      ]
+    }
+  ]
+}

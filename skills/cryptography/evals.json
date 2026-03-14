@@ -1,0 +1,142 @@
+{
+  "skill": "cryptography",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on password hashing question",
+      "prompt": "What's the best way to store user passwords in my Node.js app? I was thinking about using SHA-256.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "argon2" },
+        { "type": "contains", "value": "bcrypt" },
+        { "type": "not_contains", "value": "SHA-256 is fine" },
+        { "type": "not_contains", "value": "SHA-256 is safe for passwords" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on JWT signing question",
+      "prompt": "How do I sign and verify JWTs in TypeScript for my REST API?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "jose" },
+        { "type": "contains", "value": "algorithms" },
+        { "type": "contains", "value": "ES256" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on AES encryption question",
+      "prompt": "I need to encrypt PII fields in my database before storing them. What algorithm and mode should I use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "AES-256-GCM" },
+        { "type": "contains", "value": "authenticated" },
+        { "type": "contains", "value": "IV" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: implementing bcrypt password hashing correctly",
+      "prompt": "Show me how to hash and verify passwords using bcrypt in Node.js. What cost factor should I use?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "bcrypt" },
+        { "type": "contains", "value": "12" },
+        { "type": "contains", "value": "compare" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: implementing AES-256-GCM encryption with IV handling",
+      "prompt": "Write a TypeScript function to encrypt and decrypt strings using AES-256-GCM. Make sure to handle the IV correctly.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "aes-256-gcm" },
+        { "type": "contains", "value": "randomBytes" },
+        { "type": "contains", "value": "getAuthTag" },
+        { "type": "contains", "value": "setAuthTag" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: HMAC webhook verification with timing-safe comparison",
+      "prompt": "GitHub sends webhook events to my server and includes an X-Hub-Signature-256 header. How do I verify it correctly in Node.js?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "createHmac" },
+        { "type": "contains", "value": "timingSafeEqual" },
+        { "type": "contains", "value": "sha256" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: generating cryptographically secure random tokens",
+      "prompt": "I need to generate secure session tokens and password reset tokens in my Node.js app. How should I do this?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "randomBytes" },
+        { "type": "contains", "value": "crypto" },
+        { "type": "not_contains", "value": "Math.random" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: explaining envelope encryption for key rotation",
+      "prompt": "We need to encrypt user data and support key rotation without re-encrypting all records. What pattern should we use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "envelope" },
+        { "type": "contains", "value": "DEK" },
+        { "type": "contains", "value": "KMS" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about nonce/IV reuse in GCM",
+      "prompt": "Is it okay to use the same IV for all my AES-256-GCM encryptions as long as the key changes periodically?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "IV" },
+        { "type": "not_contains", "value": "that is fine" },
+        { "type": "not_contains", "value": "safe to reuse" },
+        { "type": "contains", "value": "randomBytes" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about JWT alg:none and missing algorithm allowlist",
+      "prompt": "I'm verifying JWTs in my Express app using the jsonwebtoken library without specifying an algorithms option. Is there any risk?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "algorithms" },
+        { "type": "contains", "value": "alg" },
+        { "type": "contains", "value": "allowlist" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not suggest rolling custom crypto",
+      "prompt": "I want to build my own encryption algorithm that XORs the plaintext with a key and adds some bit rotation. Can you help me implement it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "here is how to implement" },
+        { "type": "not_contains", "value": "sure, here" },
+        { "type": "contains", "value": "AES" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not recommend MD5 for security purposes",
+      "prompt": "My team is using MD5 to hash API keys before storing them in the database. Is that okay?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "MD5 is secure" },
+        { "type": "not_contains", "value": "MD5 is fine" },
+        { "type": "contains", "value": "HMAC" },
+        { "type": "contains", "value": "SHA-256" }
+      ]
+    }
+  ]
+}

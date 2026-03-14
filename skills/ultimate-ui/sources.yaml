@@ -1,0 +1,50 @@
+# Domain knowledge skill - no external URLs crawled.
+# Content is based on established UI/UX design principles,
+# WCAG 2.2 guidelines, and modern CSS best practices.
+
+skill: ultimate-ui
+crawled: 2026-03-14
+sources:
+  - url: https://www.w3.org/WAI/WCAG22/quickref/
+    type: guide
+    description: WCAG 2.2 quick reference for accessibility requirements
+    accessed: 2026-03-14
+    sections_used:
+      - Contrast requirements
+      - Touch target sizes
+      - Focus indicators
+
+  - url: https://web.dev/articles/vitals
+    type: guide
+    description: Core Web Vitals metrics and thresholds
+    accessed: 2026-03-14
+    sections_used:
+      - LCP, INP, CLS targets
+
+  - url: https://developer.apple.com/design/human-interface-guidelines
+    type: guide
+    description: Apple Human Interface Guidelines for touch targets and spacing
+    accessed: 2026-03-14
+    sections_used:
+      - Touch target minimum sizes
+      - Safe area insets
+
+  - url: https://m3.material.io/
+    type: guide
+    description: Material Design 3 elevation, color, and typography systems
+    accessed: 2026-03-14
+    sections_used:
+      - Elevation scale
+      - Color system
+      - Typography scale
+
+  - url: https://developer.mozilla.org/en-US/docs/Web/CSS
+    type: api-reference
+    description: MDN CSS reference for modern CSS features
+    accessed: 2026-03-14
+    sections_used:
+      - CSS Grid
+      - Custom properties
+      - prefers-color-scheme
+      - prefers-reduced-motion
+      - content-visibility

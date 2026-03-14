@@ -1,0 +1,173 @@
+{
+  "skill": "edge-computing",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when user asks about Cloudflare Workers",
+      "prompt": "Help me write a Cloudflare Worker that redirects users based on their country",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "fetch" },
+        { "type": "contains", "value": "Request" },
+        { "type": "contains", "value": "Response" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "training-knowledge"
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers when user asks about CDN cache configuration",
+      "prompt": "What Cache-Control headers should I set for my static assets served through a CDN?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Cache-Control" },
+        { "type": "contains", "value": "max-age" },
+        { "type": "contains", "value": "immutable" }
+      ],
+      "source": "training-knowledge"
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers for edge latency optimization questions",
+      "prompt": "How can I reduce TTFB for my global web application?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "edge" },
+        { "type": "contains", "value": "cache" }
+      ],
+      "source": "training-knowledge"
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent can write a Worker with KV namespace for feature flags",
+      "prompt": "Write a Cloudflare Worker that reads feature flags from KV and returns a maintenance page when maintenance mode is enabled",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "KVNamespace" },
+        { "type": "contains", "value": ".get(" },
+        { "type": "contains", "value": "503" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "training-knowledge"
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent can implement A/B testing at the edge with sticky cookies",
+      "prompt": "Implement A/B testing at the CDN edge layer using Cloudflare Workers with sticky user assignment via cookies",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Cookie" },
+        { "type": "contains", "value": "Set-Cookie" },
+        { "type": "contains", "value": "Math.random" },
+        { "type": "contains", "value": "Vary" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "training-knowledge"
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent can configure proper cache headers for different content types",
+      "prompt": "Set up Cache-Control headers for three types of content: static hashed assets, dynamic HTML pages, and API responses",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "immutable" },
+        { "type": "contains", "value": "stale-while-revalidate" },
+        { "type": "contains", "value": "s-maxage" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "training-knowledge"
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent can implement rate limiting using Durable Objects",
+      "prompt": "Build a rate limiter at the edge using Cloudflare Durable Objects that limits each IP to 100 requests per minute",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "DurableObject" },
+        { "type": "contains", "value": "429" },
+        { "type": "contains", "value": "storage" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "training-knowledge"
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent can use geo-routing to direct traffic to regional origins",
+      "prompt": "Write a Cloudflare Worker that routes API requests to the nearest regional backend based on the user's continent",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "CF-IPCountry" },
+        { "type": "contains", "value": "fetch" },
+        { "type": "code_valid", "language": "js" }
+      ],
+      "source": "training-knowledge"
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent warns about KV eventual consistency for counters",
+      "prompt": "I want to use Cloudflare KV to implement a page view counter. Is that a good approach?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "eventually consistent" },
+        { "type": "contains", "value": "Durable Object" }
+      ],
+      "source": "training-knowledge"
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent warns about Node.js APIs not being available in Workers",
+      "prompt": "Can I use the fs module in my Cloudflare Worker to read a config file?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "V8 isolate" },
+        { "type": "not_contains", "value": "require('fs')" }
+      ],
+      "source": "training-knowledge"
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent warns about Vary header for personalized cached responses",
+      "prompt": "My CDN is serving cached responses that contain the wrong user's data. What's happening?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Vary" },
+        { "type": "contains", "value": "Cache-Control" }
+      ],
+      "source": "training-knowledge"
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not invent non-existent Cloudflare Worker APIs",
+      "prompt": "How do I use the Workers filesystem API to write temporary files during request processing?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "workers.fs" },
+        { "type": "not_contains", "value": "tmpFile" },
+        { "type": "contains", "value": "no filesystem" }
+      ],
+      "source": "training-knowledge"
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent does not hallucinate a Workers database API",
+      "prompt": "Use the built-in Workers SQL API to query my database directly from the edge",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "workers.sql" },
+        { "type": "contains", "value": "D1" }
+      ],
+      "source": "training-knowledge"
+    },
+    {
+      "id": "eval-014",
+      "description": "Agent correctly references the CDN caching reference file for detailed cache invalidation",
+      "prompt": "I need to set up surrogate key based cache invalidation across multiple CDN providers. What are the differences?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/cdn-caching.md" }
+      ],
+      "source": "training-knowledge"
+    }
+  ]
+}

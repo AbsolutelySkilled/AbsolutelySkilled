@@ -1,0 +1,141 @@
+{
+  "skill": "privacy-compliance",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger test: activates on GDPR compliance question",
+      "prompt": "We're launching a B2C product in Germany and France. What do we need to do to be GDPR compliant before launch?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "lawful basis" },
+        { "type": "contains", "value": "privacy policy" },
+        { "type": "contains", "value": "data subject" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger test: activates on CCPA compliance question",
+      "prompt": "Our SaaS app has over 100,000 California users. Someone told us we need to comply with CCPA. What does that actually require us to do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "opt-out" },
+        { "type": "contains", "value": "right to know" },
+        { "type": "contains", "value": "deletion" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Trigger test: activates on cookie consent / consent management question",
+      "prompt": "Our website drops Google Analytics and some ad pixels. Do we need a cookie banner and what should it do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "consent" },
+        { "type": "contains", "value": "analytics" },
+        { "type": "contains", "value": "reject" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: designing a valid GDPR consent mechanism",
+      "prompt": "We want to ask users for consent to send marketing emails. What makes consent valid under GDPR and how should we implement the opt-in flow?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "freely given" },
+        { "type": "contains", "value": "withdraw" },
+        { "type": "contains", "value": "pre-ticked" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: handling a Subject Access Request",
+      "prompt": "A user emailed us saying they want a copy of all the data we hold about them. We've never handled one of these before. What do we do and what's the deadline?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "30 days" },
+        { "type": "contains", "value": "identity" },
+        { "type": "contains", "value": "portable" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: implementing a right to erasure / deletion request",
+      "prompt": "A user is asking us to delete all their data under GDPR's right to be forgotten. What systems do we need to wipe and are there any exceptions?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "processor" },
+        { "type": "contains", "value": "legal obligation" },
+        { "type": "contains", "value": "backup" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: conducting a DPIA",
+      "prompt": "We're building a feature that uses ML to score users' creditworthiness based on their in-app behavior. Our legal team says we need a DPIA. What does that involve?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "risk" },
+        { "type": "contains", "value": "necessity" },
+        { "type": "contains", "value": "automated" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Core task: implementing data retention schedules",
+      "prompt": "We've been keeping all user data indefinitely because we never thought about deletion. How do we build a proper data retention policy and enforce it technically?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "retention period" },
+        { "type": "contains", "value": "deletion" },
+        { "type": "contains", "value": "anonymiz" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Core task: choosing the right cross-border transfer mechanism",
+      "prompt": "We're a German company and our US-based data processor needs to store some EU user data in AWS us-east-1. What do we need to put in place legally and technically?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Standard Contractual Clauses" },
+        { "type": "contains", "value": "Transfer Impact Assessment" },
+        { "type": "contains", "value": "processor" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns against dark patterns in consent UI",
+      "prompt": "Our designer wants to make the 'Accept all' button bright green and the 'Reject all' option a small grey text link at the bottom. Is that okay?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "equal prominence" },
+        { "type": "contains", "value": "dark pattern" },
+        { "type": "not_contains", "value": "that is acceptable" },
+        { "type": "not_contains", "value": "that's fine" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns against collecting data without lawful basis",
+      "prompt": "We want to collect users' location data, browsing history, and device fingerprints because it might be useful for future product features. Is that okay under GDPR?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "lawful basis" },
+        { "type": "contains", "value": "data minimization" },
+        { "type": "not_contains", "value": "that is fine" },
+        { "type": "not_contains", "value": "you can collect" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not recommend legitimate interests for high-risk processing without LIA",
+      "prompt": "Can we use legitimate interests as the lawful basis for processing sensitive health data for targeted advertising?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "consent" },
+        { "type": "contains", "value": "sensitive" },
+        { "type": "not_contains", "value": "legitimate interests is fine for health data" },
+        { "type": "not_contains", "value": "no problem using legitimate interests" }
+      ]
+    }
+  ]
+}

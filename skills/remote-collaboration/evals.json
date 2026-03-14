@@ -1,0 +1,155 @@
+{
+  "skill": "remote-collaboration",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when user asks about async standup process",
+      "prompt": "How should I set up async standups for my remote team?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "async" },
+        { "type": "contains", "value": "standup" },
+        { "type": "contains", "value": "blocker" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill triggers when user asks about reducing meetings",
+      "prompt": "My team has too many meetings and nothing gets done. How do I fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "async" },
+        { "type": "contains", "value": "agenda" },
+        { "type": "not_contains", "value": "pair programming" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill triggers for cross-timezone collaboration questions",
+      "prompt": "Our team spans US, Europe, and India. How do we collaborate effectively?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "overlap" },
+        { "type": "contains", "value": "handoff" },
+        { "type": "contains", "value": "async" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Agent can produce a complete RFC template",
+      "prompt": "Write me an RFC template for proposing technical decisions in my remote team",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "Context" },
+        { "type": "contains", "value": "Proposal" },
+        { "type": "contains", "value": "Alternatives" },
+        { "type": "contains", "value": "Trade-off" },
+        { "type": "contains", "value": "Review deadline" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Agent can produce a meeting agenda template with correct structure",
+      "prompt": "Create a meeting agenda template for a remote sprint planning session",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "Agenda" },
+        { "type": "contains", "value": "Duration" },
+        { "type": "contains", "value": "action item" },
+        { "type": "contains", "value": "capacity" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Agent can design a communication charter",
+      "prompt": "Help me write a communication charter for my distributed engineering team",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "response time" },
+        { "type": "contains", "value": "overlap" },
+        { "type": "contains", "value": "escalation" },
+        { "type": "contains", "value": "deep work" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Agent can structure an async retrospective",
+      "prompt": "Design an async retro process for a team of 12 across 3 time zones",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "collect" },
+        { "type": "contains", "value": "vote" },
+        { "type": "contains", "value": "action item" },
+        { "type": "contains", "value": "theme" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Agent produces a weekly digest template",
+      "prompt": "Create a template for a weekly team status update that replaces our Monday status meeting",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "TL;DR" },
+        { "type": "contains", "value": "Shipped" },
+        { "type": "contains", "value": "Blocker" },
+        { "type": "contains", "value": "Decision" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Agent handles the gotcha of Slack-based decisions",
+      "prompt": "We make most of our decisions in Slack threads. Is that okay for a remote team?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "document" },
+        { "type": "contains", "value": "searchable" },
+        { "type": "not_contains", "value": "Slack is fine for decisions" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Agent warns against recording meetings as documentation substitute",
+      "prompt": "Should we just record all our meetings so people in other time zones can watch?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "written" },
+        { "type": "contains", "value": "summary" },
+        { "type": "not_contains", "value": "recording is sufficient" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Agent does not hallucinate specific software tools as requirements",
+      "prompt": "What tools do I need to buy for remote collaboration?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "you must use" },
+        { "type": "not_contains", "value": "required subscription" },
+        { "type": "contains", "value": "async" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Agent does not recommend async for conflict resolution",
+      "prompt": "Two team members have a disagreement about architecture. Should they resolve it async?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "sync" },
+        { "type": "contains", "value": "call" },
+        { "type": "not_contains", "value": "resolve entirely in Slack" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Agent correctly references the meeting facilitation reference file",
+      "prompt": "I need to facilitate a project kickoff for a new remote team. Give me a detailed playbook.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/meeting-facilitation.md" },
+        { "type": "contains", "value": "agenda" },
+        { "type": "contains", "value": "kickoff" }
+      ]
+    }
+  ]
+}

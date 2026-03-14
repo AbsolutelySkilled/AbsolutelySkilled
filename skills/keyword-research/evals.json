@@ -1,0 +1,171 @@
+{
+  "skill": "keyword-research",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on keyword research request",
+      "prompt": "I want to find the best keywords to target for my new SaaS landing page. Where do I start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "intent" },
+        { "type": "contains_any", "value": ["search volume", "traffic potential"] },
+        { "type": "contains", "value": "SERP" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on search intent analysis request",
+      "prompt": "Analyze the search intent for these keywords: 'best CRM software', 'buy CRM', 'what is CRM', 'Salesforce login'",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "commercial investigation" },
+        { "type": "contains", "value": "transactional" },
+        { "type": "contains", "value": "informational" },
+        { "type": "contains", "value": "navigational" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on competitor gap analysis request",
+      "prompt": "My competitor ranks for a bunch of keywords I don't rank for. How do I find and prioritize those gaps?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "gap" },
+        { "type": "contains_any", "value": ["traffic potential", "opportunity"] },
+        { "type": "contains_any", "value": ["Ahrefs", "Semrush", "competitor"] }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can correctly classify all four intent types from examples",
+      "prompt": "What is the search intent for each of these: 'how to write a cold email', 'cold email software pricing', 'best cold email tools', 'Lemlist login'?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "informational" },
+        { "type": "contains", "value": "transactional" },
+        { "type": "contains", "value": "commercial investigation" },
+        { "type": "contains", "value": "navigational" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can build a keyword cluster from a seed topic",
+      "prompt": "Build a keyword cluster from the seed keyword 'email marketing'. Show me the primary keyword, secondary keywords, and what content type to create.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "primary" },
+        { "type": "contains_any", "value": ["secondary", "cluster"] },
+        { "type": "contains_any", "value": ["pillar", "guide", "content type"] }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can explain and apply opportunity score prioritization",
+      "prompt": "I have 50 keywords and can only write 5 pieces of content this month. How should I prioritize them?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains_any", "value": ["opportunity score", "priority", "prioritize"] },
+        { "type": "contains", "value": "intent" },
+        { "type": "contains_any", "value": ["keyword difficulty", "traffic potential"] }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can identify and explain keyword cannibalization",
+      "prompt": "I published a new blog post about 'project management tools' but my old page for 'project management software' dropped from position 4 to position 12. What happened?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cannibalization" },
+        { "type": "contains_any", "value": ["merge", "redirect", "consolidate"] },
+        { "type": "contains_any", "value": ["301", "differentiate", "competing"] }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Correctly identifies SERP as the source of truth for intent",
+      "prompt": "The keyword 'email marketing' has no obvious intent modifier. How do I figure out what content format to create?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "SERP" },
+        { "type": "contains_any", "value": ["top results", "ranking pages", "top 3", "top 5"] },
+        { "type": "contains_any", "value": ["content type", "format"] }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Correctly explains traffic potential vs search volume distinction",
+      "prompt": "Should I choose a keyword based on its monthly search volume or something else?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "traffic potential" },
+        { "type": "contains", "value": "search volume" },
+        { "type": "not_contains", "value": "search volume is the only metric that matters" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha - does not recommend targeting competitor brand navigational terms",
+      "prompt": "Should I optimize a page to rank for 'Salesforce login' to steal traffic from Salesforce?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "navigational" },
+        { "type": "not_contains", "value": "yes, you should target" },
+        { "type": "contains_any", "value": ["not worth", "difficult", "won't rank", "avoid"] }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha - warns against targeting high KD keywords on a new domain",
+      "prompt": "My site launched 2 months ago. Should I go after keywords with keyword difficulty scores above 70?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains_any", "value": ["authority", "domain authority", "new site"] },
+        { "type": "not_contains", "value": "yes, target high difficulty keywords" },
+        { "type": "contains_any", "value": ["low difficulty", "KD < 30", "build up", "start with easier"] }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination - does not invent fake keyword research metrics",
+      "prompt": "What is the 'keyword resonance score' and how does it differ from keyword difficulty?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "keyword resonance score is a metric that measures" },
+        { "type": "contains_any", "value": ["does not exist", "not a standard metric", "not a recognized", "unfamiliar"] }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Anti-hallucination - does not fabricate specific tool features",
+      "prompt": "How do I use the 'Intent Predictor Pro' feature in Ahrefs to classify my keywords?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "Intent Predictor Pro works by" },
+        { "type": "contains_any", "value": ["not familiar", "does not appear", "cannot confirm", "no such feature"] }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "References keyword-clustering.md for cluster architecture questions",
+      "prompt": "Walk me through the pillar and spoke model for organizing keyword clusters into a content architecture.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pillar" },
+        { "type": "contains", "value": "spoke" },
+        { "type": "contains_any", "value": ["references/keyword-clustering.md", "keyword-clustering", "clustering reference"] }
+      ]
+    },
+    {
+      "id": "eval-015",
+      "description": "Does not trigger for PPC / paid search bid strategy",
+      "prompt": "What match types should I use in Google Ads to maximize my quality score and lower CPC?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "search intent mapping" },
+        { "type": "not_contains", "value": "keyword clustering" },
+        { "type": "contains_any", "value": ["paid search", "Google Ads", "match types", "PPC"] }
+      ]
+    }
+  ]
+}

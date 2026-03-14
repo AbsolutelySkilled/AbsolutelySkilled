@@ -1,0 +1,153 @@
+{
+  "skill": "responsive-design",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on mobile-first layout request and uses min-width queries",
+      "prompt": "How do I write mobile-first CSS? I keep hearing I should use it but I don't understand it.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "min-width" },
+        { "type": "not_contains", "value": "max-width" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-002",
+      "description": "Uses clamp() for fluid typography with correct three-argument form",
+      "prompt": "Make my headings scale fluidly between mobile and desktop without breakpoints",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "clamp(" },
+        { "type": "contains", "value": "vw" },
+        { "type": "contains", "value": "rem" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-003",
+      "description": "Uses container queries for a component rather than media queries",
+      "prompt": "I have a card component that appears both in the main content area and in a sidebar. It should look different in each context. How do I handle that?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "container-type" },
+        { "type": "contains", "value": "@container" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-004",
+      "description": "Produces intrinsic grid with minmax and auto-fill, no media queries required",
+      "prompt": "Create a responsive card grid that automatically adjusts column count without media queries",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "auto-fill" },
+        { "type": "contains", "value": "minmax" },
+        { "type": "contains", "value": "min(100%" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-005",
+      "description": "Generates correct srcset with sizes attribute for responsive images",
+      "prompt": "How do I serve the right image size to mobile versus desktop users?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "srcset" },
+        { "type": "contains", "value": "sizes" },
+        { "type": "contains", "value": "w," },
+        { "type": "code_valid", "language": "html" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-006",
+      "description": "Knows to use font sizes in rem not px",
+      "prompt": "What unit should I use for font sizes in responsive design?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "rem" },
+        { "type": "contains", "value": "px" },
+        { "type": "not_contains", "value": "use px for font" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-007",
+      "description": "Recommends breakpoints based on content, not specific devices",
+      "prompt": "What breakpoints should I use? Should I target iPhone, iPad, and desktop?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "content" },
+        { "type": "not_contains", "value": "iPhone" },
+        { "type": "not_contains", "value": "target device" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-008",
+      "description": "Includes safe-area-inset for fixed bottom elements on iOS",
+      "prompt": "Build a bottom navigation tab bar that works on iPhones with the home indicator",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "safe-area-inset-bottom" },
+        { "type": "contains", "value": "env(" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-009",
+      "description": "Uses picture element with media attribute for art direction",
+      "prompt": "I need different image crops on mobile versus desktop - portrait on mobile, landscape on desktop",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "<picture>" },
+        { "type": "contains", "value": "<source" },
+        { "type": "contains", "value": "media=" },
+        { "type": "code_valid", "language": "html" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-010",
+      "description": "Uses clamp() for fluid section spacing",
+      "prompt": "How do I create padding that is smaller on mobile and larger on desktop without media queries?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "clamp(" },
+        { "type": "contains", "value": "padding" },
+        { "type": "code_valid", "language": "css" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not trigger for backend API design question",
+      "prompt": "How do I design a REST API that returns paginated results?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "container-type" },
+        { "type": "not_contains", "value": "clamp(" }
+      ],
+      "source": "domain-knowledge"
+    },
+    {
+      "id": "eval-012",
+      "description": "Knows 100vw can cause horizontal scrollbar and recommends 100% instead",
+      "prompt": "My page has an unexpected horizontal scrollbar, could it be from using 100vw?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "scrollbar" },
+        { "type": "contains", "value": "100%" },
+        { "type": "not_contains", "value": "100vw is always safe" }
+      ],
+      "source": "domain-knowledge"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "skill": "lead-scoring",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on ICP definition request",
+      "prompt": "How do I define an Ideal Customer Profile for my B2B SaaS startup?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ICP" },
+        { "type": "contains", "value": "firmographic" },
+        { "type": "contains", "value": "closed-won" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on lead scoring model build request",
+      "prompt": "I need to build a lead scoring model. Where do I start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "fit" },
+        { "type": "contains", "value": "behavioral" },
+        { "type": "contains", "value": "points" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Correctly explains the difference between MQL, SQL, and PQL",
+      "prompt": "What is the difference between an MQL, SQL, and PQL?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Marketing Qualified" },
+        { "type": "contains", "value": "Sales Qualified" },
+        { "type": "contains", "value": "Product Qualified" },
+        { "type": "contains", "value": "threshold" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Explains intent signal tiers with examples",
+      "prompt": "What are intent signals and how should I weight them in my scoring model?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "first-party" },
+        { "type": "contains", "value": "pricing" },
+        { "type": "contains", "value": "demo" },
+        { "type": "contains", "value": "third-party" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Explains score decay and why it is needed",
+      "prompt": "What is lead score decay and why should I implement it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "decay" },
+        { "type": "contains", "value": "inactivity" },
+        { "type": "contains", "value": "behavioral" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Provides threshold-setting process using historical data",
+      "prompt": "How do I decide what score threshold to use for MQL handoff to sales?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "closed-won" },
+        { "type": "contains", "value": "closed-lost" },
+        { "type": "contains", "value": "sales" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Warns against scoring without fit criteria",
+      "prompt": "I want to score leads purely based on website behavior - page visits, email opens, downloads. Is that enough?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "fit" },
+        { "type": "contains", "value": "company" },
+        { "type": "not_contains", "value": "sufficient" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Handles BANT qualification framework question",
+      "prompt": "How does BANT fit into lead scoring?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "budget" },
+        { "type": "contains", "value": "authority" },
+        { "type": "contains", "value": "qualification" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Provides negative ICP / disqualifier guidance",
+      "prompt": "Should I define which leads to explicitly exclude from my scoring model?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "negative" },
+        { "type": "contains", "value": "disqualif" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Addresses sales and marketing alignment on MQL definitions",
+      "prompt": "Our sales team keeps rejecting the MQLs marketing sends them. What's going wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "threshold" },
+        { "type": "contains", "value": "rejection" },
+        { "type": "contains", "value": "alignment" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Explains how to validate a scoring model against outcomes",
+      "prompt": "How do I know if my lead scoring model is actually working?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "closed-won" },
+        { "type": "contains", "value": "conversion" },
+        { "type": "contains", "value": "MQL" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not recommend building complex ML model before validating a simple one",
+      "prompt": "Should I use machine learning to build a predictive lead scoring model from day one?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "simple" },
+        { "type": "contains", "value": "validate" },
+        { "type": "not_contains", "value": "ML model first" }
+      ]
+    }
+  ]
+}
