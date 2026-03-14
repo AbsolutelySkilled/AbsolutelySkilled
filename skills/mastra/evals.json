@@ -1,0 +1,178 @@
+[
+  {
+    "id": "eval-trigger-001",
+    "description": "Skill triggers on creating a Mastra agent",
+    "prompt": "Create a Mastra agent that uses OpenAI to answer questions",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "new Agent" },
+      { "type": "contains", "value": "model:" },
+      { "type": "contains", "value": "instructions:" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://mastra.ai/docs/agents/overview"
+  },
+  {
+    "id": "eval-trigger-002",
+    "description": "Skill triggers on Mastra CLI usage",
+    "prompt": "How do I start a Mastra dev server?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "mastra dev" },
+      { "type": "contains", "value": "4111" }
+    ],
+    "source": "https://mastra.ai/reference/cli/mastra"
+  },
+  {
+    "id": "eval-trigger-003",
+    "description": "Skill triggers on workflow creation",
+    "prompt": "Build a Mastra workflow that processes and summarizes text",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "createWorkflow" },
+      { "type": "contains", "value": "createStep" },
+      { "type": "contains", "value": ".commit()" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://mastra.ai/docs/workflows/overview"
+  },
+  {
+    "id": "eval-task-001",
+    "description": "Agent can create a tool with proper Zod schema",
+    "prompt": "Create a Mastra tool that fetches a GitHub user's profile",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "createTool" },
+      { "type": "contains", "value": "inputSchema" },
+      { "type": "contains", "value": "outputSchema" },
+      { "type": "contains", "value": "execute" },
+      { "type": "contains", "value": "z.object" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://mastra.ai/docs/tools/overview"
+  },
+  {
+    "id": "eval-task-002",
+    "description": "Agent can configure memory with semantic recall",
+    "prompt": "Set up a Mastra agent with memory that remembers user preferences across conversations",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "new Memory" },
+      { "type": "contains", "value": "semanticRecall" },
+      { "type": "contains", "value": "workingMemory" },
+      { "type": "contains", "value": "thread" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://mastra.ai/docs/memory/overview"
+  },
+  {
+    "id": "eval-task-003",
+    "description": "Agent can connect to an MCP server",
+    "prompt": "Connect a Mastra agent to a GitHub MCP server",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "MCPClient" },
+      { "type": "contains", "value": "servers" },
+      { "type": "contains", "value": "listTools" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://mastra.ai/docs/mcp/overview"
+  },
+  {
+    "id": "eval-task-004",
+    "description": "Agent can set up a RAG pipeline",
+    "prompt": "Build a RAG pipeline in Mastra that chunks documents, embeds them, and stores in pgvector",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": "MDocument" },
+      { "type": "contains", "value": "chunk" },
+      { "type": "contains", "value": "embedMany" },
+      { "type": "contains", "value": "upsert" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://mastra.ai/docs/rag/overview"
+  },
+  {
+    "id": "eval-task-005",
+    "description": "Agent can stream responses from an agent",
+    "prompt": "Stream a response from a Mastra agent and print tokens as they arrive",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": ".stream(" },
+      { "type": "contains", "value": "textStream" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://mastra.ai/docs/agents/overview"
+  },
+  {
+    "id": "eval-gotcha-001",
+    "description": "Agent knows to call .commit() on workflows",
+    "prompt": "Create a simple two-step Mastra workflow",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": ".commit()" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://mastra.ai/docs/workflows/overview"
+  },
+  {
+    "id": "eval-gotcha-002",
+    "description": "Agent uses mastra.getAgent() instead of direct import",
+    "prompt": "How should I access a registered Mastra agent in my application code?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "getAgent" },
+      { "type": "contains", "value": "mastra." }
+    ],
+    "source": "https://mastra.ai/docs/getting-started/overview"
+  },
+  {
+    "id": "eval-gotcha-003",
+    "description": "Agent knows to disconnect MCP after dynamic toolset use",
+    "prompt": "How do I use MCP tools in a multi-user Mastra application?",
+    "type": "text",
+    "assertions": [
+      { "type": "contains", "value": "listToolsets" },
+      { "type": "contains", "value": "disconnect" }
+    ],
+    "source": "https://mastra.ai/docs/mcp/overview"
+  },
+  {
+    "id": "eval-anti-hallucination-001",
+    "description": "Agent does not invent non-existent Mastra methods",
+    "prompt": "Use Mastra to create an agent and generate a response",
+    "type": "code",
+    "assertions": [
+      { "type": "not_contains", "value": "mastra.createAgent" },
+      { "type": "not_contains", "value": "mastra.run" },
+      { "type": "not_contains", "value": "agent.execute" },
+      { "type": "contains", "value": "new Agent" }
+    ],
+    "source": "https://mastra.ai/docs/agents/overview"
+  },
+  {
+    "id": "eval-anti-hallucination-002",
+    "description": "Agent does not use CommonJS imports for Mastra",
+    "prompt": "Set up a basic Mastra project with an agent",
+    "type": "code",
+    "assertions": [
+      { "type": "not_contains", "value": "require(" },
+      { "type": "not_contains", "value": "module.exports" },
+      { "type": "contains", "value": "import" }
+    ],
+    "source": "https://mastra.ai/docs/getting-started/overview"
+  },
+  {
+    "id": "eval-reference-001",
+    "description": "Agent references advanced workflow patterns when needed",
+    "prompt": "Create a Mastra workflow with parallel steps and branching",
+    "type": "code",
+    "assertions": [
+      { "type": "contains", "value": ".parallel(" },
+      { "type": "contains", "value": ".branch(" },
+      { "type": "contains", "value": ".commit()" },
+      { "type": "code_valid", "language": "ts" }
+    ],
+    "source": "https://mastra.ai/docs/workflows/overview"
+  }
+]
