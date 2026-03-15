@@ -1,134 +1,144 @@
 {
   "skill": "code-review-mastery",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "evals": [
     {
       "id": "eval-001",
-      "description": "Triggers on explicit PR review request",
-      "prompt": "Can you review this pull request? It adds a new user registration endpoint.",
-      "type": "explanation",
+      "description": "Triggers on 'review my changes' and runs git diff",
+      "prompt": "Review my changes before I commit.",
+      "type": "action",
       "assertions": [
-        { "type": "contains", "value": "correctness" },
-        { "type": "contains", "value": "security" }
+        { "type": "contains", "value": "git diff" },
+        { "type": "contains", "value": "[MAJOR]" }
       ]
     },
     {
       "id": "eval-002",
-      "description": "Triggers on request to improve review comment quality",
-      "prompt": "My code review comments keep starting arguments. How do I give better feedback without upsetting people?",
-      "type": "explanation",
+      "description": "Triggers on 'review staged changes' and uses --cached",
+      "prompt": "Can you review my staged changes?",
+      "type": "action",
       "assertions": [
-        { "type": "contains", "value": "blocking" },
-        { "type": "contains", "value": "suggestion" },
-        { "type": "contains", "value": "nit" }
+        { "type": "contains", "value": "--cached" },
+        { "type": "contains", "value": "staged" }
       ]
     },
     {
       "id": "eval-003",
-      "description": "Can produce a systematic review sequence for a PR",
-      "prompt": "Walk me through how to review a pull request that touches authentication logic.",
-      "type": "explanation",
+      "description": "Triggers on 'check my code before committing'",
+      "prompt": "Check my code before I push this commit.",
+      "type": "action",
       "assertions": [
-        { "type": "contains", "value": "security" },
-        { "type": "contains", "value": "tests" },
-        { "type": "contains", "value": "correctness" }
+        { "type": "contains", "value": "diff" },
+        { "type": "contains", "value": "changes" }
       ]
     },
     {
       "id": "eval-004",
-      "description": "Can write a blocking comment with correct template structure",
-      "prompt": "Write a code review comment for this code: users.forEach(user => { db.query('SELECT * FROM orders WHERE user_id = ' + user.id); })",
+      "description": "Anti-trigger: does not run git diff for remote PR review",
+      "prompt": "Can you review this GitHub PR at https://github.com/org/repo/pull/42?",
       "type": "explanation",
       "assertions": [
-        { "type": "contains", "value": "blocking" },
-        { "type": "contains", "value": "N+1" },
-        { "type": "contains", "value": "loop" }
+        { "type": "not_contains", "value": "git diff --stat" },
+        { "type": "not_contains", "value": "[MAJOR]" }
       ]
     },
     {
       "id": "eval-005",
-      "description": "Can identify SQL injection vulnerability as a blocking security issue",
-      "prompt": "Review this function: function getUser(id) { return db.query('SELECT * FROM users WHERE id = ' + id); }",
-      "type": "explanation",
+      "description": "Detects project context files during review",
+      "prompt": "Review my changes. The project has a CLAUDE.md and eslint config.",
+      "type": "action",
       "assertions": [
-        { "type": "contains", "value": "injection" },
-        { "type": "contains", "value": "blocking" },
-        { "type": "contains", "value": "parameterized" }
+        { "type": "contains", "value": "CLAUDE.md" },
+        { "type": "contains", "value": "convention" }
       ]
     },
     {
       "id": "eval-006",
-      "description": "Can categorize a style comment correctly as a nit, not a blocker",
-      "prompt": "Should I block a PR because the developer used let instead of const for a variable that is never reassigned?",
-      "type": "explanation",
+      "description": "Classifies SQL injection as [MAJOR] Security",
+      "prompt": "Review this change: I added `db.query('SELECT * FROM users WHERE id = ' + req.params.id)` to handle user lookups.",
+      "type": "action",
       "assertions": [
-        { "type": "contains", "value": "nit" },
-        { "type": "not_contains", "value": "block" },
-        { "type": "contains", "value": "linter" }
+        { "type": "contains", "value": "[MAJOR]" },
+        { "type": "contains", "value": "injection" }
       ]
     },
     {
       "id": "eval-007",
-      "description": "Can explain how to handle a reviewer-author disagreement",
-      "prompt": "The author of a PR disagrees with my blocking comment and says my feedback is just a personal preference. How do I handle this?",
+      "description": "Classifies let-vs-const as [MINOR], not [MAJOR]",
+      "prompt": "In my diff I used `let count = items.length` but count is never reassigned. How severe is this?",
       "type": "explanation",
       "assertions": [
-        { "type": "contains", "value": "standard" },
-        { "type": "contains", "value": "third" },
-        { "type": "contains", "value": "reasoning" }
+        { "type": "contains", "value": "[MINOR]" },
+        { "type": "not_contains", "value": "[MAJOR]" }
       ]
     },
     {
       "id": "eval-008",
-      "description": "Can detect a missing authorization check as a security issue",
-      "prompt": "Review this endpoint: app.get('/api/documents/:id', async (req, res) => { const doc = await Document.findById(req.params.id); res.json(doc); })",
-      "type": "explanation",
+      "description": "Produces checkbox output format with summary",
+      "prompt": "Review my unstaged changes and give me the structured review output.",
+      "type": "action",
       "assertions": [
-        { "type": "contains", "value": "auth" },
-        { "type": "contains", "value": "blocking" },
-        { "type": "contains", "value": "IDOR" }
+        { "type": "contains", "value": "- [ ]" },
+        { "type": "contains", "value": "Summary" }
       ]
     },
     {
       "id": "eval-009",
-      "description": "Correctly advises against rubber-stamp approvals",
-      "prompt": "We have a big PR with 1200 lines changed. The author is a senior engineer I trust. Can I just approve it quickly?",
-      "type": "explanation",
+      "description": "Detects missing auth as [MAJOR] Security issue",
+      "prompt": "Review this change: I added `app.delete('/api/users/:id', async (req, res) => { await User.destroy(req.params.id); res.json({ok: true}); })`",
+      "type": "action",
       "assertions": [
-        { "type": "contains", "value": "read" },
-        { "type": "not_contains", "value": "yes, just approve" },
-        { "type": "contains", "value": "split" }
+        { "type": "contains", "value": "[MAJOR]" },
+        { "type": "contains", "value": "auth" }
       ]
     },
     {
       "id": "eval-010",
-      "description": "Does not invent a non-existent code review standard or framework",
-      "prompt": "What does the Google-Atlassian Unified Code Review Standard say about comment tone?",
-      "type": "explanation",
+      "description": "Handles no changes gracefully",
+      "prompt": "Review my changes. (There are no staged or unstaged changes in the repo.)",
+      "type": "action",
       "assertions": [
-        { "type": "not_contains", "value": "Google-Atlassian Unified Code Review Standard" }
+        { "type": "contains", "value": "no" },
+        { "type": "contains", "value": "changes" }
       ]
     },
     {
       "id": "eval-011",
-      "description": "Can recommend CODEOWNERS and branch protection setup for team review process",
-      "prompt": "How do I set up our GitHub repo so that the security team is always required to review changes to the auth directory?",
-      "type": "explanation",
+      "description": "Warns about large diffs and suggests focusing on MAJOR",
+      "prompt": "Review my changes. The diff is 1200 lines across 30 files.",
+      "type": "action",
       "assertions": [
-        { "type": "contains", "value": "CODEOWNERS" },
-        { "type": "contains", "value": "branch protection" },
-        { "type": "contains", "value": "@security-team" }
+        { "type": "contains", "value": "large" },
+        { "type": "contains", "value": "[MAJOR]" }
       ]
     },
     {
       "id": "eval-012",
-      "description": "References the review checklist for detailed structured review setup",
-      "prompt": "Give me a comprehensive checklist I can use every time I review a pull request",
+      "description": "Offers to fix issues after presenting the review",
+      "prompt": "Review my staged changes and let me know what to fix.",
+      "type": "action",
+      "assertions": [
+        { "type": "contains", "value": "fix" },
+        { "type": "contains", "value": "[MAJOR]" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Anti-hallucination: does not invent a non-existent framework",
+      "prompt": "What does the ReactSecure Framework say about reviewing local diffs?",
       "type": "explanation",
       "assertions": [
+        { "type": "not_contains", "value": "ReactSecure Framework" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "References review-checklist for detailed review",
+      "prompt": "Give me a thorough review of my changes using the full checklist.",
+      "type": "action",
+      "assertions": [
         { "type": "contains", "value": "review-checklist" },
-        { "type": "contains", "value": "security" },
-        { "type": "contains", "value": "testing" }
+        { "type": "contains", "value": "security" }
       ]
     }
   ]

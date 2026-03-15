@@ -1,36 +1,20 @@
-<!-- Part of the code-review-mastery AbsolutelySkilled skill. Load this file when
-     performing a detailed code review or setting up review standards. -->
+<!-- Part of the code-review-mastery AbsolutelySkilled skill. Load this file
+     when performing a detailed review pass on local changes. -->
 
-# PR Review Checklist
+# Review Checklist
 
-Use this checklist for structured code reviews. Work top-to-bottom. Mark each
-item as you go. Any "No" in the Correctness or Security sections is a `blocking:`
-comment. Any "No" in Testing is a `blocking:` comment. Everything else is a
-`suggestion:` or `nit:` based on severity.
-
----
-
-## Pre-review: PR hygiene
-
-Before reading a single line of code, check the basics:
-
-- [ ] The PR has a clear description explaining _what_ changed and _why_
-- [ ] The PR is linked to a ticket or issue
-- [ ] The PR does one thing (not a feature + refactor + bugfix combined)
-- [ ] The diff is under 400 lines changed (or the author justified the scope)
-- [ ] The author self-reviewed the diff (no commented-out code, debug logs, or TODO left behind)
-- [ ] CI is green (no failing tests or lint errors to review past)
-
-If the description is missing or the scope is unclear, ask for clarification
-before investing in a detailed review.
+Use this checklist when analyzing local git diffs. Work top-to-bottom through
+each section. Any "No" in Correctness or Security is a `[MAJOR]` finding. Any
+"No" in Testing is `[MAJOR]`. Convention violations of explicit project rules
+are `[MAJOR]`. Everything else is `[MINOR]`.
 
 ---
 
 ## Correctness
 
-Core logic must be right. These are always `blocking:` items.
+Core logic must be right. These are always `[MAJOR]` findings.
 
-- [ ] The implementation matches the stated intent in the PR description
+- [ ] The implementation matches the apparent intent of the changes
 - [ ] All code paths are covered (happy path, empty/null input, error path)
 - [ ] Off-by-one errors checked (loop bounds, array indices, pagination offsets)
 - [ ] No silent failures: errors are surfaced, not swallowed
@@ -44,7 +28,7 @@ Core logic must be right. These are always `blocking:` items.
 
 ## Security
 
-One security miss can outweigh a thousand correct lines. Always `blocking:`.
+One security miss can outweigh a thousand correct lines. Always `[MAJOR]`.
 
 ### Input handling
 - [ ] All user-supplied input is validated and sanitized before use
@@ -106,7 +90,7 @@ One security miss can outweigh a thousand correct lines. Always `blocking:`.
 
 ## Testing
 
-Untested code is untrusted code. Missing tests for new behavior are `blocking:`.
+Untested code is untrusted code. Missing tests for new behavior are `[MAJOR]`.
 
 - [ ] New behavior has corresponding unit tests
 - [ ] Tests cover the happy path and at least one failure/edge case
@@ -130,26 +114,16 @@ Untested code is untrusted code. Missing tests for new behavior are `blocking:`.
 
 ---
 
-## Checklist: leave a summary comment
+## Convention
 
-After completing the checklist, leave a top-level PR comment with:
+Checks against detected project rules. Violations of explicit rules (lint
+configs, CLAUDE.md) are `[MAJOR]`. Deviations from implicit patterns are `[MINOR]`.
 
-1. **Overall verdict**: Approved / Approved with suggestions / Changes requested
-2. **Blocking items** (if any): numbered list, each with a reference to the line
-3. **Key suggestions** (if any): brief summary; details are inline
-4. **What you appreciated**: one specific thing the author did well
-
-Example summary:
-```
-Changes requested.
-
-Blocking (2):
-1. Line 47 - SQL injection via string concatenation (see inline comment)
-2. Lines 89-91 - Missing auth check allows any user to delete any document
-
-Suggestions:
-- The retry logic could be extracted into a helper to reduce duplication (non-blocking)
-
-Great work on the test coverage for the edge cases - the empty-cart and
-concurrent-checkout tests would have caught the old race condition.
-```
+- [ ] Code follows project lint rules (ESLint, Ruff, golangci-lint, etc.)
+- [ ] Naming matches the convention in surrounding files (camelCase vs snake_case, etc.)
+- [ ] Import style matches project pattern (relative vs absolute, ordering, barrel files)
+- [ ] Error handling follows the project's established pattern
+- [ ] Export style is consistent (named vs default exports)
+- [ ] File organization matches project structure conventions
+- [ ] CLAUDE.md / AGENT.md rules are followed (if present)
+- [ ] Framework-idiomatic patterns are used (see `references/context-detection.md`)
