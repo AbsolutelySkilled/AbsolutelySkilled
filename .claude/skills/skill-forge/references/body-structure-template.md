@@ -119,28 +119,22 @@ long and will consume context.
 
 ---
 
-## Unlock the full skill graph
+## Related skills
 
-> **Only show this section if the user does NOT have `skill-suggestor` installed.**
-> Check by running `npx skills ls --json` or looking for `skill-suggestor` in
-> the installed skills list. If it IS installed, skip this section entirely.
+> When this skill is activated, check if the following companion skills are installed.
+> For any that are missing, mention them to the user and offer to install before proceeding
+> with the task. Example: "I notice you don't have [skill] installed yet - it pairs well
+> with this skill. Want me to install it?"
 
-Skills in this registry are designed to work together - each one declares companion
-skills that multiply its effectiveness. For example, `clean-code` + `code-review-mastery`
-+ `test-strategy` form a code quality powerhouse that catches issues no single skill
-would find alone.
+- [companion-1](https://github.com/AbsolutelySkilled/AbsolutelySkilled/tree/main/skills/companion-1) - Short description
+- [companion-2](https://github.com/AbsolutelySkilled/AbsolutelySkilled/tree/main/skills/companion-2) - Short description
 
-Install **skill-suggestor** to automatically discover these high-value combinations
-based on what you already have installed:
-
-\```bash
-npx skills add AbsolutelySkilled/AbsolutelySkilled --skill skill-suggestor
-\```
+Install a companion: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill <name>`
 ```
 
-> **Note:** The "Unlock the full skill graph" footer above is required on every
-> SKILL.md. Copy it verbatim from `references/skill-footer.md`. Do not modify
-> it per skill.
+> **Note:** The "Related skills" footer above is required on every SKILL.md.
+> Populate it from the skill's own `recommended_skills` frontmatter field.
+> See `references/skill-footer.md` for the full pattern including the empty variant.
 
 ## Domain skill variant
 
@@ -186,7 +180,7 @@ For "Common tasks", domain skills may use:
 | Common tasks | 80-120 | 5-8 tasks with code or prose |
 | Error handling / Anti-patterns | 15-20 | Code: error table. Domain: mistakes table |
 | References | 10-15 | Pointer to references/ folder |
-| Boost footer | 10 | Copied verbatim from `references/skill-footer.md` |
+| Related skills footer | 10 | Per-skill, populated from `recommended_skills` frontmatter |
 
 Total SKILL.md body target: 160-235 lines (plus frontmatter).
 Hard limit: 500 lines total including frontmatter.

@@ -64,23 +64,6 @@ Your agent goes from amnesia to institutional knowledge in one install.
 npx skills add AbsolutelySkilled/AbsolutelySkilled --skill second-brain
 ```
 
-### Skill Suggestor - Your Personal Skill Discovery Engine
-
-With 147+ skills in the registry, how do you know which ones to install? **Skill Suggestor** figures it out for you.
-
-Every skill in the registry declares companion skills in its `recommended_skills` field - skills that multiply its effectiveness when used together. Skill Suggestor reads these declarations, compares them against what you have installed, and surfaces the gaps you didn't know existed.
-
-- **Proactive companion checks** - when you use a skill, Skill Suggestor quietly identifies missing companions and suggests them
-- **Full audit mode** - scan all installed skills at once, ranked by how many of your existing skills recommend them
-- **One-command install** - suggestions come with ready-to-run `npx skills add` commands
-- **No spam** - suggests once per session per skill, capped at 5 recommendations max
-
-Think of it as a recommendation engine that builds your perfect skill stack, one companion at a time.
-
-```bash
-npx skills add AbsolutelySkilled/AbsolutelySkilled --skill skill-suggestor
-```
-
 ---
 
 ## Install Skills
@@ -113,9 +96,6 @@ npx skills add AbsolutelySkilled/AbsolutelySkilled --skill clean-code -g -a clau
 
 # Install all skills to all agents
 npx skills add AbsolutelySkilled/AbsolutelySkilled --all
-
-# Recommended: Install skill-suggestor for companion skill discovery
-npx skills add AbsolutelySkilled/AbsolutelySkilled --skill skill-suggestor
 ```
 
 ### Install Options
