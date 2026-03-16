@@ -185,6 +185,8 @@ skills/
 | [cloud-aws](skills/cloud-aws/) | AWS services, well-architected framework, cost optimization |
 | [cloud-gcp](skills/cloud-gcp/) | GCP services, BigQuery, Cloud Run, Pub/Sub patterns |
 | [observability](skills/observability/) | Logging, metrics, tracing, alerting, SLOs, incident response |
+| [signoz](skills/signoz/) | Open-source observability - distributed tracing, logs, metrics, dashboards, OpenTelemetry |
+| [sentry](skills/sentry/) | Error monitoring, performance tracing, session replay, cron monitoring, source maps |
 | [linux-admin](skills/linux-admin/) | Shell scripting, systemd, networking, security hardening |
 | [site-reliability](skills/site-reliability/) | SRE practices, error budgets, toil reduction, capacity planning |
 | [email-deliverability](skills/email-deliverability/) | SPF, DKIM, DMARC, warm-up, bounce handling, reputation |
@@ -222,6 +224,7 @@ skills/
 | Skill | Description |
 |---|---|
 | [cmux](skills/cmux/) | Terminal multiplexer CLI - panes, surfaces, workspaces, browser automation |
+| [vite-plus](skills/vite-plus/) | Vite+ unified toolchain - scaffolding, migration, dev/build/test/lint, monorepo tasks |
 | [second-brain](skills/second-brain/) | Persistent second brain for AI agents - tag-indexed, hierarchical knowledge |
 | [git-advanced](skills/git-advanced/) | Rebase strategies, bisect, worktrees, hooks, monorepo workflows |
 | [vim-neovim](skills/vim-neovim/) | Configuration, keybindings, plugins, Lua scripting |
@@ -336,6 +339,7 @@ skills/
 | [product-strategy](skills/product-strategy/) | Vision, roadmapping, prioritization frameworks (RICE, ICE, MoSCoW) |
 | [user-stories](skills/user-stories/) | Acceptance criteria, story mapping, backlog grooming, estimation |
 | [product-analytics](skills/product-analytics/) | Funnels, cohort analysis, feature adoption, metrics (NSM, AARRR) |
+| [posthog](skills/posthog/) | PostHog integration - product analytics, feature flags, A/B testing, session replay, surveys |
 | [competitive-analysis](skills/competitive-analysis/) | Market landscape, feature comparison, positioning, SWOT |
 | [product-launch](skills/product-launch/) | Go-to-market, beta programs, launch checklists, rollout strategy |
 | [product-discovery](skills/product-discovery/) | Jobs-to-be-done, opportunity solution trees, assumption mapping |
@@ -428,7 +432,7 @@ skills/
 
 ### Full Registry
 
-**147+ skills** across 25 categories.
+**151+ skills** across 25 categories.
 
 ## Creating Skills
 
