@@ -9,7 +9,7 @@ description: >
   task requiring multi-package repository management.
 category: engineering
 tags: [monorepo, turborepo, nx, workspaces, build-caching, tooling]
-recommended_skills: [ci-cd-pipelines, git-advanced, developer-experience, vite-plus]
+recommended_skills: [ci-cd-pipelines, git-advanced, developer-experience, vite-plus, meta-repo]
 platforms:
   - claude-code
   - gemini-cli

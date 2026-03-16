@@ -1,0 +1,24 @@
+skill: meta-repo
+crawled: 2026-03-16
+sources:
+  - url: https://raw.githubusercontent.com/mateodelnorte/meta/master/README.md
+    type: readme
+    description: Primary documentation covering installation, initialisation, all core commands, plugin list, and usage scenarios
+    accessed: 2026-03-16
+    sections_used:
+      - Why meta?
+      - Getting started / installing
+      - Initializing a new meta project
+      - Cloning an existing meta project
+      - Getting meta project updates
+      - meta exec
+      - Plugins / Available Plugins
+      - Usage Scenarios (Product Development Team, Developing a Library, Migrating a Monorepo)
+      - FAQs (parallel execution, escaping expressions)
+  - url: https://github.com/mateodelnorte/meta
+    type: guide
+    description: GitHub repo main page for plugin list and project metadata
+    accessed: 2026-03-16
+    sections_used:
+      - Repository description
+      - Package.json core plugin references

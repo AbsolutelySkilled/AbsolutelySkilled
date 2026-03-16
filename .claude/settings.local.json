@@ -8,7 +8,9 @@
       "Bash(do)",
       "Bash(echo \"=== $skill ===\")",
       "Read(//Users/dhruv/dev/AbsolutelySkilled/skills/$skill/**)",
-      "Bash(done)"
+      "Bash(done)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)"
     ]
   }
 }

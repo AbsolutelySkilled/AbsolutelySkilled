@@ -1,0 +1,151 @@
+{
+  "skill": "meta-repo",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger: user asks how to manage multiple repos at once",
+      "prompt": "I have 10 microservice repos and want to run git pull on all of them at once. What tool should I use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "meta" },
+        { "type": "contains", "value": "meta git pull" }
+      ],
+      "source": "https://raw.githubusercontent.com/mateodelnorte/meta/master/README.md"
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger: user mentions meta repo or meta git clone",
+      "prompt": "How do I clone a meta repo so I get all the child repos too?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "meta git clone" },
+        { "type": "not_contains", "value": "git submodule" }
+      ],
+      "source": "https://raw.githubusercontent.com/mateodelnorte/meta/master/README.md"
+    },
+    {
+      "id": "eval-003",
+      "description": "Core task: install meta",
+      "prompt": "How do I install the meta tool?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "npm i -g meta" },
+        { "type": "code_valid", "language": "bash" }
+      ],
+      "source": "https://raw.githubusercontent.com/mateodelnorte/meta/master/README.md"
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: initialise a new meta project",
+      "prompt": "Show me how to create a new meta repo from scratch and add two child repos to it.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "meta init" },
+        { "type": "contains", "value": "meta project" },
+        { "type": "code_valid", "language": "bash" }
+      ],
+      "source": "https://raw.githubusercontent.com/mateodelnorte/meta/master/README.md"
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: run a command across all repos in parallel",
+      "prompt": "How do I run npm ci in all my repos at the same time with meta?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "--parallel" },
+        { "type": "contains", "value": "meta exec" },
+        { "type": "code_valid", "language": "bash" }
+      ],
+      "source": "https://raw.githubusercontent.com/mateodelnorte/meta/master/README.md"
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: migrate a monorepo to a meta repo",
+      "prompt": "I have a monorepo with packages/auth, packages/api, and packages/worker. How do I migrate it to a meta repo?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "meta project migrate" },
+        { "type": "contains", "value": "meta init" },
+        { "type": "code_valid", "language": "bash" }
+      ],
+      "source": "https://raw.githubusercontent.com/mateodelnorte/meta/master/README.md"
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: target a subset of repos",
+      "prompt": "How do I run git status only on services/api and services/worker, not all repos?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "--include-only" },
+        { "type": "code_valid", "language": "bash" }
+      ],
+      "source": "https://raw.githubusercontent.com/mateodelnorte/meta/master/README.md"
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: escaping shell expressions in meta exec",
+      "prompt": "I tried `meta exec \"echo $(pwd)\"` but it expands pwd in my terminal, not in each repo. How do I fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "\\$" },
+        { "type": "not_contains", "value": "It is not possible" }
+      ],
+      "source": "https://raw.githubusercontent.com/mateodelnorte/meta/master/README.md"
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: new child repos added to .meta not cloned locally",
+      "prompt": "A team member added a new repo to our meta project. I pulled the meta repo but the new child repo directory isn't there. What do I do?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "meta git update" }
+      ],
+      "source": "https://raw.githubusercontent.com/mateodelnorte/meta/master/README.md"
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: .meta file format",
+      "prompt": "What does the .meta config file look like? I want to edit it manually.",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "projects" },
+        { "type": "contains", "value": ".gitignore" },
+        { "type": "not_contains", "value": ".yaml" }
+      ],
+      "source": "https://raw.githubusercontent.com/mateodelnorte/meta/master/README.md"
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: no invented meta sub-commands",
+      "prompt": "How do I use meta sync to synchronise all repos?",
+      "type": "factual",
+      "assertions": [
+        { "type": "not_contains", "value": "meta sync" },
+        { "type": "contains", "value": "meta git" }
+      ],
+      "source": "https://raw.githubusercontent.com/mateodelnorte/meta/master/README.md"
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: meta is not git submodules",
+      "prompt": "Does meta use git submodules under the hood?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "no" },
+        { "type": "not_contains", "value": "yes, meta uses git submodules" }
+      ],
+      "source": "https://raw.githubusercontent.com/mateodelnorte/meta/master/README.md"
+    },
+    {
+      "id": "eval-013",
+      "description": "References load: user asks for full command list",
+      "prompt": "Can you show me all the flags available for meta exec?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "references/commands.md" }
+      ],
+      "source": "https://raw.githubusercontent.com/mateodelnorte/meta/master/README.md"
+    }
+  ]
+}

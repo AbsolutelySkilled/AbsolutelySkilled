@@ -9,7 +9,7 @@ description: >
   artifacts, and any task requiring continuous integration or delivery setup.
 category: infra
 tags: [ci-cd, github-actions, deployment, automation, pipelines, devops]
-recommended_skills: [docker-kubernetes, terraform-iac, git-advanced, monorepo-management]
+recommended_skills: [docker-kubernetes, terraform-iac, git-advanced, monorepo-management, meta-repo]
 platforms:
   - claude-code
   - gemini-cli

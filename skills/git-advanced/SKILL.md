@@ -8,7 +8,7 @@ description: >
   reflog recovery, stash management, and any task requiring advanced git workflows.
 category: devtools
 tags: [git, rebase, bisect, worktrees, hooks, version-control]
-recommended_skills: [code-review-mastery, ci-cd-pipelines, monorepo-management, shell-scripting]
+recommended_skills: [code-review-mastery, ci-cd-pipelines, monorepo-management, shell-scripting, meta-repo]
 platforms:
   - claude-code
   - gemini-cli

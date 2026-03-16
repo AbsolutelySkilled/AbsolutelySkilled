@@ -9,7 +9,7 @@ description: >
   policies, licensing decisions, community health, and open source project governance.
 category: engineering
 tags: [open-source, governance, changelog, community, licensing, maintainer]
-recommended_skills: [developer-advocacy, git-advanced, developer-experience, ip-management]
+recommended_skills: [developer-advocacy, git-advanced, developer-experience, ip-management, meta-repo]
 platforms:
   - claude-code
   - gemini-cli
