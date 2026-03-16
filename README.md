@@ -428,7 +428,7 @@ skills/
 
 ### Full Registry
 
-**147+ skills** across 25 categories. See the complete categorized checklist in [TODO.local.md](TODO.local.md).
+**147+ skills** across 25 categories.
 
 ## Creating Skills
 
