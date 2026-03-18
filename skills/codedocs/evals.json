@@ -1,6 +1,6 @@
 {
   "skill": "codedocs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "evals": [
     {
       "id": "eval-001",
@@ -140,6 +140,84 @@
         { "type": "contains", "value": "module" },
         { "type": "contains", "value": "pattern" },
         { "type": "contains", "value": "approve" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "Reports coverage percentage in the discovery plan",
+      "prompt": "Run codedocs:generate on a large Next.js monorepo with 200 source files",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "coverage" },
+        { "type": "contains", "value": "%" },
+        { "type": "contains", "value": "INDEX.md" }
+      ]
+    },
+    {
+      "id": "eval-015",
+      "description": "Splits large modules into sub-modules",
+      "prompt": "The api module has 30 files across routes, middleware, and validators subdirectories - document it with codedocs",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "sub-module" },
+        { "type": "contains", "value": "modules/api/" },
+        { "type": "not_contains", "value": "modules/api.md" }
+      ]
+    },
+    {
+      "id": "eval-016",
+      "description": "Runs codedocs:status and reports coverage gaps",
+      "prompt": "Run codedocs:status on this project",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "coverage" },
+        { "type": "contains", "value": "stale" },
+        { "type": "contains", "value": ".codedocs.json" }
+      ]
+    },
+    {
+      "id": "eval-017",
+      "description": "Performs recursive deep scan for large repos, not just top-level",
+      "prompt": "Generate codedocs for a large repo with src/api/routes, src/api/middleware, src/auth/strategies, src/db/migrations, src/db/models",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "routes" },
+        { "type": "contains", "value": "middleware" },
+        { "type": "contains", "value": "strategies" },
+        { "type": "contains", "value": "migrations" }
+      ]
+    },
+    {
+      "id": "eval-018",
+      "description": "Does not invent codedocs:status for repos without a manifest",
+      "prompt": "Run codedocs:status on a fresh repo with no docs yet",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": ".codedocs.json" },
+        { "type": "contains", "value": "codedocs:generate" }
+      ]
+    },
+    {
+      "id": "eval-019",
+      "description": "Generates INDEX.md as part of output",
+      "prompt": "Generate full codedocs documentation for this TypeScript project",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "INDEX.md" },
+        { "type": "contains", "value": "OVERVIEW.md" },
+        { "type": "contains", "value": "modules/" }
+      ]
+    },
+    {
+      "id": "eval-020",
+      "description": "Detects more than 7 cross-cutting patterns in complex repos",
+      "prompt": "Document this repo which has auth middleware, shared error types, a logger utility, a caching layer, a background job system, and validation schemas used across all modules",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "patterns/" },
+        { "type": "contains", "value": "error-handling" },
+        { "type": "contains", "value": "caching" },
+        { "type": "contains", "value": "validation" }
       ]
     }
   ]

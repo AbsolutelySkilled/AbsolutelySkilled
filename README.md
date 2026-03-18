@@ -20,7 +20,7 @@ Skills work with any agent that supports the SKILL.md format: Claude Code, Gemin
 
 ## Flagship Skills
 
-These three skills form the backbone of AbsolutelySkilled - install them first and watch your AI agent transform from a code assistant into an autonomous development partner.
+These skills form the backbone of AbsolutelySkilled - install them first and watch your AI agent transform from a code assistant into an autonomous development partner.
 
 ### Superhuman - AI-Native Development Lifecycle
 
@@ -62,6 +62,50 @@ Your agent goes from amnesia to institutional knowledge in one install.
 
 ```bash
 npx skills add AbsolutelySkilled/AbsolutelySkilled --skill second-brain
+```
+
+### Codedocs - AI-Agent-Friendly Codebase Documentation
+
+Onboarding a new developer (or AI agent) onto a large repo is slow because knowledge lives in people's heads and scattered READMEs. **Codedocs** fixes that by generating a structured `docs/` tree that an AI agent can navigate instantly without re-reading source code on every question.
+
+It produces four types of output that work together:
+
+- **OVERVIEW.md** - architecture, tech stack, entry points, and a module map that routes any question to the right doc
+- **Module docs** - one per bounded context, covering public API, internal structure, dependencies, and implementation notes. Large modules (15+ files) are automatically split into sub-module docs
+- **Pattern docs** - cross-cutting concerns like error handling, logging, auth, and testing strategy documented once instead of scattered across every module
+- **INDEX.md** - a file-to-module lookup table so any agent can instantly answer "which doc covers this file?"
+
+Coverage is a first-class metric. Codedocs runs a recursive census of your repo, verifies it's documenting 70%+ of source files (scaled by repo size), and flags gaps before it ever starts writing. A huge repo generates 30-80 doc files, not 8-12.
+
+Once docs exist, use `codedocs:ask` to answer questions from the docs instead of re-reading source - and `codedocs:update --diff` to surgically refresh only the modules touched by recent commits.
+
+```bash
+# Install
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill codedocs
+
+# Generate docs for your entire repo
+codedocs:generate
+
+# Generate with a custom output directory
+codedocs:generate --output documentation/
+
+# Generate docs for a specific subdirectory (monorepos)
+codedocs:generate packages/api --output packages/api/docs/
+
+# Force exhaustive coverage (documents directories with even 1 source file)
+codedocs:generate --exhaustive
+
+# Ask a question - answered from docs, not source code
+codedocs:ask "how does the authentication flow work?"
+
+# Check coverage and find undocumented areas
+codedocs:status
+
+# Update docs after a refactor
+codedocs:update --scope src/auth/
+
+# Update docs from recent commits
+codedocs:update --diff HEAD~5..HEAD
 ```
 
 ---

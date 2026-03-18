@@ -4,7 +4,8 @@
 # Generate Workflow
 
 Complete reference for the `codedocs:generate` command - discovery heuristics,
-module boundary detection, tech stack identification, and output templates.
+module boundary detection, tech stack identification, sub-module splitting, coverage
+verification, and output templates.
 
 ---
 
@@ -36,9 +37,13 @@ For monorepos, check for workspace definitions:
 - `go.work` file
 - `pnpm-workspace.yaml`
 - `lerna.json`
+- `nx.json`
+- `turbo.json`
 
 Record: primary language, framework (if detectable from dependencies), build
 tool, and test framework.
+
+---
 
 ### Step 2: Entry point detection
 
@@ -57,52 +62,181 @@ by checking (in priority order):
 5. **Config-defined entries** - `main` or `module` field in package.json,
    `[lib]` in Cargo.toml
 
-### Step 3: Module boundary detection
+---
 
-Modules are the primary unit of documentation. Detect boundaries using these
-heuristics (apply in order, first match wins):
+### Step 3: Full recursive directory census
 
-1. **Monorepo packages** - Each workspace package is a module
-2. **Top-level src/ directories** - `src/auth/`, `src/api/`, `src/database/`
-   each become a module if they contain 3+ files
-3. **Framework conventions** - `controllers/`, `models/`, `services/`,
-   `routes/`, `middleware/`, `utils/` in MVC frameworks
-4. **Explicit module markers** - Directories containing `mod.rs` (Rust),
-   `__init__.py` (Python), `index.ts` (TypeScript)
-5. **Domain directories** - Any directory 2+ levels deep with 5+ source files
-   and a cohesive purpose (inferred from file names and imports)
+Before detecting module boundaries, build a complete census of the repo. Walk
+the entire directory tree (excluding ignore paths) and record every directory
+with its file count. This census drives both module detection and coverage
+verification.
 
-For each candidate module, record:
-- Directory path
-- File count and primary language
-- Exports (public API surface)
-- Imports from other modules (dependency graph)
-- One-line purpose summary (inferred from directory name, exports, and README
-  if present)
+```
+Census format:
+  <path> | <source file count> | <depth>
+  src/                    | 3   | 1
+  src/auth/               | 8   | 2
+  src/auth/strategies/    | 4   | 3
+  src/api/                | 22  | 2
+  src/api/routes/         | 11  | 3
+  src/api/middleware/     | 6   | 3
+  ...
+```
 
-### Step 4: Cross-cutting pattern detection
+**What to count as source files:** `.ts`, `.js`, `.py`, `.go`, `.rs`, `.java`,
+`.kt`, `.rb`, `.ex`, `.exs`, `.cs`, `.cpp`, `.c`, `.swift`, `.php`. Exclude
+lock files, config files (`.json`, `.yaml`, `.toml` unless they define code),
+test files (unless `include_test_files: true`), and generated files.
 
-Patterns are concerns that span multiple modules. Detect by looking for:
+---
 
-- **Error handling** - Shared error types, error middleware, Result/Either
-  patterns, custom exception classes
-- **Testing** - Test directory structure, test utilities, fixtures, mocking
-  patterns, test configuration
-- **Logging/observability** - Logger configuration, structured logging,
-  metrics, tracing setup
-- **Authentication/authorization** - Auth middleware, guards, decorators,
-  permission checks across modules
-- **Configuration** - Config loading, environment variable handling, feature
-  flags
-- **Database access** - ORM setup, migration patterns, repository patterns,
-  connection management
-- **API conventions** - Request/response schemas, validation patterns,
-  serialization, versioning
+### Step 4: Multi-level module boundary detection
+
+Modules are the primary unit of documentation. Apply these heuristics in layers,
+from coarsest to finest, collecting all candidates before deduplicating.
+
+#### Layer 1: Monorepo packages (highest priority)
+
+Each workspace package is its own top-level module. For each package:
+- Record the package root as a module boundary
+- Recurse into the package to find sub-modules (apply Layer 2-4 within it)
+
+#### Layer 2: Top-level structural directories
+
+Inside each package (or the repo root if not a monorepo), scan the first two
+levels of directories for structural modules:
+
+**Explicit source roots:** `src/`, `lib/`, `app/`, `pkg/`, `cmd/`
+- Every direct child directory of these roots with 2+ source files is a module candidate
+
+**Framework convention directories** (these are themselves modules):
+- Express/Fastify/Hapi: `routes/`, `controllers/`, `middleware/`, `services/`, `models/`
+- Next.js: `app/` (or `pages/`), `components/`, `lib/`, `server/`
+- Django/Flask: `views/`, `models/`, `serializers/`, `urls/`
+- Rails: `app/models/`, `app/controllers/`, `app/services/`
+- Spring: `controller/`, `service/`, `repository/`, `config/`
+- Go: every directory containing `.go` files is a package (and a module candidate)
+- Rust: every directory containing `mod.rs` or `lib.rs`
+
+**Domain/feature directories** - Any directory 1-3 levels deep whose name
+suggests a domain concept: `auth`, `billing`, `users`, `products`, `orders`,
+`notifications`, `search`, `analytics`, `admin`, `api`, `core`, `shared`,
+`common`, `utils`, `helpers`, `hooks`, `store`, `context`, `types`
+
+#### Layer 3: Deep scanning for large modules
+
+For every module candidate from Layer 2 that has **15+ source files** OR
+contains **subdirectories with 3+ files each**, recursively scan inside it to
+find sub-modules. Apply this rule:
+
+> If a module contains a subdirectory with 3+ source files and a distinct
+> purpose (different name from parent, has its own index/exports), that
+> subdirectory becomes a sub-module documented in `modules/<parent>/<child>.md`.
+
+Examples of when to split:
+- `src/api/` with 22 files splits into `api/routes`, `api/middleware`, `api/validators`
+- `src/components/` with 30 files splits into `components/ui`, `components/forms`, `components/layout`
+- `src/utils/` with 18 files splits into `utils/string`, `utils/date`, `utils/http`
+
+Examples of when NOT to split:
+- `src/auth/` with 8 files - document as one module even with 2-3 subdirs
+- `src/config/` with 5 files - too small to warrant sub-modules
+- Single-level flat directories with no internal structure
+
+#### Layer 4: Minimum-threshold cleanup
+
+After collecting all candidates:
+- Keep modules with 2+ source files (lower than the manifest default to avoid gaps)
+- Merge candidates that are clearly the same logical module (e.g., `types/` with
+  1 file that only re-exports from `models/` - fold into `models`)
+- Flag directories with 1 source file as "minor files" - mention in the parent
+  module doc rather than creating a separate module doc
+
+---
+
+### Step 5: Cross-cutting pattern detection (expanded)
+
+Patterns are concerns that span multiple modules. Scan for all of these:
+
+**Structural patterns:**
+- **Error handling** - Shared error types, error middleware, Result/Either patterns,
+  custom exception classes, error codes/enums
+- **Logging/observability** - Logger setup, structured logging, metrics export,
+  tracing instrumentation, correlation IDs
+- **Configuration** - Config loading order, environment variable handling, feature
+  flags, secrets management
+- **Authentication/authorization** - Auth middleware, JWT/session handling, guards,
+  decorators, permission checks, RBAC
+
+**Data patterns:**
+- **Database access** - ORM setup, migration patterns, repository/DAO patterns,
+  connection management, query builders
+- **Caching** - Cache clients, cache key conventions, TTL patterns, cache
+  invalidation strategies
+- **Event/message handling** - Queue clients, event emitters, pub/sub patterns,
+  event schemas
+- **External API clients** - HTTP client wrappers, retry logic, circuit breakers,
+  service clients
+
+**Code quality patterns:**
+- **Testing** - Test directory structure, test utilities, fixtures, factories,
+  mocking patterns, test configuration, test helpers
+- **Validation** - Input validation libraries, schema validation, DTO patterns,
+  sanitization
+- **Type system** - Shared type definitions, interfaces, enums, generics patterns
+- **Dependency injection** - DI containers, service registration, provider patterns
+
+**Operational patterns:**
+- **API conventions** - Request/response schemas, pagination patterns, versioning,
+  error response format, serialization
+- **Background jobs** - Job queue setup, worker definitions, scheduled tasks,
+  job retry patterns
+- **File/storage handling** - File upload patterns, storage clients, CDN integration
+- **Internationalization** - i18n library setup, translation file structure,
+  locale handling
 
 Only create a pattern doc if the pattern appears in 2+ modules. Single-module
 patterns belong in the module doc.
 
-### Step 5: Present the plan
+---
+
+### Step 6: Coverage verification
+
+After collecting all module candidates and patterns, run a coverage check before
+presenting the plan. This ensures the documentation plan covers the codebase
+adequately.
+
+**Calculate coverage:**
+```
+covered_files = sum of source files in all module candidates
+total_files = total source files from the census (Step 3)
+coverage = covered_files / total_files * 100
+```
+
+**Coverage targets by repo size:**
+| Total source files | Minimum acceptable coverage |
+|---|---|
+| < 50 files | 90% |
+| 50-200 files | 80% |
+| 200-500 files | 70% |
+| 500+ files | 60% (focus on top-level architecture) |
+
+**If coverage is below target:**
+1. Identify uncovered directories (those in the census but not in any module candidate)
+2. For each uncovered directory with 2+ source files, add it as a module candidate
+3. For single files not in any module, group them into a `misc` module or fold
+   them into the nearest parent module
+4. Re-run coverage calculation
+5. Report the final coverage percentage in the discovery plan
+
+**Always report in the discovery plan:**
+```
+Coverage: <N>% (<covered> of <total> source files documented)
+```
+
+---
+
+### Step 7: Present the plan
 
 Before writing any documentation, present the discovery results to the user:
 
@@ -114,23 +248,62 @@ Tech stack: <language> + <framework> (<build tool>)
 Entry points: <list>
 
 Modules to document (<count>):
-  - <module-name> (<path>) - <one-line summary>
+  Top-level modules:
+  - <module-name> (<path>) - <one-line summary> (<N> files)
+  - ...
+
+  Sub-modules:
+  - <parent>/<child> (<path>) - <one-line summary> (<N> files)
   - ...
 
 Patterns detected (<count>):
   - <pattern-name> - <where it appears>
   - ...
 
+Coverage: <N>% (<covered> of <total> source files)
 Estimated output: <N> files in <output-dir>/
+  - 1 OVERVIEW.md
+  - 1 INDEX.md
+  - <N> module docs
+  - <N> pattern docs
+  - 1 .codedocs.json
 
 Proceed? [Y/n]
 ```
 
-Wait for user approval. They may want to add, remove, or rename modules.
+Wait for user approval. They may want to add, remove, rename, or merge modules.
+If coverage is below target, proactively call out which directories are uncovered
+and ask if they should be included.
 
 ---
 
-## OVERVIEW.md Template
+### Step 8: Generate INDEX.md
+
+After writing all module docs, generate `INDEX.md` as a lookup table mapping
+every significant source file to its module doc. This is primarily for AI agent
+navigation.
+
+```markdown
+# File Index
+
+Quick lookup: find which module documents any file in this repo.
+
+| File | Module | Doc |
+|---|---|---|
+| `src/auth/middleware.ts` | auth | `modules/auth.md` |
+| `src/auth/strategies/jwt.ts` | auth/strategies | `modules/auth/strategies.md` |
+| `src/api/routes/users.ts` | api/routes | `modules/api/routes.md` |
+| ... | ... | ... |
+```
+
+Only include files that are part of a documented module. Skip generated files,
+lock files, and trivial configs.
+
+---
+
+## Output templates
+
+### OVERVIEW.md Template
 
 ```markdown
 # <Project Name>
@@ -163,9 +336,17 @@ problem it solves.>
 
 ## Module Map
 
-| Module | Path | Description |
+| Module | Path | Description | Files |
+|---|---|---|---|
+| <name> | `<path>` | <one-line purpose> | <N> |
+
+> Sub-modules are listed under their parent. See `INDEX.md` for file-level lookup.
+
+## Cross-cutting Patterns
+
+| Pattern | Doc | Modules affected |
 |---|---|---|
-| <name> | `<path>` | <one-line purpose> |
+| <name> | `patterns/<name>.md` | <module list> |
 
 ## Key Concepts
 
@@ -176,18 +357,32 @@ terms that would confuse someone unfamiliar with the project.>
 
 <Minimal steps to clone, install, and run the project locally. Pull from
 existing README if available.>
+
+## Documentation Coverage
+
+Generated by codedocs. Coverage: <N>% (<covered>/<total> source files).
+Last updated: <timestamp> at commit `<sha>`.
 ```
 
 ---
 
-## Module Doc Template
+### Module Doc Template
 
-Each module doc in `modules/` follows this structure:
+Each module doc in `modules/` follows this structure. For top-level modules with
+sub-modules, include a sub-module index at the top.
 
 ```markdown
 # <Module Name>
 
 <1-2 sentence summary of the module's purpose and responsibility.>
+
+## Sub-modules
+
+> Only include this section if the module has sub-modules.
+
+| Sub-module | Doc | Description |
+|---|---|---|
+| <name> | `modules/<parent>/<child>.md` | <purpose> |
 
 ## Public API
 
@@ -199,6 +394,10 @@ descriptions. This is what other modules consume.>
 <How the module is organized internally. Key files and their roles.
 Only list files that are important for understanding - skip trivial
 utility files.>
+
+| File | Purpose |
+|---|---|
+| `<relative-path>` | <what it does> |
 
 ## Dependencies
 
@@ -221,7 +420,7 @@ is nothing noteworthy.>
 
 ---
 
-## Pattern Doc Template
+### Pattern Doc Template
 
 Each pattern doc in `patterns/` follows this structure:
 
@@ -243,4 +442,10 @@ code style, naming conventions, file placement, etc.>
 
 <2-3 concrete examples from the codebase showing the pattern in use.
 Reference actual file paths.>
+
+## Adding to This Pattern
+
+<What a developer should do when adding new code that touches this pattern.
+E.g., "When adding a new route, register it in X and add error handling
+using Y.">
 ```

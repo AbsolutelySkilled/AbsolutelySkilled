@@ -1,6 +1,6 @@
 ---
 name: codedocs
-version: 0.1.0
+version: 0.2.0
 description: >
   Use this skill when generating AI-agent-friendly documentation for a git repo or
   directory, answering questions about a codebase from existing docs, or incrementally
@@ -93,23 +93,43 @@ Do NOT trigger this skill for:
    this manifest to know what changed, what to re-scan, and what to skip.
 
 5. **Output is configurable, structure is not** - The output directory (default `docs/`) is
-   configurable. The internal structure (OVERVIEW.md, .codedocs.json, modules/, patterns/)
+   configurable. The internal structure (OVERVIEW.md, INDEX.md, .codedocs.json, modules/, patterns/)
    is fixed. Consistency across repos means any agent or developer knows where to look.
+
+6. **Coverage is a first-class metric** - Documentation that covers 40% of a codebase is
+   often worse than none - it gives a false sense of completeness. Always run coverage
+   verification before presenting the plan. Target 70%+ for mid-size repos. Report coverage
+   percentage in OVERVIEW.md and the manifest. See `references/coverage-strategy.md` for targets.
+
+7. **Go deep, not just wide** - For large repos, top-level modules are just the starting point.
+   Any module with 15+ source files must be analyzed for sub-modules. Scan recursively through
+   the full directory tree - a huge repo should generate 30-80 doc files, not 8-12.
 
 ---
 
 ## Core concepts
 
 **Output structure** - Codedocs always produces the same directory tree. OVERVIEW.md is the
-entry point covering architecture, tech stack, entry points, and key concepts. The modules/
-directory contains one markdown file per major code module. The patterns/ directory contains
-cross-cutting concern docs. The `.codedocs.json` manifest tracks metadata for incremental
-updates. See `references/output-structure.md` for the full spec.
+entry point covering architecture, tech stack, entry points, and key concepts. INDEX.md is
+the file-to-module lookup table. The modules/ directory contains one markdown file per major
+code module (with optional sub-module directories for large modules). The patterns/ directory
+contains cross-cutting concern docs. The `.codedocs.json` manifest tracks metadata, coverage
+stats, and SHAs for incremental updates. See `references/output-structure.md` for the full spec.
 
-**Three sub-commands** - The skill exposes three operations: `generate` for full or scoped
-documentation creation, `ask` for docs-first Q&A, and `update` for incremental refresh.
-Each has its own workflow and parameters. See the common tasks below and the corresponding
-reference files for detailed workflows.
+**Four sub-commands** - The skill exposes four operations: `generate` for full or scoped
+documentation creation, `ask` for docs-first Q&A, `update` for incremental refresh, and
+`status` for coverage reporting. Each has its own workflow and parameters. See the common
+tasks below and the corresponding reference files for detailed workflows.
+
+**Sub-modules** - When a module directory has 15+ source files with distinct internal groupings,
+it is split into sub-modules. The parent module doc becomes an index; sub-module docs live at
+`modules/<parent>/<child>.md`. This keeps docs focused and prevents any single file from
+becoming an unreadably long catch-all.
+
+**Coverage verification** - Before presenting the generation plan, codedocs computes what
+percentage of source files are covered by the proposed module set. If below target, it
+expands the scan to find additional modules. Coverage is tracked in the manifest and reported
+in OVERVIEW.md. See `references/coverage-strategy.md`.
 
 **Discovery phase** - Before writing any docs, the generate command runs a discovery phase:
 scan the directory tree, identify the tech stack from manifest files, map module boundaries
@@ -204,6 +224,23 @@ Same workflow as full generation but scoped to a subdirectory. The output defaul
 `docs/` folder inside the specified path. Useful for monorepos where each package needs
 its own documentation.
 
+### 6. Check documentation coverage
+
+**Command:** `codedocs:status`
+
+Workflow:
+1. **Read manifest** - Load `.codedocs.json`. If missing, suggest running `codedocs:generate`.
+2. **Compute coverage** - Count total source files in the repo vs files covered by documented
+   modules.
+3. **Detect staleness** - For each module, compare the manifest SHA against the latest git
+   commit SHA on that module's source path.
+4. **Find gaps** - List directories in the repo not covered by any module doc.
+5. **Report** - Print a structured status report: coverage percentage, stale modules, gap
+   directories, and recommendations.
+
+See `references/coverage-strategy.md` for coverage targets, the status report format, and
+strategies for improving coverage on large repos.
+
 ---
 
 ## Anti-patterns / common mistakes
@@ -217,6 +254,10 @@ its own documentation.
 | Ignoring the manifest on updates | Leads to full re-generation when only one module changed | Always read `.codedocs.json` to scope updates to changed modules only |
 | Mixing module docs and pattern docs | Cross-cutting concerns documented in one module become invisible | Use the patterns/ directory for anything that spans 2+ modules |
 | Writing docs without git SHA tracking | Makes incremental updates impossible; no way to know what's stale | Always populate the manifest with per-module git SHAs |
+| Stopping at top-level directories | A huge repo generates only 8-12 files; most of the codebase is invisible | Run the full recursive census (Step 3), verify coverage, and scan deeper |
+| One flat doc for a 50-file module | The doc is too long to be useful; every question returns the same giant file | Split modules with 15+ files into sub-modules (`modules/<parent>/<child>.md`) |
+| Not checking coverage before presenting plan | Low-coverage plans look complete but leave most of the repo undocumented | Always run Step 6 (coverage verification) before showing the plan |
+| Skipping INDEX.md | AI agents can't map a specific file to its module doc | Always generate INDEX.md as part of the output |
 
 ---
 
@@ -224,15 +265,20 @@ its own documentation.
 
 For detailed workflows and schemas, read the relevant file from `references/`:
 
-- `references/generate-workflow.md` - Complete discovery heuristics, module boundary
-  detection, tech stack identification, OVERVIEW.md template, and module doc template.
-  Load when running codedocs:generate.
+- `references/generate-workflow.md` - Complete discovery heuristics, recursive census,
+  multi-level module boundary detection, sub-module splitting, coverage verification,
+  tech stack identification, and all output templates (OVERVIEW.md, module doc, pattern doc,
+  INDEX.md). Load when running codedocs:generate.
 - `references/ask-workflow.md` - Question routing logic, doc-first resolution strategy,
   source code fallback rules, and citation format. Load when running codedocs:ask.
 - `references/update-workflow.md` - Diff detection logic, manifest-driven scoping, new
   module detection, and OVERVIEW.md sync rules. Load when running codedocs:update.
-- `references/output-structure.md` - Complete `.codedocs.json` manifest schema, directory
-  layout spec, and file format guidelines. Load when creating or validating output.
+- `references/output-structure.md` - Complete `.codedocs.json` manifest schema (v1.1 with
+  coverage stats and sub-modules), directory layout spec including sub-module directories
+  and INDEX.md, and file format guidelines. Load when creating or validating output.
+- `references/coverage-strategy.md` - Coverage targets by repo size, the codedocs:status
+  report format, prioritization framework for large repos, and coverage improvement
+  strategies. Load when running codedocs:status or when coverage is below target.
 
 Only load a references file if the current task requires deep detail on that topic.
 
