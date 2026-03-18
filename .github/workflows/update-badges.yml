@@ -1,0 +1,36 @@
+name: Update Badges
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-installs-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch install count and update badge
+        run: |
+          TOTAL=$(curl -sf 'https://skills.sh/api/search?q=AbsolutelySkilled&limit=200' | \
+            python3 -c "
+          import json, sys
+          data = json.load(sys.stdin)
+          print(sum(
+              s['installs']
+              for s in data['skills']
+              if s['source'] == 'absolutelyskilled/absolutelyskilled'
+          ))")
+
+          printf '{\n  "schemaVersion": 1,\n  "label": "total installs",\n  "message": "%s",\n  "color": "brightgreen"\n}\n' "$TOTAL" > badges/installs.json
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add badges/installs.json
+          git diff --cached --quiet || (git commit -m ":evergreen_tree: chore: update installs badge" && git push)
