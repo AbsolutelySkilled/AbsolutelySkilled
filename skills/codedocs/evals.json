@@ -209,6 +209,28 @@
       ]
     },
     {
+      "id": "eval-021",
+      "description": "Generates GETTING_STARTED.md with commands sourced from package.json scripts and CI",
+      "prompt": "Generate codedocs for this Node.js project - it has a package.json with dev, test, build, lint scripts and a .github/workflows/ci.yml",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "GETTING_STARTED.md" },
+        { "type": "contains", "value": "package.json" },
+        { "type": "contains", "value": "Prerequisites" }
+      ]
+    },
+    {
+      "id": "eval-022",
+      "description": "GETTING_STARTED.md includes database workflow when a db layer is present",
+      "prompt": "Generate codedocs for a project with Prisma and PostgreSQL",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "GETTING_STARTED.md" },
+        { "type": "contains", "value": "migration" },
+        { "type": "contains", "value": "Database" }
+      ]
+    },
+    {
       "id": "eval-020",
       "description": "Detects more than 7 cross-cutting patterns in complex repos",
       "prompt": "Document this repo which has auth middleware, shared error types, a logger utility, a caching layer, a background job system, and validation schemas used across all modules",

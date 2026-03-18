@@ -277,7 +277,223 @@ and ask if they should be included.
 
 ---
 
-### Step 8: Generate INDEX.md
+### Step 8: Generate GETTING_STARTED.md
+
+After writing module and pattern docs, generate `GETTING_STARTED.md` by
+extracting and expanding all runnable commands from the repo. This is the
+authoritative local development guide.
+
+**How to discover commands:**
+
+1. **package.json `scripts`** - List every script with a one-line description
+   of what it does. Group them by purpose (dev, test, build, lint, etc.).
+2. **Makefile targets** - List every non-phony target with its recipe and purpose.
+3. **Taskfile.yml / justfile** - Same as Makefile.
+4. **Framework CLI conventions** - Detect from the stack:
+   - Next.js/Vite/CRA: `dev`, `build`, `start`, `lint`, `test`
+   - Django: `manage.py runserver`, `migrate`, `makemigrations`, `shell`
+   - Rails: `rails server`, `rails console`, `rails db:migrate`, `rspec`
+   - Go: `go run ./...`, `go test ./...`, `go build`
+   - Rust: `cargo run`, `cargo test`, `cargo build`, `cargo clippy`
+   - Python: look for `pyproject.toml` scripts, `tox.ini`, `pytest.ini`
+5. **Docker / docker-compose** - List `docker compose up`, `down`, and any
+   named services that a developer would interact with.
+6. **CI config** - Read `.github/workflows/`, `.gitlab-ci.yml`, or similar.
+   The CI steps reveal the canonical commands the project actually uses in
+   production. Extract the test, build, and lint commands from there.
+7. **README** - If the repo has a README with setup/usage sections, extract
+   commands from code blocks.
+8. **Environment files** - Check for `.env.example`, `.env.sample`, or
+   documented env vars in README. List required variables and their purpose.
+
+**GETTING_STARTED.md template:**
+
+```markdown
+# Getting Started
+
+Everything you need to run, test, and develop <Project Name> locally.
+
+## Prerequisites
+
+<List of required tools and minimum versions. Only include what's actually
+needed - don't list things like "a computer" or "internet access".>
+
+| Tool | Version | Install |
+|---|---|---|
+| Node.js | >= 20 | https://nodejs.org |
+| pnpm | >= 9 | `npm install -g pnpm` |
+| Docker | >= 24 | https://docker.com |
+| <etc.> | | |
+
+## Installation
+
+```bash
+# Clone the repo
+git clone <repo-url>
+cd <repo-name>
+
+# Install dependencies
+<install command - e.g. pnpm install, pip install -e ".[dev]", cargo build>
+```
+
+## Environment Setup
+
+<Explain what environment variables are required and where they come from.>
+
+```bash
+# Copy the example env file
+cp .env.example .env
+
+# Edit .env and fill in the required values:
+# DATABASE_URL  - PostgreSQL connection string
+# JWT_SECRET    - Random secret for signing tokens (min 32 chars)
+# <etc.>        - <purpose>
+```
+
+<If there are external services needed (database, Redis, etc.), explain how
+to start them:>
+
+```bash
+# Start required services via Docker
+docker compose up -d
+```
+
+## Development
+
+<How to start the development server / run the app locally.>
+
+```bash
+<dev command - e.g. pnpm dev, python manage.py runserver, cargo run>
+```
+
+<Note the URL(s) the app runs on, e.g. "Opens at http://localhost:3000">
+
+<If there are database migrations to run on first setup:>
+
+```bash
+<migration command - e.g. pnpm db:migrate, python manage.py migrate>
+```
+
+## Testing
+
+<How to run the test suite. Cover all test types present in the repo.>
+
+```bash
+# Run all tests
+<test command>
+
+# Run a specific test file
+<test command for single file>
+
+# Run tests in watch mode
+<watch command if available>
+
+# Run with coverage
+<coverage command if available>
+```
+
+<Explain what the test suite covers and any environment requirements
+(e.g., "requires a running database").>
+
+## Building
+
+<How to create a production build.>
+
+```bash
+# Build for production
+<build command>
+
+# Preview the production build locally (if applicable)
+<preview command>
+```
+
+<Note the output directory and what to do with the build artifacts.>
+
+## Linting & Formatting
+
+```bash
+# Lint
+<lint command>
+
+# Format
+<format command>
+
+# Type check (if applicable)
+<typecheck command>
+```
+
+<If there's a pre-commit hook or CI check, mention it here.>
+
+## Database
+
+> Only include this section if the repo has a database layer.
+
+```bash
+# Apply pending migrations
+<migrate command>
+
+# Create a new migration
+<create migration command>
+
+# Reset the database (destructive)
+<reset command>
+
+# Open a database shell / GUI
+<db shell command>
+
+# Seed with development data
+<seed command if available>
+```
+
+## Common Workflows
+
+<Day-to-day tasks a developer does regularly. Be specific to this repo.>
+
+### Adding a new API endpoint
+
+```bash
+# <step 1 - e.g. create the route file>
+# <step 2 - e.g. register it in the router>
+# <step 3 - e.g. run tests>
+```
+
+### Running a subset of tests
+
+```bash
+# Run tests matching a pattern
+<command>
+
+# Run tests for a specific module
+<command>
+```
+
+### Debugging
+
+<How to run the app in debug mode, attach a debugger, or read logs.>
+
+```bash
+<debug command if available>
+```
+
+## CI/CD
+
+<Brief description of what CI runs on each PR and how to reproduce it locally.>
+
+```bash
+# Reproduce CI checks locally
+<lint command>
+<typecheck command>
+<test command>
+<build command>
+```
+
+<If there's a deployment process, mention how it's triggered.>
+```
+
+---
+
+### Step 9: Generate INDEX.md
+
 
 After writing all module docs, generate `INDEX.md` as a lookup table mapping
 every significant source file to its module doc. This is primarily for AI agent
@@ -320,6 +536,42 @@ problem it solves.>
 | Database | <e.g. PostgreSQL via Prisma> |
 | Testing | <e.g. Vitest + Playwright> |
 | Build | <e.g. Turbopack> |
+
+## Project Structure
+
+<Directory tree of the repo showing only meaningful directories and key files.
+Collapse noisy subtrees (node_modules, dist, .git) entirely. Annotate every
+entry with a short inline comment explaining its role. Aim for 30-60 lines -
+enough to understand the layout at a glance without scrolling forever.>
+
+```
+<repo-root>/
+├── src/
+│   ├── auth/           # Authentication and session management
+│   │   ├── strategies/ # Passport strategies (JWT, OAuth)
+│   │   └── middleware/ # Auth guards and route protection
+│   ├── api/            # REST API layer
+│   │   ├── routes/     # Route definitions per resource
+│   │   ├── middleware/ # Request validation, rate limiting
+│   │   └── validators/ # Zod/Joi schemas for request bodies
+│   ├── db/             # Database access layer
+│   │   ├── models/     # ORM models / Prisma schema
+│   │   └── migrations/ # Database migration files
+│   └── utils/          # Shared helpers (logging, errors, config)
+├── tests/              # Test suites mirroring src/ structure
+├── docs/               # Codedocs output (this directory)
+├── package.json        # Dependencies and npm scripts
+└── tsconfig.json       # TypeScript compiler configuration
+```
+
+Rules for generating the tree:
+- Show every directory that has a module doc
+- Show key root-level config files (package.json, Dockerfile, Makefile, etc.)
+- Show entry point files explicitly (main.ts, manage.py, etc.)
+- Collapse deeply nested subtrees into a single annotated line
+- Omit: node_modules, dist, build, .git, coverage, lock files, generated files
+- Use `# comment` inline annotations on every line - this is what makes the
+  tree useful vs just running `tree` in the terminal
 
 ## Architecture
 

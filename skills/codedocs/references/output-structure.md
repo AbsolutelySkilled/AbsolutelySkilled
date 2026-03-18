@@ -12,7 +12,8 @@ and the `.codedocs.json` manifest schema.
 
 ```
 <output-dir>/                    # Default: docs/ at repo root
-  OVERVIEW.md                    # Architecture, tech stack, entry points, module map
+  OVERVIEW.md                    # Architecture, tech stack, project structure tree, module map
+  GETTING_STARTED.md             # Dev environment setup, all runnable commands, workflows
   INDEX.md                       # File-to-module lookup table for AI agent navigation
   .codedocs.json                 # Manifest: tracked modules, SHAs, config, coverage stats
   modules/                       # One file per code module (flat for simple modules)
@@ -79,6 +80,11 @@ The output directory is recorded in the manifest so that `codedocs:ask` and
   "last_updated": "2026-03-18T14:45:00Z",
   "last_global_sha": "abc1234def5678...",
   "update_count": 0,
+  "output_files": {
+    "overview": "OVERVIEW.md",
+    "getting_started": "GETTING_STARTED.md",
+    "index": "INDEX.md"
+  },
   "tech_stack": {
     "primary_language": "TypeScript",
     "framework": "Next.js 14",
@@ -162,6 +168,7 @@ The output directory is recorded in the manifest so that `codedocs:ask` and
 | `last_updated` | string | ISO 8601 timestamp of most recent update |
 | `last_global_sha` | string | Git commit SHA at last generation/update |
 | `update_count` | number | Number of times `codedocs:update` has been run |
+| `output_files` | object | Paths to top-level output files (overview, getting_started, index) |
 | `tech_stack` | object | Detected technology stack |
 | `coverage` | object | Documentation coverage statistics |
 | `coverage.total_source_files` | number | Total source files in repo (excluding ignored paths) |
@@ -211,8 +218,24 @@ The output directory is recorded in the manifest so that `codedocs:ask` and
 - Module Map table is the routing index - every documented module must
   appear here (sub-modules nested under their parent)
 - Cross-cutting Patterns table is the secondary routing index
-- Getting Started section should be copy-pasteable commands
+- Project Structure tree must be annotated - every line has an inline comment
+- Getting Started section is a brief pointer: "See `GETTING_STARTED.md` for
+  the full development guide"
 - Always include a Documentation Coverage line at the bottom
+
+### GETTING_STARTED.md specifics
+
+- The authoritative guide for running and developing the repo locally
+- Must be fully self-contained: a developer with a clean machine should be
+  able to follow it top-to-bottom without consulting any other file
+- All commands must be copy-pasteable and verified against actual scripts in
+  the repo (package.json scripts, Makefile targets, Cargo commands, etc.)
+- Organized into sections: Prerequisites, Installation, Environment, Dev
+  server, Testing, Building, Linting/formatting, and Common workflows
+- If the repo has a README with setup instructions, extract and expand them -
+  don't just repeat them verbatim; add context and fill gaps
+- Common workflows section covers the day-to-day developer actions: how to
+  add a feature, run a subset of tests, apply a migration, etc.
 
 ### INDEX.md specifics
 

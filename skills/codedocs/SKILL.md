@@ -110,11 +110,13 @@ Do NOT trigger this skill for:
 ## Core concepts
 
 **Output structure** - Codedocs always produces the same directory tree. OVERVIEW.md is the
-entry point covering architecture, tech stack, entry points, and key concepts. INDEX.md is
-the file-to-module lookup table. The modules/ directory contains one markdown file per major
-code module (with optional sub-module directories for large modules). The patterns/ directory
-contains cross-cutting concern docs. The `.codedocs.json` manifest tracks metadata, coverage
-stats, and SHAs for incremental updates. See `references/output-structure.md` for the full spec.
+entry point covering architecture, tech stack, project structure tree, and module map.
+GETTING_STARTED.md is the authoritative local development guide with every runnable command
+in the repo. INDEX.md is the file-to-module lookup table. The modules/ directory contains one
+markdown file per major code module (with optional sub-module directories for large modules).
+The patterns/ directory contains cross-cutting concern docs. The `.codedocs.json` manifest
+tracks metadata, coverage stats, and SHAs for incremental updates. See
+`references/output-structure.md` for the full spec.
 
 **Four sub-commands** - The skill exposes four operations: `generate` for full or scoped
 documentation creation, `ask` for docs-first Q&A, `update` for incremental refresh, and
@@ -154,15 +156,19 @@ Workflow:
    from manifest files. Map directory structure to candidate modules. Detect entry points
    (main files, index files, route definitions, CLI entry points).
 2. **Plan** - Present the user with a proposed doc plan: list of modules to document,
-   patterns detected, and estimated scope. Wait for approval before proceeding.
-3. **Write OVERVIEW.md** - Architecture summary, tech stack, entry points, key concepts,
-   module map with one-line descriptions, and a "getting started" section.
-4. **Write module docs** - For each module: purpose, public API/exports, internal structure,
+   patterns detected, estimated scope, and coverage percentage. Wait for approval.
+3. **Write OVERVIEW.md** - Architecture summary, tech stack, annotated project structure
+   tree, entry points, key concepts, and module map with one-line descriptions.
+4. **Write GETTING_STARTED.md** - Full local development guide: prerequisites, installation,
+   environment setup, dev server, test commands, build commands, lint/format, database
+   workflow, common dev tasks, and how to reproduce CI locally. Sourced from package.json
+   scripts, Makefile targets, CI config, and any existing README setup sections.
+5. **Write module docs** - For each module: purpose, public API/exports, internal structure,
    dependencies (what it imports), dependents (what imports it), and key implementation notes.
-5. **Write pattern docs** - For each cross-cutting pattern: description, where it appears,
+6. **Write pattern docs** - For each cross-cutting pattern: description, where it appears,
    conventions to follow, and examples from the codebase.
-6. **Write manifest** - Create `.codedocs.json` with module list, source paths, git SHA,
-   generation timestamp, and config. See `references/output-structure.md` for schema.
+7. **Write manifest** - Create `.codedocs.json` with module list, source paths, git SHA,
+   generation timestamp, coverage stats, and config. See `references/output-structure.md`.
 
 See `references/generate-workflow.md` for the complete discovery heuristics, module
 boundary detection logic, and OVERVIEW.md template.
@@ -258,6 +264,8 @@ strategies for improving coverage on large repos.
 | One flat doc for a 50-file module | The doc is too long to be useful; every question returns the same giant file | Split modules with 15+ files into sub-modules (`modules/<parent>/<child>.md`) |
 | Not checking coverage before presenting plan | Low-coverage plans look complete but leave most of the repo undocumented | Always run Step 6 (coverage verification) before showing the plan |
 | Skipping INDEX.md | AI agents can't map a specific file to its module doc | Always generate INDEX.md as part of the output |
+| Skipping GETTING_STARTED.md | Developers and agents can't run the project without hunting through package.json and README | Always generate GETTING_STARTED.md; source commands from scripts, Makefile, and CI config |
+| Copying README verbatim into GETTING_STARTED.md | READMEs are often incomplete or outdated; the guide adds no value | Extract commands from README but expand with context, fill gaps, and verify against actual scripts |
 
 ---
 
