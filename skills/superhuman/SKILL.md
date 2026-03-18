@@ -99,6 +99,13 @@ If the board is marked `completed`, ask the user whether to start a new Superhum
 | **CI/CD** | `.github/workflows/`, `.gitlab-ci.yml`, `Jenkinsfile` |
 | **Available scripts** | `scripts` section of `package.json`, `Makefile` targets |
 | **Directory conventions** | `src/`, `lib/`, `app/`, `tests/`, `__tests__/`, `spec/` |
+| **Codedocs** | `docs/.codedocs.json`, `documentation/.codedocs.json`, or any `.codedocs.json` in the repo |
+
+### Codedocs Detection
+
+If a `.codedocs.json` manifest is found, the repo has structured codedocs output. Record its location on the board and set a flag `codedocs_available: true`. This changes how DISCOVER and PLAN operate - see those phases for details.
+
+When codedocs is available, read `docs/OVERVIEW.md` and `docs/GETTING_STARTED.md` immediately during convention detection and append their key facts (tech stack, module map, entry points, dev commands) to the `## Project Conventions` section of the board. This front-loads context that would otherwise require separate codebase exploration in DISCOVER.
 
 ### Output
 Write the detected conventions to the board under a `## Project Conventions` section. Reference these conventions in every subsequent phase - particularly PLAN and the Mandatory Tail Tasks verification step.
@@ -322,20 +329,28 @@ Update the board with the full task graph and wave assignments. See `references/
 Research each sub-task before planning implementation. This phase is parallelizable per wave.
 
 ### Per Sub-task Research
-For each sub-task, investigate:
+For each sub-task, investigate in this order - docs first, source second:
 
-1. **Codebase Exploration**
+1. **Codedocs Lookup** (if `codedocs_available: true` on the board)
+   - Check `docs/INDEX.md` to find which module doc covers the files relevant to this task
+   - Read the relevant `docs/modules/<module>.md` for public API, internal structure, dependencies, and implementation notes
+   - Check `docs/patterns/` for any cross-cutting pattern docs (error handling, testing strategy, logging) that apply to this task
+   - Use `docs/OVERVIEW.md` for architecture context and to understand how this task's module fits into the system
+   - **Only proceed to Codebase Exploration below if the docs don't contain enough detail** - flag any gaps in the docs as a staleness note on the board
+   - Record which doc files were used in the task's research notes on the board
+
+2. **Codebase Exploration** (always run; use to fill gaps left by docs or when codedocs is not available)
    - Find existing patterns, utilities, and conventions relevant to this task
    - Identify files that will be created or modified
    - Check for reusable functions, types, or components
    - Understand the testing patterns used in the project
 
-2. **Web Research** (when codebase context is insufficient)
+3. **Web Research** (when codebase context is insufficient)
    - Official documentation for libraries and APIs involved
    - Best practices and common patterns
    - Known gotchas or breaking changes
 
-3. **Risk Assessment**
+4. **Risk Assessment**
    - Flag unknowns or ambiguities
    - Identify potential conflicts with other sub-tasks
    - Note any assumptions that need validation
@@ -572,6 +587,7 @@ The completed board serves as an audit trail:
 | No rollback plan before execution | Record the git commit hash before Wave 1 starts - offer rollback if things go sideways |
 | Parallel agents modifying the same file without reconciliation | Run conflict resolution checks at every wave boundary before proceeding |
 | Skipping self code review before verification | Verification catches build/test failures but not code quality issues - review catches bugs, security issues, and design problems that tests miss |
+| Ignoring `docs/` when it exists | Reading raw source files when codedocs output is available wastes context window and misses curated architecture context - always check for `.codedocs.json` during Convention Detection and use docs-first in DISCOVER |
 
 ---
 
