@@ -22,6 +22,69 @@ Skills work with any agent that supports the SKILL.md format: Claude Code, Gemin
 
 These skills form the backbone of AbsolutelySkilled - install them first and watch your AI agent transform from a code assistant into an autonomous development partner.
 
+### Super Brainstorm - Relentless Design Interview
+
+Traditional brainstorming with AI is shallow - the agent asks a few surface-level questions, then jumps to implementation with half-baked assumptions. **Super Brainstorm** fixes that by treating every design conversation as a structured interrogation of every assumption, dependency, and design branch.
+
+Before asking you a single question, it:
+
+1. **Reads everything** - docs/, README, CLAUDE.md, recent commits, project structure
+2. **Explores the codebase** - searches code before every question so it only asks what can't be inferred
+3. **Enters plan mode** - all reasoning happens in plan mode with ultrathink-level depth
+
+Then it interviews you relentlessly:
+
+4. **One question at a time** - strictly linear, dependency-resolved. Decision B is never asked until Decision A is locked
+5. **Marks (Recommended)** on every option set - with clear rationale, no wishy-washy "it depends"
+6. **No fake options** - only proposes multiple approaches at genuine design forks. If the answer is obvious, says so
+7. **Decomposes large projects** - flags multi-system requests and breaks them into sub-projects automatically
+
+After the interview converges:
+
+8. **Writes a spec** to `docs/plans/YYYY-MM-DD-<topic>-design.md`
+9. **Self-reviews via subagent** - catches gaps and contradictions before you see it
+10. **You choose what's next** - writing-plans, superhuman, direct implementation, or something else
+
+**Usage examples:**
+
+```bash
+# Invoke directly with a feature request
+/super-brainstorm "Add real-time notifications to our app"
+
+# Design work
+/super-brainstorm "Add a commenting system to the blog"
+
+# Refactors
+/super-brainstorm "Redesign the authentication flow to support SSO"
+
+# Large scope? It decomposes first
+/super-brainstorm "Build a platform with chat, billing, analytics, and admin dashboard"
+```
+
+**What a session looks like:**
+
+```
+> /super-brainstorm "Add a commenting system to our blog"
+
+Super Brainstorm:
+  1. [Enters plan mode, reads docs/, README, package.json, existing code]
+  2. "I see you're using Next.js 14 with Prisma + PostgreSQL (from prisma/schema.prisma),
+     and your blog posts are in src/app/blog/. I'll design around that."
+  3. "Who should be able to comment?"
+     - A) Authenticated users only (Recommended) - you already have NextAuth configured
+     - B) Anyone with email verification
+     - C) Anonymous
+  4. [continues one question at a time until design tree is resolved...]
+  5. [presents design section by section for approval]
+  6. [writes spec to docs/plans/2026-03-18-commenting-system-design.md]
+  7. [spec review via subagent]
+  8. "Spec approved. What's next? A) Writing plans B) Superhuman C) Direct implementation"
+```
+
+```bash
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill super-brainstorm
+```
+
 ### Superhuman - AI-Native Development Lifecycle
 
 Traditional development methods - Agile, Waterfall, TDD - were built around human constraints: limited parallelism, context switching costs, and meeting overhead. **Superhuman** throws all of that out and rebuilds the SDLC from scratch for AI agents.
@@ -206,6 +269,7 @@ skills/
 | [clean-architecture](skills/clean-architecture/) | Clean Architecture principles - dependency rule, layers, boundaries, component design |
 | [backend-engineering](skills/backend-engineering/) | Backend systems design - databases, APIs, distributed systems, caching, observability |
 | [frontend-developer](skills/frontend-developer/) | Frontend engineering - components, performance, accessibility, CSS patterns, testing |
+| [super-brainstorm](skills/super-brainstorm/) | Relentless design interview - ultrathink reasoning, codebase-first questions, dependency-resolved decision trees |
 | [superhuman](skills/superhuman/) | AI-native development lifecycle - task decomposition, dependency graphs, wave-based parallel execution |
 | [system-design](skills/system-design/) | Distributed systems, load balancing, CAP theorem, architecture interviews |
 | [microservices](skills/microservices/) | Service decomposition, communication patterns, saga, CQRS |
@@ -478,7 +542,7 @@ skills/
 
 ### Full Registry
 
-**152+ skills** across 25 categories.
+**159+ skills** across 25 categories.
 
 ## Creating Skills
 
