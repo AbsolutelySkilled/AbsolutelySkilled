@@ -24,80 +24,62 @@ These skills form the backbone of AbsolutelySkilled - install them first and wat
 
 ### Super Brainstorm - Relentless Design Interview
 
-Traditional brainstorming with AI is shallow - the agent asks a few surface-level questions, then jumps to implementation with half-baked assumptions. **Super Brainstorm** fixes that by treating every design conversation as a structured interrogation of every assumption, dependency, and design branch.
+A structured design interrogation that reads your entire codebase before asking a single question - every assumption challenged, every dependency resolved, one decision at a time.
 
-Before asking you a single question, it:
-
-1. **Reads everything** - docs/, README, CLAUDE.md, recent commits, project structure
-2. **Explores the codebase** - searches code before every question so it only asks what can't be inferred
-3. **Enters plan mode** - all reasoning happens in plan mode with ultrathink-level depth
-
-Then it interviews you relentlessly:
-
-4. **One question at a time** - strictly linear, dependency-resolved. Decision B is never asked until Decision A is locked
-5. **Marks (Recommended)** on every option set - with clear rationale, no wishy-washy "it depends"
-6. **No fake options** - only proposes multiple approaches at genuine design forks. If the answer is obvious, says so
-7. **Decomposes large projects** - flags multi-system requests and breaks them into sub-projects automatically
-
-After the interview converges:
-
-8. **Writes a spec** to `docs/plans/YYYY-MM-DD-<topic>-design.md`
-9. **Self-reviews via subagent** - catches gaps and contradictions before you see it
-10. **You choose what's next** - writing-plans, superhuman, direct implementation, or something else
-
-**Usage examples:**
-
-```bash
-# Invoke directly with a feature request
-/super-brainstorm "Add real-time notifications to our app"
-
-# Design work
-/super-brainstorm "Add a commenting system to the blog"
-
-# Refactors
-/super-brainstorm "Redesign the authentication flow to support SSO"
-
-# Large scope? It decomposes first
-/super-brainstorm "Build a platform with chat, billing, analytics, and admin dashboard"
-```
-
-**What a session looks like:**
-
-```
-> /super-brainstorm "Add a commenting system to our blog"
-
-Super Brainstorm:
-  1. [Enters plan mode, reads docs/, README, package.json, existing code]
-  2. "I see you're using Next.js 14 with Prisma + PostgreSQL (from prisma/schema.prisma),
-     and your blog posts are in src/app/blog/. I'll design around that."
-  3. "Who should be able to comment?"
-     - A) Authenticated users only (Recommended) - you already have NextAuth configured
-     - B) Anyone with email verification
-     - C) Anonymous
-  4. [continues one question at a time until design tree is resolved...]
-  5. [presents design section by section for approval]
-  6. [writes spec to docs/plans/2026-03-18-commenting-system-design.md]
-  7. [spec review via subagent]
-  8. "Spec approved. What's next? A) Writing plans B) Superhuman C) Direct implementation"
-```
+**Install:**
 
 ```bash
 npx skills add AbsolutelySkilled/AbsolutelySkilled --skill super-brainstorm
 ```
 
+**Usage:**
+
+```bash
+/super-brainstorm "Add real-time notifications to our app"
+/super-brainstorm "Redesign the authentication flow to support SSO"
+/super-brainstorm "Build a platform with chat, billing, analytics, and admin dashboard"
+```
+
+**How it works:**
+
+1. **Reads everything** - docs/, README, CLAUDE.md, recent commits, project structure
+2. **Explores the codebase** - searches code before every question so it only asks what can't be inferred
+3. **Enters plan mode** - all reasoning happens in plan mode with ultrathink-level depth
+4. **One question at a time** - strictly linear, dependency-resolved. Decision B is never asked until Decision A is locked
+5. **Marks (Recommended)** on every option set - with clear rationale, no wishy-washy "it depends"
+6. **No fake options** - only proposes multiple approaches at genuine design forks. If the answer is obvious, says so
+7. **Decomposes large projects** - flags multi-system requests and breaks them into sub-projects automatically
+8. **Writes a spec** to `docs/plans/YYYY-MM-DD-<topic>-design.md`
+9. **Self-reviews via subagent** - catches gaps and contradictions before you see it
+10. **You choose what's next** - writing-plans, superhuman, direct implementation, or something else
+
 ### Superhuman - AI-Native Development Lifecycle
 
-Traditional development methods - Agile, Waterfall, TDD - were built around human constraints: limited parallelism, context switching costs, and meeting overhead. **Superhuman** throws all of that out and rebuilds the SDLC from scratch for AI agents.
+A complete SDLC replacement for AI agents - decomposes features into dependency-graphed tasks, executes them in parallel waves with TDD verification, and tracks everything on a persistent board.
 
-Give it a feature request, and Superhuman will:
+**Install:**
 
-1. **Interview you** to extract requirements, constraints, and success criteria
-2. **Decompose** the work into a dependency-graphed DAG of atomic sub-tasks
-3. **Research** each task by exploring your codebase and docs in parallel
-4. **Plan** test-first implementation strategies per task
-5. **Execute** tasks in parallel waves - independent tasks run simultaneously via sub-agents
-6. **Verify** every task with TDD, lint, typecheck, and build checks
-7. **Converge** with a self code review, requirements validation, and full project verification
+```bash
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill superhuman
+```
+
+**Usage:**
+
+```bash
+/superhuman "Add OAuth2 login with Google and GitHub providers"
+/superhuman "Migrate the REST API to GraphQL"
+/superhuman "Build a real-time chat feature with WebSocket support"
+```
+
+**How it works:**
+
+1. **Interview** - extracts requirements, constraints, and success criteria
+2. **Decompose** - breaks work into a dependency-graphed DAG of atomic sub-tasks
+3. **Discover** - explores your codebase and docs in parallel per task
+4. **Plan** - creates test-first implementation strategies per task
+5. **Execute** - runs independent tasks simultaneously via sub-agents in parallel waves
+6. **Verify** - validates every task with TDD, lint, typecheck, and build checks
+7. **Converge** - self code review, requirements validation, and full project verification
 
 Everything is tracked on a persistent `.superhuman/board.md` that survives across sessions - resume where you left off, audit decisions, or hand off to another developer.
 
@@ -105,15 +87,28 @@ Everything is tracked on a persistent `.superhuman/board.md` that survives acros
 INTAKE --> DECOMPOSE --> DISCOVER --> PLAN --> EXECUTE --> VERIFY --> CONVERGE
 ```
 
-```bash
-npx skills add AbsolutelySkilled/AbsolutelySkilled --skill superhuman
-```
-
 ### Second Brain - Persistent Memory for AI Agents
 
-Every time you start a new conversation, your AI agent forgets everything it learned in the last one. **Second Brain** fixes that.
+A structured, hierarchical knowledge store in `~/.memory/` that gives your AI agent persistent memory across projects, sessions, and tools - automatically loading only what's relevant to the current context.
 
-It turns `~/.memory/` into a structured, hierarchical knowledge store that persists across projects, sessions, and tools. Your agent remembers your preferences, workflows, debugging techniques, and domain expertise - automatically loading only what's relevant to the current context.
+**Install:**
+
+```bash
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill second-brain
+```
+
+**Usage:**
+
+```bash
+# Memories are loaded automatically at conversation start
+# After complex tasks, your agent proposes what to remember
+
+"Remember that we always use Bun instead of npm"
+"What do you know about our auth system?"
+"Update my memory about the deployment process"
+```
+
+**How it works:**
 
 - **Tag-indexed retrieval** - memories are scored against your current context and only the top matches are loaded (no wasted tokens)
 - **100-line ceiling** - files stay small and split automatically, keeping context window usage efficient
@@ -121,55 +116,36 @@ It turns `~/.memory/` into a structured, hierarchical knowledge store that persi
 - **Auto-propose learnings** - after complex tasks, your agent suggests what to remember for next time
 - **CRUSP lifecycle** - Create, Read, Update, Split, Prune - your memory stays fresh and organized
 
-Your agent goes from amnesia to institutional knowledge in one install.
-
-```bash
-npx skills add AbsolutelySkilled/AbsolutelySkilled --skill second-brain
-```
-
 ### Codedocs - AI-Agent-Friendly Codebase Documentation
 
-Onboarding a new developer (or AI agent) onto a large repo is slow because knowledge lives in people's heads and scattered READMEs. **Codedocs** fixes that by generating a structured `docs/` tree that an AI agent can navigate instantly without re-reading source code on every question.
+Generates a structured `docs/` tree from your codebase that AI agents can navigate instantly - module docs, pattern docs, an overview map, and a file-to-doc index with 70%+ coverage enforcement.
 
-It produces four types of output that work together:
+**Install:**
+
+```bash
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill codedocs
+```
+
+**Usage:**
+
+```bash
+codedocs:generate                              # Generate docs for your entire repo
+codedocs:generate --output documentation/      # Custom output directory
+codedocs:generate packages/api                 # Specific subdirectory (monorepos)
+codedocs:generate --exhaustive                 # Force exhaustive coverage
+codedocs:ask "how does the auth flow work?"    # Answer from docs, not source
+codedocs:status                                # Check coverage and find gaps
+codedocs:update --scope src/auth/              # Update after a refactor
+codedocs:update --diff HEAD~5..HEAD            # Update from recent commits
+```
+
+**How it works:**
 
 - **OVERVIEW.md** - architecture, tech stack, entry points, and a module map that routes any question to the right doc
 - **Module docs** - one per bounded context, covering public API, internal structure, dependencies, and implementation notes. Large modules (15+ files) are automatically split into sub-module docs
 - **Pattern docs** - cross-cutting concerns like error handling, logging, auth, and testing strategy documented once instead of scattered across every module
 - **INDEX.md** - a file-to-module lookup table so any agent can instantly answer "which doc covers this file?"
-
-Coverage is a first-class metric. Codedocs runs a recursive census of your repo, verifies it's documenting 70%+ of source files (scaled by repo size), and flags gaps before it ever starts writing. A huge repo generates 30-80 doc files, not 8-12.
-
-Once docs exist, use `codedocs:ask` to answer questions from the docs instead of re-reading source - and `codedocs:update --diff` to surgically refresh only the modules touched by recent commits.
-
-```bash
-# Install
-npx skills add AbsolutelySkilled/AbsolutelySkilled --skill codedocs
-
-# Generate docs for your entire repo
-codedocs:generate
-
-# Generate with a custom output directory
-codedocs:generate --output documentation/
-
-# Generate docs for a specific subdirectory (monorepos)
-codedocs:generate packages/api --output packages/api/docs/
-
-# Force exhaustive coverage (documents directories with even 1 source file)
-codedocs:generate --exhaustive
-
-# Ask a question - answered from docs, not source code
-codedocs:ask "how does the authentication flow work?"
-
-# Check coverage and find undocumented areas
-codedocs:status
-
-# Update docs after a refactor
-codedocs:update --scope src/auth/
-
-# Update docs from recent commits
-codedocs:update --diff HEAD~5..HEAD
-```
+- **Coverage-first** - runs a recursive census of your repo, verifies 70%+ file coverage (scaled by repo size), and flags gaps before writing. A huge repo generates 30-80 doc files, not 8-12
 
 ---
 
