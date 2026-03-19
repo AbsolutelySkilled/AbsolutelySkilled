@@ -120,6 +120,35 @@ npx skills add AbsolutelySkilled/AbsolutelySkilled --skill second-brain
 - **Auto-propose learnings** - after complex tasks, your agent suggests what to remember for next time
 - **CRUSP lifecycle** - Create, Read, Update, Split, Prune - your memory stays fresh and organized
 
+### Skill Audit - Security Analysis for AI Agent Skills
+
+A deep, context-aware security scanner for AI agent skills - combines a Python mechanical pre-scan with AI-powered semantic analysis across 6 threat categories to catch prompt injection, data exfiltration, supply chain attacks, and behavioral risks that regex tools miss.
+
+**Install:**
+
+```bash
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill skill-audit
+```
+
+**Usage:**
+
+```bash
+/skill-audit skills/suspicious-tool
+/skill-audit skills/suspicious-tool --json
+/skill-audit skills/                          # Batch scan entire registry
+```
+
+**How it works:**
+
+1. **Mechanical pre-scan** - `scripts/audit.py` handles deterministic checks: unicode smuggling, base64 payloads, frontmatter validation, file size limits, phantom dependencies, orphaned references
+2. **Prompt injection analysis** - reads every instruction as an attacker would: direct overrides, persona hijacking, instruction laundering, conditional triggers, multi-step manipulation
+3. **Permission and exfiltration audit** - flags destructive commands, credential access, webhook data theft, DNS exfiltration, covert channels
+4. **Supply chain verification** - maintainer provenance, dependency confusion, typosquatting, suspicious URLs, scope creep detection
+5. **Behavioral safety** (AI-only) - unbounded agent loops, user consent bypass, hallucination amplification, context pollution, trust transitivity
+6. **Structured verdicts** - PASS / FAIL / REVIEW REQUIRED with severity-ranked findings table and per-finding recommendations
+
+Output as a human-readable table report (default) or JSON for CI/tooling integration.
+
 ### Codedocs - AI-Agent-Friendly Codebase Documentation
 
 Generates a structured `docs/` tree from your codebase that AI agents can navigate instantly - module docs, pattern docs, an overview map, and a file-to-doc index with 70%+ coverage enforcement.
@@ -339,6 +368,7 @@ skills/
 
 | Skill | Description |
 |---|---|
+| [skill-audit](skills/skill-audit/) | AI-powered security audit for agent skills - prompt injection, exfiltration, supply chain, behavioral safety |
 | [appsec-owasp](skills/appsec-owasp/) | OWASP Top 10, secure coding, input validation, auth patterns |
 | [penetration-testing](skills/penetration-testing/) | Ethical hacking, vulnerability assessment, exploit development |
 | [cloud-security](skills/cloud-security/) | IAM, secrets management, network policies, compliance |
@@ -522,7 +552,7 @@ skills/
 
 ### Full Registry
 
-**159+ skills** across 25 categories.
+**160+ skills** across 25 categories.
 
 ## Creating Skills
 
