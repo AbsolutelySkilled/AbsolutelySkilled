@@ -1,8 +1,8 @@
-<!-- Part of the Superhuman AbsolutelySkilled skill. Load this file when the agent needs detailed guidance on conducting the INTAKE phase, including question banks, scaling rules, and example sessions. -->
+<!-- Part of the Super-Human AbsolutelySkilled skill. Load this file when the agent needs detailed guidance on conducting the INTAKE phase, including question banks, scaling rules, and example sessions. -->
 
 # Intake Playbook
 
-The intake phase is the foundation of every Superhuman execution. A thorough intake prevents rework, missed requirements, and scope creep. This playbook provides the full question bank, scaling rules, and example sessions.
+The intake phase is the foundation of every Super-Human execution. A thorough intake prevents rework, missed requirements, and scope creep. This playbook provides the full question bank, scaling rules, and example sessions.
 
 ---
 
@@ -131,7 +131,7 @@ When you detect implicit requirements, surface them as follow-up questions rathe
 7. **Testing**: "What auth flows need e2e tests? Is there an existing test setup?"
 8. **Docs**: "Do we need API documentation for auth endpoints?"
 9. **Rollout**: "Is this for new users only, or do existing users need migration?"
-10. **Board persistence**: "Should the `.superhuman/` board be git-tracked or gitignored?"
+10. **Board persistence**: "Should the `.super-human/` board be git-tracked or gitignored?"
 
 **Intake Summary** (written to board):
 ```

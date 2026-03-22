@@ -1,10 +1,10 @@
 ---
-name: superhuman
+name: super-human
 version: 0.1.0
 description: >
   AI-native software development lifecycle that replaces traditional SDLC.
   Triggers on "plan and build", "break this into tasks", "build this feature
-  end-to-end", "sprint plan this", "superhuman this", or any multi-step
+  end-to-end", "sprint plan this", "super-human this", or any multi-step
   development task. Decomposes work into dependency-graphed sub-tasks, executes
   in parallel waves with TDD verification, and tracks progress on a persistent
   board. Handles features, refactors, greenfield projects, and migrations.
@@ -33,9 +33,9 @@ maintainers:
 
 When this skill is activated, always start your first response with the 🧢 emoji.
 
-# Superhuman: AI-Native Development Lifecycle
+# Super-Human: AI-Native Development Lifecycle
 
-Superhuman is a development lifecycle built from the ground up for AI agents. Traditional methods like Agile, Waterfall, and TDD were designed around human constraints - limited parallelism, context switching costs, communication overhead, and meetings. AI agents have none of these constraints. Superhuman exploits this by decomposing work into dependency-graphed sub-tasks, executing independent tasks in parallel waves, enforcing TDD verification at every step, and tracking everything on a persistent board that survives across sessions.
+Super-Human is a development lifecycle built from the ground up for AI agents. Traditional methods like Agile, Waterfall, and TDD were designed around human constraints - limited parallelism, context switching costs, communication overhead, and meetings. AI agents have none of these constraints. Super-Human exploits this by decomposing work into dependency-graphed sub-tasks, executing independent tasks in parallel waves, enforcing TDD verification at every step, and tracking everything on a persistent board that survives across sessions.
 
 The model has 7 phases: **INTAKE - DECOMPOSE - DISCOVER - PLAN - EXECUTE - VERIFY - CONVERGE**.
 
@@ -43,7 +43,7 @@ The model has 7 phases: **INTAKE - DECOMPOSE - DISCOVER - PLAN - EXECUTE - VERIF
 
 ## Activation Banner
 
-**At the very start of every Superhuman invocation**, before any other output, display this ASCII art banner:
+**At the very start of every Super-Human invocation**, before any other output, display this ASCII art banner:
 
 ```
 ███████╗██╗   ██╗██████╗ ███████╗██████╗ ██╗  ██╗██╗   ██╗███╗   ███╗ █████╗ ███╗   ██╗
@@ -54,7 +54,7 @@ The model has 7 phases: **INTAKE - DECOMPOSE - DISCOVER - PLAN - EXECUTE - VERIF
 ╚══════╝ ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
 ```
 
-This banner is mandatory. It signals to the user that Superhuman mode is active.
+This banner is mandatory. It signals to the user that Super-Human mode is active.
 
 ---
 
@@ -65,20 +65,20 @@ This banner is mandatory. It signals to the user that Superhuman mode is active.
 1. **On platforms with native plan mode** (e.g., Claude Code's `EnterPlanMode`, Gemini CLI's planning mode): invoke the native plan mode mechanism immediately.
 2. **On platforms without native plan mode**: simulate plan mode by completing all planning phases (INTAKE through PLAN) in full before making any code changes. Present the complete plan to the user for explicit approval before proceeding to EXECUTE.
 
-This ensures that every Superhuman invocation begins with structured thinking. The first four phases (INTAKE, DECOMPOSE, DISCOVER, PLAN) are inherently planning work - no files should be created or modified until the user has approved the plan and execution begins in Phase 5.
+This ensures that every Super-Human invocation begins with structured thinking. The first four phases (INTAKE, DECOMPOSE, DISCOVER, PLAN) are inherently planning work - no files should be created or modified until the user has approved the plan and execution begins in Phase 5.
 
 ---
 
 ## Session Resume Protocol
 
-When Superhuman is invoked and a `.superhuman/board.md` already exists in the project root:
+When Super-Human is invoked and a `.super-human/board.md` already exists in the project root:
 
 1. **Detect**: Read the existing board and determine its status (`in-progress`, `blocked`, `completed`)
 2. **Display**: Print a compact status summary showing completed/in-progress/blocked/remaining tasks
 3. **Resume**: Pick up from the last incomplete wave - do NOT restart from INTAKE
 4. **Reconcile**: If the codebase has changed since the last session (e.g., manual edits, other commits), run a quick diff check against the board's expected state and flag any conflicts before resuming
 
-If the board is marked `completed`, ask the user whether to start a new Superhuman session (archive the old board to `.superhuman/archive/`) or review the completed work.
+If the board is marked `completed`, ask the user whether to start a new Super-Human session (archive the old board to `.super-human/archive/`) or review the completed work.
 
 **Never blow away an existing board without explicit user confirmation.**
 
@@ -114,7 +114,7 @@ Write the detected conventions to the board under a `## Project Conventions` sec
 
 ## When to Use This Skill
 
-**Use Superhuman when:**
+**Use Super-Human when:**
 - Multi-step feature development touching 3+ files or components
 - User says "build this end-to-end" or "plan and execute this"
 - User says "break this into tasks" or "sprint plan this"
@@ -122,7 +122,7 @@ Write the detected conventions to the board under a `## Project Conventions` sec
 - Greenfield projects, major refactors, or migrations
 - Complex bug fixes that span multiple systems
 
-**Do NOT use Superhuman when:**
+**Do NOT use Super-Human when:**
 - Single-file bug fixes or typo corrections
 - Quick questions or code explanations
 - Tasks the user wants to do manually with your guidance
@@ -142,7 +142,7 @@ Tasks at the same depth in the dependency graph form a "wave". All tasks in a wa
 Every sub-task writes tests before implementation. A task is only "done" when its tests pass. No exceptions for "simple" changes - tests are the proof of correctness.
 
 ### 4. Persistent State
-All progress is tracked in `.superhuman/board.md` in the project root. This file survives across sessions, enabling resume, audit, and handoff. The user chooses during INTAKE whether the board is git-tracked or gitignored.
+All progress is tracked in `.super-human/board.md` in the project root. This file survives across sessions, enabling resume, audit, and handoff. The user chooses during INTAKE whether the board is git-tracked or gitignored.
 
 ### 5. Interactive Intake
 Never assume. Scale questioning depth to task complexity - simple tasks get 3 questions, complex ones get 8-10. Extract requirements, constraints, and success criteria before writing a single line of code.
@@ -167,7 +167,7 @@ A directed acyclic graph (DAG) where each node is a sub-task and edges represent
 Groups of independent tasks assigned to the same depth level in the DAG. Wave 1 runs first (all tasks in parallel), then Wave 2 (all tasks in parallel), and so on. See `references/wave-execution.md`.
 
 ### Board
-The `.superhuman/board.md` file is the single source of truth. It contains the intake summary, task graph, wave assignments, per-task status, research notes, plans, and verification results. See `references/board-format.md`.
+The `.super-human/board.md` file is the single source of truth. It contains the intake summary, task graph, wave assignments, per-task status, research notes, plans, and verification results. See `references/board-format.md`.
 
 ### Sub-task Lifecycle
 ```
@@ -204,10 +204,10 @@ The intake phase gathers all context needed to decompose the task. Scale depth b
 10. **Priority**: Which parts are most critical? What can be deferred if needed?
 
 ### Board Persistence Question (always ask)
-Ask: "Should the `.superhuman/` board be git-tracked (audit trail, resume across machines) or gitignored (local working state)?"
+Ask: "Should the `.super-human/` board be git-tracked (audit trail, resume across machines) or gitignored (local working state)?"
 
 ### Output
-Write the intake summary to `.superhuman/board.md` with all answers captured. See `references/intake-playbook.md` for the full question bank organized by task type.
+Write the intake summary to `.super-human/board.md` with all answers captured. See `references/intake-playbook.md` for the full question bank organized by task type.
 
 ---
 
@@ -455,7 +455,7 @@ For detailed guidance on specific phases, load these reference files:
 - **`references/dependency-graph-patterns.md`** - Common DAG patterns, ASCII rendering format, wave assignment algorithm, and example graphs
 - **`references/wave-execution.md`** - Parallel agent orchestration, agent prompt templates, blocked task handling, error recovery
 - **`references/verification-framework.md`** - TDD workflow per sub-task, verification signals, integration testing, failure handling
-- **`references/board-format.md`** - Full `.superhuman/board.md` specification with format, status transitions, and example board
+- **`references/board-format.md`** - Full `.super-human/board.md` specification with format, status transitions, and example board
 
 ---
 

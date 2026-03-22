@@ -34,7 +34,7 @@ parsing output programmatically. References use short refs like `pane:5`,
 - [shell-scripting](https://absolutely-skilled.vercel.app/skill/shell-scripting)
 - [vim-neovim](https://absolutely-skilled.vercel.app/skill/vim-neovim)
 - [debugging-tools](https://absolutely-skilled.vercel.app/skill/debugging-tools)
-- [superhuman](https://absolutely-skilled.vercel.app/skill/superhuman)
+- [super-human](https://absolutely-skilled.vercel.app/skill/super-human)
 
 ## Maintainers
 

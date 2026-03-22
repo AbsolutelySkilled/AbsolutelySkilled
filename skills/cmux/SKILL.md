@@ -11,7 +11,7 @@ description: >
   subagent-driven development requiring isolated terminal surfaces.
 category: developer-tools
 tags: [terminal, panes, split, subagent, automation, cli]
-recommended_skills: [shell-scripting, vim-neovim, debugging-tools, superhuman]
+recommended_skills: [shell-scripting, vim-neovim, debugging-tools, super-human]
 platforms:
   - claude-code
 sources:

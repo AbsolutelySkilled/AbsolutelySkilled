@@ -36,7 +36,7 @@ tracking, Kanban flow management, and continuous improvement practices.
 - [project-execution](https://absolutely-skilled.vercel.app/skill/project-execution)
 - [user-stories](https://absolutely-skilled.vercel.app/skill/user-stories)
 - [remote-collaboration](https://absolutely-skilled.vercel.app/skill/remote-collaboration)
-- [superhuman](https://absolutely-skilled.vercel.app/skill/superhuman)
+- [super-human](https://absolutely-skilled.vercel.app/skill/super-human)
 
 ## Maintainers
 

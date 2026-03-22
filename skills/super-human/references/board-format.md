@@ -1,18 +1,18 @@
-<!-- Part of the Superhuman AbsolutelySkilled skill. Load this file when the agent needs the full specification for the .superhuman/board.md file, including format, status transitions, and examples. -->
+<!-- Part of the Super-Human AbsolutelySkilled skill. Load this file when the agent needs the full specification for the .super-human/board.md file, including format, status transitions, and examples. -->
 
 # Board Format Specification
 
-The `.superhuman/board.md` file is the single source of truth for a Superhuman execution. It tracks everything from intake through convergence and is designed to be both human-readable and machine-parseable.
+The `.super-human/board.md` file is the single source of truth for a Super-Human execution. It tracks everything from intake through convergence and is designed to be both human-readable and machine-parseable.
 
 ---
 
 ## File Location
 
 ```
-{project-root}/.superhuman/board.md
+{project-root}/.super-human/board.md
 ```
 
-The `.superhuman/` directory may also contain:
+The `.super-human/` directory may also contain:
 - `board.md` - the main board file (always present)
 - Historical boards renamed to `board-{timestamp}.md` (if running multiple sessions)
 
@@ -219,7 +219,7 @@ pending --> researching --> planned --> in-progress --> verifying --> done
 
 ## Resuming a Board Across Sessions
 
-When starting a new session and a `.superhuman/board.md` exists:
+When starting a new session and a `.super-human/board.md` exists:
 
 1. **Read the board** - parse the frontmatter and current state
 2. **Identify the current phase** from the board status
@@ -231,9 +231,9 @@ When starting a new session and a `.superhuman/board.md` exists:
 5. **Update the board** with a "Resumed at {timestamp}" entry in the execution log
 
 ### Resume Detection
-At the start of any Superhuman invocation:
-1. Check if `.superhuman/board.md` exists
-2. If yes, ask the user: "Found an existing Superhuman board. Resume it or start fresh?"
+At the start of any Super-Human invocation:
+1. Check if `.super-human/board.md` exists
+2. If yes, ask the user: "Found an existing Super-Human board. Resume it or start fresh?"
 3. If resuming, load the board and continue from where it left off
 4. If starting fresh, archive the old board as `board-{timestamp}.md`
 

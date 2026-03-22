@@ -1,4 +1,4 @@
-<!-- Part of the Superhuman AbsolutelySkilled skill. Load this file when working with wave execution, scope management, failure handling, or anti-patterns. -->
+<!-- Part of the Super-Human AbsolutelySkilled skill. Load this file when working with wave execution, scope management, failure handling, or anti-patterns. -->
 
 # Execution Patterns and Anti-Patterns
 
@@ -7,7 +7,7 @@
 During EXECUTE, agents may discover additional work needed ("oh, this also needs X"). Handle scope creep strictly:
 
 1. **Blocking discovery** (can't complete the current task without it): Add a new task to the DAG, assign it to the current or next wave, and flag the change to the user on the board. Continue with other tasks in the wave.
-2. **Non-blocking discovery** (nice-to-have, related improvement, cleanup): Do NOT absorb it. Add it to a `## Deferred Work` section on the board. Mention it in the CONVERGE summary. The user decides whether to start a new Superhuman session for it.
+2. **Non-blocking discovery** (nice-to-have, related improvement, cleanup): Do NOT absorb it. Add it to a `## Deferred Work` section on the board. Mention it in the CONVERGE summary. The user decides whether to start a new Super-Human session for it.
 3. **Never silently expand scope** - every addition to the DAG must be visible on the board and flagged in the next progress report.
 
 ## Handling Blocked Tasks
@@ -30,7 +30,7 @@ See `references/wave-execution.md` for detailed agent orchestration patterns.
 
 ## Mandatory Tail Tasks
 
-Every Superhuman task graph must include these three tasks as the final tasks, in this order:
+Every Super-Human task graph must include these three tasks as the final tasks, in this order:
 
 **Third-to-last task: Self Code Review**
 - **Type**: `review`
@@ -125,10 +125,10 @@ Wave 2 Complete (3/6 waves done)
 | Executing without user approval of the graph | Always present the wave plan and get explicit approval before any execution |
 | Skipping TDD for "simple" changes | Tests are verification proof, not optional extras - write them first, always |
 | Massive sub-tasks (L+ complexity) | Decompose further until all tasks are S or M - large tasks hide complexity |
-| Not persisting board state | Always write to `.superhuman/board.md` - it enables resume, audit, and handoff |
+| Not persisting board state | Always write to `.super-human/board.md` - it enables resume, audit, and handoff |
 | Over-decomposing into 20+ micro-tasks | Aim for 5-15 tasks - too many creates overhead that defeats the purpose |
 | Ignoring research phase | DISCOVER prevents rework - 10 minutes of research saves hours of wrong implementation |
-| Sequential execution when parallelism is possible | Always check the DAG for parallel opportunities - that's the whole point of Superhuman |
+| Sequential execution when parallelism is possible | Always check the DAG for parallel opportunities - that's the whole point of Super-Human |
 | Silently absorbing scope creep during EXECUTE | Flag blocking additions on the board; defer non-blocking discoveries to the Deferred Work section |
 | Starting fresh when a board already exists | Detect existing boards, display status, and resume from last incomplete wave |
 | Assuming project conventions without checking | Always run Codebase Convention Detection before INTAKE - read `package.json`, config files, directory structure |

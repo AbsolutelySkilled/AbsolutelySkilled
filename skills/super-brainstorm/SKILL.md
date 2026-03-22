@@ -12,7 +12,7 @@ description: >
   component creation, system changes, and any task requiring design decisions.
 category: workflow
 tags: [brainstorming, design, planning, architecture, spec-writing, interviewing]
-recommended_skills: [writing-plans, superhuman, clean-architecture, system-design]
+recommended_skills: [writing-plans, super-human, clean-architecture, system-design]
 platforms:
   - claude-code
   - gemini-cli
@@ -117,7 +117,7 @@ You MUST complete these steps in order:
 8. **Write spec** - save to `docs/plans/YYYY-MM-DD-<topic>-design.md`
 9. **Spec review loop** - dispatch reviewer subagent, fix issues, max 3 iterations
 10. **User reviews spec** - gate before proceeding
-11. **Flexible exit** - user chooses next step (writing-plans, superhuman, direct implementation, etc.)
+11. **Flexible exit** - user chooses next step (writing-plans, super-human, direct implementation, etc.)
 
 ---
 
@@ -390,7 +390,7 @@ Once the spec is approved, present the user with options:
 > "Spec is approved. What would you like to do next?"
 >
 > - **A) Writing plans** - create a detailed implementation plan (invoke writing-plans skill)
-> - **B) Superhuman** - full AI-native SDLC with task decomposition and parallel execution (invoke superhuman skill)
+> - **B) Superhuman** - full AI-native SDLC with task decomposition and parallel execution (invoke super-human skill)
 > - **C) Direct implementation** - start building right away
 > - **D) Something else** - your call
 

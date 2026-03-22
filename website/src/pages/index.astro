@@ -23,7 +23,7 @@ const topSkills = getTopSkillsByCounts(
   5
 );
 
-const flagshipSlugs = ['super-brainstorm', 'superhuman', 'clean-code', 'frontend-developer', 'system-design'];
+const flagshipSlugs = ['super-brainstorm', 'super-human', 'clean-code', 'frontend-developer', 'system-design'];
 const flagshipSkills = flagshipSlugs
   .map((slug) => skills.find((s) => s.slug === slug))
   .filter((s): s is Skill => !!s);

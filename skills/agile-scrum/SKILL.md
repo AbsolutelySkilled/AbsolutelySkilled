@@ -9,7 +9,7 @@ description: >
   improvement processes.
 category: operations
 tags: [agile, scrum, kanban, sprint, estimation, retrospective]
-recommended_skills: [project-execution, user-stories, remote-collaboration, superhuman]
+recommended_skills: [project-execution, user-stories, remote-collaboration, super-human]
 platforms:
   - claude-code
   - gemini-cli

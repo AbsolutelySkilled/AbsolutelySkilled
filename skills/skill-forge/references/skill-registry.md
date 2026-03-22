@@ -17,7 +17,7 @@ Complete catalog of existing and planned skills for the AbsolutelySkilled regist
 | clean-architecture | Built | Hexagonal, onion, ports-and-adapters patterns |
 | backend-engineering | Built | API design, databases, caching, queues, scaling |
 | frontend-developer | Built | Modern frontend patterns, frameworks, state management |
-| superhuman | Built | AI-native development lifecycle - task decomposition, parallel execution, TDD, board tracking |
+| super-human | Built | AI-native development lifecycle - task decomposition, parallel execution, TDD, board tracking |
 | system-design | Planned | Distributed systems, load balancing, CAP theorem, architecture interviews |
 | microservices | Planned | Service decomposition, communication patterns, saga, CQRS |
 | api-design | Planned | REST, GraphQL, gRPC, OpenAPI spec, versioning, pagination |

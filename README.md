@@ -55,24 +55,24 @@ npx skills add AbsolutelySkilled/AbsolutelySkilled --skill super-brainstorm
 7. **Decomposes large projects** - flags multi-system requests and breaks them into sub-projects automatically
 8. **Writes a spec** to `docs/plans/YYYY-MM-DD-<topic>-design.md`
 9. **Self-reviews via subagent** - catches gaps and contradictions before you see it
-10. **You choose what's next** - writing-plans, superhuman, direct implementation, or something else
+10. **You choose what's next** - writing-plans, super-human, direct implementation, or something else
 
-### Superhuman - AI-Native Development Lifecycle
+### Super-Human - AI-Native Development Lifecycle
 
 A complete SDLC replacement for AI agents - decomposes features into dependency-graphed tasks, executes them in parallel waves with TDD verification, and tracks everything on a persistent board.
 
 **Install:**
 
 ```bash
-npx skills add AbsolutelySkilled/AbsolutelySkilled --skill superhuman
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill super-human
 ```
 
 **Usage:**
 
 ```bash
-/superhuman "Add OAuth2 login with Google and GitHub providers"
-/superhuman "Migrate the REST API to GraphQL"
-/superhuman "Build a real-time chat feature with WebSocket support"
+/super-human "Add OAuth2 login with Google and GitHub providers"
+/super-human "Migrate the REST API to GraphQL"
+/super-human "Build a real-time chat feature with WebSocket support"
 ```
 
 **How it works:**
@@ -85,7 +85,7 @@ npx skills add AbsolutelySkilled/AbsolutelySkilled --skill superhuman
 6. **Verify** - validates every task with TDD, lint, typecheck, and build checks
 7. **Converge** - self code review, requirements validation, and full project verification
 
-Everything is tracked on a persistent `.superhuman/board.md` that survives across sessions - resume where you left off, audit decisions, or hand off to another developer.
+Everything is tracked on a persistent `.super-human/board.md` that survives across sessions - resume where you left off, audit decisions, or hand off to another developer.
 
 ```
 INTAKE --> DECOMPOSE --> DISCOVER --> PLAN --> EXECUTE --> VERIFY --> CONVERGE
@@ -279,7 +279,7 @@ skills/
 | [backend-engineering](skills/backend-engineering/) | Backend systems design - databases, APIs, distributed systems, caching, observability |
 | [frontend-developer](skills/frontend-developer/) | Frontend engineering - components, performance, accessibility, CSS patterns, testing |
 | [super-brainstorm](skills/super-brainstorm/) | Relentless design interview - ultrathink reasoning, codebase-first questions, dependency-resolved decision trees |
-| [superhuman](skills/superhuman/) | AI-native development lifecycle - task decomposition, dependency graphs, wave-based parallel execution |
+| [super-human](skills/super-human/) | AI-native development lifecycle - task decomposition, dependency graphs, wave-based parallel execution |
 | [system-design](skills/system-design/) | Distributed systems, load balancing, CAP theorem, architecture interviews |
 | [microservices](skills/microservices/) | Service decomposition, communication patterns, saga, CQRS |
 | [api-design](skills/api-design/) | REST, GraphQL, gRPC, OpenAPI spec, versioning, pagination |
