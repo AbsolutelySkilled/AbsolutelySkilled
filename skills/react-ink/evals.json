@@ -1,0 +1,156 @@
+{
+  "skill": "react-ink",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Trigger: skill activates for terminal dashboard request",
+      "prompt": "Build a terminal dashboard that shows system stats using React",
+      "type": "code",
+      "assertions": [
+        {"type": "contains", "value": "ink"},
+        {"type": "contains", "value": "Box"},
+        {"type": "contains", "value": "Text"},
+        {"type": "code_valid", "language": "js"}
+      ],
+      "source": "https://github.com/vadimdemedes/ink"
+    },
+    {
+      "id": "eval-002",
+      "description": "Trigger: skill activates for interactive CLI prompt",
+      "prompt": "Create an interactive CLI menu where users can select from a list using arrow keys",
+      "type": "code",
+      "assertions": [
+        {"type": "contains", "value": "useInput"},
+        {"type": "contains", "value": "ink"},
+        {"type": "code_valid", "language": "js"}
+      ],
+      "source": "https://github.com/vadimdemedes/ink"
+    },
+    {
+      "id": "eval-003",
+      "description": "Core task: render a basic Ink app with proper setup",
+      "prompt": "Show me how to create a basic React Ink app that displays hello world",
+      "type": "code",
+      "assertions": [
+        {"type": "contains", "value": "render"},
+        {"type": "contains", "value": "import"},
+        {"type": "contains", "value": "ink"},
+        {"type": "contains", "value": "Text"},
+        {"type": "code_valid", "language": "js"}
+      ],
+      "source": "https://github.com/vadimdemedes/ink"
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: build a flexbox layout with Box component",
+      "prompt": "Create a two-column layout in Ink with a sidebar and main content area",
+      "type": "code",
+      "assertions": [
+        {"type": "contains", "value": "Box"},
+        {"type": "contains", "value": "flexDirection"},
+        {"type": "contains", "value": "width"},
+        {"type": "code_valid", "language": "js"}
+      ],
+      "source": "https://github.com/vadimdemedes/ink"
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: handle keyboard input with useInput",
+      "prompt": "In my Ink app, how do I detect arrow key presses and the Enter key?",
+      "type": "code",
+      "assertions": [
+        {"type": "contains", "value": "useInput"},
+        {"type": "contains", "value": "key.return"},
+        {"type": "contains", "value": "Arrow"},
+        {"type": "code_valid", "language": "js"}
+      ],
+      "source": "https://github.com/vadimdemedes/ink"
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: implement focus navigation between components",
+      "prompt": "Build a list of focusable items in Ink that the user can navigate with Tab",
+      "type": "code",
+      "assertions": [
+        {"type": "contains", "value": "useFocus"},
+        {"type": "contains", "value": "isFocused"},
+        {"type": "code_valid", "language": "js"}
+      ],
+      "source": "https://github.com/vadimdemedes/ink"
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: use Static component for persistent log output",
+      "prompt": "Show completed build steps permanently while showing current progress at the bottom",
+      "type": "code",
+      "assertions": [
+        {"type": "contains", "value": "Static"},
+        {"type": "contains", "value": "items"},
+        {"type": "code_valid", "language": "js"}
+      ],
+      "source": "https://github.com/vadimdemedes/ink"
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: Text component nesting rules",
+      "prompt": "Can I put a Box inside a Text component in React Ink?",
+      "type": "explanation",
+      "assertions": [
+        {"type": "contains", "value": "Text"},
+        {"type": "contains", "value": "text nodes"},
+        {"type": "not_contains", "value": "you can nest Box inside Text"}
+      ],
+      "source": "https://github.com/vadimdemedes/ink"
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: Node and React version requirements",
+      "prompt": "What are the minimum version requirements for React Ink v6?",
+      "type": "factual",
+      "assertions": [
+        {"type": "contains", "value": "Node"},
+        {"type": "contains", "value": "20"},
+        {"type": "contains", "value": "React"},
+        {"type": "contains", "value": "19"}
+      ],
+      "source": "https://github.com/vadimdemedes/ink/blob/master/package.json"
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: ESM-only module system",
+      "prompt": "I'm getting 'require() of ES Module' error when importing Ink",
+      "type": "explanation",
+      "assertions": [
+        {"type": "contains", "value": "ESM"},
+        {"type": "contains", "value": "import"},
+        {"type": "contains", "value": "type"}
+      ],
+      "source": "https://github.com/vadimdemedes/ink"
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: no createApp method exists",
+      "prompt": "How do I use ink.createApp() to initialize my terminal application?",
+      "type": "explanation",
+      "assertions": [
+        {"type": "not_contains", "value": "createApp"},
+        {"type": "contains", "value": "render"}
+      ],
+      "source": "https://github.com/vadimdemedes/ink"
+    },
+    {
+      "id": "eval-012",
+      "description": "References load: points to hooks-api.md for detailed useInput docs",
+      "prompt": "Show me all the key properties available in useInput's key object",
+      "type": "factual",
+      "assertions": [
+        {"type": "contains", "value": "upArrow"},
+        {"type": "contains", "value": "return"},
+        {"type": "contains", "value": "escape"},
+        {"type": "contains", "value": "backspace"}
+      ],
+      "source": "https://github.com/vadimdemedes/ink"
+    }
+  ]
+}

@@ -9,7 +9,7 @@ description: >
   menus, dotfile configuration, and packaging CLIs as npm/pip/cargo/go binaries.
 category: engineering
 tags: [cli, terminal, argument-parsing, config, distribution, prompts]
-recommended_skills: [shell-scripting, developer-experience, regex-mastery]
+recommended_skills: [shell-scripting, developer-experience, regex-mastery, react-ink]
 platforms:
   - claude-code
   - gemini-cli

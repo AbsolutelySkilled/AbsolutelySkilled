@@ -11,7 +11,7 @@ description: >
   the full frontend spectrum from semantic markup to production performance.
 category: engineering
 tags: [frontend, web-performance, accessibility, css, javascript, ui]
-recommended_skills: [design-systems, accessibility-wcag, responsive-design, ultimate-ui]
+recommended_skills: [design-systems, accessibility-wcag, responsive-design, ultimate-ui, react-ink]
 platforms:
   - claude-code
   - gemini-cli
