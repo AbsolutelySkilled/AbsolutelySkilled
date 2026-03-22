@@ -48,10 +48,10 @@ pricing pages, evaluate model trade-offs, design packaging, and structure experi
 
 Pair pricing-strategy with these complementary skills:
 
-- [saas-metrics](https://absolutely-skilled.vercel.app/skill/saas-metrics)
-- [product-analytics](https://absolutely-skilled.vercel.app/skill/product-analytics)
-- [competitive-analysis](https://absolutely-skilled.vercel.app/skill/competitive-analysis)
-- [api-monetization](https://absolutely-skilled.vercel.app/skill/api-monetization)
+- [saas-metrics](https://www.absolutelyskilled.pro/skill/saas-metrics)
+- [product-analytics](https://www.absolutelyskilled.pro/skill/product-analytics)
+- [competitive-analysis](https://www.absolutelyskilled.pro/skill/competitive-analysis)
+- [api-monetization](https://www.absolutelyskilled.pro/skill/api-monetization)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/pricing-strategy)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/pricing-strategy)*

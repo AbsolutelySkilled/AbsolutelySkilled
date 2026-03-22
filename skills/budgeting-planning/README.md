@@ -46,10 +46,10 @@ aligns teams, surfaces trade-offs early, and enables rapid course correction.
 
 Pair budgeting-planning with these complementary skills:
 
-- [financial-modeling](https://absolutely-skilled.vercel.app/skill/financial-modeling)
-- [financial-reporting](https://absolutely-skilled.vercel.app/skill/financial-reporting)
-- [tax-strategy](https://absolutely-skilled.vercel.app/skill/tax-strategy)
-- [saas-metrics](https://absolutely-skilled.vercel.app/skill/saas-metrics)
+- [financial-modeling](https://www.absolutelyskilled.pro/skill/financial-modeling)
+- [financial-reporting](https://www.absolutelyskilled.pro/skill/financial-reporting)
+- [tax-strategy](https://www.absolutelyskilled.pro/skill/tax-strategy)
+- [saas-metrics](https://www.absolutelyskilled.pro/skill/saas-metrics)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/budgeting-planning)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/budgeting-planning)*

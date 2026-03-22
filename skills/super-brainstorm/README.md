@@ -37,10 +37,10 @@ npx skills add AbsolutelySkilled/AbsolutelySkilled --skill super-brainstorm
 
 Pair super-brainstorm with these complementary skills:
 
-- [writing-plans](https://absolutely-skilled.vercel.app/skill/writing-plans)
-- [super-human](https://absolutely-skilled.vercel.app/skill/super-human)
-- [clean-architecture](https://absolutely-skilled.vercel.app/skill/clean-architecture)
-- [system-design](https://absolutely-skilled.vercel.app/skill/system-design)
+- [writing-plans](https://www.absolutelyskilled.pro/skill/writing-plans)
+- [super-human](https://www.absolutelyskilled.pro/skill/super-human)
+- [clean-architecture](https://www.absolutelyskilled.pro/skill/clean-architecture)
+- [system-design](https://www.absolutelyskilled.pro/skill/system-design)
 
 ## Frequently Asked Questions
 
@@ -63,4 +63,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/super-brainstorm)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/super-brainstorm)*

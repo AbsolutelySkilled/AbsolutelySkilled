@@ -48,9 +48,9 @@ simple automations into maintenance nightmares.
 
 Pair no-code-automation with these complementary skills:
 
-- [spreadsheet-modeling](https://absolutely-skilled.vercel.app/skill/spreadsheet-modeling)
-- [ci-cd-pipelines](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)
-- [data-pipelines](https://absolutely-skilled.vercel.app/skill/data-pipelines)
+- [spreadsheet-modeling](https://www.absolutelyskilled.pro/skill/spreadsheet-modeling)
+- [ci-cd-pipelines](https://www.absolutelyskilled.pro/skill/ci-cd-pipelines)
+- [data-pipelines](https://www.absolutelyskilled.pro/skill/data-pipelines)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/no-code-automation)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/no-code-automation)*

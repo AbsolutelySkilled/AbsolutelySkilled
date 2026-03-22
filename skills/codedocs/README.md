@@ -49,11 +49,11 @@ via targeted scope or git-diff detection.
 
 Pair codedocs with these complementary skills:
 
-- [technical-writing](https://absolutely-skilled.vercel.app/skill/technical-writing)
-- [internal-docs](https://absolutely-skilled.vercel.app/skill/internal-docs)
-- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
-- [developer-experience](https://absolutely-skilled.vercel.app/skill/developer-experience)
-- [open-source-management](https://absolutely-skilled.vercel.app/skill/open-source-management)
+- [technical-writing](https://www.absolutelyskilled.pro/skill/technical-writing)
+- [internal-docs](https://www.absolutelyskilled.pro/skill/internal-docs)
+- [clean-code](https://www.absolutelyskilled.pro/skill/clean-code)
+- [developer-experience](https://www.absolutelyskilled.pro/skill/developer-experience)
+- [open-source-management](https://www.absolutelyskilled.pro/skill/open-source-management)
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/codedocs)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/codedocs)*

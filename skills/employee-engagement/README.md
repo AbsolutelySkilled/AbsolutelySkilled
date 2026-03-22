@@ -49,10 +49,10 @@ action-oriented engagement practice.
 
 Pair employee-engagement with these complementary skills:
 
-- [performance-management](https://absolutely-skilled.vercel.app/skill/performance-management)
-- [onboarding](https://absolutely-skilled.vercel.app/skill/onboarding)
-- [remote-collaboration](https://absolutely-skilled.vercel.app/skill/remote-collaboration)
-- [community-management](https://absolutely-skilled.vercel.app/skill/community-management)
+- [performance-management](https://www.absolutelyskilled.pro/skill/performance-management)
+- [onboarding](https://www.absolutelyskilled.pro/skill/onboarding)
+- [remote-collaboration](https://www.absolutelyskilled.pro/skill/remote-collaboration)
+- [community-management](https://www.absolutelyskilled.pro/skill/community-management)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/employee-engagement)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/employee-engagement)*

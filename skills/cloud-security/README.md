@@ -46,10 +46,10 @@ posture of a cloud environment, not just a single service.
 
 Pair cloud-security with these complementary skills:
 
-- [appsec-owasp](https://absolutely-skilled.vercel.app/skill/appsec-owasp)
-- [cloud-aws](https://absolutely-skilled.vercel.app/skill/cloud-aws)
-- [cloud-gcp](https://absolutely-skilled.vercel.app/skill/cloud-gcp)
-- [privacy-compliance](https://absolutely-skilled.vercel.app/skill/privacy-compliance)
+- [appsec-owasp](https://www.absolutelyskilled.pro/skill/appsec-owasp)
+- [cloud-aws](https://www.absolutelyskilled.pro/skill/cloud-aws)
+- [cloud-gcp](https://www.absolutelyskilled.pro/skill/cloud-gcp)
+- [privacy-compliance](https://www.absolutelyskilled.pro/skill/privacy-compliance)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/cloud-security)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/cloud-security)*

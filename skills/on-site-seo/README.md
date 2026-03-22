@@ -48,10 +48,10 @@ correct, production-grade implementation - not strategy or keyword research.
 
 Pair on-site-seo with these complementary skills:
 
-- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
-- [core-web-vitals](https://absolutely-skilled.vercel.app/skill/core-web-vitals)
-- [schema-markup](https://absolutely-skilled.vercel.app/skill/schema-markup)
-- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
+- [technical-seo](https://www.absolutelyskilled.pro/skill/technical-seo)
+- [core-web-vitals](https://www.absolutelyskilled.pro/skill/core-web-vitals)
+- [schema-markup](https://www.absolutelyskilled.pro/skill/schema-markup)
+- [frontend-developer](https://www.absolutelyskilled.pro/skill/frontend-developer)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/on-site-seo)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/on-site-seo)*

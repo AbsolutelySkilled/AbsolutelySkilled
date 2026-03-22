@@ -48,11 +48,11 @@ API docs, tutorials, architecture docs, ADRs, and runbooks.
 
 Pair technical-writing with these complementary skills:
 
-- [internal-docs](https://absolutely-skilled.vercel.app/skill/internal-docs)
-- [developer-experience](https://absolutely-skilled.vercel.app/skill/developer-experience)
-- [developer-advocacy](https://absolutely-skilled.vercel.app/skill/developer-advocacy)
-- [knowledge-base](https://absolutely-skilled.vercel.app/skill/knowledge-base)
-- [codedocs](https://absolutely-skilled.vercel.app/skill/codedocs)
+- [internal-docs](https://www.absolutelyskilled.pro/skill/internal-docs)
+- [developer-experience](https://www.absolutelyskilled.pro/skill/developer-experience)
+- [developer-advocacy](https://www.absolutelyskilled.pro/skill/developer-advocacy)
+- [knowledge-base](https://www.absolutelyskilled.pro/skill/knowledge-base)
+- [codedocs](https://www.absolutelyskilled.pro/skill/codedocs)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/technical-writing)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/technical-writing)*

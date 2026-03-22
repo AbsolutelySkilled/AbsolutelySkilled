@@ -48,9 +48,9 @@ interviewers, and running debriefs that lead to confident decisions.
 
 Pair interview-design with these complementary skills:
 
-- [recruiting-ops](https://absolutely-skilled.vercel.app/skill/recruiting-ops)
-- [technical-interviewing](https://absolutely-skilled.vercel.app/skill/technical-interviewing)
-- [performance-management](https://absolutely-skilled.vercel.app/skill/performance-management)
+- [recruiting-ops](https://www.absolutelyskilled.pro/skill/recruiting-ops)
+- [technical-interviewing](https://www.absolutelyskilled.pro/skill/technical-interviewing)
+- [performance-management](https://www.absolutelyskilled.pro/skill/performance-management)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/interview-design)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/interview-design)*

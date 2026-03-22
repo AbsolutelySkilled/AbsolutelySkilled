@@ -46,10 +46,10 @@ understand the basics but need confident, safe defaults.
 
 Pair cryptography with these complementary skills:
 
-- [appsec-owasp](https://absolutely-skilled.vercel.app/skill/appsec-owasp)
-- [cloud-security](https://absolutely-skilled.vercel.app/skill/cloud-security)
-- [penetration-testing](https://absolutely-skilled.vercel.app/skill/penetration-testing)
-- [web3-smart-contracts](https://absolutely-skilled.vercel.app/skill/web3-smart-contracts)
+- [appsec-owasp](https://www.absolutelyskilled.pro/skill/appsec-owasp)
+- [cloud-security](https://www.absolutelyskilled.pro/skill/cloud-security)
+- [penetration-testing](https://www.absolutelyskilled.pro/skill/penetration-testing)
+- [web3-smart-contracts](https://www.absolutelyskilled.pro/skill/web3-smart-contracts)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/cryptography)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/cryptography)*

@@ -53,10 +53,10 @@ workplace that attracts and retains talent.
 
 Pair employment-law with these complementary skills:
 
-- [contract-drafting](https://absolutely-skilled.vercel.app/skill/contract-drafting)
-- [recruiting-ops](https://absolutely-skilled.vercel.app/skill/recruiting-ops)
-- [compensation-strategy](https://absolutely-skilled.vercel.app/skill/compensation-strategy)
-- [ip-management](https://absolutely-skilled.vercel.app/skill/ip-management)
+- [contract-drafting](https://www.absolutelyskilled.pro/skill/contract-drafting)
+- [recruiting-ops](https://www.absolutelyskilled.pro/skill/recruiting-ops)
+- [compensation-strategy](https://www.absolutelyskilled.pro/skill/compensation-strategy)
+- [ip-management](https://www.absolutelyskilled.pro/skill/ip-management)
 
 ## Frequently Asked Questions
 
@@ -79,4 +79,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/employment-law)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/employment-law)*

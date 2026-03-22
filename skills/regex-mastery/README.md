@@ -47,10 +47,10 @@ catastrophic backtracking.
 
 Pair regex-mastery with these complementary skills:
 
-- [shell-scripting](https://absolutely-skilled.vercel.app/skill/shell-scripting)
-- [vim-neovim](https://absolutely-skilled.vercel.app/skill/vim-neovim)
-- [debugging-tools](https://absolutely-skilled.vercel.app/skill/debugging-tools)
-- [cli-design](https://absolutely-skilled.vercel.app/skill/cli-design)
+- [shell-scripting](https://www.absolutelyskilled.pro/skill/shell-scripting)
+- [vim-neovim](https://www.absolutelyskilled.pro/skill/vim-neovim)
+- [debugging-tools](https://www.absolutelyskilled.pro/skill/debugging-tools)
+- [cli-design](https://www.absolutelyskilled.pro/skill/cli-design)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/regex-mastery)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/regex-mastery)*

@@ -48,10 +48,10 @@ trade-offs.
 
 Pair backend-engineering with these complementary skills:
 
-- [api-design](https://absolutely-skilled.vercel.app/skill/api-design)
-- [database-engineering](https://absolutely-skilled.vercel.app/skill/database-engineering)
-- [observability](https://absolutely-skilled.vercel.app/skill/observability)
-- [system-design](https://absolutely-skilled.vercel.app/skill/system-design)
+- [api-design](https://www.absolutelyskilled.pro/skill/api-design)
+- [database-engineering](https://www.absolutelyskilled.pro/skill/database-engineering)
+- [observability](https://www.absolutelyskilled.pro/skill/observability)
+- [system-design](https://www.absolutelyskilled.pro/skill/system-design)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/backend-engineering)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/backend-engineering)*

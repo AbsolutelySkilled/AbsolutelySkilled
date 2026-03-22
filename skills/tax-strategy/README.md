@@ -56,10 +56,10 @@ preparation.
 
 Pair tax-strategy with these complementary skills:
 
-- [financial-reporting](https://absolutely-skilled.vercel.app/skill/financial-reporting)
-- [budgeting-planning](https://absolutely-skilled.vercel.app/skill/budgeting-planning)
-- [regulatory-compliance](https://absolutely-skilled.vercel.app/skill/regulatory-compliance)
-- [bookkeeping-automation](https://absolutely-skilled.vercel.app/skill/bookkeeping-automation)
+- [financial-reporting](https://www.absolutelyskilled.pro/skill/financial-reporting)
+- [budgeting-planning](https://www.absolutelyskilled.pro/skill/budgeting-planning)
+- [regulatory-compliance](https://www.absolutelyskilled.pro/skill/regulatory-compliance)
+- [bookkeeping-automation](https://www.absolutelyskilled.pro/skill/bookkeeping-automation)
 
 ## Frequently Asked Questions
 
@@ -82,4 +82,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/tax-strategy)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/tax-strategy)*

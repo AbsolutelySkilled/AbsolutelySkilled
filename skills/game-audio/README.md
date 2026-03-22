@@ -49,9 +49,9 @@ shipped titles.
 
 Pair game-audio with these complementary skills:
 
-- [unity-development](https://absolutely-skilled.vercel.app/skill/unity-development)
-- [game-design-patterns](https://absolutely-skilled.vercel.app/skill/game-design-patterns)
-- [pixel-art-sprites](https://absolutely-skilled.vercel.app/skill/pixel-art-sprites)
+- [unity-development](https://www.absolutelyskilled.pro/skill/unity-development)
+- [game-design-patterns](https://www.absolutelyskilled.pro/skill/game-design-patterns)
+- [pixel-art-sprites](https://www.absolutelyskilled.pro/skill/pixel-art-sprites)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/game-audio)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/game-audio)*

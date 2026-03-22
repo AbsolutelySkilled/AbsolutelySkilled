@@ -57,9 +57,9 @@ extracting color values, and understanding layout patterns.
 
 Pair video-analyzer with these complementary skills:
 
-- [remotion-video](https://absolutely-skilled.vercel.app/skill/remotion-video)
-- [video-creator](https://absolutely-skilled.vercel.app/skill/video-creator)
-- [video-scriptwriting](https://absolutely-skilled.vercel.app/skill/video-scriptwriting)
+- [remotion-video](https://www.absolutelyskilled.pro/skill/remotion-video)
+- [video-creator](https://www.absolutelyskilled.pro/skill/video-creator)
+- [video-scriptwriting](https://www.absolutelyskilled.pro/skill/video-scriptwriting)
 
 ## Frequently Asked Questions
 
@@ -82,4 +82,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/video-analyzer)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/video-analyzer)*

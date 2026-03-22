@@ -46,10 +46,10 @@ pipeline and the engineering decisions that make or break search visibility.
 
 Pair technical-seo with these complementary skills:
 
-- [core-web-vitals](https://absolutely-skilled.vercel.app/skill/core-web-vitals)
-- [schema-markup](https://absolutely-skilled.vercel.app/skill/schema-markup)
-- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
-- [on-site-seo](https://absolutely-skilled.vercel.app/skill/on-site-seo)
+- [core-web-vitals](https://www.absolutelyskilled.pro/skill/core-web-vitals)
+- [schema-markup](https://www.absolutelyskilled.pro/skill/schema-markup)
+- [seo-mastery](https://www.absolutelyskilled.pro/skill/seo-mastery)
+- [on-site-seo](https://www.absolutelyskilled.pro/skill/on-site-seo)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/technical-seo)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/technical-seo)*

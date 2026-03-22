@@ -49,10 +49,10 @@ output. Done poorly, it becomes a compliance exercise that destroys morale.
 
 Pair performance-management with these complementary skills:
 
-- [compensation-strategy](https://absolutely-skilled.vercel.app/skill/compensation-strategy)
-- [employee-engagement](https://absolutely-skilled.vercel.app/skill/employee-engagement)
-- [interview-design](https://absolutely-skilled.vercel.app/skill/interview-design)
-- [onboarding](https://absolutely-skilled.vercel.app/skill/onboarding)
+- [compensation-strategy](https://www.absolutelyskilled.pro/skill/compensation-strategy)
+- [employee-engagement](https://www.absolutelyskilled.pro/skill/employee-engagement)
+- [interview-design](https://www.absolutelyskilled.pro/skill/interview-design)
+- [onboarding](https://www.absolutelyskilled.pro/skill/onboarding)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/performance-management)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/performance-management)*

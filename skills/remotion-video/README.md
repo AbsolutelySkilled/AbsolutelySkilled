@@ -52,10 +52,10 @@ via CLI or programmatic APIs.
 
 Pair remotion-video with these complementary skills:
 
-- [video-creator](https://absolutely-skilled.vercel.app/skill/video-creator)
-- [video-audio-design](https://absolutely-skilled.vercel.app/skill/video-audio-design)
-- [motion-design](https://absolutely-skilled.vercel.app/skill/motion-design)
-- [video-analyzer](https://absolutely-skilled.vercel.app/skill/video-analyzer)
+- [video-creator](https://www.absolutelyskilled.pro/skill/video-creator)
+- [video-audio-design](https://www.absolutelyskilled.pro/skill/video-audio-design)
+- [motion-design](https://www.absolutelyskilled.pro/skill/motion-design)
+- [video-analyzer](https://www.absolutelyskilled.pro/skill/video-analyzer)
 
 ## Frequently Asked Questions
 
@@ -78,4 +78,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/remotion-video)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/remotion-video)*

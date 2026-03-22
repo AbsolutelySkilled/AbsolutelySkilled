@@ -49,9 +49,9 @@ common traps that cause garbled UIs in non-English locales.
 
 Pair localization-i18n with these complementary skills:
 
-- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
-- [accessibility-wcag](https://absolutely-skilled.vercel.app/skill/accessibility-wcag)
-- [international-seo](https://absolutely-skilled.vercel.app/skill/international-seo)
+- [frontend-developer](https://www.absolutelyskilled.pro/skill/frontend-developer)
+- [accessibility-wcag](https://www.absolutelyskilled.pro/skill/accessibility-wcag)
+- [international-seo](https://www.absolutelyskilled.pro/skill/international-seo)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/localization-i18n)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/localization-i18n)*

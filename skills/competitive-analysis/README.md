@@ -48,10 +48,10 @@ run rigorous competitive analysis - from quick landscape scans to full strategic
 
 Pair competitive-analysis with these complementary skills:
 
-- [product-strategy](https://absolutely-skilled.vercel.app/skill/product-strategy)
-- [brand-strategy](https://absolutely-skilled.vercel.app/skill/brand-strategy)
-- [sales-enablement](https://absolutely-skilled.vercel.app/skill/sales-enablement)
-- [pricing-strategy](https://absolutely-skilled.vercel.app/skill/pricing-strategy)
+- [product-strategy](https://www.absolutelyskilled.pro/skill/product-strategy)
+- [brand-strategy](https://www.absolutelyskilled.pro/skill/brand-strategy)
+- [sales-enablement](https://www.absolutelyskilled.pro/skill/sales-enablement)
+- [pricing-strategy](https://www.absolutelyskilled.pro/skill/pricing-strategy)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/competitive-analysis)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/competitive-analysis)*

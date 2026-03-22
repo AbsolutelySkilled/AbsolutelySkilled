@@ -50,10 +50,10 @@ that prevent those failures.
 
 Pair pixel-art-sprites with these complementary skills:
 
-- [unity-development](https://absolutely-skilled.vercel.app/skill/unity-development)
-- [game-audio](https://absolutely-skilled.vercel.app/skill/game-audio)
-- [color-theory](https://absolutely-skilled.vercel.app/skill/color-theory)
-- [motion-design](https://absolutely-skilled.vercel.app/skill/motion-design)
+- [unity-development](https://www.absolutelyskilled.pro/skill/unity-development)
+- [game-audio](https://www.absolutelyskilled.pro/skill/game-audio)
+- [color-theory](https://www.absolutelyskilled.pro/skill/color-theory)
+- [motion-design](https://www.absolutelyskilled.pro/skill/motion-design)
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/pixel-art-sprites)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/pixel-art-sprites)*

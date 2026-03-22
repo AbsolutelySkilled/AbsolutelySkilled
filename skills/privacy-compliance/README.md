@@ -49,10 +49,10 @@ structure it*, not just regulatory theory.
 
 Pair privacy-compliance with these complementary skills:
 
-- [regulatory-compliance](https://absolutely-skilled.vercel.app/skill/regulatory-compliance)
-- [appsec-owasp](https://absolutely-skilled.vercel.app/skill/appsec-owasp)
-- [cloud-security](https://absolutely-skilled.vercel.app/skill/cloud-security)
-- [contract-drafting](https://absolutely-skilled.vercel.app/skill/contract-drafting)
+- [regulatory-compliance](https://www.absolutelyskilled.pro/skill/regulatory-compliance)
+- [appsec-owasp](https://www.absolutelyskilled.pro/skill/appsec-owasp)
+- [cloud-security](https://www.absolutelyskilled.pro/skill/cloud-security)
+- [contract-drafting](https://www.absolutelyskilled.pro/skill/contract-drafting)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/privacy-compliance)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/privacy-compliance)*

@@ -46,10 +46,10 @@ teams focused on user value rather than technical implementation details.
 
 Pair user-stories with these complementary skills:
 
-- [agile-scrum](https://absolutely-skilled.vercel.app/skill/agile-scrum)
-- [product-strategy](https://absolutely-skilled.vercel.app/skill/product-strategy)
-- [product-discovery](https://absolutely-skilled.vercel.app/skill/product-discovery)
-- [interview-design](https://absolutely-skilled.vercel.app/skill/interview-design)
+- [agile-scrum](https://www.absolutelyskilled.pro/skill/agile-scrum)
+- [product-strategy](https://www.absolutelyskilled.pro/skill/product-strategy)
+- [product-discovery](https://www.absolutelyskilled.pro/skill/product-discovery)
+- [interview-design](https://www.absolutelyskilled.pro/skill/interview-design)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/user-stories)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/user-stories)*

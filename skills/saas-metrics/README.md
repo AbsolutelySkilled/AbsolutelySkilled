@@ -49,10 +49,10 @@ actually trust.
 
 Pair saas-metrics with these complementary skills:
 
-- [product-analytics](https://absolutely-skilled.vercel.app/skill/product-analytics)
-- [pricing-strategy](https://absolutely-skilled.vercel.app/skill/pricing-strategy)
-- [financial-modeling](https://absolutely-skilled.vercel.app/skill/financial-modeling)
-- [growth-hacking](https://absolutely-skilled.vercel.app/skill/growth-hacking)
+- [product-analytics](https://www.absolutelyskilled.pro/skill/product-analytics)
+- [pricing-strategy](https://www.absolutelyskilled.pro/skill/pricing-strategy)
+- [financial-modeling](https://www.absolutelyskilled.pro/skill/financial-modeling)
+- [growth-hacking](https://www.absolutelyskilled.pro/skill/growth-hacking)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/saas-metrics)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/saas-metrics)*

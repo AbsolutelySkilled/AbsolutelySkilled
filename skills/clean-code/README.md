@@ -48,10 +48,10 @@ judgment to write, review, and refactor code the way a disciplined craftsman wou
 
 Pair clean-code with these complementary skills:
 
-- [code-review-mastery](https://absolutely-skilled.vercel.app/skill/code-review-mastery)
-- [refactoring-patterns](https://absolutely-skilled.vercel.app/skill/refactoring-patterns)
-- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
-- [clean-architecture](https://absolutely-skilled.vercel.app/skill/clean-architecture)
+- [code-review-mastery](https://www.absolutelyskilled.pro/skill/code-review-mastery)
+- [refactoring-patterns](https://www.absolutelyskilled.pro/skill/refactoring-patterns)
+- [test-strategy](https://www.absolutelyskilled.pro/skill/test-strategy)
+- [clean-architecture](https://www.absolutelyskilled.pro/skill/clean-architecture)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/clean-code)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/clean-code)*

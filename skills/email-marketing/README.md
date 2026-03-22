@@ -46,10 +46,10 @@ deliverability fundamentals, segmentation models, and systematic A/B testing.
 
 Pair email-marketing with these complementary skills:
 
-- [email-deliverability](https://absolutely-skilled.vercel.app/skill/email-deliverability)
-- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
-- [growth-hacking](https://absolutely-skilled.vercel.app/skill/growth-hacking)
-- [content-marketing](https://absolutely-skilled.vercel.app/skill/content-marketing)
+- [email-deliverability](https://www.absolutelyskilled.pro/skill/email-deliverability)
+- [copywriting](https://www.absolutelyskilled.pro/skill/copywriting)
+- [growth-hacking](https://www.absolutelyskilled.pro/skill/growth-hacking)
+- [content-marketing](https://www.absolutelyskilled.pro/skill/content-marketing)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/email-marketing)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/email-marketing)*

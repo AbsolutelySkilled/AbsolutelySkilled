@@ -49,10 +49,10 @@ Rich results increase click-through rates by making listings visually distinct i
 
 Pair schema-markup with these complementary skills:
 
-- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
-- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
-- [on-site-seo](https://absolutely-skilled.vercel.app/skill/on-site-seo)
-- [ecommerce-seo](https://absolutely-skilled.vercel.app/skill/ecommerce-seo)
+- [technical-seo](https://www.absolutelyskilled.pro/skill/technical-seo)
+- [seo-mastery](https://www.absolutelyskilled.pro/skill/seo-mastery)
+- [on-site-seo](https://www.absolutelyskilled.pro/skill/on-site-seo)
+- [ecommerce-seo](https://www.absolutelyskilled.pro/skill/ecommerce-seo)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/schema-markup)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/schema-markup)*

@@ -49,10 +49,10 @@ Android Studio and Gradle as the build system.
 
 Pair android-kotlin with these complementary skills:
 
-- [mobile-testing](https://absolutely-skilled.vercel.app/skill/mobile-testing)
-- [ios-swift](https://absolutely-skilled.vercel.app/skill/ios-swift)
-- [react-native](https://absolutely-skilled.vercel.app/skill/react-native)
-- [clean-architecture](https://absolutely-skilled.vercel.app/skill/clean-architecture)
+- [mobile-testing](https://www.absolutelyskilled.pro/skill/mobile-testing)
+- [ios-swift](https://www.absolutelyskilled.pro/skill/ios-swift)
+- [react-native](https://www.absolutelyskilled.pro/skill/react-native)
+- [clean-architecture](https://www.absolutelyskilled.pro/skill/clean-architecture)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/android-kotlin)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/android-kotlin)*

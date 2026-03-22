@@ -47,10 +47,10 @@ live demos, technical blog posts, SDK examples, and community engagement.
 
 Pair developer-advocacy with these complementary skills:
 
-- [technical-writing](https://absolutely-skilled.vercel.app/skill/technical-writing)
-- [open-source-management](https://absolutely-skilled.vercel.app/skill/open-source-management)
-- [content-marketing](https://absolutely-skilled.vercel.app/skill/content-marketing)
-- [developer-experience](https://absolutely-skilled.vercel.app/skill/developer-experience)
+- [technical-writing](https://www.absolutelyskilled.pro/skill/technical-writing)
+- [open-source-management](https://www.absolutelyskilled.pro/skill/open-source-management)
+- [content-marketing](https://www.absolutelyskilled.pro/skill/content-marketing)
+- [developer-experience](https://www.absolutelyskilled.pro/skill/developer-experience)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/developer-advocacy)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/developer-advocacy)*

@@ -47,10 +47,10 @@ the problem and *configuring it correctly* rather than memorizing every API surf
 
 Pair cloud-gcp with these complementary skills:
 
-- [terraform-iac](https://absolutely-skilled.vercel.app/skill/terraform-iac)
-- [cloud-security](https://absolutely-skilled.vercel.app/skill/cloud-security)
-- [docker-kubernetes](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)
-- [cloud-aws](https://absolutely-skilled.vercel.app/skill/cloud-aws)
+- [terraform-iac](https://www.absolutelyskilled.pro/skill/terraform-iac)
+- [cloud-security](https://www.absolutelyskilled.pro/skill/cloud-security)
+- [docker-kubernetes](https://www.absolutelyskilled.pro/skill/docker-kubernetes)
+- [cloud-aws](https://www.absolutelyskilled.pro/skill/cloud-aws)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/cloud-gcp)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/cloud-gcp)*

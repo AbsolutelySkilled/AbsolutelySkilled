@@ -45,10 +45,10 @@ outputs, and iterative improvement - not guesswork.
 
 Pair seo-mastery with these complementary skills:
 
-- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
-- [keyword-research](https://absolutely-skilled.vercel.app/skill/keyword-research)
-- [content-seo](https://absolutely-skilled.vercel.app/skill/content-seo)
-- [schema-markup](https://absolutely-skilled.vercel.app/skill/schema-markup)
+- [technical-seo](https://www.absolutelyskilled.pro/skill/technical-seo)
+- [keyword-research](https://www.absolutelyskilled.pro/skill/keyword-research)
+- [content-seo](https://www.absolutelyskilled.pro/skill/content-seo)
+- [schema-markup](https://www.absolutelyskilled.pro/skill/schema-markup)
 
 ## Frequently Asked Questions
 
@@ -71,4 +71,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/seo-mastery)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/seo-mastery)*

@@ -47,10 +47,10 @@ happy-path implementation.
 
 Pair llm-app-development with these complementary skills:
 
-- [prompt-engineering](https://absolutely-skilled.vercel.app/skill/prompt-engineering)
-- [ai-agent-design](https://absolutely-skilled.vercel.app/skill/ai-agent-design)
-- [ml-ops](https://absolutely-skilled.vercel.app/skill/ml-ops)
-- [mastra](https://absolutely-skilled.vercel.app/skill/mastra)
+- [prompt-engineering](https://www.absolutelyskilled.pro/skill/prompt-engineering)
+- [ai-agent-design](https://www.absolutelyskilled.pro/skill/ai-agent-design)
+- [ml-ops](https://www.absolutelyskilled.pro/skill/ml-ops)
+- [mastra](https://www.absolutelyskilled.pro/skill/mastra)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/llm-app-development)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/llm-app-development)*

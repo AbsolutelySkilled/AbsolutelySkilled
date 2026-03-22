@@ -48,10 +48,10 @@ repeatable support machine.
 
 Pair customer-support-ops with these complementary skills:
 
-- [knowledge-base](https://absolutely-skilled.vercel.app/skill/knowledge-base)
-- [support-analytics](https://absolutely-skilled.vercel.app/skill/support-analytics)
-- [customer-success-playbook](https://absolutely-skilled.vercel.app/skill/customer-success-playbook)
-- [community-management](https://absolutely-skilled.vercel.app/skill/community-management)
+- [knowledge-base](https://www.absolutelyskilled.pro/skill/knowledge-base)
+- [support-analytics](https://www.absolutelyskilled.pro/skill/support-analytics)
+- [customer-success-playbook](https://www.absolutelyskilled.pro/skill/customer-success-playbook)
+- [community-management](https://www.absolutelyskilled.pro/skill/community-management)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/customer-support-ops)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/customer-support-ops)*

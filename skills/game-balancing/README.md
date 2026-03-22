@@ -50,9 +50,9 @@ bored.
 
 Pair game-balancing with these complementary skills:
 
-- [unity-development](https://absolutely-skilled.vercel.app/skill/unity-development)
-- [game-design-patterns](https://absolutely-skilled.vercel.app/skill/game-design-patterns)
-- [product-analytics](https://absolutely-skilled.vercel.app/skill/product-analytics)
+- [unity-development](https://www.absolutelyskilled.pro/skill/unity-development)
+- [game-design-patterns](https://www.absolutelyskilled.pro/skill/game-design-patterns)
+- [product-analytics](https://www.absolutelyskilled.pro/skill/product-analytics)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/game-balancing)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/game-balancing)*

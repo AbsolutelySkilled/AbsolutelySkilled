@@ -46,10 +46,10 @@ who need CRM to be a system of truth, not a graveyard of stale opportunities.
 
 Pair crm-management with these complementary skills:
 
-- [sales-playbook](https://absolutely-skilled.vercel.app/skill/sales-playbook)
-- [lead-scoring](https://absolutely-skilled.vercel.app/skill/lead-scoring)
-- [account-management](https://absolutely-skilled.vercel.app/skill/account-management)
-- [sales-enablement](https://absolutely-skilled.vercel.app/skill/sales-enablement)
+- [sales-playbook](https://www.absolutelyskilled.pro/skill/sales-playbook)
+- [lead-scoring](https://www.absolutelyskilled.pro/skill/lead-scoring)
+- [account-management](https://www.absolutelyskilled.pro/skill/account-management)
+- [sales-enablement](https://www.absolutelyskilled.pro/skill/sales-enablement)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/crm-management)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/crm-management)*

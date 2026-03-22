@@ -45,10 +45,10 @@ or systematizing an existing ad-hoc component collection.
 
 Pair design-systems with these complementary skills:
 
-- [accessibility-wcag](https://absolutely-skilled.vercel.app/skill/accessibility-wcag)
-- [color-theory](https://absolutely-skilled.vercel.app/skill/color-theory)
-- [responsive-design](https://absolutely-skilled.vercel.app/skill/responsive-design)
-- [ultimate-ui](https://absolutely-skilled.vercel.app/skill/ultimate-ui)
+- [accessibility-wcag](https://www.absolutelyskilled.pro/skill/accessibility-wcag)
+- [color-theory](https://www.absolutelyskilled.pro/skill/color-theory)
+- [responsive-design](https://www.absolutelyskilled.pro/skill/responsive-design)
+- [ultimate-ui](https://www.absolutelyskilled.pro/skill/ultimate-ui)
 
 ## Frequently Asked Questions
 
@@ -71,4 +71,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/design-systems)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/design-systems)*

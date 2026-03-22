@@ -52,10 +52,10 @@ feel responsive without being distracting.
 
 Pair ultimate-ui with these complementary skills:
 
-- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
-- [color-theory](https://absolutely-skilled.vercel.app/skill/color-theory)
-- [accessibility-wcag](https://absolutely-skilled.vercel.app/skill/accessibility-wcag)
-- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
+- [design-systems](https://www.absolutelyskilled.pro/skill/design-systems)
+- [color-theory](https://www.absolutelyskilled.pro/skill/color-theory)
+- [accessibility-wcag](https://www.absolutelyskilled.pro/skill/accessibility-wcag)
+- [frontend-developer](https://www.absolutelyskilled.pro/skill/frontend-developer)
 
 ## Frequently Asked Questions
 
@@ -78,4 +78,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/ultimate-ui)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/ultimate-ui)*

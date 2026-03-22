@@ -49,10 +49,10 @@ model, component design principles, and practical boundary-crossing patterns.
 
 Pair clean-architecture with these complementary skills:
 
-- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
-- [system-design](https://absolutely-skilled.vercel.app/skill/system-design)
-- [microservices](https://absolutely-skilled.vercel.app/skill/microservices)
-- [backend-engineering](https://absolutely-skilled.vercel.app/skill/backend-engineering)
+- [clean-code](https://www.absolutelyskilled.pro/skill/clean-code)
+- [system-design](https://www.absolutelyskilled.pro/skill/system-design)
+- [microservices](https://www.absolutelyskilled.pro/skill/microservices)
+- [backend-engineering](https://www.absolutelyskilled.pro/skill/backend-engineering)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/clean-architecture)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/clean-architecture)*

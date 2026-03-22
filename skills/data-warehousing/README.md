@@ -46,10 +46,10 @@ performance, storage cost, and maintainability for downstream analytics consumer
 
 Pair data-warehousing with these complementary skills:
 
-- [data-pipelines](https://absolutely-skilled.vercel.app/skill/data-pipelines)
-- [analytics-engineering](https://absolutely-skilled.vercel.app/skill/analytics-engineering)
-- [data-quality](https://absolutely-skilled.vercel.app/skill/data-quality)
-- [database-engineering](https://absolutely-skilled.vercel.app/skill/database-engineering)
+- [data-pipelines](https://www.absolutelyskilled.pro/skill/data-pipelines)
+- [analytics-engineering](https://www.absolutelyskilled.pro/skill/analytics-engineering)
+- [data-quality](https://www.absolutelyskilled.pro/skill/data-quality)
+- [database-engineering](https://www.absolutelyskilled.pro/skill/database-engineering)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/data-warehousing)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/data-warehousing)*

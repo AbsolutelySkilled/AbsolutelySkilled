@@ -49,10 +49,10 @@ foundation - lean on system frameworks before reaching for third-party dependenc
 
 Pair ios-swift with these complementary skills:
 
-- [mobile-testing](https://absolutely-skilled.vercel.app/skill/mobile-testing)
-- [android-kotlin](https://absolutely-skilled.vercel.app/skill/android-kotlin)
-- [react-native](https://absolutely-skilled.vercel.app/skill/react-native)
-- [clean-architecture](https://absolutely-skilled.vercel.app/skill/clean-architecture)
+- [mobile-testing](https://www.absolutelyskilled.pro/skill/mobile-testing)
+- [android-kotlin](https://www.absolutelyskilled.pro/skill/android-kotlin)
+- [react-native](https://www.absolutelyskilled.pro/skill/react-native)
+- [clean-architecture](https://www.absolutelyskilled.pro/skill/clean-architecture)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/ios-swift)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/ios-swift)*

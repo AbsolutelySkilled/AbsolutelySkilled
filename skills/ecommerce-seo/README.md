@@ -48,10 +48,10 @@ This skill provides the patterns and decision frameworks needed to win search fo
 
 Pair ecommerce-seo with these complementary skills:
 
-- [schema-markup](https://absolutely-skilled.vercel.app/skill/schema-markup)
-- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
-- [programmatic-seo](https://absolutely-skilled.vercel.app/skill/programmatic-seo)
-- [keyword-research](https://absolutely-skilled.vercel.app/skill/keyword-research)
+- [schema-markup](https://www.absolutelyskilled.pro/skill/schema-markup)
+- [technical-seo](https://www.absolutelyskilled.pro/skill/technical-seo)
+- [programmatic-seo](https://www.absolutelyskilled.pro/skill/programmatic-seo)
+- [keyword-research](https://www.absolutelyskilled.pro/skill/keyword-research)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/ecommerce-seo)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/ecommerce-seo)*

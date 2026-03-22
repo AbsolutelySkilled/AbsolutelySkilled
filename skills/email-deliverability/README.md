@@ -49,9 +49,9 @@ and marketers diagnosing delivery problems.
 
 Pair email-deliverability with these complementary skills:
 
-- [email-marketing](https://absolutely-skilled.vercel.app/skill/email-marketing)
-- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
-- [privacy-compliance](https://absolutely-skilled.vercel.app/skill/privacy-compliance)
+- [email-marketing](https://www.absolutelyskilled.pro/skill/email-marketing)
+- [technical-seo](https://www.absolutelyskilled.pro/skill/technical-seo)
+- [privacy-compliance](https://www.absolutelyskilled.pro/skill/privacy-compliance)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/email-deliverability)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/email-deliverability)*

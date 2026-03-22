@@ -49,10 +49,10 @@ guidance on building streaming pipelines that run reliably at scale.
 
 Pair real-time-streaming with these complementary skills:
 
-- [event-driven-architecture](https://absolutely-skilled.vercel.app/skill/event-driven-architecture)
-- [data-pipelines](https://absolutely-skilled.vercel.app/skill/data-pipelines)
-- [data-quality](https://absolutely-skilled.vercel.app/skill/data-quality)
-- [backend-engineering](https://absolutely-skilled.vercel.app/skill/backend-engineering)
+- [event-driven-architecture](https://www.absolutelyskilled.pro/skill/event-driven-architecture)
+- [data-pipelines](https://www.absolutelyskilled.pro/skill/data-pipelines)
+- [data-quality](https://www.absolutelyskilled.pro/skill/data-quality)
+- [backend-engineering](https://www.absolutelyskilled.pro/skill/backend-engineering)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/real-time-streaming)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/real-time-streaming)*

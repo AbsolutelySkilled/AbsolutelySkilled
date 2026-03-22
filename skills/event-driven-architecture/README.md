@@ -49,10 +49,10 @@ systems at any scale.
 
 Pair event-driven-architecture with these complementary skills:
 
-- [microservices](https://absolutely-skilled.vercel.app/skill/microservices)
-- [real-time-streaming](https://absolutely-skilled.vercel.app/skill/real-time-streaming)
-- [system-design](https://absolutely-skilled.vercel.app/skill/system-design)
-- [backend-engineering](https://absolutely-skilled.vercel.app/skill/backend-engineering)
+- [microservices](https://www.absolutelyskilled.pro/skill/microservices)
+- [real-time-streaming](https://www.absolutelyskilled.pro/skill/real-time-streaming)
+- [system-design](https://www.absolutelyskilled.pro/skill/system-design)
+- [backend-engineering](https://www.absolutelyskilled.pro/skill/backend-engineering)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/event-driven-architecture)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/event-driven-architecture)*

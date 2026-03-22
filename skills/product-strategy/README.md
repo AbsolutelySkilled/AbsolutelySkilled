@@ -50,10 +50,10 @@ run scoring sessions, and structure planning artifacts.
 
 Pair product-strategy with these complementary skills:
 
-- [product-discovery](https://absolutely-skilled.vercel.app/skill/product-discovery)
-- [competitive-analysis](https://absolutely-skilled.vercel.app/skill/competitive-analysis)
-- [product-analytics](https://absolutely-skilled.vercel.app/skill/product-analytics)
-- [user-stories](https://absolutely-skilled.vercel.app/skill/user-stories)
+- [product-discovery](https://www.absolutelyskilled.pro/skill/product-discovery)
+- [competitive-analysis](https://www.absolutelyskilled.pro/skill/competitive-analysis)
+- [product-analytics](https://www.absolutelyskilled.pro/skill/product-analytics)
+- [user-stories](https://www.absolutelyskilled.pro/skill/user-stories)
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/product-strategy)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/product-strategy)*

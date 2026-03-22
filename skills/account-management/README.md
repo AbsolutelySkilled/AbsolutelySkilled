@@ -47,10 +47,10 @@ renewals, and rescue at-risk accounts before they churn.
 
 Pair account-management with these complementary skills:
 
-- [customer-success-playbook](https://absolutely-skilled.vercel.app/skill/customer-success-playbook)
-- [crm-management](https://absolutely-skilled.vercel.app/skill/crm-management)
-- [sales-playbook](https://absolutely-skilled.vercel.app/skill/sales-playbook)
-- [partnership-strategy](https://absolutely-skilled.vercel.app/skill/partnership-strategy)
+- [customer-success-playbook](https://www.absolutelyskilled.pro/skill/customer-success-playbook)
+- [crm-management](https://www.absolutelyskilled.pro/skill/crm-management)
+- [sales-playbook](https://www.absolutelyskilled.pro/skill/sales-playbook)
+- [partnership-strategy](https://www.absolutelyskilled.pro/skill/partnership-strategy)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/account-management)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/account-management)*

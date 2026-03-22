@@ -48,10 +48,10 @@ for shipping real projects.
 
 Pair unity-development with these complementary skills:
 
-- [game-design-patterns](https://absolutely-skilled.vercel.app/skill/game-design-patterns)
-- [game-balancing](https://absolutely-skilled.vercel.app/skill/game-balancing)
-- [game-audio](https://absolutely-skilled.vercel.app/skill/game-audio)
-- [pixel-art-sprites](https://absolutely-skilled.vercel.app/skill/pixel-art-sprites)
+- [game-design-patterns](https://www.absolutelyskilled.pro/skill/game-design-patterns)
+- [game-balancing](https://www.absolutelyskilled.pro/skill/game-balancing)
+- [game-audio](https://www.absolutelyskilled.pro/skill/game-audio)
+- [pixel-art-sprites](https://www.absolutelyskilled.pro/skill/pixel-art-sprites)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/unity-development)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/unity-development)*

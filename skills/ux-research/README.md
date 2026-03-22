@@ -50,10 +50,10 @@ your usability problems for a fraction of what a failed launch costs.
 
 Pair ux-research with these complementary skills:
 
-- [product-discovery](https://absolutely-skilled.vercel.app/skill/product-discovery)
-- [customer-research](https://absolutely-skilled.vercel.app/skill/customer-research)
-- [accessibility-wcag](https://absolutely-skilled.vercel.app/skill/accessibility-wcag)
-- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
+- [product-discovery](https://www.absolutelyskilled.pro/skill/product-discovery)
+- [customer-research](https://www.absolutelyskilled.pro/skill/customer-research)
+- [accessibility-wcag](https://www.absolutelyskilled.pro/skill/accessibility-wcag)
+- [design-systems](https://www.absolutelyskilled.pro/skill/design-systems)
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/ux-research)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/ux-research)*

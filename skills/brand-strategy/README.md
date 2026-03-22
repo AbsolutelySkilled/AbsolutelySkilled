@@ -48,10 +48,10 @@ storytelling, competitive mapping, and brand audits.
 
 Pair brand-strategy with these complementary skills:
 
-- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
-- [social-media-strategy](https://absolutely-skilled.vercel.app/skill/social-media-strategy)
-- [competitive-analysis](https://absolutely-skilled.vercel.app/skill/competitive-analysis)
-- [product-strategy](https://absolutely-skilled.vercel.app/skill/product-strategy)
+- [copywriting](https://www.absolutelyskilled.pro/skill/copywriting)
+- [social-media-strategy](https://www.absolutelyskilled.pro/skill/social-media-strategy)
+- [competitive-analysis](https://www.absolutelyskilled.pro/skill/competitive-analysis)
+- [product-strategy](https://www.absolutelyskilled.pro/skill/product-strategy)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/brand-strategy)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/brand-strategy)*

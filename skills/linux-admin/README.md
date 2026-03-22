@@ -47,10 +47,10 @@ locking down a fresh server.
 
 Pair linux-admin with these complementary skills:
 
-- [docker-kubernetes](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)
-- [shell-scripting](https://absolutely-skilled.vercel.app/skill/shell-scripting)
-- [site-reliability](https://absolutely-skilled.vercel.app/skill/site-reliability)
-- [observability](https://absolutely-skilled.vercel.app/skill/observability)
+- [docker-kubernetes](https://www.absolutelyskilled.pro/skill/docker-kubernetes)
+- [shell-scripting](https://www.absolutelyskilled.pro/skill/shell-scripting)
+- [site-reliability](https://www.absolutelyskilled.pro/skill/site-reliability)
+- [observability](https://www.absolutelyskilled.pro/skill/observability)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/linux-admin)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/linux-admin)*

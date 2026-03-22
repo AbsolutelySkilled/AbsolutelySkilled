@@ -52,10 +52,10 @@ quality before publishing to a registry.
 
 Pair skill-audit with these complementary skills:
 
-- [appsec-owasp](https://absolutely-skilled.vercel.app/skill/appsec-owasp)
-- [penetration-testing](https://absolutely-skilled.vercel.app/skill/penetration-testing)
-- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
-- [code-review-mastery](https://absolutely-skilled.vercel.app/skill/code-review-mastery)
+- [appsec-owasp](https://www.absolutelyskilled.pro/skill/appsec-owasp)
+- [penetration-testing](https://www.absolutelyskilled.pro/skill/penetration-testing)
+- [clean-code](https://www.absolutelyskilled.pro/skill/clean-code)
+- [code-review-mastery](https://www.absolutelyskilled.pro/skill/code-review-mastery)
 
 ## Frequently Asked Questions
 
@@ -78,4 +78,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/skill-audit)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/skill-audit)*

@@ -47,10 +47,10 @@ core principle is to move computation to where the user is, not the other way ar
 
 Pair edge-computing with these complementary skills:
 
-- [cloud-aws](https://absolutely-skilled.vercel.app/skill/cloud-aws)
-- [cloud-gcp](https://absolutely-skilled.vercel.app/skill/cloud-gcp)
-- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
-- [docker-kubernetes](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)
+- [cloud-aws](https://www.absolutelyskilled.pro/skill/cloud-aws)
+- [cloud-gcp](https://www.absolutelyskilled.pro/skill/cloud-gcp)
+- [performance-engineering](https://www.absolutelyskilled.pro/skill/performance-engineering)
+- [docker-kubernetes](https://www.absolutelyskilled.pro/skill/docker-kubernetes)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/edge-computing)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/edge-computing)*

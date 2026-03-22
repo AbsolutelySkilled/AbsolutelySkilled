@@ -45,10 +45,10 @@ tool schemas, memory strategy, failure modes, and evaluation methodology.
 
 Pair ai-agent-design with these complementary skills:
 
-- [a2a-protocol](https://absolutely-skilled.vercel.app/skill/a2a-protocol)
-- [llm-app-development](https://absolutely-skilled.vercel.app/skill/llm-app-development)
-- [prompt-engineering](https://absolutely-skilled.vercel.app/skill/prompt-engineering)
-- [mastra](https://absolutely-skilled.vercel.app/skill/mastra)
+- [a2a-protocol](https://www.absolutelyskilled.pro/skill/a2a-protocol)
+- [llm-app-development](https://www.absolutelyskilled.pro/skill/llm-app-development)
+- [prompt-engineering](https://www.absolutelyskilled.pro/skill/prompt-engineering)
+- [mastra](https://www.absolutelyskilled.pro/skill/mastra)
 
 ## Frequently Asked Questions
 
@@ -71,4 +71,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/ai-agent-design)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/ai-agent-design)*

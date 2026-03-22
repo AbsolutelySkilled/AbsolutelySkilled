@@ -46,10 +46,10 @@ idioms that separate fragile one-liners from scripts that hold up in production.
 
 Pair shell-scripting with these complementary skills:
 
-- [linux-admin](https://absolutely-skilled.vercel.app/skill/linux-admin)
-- [regex-mastery](https://absolutely-skilled.vercel.app/skill/regex-mastery)
-- [cli-design](https://absolutely-skilled.vercel.app/skill/cli-design)
-- [vim-neovim](https://absolutely-skilled.vercel.app/skill/vim-neovim)
+- [linux-admin](https://www.absolutelyskilled.pro/skill/linux-admin)
+- [regex-mastery](https://www.absolutelyskilled.pro/skill/regex-mastery)
+- [cli-design](https://www.absolutelyskilled.pro/skill/cli-design)
+- [vim-neovim](https://www.absolutelyskilled.pro/skill/vim-neovim)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/shell-scripting)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/shell-scripting)*

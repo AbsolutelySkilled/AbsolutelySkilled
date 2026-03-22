@@ -47,10 +47,10 @@ what to measure, how to measure it, and how to act on what you find.
 
 Pair support-analytics with these complementary skills:
 
-- [customer-support-ops](https://absolutely-skilled.vercel.app/skill/customer-support-ops)
-- [customer-success-playbook](https://absolutely-skilled.vercel.app/skill/customer-success-playbook)
-- [product-analytics](https://absolutely-skilled.vercel.app/skill/product-analytics)
-- [saas-metrics](https://absolutely-skilled.vercel.app/skill/saas-metrics)
+- [customer-support-ops](https://www.absolutelyskilled.pro/skill/customer-support-ops)
+- [customer-success-playbook](https://www.absolutelyskilled.pro/skill/customer-success-playbook)
+- [product-analytics](https://www.absolutelyskilled.pro/skill/product-analytics)
+- [saas-metrics](https://www.absolutelyskilled.pro/skill/saas-metrics)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/support-analytics)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/support-analytics)*

@@ -48,10 +48,10 @@ intelligence briefs, product one-pagers, and training programs.
 
 Pair sales-enablement with these complementary skills:
 
-- [sales-playbook](https://absolutely-skilled.vercel.app/skill/sales-playbook)
-- [competitive-analysis](https://absolutely-skilled.vercel.app/skill/competitive-analysis)
-- [proposal-writing](https://absolutely-skilled.vercel.app/skill/proposal-writing)
-- [crm-management](https://absolutely-skilled.vercel.app/skill/crm-management)
+- [sales-playbook](https://www.absolutelyskilled.pro/skill/sales-playbook)
+- [competitive-analysis](https://www.absolutelyskilled.pro/skill/competitive-analysis)
+- [proposal-writing](https://www.absolutelyskilled.pro/skill/proposal-writing)
+- [crm-management](https://www.absolutelyskilled.pro/skill/crm-management)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/sales-enablement)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/sales-enablement)*

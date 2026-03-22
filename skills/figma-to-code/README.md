@@ -50,10 +50,10 @@ mappings once, apply them always.
 
 Pair figma-to-code with these complementary skills:
 
-- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
-- [responsive-design](https://absolutely-skilled.vercel.app/skill/responsive-design)
-- [color-theory](https://absolutely-skilled.vercel.app/skill/color-theory)
-- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
+- [design-systems](https://www.absolutelyskilled.pro/skill/design-systems)
+- [responsive-design](https://www.absolutelyskilled.pro/skill/responsive-design)
+- [color-theory](https://www.absolutelyskilled.pro/skill/color-theory)
+- [frontend-developer](https://www.absolutelyskilled.pro/skill/frontend-developer)
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/figma-to-code)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/figma-to-code)*

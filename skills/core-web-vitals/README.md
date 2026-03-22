@@ -48,10 +48,10 @@ Poor CWV can suppress rankings regardless of content quality; good CWV is a rank
 
 Pair core-web-vitals with these complementary skills:
 
-- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
-- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
-- [on-site-seo](https://absolutely-skilled.vercel.app/skill/on-site-seo)
-- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
+- [technical-seo](https://www.absolutelyskilled.pro/skill/technical-seo)
+- [performance-engineering](https://www.absolutelyskilled.pro/skill/performance-engineering)
+- [on-site-seo](https://www.absolutelyskilled.pro/skill/on-site-seo)
+- [frontend-developer](https://www.absolutelyskilled.pro/skill/frontend-developer)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/core-web-vitals)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/core-web-vitals)*

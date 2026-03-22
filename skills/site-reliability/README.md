@@ -48,10 +48,10 @@ to systematic reliability ownership.
 
 Pair site-reliability with these complementary skills:
 
-- [observability](https://absolutely-skilled.vercel.app/skill/observability)
-- [incident-management](https://absolutely-skilled.vercel.app/skill/incident-management)
-- [chaos-engineering](https://absolutely-skilled.vercel.app/skill/chaos-engineering)
-- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
+- [observability](https://www.absolutelyskilled.pro/skill/observability)
+- [incident-management](https://www.absolutelyskilled.pro/skill/incident-management)
+- [chaos-engineering](https://www.absolutelyskilled.pro/skill/chaos-engineering)
+- [performance-engineering](https://www.absolutelyskilled.pro/skill/performance-engineering)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/site-reliability)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/site-reliability)*

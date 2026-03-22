@@ -47,10 +47,10 @@ performance measurement.
 
 Pair customer-success-playbook with these complementary skills:
 
-- [account-management](https://absolutely-skilled.vercel.app/skill/account-management)
-- [support-analytics](https://absolutely-skilled.vercel.app/skill/support-analytics)
-- [customer-support-ops](https://absolutely-skilled.vercel.app/skill/customer-support-ops)
-- [saas-metrics](https://absolutely-skilled.vercel.app/skill/saas-metrics)
+- [account-management](https://www.absolutelyskilled.pro/skill/account-management)
+- [support-analytics](https://www.absolutelyskilled.pro/skill/support-analytics)
+- [customer-support-ops](https://www.absolutelyskilled.pro/skill/customer-support-ops)
+- [saas-metrics](https://www.absolutelyskilled.pro/skill/saas-metrics)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/customer-success-playbook)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/customer-success-playbook)*

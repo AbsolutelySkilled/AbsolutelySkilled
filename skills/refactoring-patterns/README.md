@@ -47,10 +47,10 @@ choose the right refactoring move, and execute it correctly.
 
 Pair refactoring-patterns with these complementary skills:
 
-- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
-- [code-review-mastery](https://absolutely-skilled.vercel.app/skill/code-review-mastery)
-- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
-- [debugging-tools](https://absolutely-skilled.vercel.app/skill/debugging-tools)
+- [clean-code](https://www.absolutelyskilled.pro/skill/clean-code)
+- [code-review-mastery](https://www.absolutelyskilled.pro/skill/code-review-mastery)
+- [test-strategy](https://www.absolutelyskilled.pro/skill/test-strategy)
+- [debugging-tools](https://www.absolutelyskilled.pro/skill/debugging-tools)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/refactoring-patterns)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/refactoring-patterns)*

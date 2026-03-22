@@ -49,10 +49,10 @@ This skill prevents all four failure modes with concrete patterns.
 
 Pair color-theory with these complementary skills:
 
-- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
-- [ultimate-ui](https://absolutely-skilled.vercel.app/skill/ultimate-ui)
-- [figma-to-code](https://absolutely-skilled.vercel.app/skill/figma-to-code)
-- [accessibility-wcag](https://absolutely-skilled.vercel.app/skill/accessibility-wcag)
+- [design-systems](https://www.absolutelyskilled.pro/skill/design-systems)
+- [ultimate-ui](https://www.absolutelyskilled.pro/skill/ultimate-ui)
+- [figma-to-code](https://www.absolutelyskilled.pro/skill/figma-to-code)
+- [accessibility-wcag](https://www.absolutelyskilled.pro/skill/accessibility-wcag)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/color-theory)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/color-theory)*

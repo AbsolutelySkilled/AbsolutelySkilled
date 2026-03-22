@@ -47,10 +47,10 @@ reliable, scalable text processing pipelines.
 
 Pair nlp-engineering with these complementary skills:
 
-- [prompt-engineering](https://absolutely-skilled.vercel.app/skill/prompt-engineering)
-- [llm-app-development](https://absolutely-skilled.vercel.app/skill/llm-app-development)
-- [data-science](https://absolutely-skilled.vercel.app/skill/data-science)
-- [computer-vision](https://absolutely-skilled.vercel.app/skill/computer-vision)
+- [prompt-engineering](https://www.absolutelyskilled.pro/skill/prompt-engineering)
+- [llm-app-development](https://www.absolutelyskilled.pro/skill/llm-app-development)
+- [data-science](https://www.absolutelyskilled.pro/skill/data-science)
+- [computer-vision](https://www.absolutelyskilled.pro/skill/computer-vision)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/nlp-engineering)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/nlp-engineering)*

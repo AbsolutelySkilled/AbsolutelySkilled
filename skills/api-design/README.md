@@ -48,10 +48,10 @@ authentication patterns.
 
 Pair api-design with these complementary skills:
 
-- [backend-engineering](https://absolutely-skilled.vercel.app/skill/backend-engineering)
-- [api-testing](https://absolutely-skilled.vercel.app/skill/api-testing)
-- [api-monetization](https://absolutely-skilled.vercel.app/skill/api-monetization)
-- [microservices](https://absolutely-skilled.vercel.app/skill/microservices)
+- [backend-engineering](https://www.absolutelyskilled.pro/skill/backend-engineering)
+- [api-testing](https://www.absolutelyskilled.pro/skill/api-testing)
+- [api-monetization](https://www.absolutelyskilled.pro/skill/api-monetization)
+- [microservices](https://www.absolutelyskilled.pro/skill/microservices)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/api-design)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/api-design)*

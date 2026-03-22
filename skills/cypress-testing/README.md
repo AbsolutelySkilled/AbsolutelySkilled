@@ -46,10 +46,10 @@ tests, custom commands, network interception, auth strategies, and CI integratio
 
 Pair cypress-testing with these complementary skills:
 
-- [playwright-testing](https://absolutely-skilled.vercel.app/skill/playwright-testing)
-- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
-- [jest-vitest](https://absolutely-skilled.vercel.app/skill/jest-vitest)
-- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
+- [playwright-testing](https://www.absolutelyskilled.pro/skill/playwright-testing)
+- [test-strategy](https://www.absolutelyskilled.pro/skill/test-strategy)
+- [jest-vitest](https://www.absolutelyskilled.pro/skill/jest-vitest)
+- [frontend-developer](https://www.absolutelyskilled.pro/skill/frontend-developer)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/cypress-testing)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/cypress-testing)*

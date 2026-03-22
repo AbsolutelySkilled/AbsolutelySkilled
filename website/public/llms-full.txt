@@ -9,7 +9,7 @@
 Use this skill when building Android applications with Kotlin. Triggers on Jetpack Compose UI, Room database, Kotlin coroutines, Play Store publishing, MVVM/MVI architecture, ViewModel, StateFlow, Hilt dependency injection, Navigation Compose, Material 3, APK/AAB builds, ProGuard, and Android app lifecycle management. Covers modern Android development with declarative UI, reactive state, structured concurrency, and production release workflows.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/android-kotlin
+- URL: https://www.absolutelyskilled.pro/skill/android-kotlin
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill android-kotlin`
 - Tags: android, kotlin, jetpack-compose, room, coroutines, play-store
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -19,7 +19,7 @@ Use this skill when building Android applications with Kotlin. Triggers on Jetpa
 Use this skill when designing APIs, choosing between REST/GraphQL/gRPC, writing OpenAPI specs, implementing pagination, versioning endpoints, or structuring request/response schemas. Triggers on API design, endpoint naming, HTTP methods, status codes, rate limiting, authentication schemes, HATEOAS, query parameters, and any task requiring API architecture decisions.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/api-design
+- URL: https://www.absolutelyskilled.pro/skill/api-design
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill api-design`
 - Tags: api, rest, graphql, grpc, openapi, design
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -29,7 +29,7 @@ Use this skill when designing APIs, choosing between REST/GraphQL/gRPC, writing 
 Use this skill when designing or implementing API monetization strategies - usage-based pricing, rate limiting, developer tier management, Stripe metering integration, or API billing systems. Triggers on tasks involving API pricing models, metered billing, per-request charging, quota enforcement, developer portal tiers, overage handling, and Stripe usage records.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/api-monetization
+- URL: https://www.absolutelyskilled.pro/skill/api-monetization
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill api-monetization`
 - Tags: api, monetization, pricing, rate-limiting, stripe, billing
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -39,7 +39,7 @@ Use this skill when designing or implementing API monetization strategies - usag
 Use this skill when testing REST or GraphQL APIs, implementing contract tests, setting up mock servers, or validating API behavior. Triggers on API testing, Postman, contract testing, Pact, mock servers, MSW, HTTP assertions, response validation, and any task requiring API test automation.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/api-testing
+- URL: https://www.absolutelyskilled.pro/skill/api-testing
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill api-testing`
 - Tags: api-testing, contract-testing, mock-servers, rest, graphql
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -49,7 +49,7 @@ Use this skill when testing REST or GraphQL APIs, implementing contract tests, s
 Use this skill when securing web applications, preventing OWASP Top 10 vulnerabilities, implementing input validation, or designing authentication. Triggers on XSS, SQL injection, CSRF, SSRF, broken authentication, security headers, input validation, output encoding, OWASP, and any task requiring application security hardening.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/appsec-owasp
+- URL: https://www.absolutelyskilled.pro/skill/appsec-owasp
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill appsec-owasp`
 - Tags: security, owasp, xss, sql-injection, authentication, appsec
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -59,7 +59,7 @@ Use this skill when securing web applications, preventing OWASP Top 10 vulnerabi
 Use this skill when designing backend systems, databases, APIs, or services. Triggers on schema design, database migrations, indexing strategies, distributed systems architecture, microservices, caching, message queues, observability setup, logging, metrics, tracing, SLO/SLI definition, performance optimization, query tuning, security hardening, authentication, authorization, API design (REST, GraphQL, gRPC), rate limiting, pagination, and failure handling patterns. Acts as a senior backend engineering advisor for mid-level engineers leveling up.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/backend-engineering
+- URL: https://www.absolutelyskilled.pro/skill/backend-engineering
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill backend-engineering`
 - Tags: backend, databases, api-design, distributed-systems, security, observability
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -69,7 +69,7 @@ Use this skill when designing backend systems, databases, APIs, or services. Tri
 Use this skill when implementing chaos engineering practices, designing fault injection experiments, running game days, or improving system resilience. Triggers on chaos engineering, fault injection, Chaos Monkey, Litmus, game days, resilience testing, failure modes, blast radius, and any task requiring controlled failure experimentation.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/chaos-engineering
+- URL: https://www.absolutelyskilled.pro/skill/chaos-engineering
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill chaos-engineering`
 - Tags: chaos-engineering, resilience, fault-injection, reliability, game-days
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -79,7 +79,7 @@ Use this skill when implementing chaos engineering practices, designing fault in
 Use this skill when designing, reviewing, or refactoring software architecture following Robert C. Martin's (Uncle Bob) Clean Architecture principles. Triggers on project structure decisions, layer design, dependency management, use case modeling, boundary crossing patterns, component organization, and separating business rules from frameworks. Covers the Dependency Rule, concentric layers, component cohesion/coupling, and boundary patterns.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/clean-architecture
+- URL: https://www.absolutelyskilled.pro/skill/clean-architecture
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill clean-architecture`
 - Tags: clean-architecture, architecture, dependency-rule, use-cases, boundaries, components
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -89,7 +89,7 @@ Use this skill when designing, reviewing, or refactoring software architecture f
 Use this skill when reviewing, writing, or refactoring code for cleanliness and maintainability following Robert C. Martin's (Uncle Bob) Clean Code principles. Triggers on code review, refactoring, naming improvements, function decomposition, applying SOLID principles, writing clean tests with TDD, identifying code smells, or improving error handling. Covers Clean Code, SOLID, and test-driven development.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/clean-code
+- URL: https://www.absolutelyskilled.pro/skill/clean-code
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill clean-code`
 - Tags: clean-code, refactoring, solid, code-review, tdd, best-practices
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -99,7 +99,7 @@ Use this skill when reviewing, writing, or refactoring code for cleanliness and 
 Use this skill when building command-line interfaces, designing CLI argument parsers, writing help text, adding interactive prompts, managing config files, or distributing CLI tools. Triggers on argument parsing, subcommands, flags, positional arguments, stdin/stdout piping, shell completions, interactive menus, dotfile configuration, and packaging CLIs as npm/pip/cargo/go binaries.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/cli-design
+- URL: https://www.absolutelyskilled.pro/skill/cli-design
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill cli-design`
 - Tags: cli, terminal, argument-parsing, config, distribution, prompts
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -109,7 +109,7 @@ Use this skill when building command-line interfaces, designing CLI argument par
 Use this skill when securing cloud infrastructure, configuring IAM policies, managing secrets, implementing network policies, or achieving compliance. Triggers on cloud IAM, secrets management, network security groups, VPC security, cloud compliance, SOC 2, HIPAA, zero trust, and any task requiring cloud security architecture or hardening.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/cloud-security
+- URL: https://www.absolutelyskilled.pro/skill/cloud-security
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill cloud-security`
 - Tags: cloud-security, iam, secrets, compliance, zero-trust, networking
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -119,7 +119,7 @@ Use this skill when securing cloud infrastructure, configuring IAM policies, man
 Use this skill when the user asks to review their local git changes, staged or unstaged diffs, or wants a code review before committing. Triggers on "review my changes", "review staged", "review my diff", "check my code", "code review local changes", "review unstaged", "review before commit".
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/code-review-mastery
+- URL: https://www.absolutelyskilled.pro/skill/code-review-mastery
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill code-review-mastery`
 - Tags: code-review, git-diff, local-review, automated-review, quality
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -129,7 +129,7 @@ Use this skill when the user asks to review their local git changes, staged or u
 Use this skill when generating AI-agent-friendly documentation for a git repo or directory, answering questions about a codebase from existing docs, or incrementally updating documentation after code changes. Triggers on codedocs:generate, codedocs:ask, codedocs:update, "document this codebase", "generate docs for this repo", "what does this project do", "update the docs after my changes", or any task requiring structured codebase documentation that serves AI agents, developers, and new team members.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/codedocs
+- URL: https://www.absolutelyskilled.pro/skill/codedocs
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill codedocs`
 - Tags: documentation, codebase, onboarding, architecture, ai-agent, code-understanding
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -139,7 +139,7 @@ Use this skill when generating AI-agent-friendly documentation for a git repo or
 Use this skill when implementing encryption, hashing, TLS configuration, JWT tokens, or key management. Triggers on encryption, hashing, bcrypt, AES, RSA, TLS certificates, JWT signing, HMAC, key rotation, digital signatures, and any task requiring cryptographic implementation or protocol selection.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/cryptography
+- URL: https://www.absolutelyskilled.pro/skill/cryptography
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill cryptography`
 - Tags: cryptography, encryption, hashing, tls, jwt, key-management
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -149,7 +149,7 @@ Use this skill when implementing encryption, hashing, TLS configuration, JWT tok
 Use this skill when writing Cypress e2e or component tests, creating custom commands, intercepting network requests, or integrating Cypress in CI. Triggers on Cypress, cy.get, cy.intercept, cypress component testing, custom commands, fixtures, cypress-cucumber, and any task requiring Cypress test automation.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/cypress-testing
+- URL: https://www.absolutelyskilled.pro/skill/cypress-testing
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill cypress-testing`
 - Tags: cypress, e2e, testing, component-testing, automation
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -159,7 +159,7 @@ Use this skill when writing Cypress e2e or component tests, creating custom comm
 Use this skill when designing database schemas, optimizing queries, creating indexes, planning migrations, or choosing between database technologies. Triggers on schema design, normalization, indexing strategies, query optimization, EXPLAIN plans, migrations, partitioning, replication, connection pooling, and any task requiring database architecture or performance decisions.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/database-engineering
+- URL: https://www.absolutelyskilled.pro/skill/database-engineering
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill database-engineering`
 - Tags: database, sql, schema, indexing, optimization, migrations
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -169,7 +169,7 @@ Use this skill when designing database schemas, optimizing queries, creating ind
 Use this skill when designing SDKs, writing onboarding flows, creating changelogs, or authoring migration guides. Triggers on developer experience (DX), API ergonomics, SDK design, getting-started guides, quickstart documentation, breaking change communication, version migration, upgrade paths, developer portals, and developer advocacy. Covers the full DX lifecycle from first impression to long-term retention.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/developer-experience
+- URL: https://www.absolutelyskilled.pro/skill/developer-experience
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill developer-experience`
 - Tags: developer-experience, sdk-design, onboarding, changelog, migration, dx
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -179,7 +179,7 @@ Use this skill when designing SDKs, writing onboarding flows, creating changelog
 Use this skill when designing event-driven systems, implementing event sourcing, applying CQRS patterns, selecting message brokers, or reasoning about eventual consistency. Triggers on tasks involving Kafka, RabbitMQ, event stores, command-query separation, domain events, sagas, compensating transactions, idempotency, message ordering, and any architecture where components communicate through asynchronous events rather than direct synchronous calls.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/event-driven-architecture
+- URL: https://www.absolutelyskilled.pro/skill/event-driven-architecture
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill event-driven-architecture`
 - Tags: event-sourcing, cqrs, message-brokers, eventual-consistency, architecture, distributed-systems
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -189,7 +189,7 @@ Use this skill when designing event-driven systems, implementing event sourcing,
 Senior frontend engineering expertise for building high-quality web interfaces. Use this skill when writing, reviewing, or optimizing frontend code - HTML, CSS, JavaScript, TypeScript, components, layouts, forms, or interactive UI. Triggers on web performance optimization (Core Web Vitals, bundle size, lazy loading), accessibility audits (WCAG, ARIA, keyboard navigation, screen readers), code quality reviews, component architecture decisions, testing strategy, and modern CSS patterns. Covers the full frontend spectrum from semantic markup to production performance.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/frontend-developer
+- URL: https://www.absolutelyskilled.pro/skill/frontend-developer
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill frontend-developer`
 - Tags: frontend, web-performance, accessibility, css, javascript, ui
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -199,7 +199,7 @@ Senior frontend engineering expertise for building high-quality web interfaces. 
 Use this skill when working with game balancing - economy design, difficulty curves, progression systems, reward schedules, playtesting analysis, or tuning game parameters. Triggers on any game design task involving resource sinks and faucets, XP curves, loot tables, difficulty scaling, player retention mechanics, or interpreting playtest data to adjust game feel.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/game-balancing
+- URL: https://www.absolutelyskilled.pro/skill/game-balancing
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill game-balancing`
 - Tags: game-design, balancing, economy, progression, playtesting, difficulty
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -209,7 +209,7 @@ Use this skill when working with game balancing - economy design, difficulty cur
 Use this skill when implementing game programming patterns - state machines for character/AI behavior, object pooling for performance-critical spawning, event systems for decoupled game communication, or the command pattern for input handling, undo/redo, and replays. Triggers on game architecture, game loop design, entity management, finite state machines, object pools, observer/event bus, command queues, and gameplay programming patterns.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/game-design-patterns
+- URL: https://www.absolutelyskilled.pro/skill/game-design-patterns
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill game-design-patterns`
 - Tags: game-dev, design-patterns, state-machine, object-pool, event-system, command-pattern
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -219,7 +219,7 @@ Use this skill when implementing game programming patterns - state machines for 
 Expert iOS development skill covering SwiftUI, UIKit, Core Data, App Store guidelines, and performance optimization. Use this skill when building, reviewing, or debugging iOS apps - views, navigation, data persistence, animations, or submission preparation. Triggers on SwiftUI layout and state management, UIKit view controller lifecycle, Core Data model design and migrations, App Store Review Guidelines compliance, memory and rendering performance profiling, and Swift concurrency patterns for iOS.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/ios-swift
+- URL: https://www.absolutelyskilled.pro/skill/ios-swift
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill ios-swift`
 - Tags: ios, swift, swiftui, uikit, core-data, mobile
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -229,7 +229,7 @@ Expert iOS development skill covering SwiftUI, UIKit, Core Data, App Store guide
 Use this skill when writing unit tests with Jest or Vitest, implementing mocking strategies, configuring test runners, or improving test coverage. Triggers on Jest, Vitest, describe/it/expect, mocking, vi.fn, jest.fn, snapshot testing, test coverage, and any task requiring JavaScript/TypeScript unit testing.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/jest-vitest
+- URL: https://www.absolutelyskilled.pro/skill/jest-vitest
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill jest-vitest`
 - Tags: jest, vitest, unit-testing, mocking, coverage, testing
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -239,7 +239,7 @@ Use this skill when writing unit tests with Jest or Vitest, implementing mocking
 Use this skill when installing, adding, or updating packages, checking latest versions, scaffolding projects with dependencies, or generating code that imports third-party packages. Triggers on npm install, pip install, cargo add, gem install, go get, dependency resolution, package management, module installation, crate addition, or any task requiring live version verification across npm, pip, Go modules, Rust/cargo, and Ruby/gem ecosystems. Covers synonyms: dependency, package, module, crate, gem, library.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/live-dependency-resolver
+- URL: https://www.absolutelyskilled.pro/skill/live-dependency-resolver
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill live-dependency-resolver`
 - Tags: dependencies, npm, pip, cargo, gem, go-modules, package-management, version-check
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -249,7 +249,7 @@ Use this skill when installing, adding, or updating packages, checking latest ve
 Use this skill when load testing services, benchmarking API performance, planning capacity, or identifying bottlenecks under stress. Triggers on k6, Artillery, JMeter, load testing, stress testing, soak testing, spike testing, performance benchmarks, throughput testing, and any task requiring load or performance testing.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/load-testing
+- URL: https://www.absolutelyskilled.pro/skill/load-testing
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill load-testing`
 - Tags: load-testing, k6, performance, benchmarking, stress-testing, capacity
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -259,7 +259,7 @@ Use this skill when load testing services, benchmarking API performance, plannin
 Use this skill when working with internationalization (i18n), localization (l10n), translation workflows, right-to-left (RTL) layout support, pluralization rules, or ICU MessageFormat syntax. Triggers on translating strings, setting up i18n libraries (react-intl, i18next, FormatJS), handling plural forms, formatting dates/numbers/currencies for locales, building translation pipelines, configuring RTL stylesheets, or writing ICU message patterns with select/plural/selectordinal.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/localization-i18n
+- URL: https://www.absolutelyskilled.pro/skill/localization-i18n
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill localization-i18n`
 - Tags: i18n, l10n, localization, translation, rtl, icu-message-format
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -269,7 +269,7 @@ Use this skill when working with internationalization (i18n), localization (l10n
 Use this skill when designing microservice architectures, decomposing monoliths, implementing inter-service communication, or solving distributed data challenges. Triggers on service decomposition, saga pattern, CQRS, event sourcing, API gateway, service mesh, circuit breaker, distributed transactions, and any task requiring microservice design decisions or migration strategies.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/microservices
+- URL: https://www.absolutelyskilled.pro/skill/microservices
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill microservices`
 - Tags: microservices, distributed-systems, architecture, patterns, services
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -279,7 +279,7 @@ Use this skill when designing microservice architectures, decomposing monoliths,
 Use this skill when writing or configuring mobile app tests with Detox or Appium, setting up device farms (AWS Device Farm, Firebase Test Lab, BrowserStack), integrating crash reporting (Crashlytics, Sentry, Bugsnag), or distributing beta builds (TestFlight, Firebase App Distribution, App Center). Triggers on mobile e2e testing, native app automation, device matrix testing, crash symbolication, and OTA beta distribution workflows.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/mobile-testing
+- URL: https://www.absolutelyskilled.pro/skill/mobile-testing
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill mobile-testing`
 - Tags: mobile, testing, detox, appium, device-farm, crash-reporting
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -289,7 +289,7 @@ Use this skill when writing or configuring mobile app tests with Detox or Appium
 Use this skill when setting up or managing monorepos, configuring workspace dependencies, optimizing build caching, or choosing between monorepo tools. Triggers on Turborepo, Nx, Bazel, pnpm workspaces, npm workspaces, yarn workspaces, build pipelines, task orchestration, affected commands, and any task requiring multi-package repository management.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/monorepo-management
+- URL: https://www.absolutelyskilled.pro/skill/monorepo-management
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill monorepo-management`
 - Tags: monorepo, turborepo, nx, workspaces, build-caching, tooling
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -299,7 +299,7 @@ Use this skill when setting up or managing monorepos, configuring workspace depe
 Use this skill when maintaining open source projects, managing OSS governance, writing changelogs, building community, choosing licenses, handling contributions, or managing releases. Triggers on tasks related to CONTRIBUTING.md, CODE_OF_CONDUCT, release notes, semantic versioning, maintainer workflows, issue triage, PR review policies, licensing decisions, community health, and open source project governance.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/open-source-management
+- URL: https://www.absolutelyskilled.pro/skill/open-source-management
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill open-source-management`
 - Tags: open-source, governance, changelog, community, licensing, maintainer
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -309,7 +309,7 @@ Use this skill when maintaining open source projects, managing OSS governance, w
 Use this skill when conducting authorized penetration tests, vulnerability assessments, or security audits within proper engagement scope. Triggers on pentest methodology, vulnerability scanning, OWASP testing guide, Burp Suite, reconnaissance, exploitation, reporting, and any task requiring structured security assessment within authorized engagements or CTF competitions.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/penetration-testing
+- URL: https://www.absolutelyskilled.pro/skill/penetration-testing
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill penetration-testing`
 - Tags: pentest, security, vulnerability-assessment, ethical-hacking, audit
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -319,7 +319,7 @@ Use this skill when conducting authorized penetration tests, vulnerability asses
 Use this skill when profiling application performance, debugging memory leaks, optimizing latency, benchmarking code, or reducing resource consumption. Triggers on CPU profiling, memory profiling, flame graphs, garbage collection tuning, load testing, P99 latency, throughput optimization, bundle size reduction, and any task requiring performance analysis or optimization.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/performance-engineering
+- URL: https://www.absolutelyskilled.pro/skill/performance-engineering
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill performance-engineering`
 - Tags: performance, profiling, optimization, benchmarking, latency, memory
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -329,7 +329,7 @@ Use this skill when profiling application performance, debugging memory leaks, o
 Use this skill when writing Playwright e2e tests, debugging flaky tests, setting up visual regression, testing APIs with request context, configuring CI sharding, or automating browser interactions. Triggers on Playwright, page.route, storageState, toHaveScreenshot, trace viewer, codegen, test.describe, page object model, and any task requiring Playwright test automation or flaky test diagnosis.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/playwright-testing
+- URL: https://www.absolutelyskilled.pro/skill/playwright-testing
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill playwright-testing`
 - Tags: playwright, e2e, testing, browser-automation, visual-regression, flaky-tests
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -339,7 +339,7 @@ Use this skill when writing Playwright e2e tests, debugging flaky tests, setting
 Use this skill when building terminal user interfaces with React Ink - interactive CLI apps, terminal dashboards, progress displays, or keyboard-driven TUI components. Triggers on React Ink, Ink components, terminal UI with React, useInput, useFocus, Box/Text layout, create-ink-app, and any task requiring rich interactive terminal interfaces built with React and Flexbox.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/react-ink
+- URL: https://www.absolutelyskilled.pro/skill/react-ink
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill react-ink`
 - Tags: react, cli, terminal, tui, components, interactive
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -349,7 +349,7 @@ Use this skill when building terminal user interfaces with React Ink - interacti
 Expert React Native and Expo development skill for building cross-platform mobile apps. Use this skill when creating, debugging, or optimizing React Native projects - Expo setup, native modules, navigation (React Navigation, Expo Router), performance tuning (Hermes, FlatList, re-render prevention), OTA updates (EAS Update, CodePush), and bridging native iOS/Android code. Triggers on mobile app architecture, Expo config plugins, app store deployment, push notifications, and React Native CLI tasks.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/react-native
+- URL: https://www.absolutelyskilled.pro/skill/react-native
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill react-native`
 - Tags: react-native, expo, mobile, ios, android, cross-platform
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -359,7 +359,7 @@ Expert React Native and Expo development skill for building cross-platform mobil
 Use this skill when refactoring code to improve readability, reduce duplication, or simplify complex logic. Triggers on extract method, inline variable, replace conditional with polymorphism, introduce parameter object, decompose conditional, replace magic numbers, pull up/push down method, and any task requiring systematic code transformation without changing behavior.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/refactoring-patterns
+- URL: https://www.absolutelyskilled.pro/skill/refactoring-patterns
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill refactoring-patterns`
 - Tags: refactoring, patterns, code-quality, clean-code, transformation
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -369,7 +369,7 @@ Use this skill when refactoring code to improve readability, reduce duplication,
 Use this skill when responding to security incidents, conducting forensic analysis, containing breaches, or writing incident reports. Triggers on security incident, breach response, forensics, containment, eradication, recovery, incident report, IOC analysis, and any task requiring security incident management.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/security-incident-response
+- URL: https://www.absolutelyskilled.pro/skill/security-incident-response
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill security-incident-response`
 - Tags: incident-response, security, forensics, breach, containment
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -379,7 +379,7 @@ Use this skill when responding to security incidents, conducting forensic analys
 Use this skill when implementing SRE practices, defining error budgets, reducing toil, planning capacity, or improving service reliability. Triggers on SRE, error budgets, SLOs, SLAs, toil automation, incident management, postmortems, on-call rotation, capacity planning, chaos engineering, and any task requiring reliability engineering decisions.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/site-reliability
+- URL: https://www.absolutelyskilled.pro/skill/site-reliability
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill site-reliability`
 - Tags: sre, reliability, error-budgets, toil, capacity, incident-management
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -389,7 +389,7 @@ Use this skill when implementing SRE practices, defining error budgets, reducing
 Use this skill when auditing AI agent skills for security vulnerabilities, prompt injection, permission abuse, supply chain risks, or structural quality. Triggers on skill review, security audit, skill safety check, prompt injection detection, skill trust verification, skill quality gate, and any task requiring security analysis of AI agent skill files.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/skill-audit
+- URL: https://www.absolutelyskilled.pro/skill/skill-audit
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill skill-audit`
 - Tags: security, audit, prompt-injection, supply-chain, skills, agent-safety
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -399,7 +399,7 @@ Use this skill when auditing AI agent skills for security vulnerabilities, promp
 AI-native software development lifecycle that replaces traditional SDLC. Triggers on "plan and build", "break this into tasks", "build this feature end-to-end", "sprint plan this", "super-human this", or any multi-step development task. Decomposes work into dependency-graphed sub-tasks, executes in parallel waves with TDD verification, and tracks progress on a persistent board. Handles features, refactors, greenfield projects, and migrations.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/super-human
+- URL: https://www.absolutelyskilled.pro/skill/super-human
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill super-human`
 - Tags: sdlc, planning, parallel-execution, tdd, task-management, workflow
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -409,7 +409,7 @@ AI-native software development lifecycle that replaces traditional SDLC. Trigger
 Use this skill when designing distributed systems, architecting scalable services, preparing for system design interviews, or making infrastructure decisions. Triggers on load balancing, CAP theorem, sharding, replication, caching strategies, message queues, microservices architecture, database selection, rate limiting, and any task requiring high-level system architecture decisions.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/system-design
+- URL: https://www.absolutelyskilled.pro/skill/system-design
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill system-design`
 - Tags: architecture, distributed-systems, scalability, infrastructure, design
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -419,7 +419,7 @@ Use this skill when designing distributed systems, architecting scalable service
 Use this skill when deciding what to test, choosing between test types, designing a testing strategy, or balancing test coverage. Triggers on test pyramid, unit vs integration vs e2e, contract testing, test coverage strategy, TDD, BDD, testing ROI, and any task requiring testing architecture decisions.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/test-strategy
+- URL: https://www.absolutelyskilled.pro/skill/test-strategy
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill test-strategy`
 - Tags: testing, strategy, test-pyramid, tdd, coverage, quality
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -429,7 +429,7 @@ Use this skill when deciding what to test, choosing between test types, designin
 Use this skill when building user interfaces that need to look polished, modern, and intentional - not like AI-generated slop. Triggers on UI design tasks including component styling, layout decisions, color choices, typography, spacing, responsive design, dark mode, accessibility, animations, landing pages, onboarding flows, data tables, navigation patterns, and any question about making a UI look professional. Covers CSS, Tailwind, and framework-agnostic design principles.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/ultimate-ui
+- URL: https://www.absolutelyskilled.pro/skill/ultimate-ui
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill ultimate-ui`
 - Tags: ui, ux, design, css, tailwind, accessibility
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -439,7 +439,7 @@ Use this skill when building user interfaces that need to look polished, modern,
 Use this skill when working with Unity game engine - C# scripting, Entity Component System (ECS/DOTS), physics simulation, shader programming (ShaderLab, HLSL, Shader Graph), and UI Toolkit. Triggers on gameplay programming, MonoBehaviour lifecycle, component architecture, rigidbody physics, raycasting, collision handling, custom shader authoring, material configuration, USS styling, UXML layout, and performance optimization for real-time applications. Acts as a senior Unity engineer advisor for game developers building production-quality games and interactive apps.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/unity-development
+- URL: https://www.absolutelyskilled.pro/skill/unity-development
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill unity-development`
 - Tags: unity, gamedev, csharp, ecs, shaders, physics
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -449,7 +449,7 @@ Use this skill when working with Unity game engine - C# scripting, Entity Compon
 Use this skill when writing, reviewing, auditing, or deploying Solidity smart contracts. Triggers on Solidity development, smart contract security auditing, DeFi protocol patterns, gas optimization, ERC token standards, reentrancy prevention, flash loan attack mitigation, Foundry/Hardhat testing, and blockchain deployment. Covers Solidity, OpenZeppelin, EVM internals, and common vulnerability patterns.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/web3-smart-contracts
+- URL: https://www.absolutelyskilled.pro/skill/web3-smart-contracts
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill web3-smart-contracts`
 - Tags: solidity, smart-contracts, defi, web3, security, gas-optimization
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -461,7 +461,7 @@ Use this skill when writing, reviewing, auditing, or deploying Solidity smart co
 Use this skill when working with Agile and Scrum methodologies - sprint planning, retrospectives, velocity tracking, Kanban boards, story point estimation, backlog grooming, or team workflow optimization. Triggers on any task involving sprint ceremonies, agile metrics, user story writing, capacity planning, or continuous improvement processes.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/agile-scrum
+- URL: https://www.absolutelyskilled.pro/skill/agile-scrum
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill agile-scrum`
 - Tags: agile, scrum, kanban, sprint, estimation, retrospective
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -471,7 +471,7 @@ Use this skill when working with Agile and Scrum methodologies - sprint planning
 Use this skill when designing chart of accounts, automating reconciliation, managing AP/AR processes, or streamlining month-end close. Triggers on chart of accounts, bank reconciliation, accounts payable, accounts receivable, month-end close, journal entries, accruals, and any task requiring bookkeeping process design or automation.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/bookkeeping-automation
+- URL: https://www.absolutelyskilled.pro/skill/bookkeeping-automation
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill bookkeeping-automation`
 - Tags: bookkeeping, reconciliation, ap-ar, month-end, chart-of-accounts
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -481,7 +481,7 @@ Use this skill when designing chart of accounts, automating reconciliation, mana
 Use this skill when building budgets, conducting variance analysis, implementing rolling forecasts, or allocating costs. Triggers on FP&A, budgeting, variance analysis, rolling forecasts, cost allocation, headcount planning, department budgets, and any task requiring financial planning or budget management.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/budgeting-planning
+- URL: https://www.absolutelyskilled.pro/skill/budgeting-planning
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill budgeting-planning`
 - Tags: budgeting, fpa, variance-analysis, forecasting, cost-allocation
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -491,7 +491,7 @@ Use this skill when building budgets, conducting variance analysis, implementing
 Use this skill when building community programs, moderating forums, creating advocacy programs, or managing feedback loops. Triggers on community management, forum moderation, advocacy programs, community engagement, feedback loops, community metrics, and any task requiring community strategy or operations.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/community-management
+- URL: https://www.absolutelyskilled.pro/skill/community-management
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill community-management`
 - Tags: community, moderation, advocacy, engagement, feedback, forums
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -501,7 +501,7 @@ Use this skill when building community programs, moderating forums, creating adv
 Use this skill when benchmarking compensation, designing equity plans, building leveling frameworks, or structuring total rewards. Triggers on compensation benchmarking, equity grants, stock options, leveling, pay bands, total rewards, salary ranges, and any task requiring compensation strategy or structure design.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/compensation-strategy
+- URL: https://www.absolutelyskilled.pro/skill/compensation-strategy
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill compensation-strategy`
 - Tags: compensation, equity, leveling, pay-bands, total-rewards, benefits
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -511,7 +511,7 @@ Use this skill when benchmarking compensation, designing equity plans, building 
 Use this skill when drafting NDAs, MSAs, SaaS agreements, licensing terms, or redlining contracts. Triggers on contract drafting, NDA, MSA, SaaS agreement, licensing, redlining, terms of service, data processing agreements, and any task requiring commercial contract creation or review.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/contract-drafting
+- URL: https://www.absolutelyskilled.pro/skill/contract-drafting
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill contract-drafting`
 - Tags: contracts, nda, msa, saas-agreement, licensing, legal
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -521,7 +521,7 @@ Use this skill when drafting NDAs, MSAs, SaaS agreements, licensing terms, or re
 Use this skill when building health scores, predicting churn, identifying expansion signals, or running QBRs. Triggers on customer success, health scores, churn prediction, expansion signals, customer QBRs, onboarding playbooks, NRR optimization, and any task requiring customer success strategy or operations.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/customer-success-playbook
+- URL: https://www.absolutelyskilled.pro/skill/customer-success-playbook
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill customer-success-playbook`
 - Tags: customer-success, health-scores, churn, expansion, nrr, retention
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -531,7 +531,7 @@ Use this skill when building health scores, predicting churn, identifying expans
 Use this skill when designing ticket triage systems, managing SLAs, creating macros, or building escalation workflows. Triggers on ticket triage, SLA management, support macros, escalation workflows, support queue, first response time, and any task requiring customer support process design or optimization.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/customer-support-ops
+- URL: https://www.absolutelyskilled.pro/skill/customer-support-ops
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill customer-support-ops`
 - Tags: support, triage, sla, macros, escalation, ticketing
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -541,7 +541,7 @@ Use this skill when designing ticket triage systems, managing SLAs, creating mac
 Use this skill when designing engagement surveys, running pulse checks, building retention strategies, or improving culture. Triggers on employee engagement, surveys, pulse checks, retention strategies, culture building, eNPS, team health, and any task requiring engagement measurement or improvement programs.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/employee-engagement
+- URL: https://www.absolutelyskilled.pro/skill/employee-engagement
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill employee-engagement`
 - Tags: engagement, surveys, retention, culture, enps, team-health
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -551,7 +551,7 @@ Use this skill when designing engagement surveys, running pulse checks, building
 Use this skill when drafting offer letters, handling terminations, classifying workers, or creating workplace policies. Triggers on offer letters, termination process, contractor vs employee, workplace policies, employment agreements, severance, non-compete, and any task requiring employment law guidance or HR legal compliance.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/employment-law
+- URL: https://www.absolutelyskilled.pro/skill/employment-law
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill employment-law`
 - Tags: employment-law, offer-letters, termination, contractor, policies
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -561,7 +561,7 @@ Use this skill when drafting offer letters, handling terminations, classifying w
 Use this skill when building financial models, DCF analyses, revenue forecasts, scenario analyses, or cap tables. Triggers on DCF, LBO, revenue forecasting, scenario analysis, cap tables, financial projections, valuation, unit economics, and any task requiring financial model design or analysis.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/financial-modeling
+- URL: https://www.absolutelyskilled.pro/skill/financial-modeling
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill financial-modeling`
 - Tags: financial-modeling, dcf, valuation, forecasting, cap-table, analysis
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -571,7 +571,7 @@ Use this skill when building financial models, DCF analyses, revenue forecasts, 
 Use this skill when preparing P&L statements, balance sheets, cash flow reports, board decks, or KPI dashboards. Triggers on financial statements, P&L, balance sheet, cash flow statement, board reporting, KPI dashboards, investor reporting, and any task requiring financial report preparation or presentation.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/financial-reporting
+- URL: https://www.absolutelyskilled.pro/skill/financial-reporting
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill financial-reporting`
 - Tags: financial-reporting, p-and-l, balance-sheet, cash-flow, board-decks
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -581,7 +581,7 @@ Use this skill when preparing P&L statements, balance sheets, cash flow reports,
 Use this skill when managing production incidents, designing on-call rotations, writing runbooks, conducting post-mortems, setting up status pages, or running war rooms. Triggers on incident response, incident commander, on-call schedule, pager escalation, runbook authoring, post-incident review, blameless retro, status page updates, war room coordination, severity classification, and any task requiring structured incident lifecycle management.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/incident-management
+- URL: https://www.absolutelyskilled.pro/skill/incident-management
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill incident-management`
 - Tags: incidents, on-call, runbooks, post-mortems, status-pages, war-rooms
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -591,7 +591,7 @@ Use this skill when managing production incidents, designing on-call rotations, 
 Use this skill when designing structured interviews, creating rubrics, building coding challenges, or assessing culture fit. Triggers on interview design, rubrics, scoring criteria, coding challenges, behavioral interviews, system design interviews, culture fit assessment, and any task requiring interview process design or evaluation criteria.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/interview-design
+- URL: https://www.absolutelyskilled.pro/skill/interview-design
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill interview-design`
 - Tags: interviews, rubrics, coding-challenges, hiring, assessment
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -601,7 +601,7 @@ Use this skill when designing structured interviews, creating rubrics, building 
 Use this skill when managing patents, trademarks, trade secrets, or open-source licensing. Triggers on intellectual property, patents, trademarks, trade secrets, open-source licensing, copyright, IP strategy, license compliance, and any task requiring IP protection or licensing decisions.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/ip-management
+- URL: https://www.absolutelyskilled.pro/skill/ip-management
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill ip-management`
 - Tags: ip, patents, trademarks, licensing, open-source, copyright
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -611,7 +611,7 @@ Use this skill when managing patents, trademarks, trade secrets, or open-source 
 Use this skill when designing help center architecture, writing support articles, or optimizing search and self-service. Triggers on knowledge base, help center, support articles, self-service, article templates, search optimization, content taxonomy, and any task requiring help documentation design or management.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/knowledge-base
+- URL: https://www.absolutelyskilled.pro/skill/knowledge-base
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill knowledge-base`
 - Tags: knowledge-base, help-center, self-service, articles, documentation
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -621,7 +621,7 @@ Use this skill when designing help center architecture, writing support articles
 Use this skill when designing onboarding programs, creating 30/60/90 plans, setting up buddy systems, or measuring ramp effectiveness. Triggers on onboarding plans, 30/60/90 day plans, buddy programs, knowledge transfer, ramp metrics, new hire experience, and any task requiring employee onboarding design or optimization.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/onboarding
+- URL: https://www.absolutelyskilled.pro/skill/onboarding
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill onboarding`
 - Tags: onboarding, 30-60-90, buddy-system, ramp, knowledge-transfer
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -631,7 +631,7 @@ Use this skill when designing onboarding programs, creating 30/60/90 plans, sett
 Use this skill when designing OKR systems, writing performance reviews, running calibration sessions, creating PIPs, or building career ladders. Triggers on OKRs, performance reviews, calibration, PIPs, career ladders, leveling frameworks, feedback cycles, and any task requiring performance management system design.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/performance-management
+- URL: https://www.absolutelyskilled.pro/skill/performance-management
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill performance-management`
 - Tags: performance, okrs, reviews, career-ladders, calibration, pips
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -641,7 +641,7 @@ Use this skill when designing OKR systems, writing performance reviews, running 
 Use this skill when implementing GDPR or CCPA compliance, designing consent management, conducting DPIAs, or managing data processing agreements. Triggers on GDPR, CCPA, data privacy, consent management, DPIA, data subject rights, privacy policy, cookie consent, and any task requiring privacy regulation compliance or data protection design.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/privacy-compliance
+- URL: https://www.absolutelyskilled.pro/skill/privacy-compliance
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill privacy-compliance`
 - Tags: privacy, gdpr, ccpa, consent, dpia, data-protection
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -651,7 +651,7 @@ Use this skill when implementing GDPR or CCPA compliance, designing consent mana
 Use this skill when planning, executing, or recovering software projects with a focus on risk management, dependency tracking, and stakeholder communication. Triggers on project planning, risk assessment, dependency mapping, status reporting, milestone tracking, stakeholder updates, escalation decisions, timeline estimation, resource allocation, and project recovery. Covers RAID logs, critical path analysis, and communication cadences.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/project-execution
+- URL: https://www.absolutelyskilled.pro/skill/project-execution
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill project-execution`
 - Tags: project-management, risk-management, dependencies, stakeholder-communication, execution, planning
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -661,7 +661,7 @@ Use this skill when planning, executing, or recovering software projects with a 
 Use this skill when writing job descriptions, building sourcing strategies, designing screening processes, or creating interview frameworks. Triggers on job descriptions, candidate sourcing, screening criteria, interview loops, recruiting pipelines, offer management, and any task requiring talent acquisition process design.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/recruiting-ops
+- URL: https://www.absolutelyskilled.pro/skill/recruiting-ops
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill recruiting-ops`
 - Tags: recruiting, hiring, sourcing, screening, talent-acquisition
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -671,7 +671,7 @@ Use this skill when writing job descriptions, building sourcing strategies, desi
 Use this skill when preparing for SOC 2, HIPAA, or PCI-DSS compliance, conducting audits, or implementing security controls. Triggers on SOC 2, HIPAA, PCI-DSS, compliance audit, security controls, risk assessment, control frameworks, and any task requiring regulatory compliance planning or audit preparation.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/regulatory-compliance
+- URL: https://www.absolutelyskilled.pro/skill/regulatory-compliance
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill regulatory-compliance`
 - Tags: compliance, soc2, hipaa, pci-dss, audit, controls
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -681,7 +681,7 @@ Use this skill when preparing for SOC 2, HIPAA, or PCI-DSS compliance, conductin
 Use this skill when facilitating remote team collaboration - async-first workflows, documentation-driven decision making, meeting facilitation, and distributed team communication. Triggers on designing async processes, writing RFCs or decision docs, preparing meeting agendas, running standups or retros, establishing communication norms, reducing meeting load, or improving handoff quality across time zones.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/remote-collaboration
+- URL: https://www.absolutelyskilled.pro/skill/remote-collaboration
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill remote-collaboration`
 - Tags: remote-work, async, meetings, documentation, collaboration, distributed-teams
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -691,7 +691,7 @@ Use this skill when facilitating remote team collaboration - async-first workflo
 Use this skill when preparing pitch decks, negotiating term sheets, conducting due diligence, or managing investor relations. Triggers on fundraising, pitch decks, term sheets, due diligence, investor updates, cap tables, SAFEs, convertible notes, and any task requiring startup funding strategy or execution.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/startup-fundraising
+- URL: https://www.absolutelyskilled.pro/skill/startup-fundraising
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill startup-fundraising`
 - Tags: fundraising, pitch-deck, term-sheets, investors, startup, venture
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -701,7 +701,7 @@ Use this skill when preparing pitch decks, negotiating term sheets, conducting d
 Use this skill when measuring CSAT, NPS, resolution time, deflection rates, or analyzing support trends. Triggers on CSAT, NPS, resolution time, deflection rate, support metrics, trend analysis, support reporting, and any task requiring customer support data analysis or reporting.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/support-analytics
+- URL: https://www.absolutelyskilled.pro/skill/support-analytics
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill support-analytics`
 - Tags: support-analytics, csat, nps, resolution-time, deflection, metrics
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -711,7 +711,7 @@ Use this skill when measuring CSAT, NPS, resolution time, deflection rates, or a
 Use this skill when planning corporate tax strategy, claiming R&D credits, managing transfer pricing, or ensuring tax compliance. Triggers on corporate tax, R&D tax credits, transfer pricing, tax compliance, sales tax, VAT, international tax, and any task requiring tax planning or compliance strategy.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/tax-strategy
+- URL: https://www.absolutelyskilled.pro/skill/tax-strategy
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill tax-strategy`
 - Tags: tax, r-and-d-credits, transfer-pricing, compliance, corporate-tax
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -721,7 +721,7 @@ Use this skill when planning corporate tax strategy, claiming R&D credits, manag
 Use this skill when designing coding challenges, structuring system design interviews, building interview rubrics, calibrating evaluation criteria, or creating hiring loops. Triggers on interview question design, coding assessment creation, system design prompt writing, rubric building, interviewer training, candidate evaluation, and any task requiring structured technical assessment.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/technical-interviewing
+- URL: https://www.absolutelyskilled.pro/skill/technical-interviewing
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill technical-interviewing`
 - Tags: interviewing, hiring, rubrics, coding-challenges, system-design
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -733,7 +733,7 @@ Use this skill when designing coding challenges, structuring system design inter
 Use this skill when optimizing content for answer engines and SERP features - featured snippets (paragraph, list, table), People Also Ask (PAA) targeting, voice search optimization, knowledge panels, speakable schema, and zero-click search strategies. Triggers on winning position zero, optimizing for Google's answer boxes, voice assistant responses, or FAQ-style content optimization.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/aeo-optimization
+- URL: https://www.absolutelyskilled.pro/skill/aeo-optimization
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill aeo-optimization`
 - Tags: seo, aeo, featured-snippets, voice-search, paa, answer-engine, zero-click
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -743,7 +743,7 @@ Use this skill when optimizing content for answer engines and SERP features - fe
 Use this skill when defining brand positioning, voice and tone guidelines, brand architecture, or storytelling frameworks. Triggers on brand positioning, brand voice, tone guidelines, brand architecture, brand story, messaging hierarchy, competitive positioning, and any task requiring brand strategy development or documentation.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/brand-strategy
+- URL: https://www.absolutelyskilled.pro/skill/brand-strategy
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill brand-strategy`
 - Tags: brand, positioning, voice-tone, storytelling, messaging, identity
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -753,7 +753,7 @@ Use this skill when defining brand positioning, voice and tone guidelines, brand
 Use this skill when creating content strategy, writing SEO-optimized blog posts, planning content calendars, or repurposing content across channels. Triggers on blog strategy, content calendar, SEO content, content repurposing, editorial workflow, content pillars, topic clusters, and any task requiring content marketing planning or execution.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/content-marketing
+- URL: https://www.absolutelyskilled.pro/skill/content-marketing
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill content-marketing`
 - Tags: content-marketing, blog, seo-content, editorial, content-strategy
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -763,7 +763,7 @@ Use this skill when creating content strategy, writing SEO-optimized blog posts,
 Use this skill when optimizing content for search engines - topic cluster strategy, pillar page architecture, E-E-A-T signals (Experience, Expertise, Authoritativeness, Trustworthiness), content freshness, keyword cannibalization detection, topical authority building, and content gap analysis. Triggers on content planning for SEO, fixing thin content, building topical authority, or resolving cannibalization issues.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/content-seo
+- URL: https://www.absolutelyskilled.pro/skill/content-seo
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill content-seo`
 - Tags: seo, content-seo, topic-clusters, eeat, content-strategy, topical-authority
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -773,7 +773,7 @@ Use this skill when optimizing content for search engines - topic cluster strate
 Use this skill when writing headlines, landing page copy, CTAs, email subject lines, or persuasive content. Triggers on copywriting, headlines, landing pages, call to action, persuasion frameworks, AIDA, PAS, value propositions, and any task requiring compelling marketing or sales copy.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/copywriting
+- URL: https://www.absolutelyskilled.pro/skill/copywriting
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill copywriting`
 - Tags: copywriting, headlines, landing-pages, cta, persuasion, copy
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -783,7 +783,7 @@ Use this skill when writing headlines, landing page copy, CTAs, email subject li
 Use this skill when optimizing Core Web Vitals - LCP (Largest Contentful Paint), INP (Interaction to Next Paint), and CLS (Cumulative Layout Shift). Triggers on page speed optimization, Lighthouse score improvement, fixing layout shifts, improving responsiveness, setting up performance monitoring with CrUX or RUM, and framework-specific CWV fixes for Next.js, Nuxt, Astro, and Remix.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/core-web-vitals
+- URL: https://www.absolutelyskilled.pro/skill/core-web-vitals
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill core-web-vitals`
 - Tags: seo, core-web-vitals, lcp, inp, cls, performance, lighthouse
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -793,7 +793,7 @@ Use this skill when optimizing Core Web Vitals - LCP (Largest Contentful Paint),
 Use this skill when creating conference talks, live coding demos, technical blog posts, SDK quickstart examples, or community engagement strategies. Triggers on developer relations, DevRel, developer experience, tech evangelism, talk proposals, CFP submissions, demo scripts, tutorial writing, hackathon planning, community building, and any task involving advocating a product or API to a developer audience.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/developer-advocacy
+- URL: https://www.absolutelyskilled.pro/skill/developer-advocacy
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill developer-advocacy`
 - Tags: devrel, talks, demos, blog, community, sdk
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -803,7 +803,7 @@ Use this skill when creating conference talks, live coding demos, technical blog
 Use this skill when optimizing e-commerce sites for search engines - product page SEO, faceted navigation crawl control, category taxonomy, product schema markup, pagination handling, inventory-aware SEO (out-of-stock pages), and e-commerce site architecture. Triggers on any task involving online store search optimization, product listing pages, shopping search results, or e-commerce technical SEO challenges.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/ecommerce-seo
+- URL: https://www.absolutelyskilled.pro/skill/ecommerce-seo
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill ecommerce-seo`
 - Tags: seo, ecommerce, product-pages, faceted-navigation, product-schema, category-seo
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -813,7 +813,7 @@ Use this skill when optimizing e-commerce sites for search engines - product pag
 Use this skill when designing email campaigns, building drip sequences, improving deliverability, or A/B testing email content. Triggers on email campaigns, drip sequences, newsletter, email deliverability, subject lines, email automation, segmentation, open rates, click-through rates, and any task requiring email marketing strategy or execution.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/email-marketing
+- URL: https://www.absolutelyskilled.pro/skill/email-marketing
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill email-marketing`
 - Tags: email-marketing, campaigns, drip-sequences, deliverability, automation
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -823,7 +823,7 @@ Use this skill when designing email campaigns, building drip sequences, improvin
 Use this skill when optimizing for AI-powered search engines and generative search results - Google AI Overviews, ChatGPT Search (SearchGPT), Perplexity, Microsoft Copilot Search, and other LLM-powered answer engines. Covers Generative Engine Optimization (GEO), citation signals for AI search, entity authority, LLMs.txt specification, and LLM-friendliness patterns based on Princeton GEO research. Triggers on visibility in AI search, getting cited by LLMs, or adapting SEO for the AI search era.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/geo-optimization
+- URL: https://www.absolutelyskilled.pro/skill/geo-optimization
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill geo-optimization`
 - Tags: seo, geo, generative-search, ai-overviews, chatgpt-search, perplexity, llms-txt
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -833,7 +833,7 @@ Use this skill when optimizing for AI-powered search engines and generative sear
 Use this skill when designing viral loops, building referral programs, optimizing activation funnels, or improving retention. Triggers on growth loops, referral programs, activation funnels, retention strategies, viral coefficient, product-led growth, AARRR metrics, and any task requiring growth experimentation or optimization.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/growth-hacking
+- URL: https://www.absolutelyskilled.pro/skill/growth-hacking
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill growth-hacking`
 - Tags: growth, viral-loops, referral, activation, retention, plg
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -843,7 +843,7 @@ Use this skill when designing viral loops, building referral programs, optimizin
 Use this skill when optimizing websites for multiple countries or languages - hreflang tag implementation, URL structure strategy (ccTLD vs subdomain vs subdirectory), geo-targeting in Google Search Console, multilingual content strategy, and international site architecture. Triggers on multi-language sites, multi-region targeting, hreflang debugging, or expanding a site to new markets.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/international-seo
+- URL: https://www.absolutelyskilled.pro/skill/international-seo
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill international-seo`
 - Tags: seo, international-seo, hreflang, multilingual, geo-targeting, localization
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -853,7 +853,7 @@ Use this skill when optimizing websites for multiple countries or languages - hr
 Use this skill when performing keyword research, search intent analysis, keyword clustering, SERP analysis, competitor keyword gaps, long-tail keyword discovery, or evaluating keywords for snippet opportunity, AI Overview presence, and tri-surface keyword reports. Covers organic (SEO), answer engine (AEO snippets/PAA), and AI citation (GEO AI Overviews/ChatGPT Search/Perplexity) surfaces.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/keyword-research
+- URL: https://www.absolutelyskilled.pro/skill/keyword-research
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill keyword-research`
 - Tags: seo, keywords, search-intent, serp-analysis, content-strategy, competitor-analysis, aeo, geo, ai-search, tri-surface, citation-score
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -863,7 +863,7 @@ Use this skill when performing keyword research, search intent analysis, keyword
 Use this skill when building, auditing, or managing backlinks for SEO. Triggers on digital PR outreach, HARO/Connectively pitching, guest posting strategy, broken link building, anchor text optimization, toxic link auditing, disavow file creation, and link profile analysis. Covers ethical white-hat link acquisition tactics and link equity management.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/link-building
+- URL: https://www.absolutelyskilled.pro/skill/link-building
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill link-building`
 - Tags: seo, link-building, backlinks, digital-pr, outreach, off-page-seo
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -873,7 +873,7 @@ Use this skill when building, auditing, or managing backlinks for SEO. Triggers 
 Use this skill when optimizing for local search results - Google Business Profile management, local citations, NAP consistency, local schema markup (LocalBusiness), review management, local pack optimization, and geo-targeted content. Triggers on any task involving local search visibility, map pack rankings, multi-location SEO, or local business online presence.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/local-seo
+- URL: https://www.absolutelyskilled.pro/skill/local-seo
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill local-seo`
 - Tags: seo, local-seo, google-business-profile, citations, local-pack, reviews
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -883,7 +883,7 @@ Use this skill when optimizing for local search results - Google Business Profil
 Use this skill when implementing on-page SEO fixes in code - meta tags, title tags, heading structure, internal linking, image optimization, semantic HTML, Open Graph and Twitter card tags, and framework-specific SEO patterns. Covers Next.js Metadata API and generateMetadata, Nuxt useSeoMeta, Astro SEO patterns, and Remix meta function. Triggers on any hands-on code task to improve a page's on-site SEO signals.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/on-site-seo
+- URL: https://www.absolutelyskilled.pro/skill/on-site-seo
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill on-site-seo`
 - Tags: seo, on-site-seo, meta-tags, og-tags, headings, internal-linking, semantic-html
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -893,7 +893,7 @@ Use this skill when implementing on-page SEO fixes in code - meta tags, title ta
 Use this skill when building programmatic SEO pages at scale - template-based page generation, data-driven landing pages, automated internal linking, and avoiding thin content or doorway page penalties. Triggers on generating thousands of location pages, comparison pages, tool pages, or any template-driven SEO content strategy that creates pages programmatically from data sources.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/programmatic-seo
+- URL: https://www.absolutelyskilled.pro/skill/programmatic-seo
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill programmatic-seo`
 - Tags: seo, programmatic-seo, page-generation, templates, landing-pages, scale
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -903,7 +903,7 @@ Use this skill when building programmatic SEO pages at scale - template-based pa
 Use this skill when implementing structured data markup using JSON-LD and Schema.org vocabulary for rich search results. Triggers on adding schema markup for FAQ, HowTo, Product, Article, Breadcrumb, Organization, LocalBusiness, Event, Recipe, or any Schema.org type. Covers JSON-LD implementation, Google Rich Results eligibility, validation testing, and framework integration (Next.js, Nuxt, Astro).
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/schema-markup
+- URL: https://www.absolutelyskilled.pro/skill/schema-markup
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill schema-markup`
 - Tags: seo, schema-markup, json-ld, structured-data, rich-snippets, schema-org
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -913,7 +913,7 @@ Use this skill when implementing structured data markup using JSON-LD and Schema
 Use this skill when performing a comprehensive SEO audit - technical audit, on-page audit, content audit, off-page audit, and AEO/GEO readiness assessment. Provides a structured scorecard with 30-40 checks rated PASS/FAIL/WARN across all SEO categories, prioritized recommendations, and links to specialized skills for deep fixes. This is the master audit skill that orchestrates all other SEO skills.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/seo-audit
+- URL: https://www.absolutelyskilled.pro/skill/seo-audit
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill seo-audit`
 - Tags: seo, seo-audit, audit, scorecard, technical-audit, site-audit
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -923,7 +923,7 @@ Use this skill when performing a comprehensive SEO audit - technical audit, on-p
 Use this skill when optimizing for search engines, conducting keyword research, implementing technical SEO, or building link strategies. Triggers on SEO, keyword research, meta tags, schema markup, Core Web Vitals, sitemap, robots.txt, link building, search console, and any task requiring search engine optimization.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/seo-mastery
+- URL: https://www.absolutelyskilled.pro/skill/seo-mastery
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill seo-mastery`
 - Tags: seo, keywords, technical-seo, schema-markup, search, optimization
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -933,7 +933,7 @@ Use this skill when optimizing for search engines, conducting keyword research, 
 Use this skill when planning social media strategy, creating platform-specific content, scheduling posts, or analyzing engagement metrics. Triggers on social media strategy, content scheduling, engagement tactics, platform analytics, community building, hashtag strategy, and any task requiring social media planning or optimization.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/social-media-strategy
+- URL: https://www.absolutelyskilled.pro/skill/social-media-strategy
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill social-media-strategy`
 - Tags: social-media, content, engagement, analytics, community
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -943,7 +943,7 @@ Use this skill when planning social media strategy, creating platform-specific c
 Use this skill when working on technical SEO infrastructure - crawlability, indexing, XML sitemaps, canonical URLs, robots.txt, redirect chains, rendering strategies (SSR/SSG/ISR/CSR), crawl budget optimization, and search engine rendering. Triggers on fixing indexing issues, configuring crawl directives, choosing rendering strategies for SEO, debugging Google Search Console errors, or auditing site architecture for search engines.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/technical-seo
+- URL: https://www.absolutelyskilled.pro/skill/technical-seo
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill technical-seo`
 - Tags: seo, technical-seo, crawlability, sitemaps, canonicals, rendering, indexing
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -953,7 +953,7 @@ Use this skill when working on technical SEO infrastructure - crawlability, inde
 Use this skill when creating, editing, or optimizing video content for YouTube and other platforms. Triggers on script writing, video editing workflows, thumbnail design, YouTube SEO, content strategy, retention optimization, or channel growth. Covers the full production pipeline from ideation to publish - scriptwriting frameworks, editing pacing, thumbnail best practices, metadata optimization, and audience retention techniques.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/video-production
+- URL: https://www.absolutelyskilled.pro/skill/video-production
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill video-production`
 - Tags: video-production, youtube, scriptwriting, seo, thumbnails, editing
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -965,7 +965,7 @@ Use this skill when creating, editing, or optimizing video content for YouTube a
 Use this skill when working with the A2A (Agent-to-Agent) protocol - agent interoperability, multi-agent communication, agent discovery, agent cards, task lifecycle, streaming, and push notifications. Triggers on any A2A-related task including implementing A2A servers/clients, building agent cards, sending messages between agents, managing tasks, and configuring push notification webhooks.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/a2a-protocol
+- URL: https://www.absolutelyskilled.pro/skill/a2a-protocol
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill a2a-protocol`
 - Tags: a2a, agent-interoperability, multi-agent, agent-card, json-rpc, grpc
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -975,7 +975,7 @@ Use this skill when working with the A2A (Agent-to-Agent) protocol - agent inter
 Use this skill when working with A2UI (Agent-to-User Interface) - Google's open protocol for agent-driven declarative UIs. Triggers on tasks involving A2UI message generation, component catalogs, data binding, surface management, renderer development, custom components, or integrating A2UI with A2A Protocol, AG UI, or agent frameworks like Google ADK. Covers building agents that generate A2UI JSON, setting up client renderers (Lit, React, Angular, Flutter), creating custom catalogs, and handling client-to-server actions.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/a2ui
+- URL: https://www.absolutelyskilled.pro/skill/a2ui
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill a2ui`
 - Tags: a2ui, agent-ui, declarative-ui, google-adk, a2a-protocol, agent-interfaces
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -985,7 +985,7 @@ Use this skill when working with A2UI (Agent-to-User Interface) - Google's open 
 Use this skill when designing AI agent architectures, implementing tool use, building multi-agent systems, or creating agent memory. Triggers on AI agents, tool calling, agent loops, ReAct pattern, multi-agent orchestration, agent memory, planning strategies, agent evaluation, and any task requiring autonomous AI agent design.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/ai-agent-design
+- URL: https://www.absolutelyskilled.pro/skill/ai-agent-design
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill ai-agent-design`
 - Tags: agents, multi-agent, tool-use, planning, memory, orchestration
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -995,7 +995,7 @@ Use this skill when designing AI agent architectures, implementing tool use, bui
 Use this skill when building computer vision applications, implementing image classification, object detection, or segmentation pipelines. Triggers on image classification, object detection, YOLO, semantic segmentation, image preprocessing, data augmentation, transfer learning, CNN architectures, vision transformers, and any task requiring visual recognition or image analysis.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/computer-vision
+- URL: https://www.absolutelyskilled.pro/skill/computer-vision
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill computer-vision`
 - Tags: computer-vision, deep-learning, object-detection, segmentation, cnn
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1005,7 +1005,7 @@ Use this skill when building computer vision applications, implementing image cl
 Use this skill when performing exploratory data analysis, statistical testing, data visualization, or building predictive models. Triggers on EDA, pandas, matplotlib, seaborn, hypothesis testing, A/B test analysis, correlation, regression, feature engineering, and any task requiring data analysis or statistical inference.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/data-science
+- URL: https://www.absolutelyskilled.pro/skill/data-science
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill data-science`
 - Tags: data-science, eda, statistics, visualization, pandas, analysis
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1015,7 +1015,7 @@ Use this skill when performing exploratory data analysis, statistical testing, d
 Use this skill when building production LLM applications, implementing guardrails, evaluating model outputs, or deciding between prompting and fine-tuning. Triggers on LLM app architecture, AI guardrails, output evaluation, model selection, embedding pipelines, vector databases, fine-tuning, function calling, tool use, and any task requiring production AI application design.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/llm-app-development
+- URL: https://www.absolutelyskilled.pro/skill/llm-app-development
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill llm-app-development`
 - Tags: llm, ai-apps, guardrails, evaluation, fine-tuning, production
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1025,7 +1025,7 @@ Use this skill when building production LLM applications, implementing guardrail
 Use this skill when working with Mastra - the TypeScript AI framework for building agents, workflows, tools, and AI-powered applications. Triggers on creating agents, defining workflows, configuring memory, RAG pipelines, MCP client/server setup, voice integration, evals/scorers, deployment, and Mastra CLI commands. Also triggers on "mastra dev", "mastra build", "mastra init", Mastra Studio, or any Mastra package imports.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/mastra
+- URL: https://www.absolutelyskilled.pro/skill/mastra
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill mastra`
 - Tags: ai-agents, typescript, workflows, rag, mcp, llm
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1035,7 +1035,7 @@ Use this skill when working with Mastra - the TypeScript AI framework for buildi
 Use this skill when deploying ML models to production, setting up model monitoring, implementing A/B testing for models, or managing feature stores. Triggers on model deployment, model serving, ML pipelines, feature engineering, model versioning, data drift detection, model registry, experiment tracking, and any task requiring machine learning operations infrastructure.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/ml-ops
+- URL: https://www.absolutelyskilled.pro/skill/ml-ops
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill ml-ops`
 - Tags: mlops, model-deployment, monitoring, feature-store, ml-pipelines
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1045,7 +1045,7 @@ Use this skill when deploying ML models to production, setting up model monitori
 Use this skill when building NLP pipelines, implementing text classification, semantic search, embeddings, or summarization. Triggers on text preprocessing, tokenization, embeddings, vector search, named entity recognition, sentiment analysis, text classification, summarization, and any task requiring natural language processing.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/nlp-engineering
+- URL: https://www.absolutelyskilled.pro/skill/nlp-engineering
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill nlp-engineering`
 - Tags: nlp, embeddings, text-processing, search, classification
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1055,7 +1055,7 @@ Use this skill when building NLP pipelines, implementing text classification, se
 Use this skill when crafting LLM prompts, implementing chain-of-thought reasoning, designing few-shot examples, building RAG pipelines, or optimizing prompt performance. Triggers on prompt design, system prompts, few-shot learning, chain-of-thought, prompt chaining, RAG, retrieval-augmented generation, prompt templates, structured output, and any task requiring effective LLM interaction patterns.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/prompt-engineering
+- URL: https://www.absolutelyskilled.pro/skill/prompt-engineering
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill prompt-engineering`
 - Tags: prompts, llm, chain-of-thought, few-shot, rag, ai
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1067,7 +1067,7 @@ Use this skill when crafting LLM prompts, implementing chain-of-thought reasonin
 Use this skill when implementing web accessibility, adding ARIA attributes, ensuring keyboard navigation, or auditing WCAG compliance. Triggers on accessibility, a11y, ARIA roles, screen readers, keyboard navigation, focus management, color contrast, alt text, semantic HTML, and any task requiring WCAG 2.2 compliance or inclusive design.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/accessibility-wcag
+- URL: https://www.absolutelyskilled.pro/skill/accessibility-wcag
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill accessibility-wcag`
 - Tags: accessibility, wcag, aria, a11y, keyboard, screen-reader
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1077,7 +1077,7 @@ Use this skill when implementing web accessibility, adding ARIA attributes, ensu
 Use this skill when choosing color palettes, ensuring contrast compliance, implementing dark mode, or defining semantic color tokens. Triggers on color palette, contrast ratio, WCAG color, dark mode, color tokens, HSL, OKLCH, brand colors, color harmony, and any task requiring color system design or implementation.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/color-theory
+- URL: https://www.absolutelyskilled.pro/skill/color-theory
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill color-theory`
 - Tags: color, palette, contrast, dark-mode, tokens, accessibility
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1087,7 +1087,7 @@ Use this skill when choosing color palettes, ensuring contrast compliance, imple
 Use this skill when building design systems, creating component libraries, defining design tokens, implementing theming, or setting up Storybook. Triggers on design tokens, component library, Storybook, theming, CSS variables, style dictionary, variant props, compound components, and any task requiring systematic UI component architecture.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/design-systems
+- URL: https://www.absolutelyskilled.pro/skill/design-systems
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill design-systems`
 - Tags: design-system, components, tokens, storybook, theming, ui
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1097,7 +1097,7 @@ Use this skill when building design systems, creating component libraries, defin
 Use this skill when translating Figma designs to code, interpreting design specs, matching visual fidelity, or bridging designer-developer handoff. Triggers on Figma implementation, design-to-code, pixel-perfect, design handoff, auto layout to flexbox, Figma tokens, component variants to props, and any task requiring faithful implementation of design mockups.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/figma-to-code
+- URL: https://www.absolutelyskilled.pro/skill/figma-to-code
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill figma-to-code`
 - Tags: figma, design-handoff, implementation, pixel-perfect, css
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1107,7 +1107,7 @@ Use this skill when translating Figma designs to code, interpreting design specs
 Use this skill when implementing animations, transitions, micro-interactions, or motion design in web applications. Triggers on CSS animations, Framer Motion, GSAP, keyframes, transitions, spring animations, scroll-driven animations, page transitions, loading states, and any task requiring motion or animation implementation.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/motion-design
+- URL: https://www.absolutelyskilled.pro/skill/motion-design
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill motion-design`
 - Tags: animation, motion, framer-motion, gsap, css-animations, transitions
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1117,7 +1117,7 @@ Use this skill when implementing animations, transitions, micro-interactions, or
 Use this skill when creating pixel art sprites, animating sprite sheets, building tilesets for 2D games, or managing indexed color palettes. Triggers on pixel art, sprite sheet, sprite animation, tileset, tile map, pixel palette, indexed color, dithering, sub-pixel animation, NES palette, walk cycle sprite, and any task involving low-resolution raster art for games or retro aesthetics.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/pixel-art-sprites
+- URL: https://www.absolutelyskilled.pro/skill/pixel-art-sprites
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill pixel-art-sprites`
 - Tags: pixel-art, sprites, animation, tilesets, palette, gamedev
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1127,7 +1127,7 @@ Use this skill when creating pixel art sprites, animating sprite sheets, buildin
 Use this skill when designing presentations, slide decks, or pitch materials. Triggers on "create a presentation", "design slides", "build a deck", "structure my talk", "make a pitch deck", "data visualization for slides", or any request involving slide layout, storytelling frameworks (Pyramid Principle, Hero's Journey, Problem-Solution-Benefit), narrative arc, speaker notes, or chart selection for presentations. Covers slide structure, visual hierarchy, data-driven storytelling, and deck architecture from executive summaries to conference keynotes.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/presentation-design
+- URL: https://www.absolutelyskilled.pro/skill/presentation-design
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill presentation-design`
 - Tags: presentation, slides, storytelling, data-visualization, pitch-deck, public-speaking
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1137,7 +1137,7 @@ Use this skill when designing presentations, slide decks, or pitch materials. Tr
 Use this skill when building responsive layouts, implementing fluid typography, using container queries, or defining breakpoint strategies. Triggers on responsive design, mobile-first, media queries, container queries, fluid typography, clamp(), viewport units, grid layout, flexbox patterns, and any task requiring adaptive or responsive web design.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/responsive-design
+- URL: https://www.absolutelyskilled.pro/skill/responsive-design
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill responsive-design`
 - Tags: responsive, mobile-first, css, container-queries, fluid-typography
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1147,7 +1147,7 @@ Use this skill when building responsive layouts, implementing fluid typography, 
 Use this skill when planning user research, conducting usability tests, creating journey maps, or designing A/B experiments. Triggers on user interviews, usability testing, user journey maps, A/B test design, survey design, persona creation, card sorting, tree testing, and any task requiring user experience research methodology or analysis.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/ux-research
+- URL: https://www.absolutelyskilled.pro/skill/ux-research
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill ux-research`
 - Tags: ux-research, usability, user-interviews, journey-maps, testing
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1159,7 +1159,7 @@ Use this skill when planning user research, conducting usability tests, creating
 Use this skill when debugging applications using Chrome DevTools, lldb, strace, network tools, or memory profilers. Triggers on Chrome DevTools, debugger, breakpoints, network debugging, memory profiling, strace, ltrace, core dumps, and any task requiring systematic debugging with specialized tools.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/debugging-tools
+- URL: https://www.absolutelyskilled.pro/skill/debugging-tools
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill debugging-tools`
 - Tags: debugging, devtools, profiling, strace, network, memory
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1169,7 +1169,7 @@ Use this skill when debugging applications using Chrome DevTools, lldb, strace, 
 Use this skill when performing advanced git operations, rebase strategies, bisecting bugs, managing worktrees, configuring hooks, or handling complex merge scenarios. Triggers on interactive rebase, git bisect, worktrees, pre-commit hooks, cherry-pick, reflog recovery, stash management, and any task requiring advanced git workflows.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/git-advanced
+- URL: https://www.absolutelyskilled.pro/skill/git-advanced
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill git-advanced`
 - Tags: git, rebase, bisect, worktrees, hooks, version-control
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1179,7 +1179,7 @@ Use this skill when performing advanced git operations, rebase strategies, bisec
 Use this skill when managing multi-repository systems using the `meta` tool (github.com/mateodelnorte/meta). Triggers on meta git clone, meta exec, meta project create/import/migrate, coordinating commands across many repos, running npm/yarn installs across all projects, migrating a monorepo to a multi-repo architecture, or any workflow that requires running git or shell commands against multiple child repositories at once.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/meta-repo
+- URL: https://www.absolutelyskilled.pro/skill/meta-repo
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill meta-repo`
 - Tags: meta, multi-repo, polyrepo, git, monorepo-migration, orchestration
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1189,7 +1189,7 @@ Use this skill when managing multi-repository systems using the `meta` tool (git
 Use this skill when writing regular expressions, debugging pattern matching, optimizing regex performance, or implementing text validation. Triggers on regex, regular expressions, pattern matching, lookahead, lookbehind, named groups, capture groups, backreferences, and any task requiring text pattern matching.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/regex-mastery
+- URL: https://www.absolutelyskilled.pro/skill/regex-mastery
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill regex-mastery`
 - Tags: regex, patterns, text-processing, validation, matching
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1199,7 +1199,7 @@ Use this skill when writing regular expressions, debugging pattern matching, opt
 Use this skill when managing persistent user memory in ~/.memory/ - a structured, hierarchical second brain for AI agents. Triggers on conversation start (auto-load relevant memories by matching context against tags), "remember this", "what do you know about X", "update my memory", completing complex tasks (auto-propose saving learnings), onboarding a new user, searching past learnings, or maintaining the memory graph - splitting large files, pruning stale entries, and updating cross-references.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/second-brain
+- URL: https://www.absolutelyskilled.pro/skill/second-brain
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill second-brain`
 - Tags: second-brain, memory, knowledge-base, persistence, context, personalization
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1209,7 +1209,7 @@ Use this skill when managing persistent user memory in ~/.memory/ - a structured
 Use this skill when writing bash or zsh scripts, parsing arguments, handling errors, or automating CLI workflows. Triggers on bash scripting, shell scripts, argument parsing, process substitution, here documents, signal trapping, exit codes, and any task requiring portable shell script development.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/shell-scripting
+- URL: https://www.absolutelyskilled.pro/skill/shell-scripting
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill shell-scripting`
 - Tags: bash, zsh, shell, scripting, cli, automation
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1219,7 +1219,7 @@ Use this skill when writing bash or zsh scripts, parsing arguments, handling err
 Generate a production-ready AbsolutelySkilled skill from any source: GitHub repos, documentation URLs, or domain topics (marketing, sales, TypeScript, etc.). Triggers on /skill-forge, "create a skill for X", "generate a skill from these docs", "make a skill for this repo", "build a skill about marketing", or "add X to the registry". For URLs: performs deep doc research (README, llms.txt, API references). For domains: runs a brainstorming discovery session with the user to define scope and content. Outputs a complete skill/ folder with SKILL.md, evals.json, and optionally sources.yaml, ready to PR into the AbsolutelySkilled registry.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/skill-forge
+- URL: https://www.absolutelyskilled.pro/skill/skill-forge
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill skill-forge`
 - Tags: skill-creation, code-generation, scaffolding, registry, agent-skills
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1229,7 +1229,7 @@ Generate a production-ready AbsolutelySkilled skill from any source: GitHub repo
 Use this skill when configuring Neovim, writing Lua plugins, setting up keybindings, or optimizing the Vim editing workflow. Triggers on Neovim configuration, init.lua, lazy.nvim, LSP setup, telescope, treesitter, vim motions, keymaps, and any task requiring Vim or Neovim customization.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/vim-neovim
+- URL: https://www.absolutelyskilled.pro/skill/vim-neovim
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill vim-neovim`
 - Tags: neovim, vim, lua, editor, plugins, keybindings
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1239,7 +1239,7 @@ Use this skill when configuring Neovim, writing Lua plugins, setting up keybindi
 Use this skill when working with Vite+, vp CLI, or the VoidZero unified toolchain. Triggers on project scaffolding with vp create, migrating existing Vite projects with vp migrate, running dev/build/test/lint/fmt commands, configuring vite.config.ts with lint/fmt/test/run/pack/staged blocks, managing Node.js versions with vp env, monorepo task execution with vp run, and library packaging with vp pack. Also triggers on references to Oxlint, Oxfmt, Rolldown, tsdown, Vitest, or Vite Task in a Vite+ context.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/vite-plus
+- URL: https://www.absolutelyskilled.pro/skill/vite-plus
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill vite-plus`
 - Tags: vite, toolchain, bundler, linting, testing, monorepo
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1251,7 +1251,7 @@ Use this skill when working with Vite+, vp CLI, or the VoidZero unified toolchai
 Use this skill when analyzing competitive landscapes, comparing features, positioning against competitors, or conducting SWOT analysis. Triggers on competitive analysis, market landscape, feature comparison, SWOT, competitor positioning, market mapping, and any task requiring competitive intelligence or strategic positioning.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/competitive-analysis
+- URL: https://www.absolutelyskilled.pro/skill/competitive-analysis
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill competitive-analysis`
 - Tags: competitive-analysis, swot, positioning, market-landscape, strategy
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1261,7 +1261,7 @@ Use this skill when analyzing competitive landscapes, comparing features, positi
 Use this skill when conducting customer research - designing surveys, writing interview guides, performing NPS deep-dive analysis, interpreting behavioral analytics (funnels, cohorts, retention), or building data-driven user personas. Triggers on "create a survey", "interview script", "NPS analysis", "user persona", "behavioral analytics", "customer segmentation", "voice of customer", "churn analysis", "jobs to be done", or "research plan".
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/customer-research
+- URL: https://www.absolutelyskilled.pro/skill/customer-research
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill customer-research`
 - Tags: customer-research, surveys, interviews, nps, personas, behavioral-analytics
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1271,7 +1271,7 @@ Use this skill when conducting customer research - designing surveys, writing in
 Use this skill when designing pricing models, packaging products into tiers, building freemium funnels, implementing usage-based billing, structuring enterprise pricing, or running price tests. Triggers on pricing pages, monetization strategy, willingness-to-pay research, price sensitivity analysis, free-to-paid conversion, seat-based vs consumption pricing, and A/B testing prices.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/pricing-strategy
+- URL: https://www.absolutelyskilled.pro/skill/pricing-strategy
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill pricing-strategy`
 - Tags: pricing, monetization, packaging, freemium, saas, growth
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1281,7 +1281,7 @@ Use this skill when designing pricing models, packaging products into tiers, bui
 Use this skill when analyzing product funnels, running cohort analysis, measuring feature adoption, or defining product metrics. Triggers on product analytics, funnel analysis, cohort analysis, feature adoption, north star metric, AARRR, retention curves, and any task requiring product data analysis or metrics design.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/product-analytics
+- URL: https://www.absolutelyskilled.pro/skill/product-analytics
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill product-analytics`
 - Tags: product-analytics, funnels, cohorts, metrics, adoption, retention
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1291,7 +1291,7 @@ Use this skill when analyzing product funnels, running cohort analysis, measurin
 Use this skill when applying Jobs-to-be-Done, building opportunity solution trees, mapping assumptions, or validating product ideas. Triggers on product discovery, JTBD, jobs-to-be-done, opportunity solution trees, assumption mapping, experiment design, prototype testing, and any task requiring product discovery methodology.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/product-discovery
+- URL: https://www.absolutelyskilled.pro/skill/product-discovery
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill product-discovery`
 - Tags: product-discovery, jtbd, opportunity-trees, assumptions, validation
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1301,7 +1301,7 @@ Use this skill when applying Jobs-to-be-Done, building opportunity solution tree
 Use this skill when planning go-to-market strategy, running beta programs, creating launch checklists, or managing rollout strategy. Triggers on product launch, go-to-market, GTM strategy, beta programs, launch checklist, rollout strategy, launch tiers, and any task requiring product release planning or execution.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/product-launch
+- URL: https://www.absolutelyskilled.pro/skill/product-launch
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill product-launch`
 - Tags: product-launch, gtm, beta, launch-checklist, rollout, go-to-market
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1311,7 +1311,7 @@ Use this skill when planning go-to-market strategy, running beta programs, creat
 Use this skill when defining product vision, building roadmaps, prioritizing features, or choosing frameworks like RICE, ICE, or MoSCoW. Triggers on product vision, roadmapping, prioritization, RICE scoring, product strategy, feature prioritization, OKRs for product, and any task requiring product direction or planning decisions.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/product-strategy
+- URL: https://www.absolutelyskilled.pro/skill/product-strategy
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill product-strategy`
 - Tags: product-strategy, roadmap, prioritization, rice, vision, planning
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1321,7 +1321,7 @@ Use this skill when defining product vision, building roadmaps, prioritizing fea
 Use this skill when writing user stories, defining acceptance criteria, story mapping, grooming backlogs, or estimating work. Triggers on user stories, acceptance criteria, story mapping, backlog grooming, estimation, story points, INVEST criteria, and any task requiring agile requirements documentation.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/user-stories
+- URL: https://www.absolutelyskilled.pro/skill/user-stories
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill user-stories`
 - Tags: user-stories, acceptance-criteria, story-mapping, backlog, estimation
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1333,7 +1333,7 @@ Use this skill when writing user stories, defining acceptance criteria, story ma
 Use this skill when managing key accounts, planning expansions, running QBRs, or mapping stakeholders. Triggers on account management, expansion playbooks, QBR preparation, stakeholder mapping, renewal strategy, upsell, cross-sell, and any task requiring strategic account planning or relationship management.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/account-management
+- URL: https://www.absolutelyskilled.pro/skill/account-management
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill account-management`
 - Tags: account-management, expansion, qbr, stakeholder-mapping, renewals
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1343,7 +1343,7 @@ Use this skill when managing key accounts, planning expansions, running QBRs, or
 Use this skill when configuring CRM workflows, managing sales pipelines, building forecasting models, or optimizing CRM data hygiene. Triggers on Salesforce, HubSpot, CRM workflows, pipeline management, deal stages, forecasting, CRM automation, and any task requiring CRM architecture or process optimization.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/crm-management
+- URL: https://www.absolutelyskilled.pro/skill/crm-management
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill crm-management`
 - Tags: crm, salesforce, hubspot, pipeline, forecasting, automation
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1353,7 +1353,7 @@ Use this skill when configuring CRM workflows, managing sales pipelines, buildin
 Use this skill when defining ideal customer profiles, building scoring models, identifying intent signals, or qualifying leads. Triggers on lead scoring, ICP definition, scoring models, intent signals, MQL, SQL, lead qualification, BANT, and any task requiring lead prioritization or qualification framework design.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/lead-scoring
+- URL: https://www.absolutelyskilled.pro/skill/lead-scoring
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill lead-scoring`
 - Tags: lead-scoring, icp, qualification, intent-signals, mql, sql
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1363,7 +1363,7 @@ Use this skill when defining ideal customer profiles, building scoring models, i
 Use this skill when planning co-marketing campaigns, technology integrations, channel partnership programs, or affiliate programs. Triggers on partner strategy, co-marketing, co-selling, integration partnerships, channel sales, reseller programs, affiliate commission structures, partner enablement, partner portals, referral programs, joint go-to-market, ecosystem development, and any task involving building or managing business partnerships.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/partnership-strategy
+- URL: https://www.absolutelyskilled.pro/skill/partnership-strategy
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill partnership-strategy`
 - Tags: partnerships, co-marketing, integrations, affiliates, channel, ecosystem
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1373,7 +1373,7 @@ Use this skill when planning co-marketing campaigns, technology integrations, ch
 Use this skill when writing proposals, responding to RFPs, drafting SOWs, or developing pricing strategies. Triggers on proposal writing, RFP response, statement of work, pricing strategy, win themes, executive summary, and any task requiring business proposal creation or optimization.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/proposal-writing
+- URL: https://www.absolutelyskilled.pro/skill/proposal-writing
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill proposal-writing`
 - Tags: proposals, rfp, sow, pricing, win-themes, business-writing
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1383,7 +1383,7 @@ Use this skill when writing proposals, responding to RFPs, drafting SOWs, or dev
 Use this skill when creating battle cards, competitive intelligence, case studies, or ROI calculators for sales teams. Triggers on battle cards, competitive analysis, case studies, sales collateral, ROI calculators, sales training, product positioning, and any task requiring sales enablement content or strategy.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/sales-enablement
+- URL: https://www.absolutelyskilled.pro/skill/sales-enablement
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill sales-enablement`
 - Tags: sales-enablement, battle-cards, competitive-intel, case-studies, roi
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1393,7 +1393,7 @@ Use this skill when creating battle cards, competitive intelligence, case studie
 Use this skill when designing outbound sequences, handling objections, running discovery calls, or implementing sales methodologies. Triggers on outbound sales, cold email sequences, objection handling, discovery calls, MEDDIC, BANT, sales methodology, closing techniques, and any task requiring structured sales process design or execution.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/sales-playbook
+- URL: https://www.absolutelyskilled.pro/skill/sales-playbook
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill sales-playbook`
 - Tags: sales, outbound, objections, discovery, meddic, closing
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1405,7 +1405,7 @@ Use this skill when designing outbound sequences, handling objections, running d
 Use this skill when building dbt models, designing semantic layers, defining metrics, creating self-serve analytics, or structuring a data warehouse for analyst consumption. Triggers on dbt project setup, model layering (staging, intermediate, marts), ref() and source() usage, YAML schema definitions, metrics definitions, semantic layer configuration, dimensional modeling, slowly changing dimensions, data testing, and any task requiring analytics engineering best practices.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/analytics-engineering
+- URL: https://www.absolutelyskilled.pro/skill/analytics-engineering
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill analytics-engineering`
 - Tags: dbt, analytics, metrics, semantic-layer, data-warehouse, self-serve
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1415,7 +1415,7 @@ Use this skill when building dbt models, designing semantic layers, defining met
 Use this skill when building data pipelines, ETL/ELT workflows, or data transformation layers. Triggers on Airflow DAG design, dbt model creation, Spark job optimization, streaming vs batch architecture decisions, data ingestion, data quality checks, pipeline orchestration, incremental loads, CDC (change data capture), schema evolution, and data warehouse modeling. Acts as a senior data engineer advisor for building reliable, scalable data infrastructure.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/data-pipelines
+- URL: https://www.absolutelyskilled.pro/skill/data-pipelines
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill data-pipelines`
 - Tags: data-engineering, etl, airflow, dbt, spark, streaming
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1425,7 +1425,7 @@ Use this skill when building data pipelines, ETL/ELT workflows, or data transfor
 Use this skill when implementing data validation, data quality monitoring, data lineage tracking, data contracts, or Great Expectations test suites. Triggers on schema validation, data profiling, freshness checks, row-count anomalies, column drift, expectation suites, contract testing between producers and consumers, lineage graphs, data observability, and any task requiring data integrity enforcement across pipelines.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/data-quality
+- URL: https://www.absolutelyskilled.pro/skill/data-quality
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill data-quality`
 - Tags: data-quality, validation, lineage, great-expectations, contracts, monitoring
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1435,7 +1435,7 @@ Use this skill when implementing data validation, data quality monitoring, data 
 Use this skill when designing data warehouses, building star or snowflake schemas, implementing slowly changing dimensions (SCDs), writing analytical SQL for Snowflake or BigQuery, creating fact and dimension tables, or planning ETL/ELT pipelines for analytics. Triggers on dimensional modeling, surrogate keys, conformed dimensions, warehouse architecture, data vault, partitioning strategies, materialized views, and any task requiring OLAP schema design or warehouse query optimization.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/data-warehousing
+- URL: https://www.absolutelyskilled.pro/skill/data-warehousing
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill data-warehousing`
 - Tags: data-warehouse, star-schema, snowflake, bigquery, dimensional-modeling, scd
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1445,7 +1445,7 @@ Use this skill when designing data warehouses, building star or snowflake schema
 Use this skill when building real-time data pipelines, stream processing jobs, or change data capture systems. Triggers on tasks involving Apache Kafka (producers, consumers, topics, partitions, consumer groups, Connect, Streams), Apache Flink (DataStream API, windowing, checkpointing, stateful processing), event sourcing implementations, CDC with Debezium, stream processing patterns (windowing, watermarks, exactly-once semantics), and any pipeline that processes unbounded data in motion rather than data at rest.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/real-time-streaming
+- URL: https://www.absolutelyskilled.pro/skill/real-time-streaming
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill real-time-streaming`
 - Tags: kafka, flink, cdc, stream-processing, event-sourcing, real-time
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1455,7 +1455,7 @@ Use this skill when building real-time data pipelines, stream processing jobs, o
 Use this skill when building, auditing, or optimizing spreadsheet models in Excel or Google Sheets. Triggers on formula writing, pivot table creation, dashboard design, data validation, conditional formatting, macro/VBA scripting, Apps Script automation, financial modeling, what-if analysis, XLOOKUP/INDEX-MATCH lookups, array formulas, and workbook architecture. Covers advanced Excel and Google Sheets for analysts, finance professionals, and operations teams.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/spreadsheet-modeling
+- URL: https://www.absolutelyskilled.pro/skill/spreadsheet-modeling
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill spreadsheet-modeling`
 - Tags: excel, google-sheets, formulas, pivot-tables, dashboards, macros
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1467,7 +1467,7 @@ Use this skill when building, auditing, or optimizing spreadsheet models in Exce
 Use this skill when creating programmatic videos with Remotion, building React-based video compositions, implementing animations (text, element, scene transitions), rendering videos to MP4/WebM, or setting up standalone Remotion projects. Triggers on video creation, Remotion compositions, useCurrentFrame, interpolate, spring animations, and video rendering.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/remotion-video
+- URL: https://www.absolutelyskilled.pro/skill/remotion-video
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill remotion-video`
 - Tags: remotion, video, animation, react, rendering, programmatic-video
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1477,7 +1477,7 @@ Use this skill when creating programmatic videos with Remotion, building React-b
 Use this skill when analyzing existing video files using FFmpeg and AI vision, extracting frames for design system generation, detecting scene boundaries, analyzing animation timing, extracting color palettes, or understanding audio-visual sync. Triggers on video analysis, frame extraction, scene detection, ffprobe, motion analysis, and AI vision analysis of video content.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/video-analyzer
+- URL: https://www.absolutelyskilled.pro/skill/video-analyzer
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill video-analyzer`
 - Tags: ffmpeg, video-analysis, frame-extraction, ai-vision, scene-detection, design-system
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1487,7 +1487,7 @@ Use this skill when analyzing existing video files using FFmpeg and AI vision, e
 Use this skill when adding audio to programmatic videos - generating narration with ElevenLabs TTS, sourcing royalty-free background music, creating SFX with FFmpeg, implementing audio ducking, or mixing multiple audio layers in Remotion. Triggers on ElevenLabs, text-to-speech, voice generation, background music, sound effects, audio mixing, and volume ducking.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/video-audio-design
+- URL: https://www.absolutelyskilled.pro/skill/video-audio-design
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill video-audio-design`
 - Tags: elevenlabs, tts, audio-design, sfx, background-music, audio-mixing
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1497,7 +1497,7 @@ Use this skill when adding audio to programmatic videos - generating narration w
 Use this skill when creating complete videos from scratch - product demos, explainers, social clips, or announcements. Orchestrates the full workflow: deep interview, script generation, visual verification, Remotion project build, audio design, narration, and 4K rendering. Triggers on "make me a video", "create a video about", video production, and end-to-end video creation requests.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/video-creator
+- URL: https://www.absolutelyskilled.pro/skill/video-creator
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill video-creator`
 - Tags: video-creation, orchestrator, remotion, programmatic-video, 4k, production
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1507,7 +1507,7 @@ Use this skill when creating complete videos from scratch - product demos, expla
 Use this skill when writing scripts for programmatic videos, planning scene structure and timing, creating storyboards in YAML format, calculating frame counts from duration, or interviewing users about video requirements. Triggers on video script, storyboard, scene planning, narration writing, video pacing, and structured video content planning.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/video-scriptwriting
+- URL: https://www.absolutelyskilled.pro/skill/video-scriptwriting
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill video-scriptwriting`
 - Tags: scriptwriting, video-script, storyboard, yaml, content-planning, pacing
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1519,7 +1519,7 @@ Use this skill when writing scripts for programmatic videos, planning scene stru
 Use this skill when setting up CI/CD pipelines, configuring GitHub Actions, implementing deployment strategies, or automating build/test/deploy workflows. Triggers on GitHub Actions, CI pipeline, CD pipeline, deployment automation, blue-green deployment, canary release, rolling update, build matrix, artifacts, and any task requiring continuous integration or delivery setup.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines
+- URL: https://www.absolutelyskilled.pro/skill/ci-cd-pipelines
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill ci-cd-pipelines`
 - Tags: ci-cd, github-actions, deployment, automation, pipelines, devops
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1529,7 +1529,7 @@ Use this skill when setting up CI/CD pipelines, configuring GitHub Actions, impl
 Use this skill when containerizing applications, writing Dockerfiles, deploying to Kubernetes, creating Helm charts, or configuring service mesh. Triggers on Docker, Kubernetes, k8s, containers, pods, deployments, services, ingress, Helm, Istio, container orchestration, and any task requiring container or cluster management.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/docker-kubernetes
+- URL: https://www.absolutelyskilled.pro/skill/docker-kubernetes
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill docker-kubernetes`
 - Tags: docker, kubernetes, containers, helm, orchestration, devops
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1539,7 +1539,7 @@ Use this skill when containerizing applications, writing Dockerfiles, deploying 
 Use this skill when managing Linux servers, writing shell scripts, configuring systemd services, debugging networking, or hardening security. Triggers on bash scripting, systemd units, iptables, firewall, SSH configuration, file permissions, process management, cron jobs, disk management, and any task requiring Linux system administration.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/linux-admin
+- URL: https://www.absolutelyskilled.pro/skill/linux-admin
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill linux-admin`
 - Tags: linux, sysadmin, shell, systemd, networking, security
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1549,7 +1549,7 @@ Use this skill when managing Linux servers, writing shell scripts, configuring s
 Use this skill when writing Terraform configurations, managing infrastructure as code, creating reusable modules, handling state backends, or detecting drift. Triggers on Terraform, HCL, infrastructure as code, IaC, providers, modules, state management, terraform plan, terraform apply, drift detection, and any task requiring declarative infrastructure provisioning.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/terraform-iac
+- URL: https://www.absolutelyskilled.pro/skill/terraform-iac
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill terraform-iac`
 - Tags: terraform, iac, infrastructure, hcl, modules, devops
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1561,7 +1561,7 @@ Use this skill when writing Terraform configurations, managing infrastructure as
 Use this skill when architecting on AWS, selecting services, optimizing costs, or following the Well-Architected Framework. Triggers on EC2, S3, Lambda, RDS, DynamoDB, CloudFront, IAM, VPC, ECS, EKS, SQS, SNS, API Gateway, and any task requiring AWS architecture decisions, service selection, or cost management.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/cloud-aws
+- URL: https://www.absolutelyskilled.pro/skill/cloud-aws
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill cloud-aws`
 - Tags: aws, cloud, infrastructure, serverless, well-architected
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1571,7 +1571,7 @@ Use this skill when architecting on AWS, selecting services, optimizing costs, o
 Use this skill when architecting on Google Cloud Platform, selecting GCP services, or implementing data and compute solutions. Triggers on Cloud Run, BigQuery, Pub/Sub, GKE, Cloud Functions, Cloud Storage, Firestore, Spanner, Cloud SQL, IAM, VPC, and any task requiring GCP architecture decisions or service selection.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/cloud-gcp
+- URL: https://www.absolutelyskilled.pro/skill/cloud-gcp
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill cloud-gcp`
 - Tags: gcp, google-cloud, bigquery, cloud-run, serverless, data
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1581,7 +1581,7 @@ Use this skill when architecting on Google Cloud Platform, selecting GCP service
 Use this skill when deploying edge functions, writing Cloudflare Workers, configuring CDN cache logic, optimizing latency with edge-side processing, or building serverless-at-the-edge architectures. Triggers on edge functions, CDN rules, Cloudflare Workers, Deno Deploy, Vercel Edge Functions, Lambda@Edge, cache headers, geo-routing, and any task requiring computation close to the user.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/edge-computing
+- URL: https://www.absolutelyskilled.pro/skill/edge-computing
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill edge-computing`
 - Tags: edge, cloudflare-workers, cdn, latency, serverless, edge-functions
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1593,7 +1593,7 @@ Use this skill when deploying edge functions, writing Cloudflare Workers, config
 Use this skill when implementing logging, metrics, distributed tracing, alerting, or defining SLOs. Triggers on structured logging, Prometheus, Grafana, OpenTelemetry, Datadog, distributed tracing, error tracking, dashboards, alert fatigue, SLIs, SLOs, error budgets, and any task requiring system observability or monitoring setup.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/observability
+- URL: https://www.absolutelyskilled.pro/skill/observability
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill observability`
 - Tags: observability, logging, metrics, tracing, alerting, slo
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1603,7 +1603,7 @@ Use this skill when implementing logging, metrics, distributed tracing, alerting
 Use this skill when working with Sentry - error monitoring, performance tracing, session replay, cron monitoring, alerts, or source maps. Triggers on any Sentry-related task including SDK initialization, issue triage, custom instrumentation, uploading source maps, configuring alerts, and integrating Sentry into JavaScript, Python, Next.js, or other supported frameworks.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/sentry
+- URL: https://www.absolutelyskilled.pro/skill/sentry
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill sentry`
 - Tags: sentry, error-monitoring, performance, tracing, observability, debugging
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1613,7 +1613,7 @@ Use this skill when working with Sentry - error monitoring, performance tracing,
 Use this skill when working with SigNoz - open-source observability platform for application monitoring, distributed tracing, log management, metrics, alerts, and dashboards. Triggers on SigNoz setup, OpenTelemetry instrumentation for SigNoz, sending traces/logs/metrics to SigNoz, creating SigNoz dashboards, configuring SigNoz alerts, exception monitoring, and migrating from Datadog/Grafana/New Relic to SigNoz.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/signoz
+- URL: https://www.absolutelyskilled.pro/skill/signoz
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill signoz`
 - Tags: signoz, observability, opentelemetry, tracing, logs, metrics
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1625,7 +1625,7 @@ Use this skill when working with SigNoz - open-source observability platform for
 Use this skill when writing, reviewing, or improving internal engineering documents - RFCs, design docs, post-mortems, runbooks, and knowledge base articles. Triggers on drafting a design proposal, writing an RFC, creating a post-mortem after an incident, building an operational runbook, organizing team knowledge, or improving existing documentation for clarity and completeness.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/internal-docs
+- URL: https://www.absolutelyskilled.pro/skill/internal-docs
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill internal-docs`
 - Tags: rfc, design-docs, post-mortem, runbook, knowledge-management, documentation
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1635,7 +1635,7 @@ Use this skill when writing, reviewing, or improving internal engineering docume
 Use this skill when writing, reviewing, or structuring technical documentation for software projects. Triggers on API documentation, tutorials, architecture decision records (ADRs), runbooks, onboarding guides, README files, or any developer-facing prose. Covers documentation structure, writing style, audience analysis, and doc-as-code workflows for engineering teams.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/technical-writing
+- URL: https://www.absolutelyskilled.pro/skill/technical-writing
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill technical-writing`
 - Tags: technical-writing, documentation, api-docs, adr, runbooks, tutorials
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1647,7 +1647,7 @@ Use this skill when writing, reviewing, or structuring technical documentation f
 Use this skill when building workflow automations with Zapier, Make (Integromat), n8n, or similar no-code/low-code platforms. Triggers on workflow automation, Zap creation, Make scenario design, n8n workflow building, webhook routing, internal tooling automation, app integration, trigger-action patterns, and any task requiring connecting SaaS tools without writing full applications.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/no-code-automation
+- URL: https://www.absolutelyskilled.pro/skill/no-code-automation
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill no-code-automation`
 - Tags: zapier, make, n8n, automation, no-code, internal-tooling
 - Platforms: claude-code, gemini-cli, openai-codex
@@ -1657,7 +1657,7 @@ Use this skill when building workflow automations with Zapier, Make (Integromat)
 You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, designing systems, or making architectural decisions. Enters plan mode, reads all available docs, explores the codebase deeply, then interviews the user relentlessly with ultrathink-level reasoning on every decision until a shared understanding is reached. Produces a validated design spec before any implementation begins. Triggers on feature requests, design discussions, refactors, new projects, component creation, system changes, and any task requiring design decisions.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/super-brainstorm
+- URL: https://www.absolutelyskilled.pro/skill/super-brainstorm
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill super-brainstorm`
 - Tags: brainstorming, design, planning, architecture, spec-writing, interviewing
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1669,7 +1669,7 @@ You MUST use this before any creative work - creating features, building compone
 Use this skill when working with PostHog - product analytics, web analytics, feature flags, A/B testing, experiments, session replay, error tracking, surveys, LLM observability, or data warehouse. Triggers on any PostHog-related task including capturing events, identifying users, evaluating feature flags, creating experiments, setting up surveys, tracking errors, and querying analytics data via the PostHog API or SDKs (posthog-js, posthog-node, posthog-python).
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/posthog
+- URL: https://www.absolutelyskilled.pro/skill/posthog
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill posthog`
 - Tags: analytics, feature-flags, ab-testing, surveys, error-tracking, session-replay
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1679,7 +1679,7 @@ Use this skill when working with PostHog - product analytics, web analytics, fea
 Use this skill when calculating, analyzing, or reporting SaaS business metrics. Triggers on MRR, ARR, churn rate, LTV, CAC, LTV:CAC ratio, cohort analysis, net revenue retention, expansion revenue, board deck metrics, investor reporting, unit economics, payback period, or SaaS financial modeling. Covers metric definitions, formulas, spreadsheet implementation, cohort tables, and board-ready reporting for founders, finance teams, and growth operators.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/saas-metrics
+- URL: https://www.absolutelyskilled.pro/skill/saas-metrics
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill saas-metrics`
 - Tags: saas, mrr, churn, ltv, cac, cohort-analysis, board-reporting
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1691,7 +1691,7 @@ Use this skill when calculating, analyzing, or reporting SaaS business metrics. 
 Use this skill when managing cmux terminal panes, surfaces, and workspaces from Claude Code or any AI agent. Triggers on spawning split panes for sub-agents, sending commands to terminal surfaces, reading screen output, creating/closing workspaces, browser automation via cmux, and any task requiring multi-pane terminal orchestration. Also triggers on "cmux", "split pane", "new-pane", "read-screen", "send command to pane", or subagent-driven development requiring isolated terminal surfaces.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/cmux
+- URL: https://www.absolutelyskilled.pro/skill/cmux
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill cmux`
 - Tags: terminal, panes, split, subagent, automation, cli
 - Platforms: claude-code
@@ -1703,7 +1703,7 @@ Use this skill when managing cmux terminal panes, surfaces, and workspaces from 
 Use this skill when optimizing email deliverability, sender reputation, or authentication. Triggers on SPF record setup, DKIM signing configuration, DMARC policy deployment, IP warm-up planning, bounce handling strategy, sender reputation monitoring, inbox placement troubleshooting, email infrastructure hardening, DNS TXT record configuration for email, and diagnosing why emails land in spam. Acts as a senior email infrastructure advisor for engineers and marketers managing transactional or marketing email.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/email-deliverability
+- URL: https://www.absolutelyskilled.pro/skill/email-deliverability
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill email-deliverability`
 - Tags: email, deliverability, spf, dkim, dmarc, reputation
 - Platforms: claude-code, gemini-cli, openai-codex, mcp
@@ -1715,7 +1715,7 @@ Use this skill when optimizing email deliverability, sender reputation, or authe
 Use this skill when designing or implementing audio systems for games - sound effects, adaptive music, spatial/3D audio, and middleware integration with FMOD or Wwise. Triggers on sound design, audio implementation, adaptive music systems, spatial audio, HRTF, audio middleware setup, sound event architecture, audio mixing, dynamic soundscapes, and game audio optimization. Covers FMOD Studio, Audiokinetic Wwise, and engine-native audio APIs.
 
 
-- URL: https://absolutely-skilled.vercel.app/skill/game-audio
+- URL: https://www.absolutelyskilled.pro/skill/game-audio
 - Install: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill game-audio`
 - Tags: game-audio, sound-design, fmod, wwise, spatial-audio, adaptive-music, 3d-audio
 - Platforms: claude-code, gemini-cli, openai-codex, mcp

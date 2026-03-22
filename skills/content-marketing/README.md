@@ -51,10 +51,10 @@ strategist would.
 
 Pair content-marketing with these complementary skills:
 
-- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
-- [content-seo](https://absolutely-skilled.vercel.app/skill/content-seo)
-- [email-marketing](https://absolutely-skilled.vercel.app/skill/email-marketing)
-- [social-media-strategy](https://absolutely-skilled.vercel.app/skill/social-media-strategy)
+- [copywriting](https://www.absolutelyskilled.pro/skill/copywriting)
+- [content-seo](https://www.absolutelyskilled.pro/skill/content-seo)
+- [email-marketing](https://www.absolutelyskilled.pro/skill/email-marketing)
+- [social-media-strategy](https://www.absolutelyskilled.pro/skill/social-media-strategy)
 
 ## Frequently Asked Questions
 
@@ -77,4 +77,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/content-marketing)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/content-marketing)*

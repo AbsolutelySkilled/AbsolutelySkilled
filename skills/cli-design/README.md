@@ -48,10 +48,10 @@ Python, Go, and Rust ecosystems.
 
 Pair cli-design with these complementary skills:
 
-- [shell-scripting](https://absolutely-skilled.vercel.app/skill/shell-scripting)
-- [developer-experience](https://absolutely-skilled.vercel.app/skill/developer-experience)
-- [regex-mastery](https://absolutely-skilled.vercel.app/skill/regex-mastery)
-- [react-ink](https://absolutely-skilled.vercel.app/skill/react-ink)
+- [shell-scripting](https://www.absolutelyskilled.pro/skill/shell-scripting)
+- [developer-experience](https://www.absolutelyskilled.pro/skill/developer-experience)
+- [regex-mastery](https://www.absolutelyskilled.pro/skill/regex-mastery)
+- [react-ink](https://www.absolutelyskilled.pro/skill/react-ink)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/cli-design)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/cli-design)*

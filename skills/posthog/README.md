@@ -48,10 +48,10 @@ through its REST API for querying data and managing resources.
 
 Pair posthog with these complementary skills:
 
-- [product-analytics](https://absolutely-skilled.vercel.app/skill/product-analytics)
-- [sentry](https://absolutely-skilled.vercel.app/skill/sentry)
-- [observability](https://absolutely-skilled.vercel.app/skill/observability)
-- [growth-hacking](https://absolutely-skilled.vercel.app/skill/growth-hacking)
+- [product-analytics](https://www.absolutelyskilled.pro/skill/product-analytics)
+- [sentry](https://www.absolutelyskilled.pro/skill/sentry)
+- [observability](https://www.absolutelyskilled.pro/skill/observability)
+- [growth-hacking](https://www.absolutelyskilled.pro/skill/growth-hacking)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/posthog)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/posthog)*

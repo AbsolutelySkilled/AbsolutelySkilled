@@ -48,9 +48,9 @@ context-window efficiency.
 
 Pair second-brain with these complementary skills:
 
-- [knowledge-base](https://absolutely-skilled.vercel.app/skill/knowledge-base)
-- [internal-docs](https://absolutely-skilled.vercel.app/skill/internal-docs)
-- [technical-writing](https://absolutely-skilled.vercel.app/skill/technical-writing)
+- [knowledge-base](https://www.absolutelyskilled.pro/skill/knowledge-base)
+- [internal-docs](https://www.absolutelyskilled.pro/skill/internal-docs)
+- [technical-writing](https://www.absolutelyskilled.pro/skill/technical-writing)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/second-brain)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/second-brain)*

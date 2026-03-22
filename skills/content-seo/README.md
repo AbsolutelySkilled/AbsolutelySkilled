@@ -50,10 +50,10 @@ approach to keeping content accurate and comprehensive over time.
 
 Pair content-seo with these complementary skills:
 
-- [keyword-research](https://absolutely-skilled.vercel.app/skill/keyword-research)
-- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
-- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
-- [link-building](https://absolutely-skilled.vercel.app/skill/link-building)
+- [keyword-research](https://www.absolutelyskilled.pro/skill/keyword-research)
+- [seo-mastery](https://www.absolutelyskilled.pro/skill/seo-mastery)
+- [copywriting](https://www.absolutelyskilled.pro/skill/copywriting)
+- [link-building](https://www.absolutelyskilled.pro/skill/link-building)
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/content-seo)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/content-seo)*

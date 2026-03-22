@@ -48,10 +48,10 @@ calculating pacing and frame counts, writing narration, and revising scripts.
 
 Pair video-scriptwriting with these complementary skills:
 
-- [video-creator](https://absolutely-skilled.vercel.app/skill/video-creator)
-- [remotion-video](https://absolutely-skilled.vercel.app/skill/remotion-video)
-- [video-audio-design](https://absolutely-skilled.vercel.app/skill/video-audio-design)
-- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
+- [video-creator](https://www.absolutelyskilled.pro/skill/video-creator)
+- [remotion-video](https://www.absolutelyskilled.pro/skill/remotion-video)
+- [video-audio-design](https://www.absolutelyskilled.pro/skill/video-audio-design)
+- [copywriting](https://www.absolutelyskilled.pro/skill/copywriting)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/video-scriptwriting)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/video-scriptwriting)*

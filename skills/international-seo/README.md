@@ -48,10 +48,10 @@ international SEO gives each market its own clear identity and ranking potential
 
 Pair international-seo with these complementary skills:
 
-- [localization-i18n](https://absolutely-skilled.vercel.app/skill/localization-i18n)
-- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
-- [geo-optimization](https://absolutely-skilled.vercel.app/skill/geo-optimization)
-- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
+- [localization-i18n](https://www.absolutelyskilled.pro/skill/localization-i18n)
+- [seo-mastery](https://www.absolutelyskilled.pro/skill/seo-mastery)
+- [geo-optimization](https://www.absolutelyskilled.pro/skill/geo-optimization)
+- [technical-seo](https://www.absolutelyskilled.pro/skill/technical-seo)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/international-seo)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/international-seo)*

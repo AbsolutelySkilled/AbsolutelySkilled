@@ -51,10 +51,10 @@ compounding growth.
 
 Pair growth-hacking with these complementary skills:
 
-- [product-analytics](https://absolutely-skilled.vercel.app/skill/product-analytics)
-- [email-marketing](https://absolutely-skilled.vercel.app/skill/email-marketing)
-- [saas-metrics](https://absolutely-skilled.vercel.app/skill/saas-metrics)
-- [sales-playbook](https://absolutely-skilled.vercel.app/skill/sales-playbook)
+- [product-analytics](https://www.absolutelyskilled.pro/skill/product-analytics)
+- [email-marketing](https://www.absolutelyskilled.pro/skill/email-marketing)
+- [saas-metrics](https://www.absolutelyskilled.pro/skill/saas-metrics)
+- [sales-playbook](https://www.absolutelyskilled.pro/skill/sales-playbook)
 
 ## Frequently Asked Questions
 
@@ -77,4 +77,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/growth-hacking)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/growth-hacking)*

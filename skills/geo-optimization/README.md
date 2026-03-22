@@ -57,11 +57,11 @@ A strong traditional SEO foundation is a prerequisite, not an alternative.
 
 Pair geo-optimization with these complementary skills:
 
-- [keyword-research](https://absolutely-skilled.vercel.app/skill/keyword-research)
-- [aeo-optimization](https://absolutely-skilled.vercel.app/skill/aeo-optimization)
-- [international-seo](https://absolutely-skilled.vercel.app/skill/international-seo)
-- [local-seo](https://absolutely-skilled.vercel.app/skill/local-seo)
-- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
+- [keyword-research](https://www.absolutelyskilled.pro/skill/keyword-research)
+- [aeo-optimization](https://www.absolutelyskilled.pro/skill/aeo-optimization)
+- [international-seo](https://www.absolutelyskilled.pro/skill/international-seo)
+- [local-seo](https://www.absolutelyskilled.pro/skill/local-seo)
+- [seo-mastery](https://www.absolutelyskilled.pro/skill/seo-mastery)
 
 ## Frequently Asked Questions
 
@@ -84,4 +84,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/geo-optimization)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/geo-optimization)*

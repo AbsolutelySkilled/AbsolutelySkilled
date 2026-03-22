@@ -48,9 +48,9 @@ for automated invoicing.
 
 Pair api-monetization with these complementary skills:
 
-- [api-design](https://absolutely-skilled.vercel.app/skill/api-design)
-- [pricing-strategy](https://absolutely-skilled.vercel.app/skill/pricing-strategy)
-- [saas-metrics](https://absolutely-skilled.vercel.app/skill/saas-metrics)
+- [api-design](https://www.absolutelyskilled.pro/skill/api-design)
+- [pricing-strategy](https://www.absolutelyskilled.pro/skill/pricing-strategy)
+- [saas-metrics](https://www.absolutelyskilled.pro/skill/saas-metrics)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/api-monetization)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/api-monetization)*

@@ -48,10 +48,10 @@ monitoring for anomaly detection.
 
 Pair data-quality with these complementary skills:
 
-- [data-pipelines](https://absolutely-skilled.vercel.app/skill/data-pipelines)
-- [data-warehousing](https://absolutely-skilled.vercel.app/skill/data-warehousing)
-- [analytics-engineering](https://absolutely-skilled.vercel.app/skill/analytics-engineering)
-- [observability](https://absolutely-skilled.vercel.app/skill/observability)
+- [data-pipelines](https://www.absolutelyskilled.pro/skill/data-pipelines)
+- [data-warehousing](https://www.absolutelyskilled.pro/skill/data-warehousing)
+- [analytics-engineering](https://www.absolutelyskilled.pro/skill/analytics-engineering)
+- [observability](https://www.absolutelyskilled.pro/skill/observability)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/data-quality)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/data-quality)*

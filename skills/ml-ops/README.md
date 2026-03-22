@@ -48,10 +48,10 @@ treat reproducibility as a first-class constraint.
 
 Pair ml-ops with these complementary skills:
 
-- [llm-app-development](https://absolutely-skilled.vercel.app/skill/llm-app-development)
-- [data-pipelines](https://absolutely-skilled.vercel.app/skill/data-pipelines)
-- [ci-cd-pipelines](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)
-- [observability](https://absolutely-skilled.vercel.app/skill/observability)
+- [llm-app-development](https://www.absolutelyskilled.pro/skill/llm-app-development)
+- [data-pipelines](https://www.absolutelyskilled.pro/skill/data-pipelines)
+- [ci-cd-pipelines](https://www.absolutelyskilled.pro/skill/ci-cd-pipelines)
+- [observability](https://www.absolutelyskilled.pro/skill/observability)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/ml-ops)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/ml-ops)*

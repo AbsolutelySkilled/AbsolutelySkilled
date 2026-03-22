@@ -3,7 +3,7 @@ import path from 'node:path';
 import matter from 'gray-matter';
 
 const SKILLS_DIR = path.resolve(process.cwd(), '../skills');
-const SITE = 'https://absolutely-skilled.vercel.app';
+const SITE = 'https://www.absolutelyskilled.pro';
 
 interface SkillMeta {
   slug: string;

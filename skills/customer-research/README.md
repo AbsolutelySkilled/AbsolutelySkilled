@@ -49,10 +49,10 @@ recommendations.
 
 Pair customer-research with these complementary skills:
 
-- [ux-research](https://absolutely-skilled.vercel.app/skill/ux-research)
-- [product-discovery](https://absolutely-skilled.vercel.app/skill/product-discovery)
-- [competitive-analysis](https://absolutely-skilled.vercel.app/skill/competitive-analysis)
-- [customer-success-playbook](https://absolutely-skilled.vercel.app/skill/customer-success-playbook)
+- [ux-research](https://www.absolutelyskilled.pro/skill/ux-research)
+- [product-discovery](https://www.absolutelyskilled.pro/skill/product-discovery)
+- [competitive-analysis](https://www.absolutelyskilled.pro/skill/competitive-analysis)
+- [customer-success-playbook](https://www.absolutelyskilled.pro/skill/customer-success-playbook)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/customer-research)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/customer-research)*

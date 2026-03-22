@@ -49,10 +49,10 @@ internal strategy reviews, training materials, and any context where slides are 
 
 Pair presentation-design with these complementary skills:
 
-- [color-theory](https://absolutely-skilled.vercel.app/skill/color-theory)
-- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
-- [video-production](https://absolutely-skilled.vercel.app/skill/video-production)
-- [figma-to-code](https://absolutely-skilled.vercel.app/skill/figma-to-code)
+- [color-theory](https://www.absolutelyskilled.pro/skill/color-theory)
+- [copywriting](https://www.absolutelyskilled.pro/skill/copywriting)
+- [video-production](https://www.absolutelyskilled.pro/skill/video-production)
+- [figma-to-code](https://www.absolutelyskilled.pro/skill/figma-to-code)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/presentation-design)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/presentation-design)*

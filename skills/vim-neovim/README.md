@@ -46,10 +46,10 @@ finding via `telescope.nvim`. Neovim exposes a rich Lua API (`vim.api`,
 
 Pair vim-neovim with these complementary skills:
 
-- [shell-scripting](https://absolutely-skilled.vercel.app/skill/shell-scripting)
-- [regex-mastery](https://absolutely-skilled.vercel.app/skill/regex-mastery)
-- [git-advanced](https://absolutely-skilled.vercel.app/skill/git-advanced)
-- [cmux](https://absolutely-skilled.vercel.app/skill/cmux)
+- [shell-scripting](https://www.absolutelyskilled.pro/skill/shell-scripting)
+- [regex-mastery](https://www.absolutelyskilled.pro/skill/regex-mastery)
+- [git-advanced](https://www.absolutelyskilled.pro/skill/git-advanced)
+- [cmux](https://www.absolutelyskilled.pro/skill/cmux)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/vim-neovim)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/vim-neovim)*

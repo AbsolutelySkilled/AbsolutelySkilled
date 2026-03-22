@@ -48,10 +48,10 @@ framework that drives consistent, measurable pipeline qualification.
 
 Pair lead-scoring with these complementary skills:
 
-- [crm-management](https://absolutely-skilled.vercel.app/skill/crm-management)
-- [sales-playbook](https://absolutely-skilled.vercel.app/skill/sales-playbook)
-- [product-analytics](https://absolutely-skilled.vercel.app/skill/product-analytics)
-- [growth-hacking](https://absolutely-skilled.vercel.app/skill/growth-hacking)
+- [crm-management](https://www.absolutelyskilled.pro/skill/crm-management)
+- [sales-playbook](https://www.absolutelyskilled.pro/skill/sales-playbook)
+- [product-analytics](https://www.absolutelyskilled.pro/skill/product-analytics)
+- [growth-hacking](https://www.absolutelyskilled.pro/skill/growth-hacking)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/lead-scoring)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/lead-scoring)*

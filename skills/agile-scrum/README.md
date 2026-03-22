@@ -49,10 +49,10 @@ tracking, Kanban flow management, and continuous improvement practices.
 
 Pair agile-scrum with these complementary skills:
 
-- [project-execution](https://absolutely-skilled.vercel.app/skill/project-execution)
-- [user-stories](https://absolutely-skilled.vercel.app/skill/user-stories)
-- [remote-collaboration](https://absolutely-skilled.vercel.app/skill/remote-collaboration)
-- [super-human](https://absolutely-skilled.vercel.app/skill/super-human)
+- [project-execution](https://www.absolutelyskilled.pro/skill/project-execution)
+- [user-stories](https://www.absolutelyskilled.pro/skill/user-stories)
+- [remote-collaboration](https://www.absolutelyskilled.pro/skill/remote-collaboration)
+- [super-human](https://www.absolutelyskilled.pro/skill/super-human)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/agile-scrum)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/agile-scrum)*

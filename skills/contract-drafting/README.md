@@ -51,10 +51,10 @@ received from counterparties.
 
 Pair contract-drafting with these complementary skills:
 
-- [employment-law](https://absolutely-skilled.vercel.app/skill/employment-law)
-- [ip-management](https://absolutely-skilled.vercel.app/skill/ip-management)
-- [privacy-compliance](https://absolutely-skilled.vercel.app/skill/privacy-compliance)
-- [regulatory-compliance](https://absolutely-skilled.vercel.app/skill/regulatory-compliance)
+- [employment-law](https://www.absolutelyskilled.pro/skill/employment-law)
+- [ip-management](https://www.absolutelyskilled.pro/skill/ip-management)
+- [privacy-compliance](https://www.absolutelyskilled.pro/skill/privacy-compliance)
+- [regulatory-compliance](https://www.absolutelyskilled.pro/skill/regulatory-compliance)
 
 ## Frequently Asked Questions
 
@@ -77,4 +77,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/contract-drafting)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/contract-drafting)*

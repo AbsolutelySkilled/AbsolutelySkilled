@@ -49,10 +49,10 @@ rollouts, and run launch retrospectives.
 
 Pair product-launch with these complementary skills:
 
-- [product-strategy](https://absolutely-skilled.vercel.app/skill/product-strategy)
-- [content-marketing](https://absolutely-skilled.vercel.app/skill/content-marketing)
-- [growth-hacking](https://absolutely-skilled.vercel.app/skill/growth-hacking)
-- [project-execution](https://absolutely-skilled.vercel.app/skill/project-execution)
+- [product-strategy](https://www.absolutelyskilled.pro/skill/product-strategy)
+- [content-marketing](https://www.absolutelyskilled.pro/skill/content-marketing)
+- [growth-hacking](https://www.absolutelyskilled.pro/skill/growth-hacking)
+- [project-execution](https://www.absolutelyskilled.pro/skill/project-execution)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/product-launch)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/product-launch)*

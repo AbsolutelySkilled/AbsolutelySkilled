@@ -48,10 +48,10 @@ model dilution, and choose the right instrument for each stage.
 
 Pair startup-fundraising with these complementary skills:
 
-- [financial-modeling](https://absolutely-skilled.vercel.app/skill/financial-modeling)
-- [pricing-strategy](https://absolutely-skilled.vercel.app/skill/pricing-strategy)
-- [product-strategy](https://absolutely-skilled.vercel.app/skill/product-strategy)
-- [saas-metrics](https://absolutely-skilled.vercel.app/skill/saas-metrics)
+- [financial-modeling](https://www.absolutelyskilled.pro/skill/financial-modeling)
+- [pricing-strategy](https://www.absolutelyskilled.pro/skill/pricing-strategy)
+- [product-strategy](https://www.absolutelyskilled.pro/skill/product-strategy)
+- [saas-metrics](https://www.absolutelyskilled.pro/skill/saas-metrics)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/startup-fundraising)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/startup-fundraising)*

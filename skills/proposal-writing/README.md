@@ -48,10 +48,10 @@ judgment to draft, review, and sharpen any business proposal.
 
 Pair proposal-writing with these complementary skills:
 
-- [sales-playbook](https://absolutely-skilled.vercel.app/skill/sales-playbook)
-- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
-- [competitive-analysis](https://absolutely-skilled.vercel.app/skill/competitive-analysis)
-- [pricing-strategy](https://absolutely-skilled.vercel.app/skill/pricing-strategy)
+- [sales-playbook](https://www.absolutelyskilled.pro/skill/sales-playbook)
+- [copywriting](https://www.absolutelyskilled.pro/skill/copywriting)
+- [competitive-analysis](https://www.absolutelyskilled.pro/skill/competitive-analysis)
+- [pricing-strategy](https://www.absolutelyskilled.pro/skill/pricing-strategy)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/proposal-writing)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/proposal-writing)*

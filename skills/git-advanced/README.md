@@ -48,11 +48,11 @@ advanced git task with confidence.
 
 Pair git-advanced with these complementary skills:
 
-- [code-review-mastery](https://absolutely-skilled.vercel.app/skill/code-review-mastery)
-- [ci-cd-pipelines](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)
-- [monorepo-management](https://absolutely-skilled.vercel.app/skill/monorepo-management)
-- [shell-scripting](https://absolutely-skilled.vercel.app/skill/shell-scripting)
-- [meta-repo](https://absolutely-skilled.vercel.app/skill/meta-repo)
+- [code-review-mastery](https://www.absolutelyskilled.pro/skill/code-review-mastery)
+- [ci-cd-pipelines](https://www.absolutelyskilled.pro/skill/ci-cd-pipelines)
+- [monorepo-management](https://www.absolutelyskilled.pro/skill/monorepo-management)
+- [shell-scripting](https://www.absolutelyskilled.pro/skill/shell-scripting)
+- [meta-repo](https://www.absolutelyskilled.pro/skill/meta-repo)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/git-advanced)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/git-advanced)*

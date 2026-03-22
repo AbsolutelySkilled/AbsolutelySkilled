@@ -49,10 +49,10 @@ across the entire production pipeline.
 
 Pair video-production with these complementary skills:
 
-- [presentation-design](https://absolutely-skilled.vercel.app/skill/presentation-design)
-- [social-media-strategy](https://absolutely-skilled.vercel.app/skill/social-media-strategy)
-- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
-- [content-marketing](https://absolutely-skilled.vercel.app/skill/content-marketing)
+- [presentation-design](https://www.absolutelyskilled.pro/skill/presentation-design)
+- [social-media-strategy](https://www.absolutelyskilled.pro/skill/social-media-strategy)
+- [copywriting](https://www.absolutelyskilled.pro/skill/copywriting)
+- [content-marketing](https://www.absolutelyskilled.pro/skill/content-marketing)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/video-production)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/video-production)*

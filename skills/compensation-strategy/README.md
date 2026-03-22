@@ -46,10 +46,10 @@ to candidates, employees, and leadership.
 
 Pair compensation-strategy with these complementary skills:
 
-- [performance-management](https://absolutely-skilled.vercel.app/skill/performance-management)
-- [recruiting-ops](https://absolutely-skilled.vercel.app/skill/recruiting-ops)
-- [financial-modeling](https://absolutely-skilled.vercel.app/skill/financial-modeling)
-- [employment-law](https://absolutely-skilled.vercel.app/skill/employment-law)
+- [performance-management](https://www.absolutelyskilled.pro/skill/performance-management)
+- [recruiting-ops](https://www.absolutelyskilled.pro/skill/recruiting-ops)
+- [financial-modeling](https://www.absolutelyskilled.pro/skill/financial-modeling)
+- [employment-law](https://www.absolutelyskilled.pro/skill/employment-law)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/compensation-strategy)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/compensation-strategy)*

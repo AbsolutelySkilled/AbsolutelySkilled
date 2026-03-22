@@ -50,10 +50,10 @@ virtually every jurisdiction. There are no exceptions.
 
 Pair penetration-testing with these complementary skills:
 
-- [appsec-owasp](https://absolutely-skilled.vercel.app/skill/appsec-owasp)
-- [cloud-security](https://absolutely-skilled.vercel.app/skill/cloud-security)
-- [security-incident-response](https://absolutely-skilled.vercel.app/skill/security-incident-response)
-- [cryptography](https://absolutely-skilled.vercel.app/skill/cryptography)
+- [appsec-owasp](https://www.absolutelyskilled.pro/skill/appsec-owasp)
+- [cloud-security](https://www.absolutelyskilled.pro/skill/cloud-security)
+- [security-incident-response](https://www.absolutelyskilled.pro/skill/security-incident-response)
+- [cryptography](https://www.absolutelyskilled.pro/skill/cryptography)
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/penetration-testing)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/penetration-testing)*

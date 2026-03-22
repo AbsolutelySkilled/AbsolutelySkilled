@@ -48,10 +48,10 @@ codebase, this skill provides actionable patterns grounded in real-world mobile 
 
 Pair react-native with these complementary skills:
 
-- [mobile-testing](https://absolutely-skilled.vercel.app/skill/mobile-testing)
-- [ios-swift](https://absolutely-skilled.vercel.app/skill/ios-swift)
-- [android-kotlin](https://absolutely-skilled.vercel.app/skill/android-kotlin)
-- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
+- [mobile-testing](https://www.absolutelyskilled.pro/skill/mobile-testing)
+- [ios-swift](https://www.absolutelyskilled.pro/skill/ios-swift)
+- [android-kotlin](https://www.absolutelyskilled.pro/skill/android-kotlin)
+- [frontend-developer](https://www.absolutelyskilled.pro/skill/frontend-developer)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/react-native)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/react-native)*

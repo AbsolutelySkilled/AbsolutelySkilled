@@ -11,7 +11,7 @@ export async function GET(context: APIContext) {
     title: 'AbsolutelySkilled Blog',
     description:
       'Guides, tutorials, and insights about AI agent skills. Learn how to teach your AI coding agent new capabilities.',
-    site: context.site || 'https://absolutely-skilled.vercel.app',
+    site: context.site || 'https://www.absolutelyskilled.pro',
     items: posts.map((post) => ({
       title: post.data.title,
       description: post.data.description,

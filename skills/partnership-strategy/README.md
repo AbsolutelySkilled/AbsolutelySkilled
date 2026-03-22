@@ -48,10 +48,10 @@ balancing short-term revenue goals with long-term ecosystem value.
 
 Pair partnership-strategy with these complementary skills:
 
-- [account-management](https://absolutely-skilled.vercel.app/skill/account-management)
-- [sales-enablement](https://absolutely-skilled.vercel.app/skill/sales-enablement)
-- [brand-strategy](https://absolutely-skilled.vercel.app/skill/brand-strategy)
-- [growth-hacking](https://absolutely-skilled.vercel.app/skill/growth-hacking)
+- [account-management](https://www.absolutelyskilled.pro/skill/account-management)
+- [sales-enablement](https://www.absolutelyskilled.pro/skill/sales-enablement)
+- [brand-strategy](https://www.absolutelyskilled.pro/skill/brand-strategy)
+- [growth-hacking](https://www.absolutelyskilled.pro/skill/growth-hacking)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/partnership-strategy)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/partnership-strategy)*

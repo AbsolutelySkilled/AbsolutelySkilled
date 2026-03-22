@@ -50,10 +50,10 @@ features.
 
 Pair sales-playbook with these complementary skills:
 
-- [crm-management](https://absolutely-skilled.vercel.app/skill/crm-management)
-- [sales-enablement](https://absolutely-skilled.vercel.app/skill/sales-enablement)
-- [lead-scoring](https://absolutely-skilled.vercel.app/skill/lead-scoring)
-- [proposal-writing](https://absolutely-skilled.vercel.app/skill/proposal-writing)
+- [crm-management](https://www.absolutelyskilled.pro/skill/crm-management)
+- [sales-enablement](https://www.absolutelyskilled.pro/skill/sales-enablement)
+- [lead-scoring](https://www.absolutelyskilled.pro/skill/lead-scoring)
+- [proposal-writing](https://www.absolutelyskilled.pro/skill/proposal-writing)
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/sales-playbook)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/sales-playbook)*

@@ -48,11 +48,11 @@ craft changelogs, and author migration guides that developers actually trust.
 
 Pair developer-experience with these complementary skills:
 
-- [technical-writing](https://absolutely-skilled.vercel.app/skill/technical-writing)
-- [cli-design](https://absolutely-skilled.vercel.app/skill/cli-design)
-- [open-source-management](https://absolutely-skilled.vercel.app/skill/open-source-management)
-- [internal-docs](https://absolutely-skilled.vercel.app/skill/internal-docs)
-- [codedocs](https://absolutely-skilled.vercel.app/skill/codedocs)
+- [technical-writing](https://www.absolutelyskilled.pro/skill/technical-writing)
+- [cli-design](https://www.absolutelyskilled.pro/skill/cli-design)
+- [open-source-management](https://www.absolutelyskilled.pro/skill/open-source-management)
+- [internal-docs](https://www.absolutelyskilled.pro/skill/internal-docs)
+- [codedocs](https://www.absolutelyskilled.pro/skill/codedocs)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/developer-experience)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/developer-experience)*

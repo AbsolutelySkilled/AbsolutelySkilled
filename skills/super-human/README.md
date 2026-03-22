@@ -45,11 +45,11 @@ The model has 7 phases: **INTAKE - DECOMPOSE - DISCOVER - PLAN - EXECUTE - VERIF
 
 Pair super-human with these complementary skills:
 
-- [agile-scrum](https://absolutely-skilled.vercel.app/skill/agile-scrum)
-- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
-- [project-execution](https://absolutely-skilled.vercel.app/skill/project-execution)
-- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
-- [code-review-mastery](https://absolutely-skilled.vercel.app/skill/code-review-mastery)
+- [agile-scrum](https://www.absolutelyskilled.pro/skill/agile-scrum)
+- [test-strategy](https://www.absolutelyskilled.pro/skill/test-strategy)
+- [project-execution](https://www.absolutelyskilled.pro/skill/project-execution)
+- [clean-code](https://www.absolutelyskilled.pro/skill/clean-code)
+- [code-review-mastery](https://www.absolutelyskilled.pro/skill/code-review-mastery)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/super-human)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/super-human)*

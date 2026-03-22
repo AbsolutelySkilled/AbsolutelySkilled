@@ -47,10 +47,10 @@ to act on findings correctly.
 
 Pair product-analytics with these complementary skills:
 
-- [saas-metrics](https://absolutely-skilled.vercel.app/skill/saas-metrics)
-- [product-strategy](https://absolutely-skilled.vercel.app/skill/product-strategy)
-- [growth-hacking](https://absolutely-skilled.vercel.app/skill/growth-hacking)
-- [data-science](https://absolutely-skilled.vercel.app/skill/data-science)
+- [saas-metrics](https://www.absolutelyskilled.pro/skill/saas-metrics)
+- [product-strategy](https://www.absolutelyskilled.pro/skill/product-strategy)
+- [growth-hacking](https://www.absolutelyskilled.pro/skill/growth-hacking)
+- [data-science](https://www.absolutelyskilled.pro/skill/data-science)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/product-analytics)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/product-analytics)*

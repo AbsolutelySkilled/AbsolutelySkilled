@@ -48,11 +48,11 @@ platform is the foundation.
 
 Pair frontend-developer with these complementary skills:
 
-- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
-- [accessibility-wcag](https://absolutely-skilled.vercel.app/skill/accessibility-wcag)
-- [responsive-design](https://absolutely-skilled.vercel.app/skill/responsive-design)
-- [ultimate-ui](https://absolutely-skilled.vercel.app/skill/ultimate-ui)
-- [react-ink](https://absolutely-skilled.vercel.app/skill/react-ink)
+- [design-systems](https://www.absolutelyskilled.pro/skill/design-systems)
+- [accessibility-wcag](https://www.absolutelyskilled.pro/skill/accessibility-wcag)
+- [responsive-design](https://www.absolutelyskilled.pro/skill/responsive-design)
+- [ultimate-ui](https://www.absolutelyskilled.pro/skill/ultimate-ui)
+- [react-ink](https://www.absolutelyskilled.pro/skill/react-ink)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/frontend-developer)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/frontend-developer)*

@@ -50,10 +50,10 @@ the metrics that tell you whether any of it is working.
 
 Pair community-management with these complementary skills:
 
-- [customer-support-ops](https://absolutely-skilled.vercel.app/skill/customer-support-ops)
-- [developer-advocacy](https://absolutely-skilled.vercel.app/skill/developer-advocacy)
-- [social-media-strategy](https://absolutely-skilled.vercel.app/skill/social-media-strategy)
-- [employee-engagement](https://absolutely-skilled.vercel.app/skill/employee-engagement)
+- [customer-support-ops](https://www.absolutelyskilled.pro/skill/customer-support-ops)
+- [developer-advocacy](https://www.absolutelyskilled.pro/skill/developer-advocacy)
+- [social-media-strategy](https://www.absolutelyskilled.pro/skill/social-media-strategy)
+- [employee-engagement](https://www.absolutelyskilled.pro/skill/employee-engagement)
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/community-management)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/community-management)*

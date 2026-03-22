@@ -1,5 +1,5 @@
 {
-  "$schema": "https://absolutely-skilled.vercel.app/schemas/skill-config.json",
+  "$schema": "https://www.absolutelyskilled.pro/schemas/skill-config.json",
   "_comment": "Project-specific Playwright settings. The agent reads this on activation to avoid repeat questions. Edit values to match your project.",
   "baseURL": "http://localhost:3000",
   "testDir": "./tests",

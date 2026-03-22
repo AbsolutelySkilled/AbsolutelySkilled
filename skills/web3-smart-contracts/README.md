@@ -48,9 +48,9 @@ OpenZeppelin would approach the task.
 
 Pair web3-smart-contracts with these complementary skills:
 
-- [cryptography](https://absolutely-skilled.vercel.app/skill/cryptography)
-- [appsec-owasp](https://absolutely-skilled.vercel.app/skill/appsec-owasp)
-- [system-design](https://absolutely-skilled.vercel.app/skill/system-design)
+- [cryptography](https://www.absolutelyskilled.pro/skill/cryptography)
+- [appsec-owasp](https://www.absolutelyskilled.pro/skill/appsec-owasp)
+- [system-design](https://www.absolutelyskilled.pro/skill/system-design)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/web3-smart-contracts)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/web3-smart-contracts)*

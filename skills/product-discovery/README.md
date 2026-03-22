@@ -47,10 +47,10 @@ discovery the way a senior product manager or product trio would.
 
 Pair product-discovery with these complementary skills:
 
-- [ux-research](https://absolutely-skilled.vercel.app/skill/ux-research)
-- [product-strategy](https://absolutely-skilled.vercel.app/skill/product-strategy)
-- [customer-research](https://absolutely-skilled.vercel.app/skill/customer-research)
-- [user-stories](https://absolutely-skilled.vercel.app/skill/user-stories)
+- [ux-research](https://www.absolutelyskilled.pro/skill/ux-research)
+- [product-strategy](https://www.absolutelyskilled.pro/skill/product-strategy)
+- [customer-research](https://www.absolutelyskilled.pro/skill/customer-research)
+- [user-stories](https://www.absolutelyskilled.pro/skill/user-stories)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/product-discovery)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/product-discovery)*

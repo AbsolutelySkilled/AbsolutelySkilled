@@ -46,10 +46,10 @@ low maintenance cost.
 
 Pair test-strategy with these complementary skills:
 
-- [jest-vitest](https://absolutely-skilled.vercel.app/skill/jest-vitest)
-- [cypress-testing](https://absolutely-skilled.vercel.app/skill/cypress-testing)
-- [playwright-testing](https://absolutely-skilled.vercel.app/skill/playwright-testing)
-- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
+- [jest-vitest](https://www.absolutelyskilled.pro/skill/jest-vitest)
+- [cypress-testing](https://www.absolutelyskilled.pro/skill/cypress-testing)
+- [playwright-testing](https://www.absolutelyskilled.pro/skill/playwright-testing)
+- [clean-code](https://www.absolutelyskilled.pro/skill/clean-code)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/test-strategy)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/test-strategy)*

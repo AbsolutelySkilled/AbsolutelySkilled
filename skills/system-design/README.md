@@ -48,10 +48,10 @@ estimation through detailed component design.
 
 Pair system-design with these complementary skills:
 
-- [clean-architecture](https://absolutely-skilled.vercel.app/skill/clean-architecture)
-- [microservices](https://absolutely-skilled.vercel.app/skill/microservices)
-- [database-engineering](https://absolutely-skilled.vercel.app/skill/database-engineering)
-- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
+- [clean-architecture](https://www.absolutelyskilled.pro/skill/clean-architecture)
+- [microservices](https://www.absolutelyskilled.pro/skill/microservices)
+- [database-engineering](https://www.absolutelyskilled.pro/skill/database-engineering)
+- [performance-engineering](https://www.absolutelyskilled.pro/skill/performance-engineering)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/system-design)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/system-design)*

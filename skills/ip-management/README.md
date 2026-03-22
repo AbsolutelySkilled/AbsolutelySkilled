@@ -53,9 +53,9 @@ trademarks, and building policies that prevent IP loss.
 
 Pair ip-management with these complementary skills:
 
-- [contract-drafting](https://absolutely-skilled.vercel.app/skill/contract-drafting)
-- [open-source-management](https://absolutely-skilled.vercel.app/skill/open-source-management)
-- [employment-law](https://absolutely-skilled.vercel.app/skill/employment-law)
+- [contract-drafting](https://www.absolutelyskilled.pro/skill/contract-drafting)
+- [open-source-management](https://www.absolutelyskilled.pro/skill/open-source-management)
+- [employment-law](https://www.absolutelyskilled.pro/skill/employment-law)
 
 ## Frequently Asked Questions
 
@@ -78,4 +78,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/ip-management)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/ip-management)*

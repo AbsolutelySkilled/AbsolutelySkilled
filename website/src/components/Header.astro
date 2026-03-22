@@ -1,5 +1,6 @@
 ---
 import SearchButton from './SearchButton.astro';
+import GitHubBadge from './GitHubBadge.astro';
 ---
 
 <header class="border-b border-border sticky top-0 bg-page/80 backdrop-blur-xl z-50">
@@ -18,14 +19,7 @@ import SearchButton from './SearchButton.astro';
     <div class="flex items-center gap-5 shrink-0">
       <a href="/skills" class="text-sm text-text-secondary hover:text-text-primary transition-colors hidden sm:block">Skills</a>
       <a href="/blog" class="text-sm text-text-secondary hover:text-text-primary transition-colors hidden sm:block">Blog</a>
-      <a
-        href="https://github.com/AbsolutelySkilled/AbsolutelySkilled"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-sm text-text-secondary hover:text-text-primary transition-colors"
-      >
-        GitHub
-      </a>
+      <GitHubBadge />
     </div>
   </nav>
 </header>

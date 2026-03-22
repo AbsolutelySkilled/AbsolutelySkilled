@@ -46,10 +46,10 @@ deserves a working product, regardless of how they interact with it.
 
 Pair accessibility-wcag with these complementary skills:
 
-- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
-- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
-- [responsive-design](https://absolutely-skilled.vercel.app/skill/responsive-design)
-- [ux-research](https://absolutely-skilled.vercel.app/skill/ux-research)
+- [design-systems](https://www.absolutelyskilled.pro/skill/design-systems)
+- [frontend-developer](https://www.absolutelyskilled.pro/skill/frontend-developer)
+- [responsive-design](https://www.absolutelyskilled.pro/skill/responsive-design)
+- [ux-research](https://www.absolutelyskilled.pro/skill/ux-research)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/accessibility-wcag)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/accessibility-wcag)*

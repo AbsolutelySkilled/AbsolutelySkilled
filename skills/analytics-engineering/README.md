@@ -48,10 +48,10 @@ support.
 
 Pair analytics-engineering with these complementary skills:
 
-- [data-warehousing](https://absolutely-skilled.vercel.app/skill/data-warehousing)
-- [data-pipelines](https://absolutely-skilled.vercel.app/skill/data-pipelines)
-- [data-quality](https://absolutely-skilled.vercel.app/skill/data-quality)
-- [data-science](https://absolutely-skilled.vercel.app/skill/data-science)
+- [data-warehousing](https://www.absolutelyskilled.pro/skill/data-warehousing)
+- [data-pipelines](https://www.absolutelyskilled.pro/skill/data-pipelines)
+- [data-quality](https://www.absolutelyskilled.pro/skill/data-quality)
+- [data-science](https://www.absolutelyskilled.pro/skill/data-science)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/analytics-engineering)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/analytics-engineering)*

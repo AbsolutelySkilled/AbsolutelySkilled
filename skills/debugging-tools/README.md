@@ -46,10 +46,10 @@ then move inward. Tools are instruments; systematic thinking is the method.
 
 Pair debugging-tools with these complementary skills:
 
-- [observability](https://absolutely-skilled.vercel.app/skill/observability)
-- [sentry](https://absolutely-skilled.vercel.app/skill/sentry)
-- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
-- [refactoring-patterns](https://absolutely-skilled.vercel.app/skill/refactoring-patterns)
+- [observability](https://www.absolutelyskilled.pro/skill/observability)
+- [sentry](https://www.absolutelyskilled.pro/skill/sentry)
+- [performance-engineering](https://www.absolutelyskilled.pro/skill/performance-engineering)
+- [refactoring-patterns](https://www.absolutelyskilled.pro/skill/refactoring-patterns)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/debugging-tools)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/debugging-tools)*

@@ -46,10 +46,10 @@ who need to respond with speed and precision when a breach is suspected or confi
 
 Pair security-incident-response with these complementary skills:
 
-- [incident-management](https://absolutely-skilled.vercel.app/skill/incident-management)
-- [appsec-owasp](https://absolutely-skilled.vercel.app/skill/appsec-owasp)
-- [penetration-testing](https://absolutely-skilled.vercel.app/skill/penetration-testing)
-- [observability](https://absolutely-skilled.vercel.app/skill/observability)
+- [incident-management](https://www.absolutelyskilled.pro/skill/incident-management)
+- [appsec-owasp](https://www.absolutelyskilled.pro/skill/appsec-owasp)
+- [penetration-testing](https://www.absolutelyskilled.pro/skill/penetration-testing)
+- [observability](https://www.absolutelyskilled.pro/skill/observability)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/security-incident-response)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/security-incident-response)*

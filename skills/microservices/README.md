@@ -40,10 +40,10 @@ Microservices is an architectural style that structures an application as a coll
 
 Pair microservices with these complementary skills:
 
-- [system-design](https://absolutely-skilled.vercel.app/skill/system-design)
-- [event-driven-architecture](https://absolutely-skilled.vercel.app/skill/event-driven-architecture)
-- [docker-kubernetes](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)
-- [api-design](https://absolutely-skilled.vercel.app/skill/api-design)
+- [system-design](https://www.absolutelyskilled.pro/skill/system-design)
+- [event-driven-architecture](https://www.absolutelyskilled.pro/skill/event-driven-architecture)
+- [docker-kubernetes](https://www.absolutelyskilled.pro/skill/docker-kubernetes)
+- [api-design](https://www.absolutelyskilled.pro/skill/api-design)
 
 ## Frequently Asked Questions
 
@@ -66,4 +66,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/microservices)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/microservices)*

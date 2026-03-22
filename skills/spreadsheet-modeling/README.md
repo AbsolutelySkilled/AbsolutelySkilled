@@ -49,10 +49,10 @@ analyses to enterprise financial models.
 
 Pair spreadsheet-modeling with these complementary skills:
 
-- [financial-modeling](https://absolutely-skilled.vercel.app/skill/financial-modeling)
-- [budgeting-planning](https://absolutely-skilled.vercel.app/skill/budgeting-planning)
-- [financial-reporting](https://absolutely-skilled.vercel.app/skill/financial-reporting)
-- [no-code-automation](https://absolutely-skilled.vercel.app/skill/no-code-automation)
+- [financial-modeling](https://www.absolutelyskilled.pro/skill/financial-modeling)
+- [budgeting-planning](https://www.absolutelyskilled.pro/skill/budgeting-planning)
+- [financial-reporting](https://www.absolutelyskilled.pro/skill/financial-reporting)
+- [no-code-automation](https://www.absolutelyskilled.pro/skill/no-code-automation)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/spreadsheet-modeling)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/spreadsheet-modeling)*

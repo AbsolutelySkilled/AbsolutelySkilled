@@ -48,10 +48,10 @@ guidance on production patterns.
 
 Pair docker-kubernetes with these complementary skills:
 
-- [ci-cd-pipelines](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)
-- [terraform-iac](https://absolutely-skilled.vercel.app/skill/terraform-iac)
-- [linux-admin](https://absolutely-skilled.vercel.app/skill/linux-admin)
-- [observability](https://absolutely-skilled.vercel.app/skill/observability)
+- [ci-cd-pipelines](https://www.absolutelyskilled.pro/skill/ci-cd-pipelines)
+- [terraform-iac](https://www.absolutelyskilled.pro/skill/terraform-iac)
+- [linux-admin](https://www.absolutelyskilled.pro/skill/linux-admin)
+- [observability](https://www.absolutelyskilled.pro/skill/observability)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/docker-kubernetes)*

@@ -49,10 +49,10 @@ to wrap any CLI tool, not just git.
 
 Pair meta-repo with these complementary skills:
 
-- [monorepo-management](https://absolutely-skilled.vercel.app/skill/monorepo-management)
-- [git-advanced](https://absolutely-skilled.vercel.app/skill/git-advanced)
-- [open-source-management](https://absolutely-skilled.vercel.app/skill/open-source-management)
-- [ci-cd-pipelines](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)
+- [monorepo-management](https://www.absolutelyskilled.pro/skill/monorepo-management)
+- [git-advanced](https://www.absolutelyskilled.pro/skill/git-advanced)
+- [open-source-management](https://www.absolutelyskilled.pro/skill/open-source-management)
+- [ci-cd-pipelines](https://www.absolutelyskilled.pro/skill/ci-cd-pipelines)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/meta-repo)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/meta-repo)*

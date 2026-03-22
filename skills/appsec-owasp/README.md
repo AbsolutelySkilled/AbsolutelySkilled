@@ -46,10 +46,10 @@ need security guidance at the code level, not just as policy.
 
 Pair appsec-owasp with these complementary skills:
 
-- [penetration-testing](https://absolutely-skilled.vercel.app/skill/penetration-testing)
-- [cloud-security](https://absolutely-skilled.vercel.app/skill/cloud-security)
-- [cryptography](https://absolutely-skilled.vercel.app/skill/cryptography)
-- [security-incident-response](https://absolutely-skilled.vercel.app/skill/security-incident-response)
+- [penetration-testing](https://www.absolutelyskilled.pro/skill/penetration-testing)
+- [cloud-security](https://www.absolutelyskilled.pro/skill/cloud-security)
+- [cryptography](https://www.absolutelyskilled.pro/skill/cryptography)
+- [security-incident-response](https://www.absolutelyskilled.pro/skill/security-incident-response)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/appsec-owasp)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/appsec-owasp)*

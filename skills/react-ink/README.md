@@ -43,9 +43,9 @@ React Ink brings React's component model to the terminal. Instead of rendering t
 
 Pair react-ink with these complementary skills:
 
-- [cli-design](https://absolutely-skilled.vercel.app/skill/cli-design)
-- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
-- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
+- [cli-design](https://www.absolutelyskilled.pro/skill/cli-design)
+- [frontend-developer](https://www.absolutelyskilled.pro/skill/frontend-developer)
+- [clean-code](https://www.absolutelyskilled.pro/skill/clean-code)
 
 ## Frequently Asked Questions
 
@@ -68,4 +68,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/react-ink)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/react-ink)*

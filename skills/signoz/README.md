@@ -48,10 +48,10 @@ self-hosted via Docker or Kubernetes.
 
 Pair signoz with these complementary skills:
 
-- [observability](https://absolutely-skilled.vercel.app/skill/observability)
-- [sentry](https://absolutely-skilled.vercel.app/skill/sentry)
-- [site-reliability](https://absolutely-skilled.vercel.app/skill/site-reliability)
-- [docker-kubernetes](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)
+- [observability](https://www.absolutelyskilled.pro/skill/observability)
+- [sentry](https://www.absolutelyskilled.pro/skill/sentry)
+- [site-reliability](https://www.absolutelyskilled.pro/skill/site-reliability)
+- [docker-kubernetes](https://www.absolutelyskilled.pro/skill/docker-kubernetes)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/signoz)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/signoz)*

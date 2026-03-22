@@ -16,4 +16,4 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
-Sitemap: https://absolutely-skilled.vercel.app/sitemap-index.xml
+Sitemap: https://www.absolutelyskilled.pro/sitemap-index.xml

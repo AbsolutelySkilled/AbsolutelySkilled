@@ -50,10 +50,10 @@ right questions, and make sure nothing gets skipped.
 
 Pair video-creator with these complementary skills:
 
-- [remotion-video](https://absolutely-skilled.vercel.app/skill/remotion-video)
-- [video-scriptwriting](https://absolutely-skilled.vercel.app/skill/video-scriptwriting)
-- [video-audio-design](https://absolutely-skilled.vercel.app/skill/video-audio-design)
-- [video-analyzer](https://absolutely-skilled.vercel.app/skill/video-analyzer)
+- [remotion-video](https://www.absolutelyskilled.pro/skill/remotion-video)
+- [video-scriptwriting](https://www.absolutelyskilled.pro/skill/video-scriptwriting)
+- [video-audio-design](https://www.absolutelyskilled.pro/skill/video-audio-design)
+- [video-analyzer](https://www.absolutelyskilled.pro/skill/video-analyzer)
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/video-creator)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/video-creator)*

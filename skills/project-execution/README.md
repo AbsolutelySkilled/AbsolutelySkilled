@@ -49,10 +49,10 @@ throughout a project's lifecycle.
 
 Pair project-execution with these complementary skills:
 
-- [agile-scrum](https://absolutely-skilled.vercel.app/skill/agile-scrum)
-- [remote-collaboration](https://absolutely-skilled.vercel.app/skill/remote-collaboration)
-- [incident-management](https://absolutely-skilled.vercel.app/skill/incident-management)
-- [product-launch](https://absolutely-skilled.vercel.app/skill/product-launch)
+- [agile-scrum](https://www.absolutelyskilled.pro/skill/agile-scrum)
+- [remote-collaboration](https://www.absolutelyskilled.pro/skill/remote-collaboration)
+- [incident-management](https://www.absolutelyskilled.pro/skill/incident-management)
+- [product-launch](https://www.absolutelyskilled.pro/skill/product-launch)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/project-execution)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/project-execution)*

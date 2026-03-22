@@ -47,10 +47,10 @@ craft with data-driven iteration and genuine community engagement.
 
 Pair social-media-strategy with these complementary skills:
 
-- [content-marketing](https://absolutely-skilled.vercel.app/skill/content-marketing)
-- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
-- [video-production](https://absolutely-skilled.vercel.app/skill/video-production)
-- [brand-strategy](https://absolutely-skilled.vercel.app/skill/brand-strategy)
+- [content-marketing](https://www.absolutelyskilled.pro/skill/content-marketing)
+- [copywriting](https://www.absolutelyskilled.pro/skill/copywriting)
+- [video-production](https://www.absolutelyskilled.pro/skill/video-production)
+- [brand-strategy](https://www.absolutelyskilled.pro/skill/brand-strategy)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/social-media-strategy)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/social-media-strategy)*

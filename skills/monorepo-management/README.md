@@ -48,11 +48,11 @@ build systems (Bazel), internal package patterns, and shared tooling config.
 
 Pair monorepo-management with these complementary skills:
 
-- [ci-cd-pipelines](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)
-- [git-advanced](https://absolutely-skilled.vercel.app/skill/git-advanced)
-- [developer-experience](https://absolutely-skilled.vercel.app/skill/developer-experience)
-- [vite-plus](https://absolutely-skilled.vercel.app/skill/vite-plus)
-- [meta-repo](https://absolutely-skilled.vercel.app/skill/meta-repo)
+- [ci-cd-pipelines](https://www.absolutelyskilled.pro/skill/ci-cd-pipelines)
+- [git-advanced](https://www.absolutelyskilled.pro/skill/git-advanced)
+- [developer-experience](https://www.absolutelyskilled.pro/skill/developer-experience)
+- [vite-plus](https://www.absolutelyskilled.pro/skill/vite-plus)
+- [meta-repo](https://www.absolutelyskilled.pro/skill/meta-repo)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/monorepo-management)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/monorepo-management)*

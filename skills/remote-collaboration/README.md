@@ -49,10 +49,10 @@ writing more and meeting less - without losing alignment or team cohesion.
 
 Pair remote-collaboration with these complementary skills:
 
-- [agile-scrum](https://absolutely-skilled.vercel.app/skill/agile-scrum)
-- [project-execution](https://absolutely-skilled.vercel.app/skill/project-execution)
-- [internal-docs](https://absolutely-skilled.vercel.app/skill/internal-docs)
-- [knowledge-base](https://absolutely-skilled.vercel.app/skill/knowledge-base)
+- [agile-scrum](https://www.absolutelyskilled.pro/skill/agile-scrum)
+- [project-execution](https://www.absolutelyskilled.pro/skill/project-execution)
+- [internal-docs](https://www.absolutelyskilled.pro/skill/internal-docs)
+- [knowledge-base](https://www.absolutelyskilled.pro/skill/knowledge-base)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/remote-collaboration)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/remote-collaboration)*

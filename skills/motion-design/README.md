@@ -50,10 +50,10 @@ and respect user preferences.
 
 Pair motion-design with these complementary skills:
 
-- [responsive-design](https://absolutely-skilled.vercel.app/skill/responsive-design)
-- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
-- [figma-to-code](https://absolutely-skilled.vercel.app/skill/figma-to-code)
-- [ultimate-ui](https://absolutely-skilled.vercel.app/skill/ultimate-ui)
+- [responsive-design](https://www.absolutelyskilled.pro/skill/responsive-design)
+- [design-systems](https://www.absolutelyskilled.pro/skill/design-systems)
+- [figma-to-code](https://www.absolutelyskilled.pro/skill/figma-to-code)
+- [ultimate-ui](https://www.absolutelyskilled.pro/skill/ultimate-ui)
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/motion-design)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/motion-design)*

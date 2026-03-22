@@ -50,10 +50,10 @@ and how to write management commentary that tells the story behind the numbers.
 
 Pair financial-reporting with these complementary skills:
 
-- [financial-modeling](https://absolutely-skilled.vercel.app/skill/financial-modeling)
-- [budgeting-planning](https://absolutely-skilled.vercel.app/skill/budgeting-planning)
-- [bookkeeping-automation](https://absolutely-skilled.vercel.app/skill/bookkeeping-automation)
-- [spreadsheet-modeling](https://absolutely-skilled.vercel.app/skill/spreadsheet-modeling)
+- [financial-modeling](https://www.absolutelyskilled.pro/skill/financial-modeling)
+- [budgeting-planning](https://www.absolutelyskilled.pro/skill/budgeting-planning)
+- [bookkeeping-automation](https://www.absolutelyskilled.pro/skill/bookkeeping-automation)
+- [spreadsheet-modeling](https://www.absolutelyskilled.pro/skill/spreadsheet-modeling)
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/financial-reporting)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/financial-reporting)*

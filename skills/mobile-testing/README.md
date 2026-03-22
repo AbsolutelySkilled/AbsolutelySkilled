@@ -47,10 +47,10 @@ dialogs, and binary distribution gatekeeping by Apple and Google.
 
 Pair mobile-testing with these complementary skills:
 
-- [react-native](https://absolutely-skilled.vercel.app/skill/react-native)
-- [android-kotlin](https://absolutely-skilled.vercel.app/skill/android-kotlin)
-- [ios-swift](https://absolutely-skilled.vercel.app/skill/ios-swift)
-- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
+- [react-native](https://www.absolutelyskilled.pro/skill/react-native)
+- [android-kotlin](https://www.absolutelyskilled.pro/skill/android-kotlin)
+- [ios-swift](https://www.absolutelyskilled.pro/skill/ios-swift)
+- [test-strategy](https://www.absolutelyskilled.pro/skill/test-strategy)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/mobile-testing)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/mobile-testing)*

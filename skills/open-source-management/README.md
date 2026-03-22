@@ -48,11 +48,11 @@ widely accepted industry standards.
 
 Pair open-source-management with these complementary skills:
 
-- [developer-advocacy](https://absolutely-skilled.vercel.app/skill/developer-advocacy)
-- [git-advanced](https://absolutely-skilled.vercel.app/skill/git-advanced)
-- [developer-experience](https://absolutely-skilled.vercel.app/skill/developer-experience)
-- [ip-management](https://absolutely-skilled.vercel.app/skill/ip-management)
-- [meta-repo](https://absolutely-skilled.vercel.app/skill/meta-repo)
+- [developer-advocacy](https://www.absolutelyskilled.pro/skill/developer-advocacy)
+- [git-advanced](https://www.absolutelyskilled.pro/skill/git-advanced)
+- [developer-experience](https://www.absolutelyskilled.pro/skill/developer-experience)
+- [ip-management](https://www.absolutelyskilled.pro/skill/ip-management)
+- [meta-repo](https://www.absolutelyskilled.pro/skill/meta-repo)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/open-source-management)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/open-source-management)*

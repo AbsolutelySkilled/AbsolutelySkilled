@@ -51,11 +51,11 @@ contract automatically.
 
 Pair ci-cd-pipelines with these complementary skills:
 
-- [docker-kubernetes](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)
-- [terraform-iac](https://absolutely-skilled.vercel.app/skill/terraform-iac)
-- [git-advanced](https://absolutely-skilled.vercel.app/skill/git-advanced)
-- [monorepo-management](https://absolutely-skilled.vercel.app/skill/monorepo-management)
-- [meta-repo](https://absolutely-skilled.vercel.app/skill/meta-repo)
+- [docker-kubernetes](https://www.absolutelyskilled.pro/skill/docker-kubernetes)
+- [terraform-iac](https://www.absolutelyskilled.pro/skill/terraform-iac)
+- [git-advanced](https://www.absolutelyskilled.pro/skill/git-advanced)
+- [monorepo-management](https://www.absolutelyskilled.pro/skill/monorepo-management)
+- [meta-repo](https://www.absolutelyskilled.pro/skill/meta-repo)
 
 ## Frequently Asked Questions
 
@@ -78,4 +78,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/ci-cd-pipelines)*

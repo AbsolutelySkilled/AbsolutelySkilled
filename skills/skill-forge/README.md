@@ -69,4 +69,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/skill-forge)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/skill-forge)*

@@ -47,9 +47,9 @@ across providers (OpenAI, Anthropic, Google) with minor syntactic differences.
 
 Pair prompt-engineering with these complementary skills:
 
-- [llm-app-development](https://absolutely-skilled.vercel.app/skill/llm-app-development)
-- [ai-agent-design](https://absolutely-skilled.vercel.app/skill/ai-agent-design)
-- [nlp-engineering](https://absolutely-skilled.vercel.app/skill/nlp-engineering)
+- [llm-app-development](https://www.absolutelyskilled.pro/skill/llm-app-development)
+- [ai-agent-design](https://www.absolutelyskilled.pro/skill/ai-agent-design)
+- [nlp-engineering](https://www.absolutelyskilled.pro/skill/nlp-engineering)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/prompt-engineering)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/prompt-engineering)*

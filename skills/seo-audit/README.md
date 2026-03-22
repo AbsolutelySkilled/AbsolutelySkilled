@@ -48,10 +48,10 @@ skills - use it to diagnose, then hand off to the right skill for each fix.
 
 Pair seo-audit with these complementary skills:
 
-- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
-- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
-- [core-web-vitals](https://absolutely-skilled.vercel.app/skill/core-web-vitals)
-- [content-seo](https://absolutely-skilled.vercel.app/skill/content-seo)
+- [seo-mastery](https://www.absolutelyskilled.pro/skill/seo-mastery)
+- [technical-seo](https://www.absolutelyskilled.pro/skill/technical-seo)
+- [core-web-vitals](https://www.absolutelyskilled.pro/skill/core-web-vitals)
+- [content-seo](https://www.absolutelyskilled.pro/skill/content-seo)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/seo-audit)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/seo-audit)*

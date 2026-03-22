@@ -49,10 +49,10 @@ enables agent-to-agent collaboration where agents remain autonomous entities.
 
 Pair a2a-protocol with these complementary skills:
 
-- [ai-agent-design](https://absolutely-skilled.vercel.app/skill/ai-agent-design)
-- [a2ui](https://absolutely-skilled.vercel.app/skill/a2ui)
-- [mastra](https://absolutely-skilled.vercel.app/skill/mastra)
-- [llm-app-development](https://absolutely-skilled.vercel.app/skill/llm-app-development)
+- [ai-agent-design](https://www.absolutelyskilled.pro/skill/ai-agent-design)
+- [a2ui](https://www.absolutelyskilled.pro/skill/a2ui)
+- [mastra](https://www.absolutelyskilled.pro/skill/mastra)
+- [llm-app-development](https://www.absolutelyskilled.pro/skill/llm-app-development)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/a2a-protocol)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/a2a-protocol)*

@@ -48,10 +48,10 @@ and doorway pages, so raw template fill without unique data is not enough.
 
 Pair programmatic-seo with these complementary skills:
 
-- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
-- [keyword-research](https://absolutely-skilled.vercel.app/skill/keyword-research)
-- [ecommerce-seo](https://absolutely-skilled.vercel.app/skill/ecommerce-seo)
-- [content-seo](https://absolutely-skilled.vercel.app/skill/content-seo)
+- [technical-seo](https://www.absolutelyskilled.pro/skill/technical-seo)
+- [keyword-research](https://www.absolutelyskilled.pro/skill/keyword-research)
+- [ecommerce-seo](https://www.absolutelyskilled.pro/skill/ecommerce-seo)
+- [content-seo](https://www.absolutelyskilled.pro/skill/content-seo)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/programmatic-seo)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/programmatic-seo)*

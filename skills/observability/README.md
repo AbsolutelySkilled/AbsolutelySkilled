@@ -48,10 +48,10 @@ as a retrofit.
 
 Pair observability with these complementary skills:
 
-- [site-reliability](https://absolutely-skilled.vercel.app/skill/site-reliability)
-- [incident-management](https://absolutely-skilled.vercel.app/skill/incident-management)
-- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
-- [sentry](https://absolutely-skilled.vercel.app/skill/sentry)
+- [site-reliability](https://www.absolutelyskilled.pro/skill/site-reliability)
+- [incident-management](https://www.absolutelyskilled.pro/skill/incident-management)
+- [performance-engineering](https://www.absolutelyskilled.pro/skill/performance-engineering)
+- [sentry](https://www.absolutelyskilled.pro/skill/sentry)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/observability)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/observability)*

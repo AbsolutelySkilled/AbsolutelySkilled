@@ -47,9 +47,9 @@ globally, replacing the need for nvm, fnm, or Corepack.
 
 Pair vite-plus with these complementary skills:
 
-- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
-- [monorepo-management](https://absolutely-skilled.vercel.app/skill/monorepo-management)
-- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
+- [frontend-developer](https://www.absolutelyskilled.pro/skill/frontend-developer)
+- [monorepo-management](https://www.absolutelyskilled.pro/skill/monorepo-management)
+- [performance-engineering](https://www.absolutelyskilled.pro/skill/performance-engineering)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/vite-plus)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/vite-plus)*

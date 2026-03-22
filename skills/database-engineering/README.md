@@ -47,10 +47,10 @@ reference.
 
 Pair database-engineering with these complementary skills:
 
-- [backend-engineering](https://absolutely-skilled.vercel.app/skill/backend-engineering)
-- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
-- [data-pipelines](https://absolutely-skilled.vercel.app/skill/data-pipelines)
-- [system-design](https://absolutely-skilled.vercel.app/skill/system-design)
+- [backend-engineering](https://www.absolutelyskilled.pro/skill/backend-engineering)
+- [performance-engineering](https://www.absolutelyskilled.pro/skill/performance-engineering)
+- [data-pipelines](https://www.absolutelyskilled.pro/skill/data-pipelines)
+- [system-design](https://www.absolutelyskilled.pro/skill/system-design)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/database-engineering)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/database-engineering)*

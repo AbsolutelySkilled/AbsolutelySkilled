@@ -48,10 +48,10 @@ for their specific audience - from a 2-page RFC to a detailed incident post-mort
 
 Pair internal-docs with these complementary skills:
 
-- [technical-writing](https://absolutely-skilled.vercel.app/skill/technical-writing)
-- [knowledge-base](https://absolutely-skilled.vercel.app/skill/knowledge-base)
-- [remote-collaboration](https://absolutely-skilled.vercel.app/skill/remote-collaboration)
-- [second-brain](https://absolutely-skilled.vercel.app/skill/second-brain)
+- [technical-writing](https://www.absolutelyskilled.pro/skill/technical-writing)
+- [knowledge-base](https://www.absolutelyskilled.pro/skill/knowledge-base)
+- [remote-collaboration](https://www.absolutelyskilled.pro/skill/remote-collaboration)
+- [second-brain](https://www.absolutelyskilled.pro/skill/second-brain)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/internal-docs)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/internal-docs)*

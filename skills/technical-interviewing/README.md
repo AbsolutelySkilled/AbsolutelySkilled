@@ -48,10 +48,10 @@ building rubrics, calibrating panels, and reducing bias.
 
 Pair technical-interviewing with these complementary skills:
 
-- [interview-design](https://absolutely-skilled.vercel.app/skill/interview-design)
-- [recruiting-ops](https://absolutely-skilled.vercel.app/skill/recruiting-ops)
-- [system-design](https://absolutely-skilled.vercel.app/skill/system-design)
-- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
+- [interview-design](https://www.absolutelyskilled.pro/skill/interview-design)
+- [recruiting-ops](https://www.absolutelyskilled.pro/skill/recruiting-ops)
+- [system-design](https://www.absolutelyskilled.pro/skill/system-design)
+- [clean-code](https://www.absolutelyskilled.pro/skill/clean-code)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/technical-interviewing)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/technical-interviewing)*

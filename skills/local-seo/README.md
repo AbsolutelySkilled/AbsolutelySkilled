@@ -50,10 +50,10 @@ to drive foot traffic and phone calls.
 
 Pair local-seo with these complementary skills:
 
-- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
-- [link-building](https://absolutely-skilled.vercel.app/skill/link-building)
-- [geo-optimization](https://absolutely-skilled.vercel.app/skill/geo-optimization)
-- [schema-markup](https://absolutely-skilled.vercel.app/skill/schema-markup)
+- [seo-mastery](https://www.absolutelyskilled.pro/skill/seo-mastery)
+- [link-building](https://www.absolutelyskilled.pro/skill/link-building)
+- [geo-optimization](https://www.absolutelyskilled.pro/skill/geo-optimization)
+- [schema-markup](https://www.absolutelyskilled.pro/skill/schema-markup)
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/local-seo)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/local-seo)*

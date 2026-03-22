@@ -45,10 +45,10 @@ blast radius, and translating findings into durable resilience improvements.
 
 Pair chaos-engineering with these complementary skills:
 
-- [site-reliability](https://absolutely-skilled.vercel.app/skill/site-reliability)
-- [load-testing](https://absolutely-skilled.vercel.app/skill/load-testing)
-- [incident-management](https://absolutely-skilled.vercel.app/skill/incident-management)
-- [observability](https://absolutely-skilled.vercel.app/skill/observability)
+- [site-reliability](https://www.absolutelyskilled.pro/skill/site-reliability)
+- [load-testing](https://www.absolutelyskilled.pro/skill/load-testing)
+- [incident-management](https://www.absolutelyskilled.pro/skill/incident-management)
+- [observability](https://www.absolutelyskilled.pro/skill/observability)
 
 ## Frequently Asked Questions
 
@@ -71,4 +71,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/chaos-engineering)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/chaos-engineering)*

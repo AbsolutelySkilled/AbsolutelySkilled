@@ -46,10 +46,10 @@ and database query layer. The guiding philosophy is always measure first, optimi
 
 Pair performance-engineering with these complementary skills:
 
-- [observability](https://absolutely-skilled.vercel.app/skill/observability)
-- [load-testing](https://absolutely-skilled.vercel.app/skill/load-testing)
-- [backend-engineering](https://absolutely-skilled.vercel.app/skill/backend-engineering)
-- [database-engineering](https://absolutely-skilled.vercel.app/skill/database-engineering)
+- [observability](https://www.absolutelyskilled.pro/skill/observability)
+- [load-testing](https://www.absolutelyskilled.pro/skill/load-testing)
+- [backend-engineering](https://www.absolutelyskilled.pro/skill/backend-engineering)
+- [database-engineering](https://www.absolutelyskilled.pro/skill/database-engineering)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/performance-engineering)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/performance-engineering)*

@@ -58,11 +58,11 @@ opportunity is. For HOW to optimize content once you have chosen your targets,
 
 Pair keyword-research with these complementary skills:
 
-- [content-seo](https://absolutely-skilled.vercel.app/skill/content-seo)
-- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
-- [aeo-optimization](https://absolutely-skilled.vercel.app/skill/aeo-optimization)
-- [programmatic-seo](https://absolutely-skilled.vercel.app/skill/programmatic-seo)
-- [geo-optimization](https://absolutely-skilled.vercel.app/skill/geo-optimization)
+- [content-seo](https://www.absolutelyskilled.pro/skill/content-seo)
+- [seo-mastery](https://www.absolutelyskilled.pro/skill/seo-mastery)
+- [aeo-optimization](https://www.absolutelyskilled.pro/skill/aeo-optimization)
+- [programmatic-seo](https://www.absolutelyskilled.pro/skill/programmatic-seo)
+- [geo-optimization](https://www.absolutelyskilled.pro/skill/geo-optimization)
 
 ## Frequently Asked Questions
 
@@ -85,4 +85,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/keyword-research)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/keyword-research)*

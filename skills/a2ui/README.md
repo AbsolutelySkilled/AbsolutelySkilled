@@ -49,10 +49,10 @@ incremental updates, and framework-agnostic rendering.
 
 Pair a2ui with these complementary skills:
 
-- [a2a-protocol](https://absolutely-skilled.vercel.app/skill/a2a-protocol)
-- [ai-agent-design](https://absolutely-skilled.vercel.app/skill/ai-agent-design)
-- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
-- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
+- [a2a-protocol](https://www.absolutelyskilled.pro/skill/a2a-protocol)
+- [ai-agent-design](https://www.absolutelyskilled.pro/skill/ai-agent-design)
+- [frontend-developer](https://www.absolutelyskilled.pro/skill/frontend-developer)
+- [design-systems](https://www.absolutelyskilled.pro/skill/design-systems)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/a2ui)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/a2ui)*

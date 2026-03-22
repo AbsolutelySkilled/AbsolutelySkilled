@@ -48,9 +48,9 @@ command pattern - that form the backbone of well-architected gameplay code.
 
 Pair game-design-patterns with these complementary skills:
 
-- [unity-development](https://absolutely-skilled.vercel.app/skill/unity-development)
-- [game-balancing](https://absolutely-skilled.vercel.app/skill/game-balancing)
-- [clean-architecture](https://absolutely-skilled.vercel.app/skill/clean-architecture)
+- [unity-development](https://www.absolutelyskilled.pro/skill/unity-development)
+- [game-balancing](https://www.absolutelyskilled.pro/skill/game-balancing)
+- [clean-architecture](https://www.absolutelyskilled.pro/skill/clean-architecture)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/game-design-patterns)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/game-design-patterns)*

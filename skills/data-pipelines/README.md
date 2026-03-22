@@ -49,10 +49,10 @@ data infrastructure.
 
 Pair data-pipelines with these complementary skills:
 
-- [data-warehousing](https://absolutely-skilled.vercel.app/skill/data-warehousing)
-- [data-quality](https://absolutely-skilled.vercel.app/skill/data-quality)
-- [analytics-engineering](https://absolutely-skilled.vercel.app/skill/analytics-engineering)
-- [real-time-streaming](https://absolutely-skilled.vercel.app/skill/real-time-streaming)
+- [data-warehousing](https://www.absolutelyskilled.pro/skill/data-warehousing)
+- [data-quality](https://www.absolutelyskilled.pro/skill/data-quality)
+- [analytics-engineering](https://www.absolutelyskilled.pro/skill/analytics-engineering)
+- [real-time-streaming](https://www.absolutelyskilled.pro/skill/real-time-streaming)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/data-pipelines)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/data-pipelines)*

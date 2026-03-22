@@ -48,10 +48,10 @@ deflection to prove business value, and maintaining content ruthlessly so it sta
 
 Pair knowledge-base with these complementary skills:
 
-- [customer-support-ops](https://absolutely-skilled.vercel.app/skill/customer-support-ops)
-- [internal-docs](https://absolutely-skilled.vercel.app/skill/internal-docs)
-- [technical-writing](https://absolutely-skilled.vercel.app/skill/technical-writing)
-- [second-brain](https://absolutely-skilled.vercel.app/skill/second-brain)
+- [customer-support-ops](https://www.absolutelyskilled.pro/skill/customer-support-ops)
+- [internal-docs](https://www.absolutelyskilled.pro/skill/internal-docs)
+- [technical-writing](https://www.absolutelyskilled.pro/skill/technical-writing)
+- [second-brain](https://www.absolutelyskilled.pro/skill/second-brain)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/knowledge-base)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/knowledge-base)*

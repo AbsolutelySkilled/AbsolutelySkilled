@@ -50,10 +50,10 @@ process.
 
 Pair recruiting-ops with these complementary skills:
 
-- [interview-design](https://absolutely-skilled.vercel.app/skill/interview-design)
-- [onboarding](https://absolutely-skilled.vercel.app/skill/onboarding)
-- [employment-law](https://absolutely-skilled.vercel.app/skill/employment-law)
-- [technical-interviewing](https://absolutely-skilled.vercel.app/skill/technical-interviewing)
+- [interview-design](https://www.absolutelyskilled.pro/skill/interview-design)
+- [onboarding](https://www.absolutelyskilled.pro/skill/onboarding)
+- [employment-law](https://www.absolutelyskilled.pro/skill/employment-law)
+- [technical-interviewing](https://www.absolutelyskilled.pro/skill/technical-interviewing)
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/recruiting-ops)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/recruiting-ops)*

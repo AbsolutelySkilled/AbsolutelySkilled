@@ -48,10 +48,10 @@ Vercel, Netlify, AWS, and Azure.
 
 Pair mastra with these complementary skills:
 
-- [ai-agent-design](https://absolutely-skilled.vercel.app/skill/ai-agent-design)
-- [llm-app-development](https://absolutely-skilled.vercel.app/skill/llm-app-development)
-- [a2a-protocol](https://absolutely-skilled.vercel.app/skill/a2a-protocol)
-- [prompt-engineering](https://absolutely-skilled.vercel.app/skill/prompt-engineering)
+- [ai-agent-design](https://www.absolutelyskilled.pro/skill/ai-agent-design)
+- [llm-app-development](https://www.absolutelyskilled.pro/skill/llm-app-development)
+- [a2a-protocol](https://www.absolutelyskilled.pro/skill/a2a-protocol)
+- [prompt-engineering](https://www.absolutelyskilled.pro/skill/prompt-engineering)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/mastra)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/mastra)*

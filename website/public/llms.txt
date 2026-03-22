@@ -4,30 +4,30 @@
 
 ## Skills Categories
 
-- [engineering](https://absolutely-skilled.vercel.app/category/engineering): 45 skills
-- [operations](https://absolutely-skilled.vercel.app/category/operations): 27 skills
-- [marketing](https://absolutely-skilled.vercel.app/category/marketing): 23 skills
-- [ai-ml](https://absolutely-skilled.vercel.app/category/ai-ml): 10 skills
-- [design](https://absolutely-skilled.vercel.app/category/design): 9 skills
-- [devtools](https://absolutely-skilled.vercel.app/category/devtools): 9 skills
-- [product](https://absolutely-skilled.vercel.app/category/product): 8 skills
-- [sales](https://absolutely-skilled.vercel.app/category/sales): 7 skills
-- [data](https://absolutely-skilled.vercel.app/category/data): 6 skills
-- [video](https://absolutely-skilled.vercel.app/category/video): 5 skills
-- [infra](https://absolutely-skilled.vercel.app/category/infra): 4 skills
-- [cloud](https://absolutely-skilled.vercel.app/category/cloud): 3 skills
-- [monitoring](https://absolutely-skilled.vercel.app/category/monitoring): 3 skills
-- [writing](https://absolutely-skilled.vercel.app/category/writing): 2 skills
-- [workflow](https://absolutely-skilled.vercel.app/category/workflow): 2 skills
-- [analytics](https://absolutely-skilled.vercel.app/category/analytics): 2 skills
-- [developer-tools](https://absolutely-skilled.vercel.app/category/developer-tools): 1 skills
-- [communication](https://absolutely-skilled.vercel.app/category/communication): 1 skills
-- [game-development](https://absolutely-skilled.vercel.app/category/game-development): 1 skills
+- [engineering](https://www.absolutelyskilled.pro/category/engineering): 45 skills
+- [operations](https://www.absolutelyskilled.pro/category/operations): 27 skills
+- [marketing](https://www.absolutelyskilled.pro/category/marketing): 23 skills
+- [ai-ml](https://www.absolutelyskilled.pro/category/ai-ml): 10 skills
+- [design](https://www.absolutelyskilled.pro/category/design): 9 skills
+- [devtools](https://www.absolutelyskilled.pro/category/devtools): 9 skills
+- [product](https://www.absolutelyskilled.pro/category/product): 8 skills
+- [sales](https://www.absolutelyskilled.pro/category/sales): 7 skills
+- [data](https://www.absolutelyskilled.pro/category/data): 6 skills
+- [video](https://www.absolutelyskilled.pro/category/video): 5 skills
+- [infra](https://www.absolutelyskilled.pro/category/infra): 4 skills
+- [cloud](https://www.absolutelyskilled.pro/category/cloud): 3 skills
+- [monitoring](https://www.absolutelyskilled.pro/category/monitoring): 3 skills
+- [writing](https://www.absolutelyskilled.pro/category/writing): 2 skills
+- [workflow](https://www.absolutelyskilled.pro/category/workflow): 2 skills
+- [analytics](https://www.absolutelyskilled.pro/category/analytics): 2 skills
+- [developer-tools](https://www.absolutelyskilled.pro/category/developer-tools): 1 skills
+- [communication](https://www.absolutelyskilled.pro/category/communication): 1 skills
+- [game-development](https://www.absolutelyskilled.pro/category/game-development): 1 skills
 
 ## Key Pages
 
-- [All Skills](https://absolutely-skilled.vercel.app/skills): Browse and search all 168 skills
-- [Blog](https://absolutely-skilled.vercel.app/blog): Guides and tutorials
+- [All Skills](https://www.absolutelyskilled.pro/skills): Browse and search all 168 skills
+- [Blog](https://www.absolutelyskilled.pro/blog): Guides and tutorials
 - [GitHub](https://github.com/AbsolutelySkilled/AbsolutelySkilled): Source code and contributions
 
 ## Install Any Skill
@@ -38,4 +38,4 @@ npx skills add AbsolutelySkilled/AbsolutelySkilled --skill <skill-name>
 
 ## Optional
 
-- [Full skill catalog](https://absolutely-skilled.vercel.app/llms-full.txt): Complete details for every skill
+- [Full skill catalog](https://www.absolutelyskilled.pro/llms-full.txt): Complete details for every skill

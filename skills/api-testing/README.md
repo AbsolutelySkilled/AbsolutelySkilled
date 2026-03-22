@@ -46,10 +46,10 @@ strategy, tooling, and avoiding common traps.
 
 Pair api-testing with these complementary skills:
 
-- [api-design](https://absolutely-skilled.vercel.app/skill/api-design)
-- [jest-vitest](https://absolutely-skilled.vercel.app/skill/jest-vitest)
-- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
-- [playwright-testing](https://absolutely-skilled.vercel.app/skill/playwright-testing)
+- [api-design](https://www.absolutelyskilled.pro/skill/api-design)
+- [jest-vitest](https://www.absolutelyskilled.pro/skill/jest-vitest)
+- [test-strategy](https://www.absolutelyskilled.pro/skill/test-strategy)
+- [playwright-testing](https://www.absolutelyskilled.pro/skill/playwright-testing)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/api-testing)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/api-testing)*

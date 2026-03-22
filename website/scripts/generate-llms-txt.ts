@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 
 const SKILLS_DIR = path.resolve(process.cwd(), '../skills');
 const PUBLIC_DIR = path.resolve(process.cwd(), 'public');
-const SITE = 'https://absolutely-skilled.vercel.app';
+const SITE = 'https://www.absolutelyskilled.pro';
 
 interface SkillInfo {
   slug: string;

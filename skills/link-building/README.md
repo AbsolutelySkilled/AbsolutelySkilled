@@ -48,10 +48,10 @@ campaigns, and maintaining a clean link profile free of toxic signals.
 
 Pair link-building with these complementary skills:
 
-- [content-seo](https://absolutely-skilled.vercel.app/skill/content-seo)
-- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
-- [content-marketing](https://absolutely-skilled.vercel.app/skill/content-marketing)
-- [local-seo](https://absolutely-skilled.vercel.app/skill/local-seo)
+- [content-seo](https://www.absolutelyskilled.pro/skill/content-seo)
+- [seo-mastery](https://www.absolutelyskilled.pro/skill/seo-mastery)
+- [content-marketing](https://www.absolutelyskilled.pro/skill/content-marketing)
+- [local-seo](https://www.absolutelyskilled.pro/skill/local-seo)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/link-building)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/link-building)*

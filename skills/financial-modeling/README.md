@@ -46,10 +46,10 @@ models that hold up to scrutiny.
 
 Pair financial-modeling with these complementary skills:
 
-- [budgeting-planning](https://absolutely-skilled.vercel.app/skill/budgeting-planning)
-- [financial-reporting](https://absolutely-skilled.vercel.app/skill/financial-reporting)
-- [startup-fundraising](https://absolutely-skilled.vercel.app/skill/startup-fundraising)
-- [spreadsheet-modeling](https://absolutely-skilled.vercel.app/skill/spreadsheet-modeling)
+- [budgeting-planning](https://www.absolutelyskilled.pro/skill/budgeting-planning)
+- [financial-reporting](https://www.absolutelyskilled.pro/skill/financial-reporting)
+- [startup-fundraising](https://www.absolutelyskilled.pro/skill/startup-fundraising)
+- [spreadsheet-modeling](https://www.absolutelyskilled.pro/skill/spreadsheet-modeling)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/financial-modeling)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/financial-modeling)*

@@ -47,10 +47,10 @@ distributed tracing to debug performance bottlenecks across your stack. Sentry s
 
 Pair sentry with these complementary skills:
 
-- [observability](https://absolutely-skilled.vercel.app/skill/observability)
-- [signoz](https://absolutely-skilled.vercel.app/skill/signoz)
-- [debugging-tools](https://absolutely-skilled.vercel.app/skill/debugging-tools)
-- [incident-management](https://absolutely-skilled.vercel.app/skill/incident-management)
+- [observability](https://www.absolutelyskilled.pro/skill/observability)
+- [signoz](https://www.absolutelyskilled.pro/skill/signoz)
+- [debugging-tools](https://www.absolutelyskilled.pro/skill/debugging-tools)
+- [incident-management](https://www.absolutelyskilled.pro/skill/incident-management)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/sentry)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/sentry)*

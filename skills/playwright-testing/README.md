@@ -47,11 +47,11 @@ battle-tested patterns that prevent production pain.
 
 Pair playwright-testing with these complementary skills:
 
-- [cypress-testing](https://absolutely-skilled.vercel.app/skill/cypress-testing)
-- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
-- [jest-vitest](https://absolutely-skilled.vercel.app/skill/jest-vitest)
-- [api-testing](https://absolutely-skilled.vercel.app/skill/api-testing)
-- [webapp-testing](https://absolutely-skilled.vercel.app/skill/webapp-testing)
+- [cypress-testing](https://www.absolutelyskilled.pro/skill/cypress-testing)
+- [test-strategy](https://www.absolutelyskilled.pro/skill/test-strategy)
+- [jest-vitest](https://www.absolutelyskilled.pro/skill/jest-vitest)
+- [api-testing](https://www.absolutelyskilled.pro/skill/api-testing)
+- [webapp-testing](https://www.absolutelyskilled.pro/skill/webapp-testing)
 
 ## Frequently Asked Questions
 
@@ -74,4 +74,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/playwright-testing)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/playwright-testing)*

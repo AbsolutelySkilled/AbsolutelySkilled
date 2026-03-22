@@ -47,10 +47,10 @@ propositions, email subject lines, and product descriptions that actually work.
 
 Pair copywriting with these complementary skills:
 
-- [content-marketing](https://absolutely-skilled.vercel.app/skill/content-marketing)
-- [brand-strategy](https://absolutely-skilled.vercel.app/skill/brand-strategy)
-- [email-marketing](https://absolutely-skilled.vercel.app/skill/email-marketing)
-- [content-seo](https://absolutely-skilled.vercel.app/skill/content-seo)
+- [content-marketing](https://www.absolutelyskilled.pro/skill/content-marketing)
+- [brand-strategy](https://www.absolutelyskilled.pro/skill/brand-strategy)
+- [email-marketing](https://www.absolutelyskilled.pro/skill/email-marketing)
+- [content-seo](https://www.absolutelyskilled.pro/skill/content-seo)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/copywriting)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/copywriting)*

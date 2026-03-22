@@ -50,10 +50,10 @@ viewport assumptions, and content-driven layout over device-targeted hacks.
 
 Pair responsive-design with these complementary skills:
 
-- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
-- [accessibility-wcag](https://absolutely-skilled.vercel.app/skill/accessibility-wcag)
-- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
-- [motion-design](https://absolutely-skilled.vercel.app/skill/motion-design)
+- [design-systems](https://www.absolutelyskilled.pro/skill/design-systems)
+- [accessibility-wcag](https://www.absolutelyskilled.pro/skill/accessibility-wcag)
+- [frontend-developer](https://www.absolutelyskilled.pro/skill/frontend-developer)
+- [motion-design](https://www.absolutelyskilled.pro/skill/motion-design)
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/responsive-design)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/responsive-design)*

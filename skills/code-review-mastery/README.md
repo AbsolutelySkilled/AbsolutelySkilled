@@ -45,10 +45,10 @@ you can work through interactively.
 
 Pair code-review-mastery with these complementary skills:
 
-- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
-- [refactoring-patterns](https://absolutely-skilled.vercel.app/skill/refactoring-patterns)
-- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
-- [git-advanced](https://absolutely-skilled.vercel.app/skill/git-advanced)
+- [clean-code](https://www.absolutelyskilled.pro/skill/clean-code)
+- [refactoring-patterns](https://www.absolutelyskilled.pro/skill/refactoring-patterns)
+- [test-strategy](https://www.absolutelyskilled.pro/skill/test-strategy)
+- [git-advanced](https://www.absolutelyskilled.pro/skill/git-advanced)
 
 ## Frequently Asked Questions
 
@@ -71,4 +71,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/code-review-mastery)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/code-review-mastery)*

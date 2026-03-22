@@ -47,10 +47,10 @@ parsing output programmatically. References use short refs like `pane:5`,
 
 Pair cmux with these complementary skills:
 
-- [shell-scripting](https://absolutely-skilled.vercel.app/skill/shell-scripting)
-- [vim-neovim](https://absolutely-skilled.vercel.app/skill/vim-neovim)
-- [debugging-tools](https://absolutely-skilled.vercel.app/skill/debugging-tools)
-- [super-human](https://absolutely-skilled.vercel.app/skill/super-human)
+- [shell-scripting](https://www.absolutelyskilled.pro/skill/shell-scripting)
+- [vim-neovim](https://www.absolutelyskilled.pro/skill/vim-neovim)
+- [debugging-tools](https://www.absolutelyskilled.pro/skill/debugging-tools)
+- [super-human](https://www.absolutelyskilled.pro/skill/super-human)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code. Install it once and use it across any support
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/cmux)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/cmux)*

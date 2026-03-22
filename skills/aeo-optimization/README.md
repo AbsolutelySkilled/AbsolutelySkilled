@@ -50,10 +50,10 @@ AI systems quote.
 
 Pair aeo-optimization with these complementary skills:
 
-- [keyword-research](https://absolutely-skilled.vercel.app/skill/keyword-research)
-- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
-- [geo-optimization](https://absolutely-skilled.vercel.app/skill/geo-optimization)
-- [schema-markup](https://absolutely-skilled.vercel.app/skill/schema-markup)
+- [keyword-research](https://www.absolutelyskilled.pro/skill/keyword-research)
+- [seo-mastery](https://www.absolutelyskilled.pro/skill/seo-mastery)
+- [geo-optimization](https://www.absolutelyskilled.pro/skill/geo-optimization)
+- [schema-markup](https://www.absolutelyskilled.pro/skill/schema-markup)
 
 ## Frequently Asked Questions
 
@@ -76,4 +76,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/aeo-optimization)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/aeo-optimization)*

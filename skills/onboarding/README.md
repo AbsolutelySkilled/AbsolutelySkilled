@@ -49,10 +49,10 @@ role-specific tracks, and the metrics that prove it is working.
 
 Pair onboarding with these complementary skills:
 
-- [recruiting-ops](https://absolutely-skilled.vercel.app/skill/recruiting-ops)
-- [employee-engagement](https://absolutely-skilled.vercel.app/skill/employee-engagement)
-- [performance-management](https://absolutely-skilled.vercel.app/skill/performance-management)
-- [knowledge-base](https://absolutely-skilled.vercel.app/skill/knowledge-base)
+- [recruiting-ops](https://www.absolutelyskilled.pro/skill/recruiting-ops)
+- [employee-engagement](https://www.absolutelyskilled.pro/skill/employee-engagement)
+- [performance-management](https://www.absolutelyskilled.pro/skill/performance-management)
+- [knowledge-base](https://www.absolutelyskilled.pro/skill/knowledge-base)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/onboarding)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/onboarding)*

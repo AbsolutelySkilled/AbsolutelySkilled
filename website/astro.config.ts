@@ -7,7 +7,7 @@ import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 export default defineConfig({
-  site: 'https://absolutely-skilled.vercel.app',
+  site: 'https://www.absolutelyskilled.pro',
   output: 'static',
   adapter: vercel(),
   integrations: [mdx(), sitemap()],

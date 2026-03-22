@@ -45,10 +45,10 @@ compliance program, not just pass a one-time audit.
 
 Pair regulatory-compliance with these complementary skills:
 
-- [privacy-compliance](https://absolutely-skilled.vercel.app/skill/privacy-compliance)
-- [contract-drafting](https://absolutely-skilled.vercel.app/skill/contract-drafting)
-- [cloud-security](https://absolutely-skilled.vercel.app/skill/cloud-security)
-- [tax-strategy](https://absolutely-skilled.vercel.app/skill/tax-strategy)
+- [privacy-compliance](https://www.absolutelyskilled.pro/skill/privacy-compliance)
+- [contract-drafting](https://www.absolutelyskilled.pro/skill/contract-drafting)
+- [cloud-security](https://www.absolutelyskilled.pro/skill/cloud-security)
+- [tax-strategy](https://www.absolutelyskilled.pro/skill/tax-strategy)
 
 ## Frequently Asked Questions
 
@@ -71,4 +71,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/regulatory-compliance)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/regulatory-compliance)*

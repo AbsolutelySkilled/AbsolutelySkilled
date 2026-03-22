@@ -45,10 +45,10 @@ Designed for engineers who need to validate performance before and after launche
 
 Pair load-testing with these complementary skills:
 
-- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
-- [chaos-engineering](https://absolutely-skilled.vercel.app/skill/chaos-engineering)
-- [site-reliability](https://absolutely-skilled.vercel.app/skill/site-reliability)
-- [api-testing](https://absolutely-skilled.vercel.app/skill/api-testing)
+- [performance-engineering](https://www.absolutelyskilled.pro/skill/performance-engineering)
+- [chaos-engineering](https://www.absolutelyskilled.pro/skill/chaos-engineering)
+- [site-reliability](https://www.absolutelyskilled.pro/skill/site-reliability)
+- [api-testing](https://www.absolutelyskilled.pro/skill/api-testing)
 
 ## Frequently Asked Questions
 
@@ -71,4 +71,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/load-testing)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/load-testing)*

@@ -48,9 +48,9 @@ zero-shot approaches before committing to full training runs.
 
 Pair computer-vision with these complementary skills:
 
-- [data-science](https://absolutely-skilled.vercel.app/skill/data-science)
-- [ml-ops](https://absolutely-skilled.vercel.app/skill/ml-ops)
-- [nlp-engineering](https://absolutely-skilled.vercel.app/skill/nlp-engineering)
+- [data-science](https://www.absolutelyskilled.pro/skill/data-science)
+- [ml-ops](https://www.absolutelyskilled.pro/skill/ml-ops)
+- [nlp-engineering](https://www.absolutelyskilled.pro/skill/nlp-engineering)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/computer-vision)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/computer-vision)*

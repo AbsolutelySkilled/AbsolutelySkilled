@@ -47,9 +47,9 @@ simplicity, with web API fallback when CLI tools are unavailable.
 
 Pair live-dependency-resolver with these complementary skills:
 
-- [shell-scripting](https://absolutely-skilled.vercel.app/skill/shell-scripting)
-- [monorepo-management](https://absolutely-skilled.vercel.app/skill/monorepo-management)
-- [ci-cd-pipelines](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)
+- [shell-scripting](https://www.absolutelyskilled.pro/skill/shell-scripting)
+- [monorepo-management](https://www.absolutelyskilled.pro/skill/monorepo-management)
+- [ci-cd-pipelines](https://www.absolutelyskilled.pro/skill/ci-cd-pipelines)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it onc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/live-dependency-resolver)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/live-dependency-resolver)*

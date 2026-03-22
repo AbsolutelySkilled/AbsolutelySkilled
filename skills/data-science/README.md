@@ -46,10 +46,10 @@ guidance on statistical rigor and common traps.
 
 Pair data-science with these complementary skills:
 
-- [analytics-engineering](https://absolutely-skilled.vercel.app/skill/analytics-engineering)
-- [data-pipelines](https://absolutely-skilled.vercel.app/skill/data-pipelines)
-- [nlp-engineering](https://absolutely-skilled.vercel.app/skill/nlp-engineering)
-- [computer-vision](https://absolutely-skilled.vercel.app/skill/computer-vision)
+- [analytics-engineering](https://www.absolutelyskilled.pro/skill/analytics-engineering)
+- [data-pipelines](https://www.absolutelyskilled.pro/skill/data-pipelines)
+- [nlp-engineering](https://www.absolutelyskilled.pro/skill/nlp-engineering)
+- [computer-vision](https://www.absolutelyskilled.pro/skill/computer-vision)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/data-science)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/data-science)*

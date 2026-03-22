@@ -49,10 +49,10 @@ to repeatable, calm incident response.
 
 Pair incident-management with these complementary skills:
 
-- [observability](https://absolutely-skilled.vercel.app/skill/observability)
-- [site-reliability](https://absolutely-skilled.vercel.app/skill/site-reliability)
-- [security-incident-response](https://absolutely-skilled.vercel.app/skill/security-incident-response)
-- [project-execution](https://absolutely-skilled.vercel.app/skill/project-execution)
+- [observability](https://www.absolutelyskilled.pro/skill/observability)
+- [site-reliability](https://www.absolutelyskilled.pro/skill/site-reliability)
+- [security-incident-response](https://www.absolutelyskilled.pro/skill/security-incident-response)
+- [project-execution](https://www.absolutelyskilled.pro/skill/project-execution)
 
 ## Frequently Asked Questions
 
@@ -75,4 +75,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/incident-management)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/incident-management)*

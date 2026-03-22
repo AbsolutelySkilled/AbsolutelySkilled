@@ -46,10 +46,10 @@ who know AWS basics and need opinionated guidance on trade-offs and common pitfa
 
 Pair cloud-aws with these complementary skills:
 
-- [terraform-iac](https://absolutely-skilled.vercel.app/skill/terraform-iac)
-- [cloud-security](https://absolutely-skilled.vercel.app/skill/cloud-security)
-- [docker-kubernetes](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)
-- [cloud-gcp](https://absolutely-skilled.vercel.app/skill/cloud-gcp)
+- [terraform-iac](https://www.absolutelyskilled.pro/skill/terraform-iac)
+- [cloud-security](https://www.absolutelyskilled.pro/skill/cloud-security)
+- [docker-kubernetes](https://www.absolutelyskilled.pro/skill/docker-kubernetes)
+- [cloud-gcp](https://www.absolutelyskilled.pro/skill/cloud-gcp)
 
 ## Frequently Asked Questions
 
@@ -72,4 +72,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/cloud-aws)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/cloud-aws)*

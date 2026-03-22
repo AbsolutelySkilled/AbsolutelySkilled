@@ -47,10 +47,10 @@ practices.
 
 Pair terraform-iac with these complementary skills:
 
-- [docker-kubernetes](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)
-- [cloud-aws](https://absolutely-skilled.vercel.app/skill/cloud-aws)
-- [cloud-gcp](https://absolutely-skilled.vercel.app/skill/cloud-gcp)
-- [ci-cd-pipelines](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)
+- [docker-kubernetes](https://www.absolutelyskilled.pro/skill/docker-kubernetes)
+- [cloud-aws](https://www.absolutelyskilled.pro/skill/cloud-aws)
+- [cloud-gcp](https://www.absolutelyskilled.pro/skill/cloud-gcp)
+- [ci-cd-pipelines](https://www.absolutelyskilled.pro/skill/ci-cd-pipelines)
 
 ## Frequently Asked Questions
 
@@ -73,4 +73,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/terraform-iac)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/terraform-iac)*

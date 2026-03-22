@@ -52,10 +52,10 @@ Xero, NetSuite, and custom-built finance tooling.
 
 Pair bookkeeping-automation with these complementary skills:
 
-- [financial-reporting](https://absolutely-skilled.vercel.app/skill/financial-reporting)
-- [tax-strategy](https://absolutely-skilled.vercel.app/skill/tax-strategy)
-- [budgeting-planning](https://absolutely-skilled.vercel.app/skill/budgeting-planning)
-- [no-code-automation](https://absolutely-skilled.vercel.app/skill/no-code-automation)
+- [financial-reporting](https://www.absolutelyskilled.pro/skill/financial-reporting)
+- [tax-strategy](https://www.absolutelyskilled.pro/skill/tax-strategy)
+- [budgeting-planning](https://www.absolutelyskilled.pro/skill/budgeting-planning)
+- [no-code-automation](https://www.absolutelyskilled.pro/skill/no-code-automation)
 
 ## Frequently Asked Questions
 
@@ -78,4 +78,4 @@ This skill works with claude-code, gemini-cli, openai-codex. Install it once and
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/bookkeeping-automation)*
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/bookkeeping-automation)*
