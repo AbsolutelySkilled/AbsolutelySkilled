@@ -32,10 +32,10 @@ for shipping real projects.
 
 ## Recommended Skills
 
-- [game-design-patterns](https://absolutelyskilled.dev/skill/game-design-patterns)
-- [game-balancing](https://absolutelyskilled.dev/skill/game-balancing)
-- [game-audio](https://absolutelyskilled.dev/skill/game-audio)
-- [pixel-art-sprites](https://absolutelyskilled.dev/skill/pixel-art-sprites)
+- [game-design-patterns](https://absolutely-skilled.vercel.app/skill/game-design-patterns)
+- [game-balancing](https://absolutely-skilled.vercel.app/skill/game-balancing)
+- [game-audio](https://absolutely-skilled.vercel.app/skill/game-audio)
+- [pixel-art-sprites](https://absolutely-skilled.vercel.app/skill/pixel-art-sprites)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ for shipping real projects.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/unity-development)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/unity-development)*

@@ -33,10 +33,10 @@ action-oriented engagement practice.
 
 ## Recommended Skills
 
-- [performance-management](https://absolutelyskilled.dev/skill/performance-management)
-- [onboarding](https://absolutelyskilled.dev/skill/onboarding)
-- [remote-collaboration](https://absolutelyskilled.dev/skill/remote-collaboration)
-- [community-management](https://absolutelyskilled.dev/skill/community-management)
+- [performance-management](https://absolutely-skilled.vercel.app/skill/performance-management)
+- [onboarding](https://absolutely-skilled.vercel.app/skill/onboarding)
+- [remote-collaboration](https://absolutely-skilled.vercel.app/skill/remote-collaboration)
+- [community-management](https://absolutely-skilled.vercel.app/skill/community-management)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ action-oriented engagement practice.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/employee-engagement)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/employee-engagement)*

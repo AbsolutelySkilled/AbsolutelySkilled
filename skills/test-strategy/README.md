@@ -30,10 +30,10 @@ low maintenance cost.
 
 ## Recommended Skills
 
-- [jest-vitest](https://absolutelyskilled.dev/skill/jest-vitest)
-- [cypress-testing](https://absolutelyskilled.dev/skill/cypress-testing)
-- [playwright-testing](https://absolutelyskilled.dev/skill/playwright-testing)
-- [clean-code](https://absolutelyskilled.dev/skill/clean-code)
+- [jest-vitest](https://absolutely-skilled.vercel.app/skill/jest-vitest)
+- [cypress-testing](https://absolutely-skilled.vercel.app/skill/cypress-testing)
+- [playwright-testing](https://absolutely-skilled.vercel.app/skill/playwright-testing)
+- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ low maintenance cost.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/test-strategy)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/test-strategy)*

@@ -29,10 +29,10 @@ compliance program, not just pass a one-time audit.
 
 ## Recommended Skills
 
-- [privacy-compliance](https://absolutelyskilled.dev/skill/privacy-compliance)
-- [contract-drafting](https://absolutelyskilled.dev/skill/contract-drafting)
-- [cloud-security](https://absolutelyskilled.dev/skill/cloud-security)
-- [tax-strategy](https://absolutelyskilled.dev/skill/tax-strategy)
+- [privacy-compliance](https://absolutely-skilled.vercel.app/skill/privacy-compliance)
+- [contract-drafting](https://absolutely-skilled.vercel.app/skill/contract-drafting)
+- [cloud-security](https://absolutely-skilled.vercel.app/skill/cloud-security)
+- [tax-strategy](https://absolutely-skilled.vercel.app/skill/tax-strategy)
 
 ## Maintainers
 
@@ -40,4 +40,4 @@ compliance program, not just pass a one-time audit.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/regulatory-compliance)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/regulatory-compliance)*

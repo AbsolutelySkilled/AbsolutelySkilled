@@ -31,10 +31,10 @@ core principle is to move computation to where the user is, not the other way ar
 
 ## Recommended Skills
 
-- [cloud-aws](https://absolutelyskilled.dev/skill/cloud-aws)
-- [cloud-gcp](https://absolutelyskilled.dev/skill/cloud-gcp)
-- [performance-engineering](https://absolutelyskilled.dev/skill/performance-engineering)
-- [docker-kubernetes](https://absolutelyskilled.dev/skill/docker-kubernetes)
+- [cloud-aws](https://absolutely-skilled.vercel.app/skill/cloud-aws)
+- [cloud-gcp](https://absolutely-skilled.vercel.app/skill/cloud-gcp)
+- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
+- [docker-kubernetes](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ core principle is to move computation to where the user is, not the other way ar
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/edge-computing)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/edge-computing)*

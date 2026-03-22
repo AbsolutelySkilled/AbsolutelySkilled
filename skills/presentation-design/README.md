@@ -33,10 +33,10 @@ internal strategy reviews, training materials, and any context where slides are 
 
 ## Recommended Skills
 
-- [color-theory](https://absolutelyskilled.dev/skill/color-theory)
-- [copywriting](https://absolutelyskilled.dev/skill/copywriting)
-- [video-production](https://absolutelyskilled.dev/skill/video-production)
-- [figma-to-code](https://absolutelyskilled.dev/skill/figma-to-code)
+- [color-theory](https://absolutely-skilled.vercel.app/skill/color-theory)
+- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
+- [video-production](https://absolutely-skilled.vercel.app/skill/video-production)
+- [figma-to-code](https://absolutely-skilled.vercel.app/skill/figma-to-code)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ internal strategy reviews, training materials, and any context where slides are 
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/presentation-design)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/presentation-design)*

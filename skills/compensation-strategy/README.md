@@ -30,10 +30,10 @@ to candidates, employees, and leadership.
 
 ## Recommended Skills
 
-- [performance-management](https://absolutelyskilled.dev/skill/performance-management)
-- [recruiting-ops](https://absolutelyskilled.dev/skill/recruiting-ops)
-- [financial-modeling](https://absolutelyskilled.dev/skill/financial-modeling)
-- [employment-law](https://absolutelyskilled.dev/skill/employment-law)
+- [performance-management](https://absolutely-skilled.vercel.app/skill/performance-management)
+- [recruiting-ops](https://absolutely-skilled.vercel.app/skill/recruiting-ops)
+- [financial-modeling](https://absolutely-skilled.vercel.app/skill/financial-modeling)
+- [employment-law](https://absolutely-skilled.vercel.app/skill/employment-law)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ to candidates, employees, and leadership.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/compensation-strategy)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/compensation-strategy)*

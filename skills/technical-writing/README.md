@@ -32,11 +32,11 @@ API docs, tutorials, architecture docs, ADRs, and runbooks.
 
 ## Recommended Skills
 
-- [internal-docs](https://absolutelyskilled.dev/skill/internal-docs)
-- [developer-experience](https://absolutelyskilled.dev/skill/developer-experience)
-- [developer-advocacy](https://absolutelyskilled.dev/skill/developer-advocacy)
-- [knowledge-base](https://absolutelyskilled.dev/skill/knowledge-base)
-- [codedocs](https://absolutelyskilled.dev/skill/codedocs)
+- [internal-docs](https://absolutely-skilled.vercel.app/skill/internal-docs)
+- [developer-experience](https://absolutely-skilled.vercel.app/skill/developer-experience)
+- [developer-advocacy](https://absolutely-skilled.vercel.app/skill/developer-advocacy)
+- [knowledge-base](https://absolutely-skilled.vercel.app/skill/knowledge-base)
+- [codedocs](https://absolutely-skilled.vercel.app/skill/codedocs)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ API docs, tutorials, architecture docs, ADRs, and runbooks.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/technical-writing)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/technical-writing)*

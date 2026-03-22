@@ -30,10 +30,10 @@ deserves a working product, regardless of how they interact with it.
 
 ## Recommended Skills
 
-- [design-systems](https://absolutelyskilled.dev/skill/design-systems)
-- [frontend-developer](https://absolutelyskilled.dev/skill/frontend-developer)
-- [responsive-design](https://absolutelyskilled.dev/skill/responsive-design)
-- [ux-research](https://absolutelyskilled.dev/skill/ux-research)
+- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
+- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
+- [responsive-design](https://absolutely-skilled.vercel.app/skill/responsive-design)
+- [ux-research](https://absolutely-skilled.vercel.app/skill/ux-research)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ deserves a working product, regardless of how they interact with it.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/accessibility-wcag)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/accessibility-wcag)*

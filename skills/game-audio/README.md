@@ -33,9 +33,9 @@ shipped titles.
 
 ## Recommended Skills
 
-- [unity-development](https://absolutelyskilled.dev/skill/unity-development)
-- [game-design-patterns](https://absolutelyskilled.dev/skill/game-design-patterns)
-- [pixel-art-sprites](https://absolutelyskilled.dev/skill/pixel-art-sprites)
+- [unity-development](https://absolutely-skilled.vercel.app/skill/unity-development)
+- [game-design-patterns](https://absolutely-skilled.vercel.app/skill/game-design-patterns)
+- [pixel-art-sprites](https://absolutely-skilled.vercel.app/skill/pixel-art-sprites)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ shipped titles.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/game-audio)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/game-audio)*

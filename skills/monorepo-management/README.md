@@ -32,11 +32,11 @@ build systems (Bazel), internal package patterns, and shared tooling config.
 
 ## Recommended Skills
 
-- [ci-cd-pipelines](https://absolutelyskilled.dev/skill/ci-cd-pipelines)
-- [git-advanced](https://absolutelyskilled.dev/skill/git-advanced)
-- [developer-experience](https://absolutelyskilled.dev/skill/developer-experience)
-- [vite-plus](https://absolutelyskilled.dev/skill/vite-plus)
-- [meta-repo](https://absolutelyskilled.dev/skill/meta-repo)
+- [ci-cd-pipelines](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)
+- [git-advanced](https://absolutely-skilled.vercel.app/skill/git-advanced)
+- [developer-experience](https://absolutely-skilled.vercel.app/skill/developer-experience)
+- [vite-plus](https://absolutely-skilled.vercel.app/skill/vite-plus)
+- [meta-repo](https://absolutely-skilled.vercel.app/skill/meta-repo)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ build systems (Bazel), internal package patterns, and shared tooling config.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/monorepo-management)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/monorepo-management)*

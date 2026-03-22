@@ -32,10 +32,10 @@ and doorway pages, so raw template fill without unique data is not enough.
 
 ## Recommended Skills
 
-- [technical-seo](https://absolutelyskilled.dev/skill/technical-seo)
-- [keyword-research](https://absolutelyskilled.dev/skill/keyword-research)
-- [ecommerce-seo](https://absolutelyskilled.dev/skill/ecommerce-seo)
-- [content-seo](https://absolutelyskilled.dev/skill/content-seo)
+- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
+- [keyword-research](https://absolutely-skilled.vercel.app/skill/keyword-research)
+- [ecommerce-seo](https://absolutely-skilled.vercel.app/skill/ecommerce-seo)
+- [content-seo](https://absolutely-skilled.vercel.app/skill/content-seo)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ and doorway pages, so raw template fill without unique data is not enough.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/programmatic-seo)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/programmatic-seo)*

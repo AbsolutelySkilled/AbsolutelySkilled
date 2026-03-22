@@ -1,6 +1,6 @@
 ---
 name: skill-forge
-version: 0.2.0
+version: 0.3.0
 description: >
   Generate a production-ready AbsolutelySkilled skill from any source: GitHub repos,
   documentation URLs, or domain topics (marketing, sales, TypeScript, etc.). Triggers
@@ -10,6 +10,16 @@ description: >
   runs a brainstorming discovery session with the user to define scope and content.
   Outputs a complete skill/ folder with SKILL.md, evals.json, and optionally
   sources.yaml, ready to PR into the AbsolutelySkilled registry.
+category: devtools
+tags: [skill-creation, code-generation, scaffolding, registry, agent-skills]
+recommended_skills: []
+platforms:
+  - claude-code
+  - gemini-cli
+  - openai-codex
+license: MIT
+maintainers:
+  - github: maddhruv
 hooks:
   - type: PreToolUse
     matcher: Write
@@ -32,9 +42,13 @@ Generate production-ready AbsolutelySkilled skills from any source - GitHub repo
 documentation URLs, or pure domain knowledge. This is the bootstrapping tool for the
 registry.
 
-A skill is a **folder, not a file**. Think of the entire file system as context
-engineering and progressive disclosure. SKILL.md is the entry point, but scripts,
-references, assets, and data files are where the real power lives.
+A common misconception is that skills are "just markdown files." That undersells
+them significantly. A skill is a **folder, not a file**. It can contain markdown
+instructions, scripts, reference code, data files, templates, configuration -
+anything an agent might need to do its job well. SKILL.md is the entry point that
+tells the agent what the skill does and when to use it. But the real power comes
+from the supporting files - reference docs give deeper context, scripts let it
+take action, templates give it a head start on output.
 
 ---
 
@@ -52,8 +66,7 @@ On first run, check for `${CLAUDE_PLUGIN_DATA}/forge-config.json`. If it doesn't
 exist, ask the user these questions (use AskUserQuestion with multiple choice):
 
 1. **Default output directory** - `skills/` (registry PR) or custom path?
-2. **Auto-propagate recommendations?** - yes/no (Phase 7)
-3. **Skill type preference** - code-heavy, knowledge-heavy, or balanced?
+2. **Skill type preference** - code-heavy, knowledge-heavy, or balanced?
 
 Store answers in `${CLAUDE_PLUGIN_DATA}/forge-config.json`. Read this config at the
 start of every forge session.
@@ -152,35 +165,61 @@ Read `references/frontmatter-schema.md` for YAML fields and
 
 ### Key principles for writing
 
-**Focus on what pushes Claude out of its defaults.** Claude already knows how to
-write markdown and structure content. Your skill should teach it things it would
-get wrong without the skill - the gotchas, the non-obvious patterns, the domain
-quirks that trip up even experienced developers.
+**Focus on the delta - what the agent does NOT know.** The agent already knows a
+lot about coding and common patterns. If a skill mostly restates common knowledge,
+it wastes context tokens. Focus on information that pushes the agent outside its
+defaults - non-obvious conventions, where the "standard" approach breaks down,
+domain quirks that trip up even experienced developers.
 
-**The description field is a trigger, not a summary.** Claude scans every skill
-description at session start to decide which to activate. Write it as a
-when-to-trigger condition with specific tool names, synonyms, and action verbs.
+**The description field is a trigger condition, not a summary.** The agent scans
+every available skill's description at session start to decide which are relevant.
+Write it as a when-to-trigger condition with specific tool names, synonyms, action
+verbs, and common task types. A vague "Helps with deployment" will never fire. A
+specific "Use when deploying services to production, running canary releases,
+checking deploy status, or rolling back failed deploys" will.
 
-**Build the Gotchas section first.** This is the highest-signal content in any
-skill. Start with 3-5 known failure points and expect the section to grow over
-time as users hit new edge cases. Put gotchas inline next to the relevant task,
-not in a separate section users might skip.
+**Build the Gotchas section first.** This is the highest-value content in any
+skill. Start with 3-5 known failure points from actual usage. Expect this section
+to grow over time as new edge cases appear. A mature skill's gotchas section is
+its most valuable asset. Put gotchas inline next to the relevant task, not in a
+separate section users might skip.
 
-**Use progressive disclosure.** SKILL.md should be the entry point, not the
-encyclopedia. Point to references/ files for deep detail. Tell Claude what files
-exist and when to read them - it will load them on demand.
+**Use progressive disclosure.** Don't dump everything into one massive SKILL.md.
+Tell the agent what files are available and let it read them when needed. This
+keeps initial context small (cheaper, faster) while making deep knowledge
+available on demand. The agent is good at deciding when it needs more context.
 
-**Don't railroad.** Give Claude the what and why, not rigid step-by-step
-procedures. Skills get reused across many contexts - overly prescriptive
-instructions break in unexpected situations. Prefer guidelines over rules.
+**Give flexibility, not rails.** Because skills are reusable across many
+situations, being too prescriptive backfires. Give the agent the *information* it
+needs, but let it decide *how* to apply it. "Tests should cover unit, integration,
+and e2e scenarios as appropriate" beats "Always create exactly 3 test files with
+at least 5 functions each."
+
+**Include scripts and composable code.** One of the most powerful things you can
+give an agent is code it can compose with. Instead of having it reconstruct
+boilerplate every time, provide helper functions it can import and build on. A
+data-science skill with `fetch_events.py` beats one with 200 lines explaining
+how to query your event source.
+
+**Think through the setup.** Some skills need user-specific configuration. Good
+pattern: store setup info in a `config.json` in the skill directory. If the config
+doesn't exist, the agent asks the user for it on first run. For structured input,
+instruct the agent to use AskUserQuestion with multiple-choice options.
+
+**Consider memory and logging.** Some skills benefit from remembering what happened
+in previous runs. A standup skill might keep a log of every post. A deploy skill
+might track recent deploys. Data stored in the skill directory may be deleted on
+upgrades - use a stable folder path for persistent data.
+
+**Register on-demand hooks when appropriate.** Skills can register hooks that are
+only active when the skill is invoked. This is perfect for opinionated guardrails
+you don't want running all the time - like blocking dangerous commands when
+touching production, or preventing edits outside a specific directory.
 
 ### After writing
 
 Run `scripts/validate-skill.sh <path-to-skill-dir>` to check structure and
 catch common issues before finalizing.
-
-Always append the shared footer from `references/skill-footer.md` as the very
-last section.
 
 ---
 
@@ -241,46 +280,42 @@ Print a summary and append to forge-log.jsonl.
 
 ---
 
-## Phase 7 - Propagate recommended_skills
-
-If auto-propagate is enabled in config (or always for new skills):
-
-1. Read the new skill's `recommended_skills`
-2. For each companion, check if it reciprocally lists the new skill
-3. Add if the companion has < 5 recommendations and the relationship is genuine
-4. Never remove existing recommendations without clear reason
-5. Print which skills were updated in the summary
-
----
-
 ## Gotchas
 
 These are the most common failure points when forging skills. Update this list
-as new patterns emerge.
+as new patterns emerge. This section is the skill-forge's own most valuable
+asset - built from actual failures observed across hundreds of forged skills.
 
-1. **Description too vague** - "A skill for testing" will never trigger. Include
-   the tool name, 3-5 task types, and common synonyms. This is the #1 reason
-   skills don't activate.
+1. **Description too vague** - "A skill for testing" will never trigger. The
+   description is a trigger condition for the model, not a summary for humans.
+   Include the tool name, 3-5 task types, common synonyms, and action verbs.
+   This is the #1 reason skills don't activate.
 
 2. **Stuffing everything into SKILL.md** - If you're past 300 lines, you're
    doing it wrong. Move detail to references/ files. The agent reads them on
-   demand - trust the progressive disclosure.
+   demand - trust the progressive disclosure. Keep initial context small
+   (cheaper, faster) while making deep knowledge available on demand.
 
-3. **Stating what Claude already knows** - Don't explain how REST APIs work or
-   what JSON is. Focus on the non-obvious: auth quirks, deprecated methods,
-   version differences, naming inconsistencies.
+3. **Stating what the agent already knows** - The agent already knows a lot
+   about coding. Don't explain how REST APIs work or what JSON is. Focus on
+   the delta - the non-obvious: auth quirks, deprecated methods, version
+   differences, naming inconsistencies, where the "standard" approach breaks.
 
-4. **No gotchas in the generated skill** - Every skill should have inline
-   gotchas next to relevant tasks. "This method requires amount in cents, not
-   dollars" saves more time than 50 lines of API docs.
+4. **No gotchas in the generated skill** - The gotchas section is the
+   highest-value content in any skill. Every skill should have inline gotchas
+   next to relevant tasks. "This method requires amount in cents, not dollars"
+   saves more time than 50 lines of API docs. Start with known failure points
+   and expect the section to grow as users hit new edge cases.
 
-5. **Railroading the agent** - "Always do X, then Y, then Z" breaks when the
-   context doesn't match. Give guidelines, not rigid procedures. The agent needs
-   flexibility to adapt.
+5. **Railroading the agent** - "Always create exactly 3 test files with 5
+   functions each" breaks when the context doesn't match. Give the agent the
+   *information* it needs, but let it decide *how* to apply it. Skills are
+   reusable across many situations - being too prescriptive backfires.
 
 6. **Forgetting the folder is the skill** - SKILL.md is just the entry point.
    Scripts, templates, data files, and examples are what make a skill genuinely
-   useful. A data-science skill with `fetch_events.py` beats one with 200 lines
+   useful. Provide helper functions the agent can import and compose with.
+   A data-science skill with `fetch_events.py` beats one with 200 lines
    explaining how to query your event source.
 
 7. **Not checking for duplicates** - Always read `references/skill-registry.md`
@@ -290,22 +325,34 @@ as new patterns emerge.
    useless. "Use the PAS framework: Problem, Agitate, Solution" is actionable.
    Every piece of advice should be specific enough to act on immediately.
 
+9. **Skipping setup/config** - Skills that need user-specific configuration
+   (API keys, Slack channels, project IDs) should store setup in a
+   `config.json`. If the config doesn't exist, the agent should ask on first
+   run. Don't hardcode values that vary per user.
+
+10. **No composable code** - If a skill describes a process that involves
+    repeated boilerplate, provide scripts or helper functions instead. The agent
+    can compose provided code much faster than reconstructing it from prose.
+
 ---
 
 ## Quality checklist
 
-- [ ] Description is a trigger condition (tool name + 3-5 task types + synonyms)
-- [ ] Gotchas are present and inline next to relevant tasks
+- [ ] Description is a trigger condition (tool name + 3-5 task types + synonyms + action verbs)
+- [ ] Gotchas are present, inline next to relevant tasks, and built from actual failure points
 - [ ] SKILL.md under 300 lines (detail moved to references/)
-- [ ] No obvious-to-Claude content (how markdown works, what APIs are, etc.)
+- [ ] No obvious-to-agent content - focuses on the delta, not common knowledge
 - [ ] Progressive disclosure: references/ files listed with when-to-read guidance
+- [ ] Flexibility over rails: guidelines, not rigid step-by-step procedures
+- [ ] Scripts/helpers provided where the agent would otherwise reconstruct boilerplate
+- [ ] Setup/config handled via config.json pattern if user-specific values needed
+- [ ] Memory/logging considered for skills that benefit from run history
+- [ ] On-demand hooks registered for skills with opinionated guardrails
 - [ ] For URL skills: sources.yaml has only official doc URLs
 - [ ] For domain skills: user approved scope before writing
 - [ ] Evals cover all 5 categories
 - [ ] Flagged items use `<!-- VERIFY: -->` format
-- [ ] Footer appended from `references/skill-footer.md`
 - [ ] Forge history log updated
-- [ ] Recommendations propagated (Phase 7)
 
 ---
 
@@ -321,16 +368,3 @@ Load these files only when you need them for the current phase:
 - `references/skill-registry.md` - Full catalog of existing skills (duplicate check)
 - `scripts/validate-skill.sh` - Structural validation for generated skills (Phase 2)
 
----
-
-## Related skills
-
-> When this skill is activated, check if the following companion skills are installed.
-> For any that are missing, mention them to the user and offer to install before proceeding
-> with the task. Example: "I notice you don't have [skill] installed yet - it pairs well
-> with this skill. Want me to install it?"
-
-- [skill-creator](https://github.com/AbsolutelySkilled/AbsolutelySkilled/tree/main/skills/skill-creator) - Guide for creating effective skills manually
-- [writing-skills](https://github.com/AbsolutelySkilled/AbsolutelySkilled/tree/main/skills/writing-skills) - Creating, editing, and verifying skills before deployment
-
-Install a companion: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill <name>`

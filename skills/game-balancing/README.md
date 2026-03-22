@@ -34,9 +34,9 @@ bored.
 
 ## Recommended Skills
 
-- [unity-development](https://absolutelyskilled.dev/skill/unity-development)
-- [game-design-patterns](https://absolutelyskilled.dev/skill/game-design-patterns)
-- [product-analytics](https://absolutelyskilled.dev/skill/product-analytics)
+- [unity-development](https://absolutely-skilled.vercel.app/skill/unity-development)
+- [game-design-patterns](https://absolutely-skilled.vercel.app/skill/game-design-patterns)
+- [product-analytics](https://absolutely-skilled.vercel.app/skill/product-analytics)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ bored.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/game-balancing)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/game-balancing)*

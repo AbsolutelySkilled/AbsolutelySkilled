@@ -32,9 +32,9 @@ for automated invoicing.
 
 ## Recommended Skills
 
-- [api-design](https://absolutelyskilled.dev/skill/api-design)
-- [pricing-strategy](https://absolutelyskilled.dev/skill/pricing-strategy)
-- [saas-metrics](https://absolutelyskilled.dev/skill/saas-metrics)
+- [api-design](https://absolutely-skilled.vercel.app/skill/api-design)
+- [pricing-strategy](https://absolutely-skilled.vercel.app/skill/pricing-strategy)
+- [saas-metrics](https://absolutely-skilled.vercel.app/skill/saas-metrics)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ for automated invoicing.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/api-monetization)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/api-monetization)*

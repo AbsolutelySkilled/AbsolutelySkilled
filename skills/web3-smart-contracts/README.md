@@ -32,9 +32,9 @@ OpenZeppelin would approach the task.
 
 ## Recommended Skills
 
-- [cryptography](https://absolutelyskilled.dev/skill/cryptography)
-- [appsec-owasp](https://absolutelyskilled.dev/skill/appsec-owasp)
-- [system-design](https://absolutelyskilled.dev/skill/system-design)
+- [cryptography](https://absolutely-skilled.vercel.app/skill/cryptography)
+- [appsec-owasp](https://absolutely-skilled.vercel.app/skill/appsec-owasp)
+- [system-design](https://absolutely-skilled.vercel.app/skill/system-design)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ OpenZeppelin would approach the task.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/web3-smart-contracts)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/web3-smart-contracts)*

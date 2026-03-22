@@ -32,9 +32,9 @@ interviewers, and running debriefs that lead to confident decisions.
 
 ## Recommended Skills
 
-- [recruiting-ops](https://absolutelyskilled.dev/skill/recruiting-ops)
-- [technical-interviewing](https://absolutelyskilled.dev/skill/technical-interviewing)
-- [performance-management](https://absolutelyskilled.dev/skill/performance-management)
+- [recruiting-ops](https://absolutely-skilled.vercel.app/skill/recruiting-ops)
+- [technical-interviewing](https://absolutely-skilled.vercel.app/skill/technical-interviewing)
+- [performance-management](https://absolutely-skilled.vercel.app/skill/performance-management)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ interviewers, and running debriefs that lead to confident decisions.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/interview-design)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/interview-design)*

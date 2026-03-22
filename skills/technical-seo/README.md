@@ -30,10 +30,10 @@ pipeline and the engineering decisions that make or break search visibility.
 
 ## Recommended Skills
 
-- [core-web-vitals](https://absolutelyskilled.dev/skill/core-web-vitals)
-- [schema-markup](https://absolutelyskilled.dev/skill/schema-markup)
-- [seo-mastery](https://absolutelyskilled.dev/skill/seo-mastery)
-- [on-site-seo](https://absolutelyskilled.dev/skill/on-site-seo)
+- [core-web-vitals](https://absolutely-skilled.vercel.app/skill/core-web-vitals)
+- [schema-markup](https://absolutely-skilled.vercel.app/skill/schema-markup)
+- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
+- [on-site-seo](https://absolutely-skilled.vercel.app/skill/on-site-seo)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ pipeline and the engineering decisions that make or break search visibility.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/technical-seo)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/technical-seo)*

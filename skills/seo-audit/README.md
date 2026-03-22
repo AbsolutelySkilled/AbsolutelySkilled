@@ -32,10 +32,10 @@ skills - use it to diagnose, then hand off to the right skill for each fix.
 
 ## Recommended Skills
 
-- [seo-mastery](https://absolutelyskilled.dev/skill/seo-mastery)
-- [technical-seo](https://absolutelyskilled.dev/skill/technical-seo)
-- [core-web-vitals](https://absolutelyskilled.dev/skill/core-web-vitals)
-- [content-seo](https://absolutelyskilled.dev/skill/content-seo)
+- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
+- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
+- [core-web-vitals](https://absolutely-skilled.vercel.app/skill/core-web-vitals)
+- [content-seo](https://absolutely-skilled.vercel.app/skill/content-seo)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ skills - use it to diagnose, then hand off to the right skill for each fix.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/seo-audit)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/seo-audit)*

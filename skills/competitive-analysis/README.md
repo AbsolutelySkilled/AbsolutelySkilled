@@ -32,10 +32,10 @@ run rigorous competitive analysis - from quick landscape scans to full strategic
 
 ## Recommended Skills
 
-- [product-strategy](https://absolutelyskilled.dev/skill/product-strategy)
-- [brand-strategy](https://absolutelyskilled.dev/skill/brand-strategy)
-- [sales-enablement](https://absolutelyskilled.dev/skill/sales-enablement)
-- [pricing-strategy](https://absolutelyskilled.dev/skill/pricing-strategy)
+- [product-strategy](https://absolutely-skilled.vercel.app/skill/product-strategy)
+- [brand-strategy](https://absolutely-skilled.vercel.app/skill/brand-strategy)
+- [sales-enablement](https://absolutely-skilled.vercel.app/skill/sales-enablement)
+- [pricing-strategy](https://absolutely-skilled.vercel.app/skill/pricing-strategy)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ run rigorous competitive analysis - from quick landscape scans to full strategic
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/competitive-analysis)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/competitive-analysis)*

@@ -31,10 +31,10 @@ what to measure, how to measure it, and how to act on what you find.
 
 ## Recommended Skills
 
-- [customer-support-ops](https://absolutelyskilled.dev/skill/customer-support-ops)
-- [customer-success-playbook](https://absolutelyskilled.dev/skill/customer-success-playbook)
-- [product-analytics](https://absolutelyskilled.dev/skill/product-analytics)
-- [saas-metrics](https://absolutelyskilled.dev/skill/saas-metrics)
+- [customer-support-ops](https://absolutely-skilled.vercel.app/skill/customer-support-ops)
+- [customer-success-playbook](https://absolutely-skilled.vercel.app/skill/customer-success-playbook)
+- [product-analytics](https://absolutely-skilled.vercel.app/skill/product-analytics)
+- [saas-metrics](https://absolutely-skilled.vercel.app/skill/saas-metrics)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ what to measure, how to measure it, and how to act on what you find.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/support-analytics)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/support-analytics)*

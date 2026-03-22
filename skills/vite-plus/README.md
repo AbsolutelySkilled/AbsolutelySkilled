@@ -31,9 +31,9 @@ globally, replacing the need for nvm, fnm, or Corepack.
 
 ## Recommended Skills
 
-- [frontend-developer](https://absolutelyskilled.dev/skill/frontend-developer)
-- [monorepo-management](https://absolutelyskilled.dev/skill/monorepo-management)
-- [performance-engineering](https://absolutelyskilled.dev/skill/performance-engineering)
+- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
+- [monorepo-management](https://absolutely-skilled.vercel.app/skill/monorepo-management)
+- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ globally, replacing the need for nvm, fnm, or Corepack.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/vite-plus)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/vite-plus)*

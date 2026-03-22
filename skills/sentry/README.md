@@ -31,10 +31,10 @@ distributed tracing to debug performance bottlenecks across your stack. Sentry s
 
 ## Recommended Skills
 
-- [observability](https://absolutelyskilled.dev/skill/observability)
-- [signoz](https://absolutelyskilled.dev/skill/signoz)
-- [debugging-tools](https://absolutelyskilled.dev/skill/debugging-tools)
-- [incident-management](https://absolutelyskilled.dev/skill/incident-management)
+- [observability](https://absolutely-skilled.vercel.app/skill/observability)
+- [signoz](https://absolutely-skilled.vercel.app/skill/signoz)
+- [debugging-tools](https://absolutely-skilled.vercel.app/skill/debugging-tools)
+- [incident-management](https://absolutely-skilled.vercel.app/skill/incident-management)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ distributed tracing to debug performance bottlenecks across your stack. Sentry s
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/sentry)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/sentry)*

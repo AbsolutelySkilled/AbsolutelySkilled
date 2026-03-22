@@ -30,10 +30,10 @@ and database query layer. The guiding philosophy is always measure first, optimi
 
 ## Recommended Skills
 
-- [observability](https://absolutelyskilled.dev/skill/observability)
-- [load-testing](https://absolutelyskilled.dev/skill/load-testing)
-- [backend-engineering](https://absolutelyskilled.dev/skill/backend-engineering)
-- [database-engineering](https://absolutelyskilled.dev/skill/database-engineering)
+- [observability](https://absolutely-skilled.vercel.app/skill/observability)
+- [load-testing](https://absolutely-skilled.vercel.app/skill/load-testing)
+- [backend-engineering](https://absolutely-skilled.vercel.app/skill/backend-engineering)
+- [database-engineering](https://absolutely-skilled.vercel.app/skill/database-engineering)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ and database query layer. The guiding philosophy is always measure first, optimi
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/performance-engineering)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/performance-engineering)*

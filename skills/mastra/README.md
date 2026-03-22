@@ -32,10 +32,10 @@ Vercel, Netlify, AWS, and Azure.
 
 ## Recommended Skills
 
-- [ai-agent-design](https://absolutelyskilled.dev/skill/ai-agent-design)
-- [llm-app-development](https://absolutelyskilled.dev/skill/llm-app-development)
-- [a2a-protocol](https://absolutelyskilled.dev/skill/a2a-protocol)
-- [prompt-engineering](https://absolutelyskilled.dev/skill/prompt-engineering)
+- [ai-agent-design](https://absolutely-skilled.vercel.app/skill/ai-agent-design)
+- [llm-app-development](https://absolutely-skilled.vercel.app/skill/llm-app-development)
+- [a2a-protocol](https://absolutely-skilled.vercel.app/skill/a2a-protocol)
+- [prompt-engineering](https://absolutely-skilled.vercel.app/skill/prompt-engineering)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ Vercel, Netlify, AWS, and Azure.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/mastra)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/mastra)*

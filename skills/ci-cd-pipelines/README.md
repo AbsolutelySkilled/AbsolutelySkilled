@@ -33,11 +33,11 @@ contract automatically.
 
 ## Recommended Skills
 
-- [docker-kubernetes](https://absolutelyskilled.dev/skill/docker-kubernetes)
-- [terraform-iac](https://absolutelyskilled.dev/skill/terraform-iac)
-- [git-advanced](https://absolutelyskilled.dev/skill/git-advanced)
-- [monorepo-management](https://absolutelyskilled.dev/skill/monorepo-management)
-- [meta-repo](https://absolutelyskilled.dev/skill/meta-repo)
+- [docker-kubernetes](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)
+- [terraform-iac](https://absolutely-skilled.vercel.app/skill/terraform-iac)
+- [git-advanced](https://absolutely-skilled.vercel.app/skill/git-advanced)
+- [monorepo-management](https://absolutely-skilled.vercel.app/skill/monorepo-management)
+- [meta-repo](https://absolutely-skilled.vercel.app/skill/meta-repo)
 
 ## Maintainers
 
@@ -45,4 +45,4 @@ contract automatically.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/ci-cd-pipelines)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)*

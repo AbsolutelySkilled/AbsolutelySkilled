@@ -65,6 +65,24 @@ approve.
 
 ---
 
+## When to use this skill
+
+Trigger this skill when the user:
+- Requests a new feature, component, or functionality that needs design before implementation
+- Asks to build something and the scope or approach is not yet clear
+- Wants to brainstorm or explore options for a design decision
+- Is starting a greenfield project and needs to define architecture
+- Needs to refactor or redesign an existing system
+- Says "let's think through this" or "help me plan this"
+- Wants to decompose a complex request into a validated spec before coding
+
+Do NOT trigger this skill for:
+- Quick bug fixes or typo corrections where the solution is obvious
+- Pure code review tasks with no design decisions
+- Tasks where the user explicitly says "just do it" and the scope is trivially clear
+
+---
+
 ## Hard Gates
 
 <HARD-GATE>

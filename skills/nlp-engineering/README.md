@@ -31,10 +31,10 @@ reliable, scalable text processing pipelines.
 
 ## Recommended Skills
 
-- [prompt-engineering](https://absolutelyskilled.dev/skill/prompt-engineering)
-- [llm-app-development](https://absolutelyskilled.dev/skill/llm-app-development)
-- [data-science](https://absolutelyskilled.dev/skill/data-science)
-- [computer-vision](https://absolutelyskilled.dev/skill/computer-vision)
+- [prompt-engineering](https://absolutely-skilled.vercel.app/skill/prompt-engineering)
+- [llm-app-development](https://absolutely-skilled.vercel.app/skill/llm-app-development)
+- [data-science](https://absolutely-skilled.vercel.app/skill/data-science)
+- [computer-vision](https://absolutely-skilled.vercel.app/skill/computer-vision)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ reliable, scalable text processing pipelines.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/nlp-engineering)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/nlp-engineering)*

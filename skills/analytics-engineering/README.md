@@ -32,10 +32,10 @@ support.
 
 ## Recommended Skills
 
-- [data-warehousing](https://absolutelyskilled.dev/skill/data-warehousing)
-- [data-pipelines](https://absolutelyskilled.dev/skill/data-pipelines)
-- [data-quality](https://absolutelyskilled.dev/skill/data-quality)
-- [data-science](https://absolutelyskilled.dev/skill/data-science)
+- [data-warehousing](https://absolutely-skilled.vercel.app/skill/data-warehousing)
+- [data-pipelines](https://absolutely-skilled.vercel.app/skill/data-pipelines)
+- [data-quality](https://absolutely-skilled.vercel.app/skill/data-quality)
+- [data-science](https://absolutely-skilled.vercel.app/skill/data-science)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ support.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/analytics-engineering)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/analytics-engineering)*

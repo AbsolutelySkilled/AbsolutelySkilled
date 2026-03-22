@@ -34,10 +34,10 @@ quality before publishing to a registry.
 
 ## Recommended Skills
 
-- [appsec-owasp](https://absolutelyskilled.dev/skill/appsec-owasp)
-- [penetration-testing](https://absolutelyskilled.dev/skill/penetration-testing)
-- [clean-code](https://absolutelyskilled.dev/skill/clean-code)
-- [code-review-mastery](https://absolutelyskilled.dev/skill/code-review-mastery)
+- [appsec-owasp](https://absolutely-skilled.vercel.app/skill/appsec-owasp)
+- [penetration-testing](https://absolutely-skilled.vercel.app/skill/penetration-testing)
+- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
+- [code-review-mastery](https://absolutely-skilled.vercel.app/skill/code-review-mastery)
 
 ## Maintainers
 
@@ -45,4 +45,4 @@ quality before publishing to a registry.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/skill-audit)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/skill-audit)*

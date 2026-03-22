@@ -33,9 +33,9 @@ and marketers diagnosing delivery problems.
 
 ## Recommended Skills
 
-- [email-marketing](https://absolutelyskilled.dev/skill/email-marketing)
-- [technical-seo](https://absolutelyskilled.dev/skill/technical-seo)
-- [privacy-compliance](https://absolutelyskilled.dev/skill/privacy-compliance)
+- [email-marketing](https://absolutely-skilled.vercel.app/skill/email-marketing)
+- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
+- [privacy-compliance](https://absolutely-skilled.vercel.app/skill/privacy-compliance)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ and marketers diagnosing delivery problems.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/email-deliverability)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/email-deliverability)*

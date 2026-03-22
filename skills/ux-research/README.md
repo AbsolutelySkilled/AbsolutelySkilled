@@ -33,10 +33,10 @@ your usability problems for a fraction of what a failed launch costs.
 
 ## Recommended Skills
 
-- [product-discovery](https://absolutelyskilled.dev/skill/product-discovery)
-- [customer-research](https://absolutelyskilled.dev/skill/customer-research)
-- [accessibility-wcag](https://absolutelyskilled.dev/skill/accessibility-wcag)
-- [design-systems](https://absolutelyskilled.dev/skill/design-systems)
+- [product-discovery](https://absolutely-skilled.vercel.app/skill/product-discovery)
+- [customer-research](https://absolutely-skilled.vercel.app/skill/customer-research)
+- [accessibility-wcag](https://absolutely-skilled.vercel.app/skill/accessibility-wcag)
+- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ your usability problems for a fraction of what a failed launch costs.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/ux-research)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/ux-research)*

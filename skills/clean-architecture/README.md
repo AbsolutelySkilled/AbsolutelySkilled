@@ -33,10 +33,10 @@ model, component design principles, and practical boundary-crossing patterns.
 
 ## Recommended Skills
 
-- [clean-code](https://absolutelyskilled.dev/skill/clean-code)
-- [system-design](https://absolutelyskilled.dev/skill/system-design)
-- [microservices](https://absolutelyskilled.dev/skill/microservices)
-- [backend-engineering](https://absolutelyskilled.dev/skill/backend-engineering)
+- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
+- [system-design](https://absolutely-skilled.vercel.app/skill/system-design)
+- [microservices](https://absolutely-skilled.vercel.app/skill/microservices)
+- [backend-engineering](https://absolutely-skilled.vercel.app/skill/backend-engineering)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ model, component design principles, and practical boundary-crossing patterns.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/clean-architecture)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/clean-architecture)*

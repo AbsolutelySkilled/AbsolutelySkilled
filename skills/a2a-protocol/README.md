@@ -33,10 +33,10 @@ enables agent-to-agent collaboration where agents remain autonomous entities.
 
 ## Recommended Skills
 
-- [ai-agent-design](https://absolutelyskilled.dev/skill/ai-agent-design)
-- [a2ui](https://absolutelyskilled.dev/skill/a2ui)
-- [mastra](https://absolutelyskilled.dev/skill/mastra)
-- [llm-app-development](https://absolutelyskilled.dev/skill/llm-app-development)
+- [ai-agent-design](https://absolutely-skilled.vercel.app/skill/ai-agent-design)
+- [a2ui](https://absolutely-skilled.vercel.app/skill/a2ui)
+- [mastra](https://absolutely-skilled.vercel.app/skill/mastra)
+- [llm-app-development](https://absolutely-skilled.vercel.app/skill/llm-app-development)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ enables agent-to-agent collaboration where agents remain autonomous entities.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/a2a-protocol)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/a2a-protocol)*

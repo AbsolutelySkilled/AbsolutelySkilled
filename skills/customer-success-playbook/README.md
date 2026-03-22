@@ -31,10 +31,10 @@ performance measurement.
 
 ## Recommended Skills
 
-- [account-management](https://absolutelyskilled.dev/skill/account-management)
-- [support-analytics](https://absolutelyskilled.dev/skill/support-analytics)
-- [customer-support-ops](https://absolutelyskilled.dev/skill/customer-support-ops)
-- [saas-metrics](https://absolutelyskilled.dev/skill/saas-metrics)
+- [account-management](https://absolutely-skilled.vercel.app/skill/account-management)
+- [support-analytics](https://absolutely-skilled.vercel.app/skill/support-analytics)
+- [customer-support-ops](https://absolutely-skilled.vercel.app/skill/customer-support-ops)
+- [saas-metrics](https://absolutely-skilled.vercel.app/skill/saas-metrics)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ performance measurement.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/customer-success-playbook)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/customer-success-playbook)*

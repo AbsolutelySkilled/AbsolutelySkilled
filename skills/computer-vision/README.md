@@ -32,9 +32,9 @@ zero-shot approaches before committing to full training runs.
 
 ## Recommended Skills
 
-- [data-science](https://absolutelyskilled.dev/skill/data-science)
-- [ml-ops](https://absolutelyskilled.dev/skill/ml-ops)
-- [nlp-engineering](https://absolutelyskilled.dev/skill/nlp-engineering)
+- [data-science](https://absolutely-skilled.vercel.app/skill/data-science)
+- [ml-ops](https://absolutely-skilled.vercel.app/skill/ml-ops)
+- [nlp-engineering](https://absolutely-skilled.vercel.app/skill/nlp-engineering)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ zero-shot approaches before committing to full training runs.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/computer-vision)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/computer-vision)*

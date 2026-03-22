@@ -32,10 +32,10 @@ for their specific audience - from a 2-page RFC to a detailed incident post-mort
 
 ## Recommended Skills
 
-- [technical-writing](https://absolutelyskilled.dev/skill/technical-writing)
-- [knowledge-base](https://absolutelyskilled.dev/skill/knowledge-base)
-- [remote-collaboration](https://absolutelyskilled.dev/skill/remote-collaboration)
-- [second-brain](https://absolutelyskilled.dev/skill/second-brain)
+- [technical-writing](https://absolutely-skilled.vercel.app/skill/technical-writing)
+- [knowledge-base](https://absolutely-skilled.vercel.app/skill/knowledge-base)
+- [remote-collaboration](https://absolutely-skilled.vercel.app/skill/remote-collaboration)
+- [second-brain](https://absolutely-skilled.vercel.app/skill/second-brain)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ for their specific audience - from a 2-page RFC to a detailed incident post-mort
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/internal-docs)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/internal-docs)*

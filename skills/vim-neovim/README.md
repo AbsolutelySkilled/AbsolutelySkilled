@@ -30,10 +30,10 @@ finding via `telescope.nvim`. Neovim exposes a rich Lua API (`vim.api`,
 
 ## Recommended Skills
 
-- [shell-scripting](https://absolutelyskilled.dev/skill/shell-scripting)
-- [regex-mastery](https://absolutelyskilled.dev/skill/regex-mastery)
-- [git-advanced](https://absolutelyskilled.dev/skill/git-advanced)
-- [cmux](https://absolutelyskilled.dev/skill/cmux)
+- [shell-scripting](https://absolutely-skilled.vercel.app/skill/shell-scripting)
+- [regex-mastery](https://absolutely-skilled.vercel.app/skill/regex-mastery)
+- [git-advanced](https://absolutely-skilled.vercel.app/skill/git-advanced)
+- [cmux](https://absolutely-skilled.vercel.app/skill/cmux)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ finding via `telescope.nvim`. Neovim exposes a rich Lua API (`vim.api`,
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/vim-neovim)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/vim-neovim)*

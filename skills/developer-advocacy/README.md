@@ -31,10 +31,10 @@ live demos, technical blog posts, SDK examples, and community engagement.
 
 ## Recommended Skills
 
-- [technical-writing](https://absolutelyskilled.dev/skill/technical-writing)
-- [open-source-management](https://absolutelyskilled.dev/skill/open-source-management)
-- [content-marketing](https://absolutelyskilled.dev/skill/content-marketing)
-- [developer-experience](https://absolutelyskilled.dev/skill/developer-experience)
+- [technical-writing](https://absolutely-skilled.vercel.app/skill/technical-writing)
+- [open-source-management](https://absolutely-skilled.vercel.app/skill/open-source-management)
+- [content-marketing](https://absolutely-skilled.vercel.app/skill/content-marketing)
+- [developer-experience](https://absolutely-skilled.vercel.app/skill/developer-experience)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ live demos, technical blog posts, SDK examples, and community engagement.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/developer-advocacy)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/developer-advocacy)*

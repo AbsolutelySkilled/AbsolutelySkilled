@@ -33,10 +33,10 @@ received from counterparties.
 
 ## Recommended Skills
 
-- [employment-law](https://absolutelyskilled.dev/skill/employment-law)
-- [ip-management](https://absolutelyskilled.dev/skill/ip-management)
-- [privacy-compliance](https://absolutelyskilled.dev/skill/privacy-compliance)
-- [regulatory-compliance](https://absolutelyskilled.dev/skill/regulatory-compliance)
+- [employment-law](https://absolutely-skilled.vercel.app/skill/employment-law)
+- [ip-management](https://absolutely-skilled.vercel.app/skill/ip-management)
+- [privacy-compliance](https://absolutely-skilled.vercel.app/skill/privacy-compliance)
+- [regulatory-compliance](https://absolutely-skilled.vercel.app/skill/regulatory-compliance)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ received from counterparties.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/contract-drafting)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/contract-drafting)*

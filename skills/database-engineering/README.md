@@ -31,10 +31,10 @@ reference.
 
 ## Recommended Skills
 
-- [backend-engineering](https://absolutelyskilled.dev/skill/backend-engineering)
-- [performance-engineering](https://absolutelyskilled.dev/skill/performance-engineering)
-- [data-pipelines](https://absolutelyskilled.dev/skill/data-pipelines)
-- [system-design](https://absolutelyskilled.dev/skill/system-design)
+- [backend-engineering](https://absolutely-skilled.vercel.app/skill/backend-engineering)
+- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
+- [data-pipelines](https://absolutely-skilled.vercel.app/skill/data-pipelines)
+- [system-design](https://absolutely-skilled.vercel.app/skill/system-design)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ reference.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/database-engineering)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/database-engineering)*

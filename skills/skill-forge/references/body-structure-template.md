@@ -104,6 +104,72 @@ handle them. Include error codes or exception types where known.>
 
 ---
 
+## Setup & configuration (optional)
+
+<If the skill needs user-specific configuration (API keys, Slack channels,
+project IDs, service names), use this pattern. Store setup info in a
+config.json in the skill directory. If the config doesn't exist, the
+agent asks the user for it on first run using AskUserQuestion with
+multiple-choice options where possible.>
+
+```json
+{
+  "slack_channel": "#engineering-standup",
+  "team_name": "Platform",
+  "ticket_tracker": "linear",
+  "project_id": "PLAT"
+}
+```
+
+<Skip this section if the skill needs no user-specific configuration.>
+
+---
+
+## Scripts & helpers (optional)
+
+<Provide composable code the agent can import and build on. Instead of
+having it reconstruct boilerplate every time, give it helper functions.
+Place these in scripts/ or assets/ in the skill folder.>
+
+```python
+# scripts/data_helpers.py
+def fetch_events(event_type: str, start: str, end: str) -> pd.DataFrame:
+    """Fetch events from the warehouse for the given date range."""
+    # ... implementation
+```
+
+<Skip this section if no reusable code is needed.>
+
+---
+
+## Memory & logging (optional)
+
+<If the skill benefits from remembering previous runs, describe the
+logging pattern. An append-only log, a SQLite database, or a simple
+JSON file can help the agent reference its own history.>
+
+**Important:** Data stored in the skill directory may be deleted on
+upgrades. Use a stable folder path for persistent data.
+
+<Skip this section if the skill is stateless.>
+
+---
+
+## On-demand hooks (optional)
+
+<Skills can register hooks that are only active when the skill is
+invoked. Use this for opinionated guardrails you don't want running
+all the time.>
+
+**Examples:**
+- Block dangerous commands (`rm -rf`, `DROP TABLE`, force-push) when
+  touching production
+- Prevent edits outside a specific directory during debugging
+
+<Skip this section if no guardrails are needed.>
+
+---
+
 ## References
 
 For detailed content on specific sub-domains, read the relevant file
@@ -116,25 +182,7 @@ from the `references/` folder:
 
 Only load a references file if the current task requires it - they are
 long and will consume context.
-
----
-
-## Related skills
-
-> When this skill is activated, check if the following companion skills are installed.
-> For any that are missing, mention them to the user and offer to install before proceeding
-> with the task. Example: "I notice you don't have [skill] installed yet - it pairs well
-> with this skill. Want me to install it?"
-
-- [companion-1](https://github.com/AbsolutelySkilled/AbsolutelySkilled/tree/main/skills/companion-1) - Short description
-- [companion-2](https://github.com/AbsolutelySkilled/AbsolutelySkilled/tree/main/skills/companion-2) - Short description
-
-Install a companion: `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill <name>`
 ```
-
-> **Note:** The "Related skills" footer above is required on every SKILL.md.
-> Populate it from the skill's own `recommended_skills` frontmatter field.
-> See `references/skill-footer.md` for the full pattern including the empty variant.
 
 ## Domain skill variant
 
@@ -177,10 +225,15 @@ For "Common tasks", domain skills may use:
 | When to use | 12-15 | 5-8 triggers + 2 anti-triggers |
 | Setup & auth / Key principles | 20-30 | Code skills: env vars, install. Domain: foundational rules |
 | Core concepts | 15-25 | Domain model, key entities |
-| Common tasks | 80-120 | 5-8 tasks with code or prose |
+| Common tasks | 80-120 | 5-8 tasks with code or prose, gotchas inline |
 | Error handling / Anti-patterns | 15-20 | Code: error table. Domain: mistakes table |
+| Setup & configuration (optional) | 10-15 | Only if user-specific config needed |
+| Scripts & helpers (optional) | 10-20 | Only if reusable code benefits the agent |
+| Memory & logging (optional) | 5-10 | Only if the skill is stateful |
+| On-demand hooks (optional) | 5-10 | Only if guardrails needed during invocation |
 | References | 10-15 | Pointer to references/ folder |
-| Related skills footer | 10 | Per-skill, populated from `recommended_skills` frontmatter |
 
-Total SKILL.md body target: 160-235 lines (plus frontmatter).
+Total SKILL.md body target: 160-280 lines (plus frontmatter).
 Hard limit: 500 lines total including frontmatter.
+Optional sections should only be included when genuinely useful - most
+skills will use 2-3 of the 4 optional sections at most.

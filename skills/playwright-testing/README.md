@@ -43,11 +43,11 @@ references/
 
 ## Recommended Skills
 
-- [cypress-testing](https://absolutelyskilled.dev/skill/cypress-testing)
-- [test-strategy](https://absolutelyskilled.dev/skill/test-strategy)
-- [jest-vitest](https://absolutelyskilled.dev/skill/jest-vitest)
-- [api-testing](https://absolutelyskilled.dev/skill/api-testing)
-- [webapp-testing](https://absolutelyskilled.dev/skill/webapp-testing)
+- [cypress-testing](https://absolutely-skilled.vercel.app/skill/cypress-testing)
+- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
+- [jest-vitest](https://absolutely-skilled.vercel.app/skill/jest-vitest)
+- [api-testing](https://absolutely-skilled.vercel.app/skill/api-testing)
+- [webapp-testing](https://absolutely-skilled.vercel.app/skill/webapp-testing)
 
 ## Maintainers
 
@@ -55,4 +55,4 @@ references/
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/playwright-testing)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/playwright-testing)*

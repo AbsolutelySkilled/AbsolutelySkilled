@@ -30,10 +30,10 @@ who need CRM to be a system of truth, not a graveyard of stale opportunities.
 
 ## Recommended Skills
 
-- [sales-playbook](https://absolutelyskilled.dev/skill/sales-playbook)
-- [lead-scoring](https://absolutelyskilled.dev/skill/lead-scoring)
-- [account-management](https://absolutelyskilled.dev/skill/account-management)
-- [sales-enablement](https://absolutelyskilled.dev/skill/sales-enablement)
+- [sales-playbook](https://absolutely-skilled.vercel.app/skill/sales-playbook)
+- [lead-scoring](https://absolutely-skilled.vercel.app/skill/lead-scoring)
+- [account-management](https://absolutely-skilled.vercel.app/skill/account-management)
+- [sales-enablement](https://absolutely-skilled.vercel.app/skill/sales-enablement)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ who need CRM to be a system of truth, not a graveyard of stale opportunities.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/crm-management)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/crm-management)*

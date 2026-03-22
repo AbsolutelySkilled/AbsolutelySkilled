@@ -24,10 +24,10 @@ Microservices is an architectural style that structures an application as a coll
 
 ## Recommended Skills
 
-- [system-design](https://absolutelyskilled.dev/skill/system-design)
-- [event-driven-architecture](https://absolutelyskilled.dev/skill/event-driven-architecture)
-- [docker-kubernetes](https://absolutelyskilled.dev/skill/docker-kubernetes)
-- [api-design](https://absolutelyskilled.dev/skill/api-design)
+- [system-design](https://absolutely-skilled.vercel.app/skill/system-design)
+- [event-driven-architecture](https://absolutely-skilled.vercel.app/skill/event-driven-architecture)
+- [docker-kubernetes](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)
+- [api-design](https://absolutely-skilled.vercel.app/skill/api-design)
 
 ## Maintainers
 
@@ -35,4 +35,4 @@ Microservices is an architectural style that structures an application as a coll
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/microservices)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/microservices)*

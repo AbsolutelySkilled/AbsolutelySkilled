@@ -30,10 +30,10 @@ idioms that separate fragile one-liners from scripts that hold up in production.
 
 ## Recommended Skills
 
-- [linux-admin](https://absolutelyskilled.dev/skill/linux-admin)
-- [regex-mastery](https://absolutelyskilled.dev/skill/regex-mastery)
-- [cli-design](https://absolutelyskilled.dev/skill/cli-design)
-- [vim-neovim](https://absolutelyskilled.dev/skill/vim-neovim)
+- [linux-admin](https://absolutely-skilled.vercel.app/skill/linux-admin)
+- [regex-mastery](https://absolutely-skilled.vercel.app/skill/regex-mastery)
+- [cli-design](https://absolutely-skilled.vercel.app/skill/cli-design)
+- [vim-neovim](https://absolutely-skilled.vercel.app/skill/vim-neovim)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ idioms that separate fragile one-liners from scripts that hold up in production.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/shell-scripting)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/shell-scripting)*

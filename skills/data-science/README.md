@@ -30,10 +30,10 @@ guidance on statistical rigor and common traps.
 
 ## Recommended Skills
 
-- [analytics-engineering](https://absolutelyskilled.dev/skill/analytics-engineering)
-- [data-pipelines](https://absolutelyskilled.dev/skill/data-pipelines)
-- [nlp-engineering](https://absolutelyskilled.dev/skill/nlp-engineering)
-- [computer-vision](https://absolutelyskilled.dev/skill/computer-vision)
+- [analytics-engineering](https://absolutely-skilled.vercel.app/skill/analytics-engineering)
+- [data-pipelines](https://absolutely-skilled.vercel.app/skill/data-pipelines)
+- [nlp-engineering](https://absolutely-skilled.vercel.app/skill/nlp-engineering)
+- [computer-vision](https://absolutely-skilled.vercel.app/skill/computer-vision)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ guidance on statistical rigor and common traps.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/data-science)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/data-science)*

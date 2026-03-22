@@ -32,9 +32,9 @@ command pattern - that form the backbone of well-architected gameplay code.
 
 ## Recommended Skills
 
-- [unity-development](https://absolutelyskilled.dev/skill/unity-development)
-- [game-balancing](https://absolutelyskilled.dev/skill/game-balancing)
-- [clean-architecture](https://absolutelyskilled.dev/skill/clean-architecture)
+- [unity-development](https://absolutely-skilled.vercel.app/skill/unity-development)
+- [game-balancing](https://absolutely-skilled.vercel.app/skill/game-balancing)
+- [clean-architecture](https://absolutely-skilled.vercel.app/skill/clean-architecture)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ command pattern - that form the backbone of well-architected gameplay code.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/game-design-patterns)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/game-design-patterns)*

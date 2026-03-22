@@ -31,10 +31,10 @@ choose the right refactoring move, and execute it correctly.
 
 ## Recommended Skills
 
-- [clean-code](https://absolutelyskilled.dev/skill/clean-code)
-- [code-review-mastery](https://absolutelyskilled.dev/skill/code-review-mastery)
-- [test-strategy](https://absolutelyskilled.dev/skill/test-strategy)
-- [debugging-tools](https://absolutelyskilled.dev/skill/debugging-tools)
+- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
+- [code-review-mastery](https://absolutely-skilled.vercel.app/skill/code-review-mastery)
+- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
+- [debugging-tools](https://absolutely-skilled.vercel.app/skill/debugging-tools)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ choose the right refactoring move, and execute it correctly.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/refactoring-patterns)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/refactoring-patterns)*

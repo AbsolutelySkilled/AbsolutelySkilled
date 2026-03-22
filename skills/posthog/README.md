@@ -32,10 +32,10 @@ through its REST API for querying data and managing resources.
 
 ## Recommended Skills
 
-- [product-analytics](https://absolutelyskilled.dev/skill/product-analytics)
-- [sentry](https://absolutelyskilled.dev/skill/sentry)
-- [observability](https://absolutelyskilled.dev/skill/observability)
-- [growth-hacking](https://absolutelyskilled.dev/skill/growth-hacking)
+- [product-analytics](https://absolutely-skilled.vercel.app/skill/product-analytics)
+- [sentry](https://absolutely-skilled.vercel.app/skill/sentry)
+- [observability](https://absolutely-skilled.vercel.app/skill/observability)
+- [growth-hacking](https://absolutely-skilled.vercel.app/skill/growth-hacking)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ through its REST API for querying data and managing resources.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/posthog)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/posthog)*

@@ -30,10 +30,10 @@ performance, storage cost, and maintainability for downstream analytics consumer
 
 ## Recommended Skills
 
-- [data-pipelines](https://absolutelyskilled.dev/skill/data-pipelines)
-- [analytics-engineering](https://absolutelyskilled.dev/skill/analytics-engineering)
-- [data-quality](https://absolutelyskilled.dev/skill/data-quality)
-- [database-engineering](https://absolutelyskilled.dev/skill/database-engineering)
+- [data-pipelines](https://absolutely-skilled.vercel.app/skill/data-pipelines)
+- [analytics-engineering](https://absolutely-skilled.vercel.app/skill/analytics-engineering)
+- [data-quality](https://absolutely-skilled.vercel.app/skill/data-quality)
+- [database-engineering](https://absolutely-skilled.vercel.app/skill/database-engineering)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ performance, storage cost, and maintainability for downstream analytics consumer
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/data-warehousing)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/data-warehousing)*

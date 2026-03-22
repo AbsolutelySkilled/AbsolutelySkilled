@@ -31,10 +31,10 @@ dialogs, and binary distribution gatekeeping by Apple and Google.
 
 ## Recommended Skills
 
-- [react-native](https://absolutelyskilled.dev/skill/react-native)
-- [android-kotlin](https://absolutelyskilled.dev/skill/android-kotlin)
-- [ios-swift](https://absolutelyskilled.dev/skill/ios-swift)
-- [test-strategy](https://absolutelyskilled.dev/skill/test-strategy)
+- [react-native](https://absolutely-skilled.vercel.app/skill/react-native)
+- [android-kotlin](https://absolutely-skilled.vercel.app/skill/android-kotlin)
+- [ios-swift](https://absolutely-skilled.vercel.app/skill/ios-swift)
+- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ dialogs, and binary distribution gatekeeping by Apple and Google.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/mobile-testing)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/mobile-testing)*

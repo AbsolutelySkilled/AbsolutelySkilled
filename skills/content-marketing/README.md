@@ -33,10 +33,10 @@ strategist would.
 
 ## Recommended Skills
 
-- [copywriting](https://absolutelyskilled.dev/skill/copywriting)
-- [content-seo](https://absolutelyskilled.dev/skill/content-seo)
-- [email-marketing](https://absolutelyskilled.dev/skill/email-marketing)
-- [social-media-strategy](https://absolutelyskilled.dev/skill/social-media-strategy)
+- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
+- [content-seo](https://absolutely-skilled.vercel.app/skill/content-seo)
+- [email-marketing](https://absolutely-skilled.vercel.app/skill/email-marketing)
+- [social-media-strategy](https://absolutely-skilled.vercel.app/skill/social-media-strategy)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ strategist would.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/content-marketing)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/content-marketing)*

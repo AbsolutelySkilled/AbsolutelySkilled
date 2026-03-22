@@ -33,10 +33,10 @@ systems at any scale.
 
 ## Recommended Skills
 
-- [microservices](https://absolutelyskilled.dev/skill/microservices)
-- [real-time-streaming](https://absolutelyskilled.dev/skill/real-time-streaming)
-- [system-design](https://absolutelyskilled.dev/skill/system-design)
-- [backend-engineering](https://absolutelyskilled.dev/skill/backend-engineering)
+- [microservices](https://absolutely-skilled.vercel.app/skill/microservices)
+- [real-time-streaming](https://absolutely-skilled.vercel.app/skill/real-time-streaming)
+- [system-design](https://absolutely-skilled.vercel.app/skill/system-design)
+- [backend-engineering](https://absolutely-skilled.vercel.app/skill/backend-engineering)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ systems at any scale.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/event-driven-architecture)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/event-driven-architecture)*

@@ -33,10 +33,10 @@ expense management. It applies equally to spreadsheet-based setups, QuickBooks,
 
 ## Recommended Skills
 
-- [financial-reporting](https://absolutelyskilled.dev/skill/financial-reporting)
-- [tax-strategy](https://absolutelyskilled.dev/skill/tax-strategy)
-- [budgeting-planning](https://absolutelyskilled.dev/skill/budgeting-planning)
-- [no-code-automation](https://absolutelyskilled.dev/skill/no-code-automation)
+- [financial-reporting](https://absolutely-skilled.vercel.app/skill/financial-reporting)
+- [tax-strategy](https://absolutely-skilled.vercel.app/skill/tax-strategy)
+- [budgeting-planning](https://absolutely-skilled.vercel.app/skill/budgeting-planning)
+- [no-code-automation](https://absolutely-skilled.vercel.app/skill/no-code-automation)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ expense management. It applies equally to spreadsheet-based setups, QuickBooks,
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/bookkeeping-automation)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/bookkeeping-automation)*

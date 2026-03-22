@@ -32,10 +32,10 @@ monitoring for anomaly detection.
 
 ## Recommended Skills
 
-- [data-pipelines](https://absolutelyskilled.dev/skill/data-pipelines)
-- [data-warehousing](https://absolutelyskilled.dev/skill/data-warehousing)
-- [analytics-engineering](https://absolutelyskilled.dev/skill/analytics-engineering)
-- [observability](https://absolutelyskilled.dev/skill/observability)
+- [data-pipelines](https://absolutely-skilled.vercel.app/skill/data-pipelines)
+- [data-warehousing](https://absolutely-skilled.vercel.app/skill/data-warehousing)
+- [analytics-engineering](https://absolutely-skilled.vercel.app/skill/analytics-engineering)
+- [observability](https://absolutely-skilled.vercel.app/skill/observability)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ monitoring for anomaly detection.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/data-quality)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/data-quality)*

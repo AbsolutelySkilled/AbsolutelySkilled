@@ -32,10 +32,10 @@ intelligence briefs, product one-pagers, and training programs.
 
 ## Recommended Skills
 
-- [sales-playbook](https://absolutelyskilled.dev/skill/sales-playbook)
-- [competitive-analysis](https://absolutelyskilled.dev/skill/competitive-analysis)
-- [proposal-writing](https://absolutelyskilled.dev/skill/proposal-writing)
-- [crm-management](https://absolutelyskilled.dev/skill/crm-management)
+- [sales-playbook](https://absolutely-skilled.vercel.app/skill/sales-playbook)
+- [competitive-analysis](https://absolutely-skilled.vercel.app/skill/competitive-analysis)
+- [proposal-writing](https://absolutely-skilled.vercel.app/skill/proposal-writing)
+- [crm-management](https://absolutely-skilled.vercel.app/skill/crm-management)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ intelligence briefs, product one-pagers, and training programs.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/sales-enablement)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/sales-enablement)*

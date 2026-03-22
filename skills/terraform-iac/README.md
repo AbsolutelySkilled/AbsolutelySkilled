@@ -31,10 +31,10 @@ practices.
 
 ## Recommended Skills
 
-- [docker-kubernetes](https://absolutelyskilled.dev/skill/docker-kubernetes)
-- [cloud-aws](https://absolutelyskilled.dev/skill/cloud-aws)
-- [cloud-gcp](https://absolutelyskilled.dev/skill/cloud-gcp)
-- [ci-cd-pipelines](https://absolutelyskilled.dev/skill/ci-cd-pipelines)
+- [docker-kubernetes](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)
+- [cloud-aws](https://absolutely-skilled.vercel.app/skill/cloud-aws)
+- [cloud-gcp](https://absolutely-skilled.vercel.app/skill/cloud-gcp)
+- [ci-cd-pipelines](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ practices.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/terraform-iac)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/terraform-iac)*

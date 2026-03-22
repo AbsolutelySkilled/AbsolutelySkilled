@@ -32,10 +32,10 @@ self-hosted via Docker or Kubernetes.
 
 ## Recommended Skills
 
-- [observability](https://absolutelyskilled.dev/skill/observability)
-- [sentry](https://absolutelyskilled.dev/skill/sentry)
-- [site-reliability](https://absolutelyskilled.dev/skill/site-reliability)
-- [docker-kubernetes](https://absolutelyskilled.dev/skill/docker-kubernetes)
+- [observability](https://absolutely-skilled.vercel.app/skill/observability)
+- [sentry](https://absolutely-skilled.vercel.app/skill/sentry)
+- [site-reliability](https://absolutely-skilled.vercel.app/skill/site-reliability)
+- [docker-kubernetes](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ self-hosted via Docker or Kubernetes.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/signoz)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/signoz)*

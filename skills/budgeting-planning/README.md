@@ -30,10 +30,10 @@ aligns teams, surfaces trade-offs early, and enables rapid course correction.
 
 ## Recommended Skills
 
-- [financial-modeling](https://absolutelyskilled.dev/skill/financial-modeling)
-- [financial-reporting](https://absolutelyskilled.dev/skill/financial-reporting)
-- [tax-strategy](https://absolutelyskilled.dev/skill/tax-strategy)
-- [saas-metrics](https://absolutelyskilled.dev/skill/saas-metrics)
+- [financial-modeling](https://absolutely-skilled.vercel.app/skill/financial-modeling)
+- [financial-reporting](https://absolutely-skilled.vercel.app/skill/financial-reporting)
+- [tax-strategy](https://absolutely-skilled.vercel.app/skill/tax-strategy)
+- [saas-metrics](https://absolutely-skilled.vercel.app/skill/saas-metrics)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ aligns teams, surfaces trade-offs early, and enables rapid course correction.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/budgeting-planning)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/budgeting-planning)*

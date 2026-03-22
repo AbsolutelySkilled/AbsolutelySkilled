@@ -32,10 +32,10 @@ trade-offs.
 
 ## Recommended Skills
 
-- [api-design](https://absolutelyskilled.dev/skill/api-design)
-- [database-engineering](https://absolutelyskilled.dev/skill/database-engineering)
-- [observability](https://absolutelyskilled.dev/skill/observability)
-- [system-design](https://absolutelyskilled.dev/skill/system-design)
+- [api-design](https://absolutely-skilled.vercel.app/skill/api-design)
+- [database-engineering](https://absolutely-skilled.vercel.app/skill/database-engineering)
+- [observability](https://absolutely-skilled.vercel.app/skill/observability)
+- [system-design](https://absolutely-skilled.vercel.app/skill/system-design)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ trade-offs.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/backend-engineering)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/backend-engineering)*

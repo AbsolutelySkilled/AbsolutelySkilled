@@ -33,10 +33,10 @@ run scoring sessions, and structure planning artifacts.
 
 ## Recommended Skills
 
-- [product-discovery](https://absolutelyskilled.dev/skill/product-discovery)
-- [competitive-analysis](https://absolutelyskilled.dev/skill/competitive-analysis)
-- [product-analytics](https://absolutelyskilled.dev/skill/product-analytics)
-- [user-stories](https://absolutelyskilled.dev/skill/user-stories)
+- [product-discovery](https://absolutely-skilled.vercel.app/skill/product-discovery)
+- [competitive-analysis](https://absolutely-skilled.vercel.app/skill/competitive-analysis)
+- [product-analytics](https://absolutely-skilled.vercel.app/skill/product-analytics)
+- [user-stories](https://absolutely-skilled.vercel.app/skill/user-stories)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ run scoring sessions, and structure planning artifacts.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/product-strategy)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/product-strategy)*

@@ -33,10 +33,10 @@ the metrics that tell you whether any of it is working.
 
 ## Recommended Skills
 
-- [customer-support-ops](https://absolutelyskilled.dev/skill/customer-support-ops)
-- [developer-advocacy](https://absolutelyskilled.dev/skill/developer-advocacy)
-- [social-media-strategy](https://absolutelyskilled.dev/skill/social-media-strategy)
-- [employee-engagement](https://absolutelyskilled.dev/skill/employee-engagement)
+- [customer-support-ops](https://absolutely-skilled.vercel.app/skill/customer-support-ops)
+- [developer-advocacy](https://absolutely-skilled.vercel.app/skill/developer-advocacy)
+- [social-media-strategy](https://absolutely-skilled.vercel.app/skill/social-media-strategy)
+- [employee-engagement](https://absolutely-skilled.vercel.app/skill/employee-engagement)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ the metrics that tell you whether any of it is working.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/community-management)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/community-management)*

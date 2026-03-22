@@ -34,11 +34,11 @@ offers the best opportunity for each keyword.
 
 ## Recommended Skills
 
-- [content-seo](https://absolutelyskilled.dev/skill/content-seo)
-- [seo-mastery](https://absolutelyskilled.dev/skill/seo-mastery)
-- [aeo-optimization](https://absolutelyskilled.dev/skill/aeo-optimization)
-- [programmatic-seo](https://absolutelyskilled.dev/skill/programmatic-seo)
-- [geo-optimization](https://absolutelyskilled.dev/skill/geo-optimization)
+- [content-seo](https://absolutely-skilled.vercel.app/skill/content-seo)
+- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
+- [aeo-optimization](https://absolutely-skilled.vercel.app/skill/aeo-optimization)
+- [programmatic-seo](https://absolutely-skilled.vercel.app/skill/programmatic-seo)
+- [geo-optimization](https://absolutely-skilled.vercel.app/skill/geo-optimization)
 
 ## Maintainers
 
@@ -46,4 +46,4 @@ offers the best opportunity for each keyword.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/keyword-research)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/keyword-research)*

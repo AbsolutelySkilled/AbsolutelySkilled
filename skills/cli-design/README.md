@@ -32,9 +32,9 @@ Python, Go, and Rust ecosystems.
 
 ## Recommended Skills
 
-- [shell-scripting](https://absolutelyskilled.dev/skill/shell-scripting)
-- [developer-experience](https://absolutelyskilled.dev/skill/developer-experience)
-- [regex-mastery](https://absolutelyskilled.dev/skill/regex-mastery)
+- [shell-scripting](https://absolutely-skilled.vercel.app/skill/shell-scripting)
+- [developer-experience](https://absolutely-skilled.vercel.app/skill/developer-experience)
+- [regex-mastery](https://absolutely-skilled.vercel.app/skill/regex-mastery)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ Python, Go, and Rust ecosystems.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/cli-design)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/cli-design)*

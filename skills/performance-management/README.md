@@ -33,10 +33,10 @@ output. Done poorly, it becomes a compliance exercise that destroys morale.
 
 ## Recommended Skills
 
-- [compensation-strategy](https://absolutelyskilled.dev/skill/compensation-strategy)
-- [employee-engagement](https://absolutelyskilled.dev/skill/employee-engagement)
-- [interview-design](https://absolutelyskilled.dev/skill/interview-design)
-- [onboarding](https://absolutelyskilled.dev/skill/onboarding)
+- [compensation-strategy](https://absolutely-skilled.vercel.app/skill/compensation-strategy)
+- [employee-engagement](https://absolutely-skilled.vercel.app/skill/employee-engagement)
+- [interview-design](https://absolutely-skilled.vercel.app/skill/interview-design)
+- [onboarding](https://absolutely-skilled.vercel.app/skill/onboarding)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ output. Done poorly, it becomes a compliance exercise that destroys morale.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/performance-management)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/performance-management)*

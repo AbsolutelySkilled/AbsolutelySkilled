@@ -33,10 +33,10 @@ virtually every jurisdiction. There are no exceptions.
 
 ## Recommended Skills
 
-- [appsec-owasp](https://absolutelyskilled.dev/skill/appsec-owasp)
-- [cloud-security](https://absolutelyskilled.dev/skill/cloud-security)
-- [security-incident-response](https://absolutelyskilled.dev/skill/security-incident-response)
-- [cryptography](https://absolutelyskilled.dev/skill/cryptography)
+- [appsec-owasp](https://absolutely-skilled.vercel.app/skill/appsec-owasp)
+- [cloud-security](https://absolutely-skilled.vercel.app/skill/cloud-security)
+- [security-incident-response](https://absolutely-skilled.vercel.app/skill/security-incident-response)
+- [cryptography](https://absolutely-skilled.vercel.app/skill/cryptography)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ virtually every jurisdiction. There are no exceptions.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/penetration-testing)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/penetration-testing)*

@@ -30,10 +30,10 @@ who need to respond with speed and precision when a breach is suspected or confi
 
 ## Recommended Skills
 
-- [incident-management](https://absolutelyskilled.dev/skill/incident-management)
-- [appsec-owasp](https://absolutelyskilled.dev/skill/appsec-owasp)
-- [penetration-testing](https://absolutelyskilled.dev/skill/penetration-testing)
-- [observability](https://absolutelyskilled.dev/skill/observability)
+- [incident-management](https://absolutely-skilled.vercel.app/skill/incident-management)
+- [appsec-owasp](https://absolutely-skilled.vercel.app/skill/appsec-owasp)
+- [penetration-testing](https://absolutely-skilled.vercel.app/skill/penetration-testing)
+- [observability](https://absolutely-skilled.vercel.app/skill/observability)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ who need to respond with speed and precision when a breach is suspected or confi
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/security-incident-response)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/security-incident-response)*

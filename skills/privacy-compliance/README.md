@@ -33,10 +33,10 @@ structure it*, not just regulatory theory.
 
 ## Recommended Skills
 
-- [regulatory-compliance](https://absolutelyskilled.dev/skill/regulatory-compliance)
-- [appsec-owasp](https://absolutelyskilled.dev/skill/appsec-owasp)
-- [cloud-security](https://absolutelyskilled.dev/skill/cloud-security)
-- [contract-drafting](https://absolutelyskilled.dev/skill/contract-drafting)
+- [regulatory-compliance](https://absolutely-skilled.vercel.app/skill/regulatory-compliance)
+- [appsec-owasp](https://absolutely-skilled.vercel.app/skill/appsec-owasp)
+- [cloud-security](https://absolutely-skilled.vercel.app/skill/cloud-security)
+- [contract-drafting](https://absolutely-skilled.vercel.app/skill/contract-drafting)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ structure it*, not just regulatory theory.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/privacy-compliance)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/privacy-compliance)*

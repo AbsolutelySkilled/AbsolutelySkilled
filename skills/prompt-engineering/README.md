@@ -31,9 +31,9 @@ across providers (OpenAI, Anthropic, Google) with minor syntactic differences.
 
 ## Recommended Skills
 
-- [llm-app-development](https://absolutelyskilled.dev/skill/llm-app-development)
-- [ai-agent-design](https://absolutelyskilled.dev/skill/ai-agent-design)
-- [nlp-engineering](https://absolutelyskilled.dev/skill/nlp-engineering)
+- [llm-app-development](https://absolutely-skilled.vercel.app/skill/llm-app-development)
+- [ai-agent-design](https://absolutely-skilled.vercel.app/skill/ai-agent-design)
+- [nlp-engineering](https://absolutely-skilled.vercel.app/skill/nlp-engineering)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ across providers (OpenAI, Anthropic, Google) with minor syntactic differences.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/prompt-engineering)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/prompt-engineering)*

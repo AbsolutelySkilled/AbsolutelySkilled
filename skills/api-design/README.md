@@ -32,10 +32,10 @@ authentication patterns.
 
 ## Recommended Skills
 
-- [backend-engineering](https://absolutelyskilled.dev/skill/backend-engineering)
-- [api-testing](https://absolutelyskilled.dev/skill/api-testing)
-- [api-monetization](https://absolutelyskilled.dev/skill/api-monetization)
-- [microservices](https://absolutelyskilled.dev/skill/microservices)
+- [backend-engineering](https://absolutely-skilled.vercel.app/skill/backend-engineering)
+- [api-testing](https://absolutely-skilled.vercel.app/skill/api-testing)
+- [api-monetization](https://absolutely-skilled.vercel.app/skill/api-monetization)
+- [microservices](https://absolutely-skilled.vercel.app/skill/microservices)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ authentication patterns.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/api-design)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/api-design)*

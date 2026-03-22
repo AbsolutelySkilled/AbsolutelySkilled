@@ -30,10 +30,10 @@ tests, custom commands, network interception, auth strategies, and CI integratio
 
 ## Recommended Skills
 
-- [playwright-testing](https://absolutelyskilled.dev/skill/playwright-testing)
-- [test-strategy](https://absolutelyskilled.dev/skill/test-strategy)
-- [jest-vitest](https://absolutelyskilled.dev/skill/jest-vitest)
-- [frontend-developer](https://absolutelyskilled.dev/skill/frontend-developer)
+- [playwright-testing](https://absolutely-skilled.vercel.app/skill/playwright-testing)
+- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
+- [jest-vitest](https://absolutely-skilled.vercel.app/skill/jest-vitest)
+- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ tests, custom commands, network interception, auth strategies, and CI integratio
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/cypress-testing)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/cypress-testing)*

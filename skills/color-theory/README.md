@@ -33,10 +33,10 @@ This skill prevents all four failure modes with concrete patterns.
 
 ## Recommended Skills
 
-- [design-systems](https://absolutelyskilled.dev/skill/design-systems)
-- [ultimate-ui](https://absolutelyskilled.dev/skill/ultimate-ui)
-- [figma-to-code](https://absolutelyskilled.dev/skill/figma-to-code)
-- [accessibility-wcag](https://absolutelyskilled.dev/skill/accessibility-wcag)
+- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
+- [ultimate-ui](https://absolutely-skilled.vercel.app/skill/ultimate-ui)
+- [figma-to-code](https://absolutely-skilled.vercel.app/skill/figma-to-code)
+- [accessibility-wcag](https://absolutely-skilled.vercel.app/skill/accessibility-wcag)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ This skill prevents all four failure modes with concrete patterns.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/color-theory)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/color-theory)*

@@ -33,10 +33,10 @@ to repeatable, calm incident response.
 
 ## Recommended Skills
 
-- [observability](https://absolutelyskilled.dev/skill/observability)
-- [site-reliability](https://absolutelyskilled.dev/skill/site-reliability)
-- [security-incident-response](https://absolutelyskilled.dev/skill/security-incident-response)
-- [project-execution](https://absolutelyskilled.dev/skill/project-execution)
+- [observability](https://absolutely-skilled.vercel.app/skill/observability)
+- [site-reliability](https://absolutely-skilled.vercel.app/skill/site-reliability)
+- [security-incident-response](https://absolutely-skilled.vercel.app/skill/security-incident-response)
+- [project-execution](https://absolutely-skilled.vercel.app/skill/project-execution)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ to repeatable, calm incident response.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/incident-management)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/incident-management)*

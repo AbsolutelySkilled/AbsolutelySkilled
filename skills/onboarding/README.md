@@ -33,10 +33,10 @@ role-specific tracks, and the metrics that prove it is working.
 
 ## Recommended Skills
 
-- [recruiting-ops](https://absolutelyskilled.dev/skill/recruiting-ops)
-- [employee-engagement](https://absolutelyskilled.dev/skill/employee-engagement)
-- [performance-management](https://absolutelyskilled.dev/skill/performance-management)
-- [knowledge-base](https://absolutelyskilled.dev/skill/knowledge-base)
+- [recruiting-ops](https://absolutely-skilled.vercel.app/skill/recruiting-ops)
+- [employee-engagement](https://absolutely-skilled.vercel.app/skill/employee-engagement)
+- [performance-management](https://absolutely-skilled.vercel.app/skill/performance-management)
+- [knowledge-base](https://absolutely-skilled.vercel.app/skill/knowledge-base)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ role-specific tracks, and the metrics that prove it is working.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/onboarding)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/onboarding)*

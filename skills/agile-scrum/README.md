@@ -33,10 +33,10 @@ tracking, Kanban flow management, and continuous improvement practices.
 
 ## Recommended Skills
 
-- [project-execution](https://absolutelyskilled.dev/skill/project-execution)
-- [user-stories](https://absolutelyskilled.dev/skill/user-stories)
-- [remote-collaboration](https://absolutelyskilled.dev/skill/remote-collaboration)
-- [superhuman](https://absolutelyskilled.dev/skill/superhuman)
+- [project-execution](https://absolutely-skilled.vercel.app/skill/project-execution)
+- [user-stories](https://absolutely-skilled.vercel.app/skill/user-stories)
+- [remote-collaboration](https://absolutely-skilled.vercel.app/skill/remote-collaboration)
+- [superhuman](https://absolutely-skilled.vercel.app/skill/superhuman)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ tracking, Kanban flow management, and continuous improvement practices.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/agile-scrum)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/agile-scrum)*

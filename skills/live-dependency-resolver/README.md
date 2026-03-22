@@ -31,9 +31,9 @@ simplicity, with web API fallback when CLI tools are unavailable.
 
 ## Recommended Skills
 
-- [shell-scripting](https://absolutelyskilled.dev/skill/shell-scripting)
-- [monorepo-management](https://absolutelyskilled.dev/skill/monorepo-management)
-- [ci-cd-pipelines](https://absolutelyskilled.dev/skill/ci-cd-pipelines)
+- [shell-scripting](https://absolutely-skilled.vercel.app/skill/shell-scripting)
+- [monorepo-management](https://absolutely-skilled.vercel.app/skill/monorepo-management)
+- [ci-cd-pipelines](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ simplicity, with web API fallback when CLI tools are unavailable.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/live-dependency-resolver)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/live-dependency-resolver)*

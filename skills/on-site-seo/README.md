@@ -32,10 +32,10 @@ correct, production-grade implementation - not strategy or keyword research.
 
 ## Recommended Skills
 
-- [technical-seo](https://absolutelyskilled.dev/skill/technical-seo)
-- [core-web-vitals](https://absolutelyskilled.dev/skill/core-web-vitals)
-- [schema-markup](https://absolutelyskilled.dev/skill/schema-markup)
-- [frontend-developer](https://absolutelyskilled.dev/skill/frontend-developer)
+- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
+- [core-web-vitals](https://absolutely-skilled.vercel.app/skill/core-web-vitals)
+- [schema-markup](https://absolutely-skilled.vercel.app/skill/schema-markup)
+- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ correct, production-grade implementation - not strategy or keyword research.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/on-site-seo)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/on-site-seo)*

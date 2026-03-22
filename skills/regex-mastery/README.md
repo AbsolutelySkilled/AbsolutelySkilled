@@ -31,10 +31,10 @@ catastrophic backtracking.
 
 ## Recommended Skills
 
-- [shell-scripting](https://absolutelyskilled.dev/skill/shell-scripting)
-- [vim-neovim](https://absolutelyskilled.dev/skill/vim-neovim)
-- [debugging-tools](https://absolutelyskilled.dev/skill/debugging-tools)
-- [cli-design](https://absolutelyskilled.dev/skill/cli-design)
+- [shell-scripting](https://absolutely-skilled.vercel.app/skill/shell-scripting)
+- [vim-neovim](https://absolutely-skilled.vercel.app/skill/vim-neovim)
+- [debugging-tools](https://absolutely-skilled.vercel.app/skill/debugging-tools)
+- [cli-design](https://absolutely-skilled.vercel.app/skill/cli-design)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ catastrophic backtracking.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/regex-mastery)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/regex-mastery)*

@@ -32,10 +32,10 @@ Poor CWV can suppress rankings regardless of content quality; good CWV is a rank
 
 ## Recommended Skills
 
-- [technical-seo](https://absolutelyskilled.dev/skill/technical-seo)
-- [performance-engineering](https://absolutelyskilled.dev/skill/performance-engineering)
-- [on-site-seo](https://absolutelyskilled.dev/skill/on-site-seo)
-- [frontend-developer](https://absolutelyskilled.dev/skill/frontend-developer)
+- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
+- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
+- [on-site-seo](https://absolutely-skilled.vercel.app/skill/on-site-seo)
+- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ Poor CWV can suppress rankings regardless of content quality; good CWV is a rank
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/core-web-vitals)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/core-web-vitals)*

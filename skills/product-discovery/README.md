@@ -31,10 +31,10 @@ discovery the way a senior product manager or product trio would.
 
 ## Recommended Skills
 
-- [ux-research](https://absolutelyskilled.dev/skill/ux-research)
-- [product-strategy](https://absolutelyskilled.dev/skill/product-strategy)
-- [customer-research](https://absolutelyskilled.dev/skill/customer-research)
-- [user-stories](https://absolutelyskilled.dev/skill/user-stories)
+- [ux-research](https://absolutely-skilled.vercel.app/skill/ux-research)
+- [product-strategy](https://absolutely-skilled.vercel.app/skill/product-strategy)
+- [customer-research](https://absolutely-skilled.vercel.app/skill/customer-research)
+- [user-stories](https://absolutely-skilled.vercel.app/skill/user-stories)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ discovery the way a senior product manager or product trio would.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/product-discovery)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/product-discovery)*

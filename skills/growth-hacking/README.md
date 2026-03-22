@@ -33,10 +33,10 @@ compounding growth.
 
 ## Recommended Skills
 
-- [product-analytics](https://absolutelyskilled.dev/skill/product-analytics)
-- [email-marketing](https://absolutelyskilled.dev/skill/email-marketing)
-- [saas-metrics](https://absolutelyskilled.dev/skill/saas-metrics)
-- [sales-playbook](https://absolutelyskilled.dev/skill/sales-playbook)
+- [product-analytics](https://absolutely-skilled.vercel.app/skill/product-analytics)
+- [email-marketing](https://absolutely-skilled.vercel.app/skill/email-marketing)
+- [saas-metrics](https://absolutely-skilled.vercel.app/skill/saas-metrics)
+- [sales-playbook](https://absolutely-skilled.vercel.app/skill/sales-playbook)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ compounding growth.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/growth-hacking)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/growth-hacking)*

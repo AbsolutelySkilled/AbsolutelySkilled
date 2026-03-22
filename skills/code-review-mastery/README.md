@@ -29,10 +29,10 @@ you can work through interactively.
 
 ## Recommended Skills
 
-- [clean-code](https://absolutelyskilled.dev/skill/clean-code)
-- [refactoring-patterns](https://absolutelyskilled.dev/skill/refactoring-patterns)
-- [test-strategy](https://absolutelyskilled.dev/skill/test-strategy)
-- [git-advanced](https://absolutelyskilled.dev/skill/git-advanced)
+- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
+- [refactoring-patterns](https://absolutely-skilled.vercel.app/skill/refactoring-patterns)
+- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
+- [git-advanced](https://absolutely-skilled.vercel.app/skill/git-advanced)
 
 ## Maintainers
 
@@ -40,4 +40,4 @@ you can work through interactively.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/code-review-mastery)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/code-review-mastery)*

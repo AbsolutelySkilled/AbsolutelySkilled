@@ -33,9 +33,9 @@ common traps that cause garbled UIs in non-English locales.
 
 ## Recommended Skills
 
-- [frontend-developer](https://absolutelyskilled.dev/skill/frontend-developer)
-- [accessibility-wcag](https://absolutelyskilled.dev/skill/accessibility-wcag)
-- [international-seo](https://absolutelyskilled.dev/skill/international-seo)
+- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
+- [accessibility-wcag](https://absolutely-skilled.vercel.app/skill/accessibility-wcag)
+- [international-seo](https://absolutely-skilled.vercel.app/skill/international-seo)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ common traps that cause garbled UIs in non-English locales.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/localization-i18n)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/localization-i18n)*

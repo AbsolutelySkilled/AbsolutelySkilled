@@ -30,10 +30,10 @@ posture of a cloud environment, not just a single service.
 
 ## Recommended Skills
 
-- [appsec-owasp](https://absolutelyskilled.dev/skill/appsec-owasp)
-- [cloud-aws](https://absolutelyskilled.dev/skill/cloud-aws)
-- [cloud-gcp](https://absolutelyskilled.dev/skill/cloud-gcp)
-- [privacy-compliance](https://absolutelyskilled.dev/skill/privacy-compliance)
+- [appsec-owasp](https://absolutely-skilled.vercel.app/skill/appsec-owasp)
+- [cloud-aws](https://absolutely-skilled.vercel.app/skill/cloud-aws)
+- [cloud-gcp](https://absolutely-skilled.vercel.app/skill/cloud-gcp)
+- [privacy-compliance](https://absolutely-skilled.vercel.app/skill/privacy-compliance)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ posture of a cloud environment, not just a single service.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/cloud-security)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/cloud-security)*

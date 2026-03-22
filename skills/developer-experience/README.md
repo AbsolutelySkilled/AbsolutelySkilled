@@ -32,11 +32,11 @@ craft changelogs, and author migration guides that developers actually trust.
 
 ## Recommended Skills
 
-- [technical-writing](https://absolutelyskilled.dev/skill/technical-writing)
-- [cli-design](https://absolutelyskilled.dev/skill/cli-design)
-- [open-source-management](https://absolutelyskilled.dev/skill/open-source-management)
-- [internal-docs](https://absolutelyskilled.dev/skill/internal-docs)
-- [codedocs](https://absolutelyskilled.dev/skill/codedocs)
+- [technical-writing](https://absolutely-skilled.vercel.app/skill/technical-writing)
+- [cli-design](https://absolutely-skilled.vercel.app/skill/cli-design)
+- [open-source-management](https://absolutely-skilled.vercel.app/skill/open-source-management)
+- [internal-docs](https://absolutely-skilled.vercel.app/skill/internal-docs)
+- [codedocs](https://absolutely-skilled.vercel.app/skill/codedocs)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ craft changelogs, and author migration guides that developers actually trust.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/developer-experience)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/developer-experience)*

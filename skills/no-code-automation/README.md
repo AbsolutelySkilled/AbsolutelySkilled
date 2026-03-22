@@ -32,9 +32,9 @@ simple automations into maintenance nightmares.
 
 ## Recommended Skills
 
-- [spreadsheet-modeling](https://absolutelyskilled.dev/skill/spreadsheet-modeling)
-- [ci-cd-pipelines](https://absolutelyskilled.dev/skill/ci-cd-pipelines)
-- [data-pipelines](https://absolutelyskilled.dev/skill/data-pipelines)
+- [spreadsheet-modeling](https://absolutely-skilled.vercel.app/skill/spreadsheet-modeling)
+- [ci-cd-pipelines](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)
+- [data-pipelines](https://absolutely-skilled.vercel.app/skill/data-pipelines)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ simple automations into maintenance nightmares.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/no-code-automation)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/no-code-automation)*

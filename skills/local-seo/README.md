@@ -34,10 +34,10 @@ to drive foot traffic and phone calls.
 
 ## Recommended Skills
 
-- [seo-mastery](https://absolutelyskilled.dev/skill/seo-mastery)
-- [link-building](https://absolutelyskilled.dev/skill/link-building)
-- [geo-optimization](https://absolutelyskilled.dev/skill/geo-optimization)
-- [schema-markup](https://absolutelyskilled.dev/skill/schema-markup)
+- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
+- [link-building](https://absolutely-skilled.vercel.app/skill/link-building)
+- [geo-optimization](https://absolutely-skilled.vercel.app/skill/geo-optimization)
+- [schema-markup](https://absolutely-skilled.vercel.app/skill/schema-markup)
 
 ## Maintainers
 
@@ -45,4 +45,4 @@ to drive foot traffic and phone calls.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/local-seo)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/local-seo)*

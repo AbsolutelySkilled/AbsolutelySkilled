@@ -33,10 +33,10 @@ rollouts, and run launch retrospectives.
 
 ## Recommended Skills
 
-- [product-strategy](https://absolutelyskilled.dev/skill/product-strategy)
-- [content-marketing](https://absolutelyskilled.dev/skill/content-marketing)
-- [growth-hacking](https://absolutelyskilled.dev/skill/growth-hacking)
-- [project-execution](https://absolutelyskilled.dev/skill/project-execution)
+- [product-strategy](https://absolutely-skilled.vercel.app/skill/product-strategy)
+- [content-marketing](https://absolutely-skilled.vercel.app/skill/content-marketing)
+- [growth-hacking](https://absolutely-skilled.vercel.app/skill/growth-hacking)
+- [project-execution](https://absolutely-skilled.vercel.app/skill/project-execution)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ rollouts, and run launch retrospectives.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/product-launch)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/product-launch)*

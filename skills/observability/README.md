@@ -32,10 +32,10 @@ as a retrofit.
 
 ## Recommended Skills
 
-- [site-reliability](https://absolutelyskilled.dev/skill/site-reliability)
-- [incident-management](https://absolutelyskilled.dev/skill/incident-management)
-- [performance-engineering](https://absolutelyskilled.dev/skill/performance-engineering)
-- [sentry](https://absolutelyskilled.dev/skill/sentry)
+- [site-reliability](https://absolutely-skilled.vercel.app/skill/site-reliability)
+- [incident-management](https://absolutely-skilled.vercel.app/skill/incident-management)
+- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
+- [sentry](https://absolutely-skilled.vercel.app/skill/sentry)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ as a retrofit.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/observability)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/observability)*

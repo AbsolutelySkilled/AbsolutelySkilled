@@ -30,10 +30,10 @@ who know AWS basics and need opinionated guidance on trade-offs and common pitfa
 
 ## Recommended Skills
 
-- [terraform-iac](https://absolutelyskilled.dev/skill/terraform-iac)
-- [cloud-security](https://absolutelyskilled.dev/skill/cloud-security)
-- [docker-kubernetes](https://absolutelyskilled.dev/skill/docker-kubernetes)
-- [cloud-gcp](https://absolutelyskilled.dev/skill/cloud-gcp)
+- [terraform-iac](https://absolutely-skilled.vercel.app/skill/terraform-iac)
+- [cloud-security](https://absolutely-skilled.vercel.app/skill/cloud-security)
+- [docker-kubernetes](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)
+- [cloud-gcp](https://absolutely-skilled.vercel.app/skill/cloud-gcp)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ who know AWS basics and need opinionated guidance on trade-offs and common pitfa
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/cloud-aws)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/cloud-aws)*

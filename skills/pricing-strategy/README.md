@@ -32,10 +32,10 @@ pricing pages, evaluate model trade-offs, design packaging, and structure experi
 
 ## Recommended Skills
 
-- [saas-metrics](https://absolutelyskilled.dev/skill/saas-metrics)
-- [product-analytics](https://absolutelyskilled.dev/skill/product-analytics)
-- [competitive-analysis](https://absolutelyskilled.dev/skill/competitive-analysis)
-- [api-monetization](https://absolutelyskilled.dev/skill/api-monetization)
+- [saas-metrics](https://absolutely-skilled.vercel.app/skill/saas-metrics)
+- [product-analytics](https://absolutely-skilled.vercel.app/skill/product-analytics)
+- [competitive-analysis](https://absolutely-skilled.vercel.app/skill/competitive-analysis)
+- [api-monetization](https://absolutely-skilled.vercel.app/skill/api-monetization)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ pricing pages, evaluate model trade-offs, design packaging, and structure experi
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/pricing-strategy)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/pricing-strategy)*

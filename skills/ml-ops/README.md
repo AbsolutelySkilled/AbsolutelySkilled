@@ -32,10 +32,10 @@ treat reproducibility as a first-class constraint.
 
 ## Recommended Skills
 
-- [llm-app-development](https://absolutelyskilled.dev/skill/llm-app-development)
-- [data-pipelines](https://absolutelyskilled.dev/skill/data-pipelines)
-- [ci-cd-pipelines](https://absolutelyskilled.dev/skill/ci-cd-pipelines)
-- [observability](https://absolutelyskilled.dev/skill/observability)
+- [llm-app-development](https://absolutely-skilled.vercel.app/skill/llm-app-development)
+- [data-pipelines](https://absolutely-skilled.vercel.app/skill/data-pipelines)
+- [ci-cd-pipelines](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)
+- [observability](https://absolutely-skilled.vercel.app/skill/observability)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ treat reproducibility as a first-class constraint.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/ml-ops)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/ml-ops)*

@@ -32,10 +32,10 @@ judgment to write, review, and refactor code the way a disciplined craftsman wou
 
 ## Recommended Skills
 
-- [code-review-mastery](https://absolutelyskilled.dev/skill/code-review-mastery)
-- [refactoring-patterns](https://absolutelyskilled.dev/skill/refactoring-patterns)
-- [test-strategy](https://absolutelyskilled.dev/skill/test-strategy)
-- [clean-architecture](https://absolutelyskilled.dev/skill/clean-architecture)
+- [code-review-mastery](https://absolutely-skilled.vercel.app/skill/code-review-mastery)
+- [refactoring-patterns](https://absolutely-skilled.vercel.app/skill/refactoring-patterns)
+- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
+- [clean-architecture](https://absolutely-skilled.vercel.app/skill/clean-architecture)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ judgment to write, review, and refactor code the way a disciplined craftsman wou
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/clean-code)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/clean-code)*

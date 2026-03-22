@@ -31,10 +31,10 @@ locking down a fresh server.
 
 ## Recommended Skills
 
-- [docker-kubernetes](https://absolutelyskilled.dev/skill/docker-kubernetes)
-- [shell-scripting](https://absolutelyskilled.dev/skill/shell-scripting)
-- [site-reliability](https://absolutelyskilled.dev/skill/site-reliability)
-- [observability](https://absolutelyskilled.dev/skill/observability)
+- [docker-kubernetes](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)
+- [shell-scripting](https://absolutely-skilled.vercel.app/skill/shell-scripting)
+- [site-reliability](https://absolutely-skilled.vercel.app/skill/site-reliability)
+- [observability](https://absolutely-skilled.vercel.app/skill/observability)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ locking down a fresh server.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/linux-admin)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/linux-admin)*

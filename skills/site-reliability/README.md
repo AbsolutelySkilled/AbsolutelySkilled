@@ -32,10 +32,10 @@ to systematic reliability ownership.
 
 ## Recommended Skills
 
-- [observability](https://absolutelyskilled.dev/skill/observability)
-- [incident-management](https://absolutelyskilled.dev/skill/incident-management)
-- [chaos-engineering](https://absolutelyskilled.dev/skill/chaos-engineering)
-- [performance-engineering](https://absolutelyskilled.dev/skill/performance-engineering)
+- [observability](https://absolutely-skilled.vercel.app/skill/observability)
+- [incident-management](https://absolutely-skilled.vercel.app/skill/incident-management)
+- [chaos-engineering](https://absolutely-skilled.vercel.app/skill/chaos-engineering)
+- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ to systematic reliability ownership.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/site-reliability)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/site-reliability)*

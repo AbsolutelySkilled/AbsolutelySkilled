@@ -33,9 +33,9 @@ Suspense, and concurrent rendering.
 
 ## Recommended Skills
 
-- [cli-design](https://absolutelyskilled.dev/skill/cli-design)
-- [frontend-developer](https://absolutelyskilled.dev/skill/frontend-developer)
-- [clean-code](https://absolutelyskilled.dev/skill/clean-code)
+- [cli-design](https://absolutely-skilled.vercel.app/skill/cli-design)
+- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
+- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ Suspense, and concurrent rendering.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/react-ink)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/react-ink)*

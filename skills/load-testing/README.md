@@ -29,10 +29,10 @@ Designed for engineers who need to validate performance before and after launche
 
 ## Recommended Skills
 
-- [performance-engineering](https://absolutelyskilled.dev/skill/performance-engineering)
-- [chaos-engineering](https://absolutelyskilled.dev/skill/chaos-engineering)
-- [site-reliability](https://absolutelyskilled.dev/skill/site-reliability)
-- [api-testing](https://absolutelyskilled.dev/skill/api-testing)
+- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
+- [chaos-engineering](https://absolutely-skilled.vercel.app/skill/chaos-engineering)
+- [site-reliability](https://absolutely-skilled.vercel.app/skill/site-reliability)
+- [api-testing](https://absolutely-skilled.vercel.app/skill/api-testing)
 
 ## Maintainers
 
@@ -40,4 +40,4 @@ Designed for engineers who need to validate performance before and after launche
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/load-testing)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/load-testing)*

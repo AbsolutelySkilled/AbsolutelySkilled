@@ -29,10 +29,10 @@ blast radius, and translating findings into durable resilience improvements.
 
 ## Recommended Skills
 
-- [site-reliability](https://absolutelyskilled.dev/skill/site-reliability)
-- [load-testing](https://absolutelyskilled.dev/skill/load-testing)
-- [incident-management](https://absolutelyskilled.dev/skill/incident-management)
-- [observability](https://absolutelyskilled.dev/skill/observability)
+- [site-reliability](https://absolutely-skilled.vercel.app/skill/site-reliability)
+- [load-testing](https://absolutely-skilled.vercel.app/skill/load-testing)
+- [incident-management](https://absolutely-skilled.vercel.app/skill/incident-management)
+- [observability](https://absolutely-skilled.vercel.app/skill/observability)
 
 ## Maintainers
 
@@ -40,4 +40,4 @@ blast radius, and translating findings into durable resilience improvements.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/chaos-engineering)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/chaos-engineering)*

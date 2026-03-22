@@ -31,10 +31,10 @@ craft with data-driven iteration and genuine community engagement.
 
 ## Recommended Skills
 
-- [content-marketing](https://absolutelyskilled.dev/skill/content-marketing)
-- [copywriting](https://absolutelyskilled.dev/skill/copywriting)
-- [video-production](https://absolutelyskilled.dev/skill/video-production)
-- [brand-strategy](https://absolutelyskilled.dev/skill/brand-strategy)
+- [content-marketing](https://absolutely-skilled.vercel.app/skill/content-marketing)
+- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
+- [video-production](https://absolutely-skilled.vercel.app/skill/video-production)
+- [brand-strategy](https://absolutely-skilled.vercel.app/skill/brand-strategy)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ craft with data-driven iteration and genuine community engagement.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/social-media-strategy)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/social-media-strategy)*

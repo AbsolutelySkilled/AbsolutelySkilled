@@ -32,10 +32,10 @@ estimation through detailed component design.
 
 ## Recommended Skills
 
-- [clean-architecture](https://absolutelyskilled.dev/skill/clean-architecture)
-- [microservices](https://absolutelyskilled.dev/skill/microservices)
-- [database-engineering](https://absolutelyskilled.dev/skill/database-engineering)
-- [performance-engineering](https://absolutelyskilled.dev/skill/performance-engineering)
+- [clean-architecture](https://absolutely-skilled.vercel.app/skill/clean-architecture)
+- [microservices](https://absolutely-skilled.vercel.app/skill/microservices)
+- [database-engineering](https://absolutely-skilled.vercel.app/skill/database-engineering)
+- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ estimation through detailed component design.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/system-design)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/system-design)*

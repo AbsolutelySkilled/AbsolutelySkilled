@@ -33,10 +33,10 @@ workplace policies, leaves of absence, and separation. Getting it wrong creates
 
 ## Recommended Skills
 
-- [contract-drafting](https://absolutelyskilled.dev/skill/contract-drafting)
-- [recruiting-ops](https://absolutelyskilled.dev/skill/recruiting-ops)
-- [compensation-strategy](https://absolutelyskilled.dev/skill/compensation-strategy)
-- [ip-management](https://absolutelyskilled.dev/skill/ip-management)
+- [contract-drafting](https://absolutely-skilled.vercel.app/skill/contract-drafting)
+- [recruiting-ops](https://absolutely-skilled.vercel.app/skill/recruiting-ops)
+- [compensation-strategy](https://absolutely-skilled.vercel.app/skill/compensation-strategy)
+- [ip-management](https://absolutely-skilled.vercel.app/skill/ip-management)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ workplace policies, leaves of absence, and separation. Getting it wrong creates
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/employment-law)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/employment-law)*

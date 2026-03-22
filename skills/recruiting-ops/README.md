@@ -33,10 +33,10 @@ process.
 
 ## Recommended Skills
 
-- [interview-design](https://absolutelyskilled.dev/skill/interview-design)
-- [onboarding](https://absolutelyskilled.dev/skill/onboarding)
-- [employment-law](https://absolutelyskilled.dev/skill/employment-law)
-- [technical-interviewing](https://absolutelyskilled.dev/skill/technical-interviewing)
+- [interview-design](https://absolutely-skilled.vercel.app/skill/interview-design)
+- [onboarding](https://absolutely-skilled.vercel.app/skill/onboarding)
+- [employment-law](https://absolutely-skilled.vercel.app/skill/employment-law)
+- [technical-interviewing](https://absolutely-skilled.vercel.app/skill/technical-interviewing)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ process.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/recruiting-ops)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/recruiting-ops)*

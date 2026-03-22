@@ -32,10 +32,10 @@ framework that drives consistent, measurable pipeline qualification.
 
 ## Recommended Skills
 
-- [crm-management](https://absolutelyskilled.dev/skill/crm-management)
-- [sales-playbook](https://absolutelyskilled.dev/skill/sales-playbook)
-- [product-analytics](https://absolutelyskilled.dev/skill/product-analytics)
-- [growth-hacking](https://absolutelyskilled.dev/skill/growth-hacking)
+- [crm-management](https://absolutely-skilled.vercel.app/skill/crm-management)
+- [sales-playbook](https://absolutely-skilled.vercel.app/skill/sales-playbook)
+- [product-analytics](https://absolutely-skilled.vercel.app/skill/product-analytics)
+- [growth-hacking](https://absolutely-skilled.vercel.app/skill/growth-hacking)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ framework that drives consistent, measurable pipeline qualification.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/lead-scoring)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/lead-scoring)*

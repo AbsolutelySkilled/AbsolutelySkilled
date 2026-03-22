@@ -30,10 +30,10 @@ then move inward. Tools are instruments; systematic thinking is the method.
 
 ## Recommended Skills
 
-- [observability](https://absolutelyskilled.dev/skill/observability)
-- [sentry](https://absolutelyskilled.dev/skill/sentry)
-- [performance-engineering](https://absolutelyskilled.dev/skill/performance-engineering)
-- [refactoring-patterns](https://absolutelyskilled.dev/skill/refactoring-patterns)
+- [observability](https://absolutely-skilled.vercel.app/skill/observability)
+- [sentry](https://absolutely-skilled.vercel.app/skill/sentry)
+- [performance-engineering](https://absolutely-skilled.vercel.app/skill/performance-engineering)
+- [refactoring-patterns](https://absolutely-skilled.vercel.app/skill/refactoring-patterns)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ then move inward. Tools are instruments; systematic thinking is the method.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/debugging-tools)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/debugging-tools)*

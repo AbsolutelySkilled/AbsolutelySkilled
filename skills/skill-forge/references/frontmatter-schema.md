@@ -38,32 +38,39 @@ maintainers:
 
 ## Description writing guidelines
 
-The description is the PRIMARY triggering mechanism. It must:
+The description is NOT a summary for humans - it is a **trigger condition** for
+the model. When an AI agent starts a session, it scans every available skill's
+description to decide which ones are relevant. Write it as a when-to-trigger
+condition, not a marketing blurb.
+
+It must:
 
 1. Name the tool explicitly (e.g. "Stripe", "Resend", "Supabase")
-2. List 3-5 concrete task types the skill enables
-3. Include common synonyms and related terms users might say
-4. Use action verbs: "create", "send", "manage", "configure", "deploy"
-5. Be one paragraph, no line breaks
+2. Start with "Use when" or "Use this skill when" for clear trigger framing
+3. List 3-5 concrete task types the skill enables
+4. Include common synonyms and related terms users might say
+5. Use action verbs: "create", "send", "manage", "configure", "deploy"
+6. Include trigger keywords: "Triggers on X, Y, Z"
+7. Be one paragraph, no line breaks
 
 **Good example:**
-> Use this skill when working with Stripe - payments, subscriptions, refunds,
-> customers, webhooks, or billing. Triggers on any Stripe-related task including
-> checkout sessions, payment intents, and invoice management.
+> Use when deploying services to production, running canary releases, checking
+> deploy status, or rolling back failed deploys. Triggers on deploy, release,
+> rollout, rollback, canary, and traffic shifting.
 
 **Bad example:**
-> A skill for payment processing. (Too vague, no tool name, no task types)
+> Helps with deployment. (Too vague, no tool name, no task types, no triggers)
 
 ## Recommended skills guidelines
 
 The `recommended_skills` field lists 2-5 companion skills from the registry that
-complement this skill. Rules:
+complement this skill. Skills can reference other skills by name - if a CSV
+generation skill depends on a file upload skill, it just mentions it. The agent
+will invoke the companion if it is installed. Keep the list organic and genuine.
 
 1. Only use skill names that exist in the registry (`references/skill-registry.md`)
 2. Pick skills that are complementary, not duplicative
-3. Prefer skills in adjacent categories (e.g. `clean-code` recommends `code-review-mastery`)
-4. 2-5 entries - fewer for niche skills, more for broadly applicable ones
-5. Use an empty array `[]` only for meta skills with no natural companions
+3. 2-5 entries, or an empty array `[]` if no natural companions exist
 
 ## Category taxonomy
 

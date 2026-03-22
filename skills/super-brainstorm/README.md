@@ -21,10 +21,10 @@ npx skills add AbsolutelySkilled/AbsolutelySkilled --skill super-brainstorm
 
 ## Recommended Skills
 
-- [writing-plans](https://absolutelyskilled.dev/skill/writing-plans)
-- [superhuman](https://absolutelyskilled.dev/skill/superhuman)
-- [clean-architecture](https://absolutelyskilled.dev/skill/clean-architecture)
-- [system-design](https://absolutelyskilled.dev/skill/system-design)
+- [writing-plans](https://absolutely-skilled.vercel.app/skill/writing-plans)
+- [superhuman](https://absolutely-skilled.vercel.app/skill/superhuman)
+- [clean-architecture](https://absolutely-skilled.vercel.app/skill/clean-architecture)
+- [system-design](https://absolutely-skilled.vercel.app/skill/system-design)
 
 ## Maintainers
 
@@ -32,4 +32,4 @@ npx skills add AbsolutelySkilled/AbsolutelySkilled --skill super-brainstorm
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/super-brainstorm)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/super-brainstorm)*

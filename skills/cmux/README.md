@@ -31,10 +31,10 @@ parsing output programmatically. References use short refs like `pane:5`,
 
 ## Recommended Skills
 
-- [shell-scripting](https://absolutelyskilled.dev/skill/shell-scripting)
-- [vim-neovim](https://absolutelyskilled.dev/skill/vim-neovim)
-- [debugging-tools](https://absolutelyskilled.dev/skill/debugging-tools)
-- [superhuman](https://absolutelyskilled.dev/skill/superhuman)
+- [shell-scripting](https://absolutely-skilled.vercel.app/skill/shell-scripting)
+- [vim-neovim](https://absolutely-skilled.vercel.app/skill/vim-neovim)
+- [debugging-tools](https://absolutely-skilled.vercel.app/skill/debugging-tools)
+- [superhuman](https://absolutely-skilled.vercel.app/skill/superhuman)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ parsing output programmatically. References use short refs like `pane:5`,
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/cmux)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/cmux)*

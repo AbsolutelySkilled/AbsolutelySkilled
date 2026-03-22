@@ -33,10 +33,10 @@ data infrastructure.
 
 ## Recommended Skills
 
-- [data-warehousing](https://absolutelyskilled.dev/skill/data-warehousing)
-- [data-quality](https://absolutelyskilled.dev/skill/data-quality)
-- [analytics-engineering](https://absolutelyskilled.dev/skill/analytics-engineering)
-- [real-time-streaming](https://absolutelyskilled.dev/skill/real-time-streaming)
+- [data-warehousing](https://absolutely-skilled.vercel.app/skill/data-warehousing)
+- [data-quality](https://absolutely-skilled.vercel.app/skill/data-quality)
+- [analytics-engineering](https://absolutely-skilled.vercel.app/skill/analytics-engineering)
+- [real-time-streaming](https://absolutely-skilled.vercel.app/skill/real-time-streaming)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ data infrastructure.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/data-pipelines)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/data-pipelines)*

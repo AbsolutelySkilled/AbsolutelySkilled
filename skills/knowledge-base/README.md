@@ -32,10 +32,10 @@ deflection to prove business value, and maintaining content ruthlessly so it sta
 
 ## Recommended Skills
 
-- [customer-support-ops](https://absolutelyskilled.dev/skill/customer-support-ops)
-- [internal-docs](https://absolutelyskilled.dev/skill/internal-docs)
-- [technical-writing](https://absolutelyskilled.dev/skill/technical-writing)
-- [second-brain](https://absolutelyskilled.dev/skill/second-brain)
+- [customer-support-ops](https://absolutely-skilled.vercel.app/skill/customer-support-ops)
+- [internal-docs](https://absolutely-skilled.vercel.app/skill/internal-docs)
+- [technical-writing](https://absolutely-skilled.vercel.app/skill/technical-writing)
+- [second-brain](https://absolutely-skilled.vercel.app/skill/second-brain)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ deflection to prove business value, and maintaining content ruthlessly so it sta
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/knowledge-base)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/knowledge-base)*

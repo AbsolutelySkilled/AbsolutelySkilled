@@ -33,10 +33,10 @@ mappings once, apply them always.
 
 ## Recommended Skills
 
-- [design-systems](https://absolutelyskilled.dev/skill/design-systems)
-- [responsive-design](https://absolutelyskilled.dev/skill/responsive-design)
-- [color-theory](https://absolutelyskilled.dev/skill/color-theory)
-- [frontend-developer](https://absolutelyskilled.dev/skill/frontend-developer)
+- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
+- [responsive-design](https://absolutely-skilled.vercel.app/skill/responsive-design)
+- [color-theory](https://absolutely-skilled.vercel.app/skill/color-theory)
+- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ mappings once, apply them always.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/figma-to-code)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/figma-to-code)*

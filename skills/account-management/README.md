@@ -31,10 +31,10 @@ renewals, and rescue at-risk accounts before they churn.
 
 ## Recommended Skills
 
-- [customer-success-playbook](https://absolutelyskilled.dev/skill/customer-success-playbook)
-- [crm-management](https://absolutelyskilled.dev/skill/crm-management)
-- [sales-playbook](https://absolutelyskilled.dev/skill/sales-playbook)
-- [partnership-strategy](https://absolutelyskilled.dev/skill/partnership-strategy)
+- [customer-success-playbook](https://absolutely-skilled.vercel.app/skill/customer-success-playbook)
+- [crm-management](https://absolutely-skilled.vercel.app/skill/crm-management)
+- [sales-playbook](https://absolutely-skilled.vercel.app/skill/sales-playbook)
+- [partnership-strategy](https://absolutely-skilled.vercel.app/skill/partnership-strategy)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ renewals, and rescue at-risk accounts before they churn.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/account-management)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/account-management)*

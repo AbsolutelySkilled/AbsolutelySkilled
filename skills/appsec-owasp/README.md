@@ -30,10 +30,10 @@ need security guidance at the code level, not just as policy.
 
 ## Recommended Skills
 
-- [penetration-testing](https://absolutelyskilled.dev/skill/penetration-testing)
-- [cloud-security](https://absolutelyskilled.dev/skill/cloud-security)
-- [cryptography](https://absolutelyskilled.dev/skill/cryptography)
-- [security-incident-response](https://absolutelyskilled.dev/skill/security-incident-response)
+- [penetration-testing](https://absolutely-skilled.vercel.app/skill/penetration-testing)
+- [cloud-security](https://absolutely-skilled.vercel.app/skill/cloud-security)
+- [cryptography](https://absolutely-skilled.vercel.app/skill/cryptography)
+- [security-incident-response](https://absolutely-skilled.vercel.app/skill/security-incident-response)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ need security guidance at the code level, not just as policy.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/appsec-owasp)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/appsec-owasp)*

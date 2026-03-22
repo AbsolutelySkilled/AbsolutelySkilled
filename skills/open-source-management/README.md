@@ -32,11 +32,11 @@ widely accepted industry standards.
 
 ## Recommended Skills
 
-- [developer-advocacy](https://absolutelyskilled.dev/skill/developer-advocacy)
-- [git-advanced](https://absolutelyskilled.dev/skill/git-advanced)
-- [developer-experience](https://absolutelyskilled.dev/skill/developer-experience)
-- [ip-management](https://absolutelyskilled.dev/skill/ip-management)
-- [meta-repo](https://absolutelyskilled.dev/skill/meta-repo)
+- [developer-advocacy](https://absolutely-skilled.vercel.app/skill/developer-advocacy)
+- [git-advanced](https://absolutely-skilled.vercel.app/skill/git-advanced)
+- [developer-experience](https://absolutely-skilled.vercel.app/skill/developer-experience)
+- [ip-management](https://absolutely-skilled.vercel.app/skill/ip-management)
+- [meta-repo](https://absolutely-skilled.vercel.app/skill/meta-repo)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ widely accepted industry standards.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/open-source-management)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/open-source-management)*

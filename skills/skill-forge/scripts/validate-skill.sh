@@ -69,14 +69,7 @@ else
   pass "Description length: $DESC_LEN chars"
 fi
 
-# 6. Check for "Related skills" footer
-if grep -q "## Related skills" "$SKILL_FILE"; then
-  pass "Related skills footer present"
-else
-  fail "Missing '## Related skills' footer"
-fi
-
-# 7. Check for VERIFY flags (informational)
+# 6. Check for VERIFY flags (informational)
 VERIFY_COUNT=$(grep -c "VERIFY:" "$SKILL_FILE" 2>/dev/null || echo 0)
 if [[ "$VERIFY_COUNT" -gt 5 ]]; then
   warn "$VERIFY_COUNT VERIFY flags (target: < 5) - needs more research"

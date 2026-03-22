@@ -29,11 +29,11 @@ The model has 7 phases: **INTAKE - DECOMPOSE - DISCOVER - PLAN - EXECUTE - VERIF
 
 ## Recommended Skills
 
-- [agile-scrum](https://absolutelyskilled.dev/skill/agile-scrum)
-- [test-strategy](https://absolutelyskilled.dev/skill/test-strategy)
-- [project-execution](https://absolutelyskilled.dev/skill/project-execution)
-- [clean-code](https://absolutelyskilled.dev/skill/clean-code)
-- [code-review-mastery](https://absolutelyskilled.dev/skill/code-review-mastery)
+- [agile-scrum](https://absolutely-skilled.vercel.app/skill/agile-scrum)
+- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
+- [project-execution](https://absolutely-skilled.vercel.app/skill/project-execution)
+- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
+- [code-review-mastery](https://absolutely-skilled.vercel.app/skill/code-review-mastery)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ The model has 7 phases: **INTAKE - DECOMPOSE - DISCOVER - PLAN - EXECUTE - VERIF
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/superhuman)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/superhuman)*

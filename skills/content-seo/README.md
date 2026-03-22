@@ -34,10 +34,10 @@ approach to keeping content accurate and comprehensive over time.
 
 ## Recommended Skills
 
-- [keyword-research](https://absolutelyskilled.dev/skill/keyword-research)
-- [seo-mastery](https://absolutelyskilled.dev/skill/seo-mastery)
-- [copywriting](https://absolutelyskilled.dev/skill/copywriting)
-- [link-building](https://absolutelyskilled.dev/skill/link-building)
+- [keyword-research](https://absolutely-skilled.vercel.app/skill/keyword-research)
+- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
+- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
+- [link-building](https://absolutely-skilled.vercel.app/skill/link-building)
 
 ## Maintainers
 
@@ -45,4 +45,4 @@ approach to keeping content accurate and comprehensive over time.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/content-seo)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/content-seo)*

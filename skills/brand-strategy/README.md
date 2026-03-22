@@ -32,10 +32,10 @@ storytelling, competitive mapping, and brand audits.
 
 ## Recommended Skills
 
-- [copywriting](https://absolutelyskilled.dev/skill/copywriting)
-- [social-media-strategy](https://absolutelyskilled.dev/skill/social-media-strategy)
-- [competitive-analysis](https://absolutelyskilled.dev/skill/competitive-analysis)
-- [product-strategy](https://absolutelyskilled.dev/skill/product-strategy)
+- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
+- [social-media-strategy](https://absolutely-skilled.vercel.app/skill/social-media-strategy)
+- [competitive-analysis](https://absolutely-skilled.vercel.app/skill/competitive-analysis)
+- [product-strategy](https://absolutely-skilled.vercel.app/skill/product-strategy)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ storytelling, competitive mapping, and brand audits.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/brand-strategy)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/brand-strategy)*

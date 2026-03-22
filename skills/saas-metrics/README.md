@@ -33,10 +33,10 @@ actually trust.
 
 ## Recommended Skills
 
-- [product-analytics](https://absolutelyskilled.dev/skill/product-analytics)
-- [pricing-strategy](https://absolutelyskilled.dev/skill/pricing-strategy)
-- [financial-modeling](https://absolutelyskilled.dev/skill/financial-modeling)
-- [growth-hacking](https://absolutelyskilled.dev/skill/growth-hacking)
+- [product-analytics](https://absolutely-skilled.vercel.app/skill/product-analytics)
+- [pricing-strategy](https://absolutely-skilled.vercel.app/skill/pricing-strategy)
+- [financial-modeling](https://absolutely-skilled.vercel.app/skill/financial-modeling)
+- [growth-hacking](https://absolutely-skilled.vercel.app/skill/growth-hacking)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ actually trust.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/saas-metrics)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/saas-metrics)*

@@ -33,10 +33,10 @@ guidance on building streaming pipelines that run reliably at scale.
 
 ## Recommended Skills
 
-- [event-driven-architecture](https://absolutelyskilled.dev/skill/event-driven-architecture)
-- [data-pipelines](https://absolutelyskilled.dev/skill/data-pipelines)
-- [data-quality](https://absolutelyskilled.dev/skill/data-quality)
-- [backend-engineering](https://absolutelyskilled.dev/skill/backend-engineering)
+- [event-driven-architecture](https://absolutely-skilled.vercel.app/skill/event-driven-architecture)
+- [data-pipelines](https://absolutely-skilled.vercel.app/skill/data-pipelines)
+- [data-quality](https://absolutely-skilled.vercel.app/skill/data-quality)
+- [backend-engineering](https://absolutely-skilled.vercel.app/skill/backend-engineering)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ guidance on building streaming pipelines that run reliably at scale.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/real-time-streaming)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/real-time-streaming)*

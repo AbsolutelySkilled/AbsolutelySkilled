@@ -33,10 +33,10 @@ throughout a project's lifecycle.
 
 ## Recommended Skills
 
-- [agile-scrum](https://absolutelyskilled.dev/skill/agile-scrum)
-- [remote-collaboration](https://absolutelyskilled.dev/skill/remote-collaboration)
-- [incident-management](https://absolutelyskilled.dev/skill/incident-management)
-- [product-launch](https://absolutelyskilled.dev/skill/product-launch)
+- [agile-scrum](https://absolutely-skilled.vercel.app/skill/agile-scrum)
+- [remote-collaboration](https://absolutely-skilled.vercel.app/skill/remote-collaboration)
+- [incident-management](https://absolutely-skilled.vercel.app/skill/incident-management)
+- [product-launch](https://absolutely-skilled.vercel.app/skill/product-launch)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ throughout a project's lifecycle.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/project-execution)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/project-execution)*

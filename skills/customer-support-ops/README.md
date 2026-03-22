@@ -32,10 +32,10 @@ repeatable support machine.
 
 ## Recommended Skills
 
-- [knowledge-base](https://absolutelyskilled.dev/skill/knowledge-base)
-- [support-analytics](https://absolutelyskilled.dev/skill/support-analytics)
-- [customer-success-playbook](https://absolutelyskilled.dev/skill/customer-success-playbook)
-- [community-management](https://absolutelyskilled.dev/skill/community-management)
+- [knowledge-base](https://absolutely-skilled.vercel.app/skill/knowledge-base)
+- [support-analytics](https://absolutely-skilled.vercel.app/skill/support-analytics)
+- [customer-success-playbook](https://absolutely-skilled.vercel.app/skill/customer-success-playbook)
+- [community-management](https://absolutely-skilled.vercel.app/skill/community-management)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ repeatable support machine.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/customer-support-ops)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/customer-support-ops)*

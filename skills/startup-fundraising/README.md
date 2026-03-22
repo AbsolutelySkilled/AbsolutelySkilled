@@ -32,10 +32,10 @@ model dilution, and choose the right instrument for each stage.
 
 ## Recommended Skills
 
-- [financial-modeling](https://absolutelyskilled.dev/skill/financial-modeling)
-- [pricing-strategy](https://absolutelyskilled.dev/skill/pricing-strategy)
-- [product-strategy](https://absolutelyskilled.dev/skill/product-strategy)
-- [saas-metrics](https://absolutelyskilled.dev/skill/saas-metrics)
+- [financial-modeling](https://absolutely-skilled.vercel.app/skill/financial-modeling)
+- [pricing-strategy](https://absolutely-skilled.vercel.app/skill/pricing-strategy)
+- [product-strategy](https://absolutely-skilled.vercel.app/skill/product-strategy)
+- [saas-metrics](https://absolutely-skilled.vercel.app/skill/saas-metrics)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ model dilution, and choose the right instrument for each stage.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/startup-fundraising)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/startup-fundraising)*

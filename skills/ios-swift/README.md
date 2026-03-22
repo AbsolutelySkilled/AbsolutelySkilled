@@ -33,10 +33,10 @@ foundation - lean on system frameworks before reaching for third-party dependenc
 
 ## Recommended Skills
 
-- [mobile-testing](https://absolutelyskilled.dev/skill/mobile-testing)
-- [android-kotlin](https://absolutelyskilled.dev/skill/android-kotlin)
-- [react-native](https://absolutelyskilled.dev/skill/react-native)
-- [clean-architecture](https://absolutelyskilled.dev/skill/clean-architecture)
+- [mobile-testing](https://absolutely-skilled.vercel.app/skill/mobile-testing)
+- [android-kotlin](https://absolutely-skilled.vercel.app/skill/android-kotlin)
+- [react-native](https://absolutely-skilled.vercel.app/skill/react-native)
+- [clean-architecture](https://absolutely-skilled.vercel.app/skill/clean-architecture)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ foundation - lean on system frameworks before reaching for third-party dependenc
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/ios-swift)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/ios-swift)*

@@ -29,10 +29,10 @@ tool schemas, memory strategy, failure modes, and evaluation methodology.
 
 ## Recommended Skills
 
-- [a2a-protocol](https://absolutelyskilled.dev/skill/a2a-protocol)
-- [llm-app-development](https://absolutelyskilled.dev/skill/llm-app-development)
-- [prompt-engineering](https://absolutelyskilled.dev/skill/prompt-engineering)
-- [mastra](https://absolutelyskilled.dev/skill/mastra)
+- [a2a-protocol](https://absolutely-skilled.vercel.app/skill/a2a-protocol)
+- [llm-app-development](https://absolutely-skilled.vercel.app/skill/llm-app-development)
+- [prompt-engineering](https://absolutely-skilled.vercel.app/skill/prompt-engineering)
+- [mastra](https://absolutely-skilled.vercel.app/skill/mastra)
 
 ## Maintainers
 
@@ -40,4 +40,4 @@ tool schemas, memory strategy, failure modes, and evaluation methodology.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/ai-agent-design)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/ai-agent-design)*

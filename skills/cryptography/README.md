@@ -30,10 +30,10 @@ understand the basics but need confident, safe defaults.
 
 ## Recommended Skills
 
-- [appsec-owasp](https://absolutelyskilled.dev/skill/appsec-owasp)
-- [cloud-security](https://absolutelyskilled.dev/skill/cloud-security)
-- [penetration-testing](https://absolutelyskilled.dev/skill/penetration-testing)
-- [web3-smart-contracts](https://absolutelyskilled.dev/skill/web3-smart-contracts)
+- [appsec-owasp](https://absolutely-skilled.vercel.app/skill/appsec-owasp)
+- [cloud-security](https://absolutely-skilled.vercel.app/skill/cloud-security)
+- [penetration-testing](https://absolutely-skilled.vercel.app/skill/penetration-testing)
+- [web3-smart-contracts](https://absolutely-skilled.vercel.app/skill/web3-smart-contracts)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ understand the basics but need confident, safe defaults.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/cryptography)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/cryptography)*

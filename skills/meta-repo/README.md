@@ -33,10 +33,10 @@ to wrap any CLI tool, not just git.
 
 ## Recommended Skills
 
-- [monorepo-management](https://absolutelyskilled.dev/skill/monorepo-management)
-- [git-advanced](https://absolutelyskilled.dev/skill/git-advanced)
-- [open-source-management](https://absolutelyskilled.dev/skill/open-source-management)
-- [ci-cd-pipelines](https://absolutelyskilled.dev/skill/ci-cd-pipelines)
+- [monorepo-management](https://absolutely-skilled.vercel.app/skill/monorepo-management)
+- [git-advanced](https://absolutely-skilled.vercel.app/skill/git-advanced)
+- [open-source-management](https://absolutely-skilled.vercel.app/skill/open-source-management)
+- [ci-cd-pipelines](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ to wrap any CLI tool, not just git.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/meta-repo)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/meta-repo)*

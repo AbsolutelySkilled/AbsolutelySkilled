@@ -31,10 +31,10 @@ to act on findings correctly.
 
 ## Recommended Skills
 
-- [saas-metrics](https://absolutelyskilled.dev/skill/saas-metrics)
-- [product-strategy](https://absolutelyskilled.dev/skill/product-strategy)
-- [growth-hacking](https://absolutelyskilled.dev/skill/growth-hacking)
-- [data-science](https://absolutelyskilled.dev/skill/data-science)
+- [saas-metrics](https://absolutely-skilled.vercel.app/skill/saas-metrics)
+- [product-strategy](https://absolutely-skilled.vercel.app/skill/product-strategy)
+- [growth-hacking](https://absolutely-skilled.vercel.app/skill/growth-hacking)
+- [data-science](https://absolutely-skilled.vercel.app/skill/data-science)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ to act on findings correctly.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/product-analytics)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/product-analytics)*

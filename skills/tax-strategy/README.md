@@ -33,10 +33,10 @@ preparation.
 
 ## Recommended Skills
 
-- [financial-reporting](https://absolutelyskilled.dev/skill/financial-reporting)
-- [budgeting-planning](https://absolutelyskilled.dev/skill/budgeting-planning)
-- [regulatory-compliance](https://absolutelyskilled.dev/skill/regulatory-compliance)
-- [bookkeeping-automation](https://absolutelyskilled.dev/skill/bookkeeping-automation)
+- [financial-reporting](https://absolutely-skilled.vercel.app/skill/financial-reporting)
+- [budgeting-planning](https://absolutely-skilled.vercel.app/skill/budgeting-planning)
+- [regulatory-compliance](https://absolutely-skilled.vercel.app/skill/regulatory-compliance)
+- [bookkeeping-automation](https://absolutely-skilled.vercel.app/skill/bookkeeping-automation)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ preparation.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/tax-strategy)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/tax-strategy)*

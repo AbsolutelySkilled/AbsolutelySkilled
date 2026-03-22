@@ -29,10 +29,10 @@ outputs, and iterative improvement - not guesswork.
 
 ## Recommended Skills
 
-- [technical-seo](https://absolutelyskilled.dev/skill/technical-seo)
-- [keyword-research](https://absolutelyskilled.dev/skill/keyword-research)
-- [content-seo](https://absolutelyskilled.dev/skill/content-seo)
-- [schema-markup](https://absolutelyskilled.dev/skill/schema-markup)
+- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
+- [keyword-research](https://absolutely-skilled.vercel.app/skill/keyword-research)
+- [content-seo](https://absolutely-skilled.vercel.app/skill/content-seo)
+- [schema-markup](https://absolutely-skilled.vercel.app/skill/schema-markup)
 
 ## Maintainers
 
@@ -40,4 +40,4 @@ outputs, and iterative improvement - not guesswork.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/seo-mastery)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/seo-mastery)*

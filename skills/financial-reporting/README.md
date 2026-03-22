@@ -33,10 +33,10 @@ and how to write management commentary that tells the story behind the numbers.
 
 ## Recommended Skills
 
-- [financial-modeling](https://absolutelyskilled.dev/skill/financial-modeling)
-- [budgeting-planning](https://absolutelyskilled.dev/skill/budgeting-planning)
-- [bookkeeping-automation](https://absolutelyskilled.dev/skill/bookkeeping-automation)
-- [spreadsheet-modeling](https://absolutelyskilled.dev/skill/spreadsheet-modeling)
+- [financial-modeling](https://absolutely-skilled.vercel.app/skill/financial-modeling)
+- [budgeting-planning](https://absolutely-skilled.vercel.app/skill/budgeting-planning)
+- [bookkeeping-automation](https://absolutely-skilled.vercel.app/skill/bookkeeping-automation)
+- [spreadsheet-modeling](https://absolutely-skilled.vercel.app/skill/spreadsheet-modeling)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ and how to write management commentary that tells the story behind the numbers.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/financial-reporting)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/financial-reporting)*

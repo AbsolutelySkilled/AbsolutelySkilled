@@ -34,10 +34,10 @@ feel responsive without being distracting.
 
 ## Recommended Skills
 
-- [design-systems](https://absolutelyskilled.dev/skill/design-systems)
-- [color-theory](https://absolutelyskilled.dev/skill/color-theory)
-- [accessibility-wcag](https://absolutelyskilled.dev/skill/accessibility-wcag)
-- [frontend-developer](https://absolutelyskilled.dev/skill/frontend-developer)
+- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
+- [color-theory](https://absolutely-skilled.vercel.app/skill/color-theory)
+- [accessibility-wcag](https://absolutely-skilled.vercel.app/skill/accessibility-wcag)
+- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
 
 ## Maintainers
 
@@ -45,4 +45,4 @@ feel responsive without being distracting.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/ultimate-ui)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/ultimate-ui)*

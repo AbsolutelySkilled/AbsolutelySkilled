@@ -33,10 +33,10 @@ React component testing, and coverage analysis.
 
 ## Recommended Skills
 
-- [test-strategy](https://absolutelyskilled.dev/skill/test-strategy)
-- [cypress-testing](https://absolutelyskilled.dev/skill/cypress-testing)
-- [playwright-testing](https://absolutelyskilled.dev/skill/playwright-testing)
-- [clean-code](https://absolutelyskilled.dev/skill/clean-code)
+- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
+- [cypress-testing](https://absolutely-skilled.vercel.app/skill/cypress-testing)
+- [playwright-testing](https://absolutely-skilled.vercel.app/skill/playwright-testing)
+- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ React component testing, and coverage analysis.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/jest-vitest)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/jest-vitest)*

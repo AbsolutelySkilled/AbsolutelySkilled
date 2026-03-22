@@ -30,10 +30,10 @@ teams focused on user value rather than technical implementation details.
 
 ## Recommended Skills
 
-- [agile-scrum](https://absolutelyskilled.dev/skill/agile-scrum)
-- [product-strategy](https://absolutelyskilled.dev/skill/product-strategy)
-- [product-discovery](https://absolutelyskilled.dev/skill/product-discovery)
-- [interview-design](https://absolutelyskilled.dev/skill/interview-design)
+- [agile-scrum](https://absolutely-skilled.vercel.app/skill/agile-scrum)
+- [product-strategy](https://absolutely-skilled.vercel.app/skill/product-strategy)
+- [product-discovery](https://absolutely-skilled.vercel.app/skill/product-discovery)
+- [interview-design](https://absolutely-skilled.vercel.app/skill/interview-design)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ teams focused on user value rather than technical implementation details.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/user-stories)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/user-stories)*

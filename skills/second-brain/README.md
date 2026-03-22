@@ -32,9 +32,9 @@ context-window efficiency.
 
 ## Recommended Skills
 
-- [knowledge-base](https://absolutelyskilled.dev/skill/knowledge-base)
-- [internal-docs](https://absolutelyskilled.dev/skill/internal-docs)
-- [technical-writing](https://absolutelyskilled.dev/skill/technical-writing)
+- [knowledge-base](https://absolutely-skilled.vercel.app/skill/knowledge-base)
+- [internal-docs](https://absolutely-skilled.vercel.app/skill/internal-docs)
+- [technical-writing](https://absolutely-skilled.vercel.app/skill/technical-writing)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ context-window efficiency.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/second-brain)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/second-brain)*

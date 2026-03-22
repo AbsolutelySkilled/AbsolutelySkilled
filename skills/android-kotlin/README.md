@@ -33,10 +33,10 @@ Android Studio and Gradle as the build system.
 
 ## Recommended Skills
 
-- [mobile-testing](https://absolutelyskilled.dev/skill/mobile-testing)
-- [ios-swift](https://absolutelyskilled.dev/skill/ios-swift)
-- [react-native](https://absolutelyskilled.dev/skill/react-native)
-- [clean-architecture](https://absolutelyskilled.dev/skill/clean-architecture)
+- [mobile-testing](https://absolutely-skilled.vercel.app/skill/mobile-testing)
+- [ios-swift](https://absolutely-skilled.vercel.app/skill/ios-swift)
+- [react-native](https://absolutely-skilled.vercel.app/skill/react-native)
+- [clean-architecture](https://absolutely-skilled.vercel.app/skill/clean-architecture)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ Android Studio and Gradle as the build system.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/android-kotlin)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/android-kotlin)*

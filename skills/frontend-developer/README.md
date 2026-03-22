@@ -32,10 +32,10 @@ platform is the foundation.
 
 ## Recommended Skills
 
-- [design-systems](https://absolutelyskilled.dev/skill/design-systems)
-- [accessibility-wcag](https://absolutelyskilled.dev/skill/accessibility-wcag)
-- [responsive-design](https://absolutelyskilled.dev/skill/responsive-design)
-- [ultimate-ui](https://absolutelyskilled.dev/skill/ultimate-ui)
+- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
+- [accessibility-wcag](https://absolutely-skilled.vercel.app/skill/accessibility-wcag)
+- [responsive-design](https://absolutely-skilled.vercel.app/skill/responsive-design)
+- [ultimate-ui](https://absolutely-skilled.vercel.app/skill/ultimate-ui)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ platform is the foundation.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/frontend-developer)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/frontend-developer)*

@@ -31,10 +31,10 @@ propositions, email subject lines, and product descriptions that actually work.
 
 ## Recommended Skills
 
-- [content-marketing](https://absolutelyskilled.dev/skill/content-marketing)
-- [brand-strategy](https://absolutelyskilled.dev/skill/brand-strategy)
-- [email-marketing](https://absolutelyskilled.dev/skill/email-marketing)
-- [content-seo](https://absolutelyskilled.dev/skill/content-seo)
+- [content-marketing](https://absolutely-skilled.vercel.app/skill/content-marketing)
+- [brand-strategy](https://absolutely-skilled.vercel.app/skill/brand-strategy)
+- [email-marketing](https://absolutely-skilled.vercel.app/skill/email-marketing)
+- [content-seo](https://absolutely-skilled.vercel.app/skill/content-seo)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ propositions, email subject lines, and product descriptions that actually work.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/copywriting)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/copywriting)*

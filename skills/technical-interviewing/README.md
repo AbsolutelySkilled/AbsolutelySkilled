@@ -32,10 +32,10 @@ building rubrics, calibrating panels, and reducing bias.
 
 ## Recommended Skills
 
-- [interview-design](https://absolutelyskilled.dev/skill/interview-design)
-- [recruiting-ops](https://absolutelyskilled.dev/skill/recruiting-ops)
-- [system-design](https://absolutelyskilled.dev/skill/system-design)
-- [clean-code](https://absolutelyskilled.dev/skill/clean-code)
+- [interview-design](https://absolutely-skilled.vercel.app/skill/interview-design)
+- [recruiting-ops](https://absolutely-skilled.vercel.app/skill/recruiting-ops)
+- [system-design](https://absolutely-skilled.vercel.app/skill/system-design)
+- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ building rubrics, calibrating panels, and reducing bias.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/technical-interviewing)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/technical-interviewing)*

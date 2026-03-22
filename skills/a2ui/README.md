@@ -33,10 +33,10 @@ incremental updates, and framework-agnostic rendering.
 
 ## Recommended Skills
 
-- [a2a-protocol](https://absolutelyskilled.dev/skill/a2a-protocol)
-- [ai-agent-design](https://absolutelyskilled.dev/skill/ai-agent-design)
-- [frontend-developer](https://absolutelyskilled.dev/skill/frontend-developer)
-- [design-systems](https://absolutelyskilled.dev/skill/design-systems)
+- [a2a-protocol](https://absolutely-skilled.vercel.app/skill/a2a-protocol)
+- [ai-agent-design](https://absolutely-skilled.vercel.app/skill/ai-agent-design)
+- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
+- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ incremental updates, and framework-agnostic rendering.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/a2ui)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/a2ui)*

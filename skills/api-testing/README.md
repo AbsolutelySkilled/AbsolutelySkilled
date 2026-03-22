@@ -30,10 +30,10 @@ strategy, tooling, and avoiding common traps.
 
 ## Recommended Skills
 
-- [api-design](https://absolutelyskilled.dev/skill/api-design)
-- [jest-vitest](https://absolutelyskilled.dev/skill/jest-vitest)
-- [test-strategy](https://absolutelyskilled.dev/skill/test-strategy)
-- [playwright-testing](https://absolutelyskilled.dev/skill/playwright-testing)
+- [api-design](https://absolutely-skilled.vercel.app/skill/api-design)
+- [jest-vitest](https://absolutely-skilled.vercel.app/skill/jest-vitest)
+- [test-strategy](https://absolutely-skilled.vercel.app/skill/test-strategy)
+- [playwright-testing](https://absolutely-skilled.vercel.app/skill/playwright-testing)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ strategy, tooling, and avoiding common traps.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/api-testing)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/api-testing)*

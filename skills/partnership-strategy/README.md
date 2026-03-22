@@ -32,10 +32,10 @@ balancing short-term revenue goals with long-term ecosystem value.
 
 ## Recommended Skills
 
-- [account-management](https://absolutelyskilled.dev/skill/account-management)
-- [sales-enablement](https://absolutelyskilled.dev/skill/sales-enablement)
-- [brand-strategy](https://absolutelyskilled.dev/skill/brand-strategy)
-- [growth-hacking](https://absolutelyskilled.dev/skill/growth-hacking)
+- [account-management](https://absolutely-skilled.vercel.app/skill/account-management)
+- [sales-enablement](https://absolutely-skilled.vercel.app/skill/sales-enablement)
+- [brand-strategy](https://absolutely-skilled.vercel.app/skill/brand-strategy)
+- [growth-hacking](https://absolutely-skilled.vercel.app/skill/growth-hacking)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ balancing short-term revenue goals with long-term ecosystem value.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/partnership-strategy)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/partnership-strategy)*

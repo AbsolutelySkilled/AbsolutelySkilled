@@ -31,10 +31,10 @@ the problem and *configuring it correctly* rather than memorizing every API surf
 
 ## Recommended Skills
 
-- [terraform-iac](https://absolutelyskilled.dev/skill/terraform-iac)
-- [cloud-security](https://absolutelyskilled.dev/skill/cloud-security)
-- [docker-kubernetes](https://absolutelyskilled.dev/skill/docker-kubernetes)
-- [cloud-aws](https://absolutelyskilled.dev/skill/cloud-aws)
+- [terraform-iac](https://absolutely-skilled.vercel.app/skill/terraform-iac)
+- [cloud-security](https://absolutely-skilled.vercel.app/skill/cloud-security)
+- [docker-kubernetes](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)
+- [cloud-aws](https://absolutely-skilled.vercel.app/skill/cloud-aws)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ the problem and *configuring it correctly* rather than memorizing every API surf
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/cloud-gcp)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/cloud-gcp)*

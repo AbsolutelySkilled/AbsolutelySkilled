@@ -32,10 +32,10 @@ codebase, this skill provides actionable patterns grounded in real-world mobile 
 
 ## Recommended Skills
 
-- [mobile-testing](https://absolutelyskilled.dev/skill/mobile-testing)
-- [ios-swift](https://absolutelyskilled.dev/skill/ios-swift)
-- [android-kotlin](https://absolutelyskilled.dev/skill/android-kotlin)
-- [frontend-developer](https://absolutelyskilled.dev/skill/frontend-developer)
+- [mobile-testing](https://absolutely-skilled.vercel.app/skill/mobile-testing)
+- [ios-swift](https://absolutely-skilled.vercel.app/skill/ios-swift)
+- [android-kotlin](https://absolutely-skilled.vercel.app/skill/android-kotlin)
+- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ codebase, this skill provides actionable patterns grounded in real-world mobile 
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/react-native)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/react-native)*

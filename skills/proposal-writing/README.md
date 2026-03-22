@@ -32,10 +32,10 @@ judgment to draft, review, and sharpen any business proposal.
 
 ## Recommended Skills
 
-- [sales-playbook](https://absolutelyskilled.dev/skill/sales-playbook)
-- [copywriting](https://absolutelyskilled.dev/skill/copywriting)
-- [competitive-analysis](https://absolutelyskilled.dev/skill/competitive-analysis)
-- [pricing-strategy](https://absolutelyskilled.dev/skill/pricing-strategy)
+- [sales-playbook](https://absolutely-skilled.vercel.app/skill/sales-playbook)
+- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
+- [competitive-analysis](https://absolutely-skilled.vercel.app/skill/competitive-analysis)
+- [pricing-strategy](https://absolutely-skilled.vercel.app/skill/pricing-strategy)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ judgment to draft, review, and sharpen any business proposal.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/proposal-writing)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/proposal-writing)*

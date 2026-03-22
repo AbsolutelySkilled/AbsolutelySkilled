@@ -32,10 +32,10 @@ guidance on production patterns.
 
 ## Recommended Skills
 
-- [ci-cd-pipelines](https://absolutelyskilled.dev/skill/ci-cd-pipelines)
-- [terraform-iac](https://absolutelyskilled.dev/skill/terraform-iac)
-- [linux-admin](https://absolutelyskilled.dev/skill/linux-admin)
-- [observability](https://absolutelyskilled.dev/skill/observability)
+- [ci-cd-pipelines](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)
+- [terraform-iac](https://absolutely-skilled.vercel.app/skill/terraform-iac)
+- [linux-admin](https://absolutely-skilled.vercel.app/skill/linux-admin)
+- [observability](https://absolutely-skilled.vercel.app/skill/observability)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ guidance on production patterns.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/docker-kubernetes)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/docker-kubernetes)*

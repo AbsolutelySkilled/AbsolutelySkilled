@@ -34,10 +34,10 @@ AI systems quote.
 
 ## Recommended Skills
 
-- [keyword-research](https://absolutelyskilled.dev/skill/keyword-research)
-- [seo-mastery](https://absolutelyskilled.dev/skill/seo-mastery)
-- [geo-optimization](https://absolutelyskilled.dev/skill/geo-optimization)
-- [schema-markup](https://absolutelyskilled.dev/skill/schema-markup)
+- [keyword-research](https://absolutely-skilled.vercel.app/skill/keyword-research)
+- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
+- [geo-optimization](https://absolutely-skilled.vercel.app/skill/geo-optimization)
+- [schema-markup](https://absolutely-skilled.vercel.app/skill/schema-markup)
 
 ## Maintainers
 
@@ -45,4 +45,4 @@ AI systems quote.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/aeo-optimization)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/aeo-optimization)*

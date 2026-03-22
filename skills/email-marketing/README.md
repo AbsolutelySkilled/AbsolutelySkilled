@@ -30,10 +30,10 @@ deliverability fundamentals, segmentation models, and systematic A/B testing.
 
 ## Recommended Skills
 
-- [email-deliverability](https://absolutelyskilled.dev/skill/email-deliverability)
-- [copywriting](https://absolutelyskilled.dev/skill/copywriting)
-- [growth-hacking](https://absolutelyskilled.dev/skill/growth-hacking)
-- [content-marketing](https://absolutelyskilled.dev/skill/content-marketing)
+- [email-deliverability](https://absolutely-skilled.vercel.app/skill/email-deliverability)
+- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
+- [growth-hacking](https://absolutely-skilled.vercel.app/skill/growth-hacking)
+- [content-marketing](https://absolutely-skilled.vercel.app/skill/content-marketing)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ deliverability fundamentals, segmentation models, and systematic A/B testing.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/email-marketing)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/email-marketing)*

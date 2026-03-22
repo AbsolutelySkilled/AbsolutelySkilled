@@ -33,9 +33,9 @@ exposure. This skill covers the full IP lifecycle: choosing the right protection
 
 ## Recommended Skills
 
-- [contract-drafting](https://absolutelyskilled.dev/skill/contract-drafting)
-- [open-source-management](https://absolutelyskilled.dev/skill/open-source-management)
-- [employment-law](https://absolutelyskilled.dev/skill/employment-law)
+- [contract-drafting](https://absolutely-skilled.vercel.app/skill/contract-drafting)
+- [open-source-management](https://absolutely-skilled.vercel.app/skill/open-source-management)
+- [employment-law](https://absolutely-skilled.vercel.app/skill/employment-law)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ exposure. This skill covers the full IP lifecycle: choosing the right protection
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/ip-management)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/ip-management)*

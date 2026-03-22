@@ -32,10 +32,10 @@ campaigns, and maintaining a clean link profile free of toxic signals.
 
 ## Recommended Skills
 
-- [content-seo](https://absolutelyskilled.dev/skill/content-seo)
-- [seo-mastery](https://absolutelyskilled.dev/skill/seo-mastery)
-- [content-marketing](https://absolutelyskilled.dev/skill/content-marketing)
-- [local-seo](https://absolutelyskilled.dev/skill/local-seo)
+- [content-seo](https://absolutely-skilled.vercel.app/skill/content-seo)
+- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
+- [content-marketing](https://absolutely-skilled.vercel.app/skill/content-marketing)
+- [local-seo](https://absolutely-skilled.vercel.app/skill/local-seo)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ campaigns, and maintaining a clean link profile free of toxic signals.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/link-building)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/link-building)*

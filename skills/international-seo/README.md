@@ -32,10 +32,10 @@ international SEO gives each market its own clear identity and ranking potential
 
 ## Recommended Skills
 
-- [localization-i18n](https://absolutelyskilled.dev/skill/localization-i18n)
-- [seo-mastery](https://absolutelyskilled.dev/skill/seo-mastery)
-- [geo-optimization](https://absolutelyskilled.dev/skill/geo-optimization)
-- [technical-seo](https://absolutelyskilled.dev/skill/technical-seo)
+- [localization-i18n](https://absolutely-skilled.vercel.app/skill/localization-i18n)
+- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
+- [geo-optimization](https://absolutely-skilled.vercel.app/skill/geo-optimization)
+- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ international SEO gives each market its own clear identity and ranking potential
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/international-seo)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/international-seo)*

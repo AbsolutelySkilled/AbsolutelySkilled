@@ -31,10 +31,10 @@ happy-path implementation.
 
 ## Recommended Skills
 
-- [prompt-engineering](https://absolutelyskilled.dev/skill/prompt-engineering)
-- [ai-agent-design](https://absolutelyskilled.dev/skill/ai-agent-design)
-- [ml-ops](https://absolutelyskilled.dev/skill/ml-ops)
-- [mastra](https://absolutelyskilled.dev/skill/mastra)
+- [prompt-engineering](https://absolutely-skilled.vercel.app/skill/prompt-engineering)
+- [ai-agent-design](https://absolutely-skilled.vercel.app/skill/ai-agent-design)
+- [ml-ops](https://absolutely-skilled.vercel.app/skill/ml-ops)
+- [mastra](https://absolutely-skilled.vercel.app/skill/mastra)
 
 ## Maintainers
 
@@ -42,4 +42,4 @@ happy-path implementation.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/llm-app-development)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/llm-app-development)*

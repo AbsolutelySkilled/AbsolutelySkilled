@@ -33,10 +33,10 @@ features.
 
 ## Recommended Skills
 
-- [crm-management](https://absolutelyskilled.dev/skill/crm-management)
-- [sales-enablement](https://absolutelyskilled.dev/skill/sales-enablement)
-- [lead-scoring](https://absolutelyskilled.dev/skill/lead-scoring)
-- [proposal-writing](https://absolutelyskilled.dev/skill/proposal-writing)
+- [crm-management](https://absolutely-skilled.vercel.app/skill/crm-management)
+- [sales-enablement](https://absolutely-skilled.vercel.app/skill/sales-enablement)
+- [lead-scoring](https://absolutely-skilled.vercel.app/skill/lead-scoring)
+- [proposal-writing](https://absolutely-skilled.vercel.app/skill/proposal-writing)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ features.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/sales-playbook)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/sales-playbook)*

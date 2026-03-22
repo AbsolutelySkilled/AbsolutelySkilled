@@ -33,10 +33,10 @@ viewport assumptions, and content-driven layout over device-targeted hacks.
 
 ## Recommended Skills
 
-- [design-systems](https://absolutelyskilled.dev/skill/design-systems)
-- [accessibility-wcag](https://absolutelyskilled.dev/skill/accessibility-wcag)
-- [frontend-developer](https://absolutelyskilled.dev/skill/frontend-developer)
-- [motion-design](https://absolutelyskilled.dev/skill/motion-design)
+- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
+- [accessibility-wcag](https://absolutely-skilled.vercel.app/skill/accessibility-wcag)
+- [frontend-developer](https://absolutely-skilled.vercel.app/skill/frontend-developer)
+- [motion-design](https://absolutely-skilled.vercel.app/skill/motion-design)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ viewport assumptions, and content-driven layout over device-targeted hacks.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/responsive-design)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/responsive-design)*

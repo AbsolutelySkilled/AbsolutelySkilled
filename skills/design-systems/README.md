@@ -29,10 +29,10 @@ or systematizing an existing ad-hoc component collection.
 
 ## Recommended Skills
 
-- [accessibility-wcag](https://absolutelyskilled.dev/skill/accessibility-wcag)
-- [color-theory](https://absolutelyskilled.dev/skill/color-theory)
-- [responsive-design](https://absolutelyskilled.dev/skill/responsive-design)
-- [ultimate-ui](https://absolutelyskilled.dev/skill/ultimate-ui)
+- [accessibility-wcag](https://absolutely-skilled.vercel.app/skill/accessibility-wcag)
+- [color-theory](https://absolutely-skilled.vercel.app/skill/color-theory)
+- [responsive-design](https://absolutely-skilled.vercel.app/skill/responsive-design)
+- [ultimate-ui](https://absolutely-skilled.vercel.app/skill/ultimate-ui)
 
 ## Maintainers
 
@@ -40,4 +40,4 @@ or systematizing an existing ad-hoc component collection.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/design-systems)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/design-systems)*

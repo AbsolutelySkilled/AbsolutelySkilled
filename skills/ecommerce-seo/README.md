@@ -32,10 +32,10 @@ This skill provides the patterns and decision frameworks needed to win search fo
 
 ## Recommended Skills
 
-- [schema-markup](https://absolutelyskilled.dev/skill/schema-markup)
-- [technical-seo](https://absolutelyskilled.dev/skill/technical-seo)
-- [programmatic-seo](https://absolutelyskilled.dev/skill/programmatic-seo)
-- [keyword-research](https://absolutelyskilled.dev/skill/keyword-research)
+- [schema-markup](https://absolutely-skilled.vercel.app/skill/schema-markup)
+- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
+- [programmatic-seo](https://absolutely-skilled.vercel.app/skill/programmatic-seo)
+- [keyword-research](https://absolutely-skilled.vercel.app/skill/keyword-research)
 
 ## Maintainers
 
@@ -43,4 +43,4 @@ This skill provides the patterns and decision frameworks needed to win search fo
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/ecommerce-seo)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/ecommerce-seo)*

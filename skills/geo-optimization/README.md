@@ -34,11 +34,11 @@ revision as AI search products mature, change their retrieval logic, and shift t
 
 ## Recommended Skills
 
-- [keyword-research](https://absolutelyskilled.dev/skill/keyword-research)
-- [aeo-optimization](https://absolutelyskilled.dev/skill/aeo-optimization)
-- [international-seo](https://absolutelyskilled.dev/skill/international-seo)
-- [local-seo](https://absolutelyskilled.dev/skill/local-seo)
-- [seo-mastery](https://absolutelyskilled.dev/skill/seo-mastery)
+- [keyword-research](https://absolutely-skilled.vercel.app/skill/keyword-research)
+- [aeo-optimization](https://absolutely-skilled.vercel.app/skill/aeo-optimization)
+- [international-seo](https://absolutely-skilled.vercel.app/skill/international-seo)
+- [local-seo](https://absolutely-skilled.vercel.app/skill/local-seo)
+- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
 
 ## Maintainers
 
@@ -46,4 +46,4 @@ revision as AI search products mature, change their retrieval logic, and shift t
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/geo-optimization)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/geo-optimization)*

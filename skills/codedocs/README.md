@@ -33,11 +33,11 @@ via targeted scope or git-diff detection.
 
 ## Recommended Skills
 
-- [technical-writing](https://absolutelyskilled.dev/skill/technical-writing)
-- [internal-docs](https://absolutelyskilled.dev/skill/internal-docs)
-- [clean-code](https://absolutelyskilled.dev/skill/clean-code)
-- [developer-experience](https://absolutelyskilled.dev/skill/developer-experience)
-- [open-source-management](https://absolutelyskilled.dev/skill/open-source-management)
+- [technical-writing](https://absolutely-skilled.vercel.app/skill/technical-writing)
+- [internal-docs](https://absolutely-skilled.vercel.app/skill/internal-docs)
+- [clean-code](https://absolutely-skilled.vercel.app/skill/clean-code)
+- [developer-experience](https://absolutely-skilled.vercel.app/skill/developer-experience)
+- [open-source-management](https://absolutely-skilled.vercel.app/skill/open-source-management)
 
 ## Maintainers
 
@@ -45,4 +45,4 @@ via targeted scope or git-diff detection.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/codedocs)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/codedocs)*

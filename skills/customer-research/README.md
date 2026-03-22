@@ -33,10 +33,10 @@ recommendations.
 
 ## Recommended Skills
 
-- [ux-research](https://absolutelyskilled.dev/skill/ux-research)
-- [product-discovery](https://absolutelyskilled.dev/skill/product-discovery)
-- [competitive-analysis](https://absolutelyskilled.dev/skill/competitive-analysis)
-- [customer-success-playbook](https://absolutelyskilled.dev/skill/customer-success-playbook)
+- [ux-research](https://absolutely-skilled.vercel.app/skill/ux-research)
+- [product-discovery](https://absolutely-skilled.vercel.app/skill/product-discovery)
+- [competitive-analysis](https://absolutely-skilled.vercel.app/skill/competitive-analysis)
+- [customer-success-playbook](https://absolutely-skilled.vercel.app/skill/customer-success-playbook)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ recommendations.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/customer-research)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/customer-research)*

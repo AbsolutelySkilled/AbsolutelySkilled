@@ -33,10 +33,10 @@ analyses to enterprise financial models.
 
 ## Recommended Skills
 
-- [financial-modeling](https://absolutelyskilled.dev/skill/financial-modeling)
-- [budgeting-planning](https://absolutelyskilled.dev/skill/budgeting-planning)
-- [financial-reporting](https://absolutelyskilled.dev/skill/financial-reporting)
-- [no-code-automation](https://absolutelyskilled.dev/skill/no-code-automation)
+- [financial-modeling](https://absolutely-skilled.vercel.app/skill/financial-modeling)
+- [budgeting-planning](https://absolutely-skilled.vercel.app/skill/budgeting-planning)
+- [financial-reporting](https://absolutely-skilled.vercel.app/skill/financial-reporting)
+- [no-code-automation](https://absolutely-skilled.vercel.app/skill/no-code-automation)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ analyses to enterprise financial models.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/spreadsheet-modeling)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/spreadsheet-modeling)*

@@ -32,11 +32,11 @@ advanced git task with confidence.
 
 ## Recommended Skills
 
-- [code-review-mastery](https://absolutelyskilled.dev/skill/code-review-mastery)
-- [ci-cd-pipelines](https://absolutelyskilled.dev/skill/ci-cd-pipelines)
-- [monorepo-management](https://absolutelyskilled.dev/skill/monorepo-management)
-- [shell-scripting](https://absolutelyskilled.dev/skill/shell-scripting)
-- [meta-repo](https://absolutelyskilled.dev/skill/meta-repo)
+- [code-review-mastery](https://absolutely-skilled.vercel.app/skill/code-review-mastery)
+- [ci-cd-pipelines](https://absolutely-skilled.vercel.app/skill/ci-cd-pipelines)
+- [monorepo-management](https://absolutely-skilled.vercel.app/skill/monorepo-management)
+- [shell-scripting](https://absolutely-skilled.vercel.app/skill/shell-scripting)
+- [meta-repo](https://absolutely-skilled.vercel.app/skill/meta-repo)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ advanced git task with confidence.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/git-advanced)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/git-advanced)*

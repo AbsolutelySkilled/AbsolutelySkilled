@@ -33,10 +33,10 @@ and respect user preferences.
 
 ## Recommended Skills
 
-- [responsive-design](https://absolutelyskilled.dev/skill/responsive-design)
-- [design-systems](https://absolutelyskilled.dev/skill/design-systems)
-- [figma-to-code](https://absolutelyskilled.dev/skill/figma-to-code)
-- [ultimate-ui](https://absolutelyskilled.dev/skill/ultimate-ui)
+- [responsive-design](https://absolutely-skilled.vercel.app/skill/responsive-design)
+- [design-systems](https://absolutely-skilled.vercel.app/skill/design-systems)
+- [figma-to-code](https://absolutely-skilled.vercel.app/skill/figma-to-code)
+- [ultimate-ui](https://absolutely-skilled.vercel.app/skill/ultimate-ui)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ and respect user preferences.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/motion-design)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/motion-design)*

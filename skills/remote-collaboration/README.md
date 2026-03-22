@@ -33,10 +33,10 @@ writing more and meeting less - without losing alignment or team cohesion.
 
 ## Recommended Skills
 
-- [agile-scrum](https://absolutelyskilled.dev/skill/agile-scrum)
-- [project-execution](https://absolutelyskilled.dev/skill/project-execution)
-- [internal-docs](https://absolutelyskilled.dev/skill/internal-docs)
-- [knowledge-base](https://absolutelyskilled.dev/skill/knowledge-base)
+- [agile-scrum](https://absolutely-skilled.vercel.app/skill/agile-scrum)
+- [project-execution](https://absolutely-skilled.vercel.app/skill/project-execution)
+- [internal-docs](https://absolutely-skilled.vercel.app/skill/internal-docs)
+- [knowledge-base](https://absolutely-skilled.vercel.app/skill/knowledge-base)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ writing more and meeting less - without losing alignment or team cohesion.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/remote-collaboration)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/remote-collaboration)*

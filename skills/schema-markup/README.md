@@ -33,10 +33,10 @@ Rich results increase click-through rates by making listings visually distinct i
 
 ## Recommended Skills
 
-- [technical-seo](https://absolutelyskilled.dev/skill/technical-seo)
-- [seo-mastery](https://absolutelyskilled.dev/skill/seo-mastery)
-- [on-site-seo](https://absolutelyskilled.dev/skill/on-site-seo)
-- [ecommerce-seo](https://absolutelyskilled.dev/skill/ecommerce-seo)
+- [technical-seo](https://absolutely-skilled.vercel.app/skill/technical-seo)
+- [seo-mastery](https://absolutely-skilled.vercel.app/skill/seo-mastery)
+- [on-site-seo](https://absolutely-skilled.vercel.app/skill/on-site-seo)
+- [ecommerce-seo](https://absolutely-skilled.vercel.app/skill/ecommerce-seo)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ Rich results increase click-through rates by making listings visually distinct i
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/schema-markup)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/schema-markup)*

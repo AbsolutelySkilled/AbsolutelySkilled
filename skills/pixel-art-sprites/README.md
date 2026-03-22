@@ -33,10 +33,10 @@ that prevent those failures.
 
 ## Recommended Skills
 
-- [unity-development](https://absolutelyskilled.dev/skill/unity-development)
-- [game-audio](https://absolutelyskilled.dev/skill/game-audio)
-- [color-theory](https://absolutelyskilled.dev/skill/color-theory)
-- [motion-design](https://absolutelyskilled.dev/skill/motion-design)
+- [unity-development](https://absolutely-skilled.vercel.app/skill/unity-development)
+- [game-audio](https://absolutely-skilled.vercel.app/skill/game-audio)
+- [color-theory](https://absolutely-skilled.vercel.app/skill/color-theory)
+- [motion-design](https://absolutely-skilled.vercel.app/skill/motion-design)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ that prevent those failures.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/pixel-art-sprites)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/pixel-art-sprites)*

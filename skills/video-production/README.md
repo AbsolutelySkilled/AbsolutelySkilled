@@ -33,10 +33,10 @@ across the entire production pipeline.
 
 ## Recommended Skills
 
-- [presentation-design](https://absolutelyskilled.dev/skill/presentation-design)
-- [social-media-strategy](https://absolutelyskilled.dev/skill/social-media-strategy)
-- [copywriting](https://absolutelyskilled.dev/skill/copywriting)
-- [content-marketing](https://absolutelyskilled.dev/skill/content-marketing)
+- [presentation-design](https://absolutely-skilled.vercel.app/skill/presentation-design)
+- [social-media-strategy](https://absolutely-skilled.vercel.app/skill/social-media-strategy)
+- [copywriting](https://absolutely-skilled.vercel.app/skill/copywriting)
+- [content-marketing](https://absolutely-skilled.vercel.app/skill/content-marketing)
 
 ## Maintainers
 
@@ -44,4 +44,4 @@ across the entire production pipeline.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/video-production)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/video-production)*

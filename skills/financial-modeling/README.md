@@ -30,10 +30,10 @@ models that hold up to scrutiny.
 
 ## Recommended Skills
 
-- [budgeting-planning](https://absolutelyskilled.dev/skill/budgeting-planning)
-- [financial-reporting](https://absolutelyskilled.dev/skill/financial-reporting)
-- [startup-fundraising](https://absolutelyskilled.dev/skill/startup-fundraising)
-- [spreadsheet-modeling](https://absolutelyskilled.dev/skill/spreadsheet-modeling)
+- [budgeting-planning](https://absolutely-skilled.vercel.app/skill/budgeting-planning)
+- [financial-reporting](https://absolutely-skilled.vercel.app/skill/financial-reporting)
+- [startup-fundraising](https://absolutely-skilled.vercel.app/skill/startup-fundraising)
+- [spreadsheet-modeling](https://absolutely-skilled.vercel.app/skill/spreadsheet-modeling)
 
 ## Maintainers
 
@@ -41,4 +41,4 @@ models that hold up to scrutiny.
 
 ---
 
-*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/financial-modeling)*
+*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/financial-modeling)*
