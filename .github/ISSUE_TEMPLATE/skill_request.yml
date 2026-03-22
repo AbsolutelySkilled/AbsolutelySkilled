@@ -1,0 +1,72 @@
+name: Skill Request
+description: Request a new skill to be added to AbsolutelySkilled
+title: "[Skill Request] <skill name>"
+labels: ["skill-request"]
+body:
+  - type: input
+    id: skill-name
+    attributes:
+      label: Skill Name
+      description: What should this skill be called?
+      placeholder: e.g., tailwind-css, stripe-payments, redis
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which category does this skill belong to?
+      options:
+        - engineering
+        - operations
+        - marketing
+        - ai-ml
+        - design
+        - product
+        - devtools
+        - sales
+        - data
+        - infra
+        - monitoring
+        - cloud
+        - writing
+        - workflow
+        - analytics
+        - game-development
+        - video
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What should this skill teach AI agents? List 3-5 concrete tasks it should handle.
+      placeholder: |
+        This skill should teach AI agents how to:
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: resources
+    attributes:
+      label: Resources
+      description: Links to documentation, repos, or references that would help build this skill.
+      placeholder: |
+        - https://docs.example.com
+        - https://github.com/example/repo
+    validations:
+      required: false
+  - type: dropdown
+    id: willing-to-contribute
+    attributes:
+      label: Willing to contribute?
+      description: Would you be willing to help create this skill?
+      options:
+        - "Yes, I can create a PR"
+        - "I can help review"
+        - "No, just requesting"
+    validations:
+      required: true

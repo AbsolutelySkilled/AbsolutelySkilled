@@ -14,7 +14,7 @@ const {
   canonical,
   jsonLd,
   additionalJsonLd = [],
-  image = '/og-image.png',
+  image = '/og/default.png',
 } = Astro.props;
 const siteUrl = 'https://www.absolutelyskilled.pro';
 const resolvedImage = image.startsWith('http') ? image : `${siteUrl}${image}`;

@@ -6,6 +6,7 @@ interface Props {
   title: string;
   description: string;
   canonical?: string;
+  image?: string;
   jsonLd?: Record<string, unknown>;
   additionalJsonLd?: Record<string, unknown>[];
   breadcrumbs?: BreadcrumbItem[];
@@ -13,10 +14,10 @@ interface Props {
   author?: string;
 }
 
-const { title, description, canonical, jsonLd, additionalJsonLd, breadcrumbs, date, author } = Astro.props;
+const { title, description, canonical, image, jsonLd, additionalJsonLd, breadcrumbs, date, author } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description} canonical={canonical} jsonLd={jsonLd} additionalJsonLd={additionalJsonLd} breadcrumbs={breadcrumbs}>
+<BaseLayout title={title} description={description} canonical={canonical} image={image} jsonLd={jsonLd} additionalJsonLd={additionalJsonLd} breadcrumbs={breadcrumbs}>
   <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
     <header class="mb-10">
       <h1 class="text-4xl font-bold font-mono mb-4">{title}</h1>

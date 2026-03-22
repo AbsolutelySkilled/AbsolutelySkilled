@@ -79,20 +79,20 @@ const recentSkills = skills.slice(-10).reverse();
       </div>
 
       <!-- Stats inline -->
-      <div class="flex items-center justify-center gap-8 text-sm">
-        <div class="flex items-center gap-2">
-          <span class="text-2xl font-bold font-mono text-text-primary">{skills.length}</span>
+      <div class="flex items-center justify-center gap-4 sm:gap-8 text-sm">
+        <div class="flex items-center gap-1.5 sm:gap-2">
+          <span class="text-xl sm:text-2xl font-bold font-mono text-text-primary">{skills.length}</span>
           <span class="text-text-muted">skills</span>
         </div>
-        <div class="w-px h-6 bg-border" />
-        <div class="flex items-center gap-2">
-          <span class="text-2xl font-bold font-mono text-text-primary">{categories.length}</span>
+        <div class="w-px h-5 sm:h-6 bg-border" />
+        <div class="flex items-center gap-1.5 sm:gap-2">
+          <span class="text-xl sm:text-2xl font-bold font-mono text-text-primary">{categories.length}</span>
           <span class="text-text-muted">categories</span>
         </div>
         <div data-installs-wrapper class:list={[totalInstalls <= 0 && 'hidden', 'contents']}>
-          <div class="w-px h-6 bg-border" />
-          <div class="flex items-center gap-2">
-            <span class="text-2xl font-bold font-mono text-text-primary" data-installs-total>{totalInstalls > 0 ? totalInstalls.toLocaleString() : ''}</span>
+          <div class="w-px h-5 sm:h-6 bg-border" />
+          <div class="flex items-center gap-1.5 sm:gap-2">
+            <span class="text-xl sm:text-2xl font-bold font-mono text-text-primary" data-installs-total>{totalInstalls > 0 ? totalInstalls.toLocaleString() : ''}</span>
             <span class="text-text-muted">installs</span>
           </div>
         </div>

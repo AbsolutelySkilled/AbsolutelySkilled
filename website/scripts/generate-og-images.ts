@@ -74,9 +74,11 @@ function buildSkillOgMarkup(
 ): object {
   const catColor = CATEGORY_COLORS[category] || '#64748b';
   const catLabel = CATEGORY_LABELS[category] || category;
-  const displayTags = tags.slice(0, 4);
-  const desc = description.length > 120 ? description.slice(0, 117) + '...' : description;
-  const fontSize = name.length > 30 ? 42 : name.length > 20 ? 52 : 60;
+  const displayTags = tags.slice(0, 3);
+  // Shorter description for bigger text
+  const desc = description.length > 90 ? description.slice(0, 87) + '...' : description;
+  // Bigger font sizes - scale based on name length
+  const nameSize = name.length > 28 ? 56 : name.length > 18 ? 68 : 76;
 
   return h(
     'div',
@@ -86,31 +88,31 @@ function buildSkillOgMarkup(
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
-      padding: '60px 64px',
-      backgroundColor: '#0a0a0f',
+      padding: '56px 72px',
+      backgroundColor: '#09090f',
       backgroundImage:
-        'radial-gradient(ellipse at 20% 50%, rgba(59,130,246,0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, rgba(168,85,247,0.06) 0%, transparent 50%)',
+        'radial-gradient(ellipse at 15% 45%, rgba(59,130,246,0.10) 0%, transparent 55%), radial-gradient(ellipse at 85% 55%, rgba(168,85,247,0.07) 0%, transparent 55%)',
       fontFamily: 'Inter',
     },
     // Top section
     h(
       'div',
-      { display: 'flex', flexDirection: 'column', gap: '20px' },
-      // Category + AI Agent Skill badges
+      { display: 'flex', flexDirection: 'column', gap: '24px' },
+      // Category badge - bigger
       h(
         'div',
-        { display: 'flex', alignItems: 'center', gap: '12px' },
+        { display: 'flex', alignItems: 'center', gap: '14px' },
         h(
           'div',
           {
             display: 'flex',
-            padding: '6px 16px',
+            padding: '8px 20px',
             borderRadius: '100px',
-            border: `1.5px solid ${catColor}44`,
-            backgroundColor: `${catColor}15`,
+            border: `2px solid ${catColor}55`,
+            backgroundColor: `${catColor}18`,
             color: catColor,
-            fontSize: '16px',
-            fontWeight: 600,
+            fontSize: '20px',
+            fontWeight: 700,
           },
           catLabel,
         ),
@@ -118,36 +120,37 @@ function buildSkillOgMarkup(
           'div',
           {
             display: 'flex',
-            padding: '6px 14px',
+            padding: '8px 18px',
             borderRadius: '100px',
-            border: '1.5px solid rgba(255,255,255,0.1)',
+            border: '2px solid rgba(255,255,255,0.12)',
             color: 'rgba(255,255,255,0.5)',
-            fontSize: '14px',
+            fontSize: '18px',
+            fontWeight: 600,
           },
           'AI Agent Skill',
         ),
       ),
-      // Skill name
+      // Skill name - much bigger
       h(
         'div',
         {
           fontFamily: 'JetBrains Mono',
-          fontSize: `${fontSize}px`,
+          fontSize: `${nameSize}px`,
           fontWeight: 700,
-          color: '#f0f0f5',
-          lineHeight: 1.15,
-          letterSpacing: '-0.02em',
+          color: '#ffffff',
+          lineHeight: 1.1,
+          letterSpacing: '-0.03em',
         },
         name,
       ),
-      // Description
+      // Description - bigger and brighter
       h(
         'div',
         {
-          fontSize: '20px',
-          color: 'rgba(255,255,255,0.55)',
-          lineHeight: 1.5,
-          maxWidth: '900px',
+          fontSize: '26px',
+          color: 'rgba(255,255,255,0.65)',
+          lineHeight: 1.45,
+          maxWidth: '950px',
         },
         desc,
       ),
@@ -156,43 +159,43 @@ function buildSkillOgMarkup(
     h(
       'div',
       { display: 'flex', alignItems: 'center', justifyContent: 'space-between' },
-      // Tags
+      // Tags - bigger
       h(
         'div',
-        { display: 'flex', gap: '8px' },
+        { display: 'flex', gap: '10px' },
         ...displayTags.map((tag) =>
           h(
             'div',
             {
               fontFamily: 'JetBrains Mono',
-              fontSize: '14px',
-              color: 'rgba(255,255,255,0.35)',
-              padding: '5px 12px',
-              borderRadius: '6px',
-              border: '1px solid rgba(255,255,255,0.08)',
-              backgroundColor: 'rgba(255,255,255,0.03)',
+              fontSize: '18px',
+              color: 'rgba(255,255,255,0.4)',
+              padding: '6px 16px',
+              borderRadius: '8px',
+              border: '1.5px solid rgba(255,255,255,0.1)',
+              backgroundColor: 'rgba(255,255,255,0.04)',
             },
             `#${tag}`,
           ),
         ),
       ),
-      // Brand
+      // Brand - bigger
       h(
         'div',
-        { display: 'flex', alignItems: 'center', gap: '10px' },
+        { display: 'flex', alignItems: 'center', gap: '12px' },
         h('div', {
-          width: '28px',
-          height: '28px',
-          borderRadius: '6px',
+          width: '32px',
+          height: '32px',
+          borderRadius: '8px',
           background: 'linear-gradient(135deg, #3b82f6, #a855f7)',
         }),
         h(
           'div',
           {
             fontFamily: 'JetBrains Mono',
-            fontSize: '18px',
+            fontSize: '22px',
             fontWeight: 700,
-            color: 'rgba(255,255,255,0.6)',
+            color: 'rgba(255,255,255,0.65)',
           },
           'AbsolutelySkilled',
         ),
@@ -211,26 +214,26 @@ function buildDefaultOgMarkup(): object {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: '60px 64px',
-      backgroundColor: '#0a0a0f',
+      padding: '60px 80px',
+      backgroundColor: '#09090f',
       backgroundImage:
-        'radial-gradient(ellipse at 50% 30%, rgba(59,130,246,0.12) 0%, transparent 50%), radial-gradient(ellipse at 70% 70%, rgba(168,85,247,0.08) 0%, transparent 50%)',
+        'radial-gradient(ellipse at 50% 25%, rgba(59,130,246,0.14) 0%, transparent 55%), radial-gradient(ellipse at 65% 75%, rgba(168,85,247,0.10) 0%, transparent 55%)',
       fontFamily: 'Inter',
     },
     h('div', {
-      width: '64px',
-      height: '64px',
-      borderRadius: '16px',
+      width: '80px',
+      height: '80px',
+      borderRadius: '20px',
       background: 'linear-gradient(135deg, #3b82f6, #a855f7, #ec4899)',
-      marginBottom: '32px',
+      marginBottom: '36px',
     }),
     h(
       'div',
       {
         fontFamily: 'JetBrains Mono',
-        fontSize: '64px',
+        fontSize: '72px',
         fontWeight: 700,
-        color: '#f0f0f5',
+        color: '#ffffff',
         letterSpacing: '-0.03em',
         textAlign: 'center',
       },
@@ -239,10 +242,11 @@ function buildDefaultOgMarkup(): object {
     h(
       'div',
       {
-        fontSize: '26px',
-        color: 'rgba(255,255,255,0.5)',
-        marginTop: '16px',
+        fontSize: '32px',
+        color: 'rgba(255,255,255,0.6)',
+        marginTop: '20px',
         textAlign: 'center',
+        fontWeight: 600,
       },
       'Teach your AI agent anything.',
     ),
@@ -250,16 +254,219 @@ function buildDefaultOgMarkup(): object {
       'div',
       {
         display: 'flex',
-        gap: '24px',
-        marginTop: '40px',
-        fontSize: '18px',
-        color: 'rgba(255,255,255,0.35)',
+        gap: '32px',
+        marginTop: '48px',
+        fontSize: '22px',
+        fontWeight: 600,
+        color: 'rgba(255,255,255,0.4)',
       },
       h('span', {}, '168+ Skills'),
-      h('span', {}, '|'),
+      h('span', { color: 'rgba(255,255,255,0.15)' }, '|'),
       h('span', {}, '20 Categories'),
-      h('span', {}, '|'),
+      h('span', { color: 'rgba(255,255,255,0.15)' }, '|'),
       h('span', {}, 'Open Source'),
+    ),
+  );
+}
+
+function buildCategoryOgMarkup(label: string, count: number, color: string): object {
+  return h(
+    'div',
+    {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      padding: '56px 72px',
+      backgroundColor: '#09090f',
+      backgroundImage: `radial-gradient(ellipse at 20% 45%, ${color}14 0%, transparent 55%), radial-gradient(ellipse at 80% 55%, rgba(168,85,247,0.07) 0%, transparent 55%)`,
+      fontFamily: 'Inter',
+    },
+    // Top
+    h(
+      'div',
+      { display: 'flex', flexDirection: 'column', gap: '24px' },
+      // Badge
+      h(
+        'div',
+        { display: 'flex', alignItems: 'center', gap: '14px' },
+        h(
+          'div',
+          {
+            display: 'flex',
+            padding: '8px 20px',
+            borderRadius: '100px',
+            border: `2px solid ${color}55`,
+            backgroundColor: `${color}18`,
+            color,
+            fontSize: '20px',
+            fontWeight: 700,
+          },
+          'Category',
+        ),
+        h(
+          'div',
+          {
+            display: 'flex',
+            padding: '8px 18px',
+            borderRadius: '100px',
+            border: '2px solid rgba(255,255,255,0.12)',
+            color: 'rgba(255,255,255,0.5)',
+            fontSize: '18px',
+            fontWeight: 600,
+          },
+          `${count} Skills`,
+        ),
+      ),
+      // Category name
+      h(
+        'div',
+        {
+          fontFamily: 'JetBrains Mono',
+          fontSize: '76px',
+          fontWeight: 700,
+          color: '#ffffff',
+          lineHeight: 1.1,
+          letterSpacing: '-0.03em',
+        },
+        label,
+      ),
+      // Subtitle
+      h(
+        'div',
+        {
+          fontSize: '26px',
+          color: 'rgba(255,255,255,0.6)',
+          lineHeight: 1.45,
+        },
+        `Production-ready AI agent skills for ${label.toLowerCase()}.`,
+      ),
+    ),
+    // Bottom brand
+    h(
+      'div',
+      { display: 'flex', alignItems: 'center', justifyContent: 'flex-end' },
+      h(
+        'div',
+        { display: 'flex', alignItems: 'center', gap: '12px' },
+        h('div', {
+          width: '32px',
+          height: '32px',
+          borderRadius: '8px',
+          background: 'linear-gradient(135deg, #3b82f6, #a855f7)',
+        }),
+        h(
+          'div',
+          {
+            fontFamily: 'JetBrains Mono',
+            fontSize: '22px',
+            fontWeight: 700,
+            color: 'rgba(255,255,255,0.65)',
+          },
+          'AbsolutelySkilled',
+        ),
+      ),
+    ),
+  );
+}
+
+function buildBlogOgMarkup(title: string, date: string): object {
+  const titleSize = title.length > 50 ? 48 : title.length > 35 ? 56 : 64;
+  const formattedDate = new Date(date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
+  return h(
+    'div',
+    {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      padding: '56px 72px',
+      backgroundColor: '#09090f',
+      backgroundImage:
+        'radial-gradient(ellipse at 25% 40%, rgba(236,72,153,0.10) 0%, transparent 55%), radial-gradient(ellipse at 75% 60%, rgba(59,130,246,0.08) 0%, transparent 55%)',
+      fontFamily: 'Inter',
+    },
+    // Top
+    h(
+      'div',
+      { display: 'flex', flexDirection: 'column', gap: '24px' },
+      // Badge
+      h(
+        'div',
+        { display: 'flex', alignItems: 'center', gap: '14px' },
+        h(
+          'div',
+          {
+            display: 'flex',
+            padding: '8px 20px',
+            borderRadius: '100px',
+            border: '2px solid rgba(236,72,153,0.4)',
+            backgroundColor: 'rgba(236,72,153,0.12)',
+            color: '#ec4899',
+            fontSize: '20px',
+            fontWeight: 700,
+          },
+          'Blog',
+        ),
+        h(
+          'div',
+          {
+            display: 'flex',
+            padding: '8px 18px',
+            borderRadius: '100px',
+            border: '2px solid rgba(255,255,255,0.12)',
+            color: 'rgba(255,255,255,0.45)',
+            fontSize: '18px',
+            fontWeight: 600,
+          },
+          formattedDate,
+        ),
+      ),
+      // Title
+      h(
+        'div',
+        {
+          fontSize: `${titleSize}px`,
+          fontWeight: 700,
+          color: '#ffffff',
+          lineHeight: 1.15,
+          letterSpacing: '-0.02em',
+          maxWidth: '1000px',
+        },
+        title,
+      ),
+    ),
+    // Bottom brand
+    h(
+      'div',
+      { display: 'flex', alignItems: 'center', justifyContent: 'flex-end' },
+      h(
+        'div',
+        { display: 'flex', alignItems: 'center', gap: '12px' },
+        h('div', {
+          width: '32px',
+          height: '32px',
+          borderRadius: '8px',
+          background: 'linear-gradient(135deg, #3b82f6, #a855f7)',
+        }),
+        h(
+          'div',
+          {
+            fontFamily: 'JetBrains Mono',
+            fontSize: '22px',
+            fontWeight: 700,
+            color: 'rgba(255,255,255,0.65)',
+          },
+          'AbsolutelySkilled',
+        ),
+      ),
     ),
   );
 }
@@ -342,6 +549,50 @@ async function main() {
   }
 
   console.log(`\nGenerated ${count} skill OG images + 1 default`);
+
+  // Generate category OG images
+  const categorySkillCounts: Record<string, number> = {};
+  for (const slug of slugs) {
+    try {
+      const raw = fs.readFileSync(path.join(SKILLS_DIR, slug, 'SKILL.md'), 'utf-8');
+      const { data } = matter(raw);
+      const cat = data.category || 'engineering';
+      categorySkillCounts[cat] = (categorySkillCounts[cat] || 0) + 1;
+    } catch {}
+  }
+
+  const categories = Object.entries(categorySkillCounts);
+  console.log(`Generating OG images for ${categories.length} categories...`);
+  for (const [cat, catCount] of categories) {
+    const color = CATEGORY_COLORS[cat] || '#64748b';
+    const label = CATEGORY_LABELS[cat] || cat;
+    const markup = buildCategoryOgMarkup(label, catCount, color);
+    const png = await renderOgImage(markup, fonts);
+    fs.writeFileSync(path.join(OG_DIR, `category-${cat}.png`), png);
+  }
+  console.log(`Generated ${categories.length} category OG images`);
+
+  // Generate blog post OG images
+  const BLOG_DIR = path.resolve(process.cwd(), 'src/content/blog');
+  if (fs.existsSync(BLOG_DIR)) {
+    const blogFiles = fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith('.mdx') || f.endsWith('.md'));
+    console.log(`Generating OG images for ${blogFiles.length} blog posts...`);
+    for (const file of blogFiles) {
+      try {
+        const raw = fs.readFileSync(path.join(BLOG_DIR, file), 'utf-8');
+        const { data } = matter(raw);
+        const slug = file.replace(/\.(mdx?|md)$/, '');
+        const title = data.title || slug;
+        const date = data.date || '2026-01-01';
+        const markup = buildBlogOgMarkup(title, date);
+        const png = await renderOgImage(markup, fonts);
+        fs.writeFileSync(path.join(OG_DIR, `blog-${slug}.png`), png);
+      } catch (err) {
+        console.error(`Error generating blog OG for ${file}:`, err);
+      }
+    }
+    console.log(`Generated ${blogFiles.length} blog OG images`);
+  }
 }
 
 main();

@@ -200,6 +200,7 @@ export function getCategoryPageSEO(
   return {
     title,
     description,
+    image: `/og/category-${category}.png`,
     canonical: `${SITE}/category/${category}`,
     breadcrumbs,
     jsonLd: {
@@ -264,6 +265,7 @@ export function getBlogPostSEO(post: {
   return {
     title: `${post.title} - ${SITE_NAME} Blog`,
     description: post.description,
+    image: `/og/blog-${post.slug}.png`,
     canonical: `${SITE}/blog/${post.slug}`,
     breadcrumbs,
     jsonLd: {
