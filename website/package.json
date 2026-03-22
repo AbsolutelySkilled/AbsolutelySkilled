@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "postbuild": "npx pagefind --site dist",
+    "postbuild": "if [ -d .vercel/output/static ]; then npx pagefind --site .vercel/output/static; else npx pagefind --site dist; fi",
     "preview": "astro preview",
     "generate:readmes": "tsx scripts/generate-readmes.ts"
   },
