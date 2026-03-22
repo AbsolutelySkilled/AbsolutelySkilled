@@ -1,0 +1,166 @@
+{
+  "skill": "video-audio-design",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on ElevenLabs TTS question",
+      "prompt": "How do I generate narration for my video using ElevenLabs?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "text-to-speech" },
+        { "type": "contains", "value": "voice_id" },
+        { "type": "contains", "value": "xi-api-key" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on audio ducking question",
+      "prompt": "My background music is drowning out the narration in my Remotion video. How do I fix this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ducking" },
+        { "type": "contains", "value": "interpolate" },
+        { "type": "contains", "value": "volume" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on SFX generation question",
+      "prompt": "I need click and whoosh sound effects for my video transitions. How can I create them?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ffmpeg" },
+        { "type": "contains", "value": "sine" },
+        { "type": "contains", "value": "lavfi" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can generate narration with ElevenLabs API",
+      "prompt": "Write a TypeScript function that generates narration audio from text using ElevenLabs API and saves it to a file.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "text-to-speech" },
+        { "type": "contains", "value": "ELEVEN_LABS_API_KEY" },
+        { "type": "contains", "value": "voice_settings" },
+        { "type": "contains", "value": "similarity_boost" },
+        { "type": "code_valid", "language": "typescript" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can implement audio ducking in Remotion",
+      "prompt": "Write a Remotion component that plays background music and narration, with the music volume automatically ducking when narration is playing.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "interpolate" },
+        { "type": "contains", "value": "useCurrentFrame" },
+        { "type": "contains", "value": "<Audio" },
+        { "type": "contains", "value": "Sequence" },
+        { "type": "code_valid", "language": "tsx" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can mix three audio layers in a Remotion composition",
+      "prompt": "Write a Remotion component that mixes narration, sound effects, and background music as three separate layers with proper volume levels.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "<Audio" },
+        { "type": "contains", "value": "volume" },
+        { "type": "contains", "value": "Sequence" },
+        { "type": "contains", "value": "narration" },
+        { "type": "code_valid", "language": "tsx" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can generate per-scene narration and measure duration",
+      "prompt": "Write a TypeScript function that takes an array of scenes with narration text, generates audio for each scene using ElevenLabs, and returns the duration of each audio file.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "ffprobe" },
+        { "type": "contains", "value": "duration" },
+        { "type": "contains", "value": "generateNarration" },
+        { "type": "code_valid", "language": "typescript" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Knows correct volume levels for audio layers",
+      "prompt": "What volume levels should I use for narration, SFX, and background music in my video?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "0.8" },
+        { "type": "contains", "value": "0.3" },
+        { "type": "contains", "value": "0.15" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about MP3 encoder padding",
+      "prompt": "My narration audio seems slightly delayed when I play it in Remotion. The start timing is correct but the speech starts a bit late.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "padding" },
+        { "type": "contains", "value": "silence" },
+        { "type": "contains", "value": "MP3" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about volume clipping with multiple Audio components",
+      "prompt": "I have three Audio components in Remotion all set to volume 1.0 and the audio sounds distorted. What's wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "clip" },
+        { "type": "contains", "value": "1.0" },
+        { "type": "contains", "value": "layer" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns about ElevenLabs character quotas",
+      "prompt": "I keep running out of ElevenLabs API credits when regenerating my video narration during development.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "cache" },
+        { "type": "contains", "value": "character" },
+        { "type": "contains", "value": "hash" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not recommend DAW tools for programmatic video",
+      "prompt": "Should I use Audacity or GarageBand to mix audio for my Remotion video?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "programmatic" },
+        { "type": "contains", "value": "Remotion" },
+        { "type": "not_contains", "value": "recommended" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Anti-hallucination: does not invent non-existent ElevenLabs features",
+      "prompt": "Can ElevenLabs automatically duck background music when generating narration?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Remotion" },
+        { "type": "contains", "value": "interpolate" },
+        { "type": "not_contains", "value": "built-in ducking" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "References load: skill references elevenlabs-api file",
+      "prompt": "Where can I find detailed patterns for ElevenLabs voice cloning, streaming TTS, and pronunciation dictionaries?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "elevenlabs-api" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

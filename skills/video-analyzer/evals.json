@@ -1,0 +1,164 @@
+{
+  "skill": "video-analyzer",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on video frame extraction question",
+      "prompt": "How do I extract frames from a video file at regular intervals?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ffmpeg" },
+        { "type": "contains", "value": "fps" },
+        { "type": "contains", "value": "frame" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on scene detection question",
+      "prompt": "How can I detect scene changes in a video and extract a frame at each cut?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "scene" },
+        { "type": "contains", "value": "select" },
+        { "type": "contains", "value": "0.3" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on video metadata inspection question",
+      "prompt": "How do I get the resolution, duration, and codec of a video file?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ffprobe" },
+        { "type": "contains", "value": "json" },
+        { "type": "contains", "value": "show_streams" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can write ffprobe command for JSON metadata extraction",
+      "prompt": "Write a command to get full video metadata as JSON including all streams and format info.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "ffprobe" },
+        { "type": "contains", "value": "print_format json" },
+        { "type": "contains", "value": "show_format" },
+        { "type": "contains", "value": "show_streams" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can write scene detection frame extraction command",
+      "prompt": "Write an FFmpeg command that extracts frames only at scene changes with a threshold of 0.3 and saves them as PNGs.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "ffmpeg" },
+        { "type": "contains", "value": "select" },
+        { "type": "contains", "value": "scene" },
+        { "type": "contains", "value": "0.3" },
+        { "type": "contains", "value": "vsync vfr" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can write silence detection command",
+      "prompt": "Write a command to detect silence periods in a video's audio track.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "ffmpeg" },
+        { "type": "contains", "value": "silencedetect" },
+        { "type": "contains", "value": "noise" },
+        { "type": "contains", "value": "dB" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can describe AI vision workflow for design system extraction",
+      "prompt": "How can I extract a design system (colors, typography, components) from a product demo video?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "frame" },
+        { "type": "contains", "value": "scene" },
+        { "type": "contains", "value": "color" },
+        { "type": "contains", "value": "component" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can write audio waveform extraction command",
+      "prompt": "Write a command to generate an audio waveform image from a video file.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "ffmpeg" },
+        { "type": "contains", "value": "showwavespic" },
+        { "type": "contains", "value": "png" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about -vsync vfr requirement with select filter",
+      "prompt": "I'm extracting scene change frames with ffmpeg's select filter but getting thousands of duplicate frames. What's wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "vsync" },
+        { "type": "contains", "value": "vfr" },
+        { "type": "contains", "value": "duplicate" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about disk space with frame extraction",
+      "prompt": "I want to extract every frame from a 2-hour 1080p video. Is that a good idea?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "disk" },
+        { "type": "contains", "value": "scene" },
+        { "type": "not_contains", "value": "that's fine" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: recommends ffprobe before processing",
+      "prompt": "I have a video file and want to start extracting frames immediately. Should I just run ffmpeg?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ffprobe" },
+        { "type": "contains", "value": "metadata" },
+        { "type": "contains", "value": "before" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not recommend OpenCV for basic frame extraction",
+      "prompt": "What is the simplest way to extract one frame per second from a video file using a command-line tool?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ffmpeg" },
+        { "type": "contains", "value": "fps=1" },
+        { "type": "not_contains", "value": "opencv" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Anti-hallucination: does not invent ffprobe flags",
+      "prompt": "How do I get just the video duration from ffprobe?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "show_entries" },
+        { "type": "contains", "value": "format=duration" },
+        { "type": "not_contains", "value": "--duration" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "References load: skill references ffmpeg-recipes file",
+      "prompt": "Where can I find advanced FFmpeg filter graphs for motion analysis and video comparison?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ffmpeg-recipes" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

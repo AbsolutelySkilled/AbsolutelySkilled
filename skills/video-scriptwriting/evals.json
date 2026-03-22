@@ -1,0 +1,157 @@
+{
+  "skill": "video-scriptwriting",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on video script writing request",
+      "prompt": "I need to write a script for a 60-second product demo video for my SaaS tool.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "scene" },
+        { "type": "contains", "value": "narration" },
+        { "type": "contains", "value": "duration" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on storyboard creation request",
+      "prompt": "Help me create a storyboard for an explainer video about our API platform.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "scene" },
+        { "type": "contains", "value": "visual" },
+        { "type": "contains", "value": "YAML" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on video pacing question",
+      "prompt": "How should I pace a 30-second social media video clip?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "3" },
+        { "type": "contains", "value": "hook" },
+        { "type": "contains", "value": "scene" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can generate a complete YAML video script with meta and scenes",
+      "prompt": "Generate a YAML script for a 45-second product announcement video for a new AI feature at 30fps.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "meta:" },
+        { "type": "contains", "value": "scenes:" },
+        { "type": "contains", "value": "duration" },
+        { "type": "contains", "value": "frames" },
+        { "type": "contains", "value": "narration" },
+        { "type": "contains", "value": "visual" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can calculate frame counts correctly from duration and FPS",
+      "prompt": "My video is 90 seconds at 24fps. How many total frames is that, and how many frames for a 6-second scene?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "2160" },
+        { "type": "contains", "value": "144" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can run an interview workflow to gather video requirements",
+      "prompt": "I want to create a video for my product but I'm not sure where to start. Can you interview me?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "product" },
+        { "type": "contains", "value": "audience" },
+        { "type": "contains", "value": "tone" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can write narration that follows word-count and style rules",
+      "prompt": "Write narration for a 5-second scene showing a dashboard loading with real-time data.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "narration" },
+        { "type": "not_contains", "value": "As you can see" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can recommend appropriate transitions between scenes",
+      "prompt": "What transition should I use between a problem statement scene and a solution reveal scene?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "hard-cut" },
+        { "type": "contains", "value": "transition" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about narration timing overflow",
+      "prompt": "I wrote 30 words of narration for a 4-second scene. Is that okay?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "words per second" },
+        { "type": "contains", "value": "too" },
+        { "type": "not_contains", "value": "that works" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about vertical vs horizontal resolution",
+      "prompt": "I'm making a TikTok video. Should I use 1920x1080 resolution?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "1080x1920" },
+        { "type": "contains", "value": "vertical" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: warns about music ducking on scenes with no narration",
+      "prompt": "Should I set music duck to true on every scene in my video script?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "narration" },
+        { "type": "contains", "value": "false" },
+        { "type": "not_contains", "value": "yes, always duck" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not recommend traditional screenplay format",
+      "prompt": "Should I write my programmatic video script in standard screenplay format with INT/EXT scene headings?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "YAML" },
+        { "type": "not_contains", "value": "INT." },
+        { "type": "not_contains", "value": "EXT." }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Anti-hallucination: does not skip the interview step",
+      "prompt": "Just write me a video script right now, I'll tell you it's for some kind of tech product.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "interview" },
+        { "type": "contains", "value": "question" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "References load: skill references interview-questions file",
+      "prompt": "I need the complete set of interview questions to ask a client before writing their video script. Where can I find them?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "interview-questions" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

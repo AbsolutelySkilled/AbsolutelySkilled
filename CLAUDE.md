@@ -24,7 +24,7 @@ CONTRIBUTING.md             # Full contribution guide
 ## SKILL.md Requirements
 
 - Frontmatter must include: `name`, `version`, `description`, `category`, `tags`, `platforms`, `license`, `maintainers`
-- Valid categories: engineering, operations, marketing, ai-ml, design, product, devtools, sales, data, infra, monitoring, cloud, writing, workflow, analytics, game-development, developer-tools, communication
+- Valid categories: engineering, operations, marketing, ai-ml, design, product, devtools, sales, data, infra, monitoring, cloud, writing, workflow, analytics, game-development, developer-tools, communication, video
 - `license` should be `MIT`
 - Description must name the tool/domain and list 3-5 concrete tasks
 - Body follows standard section order (see existing skills for examples)

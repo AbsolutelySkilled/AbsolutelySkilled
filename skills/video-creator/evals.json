@@ -1,0 +1,152 @@
+{
+  "skill": "video-creator",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on 'make me a product demo video'",
+      "prompt": "Make me a product demo video for my SaaS dashboard tool.",
+      "type": "workflow",
+      "assertions": [
+        { "type": "contains", "value": "interview" },
+        { "type": "contains", "value": "question" },
+        { "type": "contains", "value": "product" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on 'create a 60 second explainer'",
+      "prompt": "Create a 60 second explainer video about how our API works.",
+      "type": "workflow",
+      "assertions": [
+        { "type": "contains", "value": "script" },
+        { "type": "contains", "value": "scene" },
+        { "type": "contains", "value": "60" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on 'I need a video for my SaaS'",
+      "prompt": "I need a video for my SaaS product launch next week.",
+      "type": "workflow",
+      "assertions": [
+        { "type": "contains", "value": "audience" },
+        { "type": "contains", "value": "goal" },
+        { "type": "contains", "value": "interview" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: asks interview questions one at a time",
+      "prompt": "Make me a video about my new mobile app. It's a fitness tracker.",
+      "type": "workflow",
+      "assertions": [
+        { "type": "contains", "value": "?" },
+        { "type": "not_contains", "value": "Here are all my questions" },
+        { "type": "not_contains", "value": "Question 1:" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: generates YAML script with frame counts",
+      "prompt": "I've answered all your questions. Now generate the video script for a 45-second product demo with 6 scenes.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "video-script.yaml" },
+        { "type": "contains", "value": "fps: 30" },
+        { "type": "contains", "value": "frames" },
+        { "type": "contains", "value": "duration_seconds" },
+        { "type": "contains", "value": "scenes" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: visual verification before audio",
+      "prompt": "The script is approved. What's the next step?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "visual" },
+        { "type": "contains", "value": "Remotion" },
+        { "type": "contains", "value": "preview" },
+        { "type": "not_contains", "value": "narration" },
+        { "type": "not_contains", "value": "ElevenLabs" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: renders at 4K by default",
+      "prompt": "Everything looks great, let's do the final render.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "3840" },
+        { "type": "contains", "value": "2160" },
+        { "type": "contains", "value": "remotion render" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: does not skip visual verification",
+      "prompt": "Script is done. Let's skip straight to adding narration and rendering.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "visual" },
+        { "type": "contains", "value": "approv" },
+        { "type": "not_contains", "value": "sure, let's skip" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: does not generate narration before visual approval",
+      "prompt": "Can we record the narration first and then build the visuals around it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "visual" },
+        { "type": "contains", "value": "first" },
+        { "type": "contains", "value": "cost" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: always uses YAML script as source of truth",
+      "prompt": "Can we just start coding the Remotion scenes directly without a script file?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "video-script.yaml" },
+        { "type": "contains", "value": "source of truth" },
+        { "type": "not_contains", "value": "sure" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not skip workflow steps",
+      "prompt": "Just make me a video quickly, skip all the questions and planning.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "interview" },
+        { "type": "contains", "value": "context" },
+        { "type": "not_contains", "value": "okay, skipping" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: does not auto-approve steps",
+      "prompt": "Here's my script. Go ahead and render the final video without showing me previews.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "approv" },
+        { "type": "contains", "value": "preview" },
+        { "type": "not_contains", "value": "rendering now" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "References load: points to workflow-checklist reference",
+      "prompt": "Where can I find a detailed checklist for the full video creation workflow?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "workflow-checklist" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

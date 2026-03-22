@@ -23,7 +23,7 @@ const topSkills = getTopSkillsByCounts(
   5
 );
 
-const flagshipSlugs = ['super-brainstorm', 'super-human', 'clean-code', 'frontend-developer', 'system-design'];
+const flagshipSlugs = ['super-brainstorm', 'super-human', 'video-creator', 'clean-code', 'frontend-developer', 'system-design'];
 const flagshipSkills = flagshipSlugs
   .map((slug) => skills.find((s) => s.slug === slug))
   .filter((s): s is Skill => !!s);
@@ -107,9 +107,9 @@ const recentSkills = skills.slice(-10).reverse();
         <h2 class="text-2xl font-bold font-mono">Flagship Skills</h2>
         <span class="text-xs font-mono text-text-muted bg-elevated px-2.5 py-1 rounded-full border border-border">curated</span>
       </div>
-      {/* Top row: 2 featured cards */}
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
-        {flagshipSkills.slice(0, 2).map((skill) => (
+      {/* Top row: 3 featured cards */}
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
+        {flagshipSkills.slice(0, 3).map((skill) => (
           <FlagshipCard
             slug={skill.slug}
             name={skill.name}
@@ -122,7 +122,7 @@ const recentSkills = skills.slice(-10).reverse();
       </div>
       {/* Bottom row: 3 cards */}
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {flagshipSkills.slice(2).map((skill) => (
+        {flagshipSkills.slice(3).map((skill) => (
           <FlagshipCard
             slug={skill.slug}
             name={skill.name}

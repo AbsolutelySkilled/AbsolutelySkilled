@@ -114,6 +114,12 @@ export const CATEGORIES: Record<string, CategoryMeta> = {
     color: '#64748b',
     icon: '...',
   },
+  video: {
+    slug: 'video',
+    label: 'Video Creation',
+    color: '#f43f5e',
+    icon: '...',
+  },
 };
 
 export function getCategoryMeta(category: string): CategoryMeta {

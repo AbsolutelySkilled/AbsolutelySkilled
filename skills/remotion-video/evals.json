@@ -1,0 +1,157 @@
+{
+  "skill": "remotion-video",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on Remotion project setup question",
+      "prompt": "How do I create a new Remotion project to make programmatic videos?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "create-video" },
+        { "type": "contains", "value": "Composition" },
+        { "type": "contains", "value": "remotion" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on frame-based animation question",
+      "prompt": "How do I animate text fading in using Remotion's useCurrentFrame?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "useCurrentFrame" },
+        { "type": "contains", "value": "interpolate" },
+        { "type": "contains", "value": "opacity" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on video rendering question",
+      "prompt": "How do I render my Remotion composition to an MP4 file?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "remotion render" },
+        { "type": "contains", "value": ".mp4" },
+        { "type": "contains", "value": "src/index" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can write a basic Remotion composition with fade-in animation",
+      "prompt": "Write a Remotion component that fades in a title over 1 second at 30fps with a slide-up effect.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "useCurrentFrame" },
+        { "type": "contains", "value": "interpolate" },
+        { "type": "contains", "value": "extrapolateRight" },
+        { "type": "contains", "value": "clamp" },
+        { "type": "contains", "value": "opacity" },
+        { "type": "code_valid", "language": "tsx" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can write a multi-scene composition using Series",
+      "prompt": "Write a Remotion video with three scenes that play one after another, each lasting 2 seconds at 30fps.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Series" },
+        { "type": "contains", "value": "Series.Sequence" },
+        { "type": "contains", "value": "durationInFrames" },
+        { "type": "contains", "value": "60" },
+        { "type": "code_valid", "language": "tsx" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can write a spring animation for bouncy entrance",
+      "prompt": "Write a Remotion component that uses spring() to animate a card scaling in with a bouncy effect.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "spring" },
+        { "type": "contains", "value": "fps" },
+        { "type": "contains", "value": "damping" },
+        { "type": "contains", "value": "scale" },
+        { "type": "code_valid", "language": "tsx" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can set up audio with volume fade in/out",
+      "prompt": "Write a Remotion component that plays background music with a volume fade-in over the first second and fade-out over the last second.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "Audio" },
+        { "type": "contains", "value": "volume" },
+        { "type": "contains", "value": "interpolate" },
+        { "type": "contains", "value": "staticFile" },
+        { "type": "code_valid", "language": "tsx" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: warns about missing extrapolateRight clamp",
+      "prompt": "I wrote interpolate(frame, [0, 30], [0, 1]) but my opacity goes above 1 after frame 30. Why?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "extrapolateRight" },
+        { "type": "contains", "value": "clamp" },
+        { "type": "contains", "value": "extend" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about using setTimeout in Remotion",
+      "prompt": "Can I use setTimeout to delay an animation in my Remotion video?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "useCurrentFrame" },
+        { "type": "contains", "value": "Sequence" },
+        { "type": "not_contains", "value": "you can use setTimeout" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: warns about delayRender timeout for async data",
+      "prompt": "My Remotion video loads data from an API but sometimes renders blank. What am I doing wrong?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "delayRender" },
+        { "type": "contains", "value": "continueRender" },
+        { "type": "contains", "value": "timeout" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not recommend using Math.random without seed",
+      "prompt": "How do I add random particle positions in my Remotion video?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "deterministic" },
+        { "type": "contains", "value": "seed" },
+        { "type": "not_contains", "value": "Math.random() is fine" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: recommends OffthreadVideo over Video for rendering",
+      "prompt": "Should I use the Video or OffthreadVideo component in Remotion for embedding video clips?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "OffthreadVideo" },
+        { "type": "contains", "value": "performance" },
+        { "type": "not_contains", "value": "Video is better" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "References load: skill references animation-patterns file",
+      "prompt": "Where can I find detailed patterns for staggered cascades and parallax animations in Remotion?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "animation-patterns" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

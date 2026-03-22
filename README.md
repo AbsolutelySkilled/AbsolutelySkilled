@@ -149,6 +149,36 @@ npx skills add AbsolutelySkilled/AbsolutelySkilled --skill skill-audit
 
 Output as a human-readable table report (default) or JSON for CI/tooling integration.
 
+### Video Creator - End-to-End Programmatic Video Production
+
+A 7-step orchestrator that takes you from "make me a video about X" to a finished 4K video - using Remotion, ElevenLabs TTS, royalty-free music, and SFX. No video editing knowledge required.
+
+**Install:**
+
+```bash
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill video-creator
+```
+
+**Usage:**
+
+```bash
+/video-creator "Create a 60-second product demo for my SaaS dashboard"
+/video-creator "Make an explainer video about how our API works"
+/video-creator "Build a social clip announcing our new feature"
+```
+
+**How it works:**
+
+1. **Deep interview** - up to 30 questions about your product, audience, tone, assets, and visual preferences
+2. **Generate script** - structured YAML with scenes, timing, narration text, and audio cues
+3. **Visual verification** - build minimal Remotion compositions, preview in browser, iterate on design
+4. **Build full project** - complete Remotion compositions with all animations matching the approved script
+5. **Add background audio + SFX** - source royalty-free music, place sound effects at trigger points
+6. **Add narration** - ElevenLabs TTS with voice selection (deferred to save costs until visuals are approved)
+7. **4K render** - final preview, user approval, render at 3840x2160
+
+Companion skills: [remotion-video](skills/remotion-video/), [video-scriptwriting](skills/video-scriptwriting/), [video-audio-design](skills/video-audio-design/), [video-analyzer](skills/video-analyzer/)
+
 ### Codedocs - AI-Agent-Friendly Codebase Documentation
 
 Generates a structured `docs/` tree from your codebase that AI agents can navigate instantly - module docs, pattern docs, an overview map, and a file-to-doc index with 70%+ coverage enforcement.
@@ -551,9 +581,19 @@ skills/
 | [presentation-design](skills/presentation-design/) | Slide structure, storytelling frameworks, data visualization |
 | [spreadsheet-modeling](skills/spreadsheet-modeling/) | Formulas, pivot tables, dashboards, macros, financial models |
 
+### Video Creation
+
+| Skill | Description |
+|---|---|
+| [video-creator](skills/video-creator/) | End-to-end video orchestrator - 7-step workflow from interview to 4K render |
+| [remotion-video](skills/remotion-video/) | Core Remotion framework - compositions, animations, rendering, project setup |
+| [video-scriptwriting](skills/video-scriptwriting/) | Interactive script writing - interview framework, YAML scene format, pacing |
+| [video-audio-design](skills/video-audio-design/) | Audio design - ElevenLabs TTS, background music, SFX generation, mixing |
+| [video-analyzer](skills/video-analyzer/) | FFmpeg + AI vision analysis - frame extraction, scene detection, design system extraction |
+
 ### Full Registry
 
-**160+ skills** across 25 categories.
+**165+ skills** across 26 categories.
 
 ## Creating Skills
 
