@@ -77,11 +77,16 @@
     @apply text-text-secondary leading-relaxed;
   }
 
+  .prose-dark {
+    counter-reset: h2-counter;
+  }
+
   .prose-dark h1,
   .prose-dark h2,
   .prose-dark h3,
   .prose-dark h4 {
     @apply text-text-primary font-semibold mt-8 mb-4;
+    position: relative;
   }
 
   .prose-dark h1 {
@@ -90,10 +95,56 @@
 
   .prose-dark h2 {
     @apply text-2xl;
+    counter-increment: h2-counter;
+    counter-reset: h3-counter;
   }
 
   .prose-dark h3 {
     @apply text-xl;
+    counter-increment: h3-counter;
+  }
+
+  .prose-dark h2 > a::before {
+    content: counter(h2-counter) ". ";
+    color: var(--color-text-muted);
+  }
+
+  .prose-dark h3 > a::before {
+    content: counter(h2-counter) "." counter(h3-counter) " ";
+    color: var(--color-text-muted);
+  }
+
+  .prose-dark h1 > a,
+  .prose-dark h2 > a,
+  .prose-dark h3 > a,
+  .prose-dark h4 > a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .prose-dark h1 > a:hover,
+  .prose-dark h2 > a:hover,
+  .prose-dark h3 > a:hover,
+  .prose-dark h4 > a:hover {
+    text-decoration: none;
+  }
+
+  .prose-dark h1 > a::after,
+  .prose-dark h2 > a::after,
+  .prose-dark h3 > a::after,
+  .prose-dark h4 > a::after {
+    content: " #";
+    color: var(--color-text-muted);
+    opacity: 0;
+    transition: opacity 0.15s;
+    font-weight: 400;
+  }
+
+  .prose-dark h1:hover > a::after,
+  .prose-dark h2:hover > a::after,
+  .prose-dark h3:hover > a::after,
+  .prose-dark h4:hover > a::after {
+    opacity: 1;
   }
 
   .prose-dark p {

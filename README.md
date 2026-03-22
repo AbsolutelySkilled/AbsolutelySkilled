@@ -8,7 +8,7 @@
   A registry of production-ready skills for AI coding agents.
   <br /><br />
   <a href="https://skills.sh/registry/absolutelyskilled/absolutelyskilled">
-    <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/AbsolutelySkilled/AbsolutelySkilled/main/badges/installs.json" alt="Total Installs" />
+    <img src="https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/AbsolutelySkilled/AbsolutelySkilled/main/data/installs.json&query=%24._total&label=total%20installs&color=brightgreen" alt="Total Installs" />
   </a>
 </p>
 

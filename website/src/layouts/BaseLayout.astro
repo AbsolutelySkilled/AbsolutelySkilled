@@ -48,6 +48,46 @@ const { title, description, canonical, jsonLd } = Astro.props;
         });
         pre.appendChild(btn);
       });
+
+      // Fetch fresh install counts from GitHub and update DOM
+      (async () => {
+        try {
+          const res = await fetch(
+            'https://raw.githubusercontent.com/AbsolutelySkilled/AbsolutelySkilled/main/data/installs.json',
+            { cache: 'no-cache' }
+          );
+          if (!res.ok) return;
+          const data = await res.json();
+
+          // Update per-skill install counts
+          document.querySelectorAll<HTMLElement>('[data-installs-slug]').forEach((el) => {
+            const slug = el.dataset.installsSlug!;
+            const count = data[slug];
+            if (count && count > 0) {
+              el.textContent = count.toLocaleString();
+              el.closest('[data-installs-wrapper]')?.classList.remove('hidden');
+            }
+          });
+
+          // Update total installs
+          document.querySelectorAll<HTMLElement>('[data-installs-total]').forEach((el) => {
+            if (data._total) el.textContent = data._total.toLocaleString();
+          });
+
+          // Update data-installs attribute for sorting on /skills page
+          document.querySelectorAll<HTMLElement>('[data-installs]').forEach((el) => {
+            const name = el.dataset.name;
+            if (name) {
+              const slug = Object.keys(data).find((k) => k === name);
+              if (slug && data[slug]) {
+                el.dataset.installs = String(data[slug]);
+              }
+            }
+          });
+        } catch {
+          // Silently fail - build-time data is the fallback
+        }
+      })();
     </script>
   </body>
 </html>

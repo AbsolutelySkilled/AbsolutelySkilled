@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://absolutelyskilled.dev/sitemap-index.xml
+Sitemap: https://absolutely-skilled.vercel.app/sitemap-index.xml

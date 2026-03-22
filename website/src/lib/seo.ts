@@ -1,6 +1,6 @@
 import type { Skill } from './skills';
 
-const SITE = 'https://absolutelyskilled.dev';
+const SITE = 'https://absolutely-skilled.vercel.app';
 const SITE_NAME = 'AbsolutelySkilled';
 const DEFAULT_DESCRIPTION = 'A registry of 161+ production-ready skills for AI coding agents. Browse, search, and install skills for Claude Code, Gemini CLI, OpenAI Codex, and more.';
 

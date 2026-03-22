@@ -21,9 +21,9 @@ const categoryMeta = getCategoryMeta(category);
     <h3 class="font-mono font-semibold text-text-primary group-hover:text-accent-blue transition-colors">
       {name}
     </h3>
-    {installs > 0 && (
-      <span class="text-xs text-text-muted font-mono shrink-0 ml-2">{installs.toLocaleString()} installs</span>
-    )}
+    <span data-installs-wrapper class:list={[installs <= 0 && 'hidden']}>
+      <span class="text-xs text-text-muted font-mono shrink-0 ml-2"><span data-installs-slug={slug}>{installs > 0 ? installs.toLocaleString() : ''}</span> installs</span>
+    </span>
   </div>
   <p class="text-sm text-text-secondary mb-3 line-clamp-2">{description}</p>
   <div class="flex items-center gap-2 flex-wrap">

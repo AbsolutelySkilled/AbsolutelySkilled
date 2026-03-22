@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SkillCard from '../components/SkillCard.astro';
+import FlagshipCard from '../components/FlagshipCard.astro';
 import CategoryGrid from '../components/CategoryGrid.astro';
 import StatsCounter from '../components/StatsCounter.astro';
 import RecentSkills from '../components/RecentSkills.astro';
@@ -88,15 +89,13 @@ const recentSkills = skills.slice(-10).reverse();
           <span class="text-2xl font-bold font-mono text-text-primary">{categories.length}</span>
           <span class="text-text-muted">categories</span>
         </div>
-        {totalInstalls > 0 && (
-          <>
-            <div class="w-px h-6 bg-border" />
-            <div class="flex items-center gap-2">
-              <span class="text-2xl font-bold font-mono text-text-primary">{totalInstalls.toLocaleString()}</span>
-              <span class="text-text-muted">installs</span>
-            </div>
-          </>
-        )}
+        <div data-installs-wrapper class:list={[totalInstalls <= 0 && 'hidden', 'contents']}>
+          <div class="w-px h-6 bg-border" />
+          <div class="flex items-center gap-2">
+            <span class="text-2xl font-bold font-mono text-text-primary" data-installs-total>{totalInstalls > 0 ? totalInstalls.toLocaleString() : ''}</span>
+            <span class="text-text-muted">installs</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -104,10 +103,27 @@ const recentSkills = skills.slice(-10).reverse();
   <!-- Flagship Skills -->
   <section class="py-16" id="skills">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold font-mono mb-8">Flagship Skills</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {flagshipSkills.map((skill) => (
-          <SkillCard
+      <div class="flex items-center gap-3 mb-10">
+        <h2 class="text-2xl font-bold font-mono">Flagship Skills</h2>
+        <span class="text-xs font-mono text-text-muted bg-elevated px-2.5 py-1 rounded-full border border-border">curated</span>
+      </div>
+      {/* Top row: 2 featured cards */}
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
+        {flagshipSkills.slice(0, 2).map((skill) => (
+          <FlagshipCard
+            slug={skill.slug}
+            name={skill.name}
+            description={skill.description}
+            category={skill.category}
+            tags={skill.tags}
+            featured
+          />
+        ))}
+      </div>
+      {/* Bottom row: 3 cards */}
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {flagshipSkills.slice(2).map((skill) => (
+          <FlagshipCard
             slug={skill.slug}
             name={skill.name}
             description={skill.description}

@@ -1,0 +1,166 @@
+---
+import { getInstallCount } from '../lib/installs';
+import { getCategoryMeta } from '../lib/categories';
+
+interface Props {
+  slug: string;
+  name: string;
+  description: string;
+  category: string;
+  tags?: string[];
+  featured?: boolean;
+}
+
+const { slug, name, description, category, tags = [], featured = false } = Astro.props;
+const installs = getInstallCount(slug);
+const categoryMeta = getCategoryMeta(category);
+const color = categoryMeta.color;
+---
+
+<a href={`/skill/${slug}`} class="flagship-card group" data-pagefind-ignore
+   style={`--accent: ${color}; --accent-dim: ${color}20; --accent-mid: ${color}40;`}>
+  {/* Gradient border effect */}
+  <div class="flagship-card-border" />
+  <div class="flagship-card-inner">
+    {/* Top glow */}
+    <div class="flagship-glow" />
+
+    {/* Header */}
+    <div class="flex items-start justify-between mb-4">
+      <div class="flex items-center gap-2.5">
+        <span class="flagship-icon" style={`background: ${color}18; color: ${color};`}>
+          {categoryMeta.icon}
+        </span>
+        <span class="text-xs font-medium uppercase tracking-wider" style={`color: ${color};`}>
+          {categoryMeta.label}
+        </span>
+      </div>
+      <span data-installs-wrapper class:list={[installs <= 0 && 'hidden']}>
+        <span class="text-xs text-text-muted font-mono tabular-nums">
+          <span data-installs-slug={slug}>{installs > 0 ? installs.toLocaleString() : ''}</span> installs
+        </span>
+      </span>
+    </div>
+
+    {/* Name */}
+    <h3 class="font-mono font-bold text-lg text-text-primary group-hover:text-white transition-colors mb-2">
+      {name}
+    </h3>
+
+    {/* Description */}
+    <p class="text-sm text-text-secondary leading-relaxed mb-5 line-clamp-3">
+      {description}
+    </p>
+
+    {/* Footer */}
+    <div class="mt-auto flex items-center justify-between">
+      <div class="flex items-center gap-2 flex-wrap">
+        {tags.slice(0, 3).map((tag) => (
+          <span class="flagship-tag">#{tag}</span>
+        ))}
+      </div>
+      <span class="text-xs text-text-muted group-hover:text-text-secondary transition-colors flex items-center gap-1">
+        View
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="group-hover:translate-x-0.5 transition-transform">
+          <path d="M2.5 6H9.5M9.5 6L6.5 3M9.5 6L6.5 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+</a>
+
+<style>
+  .flagship-card {
+    position: relative;
+    display: flex;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .flagship-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 20px 40px -12px rgba(0, 0, 0, 0.4),
+      0 0 32px -8px var(--accent-dim);
+  }
+
+  .flagship-card-border {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(
+      160deg,
+      var(--accent-mid) 0%,
+      var(--color-border) 40%,
+      var(--color-border) 60%,
+      var(--accent-dim) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    transition: background 0.3s ease;
+  }
+
+  .flagship-card:hover .flagship-card-border {
+    background: linear-gradient(
+      160deg,
+      var(--accent) 0%,
+      var(--accent-mid) 40%,
+      var(--color-border-hover) 60%,
+      var(--accent-mid) 100%
+    );
+  }
+
+  .flagship-card-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px;
+    border-radius: 16px;
+    background: var(--color-card);
+    overflow: hidden;
+  }
+
+  .flagship-glow {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 100px;
+    background: radial-gradient(ellipse, var(--accent-dim) 0%, transparent 70%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .flagship-card:hover .flagship-glow {
+    opacity: 1;
+  }
+
+  .flagship-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+  }
+
+  .flagship-tag {
+    font-size: 11px;
+    font-family: var(--font-mono);
+    color: var(--color-text-muted);
+    background: var(--color-elevated);
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+</style>

@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { title, description, canonical, jsonLd, image = '/og-image.png' } = Astro.props;
-const siteUrl = 'https://absolutelyskilled.dev';
+const siteUrl = 'https://absolutely-skilled.vercel.app';
 const resolvedImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
 ---
 

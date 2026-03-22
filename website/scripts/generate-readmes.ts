@@ -54,7 +54,7 @@ function generateReadme(slug: string): string {
     lines.push(`## Recommended Skills\n`);
     lines.push(
       recommended
-        .map((s) => `- [${s}](https://absolutelyskilled.dev/skill/${s})`)
+        .map((s) => `- [${s}](https://absolutely-skilled.vercel.app/skill/${s})`)
         .join('\n') + '\n'
     );
   }
@@ -69,7 +69,7 @@ function generateReadme(slug: string): string {
   }
 
   lines.push(`---\n`);
-  lines.push(`*Generated from [AbsolutelySkilled](https://absolutelyskilled.dev/skill/${slug})*`);
+  lines.push(`*Generated from [AbsolutelySkilled](https://absolutely-skilled.vercel.app/skill/${slug})*`);
 
   return lines.join('\n');
 }

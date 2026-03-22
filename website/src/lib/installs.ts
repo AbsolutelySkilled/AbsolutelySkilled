@@ -1,4 +1,4 @@
-import installsData from '../data/installs.json';
+import installsData from '../../../data/installs.json';
 
 const data = installsData as Record<string, number | string>;
 
@@ -20,3 +20,7 @@ export function getTopSkillsByCounts(slugs: string[], limit = 5): { slug: string
     .sort((a, b) => b.count - a.count)
     .slice(0, limit);
 }
+
+/** URL for runtime fetch of fresh install counts from GitHub */
+export const INSTALLS_RAW_URL =
+  'https://raw.githubusercontent.com/AbsolutelySkilled/AbsolutelySkilled/main/data/installs.json';

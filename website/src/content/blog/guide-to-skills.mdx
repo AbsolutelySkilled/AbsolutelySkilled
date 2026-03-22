@@ -1,0 +1,260 @@
+---
+title: "The Practical Guide to AI Agent Skills"
+description: "Everything you need to know about skills - what they are, battle-tested tips for writing great ones, and how to distribute them across your team."
+date: "2026-03-22"
+author: "AbsolutelySkilled"
+tags: ["guide", "skills", "best-practices", "claude-code"]
+---
+
+# The Practical Guide to AI Agent Skills
+
+Skills are quickly becoming one of the most popular ways to extend AI coding agents. They are flexible, easy to create, and simple to share. But that same flexibility can make it hard to know where to start - what separates a good skill from a great one?
+
+This guide distills practical lessons from hundreds of skills in active use into something you can apply right away.
+
+---
+
+## What Exactly Is a Skill?
+
+A common misconception is that skills are "just markdown files." That undersells them significantly.
+
+**A skill is a folder**, not a file. It can contain markdown instructions, scripts, reference code, data files, templates, configuration - anything an agent might need to do its job well. The agent discovers these files and reads them when relevant.
+
+<div style="background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(168,85,247,0.08)); border: 1px solid rgba(59,130,246,0.2); border-radius: 12px; padding: 24px; margin: 32px 0;">
+  <p style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: #3b82f6; margin-bottom: 12px; font-weight: 600;">Anatomy of a Skill</p>
+
+```
+my-skill/
+  SKILL.md           # Core instructions (the "brain")
+  evals.json         # Test suite to verify it works
+  references/        # Deep-dive docs loaded on demand
+    api.md
+    gotchas.md
+  scripts/           # Helper scripts the agent can run
+    fetch-data.sh
+    validate.py
+  assets/            # Templates, config files, examples
+    template.md
+    config.json
+```
+
+</div>
+
+Think of `SKILL.md` as the entry point - it tells the agent what the skill does and when to use it. But the real power comes from the supporting files. Reference docs give the agent deeper context. Scripts let it take action. Templates give it a head start on output.
+
+The agent reads `SKILL.md` first, then pulls in other files as needed. This **progressive disclosure** pattern keeps initial context small while making deep knowledge available on demand.
+
+---
+
+## Tips for Writing Skills That Actually Work
+
+Here is how to write skills that perform well in practice.
+
+### Focus on What the Agent Does Not Know
+
+The agent already knows a lot about coding and your codebase. If your skill mostly restates common knowledge, it is wasting context tokens.
+
+**Focus on the delta** - information that pushes the agent outside its default patterns. What are the non-obvious conventions? Where does the "standard" approach break down in your specific setup?
+
+A great example: a frontend design skill built by iterating on common complaints about AI-generated UIs. It specifically targets the patterns agents default to (like overusing certain fonts or color schemes) and redirects toward better design choices.
+
+### Build a Gotchas Section
+
+The highest-value content in any skill is the **Gotchas** section. These should be built up from actual failure points you observe when the agent uses your skill.
+
+```markdown
+## Gotchas
+
+- **Never** use `db.query()` directly in a handler - always go through
+  the connection pool via `getPool().query()`
+- The `user_id` column in `events` is NOT the same as `users.id` -
+  join through `user_mappings` instead
+- Rate limit on the billing API is 10 req/s per tenant, not per user.
+  Batch calls using `billingClient.batchGet()`
+```
+
+Start with the gotchas you know about. Then keep adding to this section as new failure modes appear. A mature skill's gotchas section is its most valuable asset.
+
+### Use Progressive Disclosure
+
+Do not dump everything into one massive `SKILL.md`. Instead, tell the agent what files are available and let it read them when it needs them.
+
+```markdown
+## References
+
+For detailed API signatures and usage examples, see `references/api.md`.
+For migration patterns between v2 and v3, see `references/migration.md`.
+For a list of all error codes and their meanings, see `references/errors.md`.
+```
+
+This keeps the initial context small (cheaper, faster) while making deep knowledge available on demand. The agent is good at deciding when it needs more context.
+
+### Give Flexibility, Not Rails
+
+Because skills are reusable across many situations, being too prescriptive backfires. Give the agent the *information* it needs, but let it decide *how* to apply it.
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;">
+  <div style="background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.2); border-radius: 8px; padding: 16px;">
+    <p style="color: #ef4444; font-weight: 600; margin-bottom: 8px;">Too rigid</p>
+
+```markdown
+Always create exactly 3 test files.
+Name them test_unit.py, test_integration.py,
+and test_e2e.py. Each must have at least
+5 test functions.
+```
+
+  </div>
+  <div style="background: rgba(34,197,94,0.06); border: 1px solid rgba(34,197,94,0.2); border-radius: 8px; padding: 16px;">
+    <p style="color: #22c55e; font-weight: 600; margin-bottom: 8px;">Flexible</p>
+
+```markdown
+Tests should cover unit, integration, and
+e2e scenarios as appropriate for the change.
+Follow the existing test structure in the
+repo. Prefer fewer, focused tests over
+broad coverage.
+```
+
+  </div>
+</div>
+
+### Think Through the Setup
+
+Some skills need user-specific configuration. A standup skill needs to know which Slack channel to post to. A deploy skill needs to know your service names.
+
+**Good pattern:** Store setup info in a `config.json` in the skill directory. If the config does not exist, the agent asks the user for it on first run.
+
+```json
+{
+  "slack_channel": "#engineering-standup",
+  "team_name": "Platform",
+  "ticket_tracker": "linear",
+  "project_id": "PLAT"
+}
+```
+
+For structured input, you can instruct the agent to use the `AskUserQuestion` tool to present multiple-choice options to the user.
+
+### Write the Description for the Agent
+
+When an AI agent starts a session, it scans every available skill's description to decide which ones are relevant. The description field is not a summary for humans - it is a **trigger condition** for the model.
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;">
+  <div style="background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.2); border-radius: 8px; padding: 16px;">
+    <p style="color: #ef4444; font-weight: 600; margin-bottom: 8px;">Vague description</p>
+
+```yaml
+description: "Helps with deployment"
+```
+
+  </div>
+  <div style="background: rgba(34,197,94,0.06); border: 1px solid rgba(34,197,94,0.2); border-radius: 8px; padding: 16px;">
+    <p style="color: #22c55e; font-weight: 600; margin-bottom: 8px;">Trigger-focused description</p>
+
+```yaml
+description: >
+  Use when deploying services to production,
+  running canary releases, checking deploy
+  status, or rolling back failed deploys.
+  Triggers on deploy, release, rollout,
+  rollback, canary, and traffic shifting.
+```
+
+  </div>
+</div>
+
+### Store Scripts and Libraries
+
+One of the most powerful things you can give an agent is code it can compose with. Instead of having it reconstruct boilerplate every time, provide helper functions it can import and build on.
+
+```python
+# scripts/data_helpers.py
+
+def fetch_events(event_type: str, start: str, end: str) -> pd.DataFrame:
+    """Fetch events from the warehouse for the given date range."""
+    query = f"""
+        SELECT * FROM events
+        WHERE event_type = '{event_type}'
+        AND timestamp BETWEEN '{start}' AND '{end}'
+    """
+    return run_warehouse_query(query)
+
+def compare_cohorts(cohort_a: pd.DataFrame, cohort_b: pd.DataFrame,
+                    metric: str) -> dict:
+    """Compare a metric between two cohorts with statistical significance."""
+    # ... implementation
+```
+
+With these helpers in place, the agent can write quick analysis scripts on the fly - composing your functions rather than reinventing data fetching from scratch every time.
+
+### Use Memory and Logging
+
+Some skills benefit from remembering what happened in previous runs. You can store data in anything from an append-only log file to a SQLite database.
+
+A standup skill might keep a `standups.log` with every post it has written. Next time you run it, the agent reads its own history and can tell what changed since yesterday.
+
+**Important:** Data stored in the skill directory may be deleted on upgrades. Use a stable folder path for persistent data.
+
+### Use On-Demand Hooks
+
+Skills can register hooks that are only active when the skill is invoked, lasting for the duration of the session. This is perfect for opinionated guardrails you do not want running all the time.
+
+**Examples:**
+
+- A `/careful` skill that blocks `rm -rf`, `DROP TABLE`, force-push, and `kubectl delete` via a PreToolUse matcher on Bash - only activated when touching production
+- A `/freeze` skill that blocks edits outside a specific directory - useful when debugging to prevent accidentally "fixing" unrelated code
+
+---
+
+## Distributing Skills
+
+Once you have built something useful, sharing it multiplies the value.
+
+### Two Distribution Models
+
+**Check into your repo** - Put skills under `.claude/skills/` in your repository. Simple, versioned with your code, available to everyone on the team.
+
+**Use a plugin marketplace** - Package skills as plugins that users can browse and install. Better for larger organizations where not everyone needs every skill.
+
+For smaller teams, checking skills into repos works great. As you scale, a marketplace lets your team self-serve without bloating everyone's context.
+
+### Install Any Skill from AbsolutelySkilled
+
+You can install any skill from this registry with a single command:
+
+```bash
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill <skill-name>
+```
+
+Browse the [full catalog](/) to find skills for your stack.
+
+### Composing Skills
+
+Skills can reference other skills by name. If a CSV generation skill depends on a file upload skill, it just mentions it - the agent will invoke it if it is installed. Formal dependency management is not built in yet, but naming conventions work well in practice.
+
+### Measuring What Works
+
+Use a PreToolUse hook to log skill invocations. This lets you find skills that are popular, skills that are undertriggering compared to expectations, and skills that might need better descriptions.
+
+---
+
+## Getting Started
+
+The best way to learn is to build one. Start small:
+
+1. **Pick a pain point** - something the agent keeps getting wrong or something you repeat manually
+2. **Write a minimal SKILL.md** with a clear description and a gotchas section
+3. **Test it** a few times and add gotchas as you find failure modes
+4. **Add references** when the main file gets too long
+5. **Share it** once it is working well for you
+
+Most great skills started as a few lines and a single gotcha. They got better because people kept iterating as the agent hit new edge cases.
+
+You can also use [Skill Forge](/skill/skill-forge) to generate a complete skill from a URL, GitHub repo, or domain topic - it handles the scaffolding, evals, and file structure for you.
+
+<div style="background: linear-gradient(135deg, rgba(34,197,94,0.08), rgba(59,130,246,0.08)); border: 1px solid rgba(34,197,94,0.2); border-radius: 12px; padding: 24px; margin: 32px 0; text-align: center;">
+  <p style="font-size: 18px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 8px;">Ready to explore?</p>
+  <p style="color: var(--color-text-secondary); margin-bottom: 16px;">Browse 161+ production-ready skills across 25 categories.</p>
+  <a href="/" style="display: inline-block; background: var(--color-accent-blue); color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">Browse Skills Catalog</a>
+</div>

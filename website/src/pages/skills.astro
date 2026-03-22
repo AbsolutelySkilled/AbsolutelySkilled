@@ -1,0 +1,270 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CategoryBadge from '../components/CategoryBadge.astro';
+import { getAllSkills, getSkillsByCategory } from '../lib/skills';
+import { getInstallCount } from '../lib/installs';
+import { getCategoryMeta } from '../lib/categories';
+
+const skills = getAllSkills();
+const grouped = getSkillsByCategory(skills);
+
+const categories = Object.entries(grouped)
+  .map(([category, skills]) => ({
+    slug: category,
+    ...getCategoryMeta(category),
+    count: skills.length,
+  }))
+  .sort((a, b) => b.count - a.count);
+
+const skillsData = skills.map((s) => ({
+  slug: s.slug,
+  name: s.name,
+  description: s.description,
+  category: s.category,
+  tags: s.tags,
+  installs: getInstallCount(s.slug),
+  categoryLabel: getCategoryMeta(s.category).label,
+  categoryColor: getCategoryMeta(s.category).color,
+}));
+
+const title = `All Skills - AbsolutelySkilled`;
+const description = `Browse all ${skills.length} production-ready AI agent skills. Search by name, filter by category, and find the perfect skill for your workflow.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Header */}
+      <div class="mb-10">
+        <h1 class="text-3xl font-bold font-mono mb-2">All Skills</h1>
+        <p class="text-text-secondary">
+          {skills.length} production-ready skills across {categories.length} categories
+        </p>
+      </div>
+
+      {/* Search + sort */}
+      <div class="flex flex-col sm:flex-row gap-3 mb-6">
+        <div class="relative flex-1">
+          <svg
+            class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted pointer-events-none"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+          <input
+            id="skills-search"
+            type="text"
+            placeholder="Search by name, description, or tag..."
+            class="w-full pl-10 pr-16 py-2.5 rounded-lg border border-border bg-card text-text-primary placeholder:text-text-muted text-sm outline-none focus:border-border-hover transition-colors"
+            autocomplete="off"
+          />
+          <button
+            id="skills-clear"
+            class="absolute right-3 top-1/2 -translate-y-1/2 text-xs px-1.5 py-0.5 rounded border border-border bg-elevated text-text-muted cursor-pointer hover:text-text-primary transition-colors hidden"
+          >
+            Clear
+          </button>
+        </div>
+        <select
+          id="skills-sort"
+          class="px-3 py-2.5 rounded-lg border border-border bg-card text-text-secondary text-sm cursor-pointer"
+        >
+          <option value="name">Sort: A-Z</option>
+          <option value="installs">Sort: Most installed</option>
+        </select>
+      </div>
+
+      {/* Category filters */}
+      <div class="flex flex-wrap gap-2 mb-8" id="category-filters">
+        <button
+          data-category=""
+          class="cat-btn active px-3 py-1.5 rounded-full text-xs font-medium border border-accent-blue bg-accent-blue text-white cursor-pointer transition-colors"
+        >
+          All ({skills.length})
+        </button>
+        {categories.map((cat) => (
+          <button
+            data-category={cat.slug}
+            data-color={cat.color}
+            class="cat-btn px-3 py-1.5 rounded-full text-xs font-medium border border-border text-text-secondary cursor-pointer transition-colors hover:border-border-hover"
+          >
+            {cat.label} ({cat.count})
+          </button>
+        ))}
+      </div>
+
+      {/* Results count */}
+      <p id="skills-count" class="text-sm text-text-muted mb-4">
+        {skills.length} skills
+      </p>
+
+      {/* Skills grid */}
+      <div id="skills-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {skillsData.map((skill) => (
+          <a
+            href={`/skill/${skill.slug}`}
+            class="skill-item card p-5 block group"
+            data-name={skill.name.toLowerCase()}
+            data-desc={skill.description.toLowerCase()}
+            data-tags={skill.tags.join(' ').toLowerCase()}
+            data-category={skill.category}
+            data-installs={skill.installs}
+          >
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="font-mono font-semibold text-sm text-text-primary group-hover:text-accent-blue transition-colors">
+                {skill.name}
+              </h3>
+              {skill.installs > 0 && (
+                <span class="text-xs text-text-muted font-mono shrink-0 ml-2 tabular-nums">
+                  {skill.installs.toLocaleString()}
+                </span>
+              )}
+            </div>
+            <p class="text-sm text-text-secondary mb-3 line-clamp-2">{skill.description}</p>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span
+                class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium border"
+                style={`color: ${skill.categoryColor}; border-color: ${skill.categoryColor}33; background: ${skill.categoryColor}11;`}
+              >
+                {skill.categoryLabel}
+              </span>
+              {skill.tags.slice(0, 2).map((tag) => (
+                <span class="text-[11px] font-mono text-text-muted">#{tag}</span>
+              ))}
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {/* Empty state */}
+      <div id="skills-empty" class="hidden text-center py-16 rounded-xl border border-border bg-card">
+        <p class="text-lg font-mono mb-2 text-text-primary">No skills found</p>
+        <p class="text-sm text-text-muted">Try a different search term or category.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const searchInput = document.getElementById('skills-search') as HTMLInputElement;
+  const clearBtn = document.getElementById('skills-clear')!;
+  const sortSelect = document.getElementById('skills-sort') as HTMLSelectElement;
+  const grid = document.getElementById('skills-grid')!;
+  const countEl = document.getElementById('skills-count')!;
+  const emptyEl = document.getElementById('skills-empty')!;
+  const catButtons = document.querySelectorAll<HTMLButtonElement>('.cat-btn');
+  const items = Array.from(document.querySelectorAll<HTMLAnchorElement>('.skill-item'));
+
+  let activeCategory = '';
+  let debounceTimer: ReturnType<typeof setTimeout>;
+
+  function applyFilters() {
+    const query = searchInput.value.toLowerCase().trim();
+    const sort = sortSelect.value;
+
+    clearBtn.classList.toggle('hidden', !query);
+
+    let visible: HTMLAnchorElement[] = [];
+
+    for (const item of items) {
+      const name = item.dataset.name || '';
+      const desc = item.dataset.desc || '';
+      const tags = item.dataset.tags || '';
+      const cat = item.dataset.category || '';
+
+      const matchesCategory = !activeCategory || cat === activeCategory;
+      const matchesQuery =
+        !query || name.includes(query) || desc.includes(query) || tags.includes(query);
+
+      if (matchesCategory && matchesQuery) {
+        item.style.display = '';
+        visible.push(item);
+      } else {
+        item.style.display = 'none';
+      }
+    }
+
+    // Sort ALL items (visible first in order, hidden after) so DOM order is correct
+    if (sort === 'installs') {
+      items.sort((a, b) => {
+        const diff = parseInt(b.dataset.installs || '0') - parseInt(a.dataset.installs || '0');
+        return diff !== 0 ? diff : (a.dataset.name || '').localeCompare(b.dataset.name || '');
+      });
+    } else {
+      items.sort((a, b) => (a.dataset.name || '').localeCompare(b.dataset.name || ''));
+    }
+    for (const el of items) {
+      grid.appendChild(el);
+    }
+
+    // Update count
+    const catLabel = activeCategory
+      ? document.querySelector(`[data-category="${activeCategory}"]`)?.textContent?.replace(/\s*\(\d+\)/, '') || ''
+      : '';
+    let countText = `${visible.length} skill${visible.length !== 1 ? 's' : ''}`;
+    if (query) countText += ` matching "${searchInput.value}"`;
+    if (catLabel) countText += ` in ${catLabel.trim()}`;
+    countEl.textContent = countText;
+
+    // Toggle empty state
+    grid.classList.toggle('hidden', visible.length === 0);
+    emptyEl.classList.toggle('hidden', visible.length > 0);
+  }
+
+  // Search input
+  searchInput.addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(applyFilters, 150);
+  });
+
+  // Clear button
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    applyFilters();
+    searchInput.focus();
+  });
+
+  // Sort select
+  sortSelect.addEventListener('change', applyFilters);
+
+  // Category buttons
+  catButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const cat = btn.dataset.category || '';
+
+      // Toggle: clicking the same category deselects it
+      activeCategory = activeCategory === cat ? '' : cat;
+
+      // Update button styles
+      catButtons.forEach((b) => {
+        const bCat = b.dataset.category || '';
+        const isActive = bCat === activeCategory;
+        const color = b.dataset.color;
+
+        if (isActive && color) {
+          b.style.background = `${color}20`;
+          b.style.borderColor = `${color}66`;
+          b.style.color = color;
+        } else if (isActive && !color) {
+          // "All" button
+          b.style.background = 'var(--color-accent-blue)';
+          b.style.borderColor = 'var(--color-accent-blue)';
+          b.style.color = 'white';
+        } else {
+          b.style.background = 'transparent';
+          b.style.borderColor = 'var(--color-border)';
+          b.style.color = 'var(--color-text-secondary)';
+        }
+      });
+
+      applyFilters();
+    });
+  });
+</script>
