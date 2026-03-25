@@ -1,0 +1,132 @@
+{
+  "skill": "address-pr-comments",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers when user asks to address PR review comments",
+      "prompt": "Address the review comments on my PR",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "gh" },
+        { "type": "contains", "value": "comments" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers when user asks to respond to review feedback",
+      "prompt": "Respond to all the open review threads on PR #42",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "review" },
+        { "type": "contains", "value": "42" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers when user says handle PR feedback",
+      "prompt": "Handle the PR feedback on my current branch",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "gh" },
+        { "type": "contains", "value": "comments" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Fetches review comments using correct gh API endpoint",
+      "prompt": "Show me how to fetch all review comments on PR #15",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "gh api" },
+        { "type": "contains", "value": "/pulls/" },
+        { "type": "contains", "value": "/comments" },
+        { "type": "contains", "value": "--paginate" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Posts a threaded reply using in_reply_to",
+      "prompt": "Reply to review comment ID 123456 on PR #10 saying 'Good catch, fixed!'",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "gh api" },
+        { "type": "contains", "value": "in_reply_to" },
+        { "type": "contains", "value": "POST" },
+        { "type": "not_contains", "value": "issues" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Identifies unaddressed comments by checking for author replies",
+      "prompt": "How do I find which PR comments I haven't replied to yet?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "in_reply_to" },
+        { "type": "contains", "value": "user" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Uses humble tone in draft replies",
+      "prompt": "Draft a reply for a reviewer who caught a missing null check",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "you're wrong" },
+        { "type": "not_contains", "value": "actually" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Batches replies and presents for approval before posting",
+      "prompt": "Address all review comments on my PR and post replies",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "approv" },
+        { "type": "contains", "value": "batch" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Handles case when PR has no unaddressed comments",
+      "prompt": "Address review comments on PR #5 (all comments already replied to)",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "no" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Does not use issue comments endpoint for review comments",
+      "prompt": "Fetch all inline code review comments on PR #20",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "/pulls/" },
+        { "type": "not_contains", "value": "/issues/" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Does not hallucinate a gh pr comments subcommand",
+      "prompt": "List all review comments on my PR using the gh CLI",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "gh api" },
+        { "type": "not_contains", "value": "gh pr comments" },
+        { "type": "code_valid", "language": "bash" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References the gh-api-reference file for detailed API info",
+      "prompt": "I need the full list of fields returned by the PR comments API",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "gh-api-reference" }
+      ]
+    }
+  ]
+}
