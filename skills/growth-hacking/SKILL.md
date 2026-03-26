@@ -1,11 +1,7 @@
 ---
 name: growth-hacking
 version: 0.1.0
-description: >
-  Use this skill when designing viral loops, building referral programs, optimizing
-  activation funnels, or improving retention. Triggers on growth loops, referral
-  programs, activation funnels, retention strategies, viral coefficient, product-led
-  growth, AARRR metrics, and any task requiring growth experimentation or optimization.
+description: "Use when growing users, improving retention, building referral systems, or analyzing product growth metrics. Design viral loops, build referral programs, optimize activation funnels, calculate viral coefficients, map activation milestones, run ICE-scored growth experiments, and improve retention through cohort analysis."
 category: marketing
 tags: [growth, viral-loops, referral, activation, retention, plg]
 recommended_skills: [product-analytics, email-marketing, saas-metrics, sales-playbook]
@@ -22,288 +18,182 @@ When this skill is activated, always start your first response with the 🧢 emo
 
 # Growth Hacking
 
-Growth hacking is a discipline that combines product, data, and marketing to find
-the most efficient levers for sustainable user and revenue growth. Unlike traditional
-marketing, it is rooted in rapid experimentation, quantitative measurement, and
-closed-loop feedback between product behavior and acquisition channels.
-
-The best growth practitioners treat retention as the foundation, activation as the
-multiplier, and virality as the compounding force. Hacks without retention are
-just churn machines. This skill gives an agent the frameworks, vocabulary, and
-tactical playbooks to design experiments, build growth systems, and reason about
-compounding growth.
-
----
-
 ## When to use this skill
 
-Trigger this skill when the user:
-- Wants to design or audit a growth loop or viral loop
-- Needs to build or improve a referral program
-- Asks about optimizing an activation funnel or improving time-to-value
-- Wants to reduce churn or improve retention using cohort analysis
-- Asks about AARRR metrics, pirate metrics, or north star metric selection
-- Needs to run growth experiments and prioritize them (ICE, PIE scoring)
-- Is implementing product-led growth (PLG) or a freemium model
-- Wants to find the "aha moment" and engineer onboarding toward it
+Activate when the user needs to:
+- Design or audit a growth loop or viral loop
+- Build or improve a referral program
+- Optimize an activation funnel or reduce time-to-value
+- Reduce churn using cohort analysis
+- Select a north star metric or diagnose AARRR stages
+- Prioritize growth experiments with ICE scoring
+- Implement product-led growth (PLG) or freemium models
+- Identify and engineer onboarding toward the aha moment
 
-Do NOT trigger this skill for:
-- Pure paid advertising campaign execution (creative, ad spend optimization) -
-  use a performance marketing skill instead
-- Brand strategy and positioning work disconnected from product or funnel metrics
+Do NOT use for pure paid ad execution or brand strategy disconnected from product metrics.
 
 ---
 
-## Key principles
+## Workflow: Growth audit and experiment cycle
 
-1. **Measure everything** - Every growth decision must be anchored to data. Define
-   metrics before running experiments. If you can't measure it, you can't improve it.
-   Instrument events, track cohorts, and baseline before changing anything.
+### Step 1 — Diagnose the AARRR bottleneck
 
-2. **One metric that matters (OMTM)** - Focus each growth phase on a single north
-   star metric that best predicts long-term value. Optimizing many metrics at once
-   diffuses effort and obscures causality.
+1. Map measurable events to each AARRR stage (Acquisition, Activation, Retention, Referral, Revenue)
+2. Calculate conversion rates between adjacent stages
+3. Identify the stage with the lowest conversion or largest absolute drop
+4. **Checkpoint:** Confirm bottleneck with stakeholder before proceeding — misdiagnosis wastes experiment cycles
 
-3. **Experiment velocity wins** - Teams that run more experiments per week consistently
-   outperform those that run fewer but "bigger" experiments. Lower the cost of an
-   experiment, raise the volume. Most experiments fail - that's fine, fail fast.
+### Step 2 — Define the north star metric
 
-4. **Retention is the foundation** - Acquiring users into a leaky bucket is burning
-   money. Fix retention first. A product with 40% Day-30 retention can grow
-   efficiently; one with 5% cannot be saved by acquisition spend.
+1. List 5-10 candidate metrics reflecting core value delivery
+2. Run the retention correlation test: do users who hit the metric in week 1 retain better at Day 30?
+3. Decompose the winner into 3-5 input metrics teams can own
+4. **Checkpoint:** Verify the metric leads revenue, reflects user value, and is directly actionable
 
-5. **Sustainable growth over hacks** - Short-term hacks (spam, dark patterns,
-   manufactured virality) destroy trust and churn users. Build growth systems that
-   deliver genuine value at each step so growth compounds rather than collapses.
+### Step 3 — Prioritize experiments with ICE scoring
 
----
+Score each candidate experiment (1-10 per dimension):
 
-## Core concepts
+```
+Experiment: Add social proof banner to onboarding step 3
+Hypothesis: If we show "2,000 teams set this up in 3 min",
+            then step-3 completion will increase by 8%
+            because social proof reduces uncertainty at friction points.
 
-### AARRR pirate metrics
+Impact:     7/10  — Step 3 has 40% drop-off, largest in funnel
+Confidence: 6/10  — Qualitative research supports; no direct A/B data yet
+Ease:       9/10  — Copy change, ship in <1 day
 
-Dave McClure's framework maps the full user lifecycle into five measurable stages:
+ICE Score = (7 + 6 + 9) / 3 = 7.3
+```
 
-| Stage | Question | Example metric |
-|---|---|---|
-| **Acquisition** | How do users find you? | CAC, channel attribution, organic vs paid split |
-| **Activation** | Do users have a great first experience? | Day-1 activation rate, aha moment conversion |
-| **Retention** | Do users come back? | Day-7/30/90 retention, churn rate, DAU/MAU |
-| **Referral** | Do users tell others? | Viral coefficient (K), NPS, referral invite rate |
-| **Revenue** | Do you make money? | MRR, LTV, LTV:CAC ratio, expansion revenue |
+Run highest-scoring experiments first. Log hypothesis, metric, baseline, result, and learning for every experiment.
 
-Always diagnose which stage is broken before prescribing a fix. See
-`references/growth-frameworks.md` for the full AARRR diagnostic template.
+### Step 4 — Design or optimize the growth lever
 
-### Growth loops vs funnels
+Pick the appropriate playbook below based on the diagnosed bottleneck.
 
-A **funnel** is linear and one-way: Acquire -> Activate -> Retain -> Monetize.
-Every user enters at the top and exits somewhere below. Funnels are necessary
-but not sufficient for compounding growth.
+### Step 5 — Validate and iterate
 
-A **growth loop** is circular: the output of one cycle becomes the input of the
-next. Examples:
-- **Viral loop**: User invites friend -> friend signs up -> friend invites more friends
-- **Content loop**: User creates content -> content ranks in search -> new users find it -> create more content
-- **Sales-assisted loop**: Lead signs up -> sales converts -> expansion revenue funds more sales
-
-Loops compound; funnels don't. Design for loops. See `references/growth-frameworks.md`
-for loop templates.
-
-### Viral coefficient (K-factor)
-
-`K = invites_sent_per_user * conversion_rate_of_invite`
-
-- K > 1: viral growth (each user brings more than one new user)
-- K = 0.5-1: strong word of mouth, supplements other channels
-- K < 0.3: product is not meaningfully viral; focus elsewhere
-
-Improving K requires either increasing invites sent (motivation) or increasing
-invite conversion (landing page, offer, trust).
-
-### Cohort analysis
-
-Group users by the time period they first performed a key action (signup, first
-purchase, etc.) and track their behavior over subsequent periods. Cohort analysis
-isolates the effect of product changes from the noise of a changing user mix.
-
-Key cohort views:
-- **Retention curve**: % of cohort active at Day N - flat curve = good retention
-- **Revenue cohort**: cumulative LTV by cohort - improving means product is getting better
-- **Activation cohort**: % that hit aha moment within Day 1, 3, 7
-
-### North star metric
-
-A single metric that best captures the value your product delivers to users AND
-correlates with long-term business health. It aligns the entire company on what
-matters.
-
-| Company | North Star Metric |
-|---|---|
-| Slack | Messages sent per active team |
-| Airbnb | Nights booked |
-| Spotify | Time spent listening |
-| HubSpot | Weekly active teams using 5+ features |
-
-A good north star is: measurable, leads revenue, reflects user value, actionable
-by the team. See `references/growth-frameworks.md` for the selection template.
+1. Run cohort analysis on the experiment cohort vs control
+2. **Checkpoint:** Confirm metric movement is statistically significant before declaring a win
+3. Ship winners, kill losers, iterate on inconclusives
+4. Re-run AARRR diagnosis to find the next bottleneck
 
 ---
 
-## Common tasks
-
-### Design a growth loop
+## Playbook: Design a growth loop
 
 1. Map the current user journey end-to-end
-2. Identify the "output" of one user's experience that could become an "input" for
-   another user (shared content, invites, referrals, SEO-indexed pages)
+2. Identify the output of one user's experience that becomes input for another (shared content, invites, SEO-indexed pages)
 3. Name the loop type: viral, content, paid, sales-assisted, or product-embedded
-4. Define the loop's single conversion rate to optimize (e.g., invite acceptance rate)
-5. Instrument every step, establish a baseline, then run experiments on the weakest link
+4. Define the single conversion rate to optimize (e.g., invite acceptance rate)
+5. Instrument every step, baseline, then experiment on the weakest link
 
-**Example - viral loop for a doc tool:**
-Create doc -> Share with external collaborator -> Collaborator views -> Prompted to
-sign up -> Signs up and creates their own doc -> Loop restarts
+**Example — viral loop for a doc tool:**
+```
+Create doc → Share with external collaborator → Collaborator views
+→ Prompted to sign up → Signs up, creates own doc → Loop restarts
 
-### Build a referral program
+Key metric: invite acceptance rate
+Baseline: 12% → Target: 20%
+Lever: personalize invite with doc preview snippet
+```
 
-A referral program amplifies natural word-of-mouth with structured incentives.
+---
+
+## Playbook: Build a referral program
 
 **Design checklist:**
-- [ ] Define the trigger: when is the user most likely to refer? (post-aha moment, post-purchase)
-- [ ] Choose reward structure: double-sided (sender + receiver both win) outperforms one-sided
-- [ ] Set reward type: cash, credits, upgrade, or social recognition
+- [ ] Trigger referral prompt post-aha moment (not at signup — too early yields fraud)
+- [ ] Use double-sided rewards (sender + receiver both benefit)
+- [ ] Choose reward type matching product: credits (B2C), seat upgrades (B2B SaaS), transaction credits (marketplace)
 - [ ] Make sharing frictionless: pre-written message, one-click send, email + link options
-- [ ] Confirm referral loop is closed: referred user's experience must deliver the same
-      aha moment that motivated the invite
-- [ ] Track: referral invite rate, referral conversion rate, K-factor, referred-user LTV vs organic LTV
+- [ ] Close the loop: referred user's onboarding must deliver the same aha moment
+- [ ] Track: invite rate, conversion rate, K-factor, referred-user LTV vs organic LTV
 
-**Reward tiers by product type:**
-- B2C consumer app: credits or cash (Uber, Airbnb model)
-- B2B SaaS: seat upgrades, feature unlocks, or billing credits
-- Marketplace: transaction credits valid on next purchase
+**Example referral configuration:**
+```yaml
+trigger: user completes 3rd project (validated aha moment)
+reward_sender: 1 month Pro free
+reward_receiver: 14-day Pro trial (extended from 7-day default)
+channels: [email, slack, copy-link]
+fraud_gate: reward unlocks only after receiver reaches activation milestone
+```
 
-### Optimize activation funnel
+**Checkpoint:** Verify aha moment correlates with retention data before setting the referral trigger.
 
-Activation is the bridge between acquisition and retention. A user is "activated"
-when they experience the core value of the product for the first time (the aha moment).
+---
 
-**Optimization process:**
-1. Define your aha moment concretely (e.g., "creates first project with one collaborator")
-2. Map every step from signup to aha moment
-3. Measure drop-off at each step
-4. Prioritize the step with the largest absolute drop-off (not percentage)
-5. Run A/B tests: reduce friction (fewer fields, social login), add guidance (tooltips,
-   progress bars), or add incentives (template library, example data)
+## Playbook: Optimize activation funnel
 
-**Common activation levers:**
-- Reduce time-to-value: pre-populate sample data so users see value before entering their own
-- Remove setup friction: defer configuration until after first value is delivered
-- Personalize onboarding: route users to different paths based on role or use case
-- Add social proof at friction points: show "2,000 teams set this up in 3 minutes"
+1. Define aha moment concretely (e.g., "creates first project with one collaborator")
+2. **Checkpoint:** Validate aha moment against Day-30 retention cohorts — if users who hit it don't retain better, find the real aha moment
+3. Map every step from signup to aha moment
+4. Measure drop-off at each step; prioritize the step with the largest absolute drop
+5. Run A/B tests on the worst step:
+   - Reduce friction: fewer fields, social login, defer config until after first value
+   - Add guidance: tooltips, progress bars, pre-populated sample data
+   - Add social proof at friction points
 
-### Improve retention with cohort analysis
+**Example cohort analysis template:**
+```
+Cohort: Users who signed up Jan 1-7
+Segment A: Reached aha moment within 24h
+Segment B: Did not reach aha moment within 24h
 
-1. Pull cohort retention curves segmented by: acquisition channel, onboarding path,
-   company size, or feature adoption
-2. Identify which cohort has the flattest retention curve (best retention)
-3. Find the behavioral difference between high-retention and low-retention cohorts
-   (which features did they use? how fast did they reach aha moment?)
-4. Build that behavior into the default onboarding path for all new users
-5. Re-run cohorts 4-8 weeks later to confirm improvement
+         Day 1    Day 7    Day 30
+Seg A:   82%      54%      38%
+Seg B:   45%      12%       4%
 
-**Retention benchmarks by product type:**
-| Product | Good Day-30 Retention |
-|---|---|
-| Consumer social | 25-40% |
-| B2B SaaS | 40-70% |
-| E-commerce | 10-25% |
-| Mobile game | 10-20% |
+Conclusion: Aha moment within 24h predicts 9.5x better Day-30 retention.
+Action: Redesign onboarding to push aha moment into first session.
+```
 
-### Run growth experiments (ICE framework)
+---
 
-Score each experiment on three dimensions (1-10 each):
+## Playbook: Implement product-led growth (PLG)
 
-- **Impact**: How much will this move the target metric if it works?
-- **Confidence**: How sure are you it will work, based on data or analogues?
-- **Ease**: How fast and cheap is it to run this experiment?
-
-`ICE Score = (Impact + Confidence + Ease) / 3`
-
-Run the highest-scoring experiments first. Document hypothesis, metric, baseline,
-result, and learning for every experiment regardless of outcome. See
-`references/growth-frameworks.md` for the full ICE scoring template.
-
-### Design onboarding for the aha moment
-
-The job of onboarding is to get users to the aha moment as fast as possible.
-
-**Onboarding design principles:**
-- Delay account setup (email verification, profile completion) until after first value
-- Use empty state screens to show what the product looks like when it's working, not a blank canvas
-- Guide the user through exactly one action that delivers immediate value
-- End the first session with a "save your progress" hook that creates a reason to return
-
-**Aha moment discovery process:**
-1. Pull data on users who churned in week 1 vs users who retained to week 4
-2. Find the feature/action that correlates most strongly with retention
-3. Find the time-to-that-action for retained users (e.g., "within 3 days")
-4. Make that action the explicit goal of onboarding
-
-### Implement product-led growth (PLG)
-
-PLG makes the product itself the primary driver of acquisition, activation, and expansion.
-
-**PLG motion types:**
-- **Freemium**: Free tier acquires users; paid tier converts power users
-- **Free trial**: Full access for a limited time; urgency converts
-- **Usage-based**: Pay as you grow; low friction entry, aligned incentives
-
-**PLG implementation checklist:**
-- [ ] Identify the natural sharing or collaboration moments in the product
-- [ ] Build a free tier that delivers genuine value (not a crippled demo)
+- [ ] Identify natural sharing/collaboration moments in the product
+- [ ] Build a free tier delivering genuine value (not a crippled demo)
 - [ ] Define upgrade triggers: usage limits, collaboration features, or admin controls
-- [ ] Instrument product qualified leads (PQLs): users showing intent signals (hitting limits,
-      inviting many teammates, high usage frequency)
-- [ ] Build sales-assist motion that surfaces PQLs to the sales team in real time
+- [ ] Instrument product-qualified leads (PQLs): users hitting limits, inviting many teammates, high usage frequency
+- [ ] Surface PQLs to sales in real time for sales-assist motion
 
 ---
 
 ## Anti-patterns
 
-| Anti-pattern | Why it fails | What to do instead |
-|---|---|---|
-| Optimizing acquisition before fixing retention | You fill a leaky bucket - CAC rises, LTV falls | Achieve 30% Day-30 retention before scaling acquisition spend |
-| Vanity metric focus | Total signups, downloads, or followers don't predict revenue or retention | Pick a north star metric that reflects active value delivery |
-| Running too many experiments at once | Interactions between experiments contaminate results | Run one experiment per user surface at a time; isolate variables |
-| Copying competitor tactics without understanding context | A tactic that works for Dropbox at scale fails for a 500-user startup | Understand why a tactic works before adopting it; validate with your own data |
-| Dark patterns for short-term conversion | Fake urgency, hidden unsubscribe, forced virality - all damage trust and LTV | Every growth mechanic should deliver value to the user, not just extract it |
-| Skipping cohort segmentation | Aggregate retention curves hide the signal in the noise | Always segment cohorts by acquisition source, onboarding path, and key feature adoption |
+| Anti-pattern | Fix |
+|---|---|
+| Scaling acquisition before fixing retention | Achieve 30%+ Day-30 retention first |
+| Vanity metric focus (total signups, downloads) | Pick a north star reflecting active value delivery |
+| Multiple experiments on same user surface | One experiment per surface; isolate variables |
+| Copying competitor tactics without context | Validate with your own data before adopting |
+| Rewarding referrals at signup instead of activation | Tie rewards to the activation milestone that predicts retention |
+| Free tier too generous for upgrades | Define the usage ceiling before launching freemium |
 
 ---
 
 ## Gotchas
 
-1. **Optimizing activation before you understand what the aha moment actually is** - Teams often build onboarding flows toward the wrong milestone. "Completed profile" or "uploaded first file" feels like activation, but if it doesn't correlate with Day-30 retention, you've optimized the wrong funnel step. Always validate the aha moment against retention cohort data before optimizing toward it.
+1. **Aha moment validation is non-negotiable** — "Completed profile" feels like activation but may not correlate with retention. Always validate against Day-30 cohort data before building onboarding around it.
 
-2. **Viral K-factor calculations ignore invite fatigue cycles** - K-factor measured in week 1 post-launch will overestimate steady-state virality because early adopters are your most enthusiastic inviters. Measure K-factor across 90-day cohorts, not just the launch burst, to get a realistic picture of your viral loop's durability.
+2. **K-factor decays after launch** — Early adopters are your most enthusiastic inviters. Measure K-factor across 90-day cohorts, not just launch week, for a realistic viral loop estimate.
 
-3. **A/B test contamination from multiple simultaneous experiments** - Running two experiments on the same user surface at the same time (e.g., two onboarding copy tests) means users may see combinations of variants, making it impossible to attribute results to a single change. One experiment per user surface, enforce isolation in your experimentation platform.
+3. **A/B test contamination** — Two experiments on the same surface at once produce unattributable results. Enforce isolation in your experimentation platform.
 
-4. **Referral programs that reward too early produce fraudulent referrals** - Triggering referral rewards at signup (rather than at activation or first payment) creates an arbitrage opportunity where users refer fake accounts for the reward. Tie rewards to the same activation milestone that predicts real retention.
-
-5. **Freemium free tier that's too good prevents upgrades** - If the free tier covers all core use cases, users have no natural reason to upgrade. The free tier must deliver genuine value at a scope that naturally hits a ceiling for power users - time, seats, usage volume, or collaboration features are common upgrade triggers. Define this ceiling before launching freemium, not after watching conversion rates disappoint.
+4. **Referral fraud from early rewards** — Triggering rewards at signup creates fake-account arbitrage. Gate rewards on the activation milestone that predicts real retention.
 
 ---
 
 ## References
 
-For detailed templates and frameworks, load the relevant file from `references/`:
+For detailed templates (AARRR diagnostic, ICE scoring sheet, north star selection guide, growth loop diagrams, viral coefficient calculator), load:
 
-- `references/growth-frameworks.md` - AARRR diagnostic template, ICE scoring sheet,
-  north star selection guide, growth loop templates, viral coefficient calculator
+- `references/growth-frameworks.md`
 
-Only load a references file if the current task requires deep detail on that topic.
+Only load if the task requires deep framework detail.
 
 ---
 
