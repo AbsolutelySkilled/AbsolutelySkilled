@@ -1,0 +1,914 @@
+# AbsolutelySkilled - Skills Index
+# Auto-generated index of all available skills
+# Use this as a sitemap/API for discovering skills
+
+version: 1.0.0
+generated: '2026-03-29'
+total_skills: 170
+skills:
+- name: a2a-protocol
+  version: 0.1.0
+  description: Use this skill when working with the A2A (Agent-to-Agent) protocol - agent interoperability, multi-agent communication, agent discovery, agent cards, task lifecycle, streaming, and push notifications.
+    Triggers on any A2A-related task including implementing A2A servers/clients, building agent cards, sending messages between agents, managing tasks, and configuring push notification webhooks.
+  category: ai-ml
+- name: a2ui
+  version: 0.1.0
+  description: Use this skill when working with A2UI (Agent-to-User Interface) - Google's open protocol for agent-driven declarative UIs. Triggers on tasks involving A2UI message generation, component catalogs,
+    data binding, surface management, renderer development, custom components, or integrating A2UI with A2A Protocol, AG UI, or agent frameworks like Google ADK. Covers building agents that generate A2UI
+    JSON, setting up client renderers (Lit, React, Angular, Flutter), creating custom catalogs, and handling client-to-server actions.
+  category: ai-ml
+- name: accessibility-wcag
+  version: 0.1.0
+  description: Use this skill when implementing web accessibility, adding ARIA attributes, ensuring keyboard navigation, or auditing WCAG compliance. Triggers on accessibility, a11y, ARIA roles, screen
+    readers, keyboard navigation, focus management, color contrast, alt text, semantic HTML, and any task requiring WCAG 2.2 compliance or inclusive design.
+  category: design
+- name: account-management
+  version: 0.1.0
+  description: Use this skill when managing key accounts, planning expansions, running QBRs, or mapping stakeholders. Triggers on account management, expansion playbooks, QBR preparation, stakeholder mapping,
+    renewal strategy, upsell, cross-sell, and any task requiring strategic account planning or relationship management.
+  category: sales
+- name: address-pr-comments
+  version: 0.1.0
+  description: Use this skill when addressing, responding to, or resolving PR review comments on GitHub pull requests. Triggers on "address PR comments", "respond to review", "handle review feedback", "reply
+    to PR comments", "fix review comments", or when the user wants to process open review threads on their PR. Uses the gh CLI to fetch unresolved comments, make code changes where agreed, and post batch
+    replies with a humble, thankful tone.
+  category: engineering
+- name: aeo-optimization
+  version: 0.1.0
+  description: Use this skill when optimizing content for answer engines and SERP features - featured snippets (paragraph, list, table), People Also Ask (PAA) targeting, voice search optimization, knowledge
+    panels, speakable schema, and zero-click search strategies. Triggers on winning position zero, optimizing for Google's answer boxes, voice assistant responses, or FAQ-style content optimization.
+  category: marketing
+- name: agile-scrum
+  version: 0.1.0
+  description: Use this skill when working with Agile and Scrum methodologies - sprint planning, retrospectives, velocity tracking, Kanban boards, story point estimation, backlog grooming, or team workflow
+    optimization. Triggers on any task involving sprint ceremonies, agile metrics, user story writing, capacity planning, or continuous improvement processes.
+  category: operations
+- name: ai-agent-design
+  version: 0.1.0
+  description: Use this skill when designing AI agent architectures, implementing tool use, building multi-agent systems, or creating agent memory. Triggers on AI agents, tool calling, agent loops, ReAct
+    pattern, multi-agent orchestration, agent memory, planning strategies, agent evaluation, and any task requiring autonomous AI agent design.
+  category: ai-ml
+- name: analytics-engineering
+  version: 0.1.0
+  description: Use this skill when building dbt models, designing semantic layers, defining metrics, creating self-serve analytics, or structuring a data warehouse for analyst consumption. Triggers on dbt
+    project setup, model layering (staging, intermediate, marts), ref() and source() usage, YAML schema definitions, metrics definitions, semantic layer configuration, dimensional modeling, slowly changing
+    dimensions, data testing, and any task requiring analytics engineering best practices.
+  category: data
+- name: android-kotlin
+  version: 0.1.0
+  description: Use this skill when building Android applications with Kotlin. Triggers on Jetpack Compose UI, Room database, Kotlin coroutines, Play Store publishing, MVVM/MVI architecture, ViewModel, StateFlow,
+    Hilt dependency injection, Navigation Compose, Material 3, APK/AAB builds, ProGuard, and Android app lifecycle management. Covers modern Android development with declarative UI, reactive state, structured
+    concurrency, and production release workflows.
+  category: engineering
+- name: api-design
+  version: 0.1.0
+  description: Use this skill when designing APIs, choosing between REST/GraphQL/gRPC, writing OpenAPI specs, implementing pagination, versioning endpoints, or structuring request/response schemas. Triggers
+    on API design, endpoint naming, HTTP methods, status codes, rate limiting, authentication schemes, HATEOAS, query parameters, and any task requiring API architecture decisions.
+  category: engineering
+- name: api-monetization
+  version: 0.1.0
+  description: Use this skill when designing or implementing API monetization strategies - usage-based pricing, rate limiting, developer tier management, Stripe metering integration, or API billing systems.
+    Triggers on tasks involving API pricing models, metered billing, per-request charging, quota enforcement, developer portal tiers, overage handling, and Stripe usage records.
+  category: engineering
+- name: api-testing
+  version: 0.1.0
+  description: Use this skill when testing REST or GraphQL APIs, implementing contract tests, setting up mock servers, or validating API behavior. Triggers on API testing, Postman, contract testing, Pact,
+    mock servers, MSW, HTTP assertions, response validation, and any task requiring API test automation.
+  category: engineering
+- name: appsec-owasp
+  version: 0.1.0
+  description: Use this skill when securing web applications, preventing OWASP Top 10 vulnerabilities, implementing input validation, or designing authentication. Triggers on XSS, SQL injection, CSRF, SSRF,
+    broken authentication, security headers, input validation, output encoding, OWASP, and any task requiring application security hardening.
+  category: engineering
+- name: backend-engineering
+  version: 0.1.0
+  description: Use this skill when designing backend systems, databases, APIs, or services. Triggers on schema design, database migrations, indexing strategies, distributed systems architecture, microservices,
+    caching, message queues, observability setup, logging, metrics, tracing, SLO/SLI definition, performance optimization, query tuning, security hardening, authentication, authorization, API design (REST,
+    GraphQL, gRPC), rate limiting, pagination, and failure handling patterns. Acts as a senior backend engineering advisor for mid-level engineers leveling up.
+  category: engineering
+- name: bookkeeping-automation
+  version: 0.1.0
+  description: Use this skill when designing chart of accounts, automating reconciliation, managing AP/AR processes, or streamlining month-end close. Triggers on chart of accounts, bank reconciliation,
+    accounts payable, accounts receivable, month-end close, journal entries, accruals, and any task requiring bookkeeping process design or automation.
+  category: operations
+- name: brand-strategy
+  version: 0.1.0
+  description: Use this skill when defining brand positioning, voice and tone guidelines, brand architecture, or storytelling frameworks. Triggers on brand positioning, brand voice, tone guidelines, brand
+    architecture, brand story, messaging hierarchy, competitive positioning, and any task requiring brand strategy development or documentation.
+  category: marketing
+- name: budgeting-planning
+  version: 0.1.0
+  description: Use this skill when building budgets, conducting variance analysis, implementing rolling forecasts, or allocating costs. Triggers on FP&A, budgeting, variance analysis, rolling forecasts,
+    cost allocation, headcount planning, department budgets, and any task requiring financial planning or budget management.
+  category: operations
+- name: chaos-engineering
+  version: 0.1.0
+  description: Use this skill when implementing chaos engineering practices, designing fault injection experiments, running game days, or improving system resilience. Triggers on chaos engineering, fault
+    injection, Chaos Monkey, Litmus, game days, resilience testing, failure modes, blast radius, and any task requiring controlled failure experimentation.
+  category: engineering
+- name: ci-cd-pipelines
+  version: 0.1.0
+  description: Use this skill when setting up CI/CD pipelines, configuring GitHub Actions, implementing deployment strategies, or automating build/test/deploy workflows. Triggers on GitHub Actions, CI pipeline,
+    CD pipeline, deployment automation, blue-green deployment, canary release, rolling update, build matrix, artifacts, and any task requiring continuous integration or delivery setup.
+  category: infra
+- name: clean-architecture
+  version: 0.1.0
+  description: Use this skill when designing, reviewing, or refactoring software architecture following Robert C. Martin's (Uncle Bob) Clean Architecture principles. Triggers on project structure decisions,
+    layer design, dependency management, use case modeling, boundary crossing patterns, component organization, and separating business rules from frameworks. Covers the Dependency Rule, concentric layers,
+    component cohesion/coupling, and boundary patterns.
+  category: engineering
+- name: clean-code
+  version: 0.1.0
+  description: Use this skill when reviewing, writing, or refactoring code for cleanliness and maintainability following Robert C. Martin's (Uncle Bob) Clean Code principles. Triggers on code review, refactoring,
+    naming improvements, function decomposition, applying SOLID principles, writing clean tests with TDD, identifying code smells, or improving error handling. Covers Clean Code, SOLID, and test-driven
+    development.
+  category: engineering
+- name: cli-design
+  version: 0.1.0
+  description: Use this skill when building command-line interfaces, designing CLI argument parsers, writing help text, adding interactive prompts, managing config files, or distributing CLI tools. Triggers
+    on argument parsing, subcommands, flags, positional arguments, stdin/stdout piping, shell completions, interactive menus, dotfile configuration, and packaging CLIs as npm/pip/cargo/go binaries.
+  category: engineering
+- name: cloud-aws
+  version: 0.1.0
+  description: Use this skill when architecting on AWS, selecting services, optimizing costs, or following the Well-Architected Framework. Triggers on EC2, S3, Lambda, RDS, DynamoDB, CloudFront, IAM, VPC,
+    ECS, EKS, SQS, SNS, API Gateway, and any task requiring AWS architecture decisions, service selection, or cost management.
+  category: cloud
+- name: cloud-gcp
+  version: 0.1.0
+  description: Use this skill when architecting on Google Cloud Platform, selecting GCP services, or implementing data and compute solutions. Triggers on Cloud Run, BigQuery, Pub/Sub, GKE, Cloud Functions,
+    Cloud Storage, Firestore, Spanner, Cloud SQL, IAM, VPC, and any task requiring GCP architecture decisions or service selection.
+  category: cloud
+- name: cloud-security
+  version: 0.1.0
+  description: Use this skill when securing cloud infrastructure, configuring IAM policies, managing secrets, implementing network policies, or achieving compliance. Triggers on cloud IAM, secrets management,
+    network security groups, VPC security, cloud compliance, SOC 2, HIPAA, zero trust, and any task requiring cloud security architecture or hardening.
+  category: engineering
+- name: cmux
+  version: 0.1.0
+  description: Use this skill when managing cmux terminal panes, surfaces, and workspaces from Claude Code or any AI agent. Triggers on spawning split panes for sub-agents, sending commands to terminal
+    surfaces, reading screen output, creating/closing workspaces, browser automation via cmux, and any task requiring multi-pane terminal orchestration. Also triggers on "cmux", "split pane", "new-pane",
+    "read-screen", "send command to pane", or subagent-driven development requiring isolated terminal surfaces.
+  category: developer-tools
+- name: code-review-mastery
+  version: 0.2.0
+  description: Use this skill when the user asks to review their local git changes, staged or unstaged diffs, or wants a code review before committing. Triggers on "review my changes", "review staged",
+    "review my diff", "check my code", "code review local changes", "review unstaged", "review before commit".
+  category: engineering
+- name: codedocs
+  version: 0.2.0
+  description: Use this skill when generating AI-agent-friendly documentation for a git repo or directory, answering questions about a codebase from existing docs, or incrementally updating documentation
+    after code changes. Triggers on codedocs:generate, codedocs:ask, codedocs:update, "document this codebase", "generate docs for this repo", "what does this project do", "update the docs after my changes",
+    or any task requiring structured codebase documentation that serves AI agents, developers, and new team members.
+  category: engineering
+- name: color-theory
+  version: 0.1.0
+  description: Use this skill when choosing color palettes, ensuring contrast compliance, implementing dark mode, or defining semantic color tokens. Triggers on color palette, contrast ratio, WCAG color,
+    dark mode, color tokens, HSL, OKLCH, brand colors, color harmony, and any task requiring color system design or implementation.
+  category: design
+- name: community-management
+  version: 0.1.0
+  description: Use this skill when building community programs, moderating forums, creating advocacy programs, or managing feedback loops. Triggers on community management, forum moderation, advocacy programs,
+    community engagement, feedback loops, community metrics, and any task requiring community strategy or operations.
+  category: operations
+- name: compensation-strategy
+  version: 0.1.0
+  description: Use this skill when benchmarking compensation, designing equity plans, building leveling frameworks, or structuring total rewards. Triggers on compensation benchmarking, equity grants, stock
+    options, leveling, pay bands, total rewards, salary ranges, and any task requiring compensation strategy or structure design.
+  category: operations
+- name: competitive-analysis
+  version: 0.1.0
+  description: Use this skill when analyzing competitive landscapes, comparing features, positioning against competitors, or conducting SWOT analysis. Triggers on competitive analysis, market landscape,
+    feature comparison, SWOT, competitor positioning, market mapping, and any task requiring competitive intelligence or strategic positioning.
+  category: product
+- name: computer-vision
+  version: 0.1.0
+  description: Use this skill when building computer vision applications, implementing image classification, object detection, or segmentation pipelines. Triggers on image classification, object detection,
+    YOLO, semantic segmentation, image preprocessing, data augmentation, transfer learning, CNN architectures, vision transformers, and any task requiring visual recognition or image analysis.
+  category: ai-ml
+- name: content-marketing
+  version: 0.1.0
+  description: Use this skill when creating content strategy, writing SEO-optimized blog posts, planning content calendars, or repurposing content across channels. Triggers on blog strategy, content calendar,
+    SEO content, content repurposing, editorial workflow, content pillars, topic clusters, and any task requiring content marketing planning or execution.
+  category: marketing
+- name: content-seo
+  version: 0.1.0
+  description: Use this skill when optimizing content for search engines - topic cluster strategy, pillar page architecture, E-E-A-T signals (Experience, Expertise, Authoritativeness, Trustworthiness),
+    content freshness, keyword cannibalization detection, topical authority building, and content gap analysis. Triggers on content planning for SEO, fixing thin content, building topical authority, or
+    resolving cannibalization issues.
+  category: marketing
+- name: contract-drafting
+  version: 0.1.0
+  description: Use this skill when drafting NDAs, MSAs, SaaS agreements, licensing terms, or redlining contracts. Triggers on contract drafting, NDA, MSA, SaaS agreement, licensing, redlining, terms of
+    service, data processing agreements, and any task requiring commercial contract creation or review.
+  category: operations
+- name: copywriting
+  version: 0.1.0
+  description: Use this skill when writing headlines, landing page copy, CTAs, email subject lines, or persuasive content. Triggers on copywriting, headlines, landing pages, call to action, persuasion frameworks,
+    AIDA, PAS, value propositions, and any task requiring compelling marketing or sales copy.
+  category: marketing
+- name: core-web-vitals
+  version: 0.1.0
+  description: Use this skill when optimizing Core Web Vitals - LCP (Largest Contentful Paint), INP (Interaction to Next Paint), and CLS (Cumulative Layout Shift). Triggers on page speed optimization, Lighthouse
+    score improvement, fixing layout shifts, improving responsiveness, setting up performance monitoring with CrUX or RUM, and framework-specific CWV fixes for Next.js, Nuxt, Astro, and Remix.
+  category: marketing
+- name: crm-management
+  version: 0.1.0
+  description: Use this skill when configuring CRM workflows, managing sales pipelines, building forecasting models, or optimizing CRM data hygiene. Triggers on Salesforce, HubSpot, CRM workflows, pipeline
+    management, deal stages, forecasting, CRM automation, and any task requiring CRM architecture or process optimization.
+  category: sales
+- name: cryptography
+  version: 0.1.0
+  description: Use this skill when implementing encryption, hashing, TLS configuration, JWT tokens, or key management. Triggers on encryption, hashing, bcrypt, AES, RSA, TLS certificates, JWT signing, HMAC,
+    key rotation, digital signatures, and any task requiring cryptographic implementation or protocol selection.
+  category: engineering
+- name: customer-research
+  version: 0.1.0
+  description: Use this skill when conducting customer research - designing surveys, writing interview guides, performing NPS deep-dive analysis, interpreting behavioral analytics (funnels, cohorts, retention),
+    or building data-driven user personas. Triggers on "create a survey", "interview script", "NPS analysis", "user persona", "behavioral analytics", "customer segmentation", "voice of customer", "churn
+    analysis", "jobs to be done", or "research plan".
+  category: product
+- name: customer-success-playbook
+  version: 0.1.0
+  description: Use this skill when building health scores, predicting churn, identifying expansion signals, or running QBRs. Triggers on customer success, health scores, churn prediction, expansion signals,
+    customer QBRs, onboarding playbooks, NRR optimization, and any task requiring customer success strategy or operations.
+  category: operations
+- name: customer-support-ops
+  version: 0.1.0
+  description: Use this skill when designing ticket triage systems, managing SLAs, creating macros, or building escalation workflows. Triggers on ticket triage, SLA management, support macros, escalation
+    workflows, support queue, first response time, and any task requiring customer support process design or optimization.
+  category: operations
+- name: cypress-testing
+  version: 0.1.0
+  description: Use this skill when writing Cypress e2e or component tests, creating custom commands, intercepting network requests, or integrating Cypress in CI. Triggers on Cypress, cy.get, cy.intercept,
+    cypress component testing, custom commands, fixtures, cypress-cucumber, and any task requiring Cypress test automation.
+  category: engineering
+- name: data-pipelines
+  version: 0.1.0
+  description: Use this skill when building data pipelines, ETL/ELT workflows, or data transformation layers. Triggers on Airflow DAG design, dbt model creation, Spark job optimization, streaming vs batch
+    architecture decisions, data ingestion, data quality checks, pipeline orchestration, incremental loads, CDC (change data capture), schema evolution, and data warehouse modeling. Acts as a senior data
+    engineer advisor for building reliable, scalable data infrastructure.
+  category: data
+- name: data-quality
+  version: 0.1.0
+  description: Use this skill when implementing data validation, data quality monitoring, data lineage tracking, data contracts, or Great Expectations test suites. Triggers on schema validation, data profiling,
+    freshness checks, row-count anomalies, column drift, expectation suites, contract testing between producers and consumers, lineage graphs, data observability, and any task requiring data integrity enforcement
+    across pipelines.
+  category: data
+- name: data-science
+  version: 0.1.0
+  description: Use this skill when performing exploratory data analysis, statistical testing, data visualization, or building predictive models. Triggers on EDA, pandas, matplotlib, seaborn, hypothesis
+    testing, A/B test analysis, correlation, regression, feature engineering, and any task requiring data analysis or statistical inference.
+  category: ai-ml
+- name: data-warehousing
+  version: 0.1.0
+  description: Use this skill when designing data warehouses, building star or snowflake schemas, implementing slowly changing dimensions (SCDs), writing analytical SQL for Snowflake or BigQuery, creating
+    fact and dimension tables, or planning ETL/ELT pipelines for analytics. Triggers on dimensional modeling, surrogate keys, conformed dimensions, warehouse architecture, data vault, partitioning strategies,
+    materialized views, and any task requiring OLAP schema design or warehouse query optimization.
+  category: data
+- name: database-engineering
+  version: 0.1.0
+  description: Use this skill when designing database schemas, optimizing queries, creating indexes, planning migrations, or choosing between database technologies. Triggers on schema design, normalization,
+    indexing strategies, query optimization, EXPLAIN plans, migrations, partitioning, replication, connection pooling, and any task requiring database architecture or performance decisions.
+  category: engineering
+- name: debugging-tools
+  version: 0.1.0
+  description: Use this skill when debugging applications using Chrome DevTools, lldb, strace, network tools, or memory profilers. Triggers on Chrome DevTools, debugger, breakpoints, network debugging,
+    memory profiling, strace, ltrace, core dumps, and any task requiring systematic debugging with specialized tools.
+  category: devtools
+- name: design-systems
+  version: 0.1.0
+  description: Use this skill when building design systems, creating component libraries, defining design tokens, implementing theming, or setting up Storybook. Triggers on design tokens, component library,
+    Storybook, theming, CSS variables, style dictionary, variant props, compound components, and any task requiring systematic UI component architecture.
+  category: design
+- name: developer-advocacy
+  version: 0.1.0
+  description: Use this skill when creating conference talks, live coding demos, technical blog posts, SDK quickstart examples, or community engagement strategies. Triggers on developer relations, DevRel,
+    developer experience, tech evangelism, talk proposals, CFP submissions, demo scripts, tutorial writing, hackathon planning, community building, and any task involving advocating a product or API to
+    a developer audience.
+  category: marketing
+- name: developer-experience
+  version: 0.1.0
+  description: Use this skill when designing SDKs, writing onboarding flows, creating changelogs, or authoring migration guides. Triggers on developer experience (DX), API ergonomics, SDK design, getting-started
+    guides, quickstart documentation, breaking change communication, version migration, upgrade paths, developer portals, and developer advocacy. Covers the full DX lifecycle from first impression to long-term
+    retention.
+  category: engineering
+- name: docker-kubernetes
+  version: 0.1.0
+  description: Use this skill when containerizing applications, writing Dockerfiles, deploying to Kubernetes, creating Helm charts, or configuring service mesh. Triggers on Docker, Kubernetes, k8s, containers,
+    pods, deployments, services, ingress, Helm, Istio, container orchestration, and any task requiring container or cluster management.
+  category: infra
+- name: ecommerce-seo
+  version: 0.1.0
+  description: Use this skill when optimizing e-commerce sites for search engines - product page SEO, faceted navigation crawl control, category taxonomy, product schema markup, pagination handling, inventory-aware
+    SEO (out-of-stock pages), and e-commerce site architecture. Triggers on any task involving online store search optimization, product listing pages, shopping search results, or e-commerce technical SEO
+    challenges.
+  category: marketing
+- name: edge-computing
+  version: 0.1.0
+  description: Use this skill when deploying edge functions, writing Cloudflare Workers, configuring CDN cache logic, optimizing latency with edge-side processing, or building serverless-at-the-edge architectures.
+    Triggers on edge functions, CDN rules, Cloudflare Workers, Deno Deploy, Vercel Edge Functions, Lambda@Edge, cache headers, geo-routing, and any task requiring computation close to the user.
+  category: cloud
+- name: email-deliverability
+  version: 0.1.0
+  description: Use this skill when optimizing email deliverability, sender reputation, or authentication. Triggers on SPF record setup, DKIM signing configuration, DMARC policy deployment, IP warm-up planning,
+    bounce handling strategy, sender reputation monitoring, inbox placement troubleshooting, email infrastructure hardening, DNS TXT record configuration for email, and diagnosing why emails land in spam.
+    Acts as a senior email infrastructure advisor for engineers and marketers managing transactional or marketing email.
+  category: communication
+- name: email-marketing
+  version: 0.1.0
+  description: Use this skill when designing email campaigns, building drip sequences, improving deliverability, or A/B testing email content. Triggers on email campaigns, drip sequences, newsletter, email
+    deliverability, subject lines, email automation, segmentation, open rates, click-through rates, and any task requiring email marketing strategy or execution.
+  category: marketing
+- name: employee-engagement
+  version: 0.1.0
+  description: Use this skill when designing engagement surveys, running pulse checks, building retention strategies, or improving culture. Triggers on employee engagement, surveys, pulse checks, retention
+    strategies, culture building, eNPS, team health, and any task requiring engagement measurement or improvement programs.
+  category: operations
+- name: employment-law
+  version: 0.1.0
+  description: Use this skill when drafting offer letters, handling terminations, classifying workers, or creating workplace policies. Triggers on offer letters, termination process, contractor vs employee,
+    workplace policies, employment agreements, severance, non-compete, and any task requiring employment law guidance or HR legal compliance.
+  category: operations
+- name: event-driven-architecture
+  version: 0.1.0
+  description: Use this skill when designing event-driven systems, implementing event sourcing, applying CQRS patterns, selecting message brokers, or reasoning about eventual consistency. Triggers on tasks
+    involving Kafka, RabbitMQ, event stores, command-query separation, domain events, sagas, compensating transactions, idempotency, message ordering, and any architecture where components communicate through
+    asynchronous events rather than direct synchronous calls.
+  category: engineering
+- name: figma-to-code
+  version: 0.1.0
+  description: Use this skill when translating Figma designs to code, interpreting design specs, matching visual fidelity, or bridging designer-developer handoff. Triggers on Figma implementation, design-to-code,
+    pixel-perfect, design handoff, auto layout to flexbox, Figma tokens, component variants to props, and any task requiring faithful implementation of design mockups.
+  category: design
+- name: financial-modeling
+  version: 0.1.0
+  description: Use this skill when building financial models, DCF analyses, revenue forecasts, scenario analyses, or cap tables. Triggers on DCF, LBO, revenue forecasting, scenario analysis, cap tables,
+    financial projections, valuation, unit economics, and any task requiring financial model design or analysis.
+  category: operations
+- name: financial-reporting
+  version: 0.1.0
+  description: Use this skill when preparing P&L statements, balance sheets, cash flow reports, board decks, or KPI dashboards. Triggers on financial statements, P&L, balance sheet, cash flow statement,
+    board reporting, KPI dashboards, investor reporting, and any task requiring financial report preparation or presentation.
+  category: operations
+- name: frontend-developer
+  version: 0.1.0
+  description: Senior frontend engineering expertise for building high-quality web interfaces. Use this skill when writing, reviewing, or optimizing frontend code - HTML, CSS, JavaScript, TypeScript, components,
+    layouts, forms, or interactive UI. Triggers on web performance optimization (Core Web Vitals, bundle size, lazy loading), accessibility audits (WCAG, ARIA, keyboard navigation, screen readers), code
+    quality reviews, component architecture decisions, testing strategy, and modern CSS patterns. Covers the full frontend spectrum from semantic markup to production performance.
+  category: engineering
+- name: game-audio
+  version: 0.1.0
+  description: Use this skill when designing or implementing audio systems for games - sound effects, adaptive music, spatial/3D audio, and middleware integration with FMOD or Wwise. Triggers on sound design,
+    audio implementation, adaptive music systems, spatial audio, HRTF, audio middleware setup, sound event architecture, audio mixing, dynamic soundscapes, and game audio optimization. Covers FMOD Studio,
+    Audiokinetic Wwise, and engine-native audio APIs.
+  category: game-development
+- name: game-balancing
+  version: 0.1.0
+  description: Use this skill when working with game balancing - economy design, difficulty curves, progression systems, reward schedules, playtesting analysis, or tuning game parameters. Triggers on any
+    game design task involving resource sinks and faucets, XP curves, loot tables, difficulty scaling, player retention mechanics, or interpreting playtest data to adjust game feel.
+  category: engineering
+- name: game-design-patterns
+  version: 0.1.0
+  description: Use this skill when implementing game programming patterns - state machines for character/AI behavior, object pooling for performance-critical spawning, event systems for decoupled game communication,
+    or the command pattern for input handling, undo/redo, and replays. Triggers on game architecture, game loop design, entity management, finite state machines, object pools, observer/event bus, command
+    queues, and gameplay programming patterns.
+  category: engineering
+- name: geo-optimization
+  version: 0.1.0
+  description: Use this skill when optimizing for AI-powered search engines and generative search results - Google AI Overviews, ChatGPT Search (SearchGPT), Perplexity, Microsoft Copilot Search, and other
+    LLM-powered answer engines. Covers Generative Engine Optimization (GEO), citation signals for AI search, entity authority, LLMs.txt specification, and LLM-friendliness patterns based on Princeton GEO
+    research. Triggers on visibility in AI search, getting cited by LLMs, or adapting SEO for the AI search era.
+  category: marketing
+- name: git-advanced
+  version: 0.1.0
+  description: Use this skill when performing advanced git operations, rebase strategies, bisecting bugs, managing worktrees, configuring hooks, or handling complex merge scenarios. Triggers on interactive
+    rebase, git bisect, worktrees, pre-commit hooks, cherry-pick, reflog recovery, stash management, and any task requiring advanced git workflows.
+  category: devtools
+- name: growth-hacking
+  version: 0.1.0
+  description: Use this skill when designing viral loops, building referral programs, optimizing activation funnels, or improving retention. Triggers on growth loops, referral programs, activation funnels,
+    retention strategies, viral coefficient, product-led growth, AARRR metrics, and any task requiring growth experimentation or optimization.
+  category: marketing
+- name: incident-management
+  version: 0.1.0
+  description: Use this skill when managing production incidents, designing on-call rotations, writing runbooks, conducting post-mortems, setting up status pages, or running war rooms. Triggers on incident
+    response, incident commander, on-call schedule, pager escalation, runbook authoring, post-incident review, blameless retro, status page updates, war room coordination, severity classification, and any
+    task requiring structured incident lifecycle management.
+  category: operations
+- name: internal-docs
+  version: 0.1.0
+  description: Use this skill when writing, reviewing, or improving internal engineering documents - RFCs, design docs, post-mortems, runbooks, and knowledge base articles. Triggers on drafting a design
+    proposal, writing an RFC, creating a post-mortem after an incident, building an operational runbook, organizing team knowledge, or improving existing documentation for clarity and completeness.
+  category: writing
+- name: international-seo
+  version: 0.1.0
+  description: Use this skill when optimizing websites for multiple countries or languages - hreflang tag implementation, URL structure strategy (ccTLD vs subdomain vs subdirectory), geo-targeting in Google
+    Search Console, multilingual content strategy, and international site architecture. Triggers on multi-language sites, multi-region targeting, hreflang debugging, or expanding a site to new markets.
+  category: marketing
+- name: interview-design
+  version: 0.1.0
+  description: Use this skill when designing structured interviews, creating rubrics, building coding challenges, or assessing culture fit. Triggers on interview design, rubrics, scoring criteria, coding
+    challenges, behavioral interviews, system design interviews, culture fit assessment, and any task requiring interview process design or evaluation criteria.
+  category: operations
+- name: ios-swift
+  version: 0.1.0
+  description: Expert iOS development skill covering SwiftUI, UIKit, Core Data, App Store guidelines, and performance optimization. Use this skill when building, reviewing, or debugging iOS apps - views,
+    navigation, data persistence, animations, or submission preparation. Triggers on SwiftUI layout and state management, UIKit view controller lifecycle, Core Data model design and migrations, App Store
+    Review Guidelines compliance, memory and rendering performance profiling, and Swift concurrency patterns for iOS.
+  category: engineering
+- name: ip-management
+  version: 0.1.0
+  description: Use this skill when managing patents, trademarks, trade secrets, or open-source licensing. Triggers on intellectual property, patents, trademarks, trade secrets, open-source licensing, copyright,
+    IP strategy, license compliance, and any task requiring IP protection or licensing decisions.
+  category: operations
+- name: jest-vitest
+  version: 0.1.0
+  description: Use this skill when writing unit tests with Jest or Vitest, implementing mocking strategies, configuring test runners, or improving test coverage. Triggers on Jest, Vitest, describe/it/expect,
+    mocking, vi.fn, jest.fn, snapshot testing, test coverage, and any task requiring JavaScript/TypeScript unit testing.
+  category: engineering
+- name: keyword-research
+  version: 1.0.0
+  description: Use this skill when performing keyword research, search intent analysis, keyword clustering, SERP analysis, competitor keyword gaps, long-tail keyword discovery, or evaluating keywords for
+    snippet opportunity, AI Overview presence, and tri-surface keyword reports. Covers organic (SEO), answer engine (AEO snippets/PAA), and AI citation (GEO AI Overviews/ChatGPT Search/Perplexity) surfaces.
+  category: marketing
+- name: knowledge-base
+  version: 0.1.0
+  description: Use this skill when designing help center architecture, writing support articles, or optimizing search and self-service. Triggers on knowledge base, help center, support articles, self-service,
+    article templates, search optimization, content taxonomy, and any task requiring help documentation design or management.
+  category: operations
+- name: lead-scoring
+  version: 0.1.0
+  description: Use this skill when defining ideal customer profiles, building scoring models, identifying intent signals, or qualifying leads. Triggers on lead scoring, ICP definition, scoring models, intent
+    signals, MQL, SQL, lead qualification, BANT, and any task requiring lead prioritization or qualification framework design.
+  category: sales
+- name: link-building
+  version: 0.1.0
+  description: Use this skill when building, auditing, or managing backlinks for SEO. Triggers on digital PR outreach, HARO/Connectively pitching, guest posting strategy, broken link building, anchor text
+    optimization, toxic link auditing, disavow file creation, and link profile analysis. Covers ethical white-hat link acquisition tactics and link equity management.
+  category: marketing
+- name: linux-admin
+  version: 0.1.0
+  description: Use this skill when managing Linux servers, writing shell scripts, configuring systemd services, debugging networking, or hardening security. Triggers on bash scripting, systemd units, iptables,
+    firewall, SSH configuration, file permissions, process management, cron jobs, disk management, and any task requiring Linux system administration.
+  category: infra
+- name: live-dependency-resolver
+  version: 0.1.0
+  description: 'Use this skill when installing, adding, or updating packages, checking latest versions, scaffolding projects with dependencies, or generating code that imports third-party packages. Triggers
+    on npm install, pip install, cargo add, gem install, go get, dependency resolution, package management, module installation, crate addition, or any task requiring live version verification across npm,
+    pip, Go modules, Rust/cargo, and Ruby/gem ecosystems. Covers synonyms: dependency, package, module, crate, gem, library.'
+  category: engineering
+- name: llm-app-development
+  version: 0.1.0
+  description: Use this skill when building production LLM applications, implementing guardrails, evaluating model outputs, or deciding between prompting and fine-tuning. Triggers on LLM app architecture,
+    AI guardrails, output evaluation, model selection, embedding pipelines, vector databases, fine-tuning, function calling, tool use, and any task requiring production AI application design.
+  category: ai-ml
+- name: load-testing
+  version: 0.1.0
+  description: Use this skill when load testing services, benchmarking API performance, planning capacity, or identifying bottlenecks under stress. Triggers on k6, Artillery, JMeter, load testing, stress
+    testing, soak testing, spike testing, performance benchmarks, throughput testing, and any task requiring load or performance testing.
+  category: engineering
+- name: local-seo
+  version: 0.1.0
+  description: Use this skill when optimizing for local search results - Google Business Profile management, local citations, NAP consistency, local schema markup (LocalBusiness), review management, local
+    pack optimization, and geo-targeted content. Triggers on any task involving local search visibility, map pack rankings, multi-location SEO, or local business online presence.
+  category: marketing
+- name: localization-i18n
+  version: 0.1.0
+  description: Use this skill when working with internationalization (i18n), localization (l10n), translation workflows, right-to-left (RTL) layout support, pluralization rules, or ICU MessageFormat syntax.
+    Triggers on translating strings, setting up i18n libraries (react-intl, i18next, FormatJS), handling plural forms, formatting dates/numbers/currencies for locales, building translation pipelines, configuring
+    RTL stylesheets, or writing ICU message patterns with select/plural/selectordinal.
+  category: engineering
+- name: mastra
+  version: 0.1.0
+  description: Use this skill when working with Mastra - the TypeScript AI framework for building agents, workflows, tools, and AI-powered applications. Triggers on creating agents, defining workflows,
+    configuring memory, RAG pipelines, MCP client/server setup, voice integration, evals/scorers, deployment, and Mastra CLI commands. Also triggers on "mastra dev", "mastra build", "mastra init", Mastra
+    Studio, or any Mastra package imports.
+  category: ai-ml
+- name: meta-repo
+  version: 0.1.0
+  description: Use this skill when managing multi-repository systems using the `meta` tool (github.com/mateodelnorte/meta). Triggers on meta git clone, meta exec, meta project create/import/migrate, coordinating
+    commands across many repos, running npm/yarn installs across all projects, migrating a monorepo to a multi-repo architecture, or any workflow that requires running git or shell commands against multiple
+    child repositories at once.
+  category: devtools
+- name: microservices
+  version: 0.1.0
+  description: Use this skill when designing microservice architectures, decomposing monoliths, implementing inter-service communication, or solving distributed data challenges. Triggers on service decomposition,
+    saga pattern, CQRS, event sourcing, API gateway, service mesh, circuit breaker, distributed transactions, and any task requiring microservice design decisions or migration strategies.
+  category: engineering
+- name: ml-ops
+  version: 0.1.0
+  description: Use this skill when deploying ML models to production, setting up model monitoring, implementing A/B testing for models, or managing feature stores. Triggers on model deployment, model serving,
+    ML pipelines, feature engineering, model versioning, data drift detection, model registry, experiment tracking, and any task requiring machine learning operations infrastructure.
+  category: ai-ml
+- name: mobile-testing
+  version: 0.1.0
+  description: Use this skill when writing or configuring mobile app tests with Detox or Appium, setting up device farms (AWS Device Farm, Firebase Test Lab, BrowserStack), integrating crash reporting (Crashlytics,
+    Sentry, Bugsnag), or distributing beta builds (TestFlight, Firebase App Distribution, App Center). Triggers on mobile e2e testing, native app automation, device matrix testing, crash symbolication,
+    and OTA beta distribution workflows.
+  category: engineering
+- name: monorepo-management
+  version: 0.1.0
+  description: Use this skill when setting up or managing monorepos, configuring workspace dependencies, optimizing build caching, or choosing between monorepo tools. Triggers on Turborepo, Nx, Bazel, pnpm
+    workspaces, npm workspaces, yarn workspaces, build pipelines, task orchestration, affected commands, and any task requiring multi-package repository management.
+  category: engineering
+- name: motion-design
+  version: 0.1.0
+  description: Use this skill when implementing animations, transitions, micro-interactions, or motion design in web applications. Triggers on CSS animations, Framer Motion, GSAP, keyframes, transitions,
+    spring animations, scroll-driven animations, page transitions, loading states, and any task requiring motion or animation implementation.
+  category: design
+- name: nlp-engineering
+  version: 0.1.0
+  description: Use this skill when building NLP pipelines, implementing text classification, semantic search, embeddings, or summarization. Triggers on text preprocessing, tokenization, embeddings, vector
+    search, named entity recognition, sentiment analysis, text classification, summarization, and any task requiring natural language processing.
+  category: ai-ml
+- name: no-code-automation
+  version: 0.1.0
+  description: Use this skill when building workflow automations with Zapier, Make (Integromat), n8n, or similar no-code/low-code platforms. Triggers on workflow automation, Zap creation, Make scenario
+    design, n8n workflow building, webhook routing, internal tooling automation, app integration, trigger-action patterns, and any task requiring connecting SaaS tools without writing full applications.
+  category: workflow
+- name: observability
+  version: 0.1.0
+  description: Use this skill when implementing logging, metrics, distributed tracing, alerting, or defining SLOs. Triggers on structured logging, Prometheus, Grafana, OpenTelemetry, Datadog, distributed
+    tracing, error tracking, dashboards, alert fatigue, SLIs, SLOs, error budgets, and any task requiring system observability or monitoring setup.
+  category: monitoring
+- name: on-site-seo
+  version: 0.1.0
+  description: Use this skill when implementing on-page SEO fixes in code - meta tags, title tags, heading structure, internal linking, image optimization, semantic HTML, Open Graph and Twitter card tags,
+    and framework-specific SEO patterns. Covers Next.js Metadata API and generateMetadata, Nuxt useSeoMeta, Astro SEO patterns, and Remix meta function. Triggers on any hands-on code task to improve a page's
+    on-site SEO signals.
+  category: marketing
+- name: onboarding
+  version: 0.1.0
+  description: Use this skill when designing onboarding programs, creating 30/60/90 plans, setting up buddy systems, or measuring ramp effectiveness. Triggers on onboarding plans, 30/60/90 day plans, buddy
+    programs, knowledge transfer, ramp metrics, new hire experience, and any task requiring employee onboarding design or optimization.
+  category: operations
+- name: open-source-management
+  version: 0.1.0
+  description: Use this skill when maintaining open source projects, managing OSS governance, writing changelogs, building community, choosing licenses, handling contributions, or managing releases. Triggers
+    on tasks related to CONTRIBUTING.md, CODE_OF_CONDUCT, release notes, semantic versioning, maintainer workflows, issue triage, PR review policies, licensing decisions, community health, and open source
+    project governance.
+  category: engineering
+- name: partnership-strategy
+  version: 0.1.0
+  description: Use this skill when planning co-marketing campaigns, technology integrations, channel partnership programs, or affiliate programs. Triggers on partner strategy, co-marketing, co-selling,
+    integration partnerships, channel sales, reseller programs, affiliate commission structures, partner enablement, partner portals, referral programs, joint go-to-market, ecosystem development, and any
+    task involving building or managing business partnerships.
+  category: sales
+- name: penetration-testing
+  version: 0.1.0
+  description: Use this skill when conducting authorized penetration tests, vulnerability assessments, or security audits within proper engagement scope. Triggers on pentest methodology, vulnerability scanning,
+    OWASP testing guide, Burp Suite, reconnaissance, exploitation, reporting, and any task requiring structured security assessment within authorized engagements or CTF competitions.
+  category: engineering
+- name: performance-engineering
+  version: 0.1.0
+  description: Use this skill when profiling application performance, debugging memory leaks, optimizing latency, benchmarking code, or reducing resource consumption. Triggers on CPU profiling, memory profiling,
+    flame graphs, garbage collection tuning, load testing, P99 latency, throughput optimization, bundle size reduction, and any task requiring performance analysis or optimization.
+  category: engineering
+- name: performance-management
+  version: 0.1.0
+  description: Use this skill when designing OKR systems, writing performance reviews, running calibration sessions, creating PIPs, or building career ladders. Triggers on OKRs, performance reviews, calibration,
+    PIPs, career ladders, leveling frameworks, feedback cycles, and any task requiring performance management system design.
+  category: operations
+- name: pixel-art-sprites
+  version: 0.1.0
+  description: Use this skill when creating pixel art sprites, animating sprite sheets, building tilesets for 2D games, or managing indexed color palettes. Triggers on pixel art, sprite sheet, sprite animation,
+    tileset, tile map, pixel palette, indexed color, dithering, sub-pixel animation, NES palette, walk cycle sprite, and any task involving low-resolution raster art for games or retro aesthetics.
+  category: design
+- name: playwright-testing
+  version: 1.0.0
+  description: Use this skill when writing Playwright e2e tests, debugging flaky tests, setting up visual regression, testing APIs with request context, configuring CI sharding, or automating browser interactions.
+    Triggers on Playwright, page.route, storageState, toHaveScreenshot, trace viewer, codegen, test.describe, page object model, and any task requiring Playwright test automation or flaky test diagnosis.
+  category: engineering
+- name: posthog
+  version: 0.1.0
+  description: Use this skill when working with PostHog - product analytics, web analytics, feature flags, A/B testing, experiments, session replay, error tracking, surveys, LLM observability, or data warehouse.
+    Triggers on any PostHog-related task including capturing events, identifying users, evaluating feature flags, creating experiments, setting up surveys, tracking errors, and querying analytics data via
+    the PostHog API or SDKs (posthog-js, posthog-node, posthog-python).
+  category: analytics
+- name: presentation-design
+  version: 0.1.0
+  description: Use this skill when designing presentations, slide decks, or pitch materials. Triggers on "create a presentation", "design slides", "build a deck", "structure my talk", "make a pitch deck",
+    "data visualization for slides", or any request involving slide layout, storytelling frameworks (Pyramid Principle, Hero's Journey, Problem-Solution-Benefit), narrative arc, speaker notes, or chart
+    selection for presentations. Covers slide structure, visual hierarchy, data-driven storytelling, and deck architecture from executive summaries to conference keynotes.
+  category: design
+- name: pricing-strategy
+  version: 0.1.0
+  description: Use this skill when designing pricing models, packaging products into tiers, building freemium funnels, implementing usage-based billing, structuring enterprise pricing, or running price
+    tests. Triggers on pricing pages, monetization strategy, willingness-to-pay research, price sensitivity analysis, free-to-paid conversion, seat-based vs consumption pricing, and A/B testing prices.
+  category: product
+- name: privacy-compliance
+  version: 0.1.0
+  description: Use this skill when implementing GDPR or CCPA compliance, designing consent management, conducting DPIAs, or managing data processing agreements. Triggers on GDPR, CCPA, data privacy, consent
+    management, DPIA, data subject rights, privacy policy, cookie consent, and any task requiring privacy regulation compliance or data protection design.
+  category: operations
+- name: product-analytics
+  version: 0.1.0
+  description: Use this skill when analyzing product funnels, running cohort analysis, measuring feature adoption, or defining product metrics. Triggers on product analytics, funnel analysis, cohort analysis,
+    feature adoption, north star metric, AARRR, retention curves, and any task requiring product data analysis or metrics design.
+  category: product
+- name: product-discovery
+  version: 0.1.0
+  description: Use this skill when applying Jobs-to-be-Done, building opportunity solution trees, mapping assumptions, or validating product ideas. Triggers on product discovery, JTBD, jobs-to-be-done,
+    opportunity solution trees, assumption mapping, experiment design, prototype testing, and any task requiring product discovery methodology.
+  category: product
+- name: product-launch
+  version: 0.1.0
+  description: Use this skill when planning go-to-market strategy, running beta programs, creating launch checklists, or managing rollout strategy. Triggers on product launch, go-to-market, GTM strategy,
+    beta programs, launch checklist, rollout strategy, launch tiers, and any task requiring product release planning or execution.
+  category: product
+- name: product-strategy
+  version: 0.1.0
+  description: Use this skill when defining product vision, building roadmaps, prioritizing features, or choosing frameworks like RICE, ICE, or MoSCoW. Triggers on product vision, roadmapping, prioritization,
+    RICE scoring, product strategy, feature prioritization, OKRs for product, and any task requiring product direction or planning decisions.
+  category: product
+- name: programmatic-seo
+  version: 0.1.0
+  description: Use this skill when building programmatic SEO pages at scale - template-based page generation, data-driven landing pages, automated internal linking, and avoiding thin content or doorway
+    page penalties. Triggers on generating thousands of location pages, comparison pages, tool pages, or any template-driven SEO content strategy that creates pages programmatically from data sources.
+  category: marketing
+- name: project-execution
+  version: 0.1.0
+  description: Use this skill when planning, executing, or recovering software projects with a focus on risk management, dependency tracking, and stakeholder communication. Triggers on project planning,
+    risk assessment, dependency mapping, status reporting, milestone tracking, stakeholder updates, escalation decisions, timeline estimation, resource allocation, and project recovery. Covers RAID logs,
+    critical path analysis, and communication cadences.
+  category: operations
+- name: prompt-engineering
+  version: 0.1.0
+  description: Use this skill when crafting LLM prompts, implementing chain-of-thought reasoning, designing few-shot examples, building RAG pipelines, or optimizing prompt performance. Triggers on prompt
+    design, system prompts, few-shot learning, chain-of-thought, prompt chaining, RAG, retrieval-augmented generation, prompt templates, structured output, and any task requiring effective LLM interaction
+    patterns.
+  category: ai-ml
+- name: proposal-writing
+  version: 0.1.0
+  description: Use this skill when writing proposals, responding to RFPs, drafting SOWs, or developing pricing strategies. Triggers on proposal writing, RFP response, statement of work, pricing strategy,
+    win themes, executive summary, and any task requiring business proposal creation or optimization.
+  category: sales
+- name: react-ink
+  version: 0.1.0
+  description: Use this skill when building terminal user interfaces with React Ink - interactive CLI apps, terminal dashboards, progress displays, or keyboard-driven TUI components. Triggers on React Ink,
+    Ink components, terminal UI with React, useInput, useFocus, Box/Text layout, create-ink-app, and any task requiring rich interactive terminal interfaces built with React and Flexbox.
+  category: engineering
+- name: react-native
+  version: 0.1.0
+  description: Expert React Native and Expo development skill for building cross-platform mobile apps. Use this skill when creating, debugging, or optimizing React Native projects - Expo setup, native modules,
+    navigation (React Navigation, Expo Router), performance tuning (Hermes, FlatList, re-render prevention), OTA updates (EAS Update, CodePush), and bridging native iOS/Android code. Triggers on mobile
+    app architecture, Expo config plugins, app store deployment, push notifications, and React Native CLI tasks.
+  category: engineering
+- name: real-time-streaming
+  version: 0.1.0
+  description: Use this skill when building real-time data pipelines, stream processing jobs, or change data capture systems. Triggers on tasks involving Apache Kafka (producers, consumers, topics, partitions,
+    consumer groups, Connect, Streams), Apache Flink (DataStream API, windowing, checkpointing, stateful processing), event sourcing implementations, CDC with Debezium, stream processing patterns (windowing,
+    watermarks, exactly-once semantics), and any pipeline that processes unbounded data in motion rather than data at rest.
+  category: data
+- name: recruiting-ops
+  version: 0.1.0
+  description: Use this skill when writing job descriptions, building sourcing strategies, designing screening processes, or creating interview frameworks. Triggers on job descriptions, candidate sourcing,
+    screening criteria, interview loops, recruiting pipelines, offer management, and any task requiring talent acquisition process design.
+  category: operations
+- name: refactoring-patterns
+  version: 0.1.0
+  description: Use this skill when refactoring code to improve readability, reduce duplication, or simplify complex logic. Triggers on extract method, inline variable, replace conditional with polymorphism,
+    introduce parameter object, decompose conditional, replace magic numbers, pull up/push down method, and any task requiring systematic code transformation without changing behavior.
+  category: engineering
+- name: regex-mastery
+  version: 0.1.0
+  description: Use this skill when writing regular expressions, debugging pattern matching, optimizing regex performance, or implementing text validation. Triggers on regex, regular expressions, pattern
+    matching, lookahead, lookbehind, named groups, capture groups, backreferences, and any task requiring text pattern matching.
+  category: devtools
+- name: regulatory-compliance
+  version: 0.1.0
+  description: Use this skill when preparing for SOC 2, HIPAA, or PCI-DSS compliance, conducting audits, or implementing security controls. Triggers on SOC 2, HIPAA, PCI-DSS, compliance audit, security
+    controls, risk assessment, control frameworks, and any task requiring regulatory compliance planning or audit preparation.
+  category: operations
+- name: remote-collaboration
+  version: 0.1.0
+  description: Use this skill when facilitating remote team collaboration - async-first workflows, documentation-driven decision making, meeting facilitation, and distributed team communication. Triggers
+    on designing async processes, writing RFCs or decision docs, preparing meeting agendas, running standups or retros, establishing communication norms, reducing meeting load, or improving handoff quality
+    across time zones.
+  category: operations
+- name: remotion-video
+  version: 0.1.0
+  description: Use this skill when creating programmatic videos with Remotion, building React-based video compositions, implementing animations (text, element, scene transitions), rendering videos to MP4/WebM,
+    or setting up standalone Remotion projects. Triggers on video creation, Remotion compositions, useCurrentFrame, interpolate, spring animations, and video rendering.
+  category: video
+- name: responsive-design
+  version: 0.1.0
+  description: Use this skill when building responsive layouts, implementing fluid typography, using container queries, or defining breakpoint strategies. Triggers on responsive design, mobile-first, media
+    queries, container queries, fluid typography, clamp(), viewport units, grid layout, flexbox patterns, and any task requiring adaptive or responsive web design.
+  category: design
+- name: saas-metrics
+  version: 0.1.0
+  description: Use this skill when calculating, analyzing, or reporting SaaS business metrics. Triggers on MRR, ARR, churn rate, LTV, CAC, LTV:CAC ratio, cohort analysis, net revenue retention, expansion
+    revenue, board deck metrics, investor reporting, unit economics, payback period, or SaaS financial modeling. Covers metric definitions, formulas, spreadsheet implementation, cohort tables, and board-ready
+    reporting for founders, finance teams, and growth operators.
+  category: analytics
+- name: sales-enablement
+  version: 0.1.0
+  description: Use this skill when creating battle cards, competitive intelligence, case studies, or ROI calculators for sales teams. Triggers on battle cards, competitive analysis, case studies, sales
+    collateral, ROI calculators, sales training, product positioning, and any task requiring sales enablement content or strategy.
+  category: sales
+- name: sales-playbook
+  version: 0.1.0
+  description: Use this skill when designing outbound sequences, handling objections, running discovery calls, or implementing sales methodologies. Triggers on outbound sales, cold email sequences, objection
+    handling, discovery calls, MEDDIC, BANT, sales methodology, closing techniques, and any task requiring structured sales process design or execution.
+  category: sales
+- name: schema-markup
+  version: 0.1.0
+  description: Use this skill when implementing structured data markup using JSON-LD and Schema.org vocabulary for rich search results. Triggers on adding schema markup for FAQ, HowTo, Product, Article,
+    Breadcrumb, Organization, LocalBusiness, Event, Recipe, or any Schema.org type. Covers JSON-LD implementation, Google Rich Results eligibility, validation testing, and framework integration (Next.js,
+    Nuxt, Astro).
+  category: marketing
+- name: second-brain
+  version: 0.1.0
+  description: Use this skill when managing persistent user memory in ~/.memory/ - a structured, hierarchical second brain for AI agents. Triggers on conversation start (auto-load relevant memories by matching
+    context against tags), "remember this", "what do you know about X", "update my memory", completing complex tasks (auto-propose saving learnings), onboarding a new user, searching past learnings, or
+    maintaining the memory graph - splitting large files, pruning stale entries, and updating cross-references.
+  category: devtools
+- name: security-incident-response
+  version: 0.1.0
+  description: Use this skill when responding to security incidents, conducting forensic analysis, containing breaches, or writing incident reports. Triggers on security incident, breach response, forensics,
+    containment, eradication, recovery, incident report, IOC analysis, and any task requiring security incident management.
+  category: engineering
+- name: sentry
+  version: 0.1.0
+  description: Use this skill when working with Sentry - error monitoring, performance tracing, session replay, cron monitoring, alerts, or source maps. Triggers on any Sentry-related task including SDK
+    initialization, issue triage, custom instrumentation, uploading source maps, configuring alerts, and integrating Sentry into JavaScript, Python, Next.js, or other supported frameworks.
+  category: monitoring
+- name: seo-audit
+  version: 0.1.0
+  description: Use this skill when performing a comprehensive SEO audit - technical audit, on-page audit, content audit, off-page audit, and AEO/GEO readiness assessment. Provides a structured scorecard
+    with 30-40 checks rated PASS/FAIL/WARN across all SEO categories, prioritized recommendations, and links to specialized skills for deep fixes. This is the master audit skill that orchestrates all other
+    SEO skills.
+  category: marketing
+- name: seo-mastery
+  version: 0.1.0
+  description: Use this skill when optimizing for search engines, conducting keyword research, implementing technical SEO, or building link strategies. Triggers on SEO, keyword research, meta tags, schema
+    markup, Core Web Vitals, sitemap, robots.txt, link building, search console, and any task requiring search engine optimization.
+  category: marketing
+- name: shell-scripting
+  version: 0.1.0
+  description: Use this skill when writing bash or zsh scripts, parsing arguments, handling errors, or automating CLI workflows. Triggers on bash scripting, shell scripts, argument parsing, process substitution,
+    here documents, signal trapping, exit codes, and any task requiring portable shell script development.
+  category: devtools
+- name: signoz
+  version: 0.1.0
+  description: Use this skill when working with SigNoz - open-source observability platform for application monitoring, distributed tracing, log management, metrics, alerts, and dashboards. Triggers on
+    SigNoz setup, OpenTelemetry instrumentation for SigNoz, sending traces/logs/metrics to SigNoz, creating SigNoz dashboards, configuring SigNoz alerts, exception monitoring, and migrating from Datadog/Grafana/New
+    Relic to SigNoz.
+  category: monitoring
+- name: site-reliability
+  version: 0.1.0
+  description: Use this skill when implementing SRE practices, defining error budgets, reducing toil, planning capacity, or improving service reliability. Triggers on SRE, error budgets, SLOs, SLAs, toil
+    automation, incident management, postmortems, on-call rotation, capacity planning, chaos engineering, and any task requiring reliability engineering decisions.
+  category: engineering
+- name: skill-audit
+  version: 0.1.0
+  description: Use this skill when auditing AI agent skills for security vulnerabilities, prompt injection, permission abuse, supply chain risks, or structural quality. Triggers on skill review, security
+    audit, skill safety check, prompt injection detection, skill trust verification, skill quality gate, and any task requiring security analysis of AI agent skill files.
+  category: engineering
+- name: skill-forge
+  version: 0.3.0
+  description: 'Generate a production-ready AbsolutelySkilled skill from any source: GitHub repos, documentation URLs, or domain topics (marketing, sales, TypeScript, etc.). Triggers on /skill-forge, "create
+    a skill for X", "generate a skill from these docs", "make a skill for this repo", "build a skill about marketing", or "add X to the registry". For URLs: performs deep doc research (README, llms.txt,
+    API references). For domains: runs a brainstorming discovery session with the user to define scope and content. Outputs a complete skill/ folder with SKILL.md, evals.json, and optionally sources.yaml,
+    ready to PR into the AbsolutelySkilled registry.'
+  category: devtools
+- name: social-media-strategy
+  version: 0.1.0
+  description: Use this skill when planning social media strategy, creating platform-specific content, scheduling posts, or analyzing engagement metrics. Triggers on social media strategy, content scheduling,
+    engagement tactics, platform analytics, community building, hashtag strategy, and any task requiring social media planning or optimization.
+  category: marketing
+- name: spreadsheet-modeling
+  version: 0.1.0
+  description: Use this skill when building, auditing, or optimizing spreadsheet models in Excel or Google Sheets. Triggers on formula writing, pivot table creation, dashboard design, data validation, conditional
+    formatting, macro/VBA scripting, Apps Script automation, financial modeling, what-if analysis, XLOOKUP/INDEX-MATCH lookups, array formulas, and workbook architecture. Covers advanced Excel and Google
+    Sheets for analysts, finance professionals, and operations teams.
+  category: data
+- name: startup-fundraising
+  version: 0.1.0
+  description: Use this skill when preparing pitch decks, negotiating term sheets, conducting due diligence, or managing investor relations. Triggers on fundraising, pitch decks, term sheets, due diligence,
+    investor updates, cap tables, SAFEs, convertible notes, and any task requiring startup funding strategy or execution.
+  category: operations
+- name: supaguard
+  version: 0.1.0
+  description: Create, test, and deploy synthetic monitoring checks from source code using the supaguard CLI. Triggers on monitoring setup, Playwright script generation, uptime checks, health checks, and
+    production observability workflows.
+  category: monitoring
+- name: super-brainstorm
+  version: 0.1.0
+  description: You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, designing systems, or making architectural decisions. Enters
+    plan mode, reads all available docs, explores the codebase deeply, then interviews the user relentlessly with ultrathink-level reasoning on every decision until a shared understanding is reached. Produces
+    a validated design spec before any implementation begins. Triggers on feature requests, design discussions, refactors, new projects, component creation, system changes, and any task requiring design
+    decisions.
+  category: workflow
+- name: super-human
+  version: 0.1.0
+  description: AI-native software development lifecycle that replaces traditional SDLC. Triggers on "plan and build", "break this into tasks", "build this feature end-to-end", "sprint plan this", "super-human
+    this", or any multi-step development task. Decomposes work into dependency-graphed sub-tasks, executes in parallel waves with TDD verification, and tracks progress on a persistent board. Handles features,
+    refactors, greenfield projects, and migrations.
+  category: engineering
+- name: support-analytics
+  version: 0.1.0
+  description: Use this skill when measuring CSAT, NPS, resolution time, deflection rates, or analyzing support trends. Triggers on CSAT, NPS, resolution time, deflection rate, support metrics, trend analysis,
+    support reporting, and any task requiring customer support data analysis or reporting.
+  category: operations
+- name: system-design
+  version: 0.1.0
+  description: Use this skill when designing distributed systems, architecting scalable services, preparing for system design interviews, or making infrastructure decisions. Triggers on load balancing,
+    CAP theorem, sharding, replication, caching strategies, message queues, microservices architecture, database selection, rate limiting, and any task requiring high-level system architecture decisions.
+  category: engineering
+- name: tax-strategy
+  version: 0.1.0
+  description: Use this skill when planning corporate tax strategy, claiming R&D credits, managing transfer pricing, or ensuring tax compliance. Triggers on corporate tax, R&D tax credits, transfer pricing,
+    tax compliance, sales tax, VAT, international tax, and any task requiring tax planning or compliance strategy.
+  category: operations
+- name: technical-interviewing
+  version: 0.1.0
+  description: Use this skill when designing coding challenges, structuring system design interviews, building interview rubrics, calibrating evaluation criteria, or creating hiring loops. Triggers on interview
+    question design, coding assessment creation, system design prompt writing, rubric building, interviewer training, candidate evaluation, and any task requiring structured technical assessment.
+  category: operations
+- name: technical-seo
+  version: 0.1.0
+  description: Use this skill when working on technical SEO infrastructure - crawlability, indexing, XML sitemaps, canonical URLs, robots.txt, redirect chains, rendering strategies (SSR/SSG/ISR/CSR), crawl
+    budget optimization, and search engine rendering. Triggers on fixing indexing issues, configuring crawl directives, choosing rendering strategies for SEO, debugging Google Search Console errors, or
+    auditing site architecture for search engines.
+  category: marketing
+- name: technical-writing
+  version: 0.1.0
+  description: Use this skill when writing, reviewing, or structuring technical documentation for software projects. Triggers on API documentation, tutorials, architecture decision records (ADRs), runbooks,
+    onboarding guides, README files, or any developer-facing prose. Covers documentation structure, writing style, audience analysis, and doc-as-code workflows for engineering teams.
+  category: writing
+- name: terraform-iac
+  version: 0.1.0
+  description: Use this skill when writing Terraform configurations, managing infrastructure as code, creating reusable modules, handling state backends, or detecting drift. Triggers on Terraform, HCL,
+    infrastructure as code, IaC, providers, modules, state management, terraform plan, terraform apply, drift detection, and any task requiring declarative infrastructure provisioning.
+  category: infra
+- name: test-strategy
+  version: 0.1.0
+  description: Use this skill when deciding what to test, choosing between test types, designing a testing strategy, or balancing test coverage. Triggers on test pyramid, unit vs integration vs e2e, contract
+    testing, test coverage strategy, TDD, BDD, testing ROI, and any task requiring testing architecture decisions.
+  category: engineering
+- name: ultimate-ui
+  version: 0.1.0
+  description: Use this skill when building user interfaces that need to look polished, modern, and intentional - not like AI-generated slop. Triggers on UI design tasks including component styling, layout
+    decisions, color choices, typography, spacing, responsive design, dark mode, accessibility, animations, landing pages, onboarding flows, data tables, navigation patterns, and any question about making
+    a UI look professional. Covers CSS, Tailwind, and framework-agnostic design principles.
+  category: engineering
+- name: unity-development
+  version: 0.1.0
+  description: Use this skill when working with Unity game engine - C# scripting, Entity Component System (ECS/DOTS), physics simulation, shader programming (ShaderLab, HLSL, Shader Graph), and UI Toolkit.
+    Triggers on gameplay programming, MonoBehaviour lifecycle, component architecture, rigidbody physics, raycasting, collision handling, custom shader authoring, material configuration, USS styling, UXML
+    layout, and performance optimization for real-time applications. Acts as a senior Unity engineer advisor for game developers building production-quality games and interactive apps.
+  category: engineering
+- name: user-stories
+  version: 0.1.0
+  description: Use this skill when writing user stories, defining acceptance criteria, story mapping, grooming backlogs, or estimating work. Triggers on user stories, acceptance criteria, story mapping,
+    backlog grooming, estimation, story points, INVEST criteria, and any task requiring agile requirements documentation.
+  category: product
+- name: ux-research
+  version: 0.1.0
+  description: Use this skill when planning user research, conducting usability tests, creating journey maps, or designing A/B experiments. Triggers on user interviews, usability testing, user journey maps,
+    A/B test design, survey design, persona creation, card sorting, tree testing, and any task requiring user experience research methodology or analysis.
+  category: design
+- name: video-analyzer
+  version: 0.1.0
+  description: Use this skill when analyzing existing video files using FFmpeg and AI vision, extracting frames for design system generation, detecting scene boundaries, analyzing animation timing, extracting
+    color palettes, or understanding audio-visual sync. Triggers on video analysis, frame extraction, scene detection, ffprobe, motion analysis, and AI vision analysis of video content.
+  category: video
+- name: video-audio-design
+  version: 0.1.0
+  description: Use this skill when adding audio to programmatic videos - generating narration with ElevenLabs TTS, sourcing royalty-free background music, creating SFX with FFmpeg, implementing audio ducking,
+    or mixing multiple audio layers in Remotion. Triggers on ElevenLabs, text-to-speech, voice generation, background music, sound effects, audio mixing, and volume ducking.
+  category: video
+- name: video-creator
+  version: 0.1.0
+  description: 'Use this skill when creating complete videos from scratch - product demos, explainers, social clips, or announcements. Orchestrates the full workflow: deep interview, script generation,
+    visual verification, Remotion project build, audio design, narration, and 4K rendering. Triggers on "make me a video", "create a video about", video production, and end-to-end video creation requests.'
+  category: video
+- name: video-production
+  version: 0.1.0
+  description: Use this skill when creating, editing, or optimizing video content for YouTube and other platforms. Triggers on script writing, video editing workflows, thumbnail design, YouTube SEO, content
+    strategy, retention optimization, or channel growth. Covers the full production pipeline from ideation to publish - scriptwriting frameworks, editing pacing, thumbnail best practices, metadata optimization,
+    and audience retention techniques.
+  category: marketing
+- name: video-scriptwriting
+  version: 0.1.0
+  description: Use this skill when writing scripts for programmatic videos, planning scene structure and timing, creating storyboards in YAML format, calculating frame counts from duration, or interviewing
+    users about video requirements. Triggers on video script, storyboard, scene planning, narration writing, video pacing, and structured video content planning.
+  category: video
+- name: vim-neovim
+  version: 0.1.0
+  description: Use this skill when configuring Neovim, writing Lua plugins, setting up keybindings, or optimizing the Vim editing workflow. Triggers on Neovim configuration, init.lua, lazy.nvim, LSP setup,
+    telescope, treesitter, vim motions, keymaps, and any task requiring Vim or Neovim customization.
+  category: devtools
+- name: vite-plus
+  version: 0.1.0
+  description: Use this skill when working with Vite+, vp CLI, or the VoidZero unified toolchain. Triggers on project scaffolding with vp create, migrating existing Vite projects with vp migrate, running
+    dev/build/test/lint/fmt commands, configuring vite.config.ts with lint/fmt/test/run/pack/staged blocks, managing Node.js versions with vp env, monorepo task execution with vp run, and library packaging
+    with vp pack. Also triggers on references to Oxlint, Oxfmt, Rolldown, tsdown, Vitest, or Vite Task in a Vite+ context.
+  category: devtools
+- name: web3-smart-contracts
+  version: 0.1.0
+  description: Use this skill when writing, reviewing, auditing, or deploying Solidity smart contracts. Triggers on Solidity development, smart contract security auditing, DeFi protocol patterns, gas optimization,
+    ERC token standards, reentrancy prevention, flash loan attack mitigation, Foundry/Hardhat testing, and blockchain deployment. Covers Solidity, OpenZeppelin, EVM internals, and common vulnerability patterns.
+  category: engineering
