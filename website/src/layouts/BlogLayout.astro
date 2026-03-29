@@ -25,7 +25,12 @@ const { title, description, canonical, image, jsonLd, additionalJsonLd, breadcru
         (date || author) && (
           <div class="flex items-center gap-4 text-text-secondary text-sm">
             {date && <time datetime={date}>{new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>}
-            {author && <span>by {author}</span>}
+            {author && (
+              <a href={`https://github.com/${author}`} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-text-secondary hover:text-accent-blue transition-colors no-underline">
+                <img src={`https://github.com/${author}.png?size=24`} alt={author} class="w-5 h-5 rounded-full" width="20" height="20" />
+                <span>@{author}</span>
+              </a>
+            )}
           </div>
         )
       }

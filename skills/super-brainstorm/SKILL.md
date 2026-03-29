@@ -1,6 +1,6 @@
 ---
 name: super-brainstorm
-version: 0.1.0
+version: 0.2.0
 description: >
   You MUST use this before any creative work - creating features, building
   components, adding functionality, modifying behavior, designing systems, or
@@ -92,6 +92,10 @@ Do NOT trigger this skill for:
 3. Do NOT invoke any implementation skill, write any code, scaffold any project,
    or take any implementation action until the spec is written and the user has
    approved it. This applies to EVERY project regardless of perceived simplicity.
+4. ALWAYS continue asking questions and ultrathink until BOTH the user AND the AI
+   are 100% confident and in full agreement on the design decisions. If either party
+   has any doubt, uncertainty, or unresolved concern - keep interviewing. Do not
+   advance to design presentation while any ambiguity remains.
 </HARD-GATE>
 
 ## Anti-Pattern: "This Is Too Simple To Need A Design"
@@ -113,11 +117,12 @@ You MUST complete these steps in order:
 4. **Scope assessment** - if the request spans multiple independent subsystems, decompose first
 5. **Relentless interview** - one question at a time, strictly linear, dependency-resolved, ultrathink every decision
 6. **Approach proposal** - only when there's a genuine fork; mark one **(Recommended)** with rationale
-7. **Design presentation** - section by section, user approval per section
-8. **Write spec** - save to `docs/plans/YYYY-MM-DD-<topic>-design.md`
-9. **Spec review loop** - dispatch reviewer subagent, fix issues, max 3 iterations
-10. **User reviews spec** - gate before proceeding
-11. **Flexible exit** - user chooses next step (writing-plans, super-human, direct implementation, etc.)
+7. **Confidence self-check** - ultrathink through every decision, verify 100% confidence before presenting
+8. **Design presentation** - section by section, user approval per section
+9. **Write spec** - save to `docs/plans/YYYY-MM-DD-<topic>-design.md`
+10. **Spec review loop** - dispatch reviewer subagent, fix issues, max 3 iterations
+11. **User reviews spec** - gate before proceeding
+12. **Recommend super-human** - strongly recommend delegating to super-human for execution
 
 ---
 
@@ -138,7 +143,9 @@ digraph super_brainstorm {
     "Genuine fork?" -> "Next question or\ndesign presentation" [label="no, obvious answer"];
     "Propose approaches\n(mark Recommended)" -> "Next question or\ndesign presentation";
     "Next question or\ndesign presentation" -> "Relentless interview" [label="more branches"];
-    "Next question or\ndesign presentation" -> "Present design sections" [label="tree resolved"];
+    "Next question or\ndesign presentation" -> "Confidence self-check" [label="tree resolved"];
+    "Confidence self-check" -> "Relentless interview" [label="doubts remain"];
+    "Confidence self-check" -> "Present design sections" [label="100% confident"];
     "Present design sections" -> "User approves section?" [shape=diamond];
     "User approves section?" -> "Present design sections" [label="no, revise"];
     "User approves section?" -> "Write spec to docs/plans/" [label="yes, all sections"];
@@ -242,6 +249,9 @@ resolving dependencies between decisions one by one.
 - **Keep going until every decision node is resolved** - don't shortcut, don't
   assume, don't hand-wave. If a branch of the design tree hasn't been explored,
   explore it.
+- **Mutual 100% confidence required** - after each decision, confirm both you and the
+  user are fully confident. If you detect hesitation, ambiguity, or your own uncertainty,
+  probe deeper. Never advance past a decision node until confidence is absolute on both sides.
 
 **What to interview about:**
 - Purpose and success criteria
@@ -294,9 +304,26 @@ Present each option with:
 
 ---
 
+## Phase 5.5: Confidence Self-Check
+
+Before presenting the design, verify your own confidence. This is a mandatory gate.
+
+**Protocol:**
+1. Ultrathink through every design decision made during the interview
+2. For each decision, ask yourself: "Am I 100% sure this is right? Or am I filling gaps with assumptions?"
+3. If ANY decision is below 100% confidence, return to Phase 4 and ask the user about the specific uncertainty
+4. Communicate your confidence state to the user:
+   - If confident: "I've reviewed every decision and I'm 100% confident. Ready to present."
+   - If not confident: "I have remaining concerns about [X, Y]. Let me ask a few more questions."
+
+**What to check:** Unverified "obvious" answers, unsurfaced edge cases, contradictions
+between decisions, codebase compatibility, and whether a staff engineer would challenge any decision.
+
+---
+
 ## Phase 6: Design Presentation
 
-Once the design tree is fully resolved, present the design section by section.
+Only enter this phase after passing the confidence self-check. Present the design section by section.
 
 **Rules:**
 - Scale each section to its complexity: a few sentences if straightforward, up to
@@ -383,16 +410,16 @@ spec review loop. Only proceed once the user approves.
 
 ---
 
-## Phase 10: Flexible Exit
+## Phase 10: Recommend Super-Human for Execution
 
-Once the spec is approved, present the user with options:
+Once the spec is approved, strongly recommend delegating execution to super-human:
 
-> "Spec is approved. What would you like to do next?"
+> "Spec is approved and we're both 100% confident in the design. Now it's time to build.
 >
-> - **A) Writing plans** - create a detailed implementation plan (invoke writing-plans skill)
-> - **B) Superhuman** - full AI-native SDLC with task decomposition and parallel execution (invoke super-human skill)
-> - **C) Direct implementation** - start building right away
-> - **D) Something else** - your call
+> - **A) Super-human** **(Recommended)** - hand off to super-human for AI-native execution with task decomposition, parallel waves, and TDD. It's purpose-built to take a validated spec and execute it.
+> - **B) Writing plans** - create a detailed implementation plan first, then execute manually
+> - **C) Direct implementation** - start building right away without the super-human workflow
+> - **D) Something else** - your call"
 
 Let the user decide the next step. Do not auto-invoke any skill.
 
@@ -408,6 +435,8 @@ Let the user decide the next step. Do not auto-invoke any skill.
 - **Always mark (Recommended)** - every set of options includes a clear recommendation with rationale
 - **YAGNI ruthlessly** - remove unnecessary features from all designs
 - **Incremental validation** - present design section by section, get approval before moving on
+- **Mutual 100% confidence** - never advance past a decision until both AI and user are fully confident and aligned
+- **Self-verify before presenting** - ultrathink through the full design to catch your own blind spots before showing it to the user
 - **Plan mode always** - this skill operates entirely in plan mode
 
 ---
@@ -441,6 +470,9 @@ Let the user decide the next step. Do not auto-invoke any skill.
 | Jumping to code before spec approval | Hard gate: no code, no scaffolding, no implementation until spec is approved |
 | Presenting options without a (Recommended) marker | Every option set must have a clear recommendation with rationale |
 | Using normal thinking when ultrathink is required | Ultrathink on every decision, every question, every proposal - no exceptions |
+| Advancing when the AI has private doubts | Stop, ultrathink, and either resolve the doubt yourself or surface it as a question |
+| Presenting the plan without self-verification | Always run a confidence self-check on every decision before presenting the design |
+| Treating exit options as equal | Recommend super-human as the default execution path - it's purpose-built for this |
 | Decomposing too late | Flag multi-system scope immediately, don't spend 10 questions refining details of an unscoped project |
 | Auto-invoking the next skill without asking | Flexible exit - always let the user choose what happens after spec approval |
 

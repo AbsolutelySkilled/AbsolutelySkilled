@@ -1,13 +1,13 @@
 # super-brainstorm
 
-super-brainstorm is a production-ready AI agent skill for claude-code, gemini-cli, openai-codex, and 1 more. You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, designing systems, or making architectural decisions. Enters plan mode, reads all available docs, explores the codebase deeply, then interviews the user relentlessly with ultrathink-level reasoning on every decision until a shared understanding is reached. Produces a validated design spec before any implementation begins.
+super-brainstorm is a production-ready AI agent skill for claude-code, gemini-cli, openai-codex, and 1 more. You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, designing systems, or making architectural decisions. Enters plan mode, reads all available docs, explores the codebase deeply, then interviews the user relentlessly with ultrathink-level reasoning on every decision until both AI and user are 100% confident and in full agreement. Runs a confidence self-check before presenting any design. Produces a validated design spec before any implementation begins, then recommends delegating to super-human for execution.
 
 ## Quick Facts
 
 | Field | Value |
 |-------|-------|
 | Category | workflow |
-| Version | 0.1.0 |
+| Version | 0.2.0 |
 | Platforms | claude-code, gemini-cli, openai-codex, mcp |
 | License | MIT |
 
@@ -46,7 +46,7 @@ Pair super-brainstorm with these complementary skills:
 
 ### What is super-brainstorm?
 
-You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, designing systems, or making architectural decisions. Enters plan mode, reads all available docs, explores the codebase deeply, then interviews the user relentlessly with ultrathink-level reasoning on every decision until a shared understanding is reached. Produces a validated design spec before any implementation begins. Triggers on feature requests, design discussions, refactors, new projects, component creation, system changes, and any task requiring design decisions.
+You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, designing systems, or making architectural decisions. Enters plan mode, reads all available docs, explores the codebase deeply, then interviews the user relentlessly with ultrathink-level reasoning on every decision until both AI and user are 100% confident and in full agreement. Runs a confidence self-check before presenting any design. Produces a validated design spec before any implementation begins, then recommends delegating to super-human for execution. Triggers on feature requests, design discussions, refactors, new projects, component creation, system changes, and any task requiring design decisions.
 
 
 ### How do I install super-brainstorm?

@@ -5,9 +5,11 @@ import FlagshipCard from '../components/FlagshipCard.astro';
 import CategoryGrid from '../components/CategoryGrid.astro';
 import StatsCounter from '../components/StatsCounter.astro';
 import RecentSkills from '../components/RecentSkills.astro';
+import BlogPostCard from '../components/BlogPostCard.astro';
 import { getAllSkills, getSkillsByCategory, type Skill } from '../lib/skills';
 import { getTotalInstalls, getTopSkillsByCounts } from '../lib/installs';
 import { getHomePageSEO } from '../lib/seo';
+import { getCollection } from 'astro:content';
 
 const skills = getAllSkills();
 const grouped = getSkillsByCategory(skills);
@@ -29,6 +31,11 @@ const flagshipSkills = flagshipSlugs
   .filter((s): s is Skill => !!s);
 
 const recentSkills = skills.slice(-10).reverse();
+
+const blogPosts = (await getCollection('blog'))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 3);
 ---
 
 <BaseLayout title={seo.title} description={seo.description} canonical={seo.canonical} jsonLd={seo.jsonLd}>
@@ -148,6 +155,29 @@ const recentSkills = skills.slice(-10).reverse();
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-bold font-mono mb-8">Recently Added</h2>
       <RecentSkills skills={recentSkills} />
+    </div>
+  </section>
+
+  <!-- From the Blog -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-2xl font-bold font-mono">From the Blog</h2>
+        <a href="/blog" class="text-sm text-text-muted hover:text-accent-blue transition-colors font-mono">
+          View all &rarr;
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {blogPosts.map((post) => (
+          <BlogPostCard
+            title={post.data.title}
+            description={post.data.description}
+            slug={post.id}
+            date={post.data.date}
+            tags={post.data.tags}
+          />
+        ))}
+      </div>
     </div>
   </section>
 
