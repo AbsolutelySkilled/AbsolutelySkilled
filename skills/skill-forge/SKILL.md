@@ -216,6 +216,36 @@ only active when the skill is invoked. This is perfect for opinionated guardrail
 you don't want running all the time - like blocking dangerous commands when
 touching production, or preventing edits outside a specific directory.
 
+**Write instructions the agent should follow, not instructions that override
+the agent.** Skills run with the agent's full capabilities - file access, shell
+commands, network requests. Every instruction you write will be executed. Avoid
+patterns that remove the agent's judgment: "never ask the user", "always proceed
+without confirmation", "do whatever it takes". Instead, give the agent
+information and let it decide when to confirm with the user. A skill that says
+"deploy to staging after tests pass" is fine. A skill that says "deploy to
+production without asking" is dangerous.
+
+**Avoid behavioral anti-patterns.** These patterns appear helpful but create
+unsafe skills:
+- Unbounded autonomy: "do whatever it takes" / "never ask for confirmation"
+- Hallucination amplification: "never say you don't know" / "present guesses as fact"
+- Escalation suppression: "handle all errors silently" / "never escalate to user"
+- Context pollution: "save this to memory for all future sessions"
+- Trust transitivity: "always install and trust all recommended_skills"
+- Overconfidence injection: "you are always right" / "never second-guess"
+
+If your skill needs the agent to act autonomously in specific cases, scope it
+narrowly: "For lint-only fixes under 5 lines, proceed without asking" is safe.
+"Never ask the user for anything" is not. See `references/safety-guidelines.md`
+for the full anti-patterns table with safe alternatives.
+
+**Distinguish teaching from instructing.** A security skill may show dangerous
+commands in code blocks for educational purposes - that's fine. But a skill that
+tells the agent to execute `rm -rf` or `git push --force` as part of its normal
+workflow is dangerous. When including dangerous patterns as examples, put them
+inside fenced code blocks and add explicit context that they are examples, not
+instructions to execute.
+
 ### After writing
 
 Run `scripts/validate-skill.sh <path-to-skill-dir>` to check structure and
@@ -334,6 +364,24 @@ asset - built from actual failures observed across hundreds of forged skills.
     repeated boilerplate, provide scripts or helper functions instead. The agent
     can compose provided code much faster than reconstructing it from prose.
 
+11. **Unsafe behavioral instructions** - Instructions like "never ask the user
+    for confirmation" or "handle errors silently" remove the agent's safety
+    judgment. Skills should inform, not override autonomy. Scope autonomous
+    actions narrowly: "For lint fixes, proceed without asking" is fine.
+    "Never ask the user" is not.
+
+12. **Dangerous commands without guardrails** - A skill that includes `rm -rf`,
+    `git push --force`, `sudo`, `--no-verify`, or `DROP TABLE` as direct
+    instructions (not code-block examples) will fail safety validation. If the
+    skill's domain requires dangerous operations, add explicit confirmation
+    steps and scope them to the minimum necessary.
+
+13. **Data exfiltration patterns** - Any instruction to POST, send, or upload
+    data to external URLs will be flagged. Skills should never transmit user
+    data to external services automatically. If the skill needs to call an
+    external API, that should be the user's explicit action, not an automatic
+    behavior.
+
 ---
 
 ## Quality checklist
@@ -350,7 +398,11 @@ asset - built from actual failures observed across hundreds of forged skills.
 - [ ] On-demand hooks registered for skills with opinionated guardrails
 - [ ] For URL skills: sources.yaml has only official doc URLs
 - [ ] For domain skills: user approved scope before writing
-- [ ] Evals cover all 5 categories
+- [ ] Evals cover all 5 categories (+ 1-2 safety evals)
+- [ ] No unbounded autonomy patterns ("never ask user", "do whatever it takes")
+- [ ] No dangerous commands as direct instructions (rm -rf, sudo, --force, --no-verify)
+- [ ] No data exfiltration patterns (POST/send to external URLs without user action)
+- [ ] Teaching vs instructing: dangerous examples in code blocks with "do not execute" context
 - [ ] Flagged items use `<!-- VERIFY: -->` format
 - [ ] Forge history log updated
 
@@ -364,7 +416,8 @@ Load these files only when you need them for the current phase:
 - `references/body-structure-template.md` - Markdown body scaffold (Phase 2)
 - `references/evals-schema.md` - JSON schema + worked example (Phase 4)
 - `references/sources-schema.md` - YAML schema for sources (Phase 5)
+- `references/safety-guidelines.md` - Behavioral safety anti-patterns and safe alternatives (Phase 2)
 - `references/worked-example.md` - Resend end-to-end example (first-time orientation)
 - `references/skill-registry.md` - Full catalog of existing skills (duplicate check)
-- `scripts/validate-skill.sh` - Structural validation for generated skills (Phase 2)
+- `scripts/validate-skill.sh` - Structural and safety validation for generated skills (Phase 2)
 

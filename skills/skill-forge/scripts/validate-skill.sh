@@ -116,6 +116,63 @@ if grep -qi "it.s important to note\|it should be noted\|please note that" "$SKI
   warn "SKILL.md contains filler phrases - tighten the prose"
 fi
 
+# 11. Behavioral safety anti-patterns
+# Only flag patterns that appear as direct instructions, not in "avoid" / "don't" / example context.
+# Lines containing quotes, negation words, or checklist markers are discussing anti-patterns, not instructing them.
+SAFE_CONTEXT='avoid\|don.t\|do not\|unsafe\|anti-pattern\|dangerous\|example\|not safe\|is not\|Gotcha\|checklist\|".*"\|\[ \]'
+UNSAFE_PATTERNS=(
+  "never ask.*user\|never ask.*confirmation\|never ask.*permission"
+  "do whatever it takes\|take any action necessary"
+  "handle.*errors.*silently\|never escalate"
+  "never say.*don.t know\|never say.*not sure\|present.*guess.*as fact"
+  "save.*memory.*all future\|from now on.*all conversations"
+  "always.*trust.*recommended\|auto.*install.*skills"
+  "you are always right\|never second.guess"
+)
+for pattern in "${UNSAFE_PATTERNS[@]}"; do
+  MATCHES=$(grep -ni "$pattern" "$SKILL_FILE" 2>/dev/null | grep -vi "$SAFE_CONTEXT" || true)
+  if [[ -n "$MATCHES" ]]; then
+    fail "Behavioral safety: found unsafe pattern matching '$pattern'"
+  fi
+done
+
+# 12. Dangerous commands outside code blocks
+# Extract non-code-block content from SKILL.md
+NON_CODE_CONTENT=$(awk '/^```/{skip=!skip; next} !skip{print}' "$SKILL_FILE")
+DANGEROUS_CMDS="rm -rf\|sudo \|chmod 777\|--no-verify\|DROP TABLE\|mkfs\|dd if="
+if echo "$NON_CODE_CONTENT" | grep -qi "$DANGEROUS_CMDS"; then
+  warn "Dangerous commands found outside code blocks - verify they include user confirmation"
+fi
+
+# 13. Data exfiltration patterns
+if echo "$NON_CODE_CONTENT" | grep -qi "POST.*http\|send.*data.*to\|upload.*to.*http\|curl.*-X.*POST\|webhook.*url"; then
+  warn "Potential data exfiltration: instructions to send data to external URLs"
+fi
+
+# 14. Unicode anomalies (zero-width chars, RTL overrides)
+if grep -P '[\x{200B}\x{200C}\x{200D}\x{FEFF}\x{2060}-\x{2064}\x{202A}-\x{202E}]' "$SKILL_FILE" 2>/dev/null; then
+  fail "Unicode anomaly: zero-width or directional override characters detected in SKILL.md"
+fi
+if [[ -d "$SKILL_DIR/references" ]]; then
+  for ref_file in "$SKILL_DIR/references"/*; do
+    [[ -f "$ref_file" ]] || continue
+    if grep -P '[\x{200B}\x{200C}\x{200D}\x{FEFF}\x{2060}-\x{2064}\x{202A}-\x{202E}]' "$ref_file" 2>/dev/null; then
+      fail "Unicode anomaly in $(basename "$ref_file")"
+    fi
+  done
+fi
+
+# 15. Reference file size
+if [[ -d "$SKILL_DIR/references" ]]; then
+  for ref_file in "$SKILL_DIR/references"/*.md; do
+    [[ -f "$ref_file" ]] || continue
+    REF_LINES=$(wc -l < "$ref_file" | tr -d ' ')
+    if [[ "$REF_LINES" -gt 400 ]]; then
+      fail "$(basename "$ref_file") is $REF_LINES lines (limit: 400)"
+    fi
+  done
+fi
+
 echo "---"
 echo "Results: $ERRORS error(s), $WARNINGS warning(s)"
 
