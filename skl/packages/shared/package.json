@@ -1,0 +1,21 @@
+{
+  "name": "@skl/shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "picocolors": "^1.1.0",
+    "simple-git": "^3.27.0"
+  }
+}

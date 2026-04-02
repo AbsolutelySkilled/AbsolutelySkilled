@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "skills": {
+    "another-skill": {
+      "source": "github",
+      "contentHash": "d9aefc8437808d06a4d53dcab5cf1368118fb5c3b4a97432f13059bc58197719",
+      "declaredVersion": "2.0.0"
+    },
+    "my-cool-skill": {
+      "source": "github",
+      "contentHash": "1af7b963a8b6f9ed0632b23fb8ed8468b4efab1a655e2ae1d98ba550ce352205",
+      "declaredVersion": "1.2.0"
+    },
+    "test-skill": {
+      "source": "github",
+      "contentHash": "1af7b963a8b6f9ed0632b23fb8ed8468b4efab1a655e2ae1d98ba550ce352205",
+      "declaredVersion": "1.2.0"
+    }
+  }
+}

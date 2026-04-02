@@ -1,0 +1,35 @@
+{
+  "name": "skl",
+  "version": "1.0.0",
+  "description": "The AbsolutelySkilled Package Manager - install, discover, and manage AI agent skills",
+  "type": "module",
+  "bin": {
+    "skl": "./bin/cli.mjs"
+  },
+  "main": "./src/cli.ts",
+  "scripts": {
+    "build": "tsc --build",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@skl/shared": "*",
+    "pastel": "^4.0.1",
+    "ink": "^6.0.0",
+    "react": "^19.0.0",
+    "zod": "^4.3.0",
+    "@inkjs/ui": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "ai",
+    "skills",
+    "agent",
+    "package-manager",
+    "cli",
+    "absolutelyskilled"
+  ],
+  "license": "MIT"
+}
