@@ -11,7 +11,7 @@ description: >
   and deck architecture from executive summaries to conference keynotes.
 category: design
 tags: [presentation, slides, storytelling, data-visualization, pitch-deck, public-speaking]
-recommended_skills: [color-theory, copywriting, video-production, figma-to-code]
+recommended_skills: [absolute-ui, copywriting, video-production, figma-to-code]
 platforms:
   - claude-code
   - gemini-cli

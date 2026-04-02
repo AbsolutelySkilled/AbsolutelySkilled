@@ -49,7 +49,7 @@ internal strategy reviews, training materials, and any context where slides are 
 
 Pair presentation-design with these complementary skills:
 
-- [color-theory](https://www.absolutelyskilled.pro/skill/color-theory)
+- [absolute-ui](https://www.absolutelyskilled.pro/skill/absolute-ui)
 - [copywriting](https://www.absolutelyskilled.pro/skill/copywriting)
 - [video-production](https://www.absolutelyskilled.pro/skill/video-production)
 - [figma-to-code](https://www.absolutelyskilled.pro/skill/figma-to-code)

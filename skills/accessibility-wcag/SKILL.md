@@ -9,7 +9,7 @@ description: >
   WCAG 2.2 compliance or inclusive design.
 category: design
 tags: [accessibility, wcag, aria, a11y, keyboard, screen-reader]
-recommended_skills: [design-systems, frontend-developer, responsive-design, ux-research]
+recommended_skills: [absolute-ui, frontend-developer, ux-research]
 platforms:
   - claude-code
   - gemini-cli

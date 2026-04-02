@@ -1,0 +1,169 @@
+---
+title: "Absolute-UI: The Anti-Slop Design System for AI Coding Agents"
+description: "How absolute-ui turns AI coding agents from generic UI generators into opinionated senior designers - with 25 reference guides, 35 product-type mappings, and concrete CSS values for every decision."
+date: "2026-04-02"
+author: "maddhruv"
+tags: ["skills", "engineering", "ui", "design", "css", "anti-slop", "absolute-ui"]
+---
+
+# Absolute-UI: The Anti-Slop Design System for AI Coding Agents
+
+You know AI slop when you see it. Inter font. Purple gradient on white. Three perfectly centered cards. Flat gray backgrounds. A hero section that could belong to literally any SaaS product on earth.
+
+The problem isn't that AI agents can't write CSS. They're actually great at it. The problem is they have no taste. No opinions. No context about whether they're building a fintech dashboard or a kids' education app. They reach for the same safe defaults every time, and the result is an internet that looks increasingly identical.
+
+Absolute-UI fixes this by giving AI agents something they've never had: a comprehensive, opinionated design knowledge base with concrete values, not vague advice.
+
+---
+
+## The Problem: AI Agents Are Generic by Default
+
+Ask any AI coding agent to "build a landing page" and you'll get the same thing:
+
+- Inter or system fonts
+- Indigo/purple primary color (#6366f1)
+- Centered three-column feature grid
+- Flat white background
+- Symmetric spacing everywhere
+- Generic shadow values
+
+It's not wrong. It's just... nothing. It has no point of view, no character, no reason to exist. It looks like every other AI-generated page, because it was generated with the same lack of intent.
+
+The root cause is simple: AI agents optimize for correctness, not for design quality. They know CSS syntax perfectly but have no framework for making design decisions. They don't know that a fintech app should feel different from a creative portfolio, or that depth comes from layered shadows and tinted backgrounds, not just `border: 1px solid gray`.
+
+---
+
+## What Absolute-UI Actually Is
+
+Absolute-UI is a skill - a knowledge base that plugs into AI coding agents (Claude Code, Gemini CLI, OpenAI Codex, and any MCP-compatible tool). When activated, it transforms how the agent approaches UI work.
+
+Instead of reaching for defaults, the agent now has access to:
+
+**25 deep-dive reference guides** covering every UI topic - typography, color theory, shadows, layout systems, animations, dashboards, landing pages, forms, navigation, accessibility, and more. Each guide contains concrete CSS values, specific rules, and common mistakes to avoid.
+
+**A design thinking framework** that forces the agent to make intentional choices before writing code. What's the user intent? What aesthetic direction fits this product? What's the one visual choice that will make this memorable?
+
+**35 product-type mappings** that connect "I'm building a fintech dashboard" to specific recommendations: Dark Mode OLED style, trust blue (#0F172A) + gold accent (#A16207), IBM Plex Sans typography, real-time monitoring dashboard pattern.
+
+**25 named UI styles** from glassmorphism to brutalism to aurora UI, each with key effects, best-for product types, and CSS signatures.
+
+**An anti-patterns table** that explicitly flags AI-generated cliches: generic fonts, purple gradients, repeated KPIs, gradient profile circles, sparse forms as full pages, landing pages with only text and icons.
+
+---
+
+## The Anti-Slop Philosophy
+
+The core idea behind absolute-ui is that the difference between AI slop and a polished UI comes down to three things:
+
+### 1. Intent Before Code
+
+Most AI agents start coding immediately. Absolute-UI forces a pause. Before writing CSS, the agent must:
+
+- Identify the user's intent (what are they trying to do?)
+- Choose an aesthetic direction (brutalist? editorial? luxury? playful?)
+- Select context-appropriate fonts, colors, and patterns
+- Define what's memorable about this design
+
+This is the "design thinking" section of the skill, and it's the most important part. A design with intent - even a simple one - always beats a technically complex design with no point of view.
+
+### 2. Concrete Values, Not Vague Advice
+
+"Make it clean" is not actionable. "Use a 0.5rem gap for related elements, 1rem for same-group items, 1.5-2rem between distinct sections" is.
+
+Every recommendation in absolute-ui ships with specific CSS values:
+
+- Typography: "Tighten letter-spacing to -0.02em on headings 24px+. Line-height 1.2-1.3 for headings, 1.5-1.6 for body."
+- Color: "Dark mode backgrounds need 4-6% brightness between layers (double the light mode distance). Use oklch() for perceptually uniform shade ramps."
+- Shadows: "Use gray shadow color with more blur instead of rgba(0,0,0) at low opacity. Inner shadow on top + outer shadow below = raised element."
+- Spacing: "Vertical button padding = X, horizontal = 2X-3X. Inner spacing must always be less than outer spacing."
+
+### 3. Context-Specific Design
+
+A healthcare app shouldn't look like a gaming platform. A legal services site shouldn't have the same energy as a creative agency portfolio. Absolute-UI maps product types to design decisions:
+
+| Product Type | Style | Colors | Typography |
+|---|---|---|---|
+| Fintech | Dark Mode OLED | Trust blue + gold | IBM Plex Sans |
+| Healthcare | Neumorphism + Accessible | Calm cyan + health green | Figtree + Noto Sans |
+| Creative Agency | Brutalism + Motion | Bold pink + cyan | Syne + Manrope |
+| Gaming | 3D + Retro-Futurism | Neon purple + rose | Russo One + Chakra Petch |
+| Restaurant | Vibrant & Block | Appetizing red + gold | Playfair Display SC + Karla |
+
+This is 35 product types, each with specific style, color, typography, and landing page pattern recommendations.
+
+---
+
+## What's Inside: The Reference System
+
+The skill is structured as a main SKILL.md file (the always-loaded core principles) plus 25 reference guides that load on demand when relevant. This keeps the agent's context clean while providing deep knowledge when needed.
+
+Here's what each layer covers:
+
+### Foundation Layer
+- **Typography** - Type scales, 22 font pairings organized by aesthetic direction AND product context, anti-slop font rules, the "minimal type scale" approach (one font size + weight/color creates hierarchy), line-height as spacing
+- **Color & Theming** - HSL and OKLCH workflows, neutral palette from scratch (dark: 0%/5%/10% lightness), color harmony formula (primary +/- 60deg), semantic colors, card depth recipe with highlight + gradient + shadow
+- **Shadows & Borders** - 3-shade layering system, raised vs recessed shadows, hover escalation, nested border-radius formula, shadow color (gray not black)
+- **Spacing & Layout** - 3-value shortcut (0.5rem/1rem/1.5rem), optical weight in buttons, inner < outer always, flex-first responsive thinking, grid-breaking compositions
+
+### Component Layer
+- **Buttons & Icons** - Hierarchy (ghost to primary), chips/tags sizing, icon size = line-height, 4 states minimum
+- **Cards & Lists** - Variants, hover effects, skeleton loading, virtualization
+- **Forms** - Input states, validation patterns, multi-step flows
+- **Tables** - Alignment, sorting, responsive strategies, number formatting
+- **Navigation** - Sidebar principles, tabs, mega menus with images, command palettes
+- **Dashboards** - 4 core components (lists, cards, inputs, tabs), popover vs modal vs page decision framework, optimistic UI
+
+### Experience Layer
+- **Micro-animations** - Orchestrated page reveals, scroll storytelling, 3D card flip, SVG path drawing, dynamic JS animations
+- **Atmosphere & Texture** - Gradient meshes, noise/grain overlays, geometric patterns, when texture helps vs when clean is better
+- **Visual Hierarchy** - Deemphasize to emphasize, decorative elements as context, gestalt grouping
+- **Landing Pages** - Section patterns, creative layouts (bento, horizontal scroll, before-after), marquee logo bars
+- **Microcopy & UX** - Don't Make Me Think principles, friendly copy, user flow mapping, 404 pages as personality
+
+### Decision Layer
+- **Style Catalog** - 25 styles with effects, best-for, and a quick-pick table
+- **Product Type Guide** - 35 product types mapped to complete design recommendations
+- **Design Tokens** - CSS setup order, token naming, spot-repeating-patterns workflow
+
+---
+
+## Real Examples: Before and After
+
+### The Generic SaaS Landing Page
+
+**Before (AI default):** Inter font, #6366f1 indigo primary, white background, centered three-column features, flat cards with generic icons.
+
+**After (with absolute-ui):** The agent first checks the product type guide. For a SaaS product, it selects Glassmorphism + Flat style. Picks a trust blue (#2563EB) + orange CTA (#EA580C) palette instead of default indigo. Chooses Plus Jakarta Sans instead of Inter. Adds a gradient mesh background with subtle grain. Uses asymmetric hero layout (40/60 split) instead of centered. Applies orchestrated page-load animation. Result: a landing page that looks like a specific product, not a template.
+
+### The Dark Mode Dashboard
+
+**Before:** Agent uses #000000 background, pure white text, identical shadows from light mode, inverted borders.
+
+**After:** Agent applies the double-the-distance rule (4-6% between dark layers instead of 2%). Uses #0F172A as deepest layer, progressively lighter surfaces for cards. Dims text to #f1f5f9 (not pure white). Uses raised shadows (light inset top + dark shadow bottom) for cards. Applies tinted borders (rgba white) instead of dark borders that disappear. Result: a dark mode that has genuine depth and hierarchy.
+
+---
+
+## The Pre-Delivery Checklist
+
+Every UI built with absolute-ui gets checked against this before shipping:
+
+- **Visual**: Consistent spacing scale, single border-radius, max 3 hues, 4-5 text sizes
+- **Interaction**: Hover/active/focus states on everything, 44px+ touch targets
+- **Dark mode**: No pure black, double the layer distance, shadows adjusted
+- **Layout**: Max-width enforced, mobile-first, safe-area padding
+- **Accessibility**: 4.5:1 contrast, focus rings, semantic HTML, keyboard navigable
+- **Personality**: Fonts match aesthetic direction, colors fit product context
+- **States**: Empty, loading, success, error - not just the happy path
+- **Flow**: Each screen answers "how did the user get here?" and "what next?"
+
+---
+
+## Install It
+
+```bash
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill absolute-ui
+```
+
+One command. Works with Claude Code, Gemini CLI, OpenAI Codex, or any MCP-compatible agent. The next time your agent builds a UI, it won't reach for the same tired defaults. It'll have opinions. Context. Taste.
+
+And that's the difference between software that looks like it was generated and software that looks like it was designed.

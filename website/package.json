@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "prebuild": "tsx scripts/generate-og-images.ts",
     "build": "astro build",
-    "postbuild": "if [ -d .vercel/output/static ]; then npx pagefind --site .vercel/output/static; else npx pagefind --site dist; fi",
+    "postbuild": "if [ -d .vercel/output/static ]; then cp .vercel/output/static/sitemap-0.xml .vercel/output/static/sitemap.xml && npx pagefind --site .vercel/output/static; else cp dist/sitemap-0.xml dist/sitemap.xml && npx pagefind --site dist; fi",
     "preview": "astro preview",
     "generate:readmes": "tsx scripts/generate-readmes.ts",
     "generate:llms": "tsx scripts/generate-llms-txt.ts",

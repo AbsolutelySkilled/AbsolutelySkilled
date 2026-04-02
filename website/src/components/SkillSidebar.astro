@@ -77,7 +77,7 @@ const categoryMeta = getCategoryMeta(skill.category);
               href={`https://github.com/${m.github}`}
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-2 text-sm text-text-secondary hover:text-accent-blue transition-colors"
+              class="flex items-center gap-2 text-sm text-text-secondary hover:text-primary-light transition-colors"
             >
               <img
                 src={`https://github.com/${m.github}.png?size=24`}
@@ -113,7 +113,7 @@ const categoryMeta = getCategoryMeta(skill.category);
         {categorySkills.map((s) => (
           <a
             href={`/skill/${s.slug}`}
-            class="block text-sm text-text-secondary hover:text-accent-blue transition-colors truncate"
+            class="block text-sm text-text-secondary hover:text-primary-light transition-colors truncate"
           >
             {s.name}
           </a>

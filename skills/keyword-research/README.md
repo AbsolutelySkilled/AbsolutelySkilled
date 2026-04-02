@@ -58,11 +58,7 @@ opportunity is. For HOW to optimize content once you have chosen your targets,
 
 Pair keyword-research with these complementary skills:
 
-- [content-seo](https://www.absolutelyskilled.pro/skill/content-seo)
-- [seo-mastery](https://www.absolutelyskilled.pro/skill/seo-mastery)
-- [aeo-optimization](https://www.absolutelyskilled.pro/skill/aeo-optimization)
-- [programmatic-seo](https://www.absolutelyskilled.pro/skill/programmatic-seo)
-- [geo-optimization](https://www.absolutelyskilled.pro/skill/geo-optimization)
+- [absolute-seo](https://www.absolutelyskilled.pro/skill/absolute-seo)
 
 ## Frequently Asked Questions
 

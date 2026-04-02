@@ -1,0 +1,66 @@
+# absolute-brainstorm
+
+absolute-brainstorm is a production-ready AI agent skill for claude-code, gemini-cli, openai-codex, and 1 more. You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, designing systems, or making architectural decisions. Enters plan mode, reads all available docs, explores the codebase deeply, then interviews the user relentlessly with ultrathink-level reasoning on every decision until both AI and user are 100% confident and in full agreement. Runs a confidence self-check before presenting any design. Produces a validated design spec before any implementation begins, then recommends delegating to absolute-human for execution.
+
+## Quick Facts
+
+| Field | Value |
+|-------|-------|
+| Category | workflow |
+| Version | 0.2.0 |
+| Platforms | claude-code, gemini-cli, openai-codex, mcp |
+| License | MIT |
+
+## How to Install
+
+1. Make sure you have Node.js installed on your machine.
+2. Run the following command in your terminal:
+
+```bash
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill absolute-brainstorm
+```
+
+3. The absolute-brainstorm skill is now available in your AI coding agent (Claude Code, Gemini CLI, OpenAI Codex, etc.).
+
+## Tags
+
+`brainstorming` `design` `planning` `architecture` `spec-writing` `interviewing`
+
+## Platforms
+
+- claude-code
+- gemini-cli
+- openai-codex
+- mcp
+
+## Related Skills
+
+Pair absolute-brainstorm with these complementary skills:
+
+- [writing-plans](https://www.absolutelyskilled.pro/skill/writing-plans)
+- [absolute-human](https://www.absolutelyskilled.pro/skill/absolute-human)
+- [clean-architecture](https://www.absolutelyskilled.pro/skill/clean-architecture)
+- [system-design](https://www.absolutelyskilled.pro/skill/system-design)
+
+## Frequently Asked Questions
+
+### What is absolute-brainstorm?
+
+You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, designing systems, or making architectural decisions. Enters plan mode, reads all available docs, explores the codebase deeply, then interviews the user relentlessly with ultrathink-level reasoning on every decision until both AI and user are 100% confident and in full agreement. Runs a confidence self-check before presenting any design. Produces a validated design spec before any implementation begins, then recommends delegating to absolute-human for execution. Triggers on feature requests, design discussions, refactors, new projects, component creation, system changes, and any task requiring design decisions.
+
+
+### How do I install absolute-brainstorm?
+
+Run `npx skills add AbsolutelySkilled/AbsolutelySkilled --skill absolute-brainstorm` in your terminal. The skill will be immediately available in your AI coding agent.
+
+### What AI agents support absolute-brainstorm?
+
+This skill works with claude-code, gemini-cli, openai-codex, mcp. Install it once and use it across any supported AI coding agent.
+
+## Maintainers
+
+- [@maddhruv](https://github.com/maddhruv)
+
+---
+
+*Generated from [AbsolutelySkilled](https://www.absolutelyskilled.pro/skill/absolute-brainstorm)*

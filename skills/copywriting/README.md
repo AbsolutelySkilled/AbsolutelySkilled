@@ -50,7 +50,7 @@ Pair copywriting with these complementary skills:
 - [content-marketing](https://www.absolutelyskilled.pro/skill/content-marketing)
 - [brand-strategy](https://www.absolutelyskilled.pro/skill/brand-strategy)
 - [email-marketing](https://www.absolutelyskilled.pro/skill/email-marketing)
-- [content-seo](https://www.absolutelyskilled.pro/skill/content-seo)
+- [absolute-seo](https://www.absolutelyskilled.pro/skill/absolute-seo)
 
 ## Frequently Asked Questions
 

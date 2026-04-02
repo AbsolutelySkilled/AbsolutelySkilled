@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { AGENTS } from '../../lib/agents';
+import { getAllSkills } from '../../lib/skills';
+import { getBreadcrumbJsonLd, type BreadcrumbItem } from '../../lib/seo';
+
+const skills = getAllSkills();
+const SITE = 'https://www.absolutelyskilled.pro';
+
+const breadcrumbs: BreadcrumbItem[] = [
+  { name: 'Home', url: SITE },
+  { name: 'Agents', url: `${SITE}/agents` },
+];
+
+const title = `AI Coding Agents - Skills for Claude Code, Cursor, Gemini CLI & More | AbsolutelySkilled`;
+const description = `Browse AI agent skills by coding agent. Install production-ready skills for Claude Code, Cursor, Windsurf, GitHub Copilot, Gemini CLI, OpenAI Codex, and 40+ more AI coding agents.`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={`${SITE}/agents`}
+  additionalJsonLd={[getBreadcrumbJsonLd(breadcrumbs)]}
+  breadcrumbs={breadcrumbs}
+>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-10">
+      <h1 class="text-3xl font-bold font-display mb-3">AI Coding Agents</h1>
+      <p class="text-text-secondary max-w-2xl">
+        AbsolutelySkilled skills work with {skills.length}+ AI coding agents. Browse skills by agent to find exactly what you need.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {AGENTS.map((agent) => (
+        <a href={`/agents/${agent.slug}`} class="card p-6 block group hover:border-border-hover transition-colors">
+          <h2 class="text-lg font-semibold font-display text-text-primary group-hover:text-primary-light transition-colors mb-2">
+            {agent.name}
+          </h2>
+          <p class="text-sm text-text-secondary mb-4 line-clamp-3">{agent.tagline}</p>
+          <ul class="space-y-1">
+            {agent.features.slice(0, 2).map((f) => (
+              <li class="text-xs text-text-muted flex items-start gap-1.5">
+                <span class="text-primary-light mt-0.5">-</span> {f}
+              </li>
+            ))}
+          </ul>
+          <div class="mt-4 text-xs text-primary-light font-medium">
+            Browse skills &rarr;
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <section class="mt-16 text-center">
+      <p class="text-text-secondary text-sm mb-4">
+        Skills also work with Amp, Kilo Code, Aider, and 40+ more AI coding agents.
+      </p>
+      <a href="/skills" class="px-6 py-2.5 rounded-xl bg-primary text-white text-sm font-semibold hover:bg-primary-light transition-colors">
+        Browse All {skills.length} Skills
+      </a>
+    </section>
+  </div>
+</BaseLayout>

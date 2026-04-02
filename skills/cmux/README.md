@@ -50,7 +50,7 @@ Pair cmux with these complementary skills:
 - [shell-scripting](https://www.absolutelyskilled.pro/skill/shell-scripting)
 - [vim-neovim](https://www.absolutelyskilled.pro/skill/vim-neovim)
 - [debugging-tools](https://www.absolutelyskilled.pro/skill/debugging-tools)
-- [super-human](https://www.absolutelyskilled.pro/skill/super-human)
+- [absolute-human](https://www.absolutelyskilled.pro/skill/absolute-human)
 
 ## Frequently Asked Questions
 

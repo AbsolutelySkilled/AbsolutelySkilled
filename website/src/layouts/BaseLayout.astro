@@ -14,9 +14,10 @@ interface Props {
   jsonLd?: Record<string, unknown>;
   additionalJsonLd?: Record<string, unknown>[];
   breadcrumbs?: BreadcrumbItem[];
+  publishedTime?: string;
 }
 
-const { title, description, canonical, image, jsonLd, additionalJsonLd, breadcrumbs } = Astro.props;
+const { title, description, canonical, image, jsonLd, additionalJsonLd, breadcrumbs, publishedTime } = Astro.props;
 ---
 
 <!doctype html>
@@ -24,16 +25,24 @@ const { title, description, canonical, image, jsonLd, additionalJsonLd, breadcru
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#2dd4bf" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.min.css" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
-    <SEOHead title={title} description={description} canonical={canonical} image={image} jsonLd={jsonLd} additionalJsonLd={additionalJsonLd} />
+    <SEOHead title={title} description={description} canonical={canonical} image={image} jsonLd={jsonLd} additionalJsonLd={additionalJsonLd} publishedTime={publishedTime} />
   </head>
   <body class="min-h-screen flex flex-col">
+    <!-- Subtle noise overlay for atmosphere -->
+    <div class="fixed inset-0 pointer-events-none z-[999] opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%270 0 256 256%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cfilter id=%27n%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%270.85%27 numOctaves=%274%27 stitchTiles=%27stitch%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23n)%27/%3E%3C/svg%3E'); background-repeat: repeat; background-size: 256px 256px;" aria-hidden="true"></div>
     <Header />
     {breadcrumbs && breadcrumbs.length > 0 && <Breadcrumbs items={breadcrumbs} />}
     <main class="flex-1">

@@ -54,7 +54,7 @@ Pair remotion-video with these complementary skills:
 
 - [video-creator](https://www.absolutelyskilled.pro/skill/video-creator)
 - [video-audio-design](https://www.absolutelyskilled.pro/skill/video-audio-design)
-- [motion-design](https://www.absolutelyskilled.pro/skill/motion-design)
+- [absolute-ui](https://www.absolutelyskilled.pro/skill/absolute-ui)
 - [video-analyzer](https://www.absolutelyskilled.pro/skill/video-analyzer)
 
 ## Frequently Asked Questions

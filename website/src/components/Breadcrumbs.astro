@@ -15,7 +15,7 @@ const { items } = Astro.props;
         <li class="flex items-center gap-1.5">
           {i > 0 && <span class="text-border">/</span>}
           {i < items.length - 1 ? (
-            <a href={item.url} class="hover:text-text-secondary transition-colors">
+            <a href={item.url} class="hover:text-primary-light transition-colors">
               {item.name}
             </a>
           ) : (

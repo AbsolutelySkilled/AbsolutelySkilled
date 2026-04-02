@@ -1,0 +1,162 @@
+{
+  "skill": "absolute-seo",
+  "version": "1.0.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on technical SEO indexing question",
+      "prompt": "My pages are not showing up in Google search results. How do I diagnose this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "noindex" },
+        { "type": "contains", "value": "robots" },
+        { "type": "contains", "value": "Search Console" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on local SEO question",
+      "prompt": "How do I rank higher in Google Maps for my plumbing business?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Google Business Profile" },
+        { "type": "contains", "value": "category" },
+        { "type": "contains", "value": "reviews" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on AI search optimization question",
+      "prompt": "How can I get my content cited in ChatGPT and Google AI Overviews?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "citab" },
+        { "type": "contains", "value": "brand" },
+        { "type": "contains", "value": "structured" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can generate Article JSON-LD schema",
+      "prompt": "Write JSON-LD schema markup for a blog post about React performance optimization",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "application/ld+json" },
+        { "type": "contains", "value": "Article" },
+        { "type": "contains", "value": "datePublished" },
+        { "type": "contains", "value": "author" },
+        { "type": "code_valid", "language": "json" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can advise on SEO audit methodology",
+      "prompt": "Run a quick SEO health check on my site and tell me what to look for",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "crawl" },
+        { "type": "contains", "value": "canonical" },
+        { "type": "contains", "value": "Core Web Vitals" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can write LocalBusiness schema for a restaurant",
+      "prompt": "Write LocalBusiness JSON-LD schema for my Italian restaurant with opening hours and address",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "LocalBusiness" },
+        { "type": "contains", "value": "openingHoursSpecification" },
+        { "type": "contains", "value": "address" },
+        { "type": "code_valid", "language": "json" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can advise on programmatic SEO quality gates",
+      "prompt": "I want to generate 5000 location pages for my service business. What quality checks should I have?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "unique content" },
+        { "type": "contains", "value": "doorway" },
+        { "type": "contains", "value": "batch" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Can diagnose Core Web Vitals issues",
+      "prompt": "My LCP is 4.2 seconds. What are the most likely causes and fixes?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "image" },
+        { "type": "contains", "value": "render-blocking" },
+        { "type": "contains", "value": "2.5" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: warns about HowTo schema deprecation",
+      "prompt": "Should I add HowTo schema to my recipe pages for rich results in Google?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "removed" },
+        { "type": "contains", "value": "2023" },
+        { "type": "not_contains", "value": "recommended" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: FAQPage restricted to gov/healthcare",
+      "prompt": "I run an e-commerce store selling electronics. Should I implement FAQPage schema for Google rich results?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "restricted" },
+        { "type": "contains", "value": "government" },
+        { "type": "contains", "value": "healthcare" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Gotcha: 18-day review velocity rule for local SEO",
+      "prompt": "My local business has 200 reviews at 4.5 stars but our local rankings suddenly dropped. What could cause this?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "review" },
+        { "type": "contains", "value": "velocity" },
+        { "type": "contains", "value": "recent" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Anti-hallucination: uses INP not FID as current Core Web Vital",
+      "prompt": "What are the current three Core Web Vitals metrics and their passing thresholds?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "INP" },
+        { "type": "contains", "value": "200" },
+        { "type": "not_contains", "value": "FID" }
+      ]
+    },
+    {
+      "id": "eval-013",
+      "description": "Anti-hallucination: does not recommend keyword stuffing in GBP name",
+      "prompt": "Should I add keywords like 'best plumber' to my Google Business Profile business name to rank better?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "violation" },
+        { "type": "contains", "value": "real" },
+        { "type": "not_contains", "value": "add keywords to your name" }
+      ]
+    },
+    {
+      "id": "eval-014",
+      "description": "References load: points to local-seo-signals reference for detailed data",
+      "prompt": "I need the full Whitespark 2026 local ranking factors breakdown with exact percentages and the top 15 factors",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "local-seo-signals" },
+        { "type": "contains", "value": "references" }
+      ]
+    }
+  ]
+}

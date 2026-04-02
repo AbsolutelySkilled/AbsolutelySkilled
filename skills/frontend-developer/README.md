@@ -48,10 +48,8 @@ platform is the foundation.
 
 Pair frontend-developer with these complementary skills:
 
-- [design-systems](https://www.absolutelyskilled.pro/skill/design-systems)
+- [absolute-ui](https://www.absolutelyskilled.pro/skill/absolute-ui)
 - [accessibility-wcag](https://www.absolutelyskilled.pro/skill/accessibility-wcag)
-- [responsive-design](https://www.absolutelyskilled.pro/skill/responsive-design)
-- [ultimate-ui](https://www.absolutelyskilled.pro/skill/ultimate-ui)
 - [react-ink](https://www.absolutelyskilled.pro/skill/react-ink)
 
 ## Frequently Asked Questions

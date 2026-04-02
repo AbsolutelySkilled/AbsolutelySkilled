@@ -1,11 +1,14 @@
 ---
 ---
 
-<footer class="border-t border-border mt-auto">
+<footer class="border-t border-border mt-auto relative">
+  <!-- Subtle gradient fade at top -->
+  <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
       <div>
-        <h3 class="font-mono font-bold text-text-primary mb-3">AbsolutelySkilled</h3>
+        <h3 class="font-display font-bold text-text-primary mb-3">AbsolutelySkilled</h3>
         <p class="text-sm text-text-secondary">
           A registry of production-ready skills for AI coding agents.
         </p>
@@ -13,7 +16,8 @@
       <div>
         <h4 class="font-semibold text-text-primary mb-3 text-sm">Links</h4>
         <ul class="space-y-2 text-sm">
-          <li><a href="/" class="text-text-secondary hover:text-text-primary transition-colors">Browse Skills</a></li>
+          <li><a href="/skills" class="text-text-secondary hover:text-text-primary transition-colors">Browse Skills</a></li>
+          <li><a href="/agents" class="text-text-secondary hover:text-text-primary transition-colors">AI Agents</a></li>
           <li><a href="/blog" class="text-text-secondary hover:text-text-primary transition-colors">Blog</a></li>
           <li>
             <a
@@ -60,11 +64,14 @@
               Issues
             </a>
           </li>
+          <li><a href="/sitemap.xml" class="text-text-secondary hover:text-text-primary transition-colors">Sitemap</a></li>
+          <li><a href="/llms.txt" class="text-text-secondary hover:text-text-primary transition-colors">llms.txt</a></li>
         </ul>
       </div>
     </div>
     <div class="border-t border-border mt-8 pt-8 text-center text-sm text-text-muted">
       <p>&copy; {new Date().getFullYear()} AbsolutelySkilled. MIT License.</p>
+      <p class="mt-2 text-text-muted/60">Crafted using the <a href="/skill/absolute-ui" class="text-primary-light/70 hover:text-primary-light transition-colors">absolute-ui</a> skill</p>
     </div>
   </div>
 </footer>

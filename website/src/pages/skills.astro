@@ -8,7 +8,7 @@ import { getSkillsPageSEO } from '../lib/seo';
 
 const skills = getAllSkills();
 const grouped = getSkillsByCategory(skills);
-const seo = getSkillsPageSEO(skills.length);
+const seo = getSkillsPageSEO(skills.length, skills.map((s) => ({ name: s.name, slug: s.slug })));
 
 const categories = Object.entries(grouped)
   .map(([category, skills]) => ({
@@ -42,7 +42,7 @@ const skillsData = skills.map((s) => ({
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Header */}
       <div class="mb-10">
-        <h1 class="text-3xl font-bold font-mono mb-2">All AI Agent Skills</h1>
+        <h1 class="text-3xl font-bold font-display mb-2">All AI Agent Skills</h1>
         <p class="text-text-secondary">
           {skills.length} production-ready skills across {categories.length} categories for Claude Code, Gemini CLI, OpenAI Codex, and more.
         </p>
@@ -68,7 +68,7 @@ const skillsData = skills.map((s) => ({
             id="skills-search"
             type="text"
             placeholder="Search by name, description, or tag..."
-            class="w-full pl-10 pr-16 py-2.5 rounded-lg border border-border bg-card text-text-primary placeholder:text-text-muted text-sm outline-none focus:border-border-hover transition-colors"
+            class="w-full pl-10 pr-16 py-2.5 rounded-lg border border-border bg-card text-text-primary placeholder:text-text-muted text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
             autocomplete="off"
           />
           <button
@@ -80,7 +80,7 @@ const skillsData = skills.map((s) => ({
         </div>
         <select
           id="skills-sort"
-          class="px-3 py-2.5 rounded-lg border border-border bg-card text-text-secondary text-sm cursor-pointer"
+          class="px-3 py-2.5 rounded-lg border border-border bg-card text-text-secondary text-sm cursor-pointer focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
         >
           <option value="name">Sort: A-Z</option>
           <option value="installs">Sort: Most installed</option>
@@ -91,7 +91,7 @@ const skillsData = skills.map((s) => ({
       <div class="flex flex-wrap gap-2 mb-8" id="category-filters">
         <button
           data-category=""
-          class="cat-btn active px-3 py-1.5 rounded-full text-xs font-medium border border-accent-blue bg-accent-blue text-white cursor-pointer transition-colors"
+          class="cat-btn active px-3 py-1.5 rounded-full text-xs font-medium border border-primary bg-primary text-white cursor-pointer transition-colors"
         >
           All ({skills.length})
         </button>
@@ -124,7 +124,7 @@ const skillsData = skills.map((s) => ({
             data-installs={skill.installs}
           >
             <div class="flex items-start justify-between mb-3">
-              <h3 class="font-mono font-semibold text-sm text-text-primary group-hover:text-accent-blue transition-colors">
+              <h3 class="font-display font-semibold text-sm text-text-primary group-hover:text-primary-light transition-colors">
                 {skill.name}
               </h3>
               {skill.installs > 0 && (
@@ -137,7 +137,7 @@ const skillsData = skills.map((s) => ({
             <div class="flex items-center gap-2 flex-wrap">
               <span
                 class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium border"
-                style={`color: ${skill.categoryColor}; border-color: ${skill.categoryColor}33; background: ${skill.categoryColor}11;`}
+                style={`color: ${skill.categoryColor}; border-color: color-mix(in oklch, ${skill.categoryColor} 20%, transparent); background: color-mix(in oklch, ${skill.categoryColor} 7%, transparent);`}
               >
                 {skill.categoryLabel}
               </span>
@@ -151,7 +151,7 @@ const skillsData = skills.map((s) => ({
 
       {/* Empty state */}
       <div id="skills-empty" class="hidden text-center py-16 rounded-xl border border-border bg-card">
-        <p class="text-lg font-mono mb-2 text-text-primary">No skills found</p>
+        <p class="text-lg font-display mb-2 text-text-primary">No skills found</p>
         <p class="text-sm text-text-muted">Try a different search term or category.</p>
       </div>
     </div>
@@ -255,13 +255,13 @@ const skillsData = skills.map((s) => ({
         const color = b.dataset.color;
 
         if (isActive && color) {
-          b.style.background = `${color}20`;
-          b.style.borderColor = `${color}66`;
+          b.style.background = `color-mix(in oklch, ${color} 12%, transparent)`;
+          b.style.borderColor = `color-mix(in oklch, ${color} 40%, transparent)`;
           b.style.color = color;
         } else if (isActive && !color) {
           // "All" button
-          b.style.background = 'var(--color-accent-blue)';
-          b.style.borderColor = 'var(--color-accent-blue)';
+          b.style.background = 'var(--color-primary)';
+          b.style.borderColor = 'var(--color-primary)';
           b.style.color = 'white';
         } else {
           b.style.background = 'transparent';

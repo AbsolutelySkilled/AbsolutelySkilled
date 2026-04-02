@@ -259,10 +259,10 @@ The dominant surface annotation changes the content brief requirements:
   keyword placement, and matching the SERP content type
 - **AEO-dominant clusters**: brief must include snippet-formatted answer blocks,
   PAA subheadings, concise answer paragraphs (40-60 words), and structured lists/tables.
-  Reference the `aeo-optimization` skill for formatting details.
+  Reference the `absolute-seo` skill for formatting details.
 - **GEO-dominant clusters**: brief must include citable claims with supporting data,
   clear expert positioning, unique analysis or original research, and structured
-  content that AI engines can extract. Reference the `geo-optimization` skill for
+  content that AI engines can extract. Reference the `absolute-seo` skill for
   citation optimization details.
 - **Dual/tri-surface clusters**: layer the requirements - lead with the primary surface
   format, then address secondary surface needs in supporting sections

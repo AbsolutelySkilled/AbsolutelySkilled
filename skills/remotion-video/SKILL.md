@@ -9,7 +9,7 @@ description: >
   useCurrentFrame, interpolate, spring animations, and video rendering.
 category: video
 tags: [remotion, video, animation, react, rendering, programmatic-video]
-recommended_skills: [video-creator, video-audio-design, motion-design, video-analyzer]
+recommended_skills: [video-creator, video-audio-design, absolute-ui, video-analyzer]
 platforms:
   - claude-code
   - gemini-cli
@@ -53,7 +53,7 @@ Trigger this skill when the user:
 Do NOT trigger this skill for:
 - General React questions unrelated to video creation - use React skills
 - Video editing with traditional timeline tools (Premiere, DaVinci, FFmpeg CLI)
-- CSS animations for web pages - use animation/motion-design skills
+- CSS animations for web pages - use absolute-ui skill
 - Video playback or streaming in web apps - use media player skills
 
 ---

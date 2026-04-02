@@ -50,9 +50,7 @@ mappings once, apply them always.
 
 Pair figma-to-code with these complementary skills:
 
-- [design-systems](https://www.absolutelyskilled.pro/skill/design-systems)
-- [responsive-design](https://www.absolutelyskilled.pro/skill/responsive-design)
-- [color-theory](https://www.absolutelyskilled.pro/skill/color-theory)
+- [absolute-ui](https://www.absolutelyskilled.pro/skill/absolute-ui)
 - [frontend-developer](https://www.absolutelyskilled.pro/skill/frontend-developer)
 
 ## Frequently Asked Questions

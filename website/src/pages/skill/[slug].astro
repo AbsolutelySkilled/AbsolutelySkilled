@@ -59,7 +59,7 @@ const refsHtml = skill.references.map((ref) => ({
 >
   <div data-pagefind-body>
     <h1
-      class="text-3xl font-bold font-mono mb-2"
+      class="text-3xl font-bold font-display mb-2"
       data-pagefind-meta="title"
     >
       {skill.name}
@@ -71,9 +71,20 @@ const refsHtml = skill.references.map((ref) => ({
     ))}
 
     <!-- Definition block for AEO / featured snippets -->
-    <section class="card p-5 mb-6 border-l-4 border-l-accent-blue">
-      <h2 class="text-lg font-semibold font-mono mb-2 text-text-primary">What is {skill.name}?</h2>
+    <section class="card p-5 mb-6 border-l-4 border-l-primary">
+      <h2 class="text-lg font-semibold font-display mb-2 text-text-primary">What is {skill.name}?</h2>
       <p class="text-text-secondary text-sm leading-relaxed">{skill.description}</p>
+    </section>
+
+    <!-- Quick Start for list snippet capture -->
+    <section class="card p-5 mb-6">
+      <h2 class="text-lg font-semibold font-display mb-3 text-text-primary">Quick Start</h2>
+      <ol class="list-decimal list-inside space-y-2 text-sm text-text-secondary">
+        <li>Open your terminal or command prompt</li>
+        <li>Run: <code class="text-xs bg-elevated px-1.5 py-0.5 rounded">npx skills add AbsolutelySkilled/AbsolutelySkilled --skill {skill.slug}</code></li>
+        <li>Start your AI coding agent (Claude Code, Cursor, Gemini CLI, or any supported agent)</li>
+        <li>The {skill.name} skill is now active and ready to use</li>
+      </ol>
     </section>
 
     <TabSwitcher>
@@ -83,7 +94,7 @@ const refsHtml = skill.references.map((ref) => ({
 
       <div slot="files" class="space-y-8">
         <div>
-          <h2 class="text-xl font-semibold font-mono mb-4 text-text-primary">SKILL.md</h2>
+          <h2 class="text-xl font-semibold font-display mb-4 text-text-primary">SKILL.md</h2>
           <div class="prose-dark">
             <Fragment set:html={bodyHtml} />
           </div>
@@ -91,10 +102,10 @@ const refsHtml = skill.references.map((ref) => ({
 
         {refsHtml.length > 0 && (
           <div class="space-y-8">
-            <h2 class="text-xl font-semibold font-mono text-text-primary">References</h2>
+            <h2 class="text-xl font-semibold font-display text-text-primary">References</h2>
             {refsHtml.map((ref) => (
               <div class="card p-6">
-                <h3 class="text-lg font-mono font-semibold text-text-primary mb-4">
+                <h3 class="text-lg font-display font-semibold text-text-primary mb-4">
                   {ref.filename}
                 </h3>
                 <div class="prose-dark">
@@ -109,7 +120,7 @@ const refsHtml = skill.references.map((ref) => ({
 
     <!-- FAQ section matching FAQPage schema -->
     <section class="mt-10 space-y-4">
-      <h2 class="text-xl font-semibold font-mono text-text-primary">Frequently Asked Questions</h2>
+      <h2 class="text-xl font-semibold font-display text-text-primary">Frequently Asked Questions</h2>
       {seo.faqEntries.map((faq) => (
         <div class="card p-5">
           <h3 class="font-semibold text-text-primary mb-2">{faq.q}</h3>
@@ -124,13 +135,13 @@ const refsHtml = skill.references.map((ref) => ({
         {prev ? (
           <a href={`/skill/${prev.slug}`} class="card p-4 flex-1 group hover:border-border-hover transition-colors">
             <span class="text-xs text-text-muted">Previous</span>
-            <span class="block font-mono text-sm text-text-primary group-hover:text-accent-blue transition-colors mt-1">{prev.name}</span>
+            <span class="block font-display text-sm text-text-primary group-hover:text-primary-light transition-colors mt-1">{prev.name}</span>
           </a>
         ) : <div class="flex-1" />}
         {next ? (
           <a href={`/skill/${next.slug}`} class="card p-4 flex-1 text-right group hover:border-border-hover transition-colors">
             <span class="text-xs text-text-muted">Next</span>
-            <span class="block font-mono text-sm text-text-primary group-hover:text-accent-blue transition-colors mt-1">{next.name}</span>
+            <span class="block font-display text-sm text-text-primary group-hover:text-primary-light transition-colors mt-1">{next.name}</span>
           </a>
         ) : <div class="flex-1" />}
       </nav>

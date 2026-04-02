@@ -4,7 +4,7 @@
 
 version: 1.0.0
 generated: '2026-03-29'
-total_skills: 170
+total_skills: 153
 skills:
 - name: a2a-protocol
   version: 0.1.0
@@ -33,11 +33,6 @@ skills:
     to PR comments", "fix review comments", or when the user wants to process open review threads on their PR. Uses the gh CLI to fetch unresolved comments, make code changes where agreed, and post batch
     replies with a humble, thankful tone.
   category: engineering
-- name: aeo-optimization
-  version: 0.1.0
-  description: Use this skill when optimizing content for answer engines and SERP features - featured snippets (paragraph, list, table), People Also Ask (PAA) targeting, voice search optimization, knowledge
-    panels, speakable schema, and zero-click search strategies. Triggers on winning position zero, optimizing for Google's answer boxes, voice assistant responses, or FAQ-style content optimization.
-  category: marketing
 - name: agile-scrum
   version: 0.1.0
   description: Use this skill when working with Agile and Scrum methodologies - sprint planning, retrospectives, velocity tracking, Kanban boards, story point estimation, backlog grooming, or team workflow
@@ -160,11 +155,6 @@ skills:
     after code changes. Triggers on codedocs:generate, codedocs:ask, codedocs:update, "document this codebase", "generate docs for this repo", "what does this project do", "update the docs after my changes",
     or any task requiring structured codebase documentation that serves AI agents, developers, and new team members.
   category: engineering
-- name: color-theory
-  version: 0.1.0
-  description: Use this skill when choosing color palettes, ensuring contrast compliance, implementing dark mode, or defining semantic color tokens. Triggers on color palette, contrast ratio, WCAG color,
-    dark mode, color tokens, HSL, OKLCH, brand colors, color harmony, and any task requiring color system design or implementation.
-  category: design
 - name: community-management
   version: 0.1.0
   description: Use this skill when building community programs, moderating forums, creating advocacy programs, or managing feedback loops. Triggers on community management, forum moderation, advocacy programs,
@@ -190,12 +180,6 @@ skills:
   description: Use this skill when creating content strategy, writing SEO-optimized blog posts, planning content calendars, or repurposing content across channels. Triggers on blog strategy, content calendar,
     SEO content, content repurposing, editorial workflow, content pillars, topic clusters, and any task requiring content marketing planning or execution.
   category: marketing
-- name: content-seo
-  version: 0.1.0
-  description: Use this skill when optimizing content for search engines - topic cluster strategy, pillar page architecture, E-E-A-T signals (Experience, Expertise, Authoritativeness, Trustworthiness),
-    content freshness, keyword cannibalization detection, topical authority building, and content gap analysis. Triggers on content planning for SEO, fixing thin content, building topical authority, or
-    resolving cannibalization issues.
-  category: marketing
 - name: contract-drafting
   version: 0.1.0
   description: Use this skill when drafting NDAs, MSAs, SaaS agreements, licensing terms, or redlining contracts. Triggers on contract drafting, NDA, MSA, SaaS agreement, licensing, redlining, terms of
@@ -205,11 +189,6 @@ skills:
   version: 0.1.0
   description: Use this skill when writing headlines, landing page copy, CTAs, email subject lines, or persuasive content. Triggers on copywriting, headlines, landing pages, call to action, persuasion frameworks,
     AIDA, PAS, value propositions, and any task requiring compelling marketing or sales copy.
-  category: marketing
-- name: core-web-vitals
-  version: 0.1.0
-  description: Use this skill when optimizing Core Web Vitals - LCP (Largest Contentful Paint), INP (Interaction to Next Paint), and CLS (Cumulative Layout Shift). Triggers on page speed optimization, Lighthouse
-    score improvement, fixing layout shifts, improving responsiveness, setting up performance monitoring with CrUX or RUM, and framework-specific CWV fixes for Next.js, Nuxt, Astro, and Remix.
   category: marketing
 - name: crm-management
   version: 0.1.0
@@ -275,11 +254,6 @@ skills:
   description: Use this skill when debugging applications using Chrome DevTools, lldb, strace, network tools, or memory profilers. Triggers on Chrome DevTools, debugger, breakpoints, network debugging,
     memory profiling, strace, ltrace, core dumps, and any task requiring systematic debugging with specialized tools.
   category: devtools
-- name: design-systems
-  version: 0.1.0
-  description: Use this skill when building design systems, creating component libraries, defining design tokens, implementing theming, or setting up Storybook. Triggers on design tokens, component library,
-    Storybook, theming, CSS variables, style dictionary, variant props, compound components, and any task requiring systematic UI component architecture.
-  category: design
 - name: developer-advocacy
   version: 0.1.0
   description: Use this skill when creating conference talks, live coding demos, technical blog posts, SDK quickstart examples, or community engagement strategies. Triggers on developer relations, DevRel,
@@ -297,12 +271,6 @@ skills:
   description: Use this skill when containerizing applications, writing Dockerfiles, deploying to Kubernetes, creating Helm charts, or configuring service mesh. Triggers on Docker, Kubernetes, k8s, containers,
     pods, deployments, services, ingress, Helm, Istio, container orchestration, and any task requiring container or cluster management.
   category: infra
-- name: ecommerce-seo
-  version: 0.1.0
-  description: Use this skill when optimizing e-commerce sites for search engines - product page SEO, faceted navigation crawl control, category taxonomy, product schema markup, pagination handling, inventory-aware
-    SEO (out-of-stock pages), and e-commerce site architecture. Triggers on any task involving online store search optimization, product listing pages, shopping search results, or e-commerce technical SEO
-    challenges.
-  category: marketing
 - name: edge-computing
   version: 0.1.0
   description: Use this skill when deploying edge functions, writing Cloudflare Workers, configuring CDN cache logic, optimizing latency with edge-side processing, or building serverless-at-the-edge architectures.
@@ -373,12 +341,6 @@ skills:
     or the command pattern for input handling, undo/redo, and replays. Triggers on game architecture, game loop design, entity management, finite state machines, object pools, observer/event bus, command
     queues, and gameplay programming patterns.
   category: engineering
-- name: geo-optimization
-  version: 0.1.0
-  description: Use this skill when optimizing for AI-powered search engines and generative search results - Google AI Overviews, ChatGPT Search (SearchGPT), Perplexity, Microsoft Copilot Search, and other
-    LLM-powered answer engines. Covers Generative Engine Optimization (GEO), citation signals for AI search, entity authority, LLMs.txt specification, and LLM-friendliness patterns based on Princeton GEO
-    research. Triggers on visibility in AI search, getting cited by LLMs, or adapting SEO for the AI search era.
-  category: marketing
 - name: git-advanced
   version: 0.1.0
   description: Use this skill when performing advanced git operations, rebase strategies, bisecting bugs, managing worktrees, configuring hooks, or handling complex merge scenarios. Triggers on interactive
@@ -400,11 +362,6 @@ skills:
   description: Use this skill when writing, reviewing, or improving internal engineering documents - RFCs, design docs, post-mortems, runbooks, and knowledge base articles. Triggers on drafting a design
     proposal, writing an RFC, creating a post-mortem after an incident, building an operational runbook, organizing team knowledge, or improving existing documentation for clarity and completeness.
   category: writing
-- name: international-seo
-  version: 0.1.0
-  description: Use this skill when optimizing websites for multiple countries or languages - hreflang tag implementation, URL structure strategy (ccTLD vs subdomain vs subdirectory), geo-targeting in Google
-    Search Console, multilingual content strategy, and international site architecture. Triggers on multi-language sites, multi-region targeting, hreflang debugging, or expanding a site to new markets.
-  category: marketing
 - name: interview-design
   version: 0.1.0
   description: Use this skill when designing structured interviews, creating rubrics, building coding challenges, or assessing culture fit. Triggers on interview design, rubrics, scoring criteria, coding
@@ -441,11 +398,6 @@ skills:
   description: Use this skill when defining ideal customer profiles, building scoring models, identifying intent signals, or qualifying leads. Triggers on lead scoring, ICP definition, scoring models, intent
     signals, MQL, SQL, lead qualification, BANT, and any task requiring lead prioritization or qualification framework design.
   category: sales
-- name: link-building
-  version: 0.1.0
-  description: Use this skill when building, auditing, or managing backlinks for SEO. Triggers on digital PR outreach, HARO/Connectively pitching, guest posting strategy, broken link building, anchor text
-    optimization, toxic link auditing, disavow file creation, and link profile analysis. Covers ethical white-hat link acquisition tactics and link equity management.
-  category: marketing
 - name: linux-admin
   version: 0.1.0
   description: Use this skill when managing Linux servers, writing shell scripts, configuring systemd services, debugging networking, or hardening security. Triggers on bash scripting, systemd units, iptables,
@@ -467,11 +419,6 @@ skills:
   description: Use this skill when load testing services, benchmarking API performance, planning capacity, or identifying bottlenecks under stress. Triggers on k6, Artillery, JMeter, load testing, stress
     testing, soak testing, spike testing, performance benchmarks, throughput testing, and any task requiring load or performance testing.
   category: engineering
-- name: local-seo
-  version: 0.1.0
-  description: Use this skill when optimizing for local search results - Google Business Profile management, local citations, NAP consistency, local schema markup (LocalBusiness), review management, local
-    pack optimization, and geo-targeted content. Triggers on any task involving local search visibility, map pack rankings, multi-location SEO, or local business online presence.
-  category: marketing
 - name: localization-i18n
   version: 0.1.0
   description: Use this skill when working with internationalization (i18n), localization (l10n), translation workflows, right-to-left (RTL) layout support, pluralization rules, or ICU MessageFormat syntax.
@@ -511,11 +458,6 @@ skills:
   description: Use this skill when setting up or managing monorepos, configuring workspace dependencies, optimizing build caching, or choosing between monorepo tools. Triggers on Turborepo, Nx, Bazel, pnpm
     workspaces, npm workspaces, yarn workspaces, build pipelines, task orchestration, affected commands, and any task requiring multi-package repository management.
   category: engineering
-- name: motion-design
-  version: 0.1.0
-  description: Use this skill when implementing animations, transitions, micro-interactions, or motion design in web applications. Triggers on CSS animations, Framer Motion, GSAP, keyframes, transitions,
-    spring animations, scroll-driven animations, page transitions, loading states, and any task requiring motion or animation implementation.
-  category: design
 - name: nlp-engineering
   version: 0.1.0
   description: Use this skill when building NLP pipelines, implementing text classification, semantic search, embeddings, or summarization. Triggers on text preprocessing, tokenization, embeddings, vector
@@ -531,12 +473,6 @@ skills:
   description: Use this skill when implementing logging, metrics, distributed tracing, alerting, or defining SLOs. Triggers on structured logging, Prometheus, Grafana, OpenTelemetry, Datadog, distributed
     tracing, error tracking, dashboards, alert fatigue, SLIs, SLOs, error budgets, and any task requiring system observability or monitoring setup.
   category: monitoring
-- name: on-site-seo
-  version: 0.1.0
-  description: Use this skill when implementing on-page SEO fixes in code - meta tags, title tags, heading structure, internal linking, image optimization, semantic HTML, Open Graph and Twitter card tags,
-    and framework-specific SEO patterns. Covers Next.js Metadata API and generateMetadata, Nuxt useSeoMeta, Astro SEO patterns, and Remix meta function. Triggers on any hands-on code task to improve a page's
-    on-site SEO signals.
-  category: marketing
 - name: onboarding
   version: 0.1.0
   description: Use this skill when designing onboarding programs, creating 30/60/90 plans, setting up buddy systems, or measuring ramp effectiveness. Triggers on onboarding plans, 30/60/90 day plans, buddy
@@ -621,11 +557,6 @@ skills:
   description: Use this skill when defining product vision, building roadmaps, prioritizing features, or choosing frameworks like RICE, ICE, or MoSCoW. Triggers on product vision, roadmapping, prioritization,
     RICE scoring, product strategy, feature prioritization, OKRs for product, and any task requiring product direction or planning decisions.
   category: product
-- name: programmatic-seo
-  version: 0.1.0
-  description: Use this skill when building programmatic SEO pages at scale - template-based page generation, data-driven landing pages, automated internal linking, and avoiding thin content or doorway
-    page penalties. Triggers on generating thousands of location pages, comparison pages, tool pages, or any template-driven SEO content strategy that creates pages programmatically from data sources.
-  category: marketing
 - name: project-execution
   version: 0.1.0
   description: Use this skill when planning, executing, or recovering software projects with a focus on risk management, dependency tracking, and stakeholder communication. Triggers on project planning,
@@ -691,11 +622,6 @@ skills:
   description: Use this skill when creating programmatic videos with Remotion, building React-based video compositions, implementing animations (text, element, scene transitions), rendering videos to MP4/WebM,
     or setting up standalone Remotion projects. Triggers on video creation, Remotion compositions, useCurrentFrame, interpolate, spring animations, and video rendering.
   category: video
-- name: responsive-design
-  version: 0.1.0
-  description: Use this skill when building responsive layouts, implementing fluid typography, using container queries, or defining breakpoint strategies. Triggers on responsive design, mobile-first, media
-    queries, container queries, fluid typography, clamp(), viewport units, grid layout, flexbox patterns, and any task requiring adaptive or responsive web design.
-  category: design
 - name: saas-metrics
   version: 0.1.0
   description: Use this skill when calculating, analyzing, or reporting SaaS business metrics. Triggers on MRR, ARR, churn rate, LTV, CAC, LTV:CAC ratio, cohort analysis, net revenue retention, expansion
@@ -712,12 +638,6 @@ skills:
   description: Use this skill when designing outbound sequences, handling objections, running discovery calls, or implementing sales methodologies. Triggers on outbound sales, cold email sequences, objection
     handling, discovery calls, MEDDIC, BANT, sales methodology, closing techniques, and any task requiring structured sales process design or execution.
   category: sales
-- name: schema-markup
-  version: 0.1.0
-  description: Use this skill when implementing structured data markup using JSON-LD and Schema.org vocabulary for rich search results. Triggers on adding schema markup for FAQ, HowTo, Product, Article,
-    Breadcrumb, Organization, LocalBusiness, Event, Recipe, or any Schema.org type. Covers JSON-LD implementation, Google Rich Results eligibility, validation testing, and framework integration (Next.js,
-    Nuxt, Astro).
-  category: marketing
 - name: second-brain
   version: 0.1.0
   description: Use this skill when managing persistent user memory in ~/.memory/ - a structured, hierarchical second brain for AI agents. Triggers on conversation start (auto-load relevant memories by matching
@@ -734,17 +654,6 @@ skills:
   description: Use this skill when working with Sentry - error monitoring, performance tracing, session replay, cron monitoring, alerts, or source maps. Triggers on any Sentry-related task including SDK
     initialization, issue triage, custom instrumentation, uploading source maps, configuring alerts, and integrating Sentry into JavaScript, Python, Next.js, or other supported frameworks.
   category: monitoring
-- name: seo-audit
-  version: 0.1.0
-  description: Use this skill when performing a comprehensive SEO audit - technical audit, on-page audit, content audit, off-page audit, and AEO/GEO readiness assessment. Provides a structured scorecard
-    with 30-40 checks rated PASS/FAIL/WARN across all SEO categories, prioritized recommendations, and links to specialized skills for deep fixes. This is the master audit skill that orchestrates all other
-    SEO skills.
-  category: marketing
-- name: seo-mastery
-  version: 0.1.0
-  description: Use this skill when optimizing for search engines, conducting keyword research, implementing technical SEO, or building link strategies. Triggers on SEO, keyword research, meta tags, schema
-    markup, Core Web Vitals, sitemap, robots.txt, link building, search console, and any task requiring search engine optimization.
-  category: marketing
 - name: shell-scripting
   version: 0.1.0
   description: Use this skill when writing bash or zsh scripts, parsing arguments, handling errors, or automating CLI workflows. Triggers on bash scripting, shell scripts, argument parsing, process substitution,
@@ -794,19 +703,24 @@ skills:
   description: Create, test, and deploy synthetic monitoring checks from source code using the supaguard CLI. Triggers on monitoring setup, Playwright script generation, uptime checks, health checks, and
     production observability workflows.
   category: monitoring
-- name: super-brainstorm
+- name: absolute-brainstorm
   version: 0.1.0
   description: You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, designing systems, or making architectural decisions. Enters
     plan mode, reads all available docs, explores the codebase deeply, then interviews the user relentlessly with ultrathink-level reasoning on every decision until a shared understanding is reached. Produces
     a validated design spec before any implementation begins. Triggers on feature requests, design discussions, refactors, new projects, component creation, system changes, and any task requiring design
     decisions.
   category: workflow
-- name: super-human
+- name: absolute-human
   version: 0.1.0
-  description: AI-native software development lifecycle that replaces traditional SDLC. Triggers on "plan and build", "break this into tasks", "build this feature end-to-end", "sprint plan this", "super-human
+  description: AI-native software development lifecycle that replaces traditional SDLC. Triggers on "plan and build", "break this into tasks", "build this feature end-to-end", "sprint plan this", "absolute-human
     this", or any multi-step development task. Decomposes work into dependency-graphed sub-tasks, executes in parallel waves with TDD verification, and tracks progress on a persistent board. Handles features,
     refactors, greenfield projects, and migrations.
   category: engineering
+- name: absolute-seo
+  version: 1.0.0
+  description: Use this skill when optimizing for search engines across any dimension - technical SEO, on-page optimization, content quality (E-E-A-T), schema markup, Core Web Vitals, local SEO, link building,
+    international SEO, e-commerce SEO, programmatic SEO, AI search optimization (GEO/AEO), or running SEO audits.
+  category: marketing
 - name: support-analytics
   version: 0.1.0
   description: Use this skill when measuring CSAT, NPS, resolution time, deflection rates, or analyzing support trends. Triggers on CSAT, NPS, resolution time, deflection rate, support metrics, trend analysis,
@@ -827,12 +741,6 @@ skills:
   description: Use this skill when designing coding challenges, structuring system design interviews, building interview rubrics, calibrating evaluation criteria, or creating hiring loops. Triggers on interview
     question design, coding assessment creation, system design prompt writing, rubric building, interviewer training, candidate evaluation, and any task requiring structured technical assessment.
   category: operations
-- name: technical-seo
-  version: 0.1.0
-  description: Use this skill when working on technical SEO infrastructure - crawlability, indexing, XML sitemaps, canonical URLs, robots.txt, redirect chains, rendering strategies (SSR/SSG/ISR/CSR), crawl
-    budget optimization, and search engine rendering. Triggers on fixing indexing issues, configuring crawl directives, choosing rendering strategies for SEO, debugging Google Search Console errors, or
-    auditing site architecture for search engines.
-  category: marketing
 - name: technical-writing
   version: 0.1.0
   description: Use this skill when writing, reviewing, or structuring technical documentation for software projects. Triggers on API documentation, tutorials, architecture decision records (ADRs), runbooks,
@@ -848,7 +756,7 @@ skills:
   description: Use this skill when deciding what to test, choosing between test types, designing a testing strategy, or balancing test coverage. Triggers on test pyramid, unit vs integration vs e2e, contract
     testing, test coverage strategy, TDD, BDD, testing ROI, and any task requiring testing architecture decisions.
   category: engineering
-- name: ultimate-ui
+- name: absolute-ui
   version: 0.1.0
   description: Use this skill when building user interfaces that need to look polished, modern, and intentional - not like AI-generated slop. Triggers on UI design tasks including component styling, layout
     decisions, color choices, typography, spacing, responsive design, dark mode, accessibility, animations, landing pages, onboarding flows, data tables, navigation patterns, and any question about making

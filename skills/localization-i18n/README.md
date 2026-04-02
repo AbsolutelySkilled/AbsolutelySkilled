@@ -51,7 +51,7 @@ Pair localization-i18n with these complementary skills:
 
 - [frontend-developer](https://www.absolutelyskilled.pro/skill/frontend-developer)
 - [accessibility-wcag](https://www.absolutelyskilled.pro/skill/accessibility-wcag)
-- [international-seo](https://www.absolutelyskilled.pro/skill/international-seo)
+- [absolute-seo](https://www.absolutelyskilled.pro/skill/absolute-seo)
 
 ## Frequently Asked Questions
 

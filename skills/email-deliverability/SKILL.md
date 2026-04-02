@@ -11,7 +11,7 @@ description: >
   advisor for engineers and marketers managing transactional or marketing email.
 category: communication
 tags: [email, deliverability, spf, dkim, dmarc, reputation]
-recommended_skills: [email-marketing, technical-seo, privacy-compliance]
+recommended_skills: [email-marketing, absolute-seo, privacy-compliance]
 platforms:
   - claude-code
   - gemini-cli

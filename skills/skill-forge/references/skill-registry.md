@@ -17,7 +17,7 @@ Complete catalog of existing and planned skills for the AbsolutelySkilled regist
 | clean-architecture | Built | Hexagonal, onion, ports-and-adapters patterns |
 | backend-engineering | Built | API design, databases, caching, queues, scaling |
 | frontend-developer | Built | Modern frontend patterns, frameworks, state management |
-| super-human | Built | AI-native development lifecycle - task decomposition, parallel execution, TDD, board tracking |
+| absolute-human | Built | AI-native development lifecycle - task decomposition, parallel execution, TDD, board tracking |
 | system-design | Planned | Distributed systems, load balancing, CAP theorem, architecture interviews |
 | microservices | Planned | Service decomposition, communication patterns, saga, CQRS |
 | api-design | Planned | REST, GraphQL, gRPC, OpenAPI spec, versioning, pagination |
@@ -61,13 +61,9 @@ Complete catalog of existing and planned skills for the AbsolutelySkilled regist
 
 | Skill | Status | Description |
 |---|---|---|
-| ultimate-ui | Built | Polished modern UIs with proper spacing, color, typography |
-| design-systems | Planned | Building component libraries, tokens, theming, Storybook |
+| absolute-ui | Built | Polished modern UIs with proper spacing, color, typography |
 | accessibility-wcag | Planned | ARIA, screen readers, keyboard navigation, WCAG compliance |
-| motion-design | Planned | CSS animations, Framer Motion, GSAP, micro-interactions |
-| responsive-design | Planned | Mobile-first, fluid typography, container queries, breakpoint strategy |
 | figma-to-code | Planned | Translating Figma designs to pixel-perfect implementations |
-| color-theory | Planned | Palettes, contrast, brand colors, dark mode, semantic tokens |
 | ux-research | Planned | User interviews, usability testing, journey mapping, A/B test design |
 
 ## Developer Tools
@@ -111,7 +107,7 @@ Complete catalog of existing and planned skills for the AbsolutelySkilled regist
 | Skill | Status | Description |
 |---|---|---|
 | content-marketing | Planned | Blog strategy, SEO content, content calendars, repurposing |
-| seo-mastery | Planned | Technical SEO, keyword research, link building, schema markup |
+| absolute-seo | Built | Comprehensive SEO - technical, on-page, E-E-A-T, schema, CWV, local, link building, international, e-commerce, programmatic, GEO/AEO, audits |
 | email-marketing | Planned | Campaigns, drip sequences, deliverability, A/B testing |
 | social-media-strategy | Planned | Platform-specific tactics, scheduling, analytics, engagement |
 | growth-hacking | Planned | Viral loops, referral programs, activation funnels, retention |

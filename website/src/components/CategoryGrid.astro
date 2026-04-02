@@ -16,13 +16,21 @@ const { categories } = Astro.props;
         href={`/category/${category}`}
         class="card p-4 group text-center"
       >
+        <div class="flex items-center justify-center gap-2 mb-1">
+          <span
+            class="text-[10px] font-display font-bold tracking-wider px-1.5 py-0.5 rounded"
+            style={`color: ${meta.color}; background: color-mix(in oklch, ${meta.color} 10%, transparent);`}
+          >
+            {meta.icon}
+          </span>
+        </div>
         <div
-          class="text-lg font-bold font-mono mb-1 group-hover:scale-110 transition-transform inline-block"
+          class="text-sm font-bold font-display group-hover:text-primary-light transition-colors"
           style={`color: ${meta.color};`}
         >
           {meta.label}
         </div>
-        <div class="text-xs text-text-muted">{count} skills</div>
+        <div class="text-xs text-text-muted mt-1">{count} skills</div>
       </a>
     );
   })}

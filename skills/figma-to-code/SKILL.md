@@ -9,7 +9,7 @@ description: >
   faithful implementation of design mockups.
 category: design
 tags: [figma, design-handoff, implementation, pixel-perfect, css]
-recommended_skills: [design-systems, responsive-design, color-theory, frontend-developer]
+recommended_skills: [absolute-ui, frontend-developer]
 platforms:
   - claude-code
   - gemini-cli

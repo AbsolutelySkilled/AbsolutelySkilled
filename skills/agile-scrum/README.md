@@ -52,7 +52,7 @@ Pair agile-scrum with these complementary skills:
 - [project-execution](https://www.absolutelyskilled.pro/skill/project-execution)
 - [user-stories](https://www.absolutelyskilled.pro/skill/user-stories)
 - [remote-collaboration](https://www.absolutelyskilled.pro/skill/remote-collaboration)
-- [super-human](https://www.absolutelyskilled.pro/skill/super-human)
+- [absolute-human](https://www.absolutelyskilled.pro/skill/absolute-human)
 
 ## Frequently Asked Questions
 

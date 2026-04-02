@@ -52,7 +52,7 @@ Pair a2ui with these complementary skills:
 - [a2a-protocol](https://www.absolutelyskilled.pro/skill/a2a-protocol)
 - [ai-agent-design](https://www.absolutelyskilled.pro/skill/ai-agent-design)
 - [frontend-developer](https://www.absolutelyskilled.pro/skill/frontend-developer)
-- [design-systems](https://www.absolutelyskilled.pro/skill/design-systems)
+- [absolute-ui](https://www.absolutelyskilled.pro/skill/absolute-ui)
 
 ## Frequently Asked Questions
 

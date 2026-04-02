@@ -50,7 +50,7 @@ and marketers diagnosing delivery problems.
 Pair email-deliverability with these complementary skills:
 
 - [email-marketing](https://www.absolutelyskilled.pro/skill/email-marketing)
-- [technical-seo](https://www.absolutelyskilled.pro/skill/technical-seo)
+- [absolute-seo](https://www.absolutelyskilled.pro/skill/absolute-seo)
 - [privacy-compliance](https://www.absolutelyskilled.pro/skill/privacy-compliance)
 
 ## Frequently Asked Questions

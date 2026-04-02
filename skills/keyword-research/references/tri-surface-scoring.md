@@ -146,8 +146,8 @@ After scoring, assign a **priority surface** to each keyword:
 The priority surface informs which optimization skill to invoke next:
 
 - Organic priority -> standard SEO content optimization
-- AEO priority -> invoke `aeo-optimization` skill for snippet/PAA formatting
-- GEO priority -> invoke `geo-optimization` skill for citation optimization
+- AEO priority -> invoke `absolute-seo` skill for snippet/PAA formatting
+- GEO priority -> invoke `absolute-seo` skill for citation optimization
 - Dual/tri-surface -> optimize content for primary surface first, then layer secondary
 
 ---
@@ -200,8 +200,8 @@ Action: pure product/category page optimization. AEO=0 because transactional que
 **Research, not optimization** - This scoring framework tells you WHERE the opportunity is. It does not tell you HOW to capture it. For execution:
 
 - Organic optimization: standard content SEO best practices
-- AEO capture: use the `aeo-optimization` skill
-- GEO citation: use the `geo-optimization` skill
+- AEO capture: use the `absolute-seo` skill
+- GEO citation: use the `absolute-seo` skill
 
 **Sample size** - When checking AI Overview triggers, test at least 3 times across different days and browsers. AI Overview appearance can vary by session, location, and Google's ongoing experiments.
 

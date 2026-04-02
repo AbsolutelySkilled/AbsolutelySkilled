@@ -25,10 +25,7 @@ const topSkills = getTopSkillsByCounts(
   5
 );
 
-const flagshipSlugs = ['super-brainstorm', 'super-human', 'video-creator', 'clean-code', 'frontend-developer', 'supaguard'];
-const flagshipSkills = flagshipSlugs
-  .map((slug) => skills.find((s) => s.slug === slug))
-  .filter((s): s is Skill => !!s);
+const flagshipSkills = skills.filter((s) => s.slug.startsWith('absolute-'));
 
 const recentSkills = skills.slice(-10).reverse();
 
@@ -41,37 +38,49 @@ const blogPosts = (await getCollection('blog'))
 <BaseLayout title={seo.title} description={seo.description} canonical={seo.canonical} jsonLd={seo.jsonLd}>
   <!-- Hero -->
   <section class="relative overflow-hidden border-b border-border">
-    <!-- Grid background -->
-    <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:64px_64px] pointer-events-none" />
-    <!-- Radial glow -->
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.08)_0%,transparent_70%)] pointer-events-none" />
+    <!-- Dot grid background (Swiss) -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle,rgba(148,163,184,0.06)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+    <!-- Radial glow - teal, centered higher -->
+    <div class="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[1000px] h-[700px] bg-[radial-gradient(ellipse_at_center,oklch(0.60_0.12_180_/_0.12)_0%,transparent_70%)] pointer-events-none" />
 
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 sm:pt-32 sm:pb-24 text-center relative">
-      <!-- Logo -->
-      <img src="/logo.png" alt="AbsolutelySkilled logo" class="w-24 h-24 mx-auto mb-8" width="96" height="96" />
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-16 sm:pt-24 sm:pb-24 text-center relative">
+      <!-- Agent badges bar -->
+      <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap mb-12">
+        {['Claude Code', 'Cursor', 'Windsurf', 'GitHub Copilot', 'Gemini CLI', 'OpenAI Codex', 'Kilo Code', 'Amp'].map((name) => (
+          <span class="inline-flex items-center px-3 py-1.5 rounded-full border border-border bg-card/60 backdrop-blur-sm text-xs text-text-secondary">
+            {name}
+          </span>
+        ))}
+        <span class="inline-flex items-center px-3 py-1.5 rounded-full border border-border bg-card/60 backdrop-blur-sm text-xs text-text-muted">
+          +40 more
+        </span>
+      </div>
 
-      <h1 class="text-5xl sm:text-7xl font-bold font-mono mb-6 tracking-tight">
-        <span class="text-text-primary">Teach your AI agent</span>
+      <!-- Logo + Heading -->
+      <img src="/logo.png" alt="AbsolutelySkilled logo" class="w-20 h-20 mx-auto mb-6" width="80" height="80" fetchpriority="high" />
+
+      <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold font-display mb-4 tracking-tight leading-[0.95]">
+        <span class="text-text-secondary">Teach your AI agent</span>
         <br />
-        <span class="bg-gradient-to-r from-accent-blue via-accent-purple to-accent-pink bg-clip-text text-transparent">anything.</span>
+        <span class="text-primary-light">anything.</span>
       </h1>
 
-      <p class="text-lg text-text-secondary max-w-xl mx-auto mb-10 leading-relaxed">
+      <p class="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
         {skills.length}+ production-ready skills for Claude Code, Gemini CLI, OpenAI Codex, and 40+ more agents. From clean code to marketing strategy.
       </p>
 
       <!-- Install command -->
-      <div class="max-w-lg mx-auto mb-6">
-        <div class="install-block justify-center">
+      <div class="max-w-xl mx-auto mb-8">
+        <div class="install-block justify-center text-base">
           <code class="text-text-primary">npx skills add AbsolutelySkilled/AbsolutelySkilled</code>
         </div>
       </div>
 
-      <!-- CTAs -->
-      <div class="flex items-center justify-center gap-3 mb-12">
+      <!-- CTAs - bigger -->
+      <div class="flex items-center justify-center gap-4 mb-16">
         <a
           href="#skills"
-          class="px-5 py-2.5 rounded-lg bg-accent-blue text-white text-sm font-medium hover:bg-accent-blue/90 transition-colors"
+          class="px-8 py-3.5 rounded-xl bg-primary text-white text-sm font-semibold hover:bg-primary-light transition-colors"
         >
           Browse Skills
         </a>
@@ -79,29 +88,42 @@ const blogPosts = (await getCollection('blog'))
           href="https://github.com/AbsolutelySkilled/AbsolutelySkilled"
           target="_blank"
           rel="noopener noreferrer"
-          class="px-5 py-2.5 rounded-lg border border-border text-sm font-medium text-text-secondary hover:text-text-primary hover:border-border-hover transition-colors"
+          class="px-8 py-3.5 rounded-xl border border-border text-sm font-semibold text-text-secondary hover:text-primary-light hover:border-primary/40 transition-colors"
         >
-          GitHub
+          View on GitHub
         </a>
       </div>
 
-      <!-- Stats inline -->
-      <div class="flex items-center justify-center gap-4 sm:gap-8 text-sm">
-        <div class="flex items-center gap-1.5 sm:gap-2">
-          <span class="text-xl sm:text-2xl font-bold font-mono text-text-primary">{skills.length}</span>
-          <span class="text-text-muted">skills</span>
+      <!-- Stats as glassmorphic cards -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto">
+        <div class="stat-card">
+          <svg class="w-5 h-5 text-primary-light mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 0 0-1.883 2.542l.857 6a2.25 2.25 0 0 0 2.227 1.932H19.05a2.25 2.25 0 0 0 2.227-1.932l.857-6a2.25 2.25 0 0 0-1.883-2.542m-16.5 0V6A2.25 2.25 0 0 1 6 3.75h3.879a1.5 1.5 0 0 1 1.06.44l2.122 2.12a1.5 1.5 0 0 0 1.06.44H18A2.25 2.25 0 0 1 20.25 9v.776" />
+          </svg>
+          <div class="text-2xl sm:text-3xl font-bold font-display text-text-primary">{skills.length}</div>
+          <div class="text-xs text-text-muted mt-0.5">Skills</div>
         </div>
-        <div class="w-px h-5 sm:h-6 bg-border" />
-        <div class="flex items-center gap-1.5 sm:gap-2">
-          <span class="text-xl sm:text-2xl font-bold font-mono text-text-primary">{categories.length}</span>
-          <span class="text-text-muted">categories</span>
+        <div class="stat-card">
+          <svg class="w-5 h-5 text-primary-light mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
+          </svg>
+          <div class="text-2xl sm:text-3xl font-bold font-display text-text-primary">{categories.length}</div>
+          <div class="text-xs text-text-muted mt-0.5">Categories</div>
         </div>
-        <div data-installs-wrapper class:list={[totalInstalls <= 0 && 'hidden', 'contents']}>
-          <div class="w-px h-5 sm:h-6 bg-border" />
-          <div class="flex items-center gap-1.5 sm:gap-2">
-            <span class="text-xl sm:text-2xl font-bold font-mono text-text-primary" data-installs-total>{totalInstalls > 0 ? totalInstalls.toLocaleString() : ''}</span>
-            <span class="text-text-muted">installs</span>
-          </div>
+        <div class="stat-card" data-installs-wrapper class:list={[totalInstalls <= 0 && 'hidden']}>
+          <svg class="w-5 h-5 text-primary-light mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+          </svg>
+          <div class="text-2xl sm:text-3xl font-bold font-display text-text-primary" data-installs-total>{totalInstalls > 0 ? totalInstalls.toLocaleString() : ''}</div>
+          <div class="text-xs text-text-muted mt-0.5">Installs</div>
+        </div>
+        <div class="stat-card">
+          <svg class="w-5 h-5 text-primary-light mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25A2.25 2.25 0 0 1 5.25 3h13.5A2.25 2.25 0 0 1 21 5.25Z" />
+          </svg>
+          <div class="text-2xl sm:text-3xl font-bold font-display text-text-primary">40+</div>
+          <div class="text-xs text-text-muted mt-0.5">Agents</div>
         </div>
       </div>
     </div>
@@ -111,12 +133,11 @@ const blogPosts = (await getCollection('blog'))
   <section class="py-16" id="skills">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center gap-3 mb-10">
-        <h2 class="text-2xl font-bold font-mono">Flagship Skills</h2>
+        <h2 class="text-2xl font-bold font-display">Flagship Skills</h2>
         <span class="text-xs font-mono text-text-muted bg-elevated px-2.5 py-1 rounded-full border border-border">curated</span>
       </div>
-      {/* Top row: 3 featured cards */}
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
-        {flagshipSkills.slice(0, 3).map((skill) => (
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {flagshipSkills.map((skill) => (
           <FlagshipCard
             slug={skill.slug}
             name={skill.name}
@@ -127,33 +148,53 @@ const blogPosts = (await getCollection('blog'))
           />
         ))}
       </div>
-      {/* Bottom row: 3 cards */}
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {flagshipSkills.slice(3).map((skill) => (
-          <FlagshipCard
-            slug={skill.slug}
-            name={skill.name}
-            description={skill.description}
-            category={skill.category}
-            tags={skill.tags}
-          />
-        ))}
-      </div>
     </div>
   </section>
 
   <!-- Categories -->
-  <section class="py-16 bg-card/50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold font-mono mb-8">Categories</h2>
+  <section class="py-16 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-card/50 via-card/30 to-transparent pointer-events-none" />
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <h2 class="text-2xl font-bold font-display mb-8">Categories</h2>
       <CategoryGrid categories={categories} />
+    </div>
+  </section>
+
+  <!-- Supported Agents - internal linking for agent pages -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-2xl font-bold font-display">Works With Your Agent</h2>
+        <a href="/agents" class="text-sm text-text-muted hover:text-primary-light transition-colors font-mono">
+          All agents &rarr;
+        </a>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        {[
+          { name: 'Claude Code', slug: 'claude-code' },
+          { name: 'Cursor', slug: 'cursor' },
+          { name: 'Windsurf', slug: 'windsurf' },
+          { name: 'GitHub Copilot', slug: 'github-copilot' },
+          { name: 'Gemini CLI', slug: 'gemini-cli' },
+          { name: 'OpenAI Codex', slug: 'openai-codex' },
+        ].map((agent) => (
+          <a
+            href={`/agents/${agent.slug}`}
+            class="card p-4 text-center group hover:border-border-hover transition-colors"
+          >
+            <span class="text-sm font-display font-semibold text-text-primary group-hover:text-primary-light transition-colors">
+              {agent.name}
+            </span>
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 
   <!-- Recently Added -->
   <section class="py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold font-mono mb-8">Recently Added</h2>
+      <h2 class="text-2xl font-bold font-display mb-8">Recently Added</h2>
       <RecentSkills skills={recentSkills} />
     </div>
   </section>
@@ -162,12 +203,12 @@ const blogPosts = (await getCollection('blog'))
   <section class="py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between mb-8">
-        <h2 class="text-2xl font-bold font-mono">From the Blog</h2>
-        <a href="/blog" class="text-sm text-text-muted hover:text-accent-blue transition-colors font-mono">
+        <h2 class="text-2xl font-bold font-display">From the Blog</h2>
+        <a href="/blog" class="text-sm text-text-muted hover:text-primary-light transition-colors font-mono">
           View all &rarr;
         </a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogPosts.map((post) => (
           <BlogPostCard
             title={post.data.title}
@@ -182,9 +223,10 @@ const blogPosts = (await getCollection('blog'))
   </section>
 
   <!-- FAQ Section -->
-  <section class="py-16 bg-card/50">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold font-mono mb-8">Frequently Asked Questions</h2>
+  <section class="py-16 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-card/50 via-card/30 to-transparent pointer-events-none" />
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <h2 class="text-2xl font-bold font-display mb-8">Frequently Asked Questions</h2>
       <div class="space-y-4">
         {seo.faqEntries.map((faq) => (
           <details class="card p-5 group">

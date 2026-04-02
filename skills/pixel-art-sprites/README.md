@@ -52,8 +52,7 @@ Pair pixel-art-sprites with these complementary skills:
 
 - [unity-development](https://www.absolutelyskilled.pro/skill/unity-development)
 - [game-audio](https://www.absolutelyskilled.pro/skill/game-audio)
-- [color-theory](https://www.absolutelyskilled.pro/skill/color-theory)
-- [motion-design](https://www.absolutelyskilled.pro/skill/motion-design)
+- [absolute-ui](https://www.absolutelyskilled.pro/skill/absolute-ui)
 
 ## Frequently Asked Questions
 

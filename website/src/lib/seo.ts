@@ -71,7 +71,10 @@ export function getHomePageSEO() {
           name: SITE_NAME,
           url: SITE,
           logo: `${SITE}/logo.png`,
-          sameAs: ['https://github.com/AbsolutelySkilled/AbsolutelySkilled'],
+          sameAs: [
+            'https://github.com/AbsolutelySkilled/AbsolutelySkilled',
+            'https://www.npmjs.com/package/skills',
+          ],
         },
         {
           '@type': 'FAQPage',
@@ -92,12 +95,20 @@ export function getHomePageSEO() {
 
 export function getSkillPageSEO(skill: Skill, installCount: number) {
   const platformNames = skill.platforms.slice(0, 3).join(', ');
-  const title = `${skill.name} - AI Agent Skill | ${SITE_NAME}`;
+  // Pick the most descriptive tag for the title (prefer longer, multi-word tags)
+  const categoryMeta = getCategoryMeta(skill.category);
+  const bestTag = [...skill.tags]
+    .filter((t) => t !== skill.slug && t.length > 3)
+    .sort((a, b) => b.length - a.length)[0];
+  const titleKeyword = bestTag
+    ? bestTag.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
+    : categoryMeta.label;
+  const titleSuffix = titleKeyword ? ` - ${titleKeyword}` : '';
+  const title = `${skill.name}${titleSuffix} | AI Agent Skill | ${SITE_NAME}`.slice(0, 70);
   const descBase = skill.description.slice(0, 100);
   const description = `${skill.name} is a production-ready AI agent skill for ${platformNames}. ${descBase}. Install with one command.`.slice(0, 160);
   const image = `/og/${skill.slug}.png`;
 
-  const categoryMeta = getCategoryMeta(skill.category);
   const breadcrumbs: BreadcrumbItem[] = [
     { name: 'Home', url: SITE },
     { name: categoryMeta.label, url: `${SITE}/category/${skill.category}` },
@@ -117,6 +128,18 @@ export function getSkillPageSEO(skill: Skill, installCount: number) {
       q: `What AI agents support ${skill.name}?`,
       a: `${skill.name} works with ${skill.platforms.join(', ')}. Install it once and use it across any supported AI coding agent.`,
     },
+    {
+      q: `Is ${skill.name} free?`,
+      a: `Yes, ${skill.name} is completely free and open source under the MIT license. Install it with a single command and start using it immediately.`,
+    },
+    {
+      q: `What is the difference between ${skill.name} and similar tools?`,
+      a: `${skill.name} is an AI agent skill that teaches your coding agent specialized ${categoryMeta.label.toLowerCase()} knowledge. Unlike standalone tools, it integrates directly into ${platformNames} and other AI agents.`,
+    },
+    {
+      q: `Can I use ${skill.name} with Cursor or Windsurf?`,
+      a: `${skill.name} works with any AI coding agent that supports the skills protocol, including Claude Code, Cursor, Windsurf, GitHub Copilot, Gemini CLI, and 40+ more.`,
+    },
   ];
 
   return {
@@ -135,11 +158,12 @@ export function getSkillPageSEO(skill: Skill, installCount: number) {
       url: `${SITE}/skill/${skill.slug}`,
       version: skill.version,
       license: `https://opensource.org/licenses/${skill.license}`,
-      installUrl: `https://skills.sh/registry/absolutelyskilled/absolutelyskilled/${skill.slug}`,
-      aggregateRating:
-        installCount > 0
-          ? { '@type': 'AggregateRating', ratingCount: installCount }
-          : undefined,
+      downloadUrl: `https://skills.sh/registry/absolutelyskilled/absolutelyskilled/${skill.slug}`,
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+      },
       author: skill.maintainers.map((m) => ({
         '@type': 'Person',
         url: `https://github.com/${m.github}`,
@@ -147,6 +171,7 @@ export function getSkillPageSEO(skill: Skill, installCount: number) {
     },
     additionalJsonLd: [
       getBreadcrumbJsonLd(breadcrumbs),
+      // FAQPage: won't generate rich results (restricted Aug 2023) but aids AI citation
       {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
@@ -158,25 +183,6 @@ export function getSkillPageSEO(skill: Skill, installCount: number) {
             text: faq.a,
           },
         })),
-      },
-      {
-        '@context': 'https://schema.org',
-        '@type': 'HowTo',
-        name: `How to install ${skill.name} for AI agents`,
-        step: [
-          {
-            '@type': 'HowToStep',
-            text: 'Open your terminal or command prompt.',
-          },
-          {
-            '@type': 'HowToStep',
-            text: `Run: npx skills add AbsolutelySkilled/AbsolutelySkilled --skill ${skill.slug}`,
-          },
-          {
-            '@type': 'HowToStep',
-            text: `The ${skill.name} skill is now available in your AI coding agent.`,
-          },
-        ],
       },
     ],
     faqEntries,
@@ -224,7 +230,10 @@ export function getCategoryPageSEO(
   };
 }
 
-export function getSkillsPageSEO(totalCount: number) {
+export function getSkillsPageSEO(
+  totalCount: number,
+  skillItems: { name: string; slug: string }[] = [],
+) {
   const title = `All ${totalCount} AI Agent Skills | ${SITE_NAME}`;
   const description = `Browse all ${totalCount} production-ready AI agent skills. Search by name, filter by category, and find the perfect skill for Claude Code, Gemini CLI, and more.`;
 
@@ -244,8 +253,84 @@ export function getSkillsPageSEO(totalCount: number) {
       name: `All AI Agent Skills`,
       description,
       url: `${SITE}/skills`,
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: totalCount,
+        itemListElement: skillItems.map((s, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: s.name,
+          url: `${SITE}/skill/${s.slug}`,
+        })),
+      },
     },
     additionalJsonLd: [getBreadcrumbJsonLd(breadcrumbs)],
+  };
+}
+
+export function getAgentPageSEO(agent: {
+  slug: string;
+  name: string;
+  tagline: string;
+  description: string;
+}, skillCount: number) {
+  const title = `${agent.name} Skills - Teach ${agent.name} Anything | ${SITE_NAME}`.slice(0, 70);
+  const description = `${agent.description}`.slice(0, 160);
+
+  const breadcrumbs: BreadcrumbItem[] = [
+    { name: 'Home', url: SITE },
+    { name: 'Agents', url: `${SITE}/agents` },
+    { name: agent.name, url: `${SITE}/agents/${agent.slug}` },
+  ];
+
+  const faqEntries = [
+    {
+      q: `What skills are available for ${agent.name}?`,
+      a: `AbsolutelySkilled offers ${skillCount}+ production-ready skills for ${agent.name} across software engineering, marketing, design, DevOps, AI/ML, and more. All skills are free and open source.`,
+    },
+    {
+      q: `How do I install skills for ${agent.name}?`,
+      a: `Run npx skills add AbsolutelySkilled/AbsolutelySkilled --skill <skill-name> in your terminal. The skill will be immediately available in ${agent.name}.`,
+    },
+    {
+      q: `Are ${agent.name} skills free?`,
+      a: `Yes, all skills in the AbsolutelySkilled registry are free and open source under the MIT license. Install as many as you need.`,
+    },
+    {
+      q: `Can I create custom skills for ${agent.name}?`,
+      a: `Yes, you can create custom skills by following the CONTRIBUTING.md guide. Each skill is a markdown file with structured knowledge that any supported AI agent can use.`,
+    },
+  ];
+
+  return {
+    title,
+    description,
+    canonical: `${SITE}/agents/${agent.slug}`,
+    breadcrumbs,
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: `${agent.name} Skills`,
+      description,
+      url: `${SITE}/agents/${agent.slug}`,
+    },
+    additionalJsonLd: [
+      getBreadcrumbJsonLd(breadcrumbs),
+      // FAQPage: won't generate rich results (restricted Aug 2023) but aids AI citation
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqEntries.map((faq) => ({
+          '@type': 'Question',
+          name: faq.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.a,
+          },
+        })),
+      },
+    ],
+    faqEntries,
   };
 }
 
@@ -255,6 +340,7 @@ export function getBlogPostSEO(post: {
   slug: string;
   date: string;
   author: string;
+  image?: string;
 }) {
   const breadcrumbs: BreadcrumbItem[] = [
     { name: 'Home', url: SITE },
@@ -275,6 +361,8 @@ export function getBlogPostSEO(post: {
       description: post.description,
       url: `${SITE}/blog/${post.slug}`,
       datePublished: post.date,
+      dateModified: post.date,
+      image: post.image ? `${SITE}${post.image}` : `${SITE}/og/blog-${post.slug}.png`,
       author: { '@type': 'Person', name: post.author },
       publisher: { '@type': 'Organization', name: SITE_NAME },
     },

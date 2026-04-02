@@ -1,0 +1,157 @@
+{
+  "skill": "absolute-simplify",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "trigger-simplify-command",
+      "description": "Directly invoking /absolute-simplify should activate the skill with banner",
+      "prompt": "/absolute-simplify",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "SIMPLIFY" },
+        { "type": "contains", "value": "Simplifying autonomously" }
+      ]
+    },
+    {
+      "id": "trigger-cleanup-phrase",
+      "description": "Asking to clean up changes should trigger simplification",
+      "prompt": "Clean up my changes before I commit",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "staged" },
+        { "type": "contains", "value": "simplif" }
+      ]
+    },
+    {
+      "id": "trigger-simplify-file",
+      "description": "Pointing at a specific file should set that as scope",
+      "prompt": "Simplify src/utils/helpers.ts",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "src/utils/helpers.ts" },
+        { "type": "contains", "value": "simplif" }
+      ]
+    },
+    {
+      "id": "anti-trigger-new-feature",
+      "description": "Requesting a new feature should NOT trigger simplification",
+      "prompt": "Add a login page with email and password fields",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "Simplifying autonomously" },
+        { "type": "not_contains", "value": "SIMPLIFY" }
+      ]
+    },
+    {
+      "id": "anti-trigger-bug-fix",
+      "description": "Requesting a bug fix should NOT trigger simplification since it changes behavior",
+      "prompt": "Fix the crash that happens when the user submits an empty form on line 42",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "Simplifying autonomously" }
+      ]
+    },
+    {
+      "id": "core-scope-detection",
+      "description": "Should check staged files first, then unstaged, never default to entire repo",
+      "prompt": "How does absolute-simplify determine what code to simplify?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "staged" },
+        { "type": "contains", "value": "unstaged" },
+        { "type": "not_contains", "value": "entire repository" }
+      ]
+    },
+    {
+      "id": "core-context-reading",
+      "description": "Should read project configuration before making changes",
+      "prompt": "What does absolute-simplify check before simplifying code?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "CLAUDE.md" },
+        { "type": "contains", "value": "lint" }
+      ]
+    },
+    {
+      "id": "core-preserves-behavior",
+      "description": "Must emphasize preserving functionality as a hard gate",
+      "prompt": "Can absolute-simplify change the return value of a function to make it cleaner?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "never" },
+        { "type": "contains", "value": "behavior" }
+      ]
+    },
+    {
+      "id": "core-nested-ternary",
+      "description": "Should always replace nested ternaries, never leave them",
+      "prompt": "I have a nested ternary like status === 'a' ? 'A' : status === 'b' ? 'B' : 'C'. Should absolute-simplify keep it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "if" },
+        { "type": "contains", "value": "switch" },
+        { "type": "not_contains", "value": "keep the ternary" }
+      ]
+    },
+    {
+      "id": "core-auto-verify",
+      "description": "Should attempt to detect and run test commands after simplification",
+      "prompt": "Does absolute-simplify verify that changes did not break anything?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "test" },
+        { "type": "contains", "value": "verify" }
+      ]
+    },
+    {
+      "id": "gotcha-no-changes",
+      "description": "When no git changes exist and no target specified, should ask user not simplify whole repo",
+      "prompt": "What happens if I run /absolute-simplify but I have no staged or unstaged changes?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "ask" },
+        { "type": "not_contains", "value": "entire repo" }
+      ]
+    },
+    {
+      "id": "gotcha-test-file-conservatism",
+      "description": "Should apply extra caution when simplifying test files",
+      "prompt": "Should absolute-simplify simplify my test files the same way as production code?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "conserv" },
+        { "type": "contains", "value": "test" }
+      ]
+    },
+    {
+      "id": "gotcha-staged-restaging",
+      "description": "Should re-stage files that were staged before simplification",
+      "prompt": "If I have files staged for commit and run absolute-simplify, will they still be staged after?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "git add" },
+        { "type": "contains", "value": "stage" }
+      ]
+    },
+    {
+      "id": "anti-hallucination-no-new-deps",
+      "description": "Should not introduce new dependencies or imports not already in the project",
+      "prompt": "Can absolute-simplify add lodash to replace manual array operations?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "never" },
+        { "type": "contains", "value": "existing" }
+      ]
+    },
+    {
+      "id": "reference-load-python",
+      "description": "When simplifying Python files, should use Python-specific patterns",
+      "prompt": "I have a Python file that uses os.path.join everywhere. What would absolute-simplify do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "pathlib" },
+        { "type": "contains", "value": "Path" }
+      ]
+    }
+  ]
+}

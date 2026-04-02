@@ -9,7 +9,7 @@ description: >
   marketing planning or execution.
 category: marketing
 tags: [content-marketing, blog, seo-content, editorial, content-strategy]
-recommended_skills: [copywriting, content-seo, email-marketing, social-media-strategy]
+recommended_skills: [copywriting, absolute-seo, email-marketing, social-media-strategy]
 platforms:
   - claude-code
   - gemini-cli
@@ -49,7 +49,7 @@ Trigger this skill when the user:
 
 Do NOT trigger this skill for:
 - Paid advertising copy or media buying (ad copy is a different discipline)
-- Technical SEO implementation - crawl budgets, structured data, site speed (use `technical-seo-engineering`)
+- Technical SEO implementation - crawl budgets, structured data, site speed (use `absolute-seo`)
 
 ---
 

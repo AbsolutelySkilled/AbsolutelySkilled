@@ -35,15 +35,15 @@ A structured design interrogation that reads your entire codebase before asking 
 **Install:**
 
 ```bash
-npx skills add AbsolutelySkilled/AbsolutelySkilled --skill super-brainstorm
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill absolute-brainstorm
 ```
 
 **Usage:**
 
 ```bash
-/super-brainstorm "Add real-time notifications to our app"
-/super-brainstorm "Redesign the authentication flow to support SSO"
-/super-brainstorm "Build a platform with chat, billing, analytics, and admin dashboard"
+/absolute-brainstorm "Add real-time notifications to our app"
+/absolute-brainstorm "Redesign the authentication flow to support SSO"
+/absolute-brainstorm "Build a platform with chat, billing, analytics, and admin dashboard"
 ```
 
 **How it works:**
@@ -57,24 +57,24 @@ npx skills add AbsolutelySkilled/AbsolutelySkilled --skill super-brainstorm
 7. **Decomposes large projects** - flags multi-system requests and breaks them into sub-projects automatically
 8. **Writes a spec** to `docs/plans/YYYY-MM-DD-<topic>-design.md`
 9. **Self-reviews via subagent** - catches gaps and contradictions before you see it
-10. **You choose what's next** - writing-plans, super-human, direct implementation, or something else
+10. **You choose what's next** - writing-plans, absolute-human, direct implementation, or something else
 
-### Super-Human - AI-Native Development Lifecycle
+### Absolute-Human - AI-Native Development Lifecycle
 
 A complete SDLC replacement for AI agents - decomposes features into dependency-graphed tasks, executes them in parallel waves with TDD verification, and tracks everything on a persistent board.
 
 **Install:**
 
 ```bash
-npx skills add AbsolutelySkilled/AbsolutelySkilled --skill super-human
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill absolute-human
 ```
 
 **Usage:**
 
 ```bash
-/super-human "Add OAuth2 login with Google and GitHub providers"
-/super-human "Migrate the REST API to GraphQL"
-/super-human "Build a real-time chat feature with WebSocket support"
+/absolute-human "Add OAuth2 login with Google and GitHub providers"
+/absolute-human "Migrate the REST API to GraphQL"
+/absolute-human "Build a real-time chat feature with WebSocket support"
 ```
 
 **How it works:**
@@ -87,7 +87,7 @@ npx skills add AbsolutelySkilled/AbsolutelySkilled --skill super-human
 6. **Verify** - validates every task with TDD, lint, typecheck, and build checks
 7. **Converge** - self code review, requirements validation, and full project verification
 
-Everything is tracked on a persistent `.super-human/board.md` that survives across sessions - resume where you left off, audit decisions, or hand off to another developer.
+Everything is tracked on a persistent `.absolute-human/board.md` that survives across sessions - resume where you left off, audit decisions, or hand off to another developer.
 
 ```
 INTAKE --> DECOMPOSE --> DISCOVER --> PLAN --> EXECUTE --> VERIFY --> CONVERGE
@@ -340,13 +340,14 @@ skills/
 | [clean-architecture](skills/clean-architecture/) | Clean Architecture principles - dependency rule, layers, boundaries, component design |
 | [backend-engineering](skills/backend-engineering/) | Backend systems design - databases, APIs, distributed systems, caching, observability |
 | [frontend-developer](skills/frontend-developer/) | Frontend engineering - components, performance, accessibility, CSS patterns, testing |
-| [super-brainstorm](skills/super-brainstorm/) | Relentless design interview - ultrathink reasoning, codebase-first questions, dependency-resolved decision trees |
-| [super-human](skills/super-human/) | AI-native development lifecycle - task decomposition, dependency graphs, wave-based parallel execution |
+| [absolute-brainstorm](skills/absolute-brainstorm/) | Relentless design interview - ultrathink reasoning, codebase-first questions, dependency-resolved decision trees |
+| [absolute-human](skills/absolute-human/) | AI-native development lifecycle - task decomposition, dependency graphs, wave-based parallel execution |
 | [system-design](skills/system-design/) | Distributed systems, load balancing, CAP theorem, architecture interviews |
 | [microservices](skills/microservices/) | Service decomposition, communication patterns, saga, CQRS |
 | [api-design](skills/api-design/) | REST, GraphQL, gRPC, OpenAPI spec, versioning, pagination |
 | [database-engineering](skills/database-engineering/) | Schema design, indexing, query optimization, migrations |
 | [performance-engineering](skills/performance-engineering/) | Profiling, benchmarking, memory leaks, latency optimization |
+| [absolute-simplify](skills/absolute-simplify/) | Autonomous code simplification - clean code, reduce complexity, remove redundancy |
 | [refactoring-patterns](skills/refactoring-patterns/) | Extract method, replace conditional with polymorphism, catalog of refactors |
 | [monorepo-management](skills/monorepo-management/) | Turborepo, Nx, Bazel, workspace dependencies, build caching |
 | [code-review-mastery](skills/code-review-mastery/) | Reviewing code effectively, giving actionable feedback, catching anti-patterns |
@@ -391,13 +392,9 @@ skills/
 
 | Skill | Description |
 |---|---|
-| [ultimate-ui](skills/ultimate-ui/) | Build polished, modern UIs - spacing, color, typography, components, accessibility |
-| [design-systems](skills/design-systems/) | Component libraries, tokens, theming, Storybook |
+| [absolute-ui](skills/absolute-ui/) | Build polished, modern UIs - spacing, color, typography, components, accessibility, animations, design systems |
 | [accessibility-wcag](skills/accessibility-wcag/) | ARIA, screen readers, keyboard navigation, WCAG compliance |
-| [motion-design](skills/motion-design/) | CSS animations, Framer Motion, GSAP, micro-interactions |
-| [responsive-design](skills/responsive-design/) | Mobile-first, fluid typography, container queries, breakpoint strategy |
 | [figma-to-code](skills/figma-to-code/) | Translating Figma designs to pixel-perfect implementations |
-| [color-theory](skills/color-theory/) | Palettes, contrast, brand colors, dark mode, semantic tokens |
 | [ux-research](skills/ux-research/) | User interviews, usability testing, journey mapping, A/B test design |
 
 ### Developer Tools
@@ -443,26 +440,14 @@ skills/
 
 | Skill | Description |
 |---|---|
-| [seo-mastery](skills/seo-mastery/) | Technical SEO, keyword research, link building, schema markup |
+| [absolute-seo](skills/absolute-seo/) | Comprehensive SEO - technical, on-page, E-E-A-T, schema, CWV, local, link building, international, e-commerce, programmatic, GEO/AEO, audits |
 | [keyword-research](skills/keyword-research/) | Tri-surface keyword research - organic, AEO (snippets/PAA), GEO (AI citations) scoring |
-| [schema-markup](skills/schema-markup/) | JSON-LD structured data, Schema.org types, rich snippets |
-| [core-web-vitals](skills/core-web-vitals/) | LCP, INP, CLS optimization, Lighthouse CI, RUM monitoring |
-| [technical-seo](skills/technical-seo/) | Crawlability, indexing, sitemaps, canonicals, rendering strategies |
-| [content-seo](skills/content-seo/) | Topic clusters, E-E-A-T, pillar pages, keyword cannibalization |
-| [link-building](skills/link-building/) | Digital PR, guest posting, broken link building, toxic link audit |
-| [local-seo](skills/local-seo/) | Google Business Profile, local citations, NAP consistency |
-| [international-seo](skills/international-seo/) | hreflang tags, geo-targeting, multilingual content strategy |
-| [ecommerce-seo](skills/ecommerce-seo/) | Product page optimization, faceted navigation, category taxonomy |
-| [programmatic-seo](skills/programmatic-seo/) | Template-based page generation, data-driven landing pages at scale |
-| [aeo-optimization](skills/aeo-optimization/) | Featured snippets, People Also Ask, voice search, knowledge panels |
-| [geo-optimization](skills/geo-optimization/) | AI search engines, LLMs.txt, citation signals |
-| [on-site-seo](skills/on-site-seo/) | Framework-aware SEO fixes (Next.js, Nuxt, Astro), meta tags, OG cards |
-| [seo-audit](skills/seo-audit/) | Full-spectrum SEO audit methodology, structured scorecard |
 
 ### Marketing
 
 | Skill | Description |
 |---|---|
+| [absolute-marketing](skills/absolute-marketing/) | Unified marketing - copy, content, SEO, email, social, paid ads, CRO, brand, growth, pricing, launches |
 | [content-marketing](skills/content-marketing/) | Blog strategy, SEO content, content calendars, repurposing |
 | [email-marketing](skills/email-marketing/) | Campaigns, drip sequences, deliverability, A/B testing |
 | [social-media-strategy](skills/social-media-strategy/) | Platform-specific tactics, scheduling, analytics, engagement |
@@ -632,7 +617,7 @@ skills/
 
 ### Full Registry
 
-**167+ skills** across 27 categories.
+**155+ skills** across 25 categories.
 
 ## Creating Skills
 

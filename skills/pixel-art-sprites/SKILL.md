@@ -9,7 +9,7 @@ description: >
   and any task involving low-resolution raster art for games or retro aesthetics.
 category: design
 tags: [pixel-art, sprites, animation, tilesets, palette, gamedev]
-recommended_skills: [unity-development, game-audio, color-theory, motion-design]
+recommended_skills: [unity-development, game-audio, absolute-ui]
 platforms:
   - claude-code
   - gemini-cli

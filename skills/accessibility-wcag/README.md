@@ -46,9 +46,8 @@ deserves a working product, regardless of how they interact with it.
 
 Pair accessibility-wcag with these complementary skills:
 
-- [design-systems](https://www.absolutelyskilled.pro/skill/design-systems)
+- [absolute-ui](https://www.absolutelyskilled.pro/skill/absolute-ui)
 - [frontend-developer](https://www.absolutelyskilled.pro/skill/frontend-developer)
-- [responsive-design](https://www.absolutelyskilled.pro/skill/responsive-design)
 - [ux-research](https://www.absolutelyskilled.pro/skill/ux-research)
 
 ## Frequently Asked Questions

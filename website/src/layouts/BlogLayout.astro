@@ -12,21 +12,22 @@ interface Props {
   breadcrumbs?: BreadcrumbItem[];
   date?: string;
   author?: string;
+  publishedTime?: string;
 }
 
-const { title, description, canonical, image, jsonLd, additionalJsonLd, breadcrumbs, date, author } = Astro.props;
+const { title, description, canonical, image, jsonLd, additionalJsonLd, breadcrumbs, date, author, publishedTime } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description} canonical={canonical} image={image} jsonLd={jsonLd} additionalJsonLd={additionalJsonLd} breadcrumbs={breadcrumbs}>
+<BaseLayout title={title} description={description} canonical={canonical} image={image} jsonLd={jsonLd} additionalJsonLd={additionalJsonLd} breadcrumbs={breadcrumbs} publishedTime={publishedTime}>
   <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
     <header class="mb-10">
-      <h1 class="text-4xl font-bold font-mono mb-4">{title}</h1>
+      <h1 class="text-4xl font-bold font-display mb-4">{title}</h1>
       {
         (date || author) && (
           <div class="flex items-center gap-4 text-text-secondary text-sm">
             {date && <time datetime={date}>{new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>}
             {author && (
-              <a href={`https://github.com/${author}`} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-text-secondary hover:text-accent-blue transition-colors no-underline">
+              <a href={`https://github.com/${author}`} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-text-secondary hover:text-primary-light transition-colors no-underline">
                 <img src={`https://github.com/${author}.png?size=24`} alt={author} class="w-5 h-5 rounded-full" width="20" height="20" />
                 <span>@{author}</span>
               </a>

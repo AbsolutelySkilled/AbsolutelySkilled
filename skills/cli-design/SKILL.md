@@ -46,7 +46,7 @@ Trigger this skill when the user:
 - Needs to handle stdin/stdout piping and exit codes correctly
 
 Do NOT trigger this skill for:
-- GUI application design or web UI - use frontend or ultimate-ui skills
+- GUI application design or web UI - use frontend or absolute-ui skills
 - Shell scripting syntax questions unrelated to building a distributable CLI tool
 
 ---

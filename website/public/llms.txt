@@ -1,32 +1,42 @@
 # AbsolutelySkilled
 
-> A registry of 168+ production-ready skills for AI coding agents like Claude Code, Gemini CLI, and OpenAI Codex. Skills teach AI agents specialized knowledge across software engineering, marketing, design, operations, and more.
+> A registry of 155+ production-ready skills for AI coding agents like Claude Code, Gemini CLI, and OpenAI Codex. Skills teach AI agents specialized knowledge across software engineering, marketing, design, operations, and more.
 
 ## Skills Categories
 
-- [engineering](https://www.absolutelyskilled.pro/category/engineering): 45 skills
+- [engineering](https://www.absolutelyskilled.pro/category/engineering): 46 skills
 - [operations](https://www.absolutelyskilled.pro/category/operations): 27 skills
-- [marketing](https://www.absolutelyskilled.pro/category/marketing): 23 skills
+- [marketing](https://www.absolutelyskilled.pro/category/marketing): 11 skills
 - [ai-ml](https://www.absolutelyskilled.pro/category/ai-ml): 10 skills
-- [design](https://www.absolutelyskilled.pro/category/design): 9 skills
 - [devtools](https://www.absolutelyskilled.pro/category/devtools): 9 skills
 - [product](https://www.absolutelyskilled.pro/category/product): 8 skills
 - [sales](https://www.absolutelyskilled.pro/category/sales): 7 skills
 - [data](https://www.absolutelyskilled.pro/category/data): 6 skills
+- [design](https://www.absolutelyskilled.pro/category/design): 5 skills
 - [video](https://www.absolutelyskilled.pro/category/video): 5 skills
 - [infra](https://www.absolutelyskilled.pro/category/infra): 4 skills
+- [monitoring](https://www.absolutelyskilled.pro/category/monitoring): 4 skills
+- [workflow](https://www.absolutelyskilled.pro/category/workflow): 3 skills
 - [cloud](https://www.absolutelyskilled.pro/category/cloud): 3 skills
-- [monitoring](https://www.absolutelyskilled.pro/category/monitoring): 3 skills
 - [writing](https://www.absolutelyskilled.pro/category/writing): 2 skills
-- [workflow](https://www.absolutelyskilled.pro/category/workflow): 2 skills
 - [analytics](https://www.absolutelyskilled.pro/category/analytics): 2 skills
 - [developer-tools](https://www.absolutelyskilled.pro/category/developer-tools): 1 skills
 - [communication](https://www.absolutelyskilled.pro/category/communication): 1 skills
 - [game-development](https://www.absolutelyskilled.pro/category/game-development): 1 skills
 
+## Supported AI Agents
+
+- [Claude Code](https://www.absolutelyskilled.pro/agents/claude-code): Skills for Anthropic's AI coding agent
+- [Cursor](https://www.absolutelyskilled.pro/agents/cursor): Skills for the AI-first code editor
+- [Windsurf](https://www.absolutelyskilled.pro/agents/windsurf): Skills for Codeium's AI-powered IDE
+- [GitHub Copilot](https://www.absolutelyskilled.pro/agents/github-copilot): Skills for GitHub's AI pair programmer
+- [Gemini CLI](https://www.absolutelyskilled.pro/agents/gemini-cli): Skills for Google's AI coding agent
+- [OpenAI Codex](https://www.absolutelyskilled.pro/agents/openai-codex): Skills for OpenAI's cloud-based agent
+
 ## Key Pages
 
-- [All Skills](https://www.absolutelyskilled.pro/skills): Browse and search all 168 skills
+- [All Skills](https://www.absolutelyskilled.pro/skills): Browse and search all 155+ skills
+- [All Agents](https://www.absolutelyskilled.pro/agents): Browse skills by AI agent
 - [Blog](https://www.absolutelyskilled.pro/blog): Guides and tutorials
 - [GitHub](https://github.com/AbsolutelySkilled/AbsolutelySkilled): Source code and contributions
 

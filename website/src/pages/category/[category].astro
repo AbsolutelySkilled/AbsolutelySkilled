@@ -47,13 +47,16 @@ const relatedCategories = Object.entries(grouped)
       <a href="/skills" class="text-sm text-text-muted hover:text-text-secondary transition-colors mb-4 inline-block">
         &larr; All skills
       </a>
-      <h1 class="text-3xl font-bold font-mono" style={`color: ${meta.color};`}>
+      <h1 class="text-3xl font-bold font-display" style={`color: ${meta.color};`}>
         {meta.label}
       </h1>
-      <p class="text-text-secondary mt-2">{skills.length} skills in this category</p>
+      <p class="text-text-secondary mt-2">{skills.length} production-ready skills for AI coding agents in {meta.label.toLowerCase()}</p>
       {meta.description && (
         <p class="text-text-secondary mt-3 max-w-2xl text-sm leading-relaxed">{meta.description}</p>
       )}
+      <p class="text-text-muted mt-2 max-w-2xl text-xs leading-relaxed">
+        Install any {meta.label.toLowerCase()} skill with one command. Works with Claude Code, Cursor, Windsurf, GitHub Copilot, Gemini CLI, OpenAI Codex, and 40+ more AI coding agents.
+      </p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -71,7 +74,7 @@ const relatedCategories = Object.entries(grouped)
     <!-- Related categories for internal linking -->
     {relatedCategories.length > 0 && (
       <section class="mt-16 pt-8 border-t border-border">
-        <h2 class="text-lg font-semibold font-mono text-text-primary mb-4">Explore Other Categories</h2>
+        <h2 class="text-lg font-semibold font-display text-text-primary mb-4">Explore Other Categories</h2>
         <div class="flex flex-wrap gap-2">
           {relatedCategories.map((cat) => (
             <a

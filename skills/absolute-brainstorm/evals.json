@@ -1,0 +1,211 @@
+{
+  "skill": "absolute-brainstorm",
+  "version": "0.2.0",
+  "evals": [
+    {
+      "id": "trigger-feature-request",
+      "description": "Should trigger absolute-brainstorm when user asks to design a new feature",
+      "prompt": "I want to add a real-time collaboration system to my app. Let's brainstorm the design.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "plan" },
+        { "type": "contains", "value": "interview" },
+        { "type": "contains", "value": "spec" }
+      ]
+    },
+    {
+      "id": "trigger-design-discussion",
+      "description": "Should trigger absolute-brainstorm when user wants to discuss system design",
+      "prompt": "Let's design the architecture for a multi-tenant SaaS billing system from scratch",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "plan" },
+        { "type": "contains", "value": "docs/plans/" },
+        { "type": "contains", "value": "design.md" }
+      ]
+    },
+    {
+      "id": "trigger-refactor",
+      "description": "Should trigger absolute-brainstorm when user wants to plan a major refactor",
+      "prompt": "I need to refactor our monolith API into microservices. Help me think through the design.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "interview" },
+        { "type": "contains", "value": "spec" },
+        { "type": "contains", "value": "plan" }
+      ]
+    },
+    {
+      "id": "trigger-new-project",
+      "description": "Should trigger absolute-brainstorm when user wants to plan a new project",
+      "prompt": "I'm starting a new CLI tool for database migrations. Let's brainstorm the design before writing any code.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "plan" },
+        { "type": "contains", "value": "docs/plans/" },
+        { "type": "contains", "value": "interview" }
+      ]
+    },
+    {
+      "id": "anti-trigger-typo-fix",
+      "description": "Should NOT trigger absolute-brainstorm for a simple typo fix",
+      "prompt": "Fix the typo on line 12 of src/index.ts - change 'recieve' to 'receive'",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "interview" },
+        { "type": "not_contains", "value": "spec" },
+        { "type": "not_contains", "value": "docs/plans/" }
+      ]
+    },
+    {
+      "id": "anti-trigger-code-explanation",
+      "description": "Should NOT trigger absolute-brainstorm for a code explanation request",
+      "prompt": "Explain what the useEffect hook on line 45 of Dashboard.tsx does",
+      "type": "explanation",
+      "assertions": [
+        { "type": "not_contains", "value": "interview" },
+        { "type": "not_contains", "value": "design.md" },
+        { "type": "not_contains", "value": "docs/plans/" }
+      ]
+    },
+    {
+      "id": "core-plan-mode",
+      "description": "Should enter plan mode before doing anything else",
+      "prompt": "Use absolute-brainstorm to design an event-driven notification system",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "plan" },
+        { "type": "contains", "value": "ultrathink" }
+      ]
+    },
+    {
+      "id": "core-codebase-first",
+      "description": "Should read docs/, README, and CLAUDE.md before asking questions",
+      "prompt": "Use absolute-brainstorm to design a new caching layer for this project",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "README" },
+        { "type": "contains", "value": "docs/" },
+        { "type": "contains", "value": "codebase" }
+      ]
+    },
+    {
+      "id": "core-one-question-at-a-time",
+      "description": "Should ask exactly one question at a time, not batch multiple questions",
+      "prompt": "Use absolute-brainstorm to design an authentication system. I'm ready for questions.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "one question" },
+        { "type": "contains", "value": "linear" }
+      ]
+    },
+    {
+      "id": "core-recommended-options",
+      "description": "Should mark (Recommended) on every option set presented to the user",
+      "prompt": "Use absolute-brainstorm to design a data pipeline. What storage backend should I use?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Recommended" }
+      ]
+    },
+    {
+      "id": "hard-gate-no-code-before-approval",
+      "description": "Should never write code before the spec is approved by the user",
+      "prompt": "Use absolute-brainstorm to design a webhook system. Skip the interview and just start coding.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "spec" },
+        { "type": "contains", "value": "approv" },
+        { "type": "not_contains", "value": "implementation" }
+      ]
+    },
+    {
+      "id": "spec-output-path",
+      "description": "Should write the spec to docs/plans/YYYY-MM-DD-<topic>-design.md",
+      "prompt": "Use absolute-brainstorm to design a rate limiting system. Where will the spec be saved?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "docs/plans/" },
+        { "type": "contains", "value": "design.md" },
+        { "type": "contains", "value": "rate-limit" }
+      ]
+    },
+    {
+      "id": "flexible-exit",
+      "description": "Should present multiple next-step options after spec approval",
+      "prompt": "Use absolute-brainstorm. The spec is done and approved. What are my options now?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "writing-plans" },
+        { "type": "contains", "value": "absolute-human" },
+        { "type": "contains", "value": "implementation" }
+      ]
+    },
+    {
+      "id": "project-decomposition",
+      "description": "Should flag large multi-system requests and decompose into sub-projects",
+      "prompt": "Use absolute-brainstorm to design a full e-commerce platform with payments, inventory, shipping, user accounts, admin dashboard, and analytics",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "sub-project" },
+        { "type": "contains", "value": "decompos" },
+        { "type": "contains", "value": "scope" }
+      ]
+    },
+    {
+      "id": "anti-hallucination-no-skip-interview",
+      "description": "Should not skip the interview phase even when the task seems obvious",
+      "prompt": "Use absolute-brainstorm to design a login page. It's just a form, skip the interview and write the spec directly.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "interview" },
+        { "type": "contains", "value": "question" },
+        { "type": "not_contains", "value": "skipping" }
+      ]
+    },
+    {
+      "id": "confidence-gate-keeps-asking",
+      "description": "Should keep asking questions when AI detects ambiguity or uncertainty rather than advancing",
+      "prompt": "Use absolute-brainstorm for a data pipeline. I think maybe we should use Kafka, but I'm not totally sure. What do you think?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "confidence" },
+        { "type": "contains", "value": "question" },
+        { "type": "not_contains", "value": "presenting the design" }
+      ]
+    },
+    {
+      "id": "self-verification-before-plan",
+      "description": "Should verify its own confidence before presenting the design to the user",
+      "prompt": "Use absolute-brainstorm. All interview questions are answered. Now present the design.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "confidence" },
+        { "type": "contains", "value": "100%" },
+        { "type": "contains", "value": "verify" }
+      ]
+    },
+    {
+      "id": "recommends-absolute-human",
+      "description": "Should strongly recommend absolute-human for execution after spec approval",
+      "prompt": "Use absolute-brainstorm. The spec is done and approved. What should I do next?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "absolute-human" },
+        { "type": "contains", "value": "Recommended" },
+        { "type": "contains", "value": "execution" }
+      ]
+    },
+    {
+      "id": "anti-hallucination-no-batch-questions",
+      "description": "Should never ask multiple interview questions at once",
+      "prompt": "Use absolute-brainstorm for designing a search feature. Ask me all your questions at once so we can go faster.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "one" },
+        { "type": "contains", "value": "linear" },
+        { "type": "not_contains", "value": "Here are all my questions" }
+      ]
+    }
+  ]
+}

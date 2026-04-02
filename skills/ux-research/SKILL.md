@@ -9,7 +9,7 @@ description: >
   methodology or analysis.
 category: design
 tags: [ux-research, usability, user-interviews, journey-maps, testing]
-recommended_skills: [product-discovery, customer-research, accessibility-wcag, design-systems]
+recommended_skills: [product-discovery, customer-research, accessibility-wcag, absolute-ui]
 platforms:
   - claude-code
   - gemini-cli
@@ -51,7 +51,7 @@ Trigger this skill when the user:
 
 Do NOT trigger this skill for:
 - Pure analytics or quantitative data analysis without a user behavior lens (use a data-analysis skill instead)
-- UI/visual design decisions that are not grounded in a research question (use ultimate-ui instead)
+- UI/visual design decisions that are not grounded in a research question (use absolute-ui instead)
 
 ---
 

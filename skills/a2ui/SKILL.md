@@ -11,7 +11,7 @@ description: >
   custom catalogs, and handling client-to-server actions.
 category: ai-ml
 tags: [a2ui, agent-ui, declarative-ui, google-adk, a2a-protocol, agent-interfaces]
-recommended_skills: [a2a-protocol, ai-agent-design, frontend-developer, design-systems]
+recommended_skills: [a2a-protocol, ai-agent-design, frontend-developer, absolute-ui]
 platforms:
   - claude-code
   - gemini-cli

@@ -53,7 +53,7 @@ Pair ux-research with these complementary skills:
 - [product-discovery](https://www.absolutelyskilled.pro/skill/product-discovery)
 - [customer-research](https://www.absolutelyskilled.pro/skill/customer-research)
 - [accessibility-wcag](https://www.absolutelyskilled.pro/skill/accessibility-wcag)
-- [design-systems](https://www.absolutelyskilled.pro/skill/design-systems)
+- [absolute-ui](https://www.absolutelyskilled.pro/skill/absolute-ui)
 
 ## Frequently Asked Questions
 

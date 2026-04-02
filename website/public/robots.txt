@@ -4,6 +4,9 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
@@ -16,4 +19,10 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
-Sitemap: https://www.absolutelyskilled.pro/sitemap-index.xml
+User-agent: Applebot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+Sitemap: https://www.absolutelyskilled.pro/sitemap.xml

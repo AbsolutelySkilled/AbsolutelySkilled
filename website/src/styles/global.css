@@ -1,34 +1,52 @@
 @import "tailwindcss";
 
 @theme {
-  --color-page: #0a0a0a;
-  --color-card: #141414;
-  --color-elevated: #1a1a1a;
-  --color-border: #262626;
-  --color-border-hover: #404040;
-  --color-text-primary: #ededed;
-  --color-text-secondary: #a1a1a1;
-  --color-text-muted: #666666;
-  --color-accent-blue: #3b82f6;
-  --color-accent-green: #22c55e;
-  --color-accent-purple: #a855f7;
-  --color-accent-orange: #f97316;
-  --color-accent-pink: #ec4899;
-  --color-accent-cyan: #06b6d4;
-  --color-accent-yellow: #eab308;
-  --color-accent-red: #ef4444;
-  --color-accent-indigo: #6366f1;
-  --color-accent-teal: #14b8a6;
-  --color-accent-lime: #84cc16;
-  --color-accent-amber: #f59e0b;
-  --color-accent-rose: #f43f5e;
-  --color-accent-sky: #0ea5e9;
-  --color-accent-emerald: #10b981;
-  --color-accent-violet: #8b5cf6;
-  --color-accent-fuchsia: #d946ef;
-  --color-accent-slate: #64748b;
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  /* Neutral scale: dark blue-gray in OKLCH (perceptually uniform lightness) */
+  --color-page: oklch(0.16 0.02 260);
+  --color-card: oklch(0.19 0.02 260);
+  --color-elevated: oklch(0.23 0.02 260);
+  --color-border: oklch(0.30 0.02 260);
+  --color-border-hover: oklch(0.38 0.02 260);
+
+  /* Text on dark: uniform lightness steps */
+  --color-text-primary: oklch(0.93 0.01 260);
+  --color-text-secondary: oklch(0.70 0.02 260);
+  --color-text-muted: oklch(0.50 0.02 260);
+
+  /* Primary: Teal */
+  --color-primary: oklch(0.60 0.12 180);
+  --color-primary-light: oklch(0.70 0.14 180);
+  --color-primary-dim: oklch(0.60 0.12 180 / 0.12);
+  --color-primary-mid: oklch(0.60 0.12 180 / 0.25);
+
+  /* CTA: Amber (reserved for calls-to-action only) */
+  --color-cta: oklch(0.75 0.16 75);
+  --color-cta-hover: oklch(0.67 0.16 60);
+
+  /* Category colors: OKLCH at uniform L=0.72 for visual consistency across hues */
+  --color-accent-blue: oklch(0.72 0.14 250);
+  --color-accent-green: oklch(0.72 0.16 155);
+  --color-accent-purple: oklch(0.72 0.16 300);
+  --color-accent-orange: oklch(0.72 0.14 55);
+  --color-accent-pink: oklch(0.72 0.14 350);
+  --color-accent-cyan: oklch(0.72 0.10 200);
+  --color-accent-yellow: oklch(0.82 0.14 90);
+  --color-accent-red: oklch(0.68 0.18 25);
+  --color-accent-indigo: oklch(0.72 0.14 280);
+  --color-accent-teal: oklch(0.72 0.12 180);
+  --color-accent-lime: oklch(0.78 0.16 130);
+  --color-accent-amber: oklch(0.78 0.14 80);
+  --color-accent-rose: oklch(0.68 0.16 10);
+  --color-accent-sky: oklch(0.72 0.12 230);
+  --color-accent-emerald: oklch(0.72 0.14 165);
+  --color-accent-violet: oklch(0.72 0.16 290);
+  --color-accent-fuchsia: oklch(0.72 0.18 320);
+  --color-accent-slate: oklch(0.70 0.02 260);
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-display: 'General Sans', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', 'JetBrains Mono', monospace;
 }
 
 @layer base {
@@ -45,7 +63,7 @@
   }
 
   ::selection {
-    background-color: color-mix(in srgb, var(--color-accent-blue) 30%, transparent);
+    background-color: color-mix(in oklch, var(--color-primary) 30%, transparent);
     color: white;
   }
 
@@ -62,6 +80,21 @@
     border-radius: 9999px;
   }
 
+  /* Global focus-visible ring */
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 @layer components {
@@ -70,7 +103,17 @@
   }
 
   .card:hover {
-    @apply border-border-hover shadow-lg shadow-black/20;
+    @apply border-border-hover;
+    box-shadow:
+      0 8px 24px -8px rgba(0, 0, 0, 0.3),
+      0 0 0 1px var(--color-border-hover);
+  }
+
+  /* Button press state */
+  button:active:not(:disabled),
+  [role="button"]:active:not(:disabled),
+  a.btn:active {
+    transform: scale(0.98);
   }
 
   .prose-dark {
@@ -86,6 +129,7 @@
   .prose-dark h3,
   .prose-dark h4 {
     @apply text-text-primary font-semibold mt-8 mb-4;
+    font-family: var(--font-display);
     position: relative;
   }
 
@@ -152,11 +196,11 @@
   }
 
   .prose-dark a {
-    @apply text-accent-blue hover:underline;
+    @apply text-primary-light hover:underline;
   }
 
   .prose-dark code {
-    @apply bg-elevated text-accent-green px-1.5 py-0.5 rounded text-sm font-mono;
+    @apply bg-elevated text-primary-light px-1.5 py-0.5 rounded text-sm font-mono;
   }
 
   .prose-dark pre {
@@ -180,7 +224,7 @@
     border-radius: 0.25rem;
     font-size: 11px;
     font-family: var(--font-mono);
-    background: color-mix(in srgb, var(--color-border) 80%, transparent);
+    background: color-mix(in oklch, var(--color-border) 80%, transparent);
     color: var(--color-text-muted);
     opacity: 0;
     transition: opacity 0.15s;
@@ -218,7 +262,7 @@
   }
 
   .prose-dark blockquote {
-    @apply border-l-4 border-accent-blue/50 pl-4 italic text-text-muted my-4;
+    @apply border-l-4 border-primary/50 pl-4 italic text-text-muted my-4;
   }
 
   .prose-dark table {
@@ -247,7 +291,37 @@
 
   .install-block::before {
     content: '$';
-    @apply text-accent-green font-bold;
+    @apply text-primary-light font-bold;
+  }
+
+  /* Glassmorphic stat card */
+  .stat-card {
+    @apply text-center py-5 px-4 rounded-xl border border-border;
+    background: color-mix(in oklch, var(--color-card) 60%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+
+  .stat-card:hover {
+    border-color: var(--color-border-hover);
+    box-shadow: 0 0 24px -8px color-mix(in oklch, var(--color-primary) 15%, transparent);
+  }
+
+  /* Fade-up animation for cards */
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.4s ease-out both;
   }
 }
 

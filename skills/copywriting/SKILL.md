@@ -8,7 +8,7 @@ description: >
   task requiring compelling marketing or sales copy.
 category: marketing
 tags: [copywriting, headlines, landing-pages, cta, persuasion, copy]
-recommended_skills: [content-marketing, brand-strategy, email-marketing, content-seo]
+recommended_skills: [content-marketing, brand-strategy, email-marketing, absolute-seo]
 platforms:
   - claude-code
   - gemini-cli

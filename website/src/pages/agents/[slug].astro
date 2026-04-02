@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SkillCard from '../../components/SkillCard.astro';
+import { AGENTS } from '../../lib/agents';
+import { getAllSkills, getSkillsByCategory } from '../../lib/skills';
+import { getCategoryMeta } from '../../lib/categories';
+import { getAgentPageSEO } from '../../lib/seo';
+
+export function getStaticPaths() {
+  return AGENTS.map((agent) => ({
+    params: { slug: agent.slug },
+    props: { agent },
+  }));
+}
+
+const { agent } = Astro.props;
+const allSkills = getAllSkills();
+
+// Filter skills that support this agent platform
+const agentSkills = allSkills.filter((s) =>
+  s.platforms.some((p) => p.toLowerCase().includes(agent.skillsKeyword.replace('-', '')))
+    || s.platforms.includes('mcp')
+    || s.platforms.length > 0 // Most skills work across agents
+);
+
+const seo = getAgentPageSEO(agent, agentSkills.length);
+
+// Group by category for display
+const grouped = new Map<string, typeof agentSkills>();
+for (const skill of agentSkills) {
+  const existing = grouped.get(skill.category) || [];
+  existing.push(skill);
+  grouped.set(skill.category, existing);
+}
+const categories = [...grouped.entries()]
+  .sort(([, a], [, b]) => b.length - a.length)
+  .slice(0, 8);
+---
+
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+  canonical={seo.canonical}
+  jsonLd={seo.jsonLd}
+  additionalJsonLd={seo.additionalJsonLd}
+  breadcrumbs={seo.breadcrumbs}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-10">
+      <a href="/skills" class="text-sm text-text-muted hover:text-text-secondary transition-colors mb-4 inline-block">
+        &larr; All skills
+      </a>
+      <h1 class="text-4xl font-bold font-display mb-3">
+        {agent.name} Skills
+      </h1>
+      <p class="text-lg text-text-secondary max-w-3xl">{agent.tagline}</p>
+      <p class="text-text-secondary mt-4 max-w-3xl text-sm leading-relaxed">{agent.description}</p>
+    </div>
+
+    <!-- Agent features -->
+    <section class="card p-6 mb-10">
+      <h2 class="text-lg font-semibold font-display mb-4 text-text-primary">About {agent.name}</h2>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {agent.features.map((feature) => (
+          <li class="flex items-start gap-2 text-sm text-text-secondary">
+            <svg class="w-4 h-4 text-primary-light mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            {feature}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Quick install -->
+    <section class="card p-6 mb-10 border-l-4 border-l-primary">
+      <h2 class="text-lg font-semibold font-display mb-3 text-text-primary">Install Skills for {agent.name}</h2>
+      <ol class="list-decimal list-inside space-y-2 text-sm text-text-secondary">
+        <li>Open your terminal</li>
+        <li>Run: <code class="text-xs bg-elevated px-1.5 py-0.5 rounded">npx skills add AbsolutelySkilled/AbsolutelySkilled --skill &lt;skill-name&gt;</code></li>
+        <li>Start {agent.name} - the skill is immediately active</li>
+      </ol>
+    </section>
+
+    <!-- Skills by category -->
+    <h2 class="text-2xl font-bold font-display mb-6">
+      {agentSkills.length} Skills Available for {agent.name}
+    </h2>
+
+    {categories.map(([category, skills]) => {
+      const catMeta = getCategoryMeta(category);
+      return (
+        <section class="mb-10">
+          <div class="flex items-center gap-3 mb-4">
+            <h3 class="text-lg font-semibold font-display text-text-primary">{catMeta.label}</h3>
+            <span class="text-xs font-mono text-text-muted">{skills.length} skills</span>
+            <a href={`/category/${category}`} class="text-xs text-text-muted hover:text-primary-light transition-colors ml-auto">
+              View all &rarr;
+            </a>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {skills.slice(0, 6).map((skill) => (
+              <SkillCard
+                slug={skill.slug}
+                name={skill.name}
+                description={skill.description}
+                category={skill.category}
+                tags={skill.tags}
+              />
+            ))}
+          </div>
+        </section>
+      );
+    })}
+
+    <!-- FAQ section matching FAQPage schema -->
+    <section class="mt-10 space-y-4">
+      <h2 class="text-xl font-semibold font-display text-text-primary">Frequently Asked Questions</h2>
+      {seo.faqEntries.map((faq) => (
+        <details class="card p-5 group">
+          <summary class="font-semibold text-text-primary cursor-pointer list-none flex items-center justify-between">
+            {faq.q}
+            <span class="text-text-muted group-open:rotate-180 transition-transform ml-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </summary>
+          <p class="text-sm text-text-secondary leading-relaxed mt-3">{faq.a}</p>
+        </details>
+      ))}
+    </section>
+
+    <!-- Other agents for internal linking -->
+    <section class="mt-16 pt-8 border-t border-border">
+      <h2 class="text-lg font-semibold font-display text-text-primary mb-4">Skills for Other AI Agents</h2>
+      <div class="flex flex-wrap gap-2">
+        {AGENTS.filter((a) => a.slug !== agent.slug).map((a) => (
+          <a
+            href={`/agents/${a.slug}`}
+            class="px-3 py-1.5 rounded-full text-xs font-medium border border-border text-text-secondary hover:border-border-hover transition-colors"
+          >
+            {a.name}
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

@@ -15,14 +15,14 @@ const meta = getCategoryMeta(category);
     <a
       href={`/category/${category}`}
       class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border transition-colors hover:border-border-hover"
-      style={`color: ${meta.color}; border-color: ${meta.color}33; background: ${meta.color}11;`}
+      style={`color: ${meta.color}; border-color: color-mix(in oklch, ${meta.color} 20%, transparent); background: color-mix(in oklch, ${meta.color} 7%, transparent);`}
     >
       {meta.label}
     </a>
   ) : (
     <span
       class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border"
-      style={`color: ${meta.color}; border-color: ${meta.color}33; background: ${meta.color}11;`}
+      style={`color: ${meta.color}; border-color: color-mix(in oklch, ${meta.color} 20%, transparent); background: color-mix(in oklch, ${meta.color} 7%, transparent);`}
     >
       {meta.label}
     </span>

@@ -9,11 +9,11 @@ const { totalSkills, totalInstalls } = Astro.props;
 
 <div class="grid grid-cols-2 gap-6 max-w-md mx-auto">
   <div class="text-center">
-    <div class="text-4xl font-bold font-mono text-text-primary">{totalSkills}</div>
+    <div class="text-4xl font-bold font-display text-text-primary">{totalSkills}</div>
     <div class="text-sm text-text-secondary mt-1">Skills</div>
   </div>
   <div class="text-center">
-    <div class="text-4xl font-bold font-mono text-text-primary">
+    <div class="text-4xl font-bold font-display text-text-primary">
       {totalInstalls > 0 ? totalInstalls.toLocaleString() : '-'}
     </div>
     <div class="text-sm text-text-secondary mt-1">Installs</div>

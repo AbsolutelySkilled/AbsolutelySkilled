@@ -9,7 +9,7 @@ description: >
   and AI citation (GEO AI Overviews/ChatGPT Search/Perplexity) surfaces.
 category: marketing
 tags: [seo, keywords, search-intent, serp-analysis, content-strategy, competitor-analysis, aeo, geo, ai-search, tri-surface, citation-score]
-recommended_skills: [content-seo, seo-mastery, aeo-optimization, programmatic-seo, geo-optimization]
+recommended_skills: [absolute-seo]
 platforms:
   - claude-code
   - gemini-cli
@@ -42,8 +42,8 @@ In 2026, keyword research must account for three surfaces simultaneously:
 This skill covers the full research workflow - from seed topic to prioritized,
 tri-surface-scored keyword report. It tells you WHAT to target and WHERE the
 opportunity is. For HOW to optimize content once you have chosen your targets,
-use the companion skills `aeo-optimization` (snippet/PAA formatting) and
-`geo-optimization` (AI citation optimization).
+use the companion skill `absolute-seo` for snippet/PAA formatting and
+AI citation optimization.
 
 ---
 
@@ -67,8 +67,8 @@ Do NOT trigger this skill for:
 - Paid search (PPC/Google Ads) bid strategy - ad-specific match types, Quality Scores,
   and CPC optimization are a different domain
 - Brand naming or tagline development - that is copywriting, not search research
-- Formatting content to win snippets or PAA - that is `aeo-optimization`
-- Making content more citable by AI engines - that is `geo-optimization`
+- Formatting content to win snippets or PAA - that is `absolute-seo`
+- Making content more citable by AI engines - that is `absolute-seo`
 
 ---
 
@@ -102,8 +102,8 @@ Do NOT trigger this skill for:
 
 7. **Research and optimization are separate phases** - This skill identifies WHAT to
    target and WHERE the opportunity is. Optimization (HOW to format for snippets,
-   HOW to boost AI citations) is a downstream activity handled by `aeo-optimization`
-   and `geo-optimization`. Do not mix phases - complete research before starting
+   HOW to boost AI citations) is a downstream activity handled by `absolute-seo`.
+   Do not mix phases - complete research before starting
    optimization.
 
 ---

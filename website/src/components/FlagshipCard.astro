@@ -18,7 +18,7 @@ const color = categoryMeta.color;
 ---
 
 <a href={`/skill/${slug}`} class="flagship-card group" data-pagefind-ignore
-   style={`--accent: ${color}; --accent-dim: ${color}20; --accent-mid: ${color}40;`}>
+   style={`--accent: ${color}; --accent-dim: color-mix(in oklch, ${color} 12%, transparent); --accent-mid: color-mix(in oklch, ${color} 25%, transparent);`}>
   {/* Gradient border effect */}
   <div class="flagship-card-border" />
   <div class="flagship-card-inner">
@@ -28,7 +28,7 @@ const color = categoryMeta.color;
     {/* Header */}
     <div class="flex items-start justify-between mb-4">
       <div class="flex items-center gap-2.5">
-        <span class="flagship-icon" style={`background: ${color}18; color: ${color};`}>
+        <span class="flagship-icon" style={`background: color-mix(in oklch, ${color} 10%, transparent); color: ${color};`}>
           {categoryMeta.icon}
         </span>
         <span class="text-xs font-medium uppercase tracking-wider" style={`color: ${color};`}>
@@ -43,7 +43,7 @@ const color = categoryMeta.color;
     </div>
 
     {/* Name */}
-    <h3 class="font-mono font-bold text-lg text-text-primary group-hover:text-white transition-colors mb-2">
+    <h3 class="font-display font-bold text-lg text-text-primary group-hover:text-white transition-colors mb-2">
       {name}
     </h3>
 
@@ -75,7 +75,7 @@ const color = categoryMeta.color;
     display: flex;
     border-radius: 16px;
     text-decoration: none;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
   }
 
   .flagship-card:hover {
@@ -102,7 +102,7 @@ const color = categoryMeta.color;
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease-out;
   }
 
   .flagship-card:hover .flagship-card-border {
@@ -136,7 +136,7 @@ const color = categoryMeta.color;
     background: radial-gradient(ellipse, var(--accent-dim) 0%, transparent 70%);
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease-out;
   }
 
   .flagship-card:hover .flagship-glow {
@@ -147,12 +147,13 @@ const color = categoryMeta.color;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     border-radius: 8px;
-    font-size: 12px;
-    font-family: var(--font-mono);
-    font-weight: 600;
+    font-size: 10px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: 0.02em;
   }
 
   .flagship-tag {

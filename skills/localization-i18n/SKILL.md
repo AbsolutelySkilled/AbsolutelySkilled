@@ -10,7 +10,7 @@ description: >
   RTL stylesheets, or writing ICU message patterns with select/plural/selectordinal.
 category: engineering
 tags: [i18n, l10n, localization, translation, rtl, icu-message-format]
-recommended_skills: [frontend-developer, accessibility-wcag, international-seo]
+recommended_skills: [frontend-developer, accessibility-wcag, absolute-seo]
 platforms:
   - claude-code
   - gemini-cli

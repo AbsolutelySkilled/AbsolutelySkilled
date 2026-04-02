@@ -6,6 +6,7 @@ interface Props {
   jsonLd?: Record<string, unknown>;
   additionalJsonLd?: Record<string, unknown>[];
   image?: string;
+  publishedTime?: string;
 }
 
 const {
@@ -15,6 +16,7 @@ const {
   jsonLd,
   additionalJsonLd = [],
   image = '/og/default.png',
+  publishedTime,
 } = Astro.props;
 const siteUrl = 'https://www.absolutelyskilled.pro';
 const resolvedImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
@@ -30,6 +32,7 @@ const resolvedImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
 <meta property="og:image" content={resolvedImage} />
 {canonical && <meta property="og:url" content={canonical} />}
 <meta property="og:site_name" content="AbsolutelySkilled" />
+{publishedTime && <meta property="article:published_time" content={publishedTime} />}
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
@@ -37,6 +40,7 @@ const resolvedImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
 <meta name="twitter:image" content={resolvedImage} />
 
 <link rel="alternate" type="application/rss+xml" title="AbsolutelySkilled Blog" href="/rss.xml" />
+<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
 {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 {additionalJsonLd.map((ld) => (

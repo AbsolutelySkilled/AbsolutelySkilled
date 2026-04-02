@@ -1,0 +1,154 @@
+---
+title: "AI Agent Skills vs MCP Servers: Which Do You Need?"
+description: "Skills and MCP servers both extend AI coding agents, but they solve different problems. Learn when to use skills for knowledge and MCP servers for tools, and how they work together."
+date: "2026-04-03"
+author: "maddhruv"
+tags: ["guide", "mcp", "skills", "ai-agents", "comparison", "architecture"]
+---
+
+# AI Agent Skills vs MCP Servers: Which Do You Need?
+
+AI coding agents are getting more capable every month. But out of the box, they still have limits - they lack your domain expertise, and they cannot reach external systems. Two complementary approaches have emerged to solve this: **skills** and **MCP servers**.
+
+Skills give agents knowledge. MCP servers give agents tools. Understanding when to use each - and how they work together - is the key to getting the most out of your AI agent setup.
+
+---
+
+## What Are AI Agent Skills?
+
+Skills are portable, markdown-based knowledge modules that give AI agents domain expertise. Think of them as installable "brains" - a skill teaches an agent how to think about a specific topic, what patterns to follow, and what mistakes to avoid.
+
+A skill is a folder containing a `SKILL.md` file (the core instructions), optional reference documents for deeper context, and an eval suite to verify correctness. The agent reads these files and applies the knowledge when working on relevant tasks.
+
+**Examples of what skills provide:**
+
+- [Clean code principles](/skill/clean-code) - naming conventions, function decomposition, SOLID patterns
+- [Database engineering](/skill/database-engineering) - schema design, indexing strategies, query optimization
+- [System design](/skill/system-design) - load balancing, caching, sharding, distributed architecture
+- [SEO optimization](/skill/aeo-optimization) - content structuring, schema markup, answer engine optimization
+
+Skills are **static knowledge** loaded as context. They do not call APIs, query databases, or interact with external systems. They shape how the agent thinks and what it knows.
+
+The install experience is simple:
+
+```bash
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill clean-code
+```
+
+That is it. The agent picks up the skill automatically and applies it when relevant. No servers to run, no configuration to manage, no infrastructure to maintain.
+
+For a deeper dive, see our [practical guide to AI agent skills](/blog/guide-to-skills).
+
+---
+
+## What Are MCP Servers?
+
+MCP (Model Context Protocol) is an open standard that lets AI agents call external tools and APIs. An MCP server exposes a set of tools - functions the agent can invoke to interact with the outside world.
+
+Where skills give the agent knowledge, MCP servers give the agent **capabilities**. They let the agent do things it otherwise cannot: query a database, send a Slack message, read a Jira ticket, search a codebase, or interact with a browser.
+
+**Examples of what MCP servers provide:**
+
+- **Database access** - Run SQL queries against your production or staging database
+- **Slack integration** - Search messages, post updates, read channels
+- **GitHub API** - Create PRs, read issues, search code across repositories
+- **Browser automation** - Navigate pages, click elements, fill forms, take screenshots
+- **Jira/project tools** - Create tickets, update status, search issues
+
+MCP servers require setup. You run a server process (locally or remotely), configure the agent to connect to it, and manage authentication. The tradeoff is worth it - MCP servers give agents the ability to take real actions in your environment.
+
+---
+
+## Key Differences
+
+Here is a side-by-side comparison of skills and MCP servers:
+
+| Dimension | Skills | MCP Servers |
+|-----------|--------|-------------|
+| **What they provide** | Knowledge and expertise | Tools and API access |
+| **How they work** | Loaded as context into the agent | Called as tool functions by the agent |
+| **Setup required** | Single install command | Server process + configuration |
+| **Portability** | Works across any agent that reads markdown | Requires MCP-compatible agent and server |
+| **Maintenance** | Update the markdown files | Maintain running server, handle auth, manage uptime |
+| **Examples** | Coding standards, design patterns, domain knowledge | Database queries, Slack messages, GitHub API calls |
+| **Think of it as** | "How to think about X" | "Do X" |
+| **Runtime cost** | Context window tokens | API calls and server resources |
+
+The fundamental distinction: skills are **read-time knowledge** and MCP servers are **run-time capabilities**.
+
+---
+
+## When to Use Skills
+
+Skills are the right choice when you need to give your agent domain expertise, best practices, or decision-making guidance. They shine in situations where the agent needs to *know* something, not *do* something.
+
+**Use skills for:**
+
+- **Coding standards and conventions** - Your team's naming patterns, file structure rules, PR review checklist. Install the [clean code](/skill/clean-code) or [code review](/skill/code-review-mastery) skill to standardize quality across your team.
+- **Architecture and design guidance** - How to structure services, choose between patterns, design APIs. The [system design](/skill/system-design) and [API design](/skill/api-design) skills encode expert-level thinking.
+- **Domain-specific knowledge** - Database indexing strategies, CI/CD pipeline patterns, testing approaches. Skills like [database engineering](/skill/database-engineering) and [CI/CD pipelines](/skill/ci-cd-pipelines) bring deep domain knowledge.
+- **Framework and library expertise** - Next.js best practices, React patterns, CLI design principles. Skills encode the "how to use X well" knowledge that takes months to learn.
+- **Process and workflow guidance** - How to write design docs, run retrospectives, estimate stories. Skills like [internal docs](/skill/internal-docs) and [agile scrum](/skill/agile-scrum) provide structured approaches.
+
+Skills are cheap to create, easy to share, and require zero infrastructure. If you are solving a knowledge problem, start with a skill.
+
+---
+
+## When to Use MCP Servers
+
+MCP servers are the right choice when your agent needs to interact with external systems. They are essential when the agent needs to *act* on something outside its local environment.
+
+**Use MCP servers for:**
+
+- **External API access** - Querying databases, calling internal services, fetching data from third-party APIs
+- **Communication tools** - Sending Slack messages, posting to channels, reading threads
+- **Project management** - Creating Jira tickets, updating issue status, searching across projects
+- **Browser automation** - Testing web applications, scraping data, interacting with UIs
+- **Code search across repos** - Searching codebases outside the current repository
+- **Document management** - Reading and writing to Google Docs, Confluence, or other platforms
+
+If the task requires reaching outside the agent's local context - hitting a network endpoint, authenticating with a service, or modifying external state - you need an MCP server.
+
+---
+
+## Using Skills and MCP Together
+
+The real power comes from combining both. Skills and MCP servers are not competing approaches - they are complementary layers that make each other more effective.
+
+**Example: Database work**
+
+Install the [database engineering](/skill/database-engineering) skill to give your agent deep knowledge about schema design, normalization, indexing strategies, and query optimization. Then connect a database MCP server so the agent can actually run queries, inspect schemas, and test migrations.
+
+Without the skill, the agent can run queries but might design poor schemas. Without the MCP server, the agent knows best practices but cannot inspect your actual database. Together, the agent both knows *how* to design good schemas and can *verify* its work against your real data.
+
+**Example: Code review**
+
+Install the [clean code](/skill/clean-code) and [code review](/skill/code-review-mastery) skills so the agent knows what to look for. Connect a GitHub MCP server so it can read PR diffs, post review comments, and check CI status. The skills provide the judgment. The MCP server provides the access.
+
+**Example: Project planning**
+
+Install the [agile scrum](/skill/agile-scrum) and [user stories](/skill/user-stories) skills for process knowledge. Connect a Jira MCP server to create well-structured tickets directly. The agent writes better tickets because it has the methodology, and it can create them without you copying and pasting.
+
+This pattern - **skills for the "how" and MCP for the "do"** - consistently produces better results than either approach alone.
+
+---
+
+## Getting Started
+
+**Start with skills.** They require no infrastructure, install in seconds, and immediately improve agent output. Browse the [full catalog of 161+ skills](/skills) or install one now:
+
+```bash
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill clean-code
+```
+
+**Add MCP servers when you need external access.** Most AI agents support MCP configuration. Check your agent's documentation for setup instructions.
+
+**Combine both for maximum impact.** Pick a domain you work in frequently - database design, frontend development, DevOps - and pair the relevant skill with an MCP server that gives the agent access to your actual tools.
+
+The best AI agent setups are not about choosing between skills and MCP servers. They are about layering knowledge and capabilities so the agent can both think well and act effectively.
+
+<div style="background: linear-gradient(135deg, rgba(34,197,94,0.08), rgba(59,130,246,0.08)); border: 1px solid rgba(34,197,94,0.2); border-radius: 12px; padding: 24px; margin: 32px 0; text-align: center;">
+  <p style="font-size: 18px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 8px;">Browse the skill catalog</p>
+  <p style="color: var(--color-text-secondary); margin-bottom: 16px;">161+ production-ready skills across 25 categories. Install any skill in seconds.</p>
+  <a href="/skills" style="display: inline-block; background: var(--color-accent-blue); color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600;">Explore Skills</a>
+</div>

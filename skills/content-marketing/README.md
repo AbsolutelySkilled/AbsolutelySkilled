@@ -52,7 +52,7 @@ strategist would.
 Pair content-marketing with these complementary skills:
 
 - [copywriting](https://www.absolutelyskilled.pro/skill/copywriting)
-- [content-seo](https://www.absolutelyskilled.pro/skill/content-seo)
+- [absolute-seo](https://www.absolutelyskilled.pro/skill/absolute-seo)
 - [email-marketing](https://www.absolutelyskilled.pro/skill/email-marketing)
 - [social-media-strategy](https://www.absolutelyskilled.pro/skill/social-media-strategy)
 

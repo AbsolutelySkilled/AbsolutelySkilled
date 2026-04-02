@@ -14,7 +14,7 @@ const { title, description, slug, date, tags = [] } = Astro.props;
   <time datetime={date} class="text-xs text-text-muted font-mono">
     {new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
   </time>
-  <h3 class="font-semibold text-text-primary mt-2 mb-2 group-hover:text-accent-blue transition-colors">
+  <h3 class="font-semibold text-text-primary mt-2 mb-2 group-hover:text-primary-light transition-colors">
     {title}
   </h3>
   <p class="text-sm text-text-secondary line-clamp-2">{description}</p>
