@@ -1,8 +1,8 @@
-<!-- Part of the Superhuman AbsolutelySkilled skill. Load this file when the agent needs guidance on TDD verification per sub-task, verification signals, integration testing, and failure handling. -->
+<!-- Part of the Absolute Human AbsolutelySkilled skill. Load this file when the agent needs guidance on TDD verification per sub-task, verification signals, integration testing, and failure handling. -->
 
 # Verification Framework
 
-Every Superhuman sub-task must prove it works before closing. This reference covers the TDD workflow, verification signals, integration testing, and the verification report format.
+Every Absolute Human sub-task must prove it works before closing. This reference covers the TDD workflow, verification signals, integration testing, and the verification report format.
 
 ---
 

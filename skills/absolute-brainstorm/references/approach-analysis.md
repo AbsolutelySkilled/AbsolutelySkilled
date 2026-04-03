@@ -1,4 +1,4 @@
-<!-- Part of the Super Brainstorm AbsolutelySkilled skill. Load this file when evaluating approaches or decomposing large projects. -->
+<!-- Part of the Absolute Brainstorm AbsolutelySkilled skill. Load this file when evaluating approaches or decomposing large projects. -->
 
 # Approach Analysis
 

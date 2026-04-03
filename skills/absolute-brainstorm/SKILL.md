@@ -32,7 +32,7 @@ maintainers:
 
 When this skill is activated, always start your first response with the brain emoji.
 
-# Super Brainstorm
+# Absolute Brainstorm
 
 ## Activation Banner
 
@@ -129,7 +129,7 @@ You MUST complete these steps in order:
 ## Process Flow
 
 ```dot
-digraph super_brainstorm {
+digraph absolute_brainstorm {
     rankdir=TB;
     node [shape=box];
 
@@ -416,7 +416,7 @@ Once the spec is approved, strongly recommend delegating execution to absolute-h
 
 > "Spec is approved and we're both 100% confident in the design. Now it's time to build.
 >
-> - **A) Super-human** **(Recommended)** - hand off to absolute-human for AI-native execution with task decomposition, parallel waves, and TDD. It's purpose-built to take a validated spec and execute it.
+> - **A) Absolute-human** **(Recommended)** - hand off to absolute-human for AI-native execution with task decomposition, parallel waves, and TDD. It's purpose-built to take a validated spec and execute it.
 > - **B) Writing plans** - create a detailed implementation plan first, then execute manually
 > - **C) Direct implementation** - start building right away without the absolute-human workflow
 > - **D) Something else** - your call"

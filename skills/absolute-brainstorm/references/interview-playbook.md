@@ -1,14 +1,14 @@
-<!-- Part of the Super Brainstorm AbsolutelySkilled skill. Load this file when the agent needs detailed guidance on conducting the design interview. -->
+<!-- Part of the Absolute Brainstorm AbsolutelySkilled skill. Load this file when the agent needs detailed guidance on conducting the design interview. -->
 
 # Interview Playbook
 
-The design interview is the engine of Super Brainstorm. A relentless, structured interview extracts every requirement, constraint, and edge case before a single line of code is written. This playbook provides the full methodology - design tree traversal, question banks, codebase intelligence patterns, calibration rules, and anti-patterns.
+The design interview is the engine of Absolute Brainstorm. A relentless, structured interview extracts every requirement, constraint, and edge case before a single line of code is written. This playbook provides the full methodology - design tree traversal, question banks, codebase intelligence patterns, calibration rules, and anti-patterns.
 
 ---
 
 ## Design Tree Traversal
 
-Every feature is a tree of decisions. Super Brainstorm walks that tree **depth-first**, resolving each branch completely before moving to siblings. This prevents half-explored requirements from haunting the implementation later.
+Every feature is a tree of decisions. Absolute Brainstorm walks that tree **depth-first**, resolving each branch completely before moving to siblings. This prevents half-explored requirements from haunting the implementation later.
 
 ### Traversal Rules
 

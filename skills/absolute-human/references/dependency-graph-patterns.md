@@ -1,4 +1,4 @@
-<!-- Part of the Superhuman AbsolutelySkilled skill. Load this file when the agent needs guidance on decomposing tasks into dependency graphs, common DAG patterns, ASCII rendering, and wave assignment. -->
+<!-- Part of the Absolute Human AbsolutelySkilled skill. Load this file when the agent needs guidance on decomposing tasks into dependency graphs, common DAG patterns, ASCII rendering, and wave assignment. -->
 
 # Dependency Graph Patterns
 

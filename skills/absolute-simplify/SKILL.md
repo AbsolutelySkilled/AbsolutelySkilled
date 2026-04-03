@@ -27,7 +27,7 @@ maintainers:
 
 When this skill is activated, always start your first response with the broom emoji.
 
-# Super Simplify
+# Absolute Simplify
 
 ## Activation Banner
 

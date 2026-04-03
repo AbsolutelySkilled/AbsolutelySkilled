@@ -237,8 +237,8 @@ Each sub-task must have:
 After decomposition, sanity-check total scope before proceeding:
 - Count the total number of tasks by complexity: S (small), M (medium), L (large)
 - If any L tasks remain, decompose them further - L tasks are not allowed
-- If total estimated scope exceeds **15 M-equivalent tasks** (where 1 L = 3 M, 1 S = 0.5 M), flag to the user that scope may be too large for a single Superhuman session
-- Suggest splitting into multiple Superhuman sessions with clear boundaries (e.g., "Session 1: backend API, Session 2: frontend integration")
+- If total estimated scope exceeds **15 M-equivalent tasks** (where 1 L = 3 M, 1 S = 0.5 M), flag to the user that scope may be too large for a single Absolute Human session
+- Suggest splitting into multiple Absolute Human sessions with clear boundaries (e.g., "Session 1: backend API, Session 2: frontend integration")
 - The user can override and proceed, but they must explicitly acknowledge the scope
 
 ### Mandatory Tail Tasks

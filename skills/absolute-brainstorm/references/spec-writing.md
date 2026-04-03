@@ -1,4 +1,4 @@
-<!-- Part of the Super Brainstorm AbsolutelySkilled skill. Load this file when writing or reviewing design spec documents. -->
+<!-- Part of the Absolute Brainstorm AbsolutelySkilled skill. Load this file when writing or reviewing design spec documents. -->
 
 # Spec Writing
 

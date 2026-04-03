@@ -1,4 +1,4 @@
-<!-- Part of the Superhuman AbsolutelySkilled skill. Load this file when the agent needs guidance on executing tasks in parallel waves, agent orchestration, prompt templates, and error recovery. -->
+<!-- Part of the Absolute Human AbsolutelySkilled skill. Load this file when the agent needs guidance on executing tasks in parallel waves, agent orchestration, prompt templates, and error recovery. -->
 
 # Wave Execution Model
 
