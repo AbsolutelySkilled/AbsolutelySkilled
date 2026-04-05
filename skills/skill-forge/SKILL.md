@@ -1,6 +1,6 @@
 ---
 name: skill-forge
-version: 0.3.0
+version: 0.4.0
 description: >
   Generate a production-ready AbsolutelySkilled skill from any source: GitHub repos,
   documentation URLs, or domain topics (marketing, sales, TypeScript, etc.). Triggers
@@ -11,7 +11,7 @@ description: >
   Outputs a complete skill/ folder with SKILL.md, evals.json, and optionally
   sources.yaml, ready to PR into the AbsolutelySkilled registry.
 category: devtools
-tags: [skill-creation, code-generation, scaffolding, registry, agent-skills]
+tags: [skill-creation, code-generation, scaffolding, registry, agent-skills, agent-definitions]
 recommended_skills: []
 platforms:
   - claude-code
@@ -67,6 +67,11 @@ exist, ask the user these questions (use AskUserQuestion with multiple choice):
 
 1. **Default output directory** - `skills/` (registry PR) or custom path?
 2. **Skill type preference** - code-heavy, knowledge-heavy, or balanced?
+3. **Installation target** - where should the forged skill be installed?
+   - **Registry PR only** - write to `skills/<name>/` for contribution to AbsolutelySkilled (default)
+   - **Global (all projects)** - install to `~/.agents/skills/<name>/` (canonical location, auto-symlinked to agent dirs)
+   - **Project-level** - install to `.agents/skills/<name>/` (this project only, cross-client)
+   - **Claude-only project** - install to `.claude/skills/<name>/` (this project, Claude Code only)
 
 Store answers in `${CLAUDE_PLUGIN_DATA}/forge-config.json`. Read this config at the
 start of every forge session.
@@ -93,6 +98,30 @@ Read this log at the start of each session. It helps you:
 - **URL input** (starts with `http`, `github.com`, or looks like a domain) -> Phase 1A
 - **Domain topic** (a word or phrase) -> Phase 1B
 - **Ambiguous** -> ask the user
+
+---
+
+## Step 0.5 - Skill or Agent?
+
+Before proceeding, determine whether the user needs a **skill** or an **agent
+definition**. These are different artifacts:
+
+- **Skill** = portable knowledge package (AgentSkills.io open standard). Works
+  across Claude Code, Cursor, VS Code, Gemini CLI, and 40+ other tools. A folder
+  with `SKILL.md` containing instructions and reference material.
+- **Agent definition** = execution context (Claude Code specific). Creates an
+  isolated subagent with its own tools, permissions, model, and system prompt.
+  Not portable.
+
+**Decision tree:**
+- Primarily knowledge, best practices, or domain instructions? -> **Skill**
+- Needs to be portable across multiple agent tools? -> **Skill**
+- Needs isolated context, specific tool permissions, or its own model? -> **Agent definition**
+- Needs `permissionMode`, `maxTurns`, or `background` execution? -> **Agent definition**
+
+skill-forge creates **skills**, not agent definitions. If the user needs an
+agent, explain the distinction and point them to Claude Code's agent
+documentation. Load `references/skills-vs-agents.md` for the full breakdown.
 
 ---
 
@@ -162,6 +191,11 @@ Present a proposed outline. Wait for approval before proceeding.
 
 Read `references/frontmatter-schema.md` for YAML fields and
 `references/body-structure-template.md` for the markdown scaffold.
+
+The frontmatter schema distinguishes between portable fields (AgentSkills.io
+spec), AbsolutelySkilled registry fields, and Claude Code extensions. Default
+to portable fields only - add Claude-specific fields only when the skill
+genuinely needs hooks, context forking, or model overrides.
 
 ### Key principles for writing
 
@@ -294,7 +328,7 @@ training knowledge and user input.
 
 ## Phase 6 - Output
 
-Write to `skills/<skill-name>/` (or the path from forge-config.json).
+Write to the path from forge-config.json (default: `skills/<skill-name>/`).
 
 ```
 skills/<skill-name>/
@@ -305,6 +339,39 @@ skills/<skill-name>/
   scripts/           (if needed)
   assets/            (if needed)
 ```
+
+### Installation architecture
+
+Before advising the user on installation, understand how the skill ecosystem
+actually works on their system:
+
+1. **Scan the system** to understand the current skill installation state:
+   - Check if `~/.agents/skills/` exists (canonical global directory)
+   - Check if `~/.claude/skills/` exists (may contain symlinks to `~/.agents/skills/`)
+   - Check if `.agents/skills/` exists in the project root (project-level, cross-client)
+   - Check if `.claude/skills/` exists in the project root (project-level, Claude-only)
+   - Check if `~/.agents/.skill-lock.json` exists (installation metadata)
+
+2. **The canonical installation model** works like this:
+   - `~/.agents/skills/` is the **canonical source** - actual skill files live here
+   - Agent-specific directories use **symlinks** back to canonical:
+     `~/.claude/skills/<name>` -> `../../.agents/skills/<name>`
+   - This means one copy of the skill serves all agents (Claude Code, Cursor, VS Code, etc.)
+   - The `skl` CLI (`npx skills add`) manages this automatically
+   - Non-universal agents (Cursor rules, Windsurf) get adapted copies instead of symlinks
+
+3. **Ask the user** where to install (if not already set in forge-config.json):
+
+   | Option | Path | Who sees it | Use when |
+   |--------|------|-------------|----------|
+   | **Global** | `~/.agents/skills/<name>/` | All agents, all projects | Personal skill for everyday use |
+   | **Project (cross-client)** | `.agents/skills/<name>/` | All agents, this project | Team skill, committed to repo |
+   | **Project (Claude-only)** | `.claude/skills/<name>/` | Claude Code only, this project | Skill uses Claude-specific features |
+   | **Registry PR** | `skills/<name>/` | AbsolutelySkilled registry | Contributing to the public registry |
+
+   For **global** installs, after writing to `~/.agents/skills/<name>/`, create a
+   symlink at `~/.claude/skills/<name>` -> `../../.agents/skills/<name>` or tell
+   the user to run `npx skills add <path>` to handle agent symlinks automatically.
 
 Print a summary and append to forge-log.jsonl.
 
@@ -382,6 +449,12 @@ asset - built from actual failures observed across hundreds of forged skills.
     external API, that should be the user's explicit action, not an automatic
     behavior.
 
+14. **Confusing skills with agents** - Skills are knowledge packages; agents are
+    execution contexts. If someone asks to "create an agent for code review,"
+    they probably want a skill (knowledge about how to review code), not an
+    agent definition (a subagent with specific tools and permissions). Ask to
+    clarify. See `references/skills-vs-agents.md` for the full distinction.
+
 ---
 
 ## Quality checklist
@@ -403,6 +476,8 @@ asset - built from actual failures observed across hundreds of forged skills.
 - [ ] No dangerous commands as direct instructions (rm -rf, sudo, --force, --no-verify)
 - [ ] No data exfiltration patterns (POST/send to external URLs without user action)
 - [ ] Teaching vs instructing: dangerous examples in code blocks with "do not execute" context
+- [ ] Portable frontmatter only (no Claude-specific fields unless skill needs hooks, context, etc.)
+- [ ] Not confusing skill with agent definition (skill = knowledge, agent = executor)
 - [ ] Flagged items use `<!-- VERIFY: -->` format
 - [ ] Forge history log updated
 
@@ -418,6 +493,7 @@ Load these files only when you need them for the current phase:
 - `references/sources-schema.md` - YAML schema for sources (Phase 5)
 - `references/safety-guidelines.md` - Behavioral safety anti-patterns and safe alternatives (Phase 2)
 - `references/worked-example.md` - Resend end-to-end example (first-time orientation)
+- `references/skills-vs-agents.md` - When to create a skill vs an agent definition (Step 0.5)
 - `references/skill-registry.md` - Full catalog of existing skills (duplicate check)
 - `scripts/validate-skill.sh` - Structural and safety validation for generated skills (Phase 2)
 

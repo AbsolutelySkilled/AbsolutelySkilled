@@ -1,0 +1,251 @@
+---
+title: "Skills vs Agents: Understanding the Difference"
+description: "Skills are portable knowledge packages. Agents are execution contexts. Understanding when to use each is essential for building effective AI coding workflows."
+date: "2026-04-05"
+author: "maddhruv"
+tags: ["guide", "skills", "agents", "subagents", "claude-code", "architecture", "comparison"]
+---
+
+# Skills vs Agents: Understanding the Difference
+
+The AI agent ecosystem has two concepts that sound similar but serve fundamentally different purposes: **skills** and **agents** (also called subagents). Most people conflate them. Getting the distinction right unlocks better, more composable AI workflows.
+
+Here is the short version: skills are textbooks, agents are specialists. A skill tells the agent *what to know*. An agent defines *who does the work*.
+
+This post breaks down the difference, when to use each, and how they work together.
+
+---
+
+## What Are Skills?
+
+Skills are portable knowledge packages that follow the [AgentSkills.io](https://agentskills.io) open standard. They work across 40+ AI agent products - Claude Code, Cursor, VS Code, GitHub Copilot, Gemini CLI, and many more.
+
+A skill is a folder containing a `SKILL.md` file with instructions, optional reference documents for deeper context, scripts, and templates:
+
+```
+clean-code/
+  SKILL.md           # Core instructions
+  evals.json         # Test suite
+  references/        # Deep-dive docs loaded on demand
+    naming.md
+    function-design.md
+```
+
+When you start a session, the agent scans installed skills and loads only the name and description of each one. When a task matches a skill's description, the full instructions are pulled into context. The agent follows them while working on your task.
+
+**Key properties of skills:**
+- **Portable** - same skill works in Claude Code, Cursor, VS Code, and any other compatible agent
+- **Knowledge-focused** - they extend what the agent knows, not what tools it has
+- **Run inline** - instructions load into the main conversation context (no isolation)
+- **Open standard** - defined by the [AgentSkills.io specification](https://agentskills.io/specification)
+
+Install a skill with a single command:
+
+```bash
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill clean-code
+```
+
+No servers, no configuration, no infrastructure. The agent picks it up automatically.
+
+For a deeper dive, see our [complete guide to AI agent skills](/blog/what-are-ai-agent-skills).
+
+---
+
+## What Are Agents (Subagents)?
+
+Agents - more precisely, subagents - are specialized AI assistants that run in their own context window. Each agent has its own system prompt, its own set of tools, its own permissions, and optionally its own model.
+
+When Claude Code encounters a task that matches an agent's description, it delegates the work. The agent runs independently in isolation, then returns its results to the main conversation.
+
+Here is what an agent definition looks like:
+
+```yaml
+# .claude/agents/code-reviewer.md
+---
+name: code-reviewer
+description: Reviews code for quality and best practices
+tools: Read, Grep, Glob
+disallowedTools: Write, Edit, Bash
+model: sonnet
+maxTurns: 15
+permissionMode: default
+---
+
+You are a code reviewer. Analyze changes and provide specific,
+actionable feedback on quality, security, and best practices.
+Focus on bugs, logic errors, and architectural concerns.
+```
+
+**Key properties of agents:**
+- **Platform-specific** - agent definitions are a Claude Code concept (though other tools have similar ideas)
+- **Execution-focused** - they define *who* does the work, with what tools and permissions
+- **Run in isolation** - each agent has its own context window, separate from the main conversation
+- **Configurable permissions** - you control exactly which tools the agent can use
+
+Agents are stored in `.claude/agents/` (project-level) or `~/.claude/agents/` (user-level).
+
+---
+
+## The Key Differences
+
+| Dimension | Skills | Agents |
+|-----------|--------|--------|
+| **What they are** | Knowledge packages (textbooks) | Execution contexts (specialists) |
+| **Standard** | AgentSkills.io open standard | Claude Code specific |
+| **Portability** | Works across 40+ tools | Tied to Claude Code |
+| **Context** | Inline in main conversation | Isolated context window |
+| **Purpose** | Extend what the agent knows | Define who does the work |
+| **File format** | `SKILL.md` in a folder | Agent definition file (YAML + markdown) |
+| **Invocation** | `/skill-name` or auto-detect | Claude delegates, `@`-mention, or `--agent` flag |
+| **Composition** | Skills reference other skills | Agents preload skills |
+
+The fundamental distinction: **skills are knowledge, agents are execution environments**.
+
+A skill about code review teaches the agent *how* to review code - what to look for, which patterns are problems, what your team's conventions are. An agent for code review creates an *isolated assistant* with read-only tools, a turn limit, and a focused system prompt.
+
+---
+
+## When to Use Skills
+
+Use skills when you need to give an agent **knowledge and expertise**:
+
+- **Domain best practices** - coding standards, design patterns, architectural principles
+- **Framework knowledge** - how to use Stripe, Next.js, Terraform, or any specific tool
+- **Team conventions** - your naming conventions, PR review checklist, deployment process
+- **Process guidance** - how to write proposals, run retrospectives, analyze data
+- **Cross-agent portability** - when the knowledge should work in Claude Code, Cursor, and VS Code
+
+Skills are the default choice. They are simpler, more portable, and work everywhere. Most of what people think requires an agent is actually better served by a skill.
+
+**Example:** You want the agent to follow your team's React conventions. Create a skill with the conventions, component patterns, and common gotchas. The skill loads into context whenever the agent works on React files. No isolation needed, no special tools required.
+
+Browse 160+ production-ready skills in our [catalog](/skills).
+
+---
+
+## When to Use Agents
+
+Use agents when you need to control the **execution environment**:
+
+- **Tool restrictions** - the task should only use Read, Grep, and Glob (no file writes)
+- **Isolated context** - the work produces lots of output you don't need in your main conversation
+- **Delegation** - you want a specialist to handle a task independently and return a summary
+- **Background execution** - the task should run concurrently while you keep working
+- **Cost control** - route the task to a faster, cheaper model (like Haiku for exploration)
+- **Permission boundaries** - the agent should operate with specific permission modes
+
+**Example:** You want a code reviewer that cannot modify files. Create an agent with `tools: [Read, Grep, Glob]` and `disallowedTools: [Write, Edit, Bash]`. It can analyze code but physically cannot change anything. No skill can enforce that constraint - it requires an agent definition.
+
+---
+
+## How They Work Together
+
+The most powerful pattern combines both: a skill provides the knowledge, an agent creates a controlled execution environment.
+
+**Step 1: Create a skill with your review standards**
+
+```markdown
+# .agents/skills/code-review/SKILL.md
+---
+name: code-review
+description: >
+  Code review standards and checklist. Use when reviewing pull requests,
+  diffs, or code changes for quality, security, and best practices.
+---
+
+## Review checklist
+
+1. Check all database queries for SQL injection
+2. Verify authentication on every endpoint
+3. Look for race conditions in concurrent code
+4. Confirm error messages don't leak internal details
+5. Ensure test coverage for new logic branches
+
+## Common gotchas
+
+- Our ORM uses soft deletes - check for `WHERE deleted_at IS NULL`
+- API rate limits are 100/min per key - verify retry logic exists
+```
+
+**Step 2: Create an agent that preloads the skill**
+
+```yaml
+# .claude/agents/code-reviewer.md
+---
+name: code-reviewer
+description: Reviews code for quality using team standards
+tools: Read, Grep, Glob, Bash
+disallowedTools: Write, Edit
+skills:
+  - code-review
+maxTurns: 15
+---
+
+Review the code changes. Follow the preloaded review standards.
+Report findings organized by severity: Critical, Warnings, Suggestions.
+```
+
+The skill is **portable** - it works in Claude Code, Cursor, VS Code, and any other agent that supports the AgentSkills standard. A developer using Cursor gets the same review knowledge.
+
+The agent definition is **Claude Code specific** - it creates a focused, permission-controlled reviewer that cannot modify files. It preloads the skill so the knowledge is available from the first turn.
+
+Together, they are more powerful than either one alone.
+
+---
+
+## The `.agents/skills/` Convention
+
+Where you store skills determines which agents discover them:
+
+| Path | Scope | Discovered by |
+|------|-------|---------------|
+| `.agents/skills/<name>/` | Project, cross-client | All compatible agents |
+| `.claude/skills/<name>/` | Project, Claude-only | Claude Code only |
+| `~/.agents/skills/<name>/` | User, cross-client | All compatible agents |
+| `~/.claude/skills/<name>/` | User, Claude-only | Claude Code only |
+
+The `.agents/skills/` paths are the emerging cross-client convention. Skills installed there are automatically visible to Claude Code, Cursor, VS Code, and other compatible agents. Use `.claude/skills/` only when the skill relies on Claude-specific features that other agents wouldn't understand.
+
+---
+
+## Quick Reference
+
+**Choose a skill when:**
+- You need to add knowledge, expertise, or process guidance
+- The capability should be portable across agent products
+- No special tool restrictions or isolation is needed
+- You want zero infrastructure overhead
+
+**Choose an agent when:**
+- You need to restrict which tools are available
+- The work should run in isolated context
+- You want to delegate to a specialist with its own model
+- You need background execution or permission boundaries
+
+**Choose both when:**
+- You want portable knowledge (skill) with controlled execution (agent)
+- The agent should follow specific standards that other tools should also know about
+
+---
+
+## Getting Started
+
+Install your first skill:
+
+```bash
+npx skills add AbsolutelySkilled/AbsolutelySkilled --skill clean-code
+```
+
+Browse the full catalog of 160+ production-ready skills at [absolutelyskilled.pro/skills](/skills).
+
+If you want to build skills for your own domain, check out the [skill-forge](/skill/skill-forge) skill - it generates production-ready skills from documentation URLs or domain topics.
+
+For auditing skills and agent definitions for security, use [skill-audit](/skill/skill-audit) - it detects prompt injection, permission abuse, and supply chain risks.
+
+<div className="not-prose mt-12 rounded-xl border border-white/10 bg-white/[0.02] p-8 text-center">
+  <p className="text-lg font-semibold text-white mb-2">Ready to extend your AI agent?</p>
+  <p className="text-neutral-400 mb-6">Browse 160+ production-ready skills across 25 categories.</p>
+  <a href="/skills" className="inline-block rounded-lg bg-teal-600 px-6 py-3 text-sm font-medium text-white hover:bg-teal-500 transition-colors">
+    Explore Skills Catalog
+  </a>
+</div>

@@ -185,6 +185,63 @@ has comprehensive evals, and contains no dangerous instructions.
 
 ---
 
+## Example 5: Agent definition audit (REVIEW REQUIRED)
+
+```
+## Agent Audit Report: automation-agent
+
+**Scan date**: 2026-04-05
+**Artifact type**: Agent definition
+**Files analyzed**: 1 file (automation-agent.md)
+
+### Summary
+
+| Severity | Count |
+|---|---|
+| Critical | 0 |
+| High | 2 |
+| Medium | 1 |
+| Low | 0 |
+| Info | 1 |
+
+**Verdict**: REVIEW REQUIRED
+
+### Findings
+
+| # | Severity | Category | Rule | File:Line | Evidence | Recommendation |
+|---|---|---|---|---|---|---|
+| 1 | HIGH | agent-perms | no-disallowed-tools | automation-agent.md:5 | tools: [Bash, Write, Edit, Read, Grep, Glob] | Add disallowedTools to restrict destructive operations |
+| 2 | HIGH | agent-perms | unaudited-preloaded-skill | automation-agent.md:9 | skills: [custom-deploy] | Audit custom-deploy skill before preloading into permissive agent |
+| 3 | MEDIUM | agent-perms | high-max-turns | automation-agent.md:8 | maxTurns: 75 | Reduce to 20-30 unless long-running tasks are expected |
+| 4 | INFO | agent-perms | tool-count | automation-agent.md:5 | 6 tools declared | Large tool surface - verify each is needed |
+
+### Detail
+
+**Finding 1 - No disallowed tools (HIGH)**
+- **What**: Agent declares 6 tools including Bash, Write, and Edit but no
+  disallowedTools restrictions
+- **Why it's dangerous**: Agent can execute arbitrary commands and modify any
+  file without restrictions. Combined with maxTurns: 75, this gives extended
+  unrestricted execution capability
+- **Recommendation**: Add disallowedTools to block tools not needed for the
+  task, or add PreToolUse hooks to validate Bash commands
+- **False positive?**: Could be legitimate for a general-purpose automation agent,
+  but the lack of any guardrails is concerning
+
+**Finding 2 - Unaudited preloaded skill (HIGH)**
+- **What**: Agent preloads custom-deploy skill which was not found in the
+  audited skills registry
+- **Why it's dangerous**: Unaudited skills inherit the agent's permissions.
+  If custom-deploy contains dangerous instructions, they execute with the
+  agent's full Bash + Write + Edit tool access
+- **Recommendation**: Audit custom-deploy independently before allowing it
+  to be preloaded into this agent
+- **False positive?**: No - even if the skill is trustworthy, it should be
+  audited first when being preloaded into a permissive agent
+```
+
+---
+
 ## Batch registry JSON format
 
 ```json

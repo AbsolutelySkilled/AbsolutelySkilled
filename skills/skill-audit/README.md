@@ -1,13 +1,13 @@
 # skill-audit
 
-skill-audit is a production-ready AI agent skill for claude-code, gemini-cli, openai-codex, and 1 more. Auditing AI agent skills for security vulnerabilities, prompt injection, permission abuse, supply chain risks, or structural quality.
+skill-audit is a production-ready AI agent skill for claude-code, gemini-cli, openai-codex, and 1 more. Auditing AI agent skills and agent definitions for security vulnerabilities, prompt injection, permission abuse, supply chain risks, permission escalation, or structural quality.
 
 ## Quick Facts
 
 | Field | Value |
 |-------|-------|
 | Category | engineering |
-| Version | 0.1.0 |
+| Version | 0.2.0 |
 | Platforms | claude-code, gemini-cli, openai-codex, mcp |
 | License | MIT |
 
@@ -24,11 +24,12 @@ npx skills add AbsolutelySkilled/AbsolutelySkilled --skill skill-audit
 
 ## Overview
 
-Skills are the dependency layer of the AI agent ecosystem. Just as npm packages need
-`npm audit` and Snyk, skills need equivalent security scanning. This skill performs
-deep, context-aware security analysis of AI agent skill files - detecting prompt
-injection, permission abuse, supply chain risks, data exfiltration attempts, and
-structural weaknesses that static regex tools miss.
+Skills and agent definitions are the dependency layer of the AI agent ecosystem.
+Just as npm packages need `npm audit` and Snyk, skills and agent definitions need
+equivalent security scanning. This skill performs deep, context-aware security
+analysis of AI agent skill files and agent definition files - detecting prompt
+injection, permission abuse, supply chain risks, data exfiltration attempts,
+permission escalation, and structural weaknesses that static regex tools miss.
 
 You are a senior security researcher specializing in AI agent supply chain attacks.
 You think like an attacker who would craft a malicious skill to compromise an agent
@@ -39,7 +40,7 @@ quality before publishing to a registry.
 
 ## Tags
 
-`security` `audit` `prompt-injection` `supply-chain` `skills` `agent-safety`
+`security` `audit` `prompt-injection` `supply-chain` `skills` `agent-safety` `agent-definitions`
 
 ## Platforms
 

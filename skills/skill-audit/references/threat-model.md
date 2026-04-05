@@ -148,3 +148,11 @@ underlying assessment follows CVSS principles:
 | Impact | Full agent compromise or data loss | Credential exposure or destructive ops | Quality degradation or trust gap | Best practice violation |
 | Scope | Affects user system or external services | Affects agent behavior | Affects skill quality | Affects documentation |
 | Remediation | Must be fixed before any use | Fix before production use | Should fix, not blocking | Nice to have |
+
+---
+
+## Agent definitions
+
+For threats specific to agent/subagent definition files (permissionMode, tool
+access, initialPrompt injection, skill preloading risks), see
+`references/agent-threat-model.md`.

@@ -7,7 +7,7 @@ skill-forge is a production-ready AI agent skill for claude-code, gemini-cli, op
 | Field | Value |
 |-------|-------|
 | Category | devtools |
-| Version | 0.3.0 |
+| Version | 0.4.0 |
 | Platforms | claude-code, gemini-cli, openai-codex |
 | License | MIT |
 
@@ -40,7 +40,7 @@ take action, templates give it a head start on output.
 
 ## Tags
 
-`skill-creation` `code-generation` `scaffolding` `registry` `agent-skills`
+`skill-creation` `code-generation` `scaffolding` `registry` `agent-skills` `agent-definitions`
 
 ## Platforms
 

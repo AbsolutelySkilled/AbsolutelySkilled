@@ -7,8 +7,9 @@
 
 ```yaml
 ---
+# === Portable fields (AgentSkills.io open standard) ===
+# These fields work across ALL compatible agents (Claude Code, Cursor, VS Code, etc.)
 name: <kebab-case-tool-name>
-version: 0.1.0
 description: >
   <One tight paragraph. Must answer: what triggers this skill, what the tool
   does, and the 3-5 most common agent tasks it enables. This is the PRIMARY
@@ -17,6 +18,16 @@ description: >
   subscriptions, refunds, customers, webhooks, or billing. Triggers on any
   Stripe-related task including checkout sessions, payment intents, and
   invoice management.">
+license: MIT
+# compatibility: Requires Python 3.12+ and uv    # optional, max 500 chars
+# metadata:                                       # optional, arbitrary key-value
+#   author: example-org
+#   version: "1.0"
+# allowed-tools: Bash(git:*) Read                 # optional, experimental
+
+# === AbsolutelySkilled registry fields (superset of base spec) ===
+# These are registry metadata - not part of the AgentSkills spec or Claude extensions
+version: 0.1.0
 category: <see taxonomy below>
 tags: [<3-6 lowercase tags>]
 recommended_skills: [<2-5 kebab-case skill names from the registry>]
@@ -30,11 +41,47 @@ sources:
     accessed: <YYYY-MM-DD>
     description: <what this source covers>
   # add one entry per source crawled
-license: MIT
 maintainers:
   - github: <your-handle>
+
+# === Claude Code extensions (optional - ignored by other agents) ===
+# Only add these when the skill genuinely needs platform-specific behavior
+# argument-hint: "<hint for slash command argument>"
+# context: fork                   # Run in subagent context instead of inline
+# agent: Explore                  # Which subagent type when context: fork
+# model: sonnet                   # Override model for this skill
+# effort: high                    # Effort level (low, medium, high, max)
+# disable-model-invocation: true  # Manual /invoke only, no auto-detection
+# user-invocable: false           # Hide from slash menu (background knowledge)
+# hooks:                          # Lifecycle hooks scoped to skill
+#   - type: PreToolUse
+#     matcher: Write
+#     hook: |
+#       <validation script>
+# paths: ["src/**/*.ts"]          # Auto-activate for matching file paths
+# shell: bash                     # Shell for inline commands
 ---
 ```
+
+## Portable vs Claude-specific fields
+
+The template above is split into three groups:
+
+1. **Portable fields** (AgentSkills.io spec) - `name`, `description`, `license`,
+   `compatibility`, `metadata`, `allowed-tools`. These work across all compatible
+   agents. Default to these unless the skill needs platform-specific behavior.
+
+2. **AbsolutelySkilled registry fields** - `version`, `category`, `tags`,
+   `recommended_skills`, `platforms`, `sources`, `maintainers`. These are our
+   registry metadata. Other agents will ignore them but they don't cause issues.
+
+3. **Claude Code extensions** - `argument-hint`, `disable-model-invocation`,
+   `user-invocable`, `model`, `effort`, `context`, `agent`, `hooks`, `paths`,
+   `shell`. These are Claude-specific. Other agents will ignore them entirely.
+
+**Default to portable-only.** Add Claude extensions only when the skill
+genuinely needs them - e.g., `hooks` for safety guardrails, `context: fork` for
+heavy isolated workloads, `disable-model-invocation` for manual-only commands.
 
 ## Description writing guidelines
 

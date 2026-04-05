@@ -247,6 +247,122 @@ def scan_skill(skill_dir: Path, registry_dir: Path | None = None) -> dict:
     return {"name": skill_name, "path": str(skill_dir), "findings": findings}
 
 
+AGENT_FIELDS = {"tools", "disallowedTools", "permissionMode", "maxTurns", "initialPrompt", "background", "isolation"}
+
+
+def is_agent_definition(frontmatter: dict) -> bool:
+    """Check if frontmatter contains agent-specific fields (not a skill)."""
+    return bool(AGENT_FIELDS & set(frontmatter.keys()))
+
+
+def scan_agent_definition(file_path: Path, registry_dir: Path | None = None) -> dict:
+    """Run agent-specific mechanical checks against an agent definition file."""
+    file_path = file_path.resolve()
+    agent_name = file_path.stem
+    findings = []
+
+    def add(severity, category, rule, file, line=None, evidence="", message=""):
+        findings.append({
+            "severity": severity,
+            "category": category,
+            "rule": rule,
+            "file": file,
+            "line": line,
+            "evidence": evidence[:200] if evidence else "",
+            "message": message,
+        })
+
+    if not file_path.exists():
+        add("high", "structural", "missing-file", agent_name,
+            message="Agent definition file not found")
+        return {"name": agent_name, "path": str(file_path), "type": "agent", "findings": findings}
+
+    frontmatter = parse_frontmatter(file_path)
+    rel = file_path.name
+
+    # --- Permission mode checks ---
+
+    perm_mode = frontmatter.get("permissionMode", "")
+    if perm_mode == "bypassPermissions":
+        add("critical", "agent-perms", "bypass-permissions", rel,
+            evidence=f"permissionMode: {perm_mode}",
+            message="Agent bypasses ALL permission checks - unrestricted execution")
+    elif perm_mode in ("auto", "dontAsk", "acceptEdits"):
+        add("medium", "agent-perms", "non-default-permission-mode", rel,
+            evidence=f"permissionMode: {perm_mode}",
+            message=f"Non-default permission mode '{perm_mode}' - verify this is intended")
+
+    # --- Tool access checks ---
+
+    tools = frontmatter.get("tools", "")
+    disallowed = frontmatter.get("disallowedTools", "")
+    if tools:
+        tool_list = [t.strip() for t in tools.split(",")] if isinstance(tools, str) else tools
+        dangerous_tools = {"Bash", "Write", "Edit"}
+        has_dangerous = dangerous_tools & set(tool_list)
+        if has_dangerous and not disallowed:
+            add("high", "agent-perms", "no-disallowed-tools", rel,
+                evidence=f"tools: {tools}",
+                message=f"Agent has {', '.join(has_dangerous)} without disallowedTools restrictions")
+
+    # --- Bypass + Bash combo ---
+
+    if perm_mode == "bypassPermissions" and tools:
+        tool_list = [t.strip() for t in tools.split(",")] if isinstance(tools, str) else tools
+        if "Bash" in tool_list:
+            add("critical", "agent-perms", "bypass-plus-bash", rel,
+                evidence=f"permissionMode: bypassPermissions + tools includes Bash",
+                message="Critical combination: unrestricted permissions with arbitrary command execution")
+
+    # --- maxTurns checks ---
+
+    max_turns = frontmatter.get("maxTurns")
+    if max_turns is not None:
+        try:
+            turns = int(max_turns)
+            if turns > 50:
+                add("medium", "agent-perms", "high-max-turns", rel,
+                    evidence=f"maxTurns: {turns}",
+                    message="High maxTurns value - agent may loop extensively")
+        except (ValueError, TypeError):
+            pass
+
+    # --- Background + permissive mode ---
+
+    background = frontmatter.get("background")
+    if str(background).lower() == "true" and perm_mode in ("bypassPermissions", "auto"):
+        add("critical", "agent-perms", "background-permissive", rel,
+            evidence=f"background: true + permissionMode: {perm_mode}",
+            message="Background agent with permissive mode - unsupervised unrestricted execution")
+
+    # --- Skill preloading checks ---
+
+    skills = frontmatter.get("skills", [])
+    if skills and registry_dir and registry_dir.is_dir():
+        if isinstance(skills, str):
+            skills = [s.strip() for s in skills.split(",")]
+        for skill_name in skills:
+            skill_path = registry_dir / skill_name / "SKILL.md"
+            if not skill_path.exists():
+                add("high", "agent-perms", "unaudited-preloaded-skill", rel,
+                    evidence=skill_name,
+                    message=f'Preloaded skill "{skill_name}" not found in registry - unaudited skill gains agent permissions')
+
+    # --- Unicode checks on the file ---
+
+    try:
+        lines = file_path.read_text(encoding="utf-8", errors="replace").split("\n")
+    except Exception:
+        lines = []
+    for i, line in enumerate(lines, 1):
+        if any(ch in SUSPICIOUS_UNICODE for ch in line):
+            add("critical", "injection", "unicode-smuggling", rel, line=i,
+                evidence=line[:80],
+                message="Zero-width or directional override characters detected")
+
+    return {"name": agent_name, "path": str(file_path), "type": "agent", "findings": findings}
+
+
 def scan_registry(registry_dir: Path) -> list[dict]:
     """Scan all skills in a registry directory."""
     registry_dir = registry_dir.resolve()
@@ -269,7 +385,7 @@ def main():
         print(json.dumps({"error": f"Path not found: {target}"}))
         sys.exit(2)
 
-    if batch or (target.is_dir() and not (target / "SKILL.md").exists()):
+    if batch or (target.is_dir() and not (target / "SKILL.md").exists() and not target.suffix == ".md"):
         # Registry mode
         results = scan_registry(target)
         output = {
@@ -277,6 +393,17 @@ def main():
             "skills_scanned": len(results),
             "results": results,
         }
+    elif target.is_file() and target.suffix == ".md" and target.name != "SKILL.md":
+        # Possible agent definition file - check if it has agent-specific fields
+        fm = parse_frontmatter(target)
+        if is_agent_definition(fm):
+            registry_dir = target.parent.parent if target.parent else None
+            result = scan_agent_definition(target, registry_dir=registry_dir)
+            output = {"mode": "agent", "results": [result]}
+        else:
+            # Treat as a regular file - not a skill or agent
+            print(json.dumps({"error": f"File does not appear to be a skill directory or agent definition: {target}"}))
+            sys.exit(2)
     else:
         # Single skill mode
         registry_dir = target.parent if target.is_dir() else None
