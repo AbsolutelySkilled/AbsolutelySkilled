@@ -1,6 +1,6 @@
 {
-  "_fetchedAt": "2026-04-10T02:04:49.303221+00:00",
-  "_total": 9467,
+  "_fetchedAt": "2026-04-10T12:59:35.838427+00:00",
+  "_total": 9471,
   "a2a-protocol": 52,
   "a2ui": 50,
   "absolute-brainstorm": 23,
@@ -29,7 +29,7 @@
   "ci-cd-pipelines": 62,
   "clean-architecture": 76,
   "clean-code": 89,
-  "cli-design": 56,
+  "cli-design": 57,
   "cloud-aws": 52,
   "cloud-gcp": 52,
   "cloud-security": 53,
@@ -134,7 +134,7 @@
   "refactoring-patterns": 60,
   "regex-mastery": 55,
   "regulatory-compliance": 56,
-  "remote-collaboration": 49,
+  "remote-collaboration": 50,
   "remotion-video": 27,
   "responsive-design": 51,
   "saas-metrics": 56,
@@ -174,8 +174,8 @@
   "video-audio-design": 28,
   "video-creator": 28,
   "video-production": 54,
-  "video-scriptwriting": 30,
+  "video-scriptwriting": 31,
   "vim-neovim": 51,
-  "vite-plus": 80,
+  "vite-plus": 81,
   "web3-smart-contracts": 51
 }
