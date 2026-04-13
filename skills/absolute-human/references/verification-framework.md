@@ -114,23 +114,69 @@ After the final wave, before CONVERGE:
 
 ---
 
+## Evaluator Integration with Verification Signals
+
+Verification operates in two layers: **signals** (objective, binary) and **evaluator** (subjective, scored). Signals always run first.
+
+### Layer 1: Verification Signals (Binary Gate)
+
+Run tests, lint, type check, and build. If ANY signal fails, the task goes back
+to the generator for a fix immediately. Signal failures are unambiguous - the
+evaluator is not needed to diagnose a failing test or a broken build.
+
+### Layer 2: Evaluator (Scored Gate)
+
+If all signals pass, dispatch a separate evaluator subagent to grade the work
+against the scored rubric. The evaluator catches what binary signals cannot:
+code quality, completeness of intent, test meaningfulness, subtle integration
+issues. See `evaluator-protocol.md` for the full evaluator prompt template,
+grading rubric, and iterative refinement loop.
+
+### When to Skip the Evaluator
+
+The evaluator is skipped for S-complexity tasks where all signals pass cleanly.
+It is mandatory for M-complexity tasks, any task that failed its first signal
+check, and any task touching shared interfaces. See the complexity gating table
+in `evaluator-protocol.md`.
+
+### Updated Verification Report Format
+
+```
+### Verification: SH-{id}
+- Signals: PASS | FAIL
+- Tests: {passed}/{total} ({new} new)
+- Lint: clean | {issues}
+- Type Check: pass | {errors}
+- Build: pass | fail
+- Evaluator Score: {N.N}/5.0 | skipped (S-complexity)
+- Evaluator Feedback: {summary if score < 4.0}
+- Iteration: {N}/5
+- Verdict: PASS | NEEDS WORK | FAIL
+- Notes: {context}
+```
+
+---
+
 ## Failure Handling
 
 ### Failure Categories and Responses
 
 | Failure Type | Likely Cause | Response |
 |---|---|---|
-| Test fails (new test) | Implementation bug | Fix the code, re-run (up to 2 retries) |
+| Test fails (new test) | Implementation bug | Fix the code, re-run |
 | Test fails (existing test) | Regression introduced | Identify what broke it, fix without changing the test |
 | Lint error | Code style violation | Auto-fix if possible, manual fix otherwise |
 | Type error | Type mismatch | Fix the types - don't use `any` or `# type: ignore` |
 | Build failure | Import error, syntax error | Fix the root cause, re-build |
 | Runtime error | Logic bug, missing dependency | Debug, fix, re-verify |
+| Evaluator score < 4.0 | Quality/completeness gap | Generator addresses specific evaluator feedback |
+| Evaluator score < 3.0 | Fundamental issue | Escalate to user with evaluation details |
 
 ### Retry Budget
-- Each sub-task gets a maximum of 2 retry attempts
-- Each retry includes the previous failure context in the agent prompt
-- If all retries are exhausted, the task is marked `failed`
+- **Signal failures**: Generator fixes and re-runs (up to 2 signal retries)
+- **Evaluator iterations**: Up to 5 iterations of evaluator feedback loop
+- Each retry includes previous failure/feedback context in the agent prompt
+- If all retries/iterations exhausted, the task is marked `failed`
 
 ### Escalation Protocol
 When a task is marked `failed`:

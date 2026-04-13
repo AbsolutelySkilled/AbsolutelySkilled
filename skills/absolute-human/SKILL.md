@@ -80,6 +80,8 @@ When Absolute-Human is invoked and a `.absolute-human/board.md` already exists i
 
 If the board is marked `completed`, ask the user whether to start a new Absolute-Human session (archive the old board to `.absolute-human/archive/`) or review the completed work.
 
+For intentional context resets during long-running sessions (3+ waves completed or context window pressure), see `references/context-reset-protocol.md`.
+
 **Never blow away an existing board without explicit user confirmation.**
 
 ---
@@ -378,27 +380,17 @@ After each wave completes:
 2. Check for conflicts between parallel tasks (file conflicts, API mismatches)
 3. Run the full test suite if available
 
-### Verification Loop
-```
-if all checks pass:
-  mark task as "done"
-  update board with verification report
-else:
-  mark task as "failed"
-  loop back to EXECUTE for this task (max 2 retries)
-  if still failing after retries:
-    flag for user attention
-    continue with other tasks
-```
+### Generator-Evaluator Verification
 
-### Output
-Update each sub-task on the board with a verification report:
-- Tests: pass/fail (with details on failures)
-- Lint: clean/issues
-- Type check: pass/fail
-- Build: pass/fail
+Verification uses generator-evaluator separation. The agent that built the task does NOT verify it. Instead, a separate evaluator subagent grades the work against scored criteria.
 
-See `references/verification-framework.md` for the full verification protocol.
+1. **Signals first**: Run tests, lint, type check, build. If any fail, fix before evaluator.
+2. **Evaluator second**: Dispatch evaluator subagent with scored rubric (Correctness, Code Quality, Completeness, Test Coverage, Integration Safety). Score 4.0+/5 to pass.
+3. **Iterative refinement**: Up to 5 iterations of evaluator feedback if score is 3.0-3.9 and trending upward. Escalate to user if below 3.0 or stagnant.
+
+S-complexity tasks skip the evaluator if all signals pass. M-complexity and any failed tasks get the full evaluator.
+
+See `references/evaluator-protocol.md` for the full evaluator prompt template, grading rubric, sprint contracts, and iterative refinement loop. See `references/verification-framework.md` for signal details.
 
 ---
 
@@ -454,7 +446,9 @@ For detailed guidance on specific phases, load these reference files:
 - **`references/intake-playbook.md`** - Full question bank organized by task type (feature, bug, refactor, greenfield, migration), with scaling rules and example sessions
 - **`references/dependency-graph-patterns.md`** - Common DAG patterns, ASCII rendering format, wave assignment algorithm, and example graphs
 - **`references/wave-execution.md`** - Parallel agent orchestration, agent prompt templates, blocked task handling, error recovery
-- **`references/verification-framework.md`** - TDD workflow per sub-task, verification signals, integration testing, failure handling
+- **`references/verification-framework.md`** - TDD workflow per sub-task, verification signals, evaluator integration, failure handling
+- **`references/evaluator-protocol.md`** - Generator-evaluator separation, scored grading rubric, evaluator prompt template, sprint contracts, iterative refinement loop
+- **`references/context-reset-protocol.md`** - When and how to reset context during long sessions, handoff document format, resume procedure
 - **`references/board-format.md`** - Full `.absolute-human/board.md` specification with format, status transitions, and example board
 
 ---

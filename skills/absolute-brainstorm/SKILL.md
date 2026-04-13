@@ -359,39 +359,15 @@ After user approves the full design:
 
 ## Phase 8: Spec Review Loop
 
-After writing the spec, dispatch a reviewer subagent:
+After writing the spec, dispatch a **separate** reviewer subagent using the scored
+review protocol in `references/spec-writing.md`. The reviewer grades the spec on
+five dimensions (Completeness, Consistency, Clarity, Scope, Testability) with a
+1-5 score per dimension. This uses generator-evaluator separation - the agent that
+wrote the spec does NOT review it.
 
-```
-Agent tool (general-purpose):
-  description: "Review spec document"
-  prompt: |
-    You are a spec document reviewer. Verify this spec is complete and ready
-    for implementation planning.
-
-    Spec to review: [SPEC_FILE_PATH]
-
-    | Category     | What to Look For                                              |
-    |------------- |---------------------------------------------------------------|
-    | Completeness | TODOs, placeholders, "TBD", incomplete sections               |
-    | Consistency  | Internal contradictions, conflicting requirements             |
-    | Clarity      | Requirements ambiguous enough to cause building the wrong thing|
-    | Scope        | Focused enough for a single plan                              |
-    | YAGNI        | Unrequested features, over-engineering                        |
-
-    Only flag issues that would cause real problems during implementation.
-    Approve unless there are serious gaps.
-
-    Output format:
-    ## Spec Review
-    **Status:** Approved | Issues Found
-    **Issues (if any):**
-    - [Section X]: [specific issue] - [why it matters]
-    **Recommendations (advisory, do not block approval):**
-    - [suggestions]
-```
-
-- If issues found: fix them, re-dispatch, repeat
-- Max 3 iterations. If still failing, surface to the user for guidance.
+- **4.0+ weighted score**: Approved, proceed to user review
+- **3.0-3.9**: Needs Work - fix flagged issues, re-dispatch (max 3 iterations)
+- **Below 3.0**: Major Gaps - surface to user immediately, do not iterate
 
 ---
 

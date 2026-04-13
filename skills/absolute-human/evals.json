@@ -139,6 +139,38 @@
         { "type": "contains", "value": "frontmatter" },
         { "type": "contains", "value": "status" }
       ]
+    },
+    {
+      "id": "core-evaluator-separation",
+      "description": "Should use a separate evaluator agent for verification, not self-evaluate",
+      "prompt": "Using Absolute-Human, how does the VERIFY phase work? Does the same agent that wrote the code verify it?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "evaluator" },
+        { "type": "contains", "value": "separate" },
+        { "type": "not_contains", "value": "same agent verifies" }
+      ]
+    },
+    {
+      "id": "core-scored-grading",
+      "description": "Should use scored grading criteria, not binary pass/fail for evaluator verification",
+      "prompt": "Using Absolute-Human, what grading system does the evaluator use to verify completed tasks?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "score" },
+        { "type": "contains", "value": "Correctness" },
+        { "type": "contains", "value": "rubric" }
+      ]
+    },
+    {
+      "id": "gotcha-context-reset",
+      "description": "Should recommend context reset for long-running sessions rather than continuing with degraded context",
+      "prompt": "Using Absolute-Human, I've been running for 5 waves and the agent seems confused. What should I do?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "context reset" },
+        { "type": "contains", "value": "handoff" }
+      ]
     }
   ]
 }

@@ -116,6 +116,48 @@ Wave 2 Complete (3/6 waves done)
 -----------------------------------------
 ```
 
+## Evaluator Context Handoff Format
+
+When dispatching the evaluator subagent for a completed task, provide this context:
+
+```
+## Evaluator Task: {SH-XXX} - {Title}
+
+You are an independent evaluator. Grade this work skeptically and honestly.
+Do not assume good intent. Look for gaps, shortcuts, and incomplete work.
+
+### Acceptance Criteria (from Sprint Contract)
+{agreed criteria list from the board}
+
+### Verification Method
+{how each criterion should be tested}
+
+### Files Modified
+{list of files the generator changed}
+
+### Git Diff
+{the actual diff of all changes for this task}
+
+### Test Output
+{test run results - pass/fail counts, any failures}
+
+### Lint/Type/Build Output
+{output from verification signals}
+
+### Project Conventions
+{detected conventions from the board}
+
+### Grading Instructions
+Score each dimension 1-5 using the rubric in evaluator-protocol.md.
+Output: per-dimension scores, weighted score, verdict, specific feedback.
+```
+
+The evaluator receives ONLY the outputs and criteria - never the generator's
+reasoning or intent. This prevents the evaluator from rationalizing implementation
+decisions it should be questioning.
+
+---
+
 ## Anti-Patterns and Common Mistakes
 
 | Anti-Pattern | Better Approach |

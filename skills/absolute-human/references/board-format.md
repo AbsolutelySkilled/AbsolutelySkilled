@@ -28,6 +28,7 @@ status: intake | decomposing | discovering | planning | executing | verifying | 
 created: "{ISO 8601 timestamp}"
 updated: "{ISO 8601 timestamp}"
 git_tracked: true | false
+evaluator_enabled: true | false
 total_tasks: {N}
 completed_tasks: {N}
 failed_tasks: {N}
@@ -35,6 +36,8 @@ current_wave: {N}
 total_waves: {N}
 ---
 ```
+
+`evaluator_enabled` defaults to `true` for boards with any M-complexity tasks. Set to `false` only for boards where all tasks are S-complexity.
 
 ---
 
@@ -118,14 +121,23 @@ Each sub-task gets its own subsection that grows as phases complete:
   - {test case 1}
   - {test case 2}
 
+#### Sprint Contract
+{populated before wave execution - evaluator reviews and strengthens criteria}
+- Agreed criteria: {numbered list - may differ from original acceptance criteria}
+- Verification method: {per criterion - how it will be tested}
+- Evaluator additions: {criteria the evaluator added, with rationale}
+- Contract status: agreed | disputed (awaiting user)
+
 #### Verification
 {populated during VERIFY phase}
-- Status: PASS | FAIL
+- Signals: PASS | FAIL
 - Tests: {passed}/{total} ({new} new)
 - Lint: clean | {issues}
 - Type Check: pass | {errors}
 - Build: pass | fail
-- Retries: {used}/{max}
+- Evaluator Score: {N.N}/5.0 | skipped
+- Evaluator Verdict: PASS | NEEDS WORK | FAIL | skipped
+- Iteration: {N}/5
 - Notes: {context}
 ```
 

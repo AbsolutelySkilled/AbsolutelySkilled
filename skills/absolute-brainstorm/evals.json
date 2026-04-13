@@ -206,6 +206,17 @@
         { "type": "contains", "value": "linear" },
         { "type": "not_contains", "value": "Here are all my questions" }
       ]
+    },
+    {
+      "id": "core-scored-spec-review",
+      "description": "Should use scored criteria for spec review, not binary approve/reject",
+      "prompt": "Using absolute-brainstorm, how does the spec review loop evaluate the spec document?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "score" },
+        { "type": "contains", "value": "Completeness" },
+        { "type": "contains", "value": "4.0" }
+      ]
     }
   ]
 }

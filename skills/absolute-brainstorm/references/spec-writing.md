@@ -206,37 +206,33 @@ Every spec includes a Decision Log at the bottom. Record decisions made during t
 
 ---
 
-## Spec Review Checklist
+## Scored Spec Review Protocol
 
-After writing the spec, a reviewer subagent checks it against these criteria before delivering the final document.
+After writing the spec, a separate reviewer subagent grades it against scored criteria. This uses generator-evaluator separation - the agent that wrote the spec does NOT review it.
 
-### Criteria
+### Scoring Rubric
 
-| Criterion | What to Check |
-|---|---|
-| **Completeness** | Every section required by the scaling tier is present and substantive. No placeholders or TODOs remain. |
-| **Consistency** | Names, types, and paths used in one section match their usage in all other sections. API shapes in Interfaces match the Data Model. |
-| **Clarity** | A developer unfamiliar with the project can read the spec and understand what to build. No ambiguous pronouns ("it", "this") without clear antecedents. |
-| **Scope** | The spec covers exactly what was discussed during the interview - no more, no less. No scope creep into adjacent systems. |
-| **YAGNI** | No speculative features, future phases (unless they constrain current design), or unnecessary sections. |
-| **Concrete** | All endpoints have method + path. All schemas have field names + types. All file references use repo-relative paths. |
-| **Testable** | The Testing Strategy section contains specific, actionable test cases - not vague statements like "test the happy path". |
+| Criterion | Weight | 1 (Fail) | 3 (Acceptable) | 5 (Excellent) |
+|-----------|--------|----------|-----------------|----------------|
+| **Completeness** | 25% | TODOs, placeholders, missing sections | Required sections present but thin | Every section substantive for its tier |
+| **Consistency** | 20% | Names/types contradict across sections | Mostly consistent, minor mismatches | All names, types, paths match perfectly |
+| **Clarity** | 20% | Ambiguous, requires author to interpret | Clear to someone with project context | Unfamiliar developer can build from this |
+| **Scope** | 15% | Scope creep or missing agreed features | Covers discussed topics | Exactly what was discussed, no more/less |
+| **Testability** | 20% | Vague "test the happy path" | Test cases listed but generic | Specific, actionable test cases with inputs/outputs |
+
+### Score Thresholds
+
+| Weighted Score | Verdict | Action |
+|----------------|---------|--------|
+| **4.0 - 5.0** | Approved | Proceed to user review |
+| **3.0 - 3.9** | Needs Work | Fix issues, re-dispatch reviewer (max 3 iterations) |
+| **Below 3.0** | Major Gaps | Surface to user immediately, do not iterate |
 
 ### Reviewer Prompt Template
 
-The following prompt is used by the reviewer subagent:
-
 ```
-You are a design spec reviewer. Read the spec below and evaluate it against
-these criteria: Completeness, Consistency, Clarity, Scope, YAGNI, Concrete,
-and Testable.
-
-For each criterion, output one of:
-  PASS - meets the bar
-  NEEDS WORK - explain what is missing or wrong
-
-If any criterion is NEEDS WORK, write a corrected version of the affected
-section(s) at the end of your review.
+You are an independent spec reviewer. Grade this spec skeptically.
+Do not give benefit of the doubt on vague sections.
 
 Spec complexity tier: [SIMPLE | MEDIUM | COMPLEX]
 
@@ -247,166 +243,76 @@ Spec complexity tier: [SIMPLE | MEDIUM | COMPLEX]
 --- BEGIN INTERVIEW CONTEXT ---
 {interview_summary}
 --- END INTERVIEW CONTEXT ---
+
+Score each criterion 1-5 using the rubric. Output format (STRICT):
+
+## Spec Review
+- **Completeness**: {score}/5 - {justification}
+- **Consistency**: {score}/5 - {justification}
+- **Clarity**: {score}/5 - {justification}
+- **Scope**: {score}/5 - {justification}
+- **Testability**: {score}/5 - {justification}
+- **Weighted Score**: {calculated}/5.0
+- **Verdict**: Approved | Needs Work | Major Gaps
+
+## Specific Issues (required if score < 4.0)
+For each criterion below 4:
+- [Section]: what is wrong and how to fix it
+
+## What Was Done Well
+- {1-2 strengths}
 ```
 
 ---
 
-## Example Spec
+## Example Spec (Abbreviated)
 
-A complete example for a medium-complexity feature.
+A medium-complexity commenting system spec, condensed to show structure:
 
 ```markdown
 # Commenting System Design Spec
 
 ## Summary
-
-Add a commenting system to blog posts that supports threaded replies (one
-level deep), real-time updates, and moderation. Comments are only available
-to logged-in users.
+Add threaded comments (one level deep) to blog posts for logged-in users.
 
 ## Context
-
-The blog at `src/app/blog/` currently supports posts with markdown content
-rendered via `src/lib/markdown.ts`. Posts are stored in the `posts` table
-in PostgreSQL via Prisma (`prisma/schema.prisma`). There is no commenting
-functionality today. Users have requested the ability to discuss posts, and
-engagement metrics show readers spend an average of 4 minutes per post,
-suggesting they would interact with comments.
+Blog at `src/app/blog/` uses Prisma + PostgreSQL. No commenting today.
 
 ## Design
 
 ### Architecture
-
-The commenting system adds a new API route group under `/api/posts/:postId/comments`,
-a new `comments` table in PostgreSQL, and a React component tree mounted in the
-existing post page at `src/app/blog/[slug]/page.tsx`.
+New API routes at `/api/posts/:postId/comments`, new `comments` table,
+React components in `src/components/comments/`.
 
 ### Components
-
 | Component | Responsibility | File Path |
 |---|---|---|
-| CommentThread | Renders top-level comments and their replies | `src/components/comments/CommentThread.tsx` |
-| CommentForm | Input form for new comments and replies | `src/components/comments/CommentForm.tsx` |
-| CommentItem | Single comment with author, timestamp, reply button | `src/components/comments/CommentItem.tsx` |
-| comments API | CRUD endpoints for comments | `src/app/api/posts/[postId]/comments/route.ts` |
-| Comment model | Prisma model and validation | `prisma/schema.prisma` |
+| CommentThread | Renders comments + replies | `src/components/comments/CommentThread.tsx` |
+| CommentForm | Input form | `src/components/comments/CommentForm.tsx` |
+| comments API | CRUD endpoints | `src/app/api/posts/[postId]/comments/route.ts` |
 
 ### Data Model
-
-```prisma
-model Comment {
-  id        String   @id @default(cuid())
-  body      String   @db.Text
-  postId    String
-  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
-  authorId  String
-  author    User     @relation(fields: [authorId], references: [id])
-  parentId  String?
-  parent    Comment? @relation("CommentReplies", fields: [parentId], references: [id], onDelete: Cascade)
-  replies   Comment[] @relation("CommentReplies")
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@index([postId, createdAt])
-  @@index([parentId])
-}
-```
+Comment model with: id, body, postId, authorId, parentId (nullable for threading),
+createdAt, updatedAt. Indexes on [postId, createdAt] and [parentId].
 
 ### Interfaces / API Surface
-
-**Create comment**
-
-POST `/api/posts/:postId/comments`
-
-```typescript
-// Request
-{ body: string; parentId?: string }
-
-// Response 201
-{ id: string; body: string; authorId: string; parentId: string | null; createdAt: string }
-
-// Error 422
-{ error: "body_required" | "parent_not_found" | "nesting_too_deep" }
-
-// Error 401
-{ error: "unauthorized" }
-```
-
-**List comments**
-
-GET `/api/posts/:postId/comments?cursor=<id>&limit=20`
-
-```typescript
-// Response 200
-{
-  comments: Array<{
-    id: string;
-    body: string;
-    author: { id: string; name: string; avatarUrl: string };
-    parentId: string | null;
-    replies: Array<{ /* same shape without nested replies */ }>;
-    createdAt: string;
-  }>;
-  nextCursor: string | null;
-}
-```
-
-**Delete comment** (author or admin only)
-
-DELETE `/api/posts/:postId/comments/:commentId`
-
-```typescript
-// Response 204 (no body)
-
-// Error 403
-{ error: "forbidden" }
-```
-
-### Data Flow
-
-**Creating a comment (primary flow)**:
-1. User types in `CommentForm` and submits
-2. Client sends `POST /api/posts/:postId/comments` with auth cookie
-3. API validates auth via `src/middleware/auth.ts`
-4. API validates request body (non-empty, parentId exists if provided, parent is not itself a reply)
-5. API inserts row into `comments` table via Prisma
-6. API returns the created comment
-7. Client prepends the comment to `CommentThread` state
+- POST `/api/posts/:postId/comments` - Create (201, 401, 422)
+- GET `/api/posts/:postId/comments?cursor=<id>&limit=20` - List with pagination
+- DELETE `/api/posts/:postId/comments/:commentId` - Delete (204, 403)
 
 ## Error Handling
-
-| Failure | Behavior |
-|---|---|
-| User not authenticated | Redirect to login, preserve draft in localStorage |
-| Comment body empty | Client-side validation prevents submission; server returns 422 |
-| Parent comment not found | Server returns 422 with `parent_not_found` |
-| Nesting too deep (reply to a reply) | Server returns 422 with `nesting_too_deep` |
-| Post not found | Server returns 404 |
-| Rate limit exceeded | Server returns 429, client shows "Please wait before commenting again" |
+Auth failures redirect to login. Validation errors return 422 with error codes.
+Nesting violations return `nesting_too_deep`. Rate limiting returns 429.
 
 ## Testing Strategy
-
-| Test | Type | What It Verifies |
-|---|---|---|
-| Create comment with valid body | Integration | 201 response, comment appears in DB |
-| Create comment without auth | Integration | 401 response |
-| Create comment with empty body | Integration | 422 response |
-| Reply to existing comment | Integration | 201, parentId set correctly |
-| Reply to a reply (nesting too deep) | Integration | 422 with `nesting_too_deep` |
-| List comments with pagination | Integration | Cursor-based pagination returns correct pages |
-| Delete own comment | Integration | 204, comment removed from DB |
-| Delete another user's comment | Integration | 403 response |
-| CommentThread renders comments | Unit | Renders list of CommentItem components |
-| CommentForm submits on enter | Unit | Calls onSubmit with body text |
-| Full comment flow | E2E | Login, navigate to post, create comment, see it appear, reply, delete |
+11 tests: 8 integration (CRUD + auth + pagination + nesting), 2 unit (render +
+form submit), 1 E2E (full comment flow).
 
 ## Decision Log
-
-| Decision | Options Considered | Chosen | Rationale |
-|---|---|---|---|
-| Nesting depth | Unlimited, flat, 2-level | 2-level (comment + reply) | Keeps UI manageable, avoids recursive queries, covers the majority of discussion patterns |
-| Pagination | Offset, cursor | Cursor-based | More reliable with concurrent inserts, better performance on large comment threads |
-| Real-time updates | WebSocket, polling, SSE | Polling (30s interval) | Simplest to implement, sufficient for blog comment velocity, no infra changes needed |
-| Soft delete vs hard delete | Soft delete, hard delete | Hard delete with cascading replies | Blog context does not require audit trail, simpler data model, GDPR-friendly |
-| Comment editing | Allow edits, no edits | No edits in v1 | Reduces complexity, avoids edit history UI, can add later without migration |
+| Decision | Chosen | Rationale |
+|---|---|---|
+| Nesting depth | 2-level | Avoids recursive queries, covers 90% of use cases |
+| Pagination | Cursor-based | Reliable with concurrent inserts |
+| Real-time | Polling (30s) | Simplest, sufficient for blog velocity |
+| Deletion | Hard delete + cascade | No audit needed, GDPR-friendly |
 ```

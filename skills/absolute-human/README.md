@@ -28,6 +28,12 @@ Absolute-Human is a development lifecycle built from the ground up for AI agents
 
 The model has 7 phases: **INTAKE - DECOMPOSE - DISCOVER - PLAN - EXECUTE - VERIFY - CONVERGE**.
 
+Key capabilities:
+- **Generator-Evaluator Separation** - Verification uses a separate evaluator agent with scored grading rubric (not self-evaluation), inspired by GAN-style adversarial patterns
+- **Sprint Contracts** - Evaluator reviews and strengthens acceptance criteria before each wave
+- **Context Reset Protocol** - Structured handoff documents for long-running sessions (3+ waves) to maintain reasoning quality
+- **Iterative Refinement** - Up to 5 evaluator feedback iterations per task with score trend tracking
+
 ---
 
 ## Tags

@@ -48,6 +48,8 @@ Pair absolute-brainstorm with these complementary skills:
 
 You MUST use this before any creative work - creating features, building components, adding functionality, modifying behavior, designing systems, or making architectural decisions. Enters plan mode, reads all available docs, explores the codebase deeply, then interviews the user relentlessly with ultrathink-level reasoning on every decision until both AI and user are 100% confident and in full agreement. Runs a confidence self-check before presenting any design. Produces a validated design spec before any implementation begins, then recommends delegating to absolute-human for execution. Triggers on feature requests, design discussions, refactors, new projects, component creation, system changes, and any task requiring design decisions.
 
+The spec review loop uses **generator-evaluator separation** with a scored rubric (Completeness, Consistency, Clarity, Scope, Testability) - the agent that wrote the spec does NOT review it. Approval requires a weighted score of 4.0+/5.0.
+
 
 ### How do I install absolute-brainstorm?
 
