@@ -28,7 +28,7 @@ Skills work with any agent that supports the SKILL.md format: Claude Code, Gemin
 
 These skills form the backbone of AbsolutelySkilled - install them first and watch your AI agent transform from a code assistant into an autonomous development partner.
 
-### Super Brainstorm - Relentless Design Interview
+### Absolute Brainstorm - Relentless Design Interview
 
 A structured design interrogation that reads your entire codebase before asking a single question - every assumption challenged, every dependency resolved, one decision at a time.
 

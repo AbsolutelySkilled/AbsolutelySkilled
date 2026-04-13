@@ -19,12 +19,9 @@ platforms:
   - openai-codex
   - mcp
 sources:
-  - url: https://github.com/obra/superpowers/tree/main/skills/brainstorming
-    accessed: 2026-03-18
-    description: Original brainstorming skill from obra/superpowers - interview-driven design process with spec review loop
   - url: https://github.com/AbsolutelySkilled/AbsolutelySkilled
     accessed: 2026-03-18
-    description: Enhanced with ultrathink reasoning, codebase-first intelligence, strict dependency-resolved interviews, and flexible exit
+    description: Ultrathink reasoning, codebase-first intelligence, strict dependency-resolved interviews, and flexible exit
 license: MIT
 maintainers:
   - github: maddhruv
@@ -39,12 +36,12 @@ When this skill is activated, always start your first response with the brain em
 **At the very start of every absolute-brainstorm invocation**, before any other output, display this ASCII art banner:
 
 ```
-███████╗██╗   ██╗██████╗ ███████╗██████╗
-██╔════╝██║   ██║██╔══██╗██╔════╝██╔══██╗
-███████╗██║   ██║██████╔╝█████╗  ██████╔╝
-╚════██║██║   ██║██╔═══╝ ██╔══╝  ██╔══██╗
-███████║╚██████╔╝██║     ███████╗██║  ██║
-╚══════╝ ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═╝
+ █████╗ ██████╗ ███████╗ ██████╗ ██╗     ██╗   ██╗████████╗███████╗
+██╔══██╗██╔══██╗██╔════╝██╔═══██╗██║     ██║   ██║╚══██╔══╝██╔════╝
+███████║██████╔╝███████╗██║   ██║██║     ██║   ██║   ██║   █████╗
+██╔══██║██╔══██╗╚════██║██║   ██║██║     ██║   ██║   ██║   ██╔══╝
+██║  ██║██████╔╝███████║╚██████╔╝███████╗╚██████╔╝   ██║   ███████╗
+╚═╝  ╚═╝╚═════╝ ╚══════╝ ╚═════╝ ╚══════╝ ╚═════╝    ╚═╝   ╚══════╝
 ██████╗ ██████╗  █████╗ ██╗███╗   ██╗███████╗████████╗ ██████╗ ██████╗ ███╗   ███╗
 ██╔══██╗██╔══██╗██╔══██╗██║████╗  ██║██╔════╝╚══██╔══╝██╔═══██╗██╔══██╗████╗ ████║
 ██████╔╝██████╔╝███████║██║██╔██╗ ██║███████╗   ██║   ██║   ██║██████╔╝██╔████╔██║
