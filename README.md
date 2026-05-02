@@ -386,6 +386,7 @@ skills/
 | [computer-vision](skills/computer-vision/) | Image classification, object detection, segmentation pipelines |
 | [nlp-engineering](skills/nlp-engineering/) | Text processing, embeddings, search, classification, summarization |
 | [data-science](skills/data-science/) | EDA, statistical analysis, visualization, hypothesis testing |
+| [skillsbao-registry](skills/skillsbao-registry/) | Chinese search and installation registry for AI skills across Claude Code, OpenCode, Cursor, and other agent tools |
 | [ai-agent-design](skills/ai-agent-design/) | Multi-agent systems, tool use, planning, memory architectures |
 
 ### UI/UX & Design
