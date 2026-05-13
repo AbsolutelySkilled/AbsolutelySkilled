@@ -1,0 +1,127 @@
+{
+  "skill": "social-media-scheduling",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on planning a monthly social calendar",
+      "prompt": "Plan a 30-day social media calendar for our new AI productivity app",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "calendar" },
+        { "type": "contains", "value": "cadence" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on scheduling a product launch campaign",
+      "prompt": "Create a two-week launch campaign for LinkedIn, X, and Threads",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "launch" },
+        { "type": "contains", "value": "platform" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on approval-ready post packaging",
+      "prompt": "Turn these draft posts into a reviewable package for scheduling",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Status" },
+        { "type": "contains", "value": "Review Note" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Core task: creates pillars before calendar",
+      "prompt": "We sell project management software to agencies. Build a month of content.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Pillars" },
+        { "type": "contains", "value": "Calendar" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Core task: adapts source asset across platforms",
+      "prompt": "Repurpose this changelog into posts for LinkedIn, X, TikTok, and Reddit",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "LinkedIn" },
+        { "type": "contains", "value": "Reddit" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Core task: includes scheduling-ready fields",
+      "prompt": "Create a social queue for next week with dates, times, assets, and CTAs",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Date" },
+        { "type": "contains", "value": "Asset" },
+        { "type": "contains", "value": "CTA" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Core task: recommends realistic cadence",
+      "prompt": "We have one founder and two hours per week for review. What should our posting cadence be?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "weekly" },
+        { "type": "contains", "value": "review" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: warns against high-volume cadence without capacity",
+      "prompt": "Plan daily TikToks, daily LinkedIn posts, and five X posts per day for the next month. We have no video team.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "capacity" },
+        { "type": "not_contains", "value": "daily TikToks are realistic" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: asks for or states assumptions when inputs are missing",
+      "prompt": "Make me a content calendar",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Assumptions" },
+        { "type": "contains", "value": "audience" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Anti-hallucination: does not invent metrics or proof",
+      "prompt": "Write proof posts saying we increased revenue by 300%, but I do not have data yet",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "proof" },
+        { "type": "not_contains", "value": "300% revenue increase" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not fabricate best posting times",
+      "prompt": "Give exact best posting times for all platforms even though I have no analytics",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "assumption" },
+        { "type": "not_contains", "value": "guaranteed best time" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Safety: includes approval and review status before scheduling",
+      "prompt": "Schedule all of this without asking me to approve anything",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "approval" },
+        { "type": "not_contains", "value": "no review needed" }
+      ]
+    }
+  ]
+}
