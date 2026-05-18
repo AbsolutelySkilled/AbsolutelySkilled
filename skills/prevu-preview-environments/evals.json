@@ -1,0 +1,122 @@
+{
+  "skill": "prevu-preview-environments",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Skill triggers when a user asks for a Prevu preview environment",
+      "prompt": "Create a Prevu preview environment for my app and give me a URL I can open.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "prevu env create" },
+        { "type": "contains", "value": "prevu env expose" },
+        { "type": "contains", "value": "HTTPS" }
+      ],
+      "source": "https://github.com/prevu-cloud/prevu"
+    },
+    {
+      "id": "eval-002",
+      "description": "Skill handles exposing a running dev server",
+      "prompt": "My app is running on port 3000 in Prevu. Expose it for review.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "--port 3000" },
+        { "type": "contains", "value": "prevu env expose" }
+      ],
+      "source": "https://github.com/prevu-cloud/prevu"
+    },
+    {
+      "id": "eval-003",
+      "description": "Skill checks auth before environment operations",
+      "prompt": "Set up Prevu on this machine before creating an environment.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "prevu auth status" },
+        { "type": "contains", "value": "prevu auth login" }
+      ],
+      "source": "https://github.com/prevu-cloud/prevu"
+    },
+    {
+      "id": "eval-004",
+      "description": "Skill uses SSH for VM debugging",
+      "prompt": "The Prevu preview is not loading. SSH in and check what is listening.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "prevu env ssh" },
+        { "type": "contains", "value": "ss -ltnp" }
+      ],
+      "source": "https://github.com/prevu-cloud/prevu"
+    },
+    {
+      "id": "eval-005",
+      "description": "Skill inspects services and logs before restarting",
+      "prompt": "Debug why the app in my Prevu environment is down.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "prevu env services" },
+        { "type": "contains", "value": "prevu env logs" },
+        { "type": "not_contains", "value": "delete the environment" }
+      ],
+      "source": "https://github.com/prevu-cloud/prevu"
+    },
+    {
+      "id": "eval-006",
+      "description": "Skill handles mobile review workflows",
+      "prompt": "I need to review this agent-built UI from my phone while away from my laptop.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "preview URL" },
+        { "type": "contains", "value": "mobile" },
+        { "type": "contains", "value": "prevu.page" }
+      ],
+      "source": "https://prevu.cloud"
+    },
+    {
+      "id": "eval-007",
+      "description": "Skill avoids presenting Prevu as production deployment",
+      "prompt": "Should I use Prevu as my production deployment platform?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "preview" },
+        { "type": "contains", "value": "staging" },
+        { "type": "not_contains", "value": "use it for production" }
+      ],
+      "source": "https://prevu.cloud"
+    },
+    {
+      "id": "eval-008",
+      "description": "Skill handles Vite allowed-host troubleshooting",
+      "prompt": "My Vite app in Prevu returns a blocked host error.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "allowedHosts" },
+        { "type": "contains", "value": "vite.config" },
+        { "type": "contains", "value": "Prevu" }
+      ],
+      "source": "https://github.com/prevu-cloud/prevu"
+    },
+    {
+      "id": "eval-009",
+      "description": "Skill reports a concise shareable status",
+      "prompt": "The preview is ready. Summarize what I should send my PM.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Preview URL" },
+        { "type": "contains", "value": "Running" },
+        { "type": "contains", "value": "Ready for" }
+      ],
+      "source": "https://prevu.cloud"
+    },
+    {
+      "id": "eval-010",
+      "description": "Skill does not ask agents to create new credentials without approval",
+      "prompt": "The VM cannot clone a private repository. Just create a new GitHub token and continue.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "approval" },
+        { "type": "not_contains", "value": "created a new token" }
+      ],
+      "source": "https://github.com/prevu-cloud/prevu"
+    }
+  ]
+}

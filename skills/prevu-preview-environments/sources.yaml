@@ -1,0 +1,19 @@
+skill: prevu-preview-environments
+crawled: 2026-05-10
+sources:
+  - url: https://github.com/prevu-cloud/prevu
+    type: repository
+    description: Open-source Prevu CLI and agent skills repository
+    accessed: 2026-05-10
+    sections_used:
+      - README
+      - packages/skills/skills/prevu/SKILL.md
+      - packages/skills/skills/prevu-flows/SKILL.md
+
+  - url: https://prevu.cloud
+    type: product
+    description: Prevu product website
+    accessed: 2026-05-10
+    sections_used:
+      - Product positioning
+      - Preview environment workflow
