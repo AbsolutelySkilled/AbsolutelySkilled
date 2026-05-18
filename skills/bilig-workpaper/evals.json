@@ -1,0 +1,148 @@
+{
+  "skill": "bilig-workpaper",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on agent spreadsheet formula runtime request",
+      "prompt": "I need an agent to update a pricing workbook, recalculate formulas, and prove the output changed without opening Excel.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "Bilig" },
+        { "type": "contains", "value": "WorkPaper" },
+        { "type": "contains", "value": "readback" },
+        { "type": "not_contains", "value": "screenshot" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on MCP workbook tool setup",
+      "prompt": "Set up an MCP server so Claude or Codex can edit a formula workbook stored as a JSON file.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "bilig-workpaper-mcp" },
+        { "type": "contains", "value": "--workpaper" },
+        { "type": "contains", "value": "--writable" },
+        { "type": "contains", "value": "@bilig/headless@0.23.3" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Triggers on backend service formula workbook use case",
+      "prompt": "How should I use spreadsheet formulas for a quote approval endpoint in a Node service?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "@bilig/headless" },
+        { "type": "contains", "value": "WorkPaper" },
+        { "type": "contains", "value": "Node" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Can write a direct TypeScript WorkPaper example",
+      "prompt": "Write a TypeScript example that sets an input cell, recalculates a formula workbook, and persists the WorkPaper JSON.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "WorkPaper" },
+        { "type": "contains", "value": "setCellContents" },
+        { "type": "contains", "value": "getCellDisplayValue" },
+        { "type": "contains", "value": "serializeWorkPaperDocument" },
+        { "type": "code_valid", "value": "typescript" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Can configure Codex MCP client with pinned npm package",
+      "prompt": "Show the Codex config for a local Bilig WorkPaper MCP server.",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "[mcp_servers.bilig-workpaper]" },
+        { "type": "contains", "value": "@bilig/headless@0.23.3" },
+        { "type": "contains", "value": "bilig-workpaper-mcp" },
+        { "type": "contains", "value": "startup_timeout_sec" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Can list the useful MCP tools for workbook mutation",
+      "prompt": "What tools should the Bilig WorkPaper MCP server expose for reading and writing workbook state?",
+      "type": "factual",
+      "assertions": [
+        { "type": "contains", "value": "list_sheets" },
+        { "type": "contains", "value": "set_cell_contents" },
+        { "type": "contains", "value": "get_cell_display_value" },
+        { "type": "contains", "value": "export_workpaper_document" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Can create an XLSX formula clinic command",
+      "prompt": "I have a reduced XLSX where Summary!B7 is wrong. What local command should I run to create a bug report?",
+      "type": "code",
+      "assertions": [
+        { "type": "contains", "value": "bilig-formula-clinic" },
+        { "type": "contains", "value": "Summary!B7" },
+        { "type": "contains", "value": "@bilig/headless@0.23.3" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Gotcha: requires readback proof after writes",
+      "prompt": "I changed Inputs!B2 in a WorkPaper. Can I just say the quote total updated?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "read" },
+        { "type": "contains", "value": "dependent" },
+        { "type": "contains", "value": "output" },
+        { "type": "not_contains", "value": "just say" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Gotcha: does not claim Excel desktop parity",
+      "prompt": "Can Bilig replace Excel macros, VBA, charts, and pivot tables for every workbook?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "VBA" },
+        { "type": "contains", "value": "pivot" },
+        { "type": "contains", "value": "not" },
+        { "type": "not_contains", "value": "full Excel replacement" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Gotcha: avoids private workbook upload",
+      "prompt": "I have a private customer XLSX that fails. Should I upload it so you can debug the formula import?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "reduced" },
+        { "type": "contains", "value": "fixture" },
+        { "type": "contains", "value": "private" },
+        { "type": "not_contains", "value": "upload it" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Anti-hallucination: does not invent unsupported APIs",
+      "prompt": "Use Bilig to run my Excel VBA macro and then create a pivot chart.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "unsupported" },
+        { "type": "contains", "value": "VBA" },
+        { "type": "contains", "value": "pivot" },
+        { "type": "not_contains", "value": "run the macro" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "References load: points to the full agent context and MCP guide",
+      "prompt": "Where should I look for the full Bilig agent docs and MCP setup details?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "llms-full.txt" },
+        { "type": "contains", "value": "mcp-workpaper-tool-server" },
+        { "type": "contains", "value": "proompteng.github.io/bilig" }
+      ]
+    }
+  ]
+}

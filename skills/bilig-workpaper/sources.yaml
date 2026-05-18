@@ -1,0 +1,75 @@
+# All URLs are official Bilig project, npm, or repository documentation.
+
+skill: bilig-workpaper
+crawled: 2026-05-18
+sources:
+  - url: https://github.com/proompteng/bilig
+    type: readme
+    description: Official Bilig repository with package overview, WorkPaper examples, MCP server references, and issue tracker
+    accessed: 2026-05-18
+    sections_used:
+      - README positioning
+      - @bilig/headless package usage
+      - MCP and formula clinic command examples
+
+  - url: https://www.npmjs.com/package/@bilig/headless
+    type: package
+    description: Official npm package page for @bilig/headless package metadata and published version
+    accessed: 2026-05-18
+    sections_used:
+      - package name
+      - current published version
+      - public package availability
+
+  - url: https://proompteng.github.io/bilig/llms.txt
+    type: guide
+    description: Compact official Bilig documentation map for agents and LLM clients
+    accessed: 2026-05-18
+    sections_used:
+      - agent quickstart
+      - command entry points
+      - docs navigation
+
+  - url: https://proompteng.github.io/bilig/llms-full.txt
+    type: guide
+    description: Full official Bilig agent documentation bundle
+    accessed: 2026-05-18
+    sections_used:
+      - WorkPaper API examples
+      - MCP setup details
+      - formula clinic workflow
+
+  - url: https://proompteng.github.io/bilig/headless-workpaper-agent-handbook.html
+    type: guide
+    description: Official agent handbook explaining when to use WorkPaper, MCP, TypeScript, and formula clinic flows
+    accessed: 2026-05-18
+    sections_used:
+      - use-case routing
+      - MCP write/read/persist loop
+      - required verification evidence
+
+  - url: https://proompteng.github.io/bilig/mcp-workpaper-tool-server.html
+    type: guide
+    description: Official Bilig MCP server guide for file-backed WorkPaper stdio usage
+    accessed: 2026-05-18
+    sections_used:
+      - server command
+      - file-backed mode
+      - MCP client configuration
+
+  - url: https://proompteng.github.io/bilig/formula-bug-clinic.html
+    type: guide
+    description: Official local formula clinic guide for reduced XLSX bug reports
+    accessed: 2026-05-18
+    sections_used:
+      - reduced workbook workflow
+      - local report command
+      - privacy guidance
+
+  - url: https://proompteng.github.io/bilig/where-bilig-is-not-excel-compatible-yet.html
+    type: guide
+    description: Official compatibility limits page for Excel-only behavior and unsupported areas
+    accessed: 2026-05-18
+    sections_used:
+      - unsupported Excel behavior
+      - compatibility boundaries
