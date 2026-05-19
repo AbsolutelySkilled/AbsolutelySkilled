@@ -1,0 +1,39 @@
+# Official sources for tweetclaw-social-automation
+
+skill: tweetclaw-social-automation
+crawled: 2026-05-09
+sources:
+  - url: https://github.com/Xquik-dev/tweetclaw/blob/master/README.md
+    type: guide
+    description: Official TweetClaw repository overview with capabilities, install path, and workflow examples
+    accessed: 2026-05-09
+    sections_used:
+      - Repository overview and install path
+      - Capability summary
+      - Search, posting, export, and media workflows
+
+  - url: https://github.com/Xquik-dev/tweetclaw/blob/master/docs/openclaw-setup.md
+    type: guide
+    description: Official OpenClaw setup documentation for TweetClaw
+    accessed: 2026-05-09
+    sections_used:
+      - OpenClaw setup flow
+      - Credential and config guidance
+      - Verification steps
+
+  - url: https://docs.xquik.com/guides/billing
+    type: guide
+    description: Official Xquik billing guide with credit pricing and pay-per-use guidance
+    accessed: 2026-05-09
+    sections_used:
+      - Credit pricing summary
+      - Pay-per-use overview
+      - Read-only usage guidance
+
+  - url: https://docs.xquik.com/api-reference/overview
+    type: api-reference
+    description: Official Xquik API overview for supported workflow categories
+    accessed: 2026-05-09
+    sections_used:
+      - API workflow categories
+      - Read and write task coverage

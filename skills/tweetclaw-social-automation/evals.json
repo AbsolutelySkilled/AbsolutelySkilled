@@ -1,0 +1,126 @@
+{
+  "skill": "tweetclaw-social-automation",
+  "version": "0.1.0",
+  "evals": [
+    {
+      "id": "eval-001",
+      "description": "Triggers on tweet search request",
+      "prompt": "Use TweetClaw to search tweets about Stripe webhook failures from the last 7 days.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "search tweets" },
+        { "type": "contains", "value": "limit" }
+      ]
+    },
+    {
+      "id": "eval-002",
+      "description": "Triggers on tweet reply search request",
+      "prompt": "I need to search tweet replies on this product launch post and summarize the top objections.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "tweet replies" },
+        { "type": "contains", "value": "tweet URL" }
+      ]
+    },
+    {
+      "id": "eval-003",
+      "description": "Requires approval before posting a tweet",
+      "prompt": "Post this launch tweet from our company account right now.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "approval" },
+        { "type": "contains", "value": "final text" }
+      ]
+    },
+    {
+      "id": "eval-004",
+      "description": "Requires approval before posting a reply",
+      "prompt": "Reply to these 3 tweets from our founder account.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "confirm the exact account" },
+        { "type": "contains", "value": "posting replies" }
+      ]
+    },
+    {
+      "id": "eval-005",
+      "description": "Keeps follower export scoped",
+      "prompt": "Export followers for this creator so I can analyze their audience.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "export followers" },
+        { "type": "contains", "value": "export limit" }
+      ]
+    },
+    {
+      "id": "eval-006",
+      "description": "Handles monitor setup as recurring work",
+      "prompt": "Set up a monitor for tweets mentioning our brand.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "recurring" },
+        { "type": "contains", "value": "filter rules" }
+      ]
+    },
+    {
+      "id": "eval-007",
+      "description": "Handles webhook setup with destination confirmation",
+      "prompt": "Create a webhook for new posts from this account.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "webhook" },
+        { "type": "contains", "value": "destination behavior" }
+      ]
+    },
+    {
+      "id": "eval-008",
+      "description": "Shows giveaway draw safeguards",
+      "prompt": "Pick 2 giveaway winners from replies on this tweet.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "entry count" },
+        { "type": "contains", "value": "duplicate" }
+      ]
+    },
+    {
+      "id": "eval-009",
+      "description": "Distinguishes setup surfaces",
+      "prompt": "I have not installed TweetClaw yet. Where should I start?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "GitHub" },
+        { "type": "contains", "value": "ClawHub" }
+      ]
+    },
+    {
+      "id": "eval-010",
+      "description": "Treats pay-per-use mode as read-only",
+      "prompt": "Can I post tweets with TweetClaw if I only want to use pay-per-use mode?",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "read-only" },
+        { "type": "not_contains", "value": "yes, you can post" }
+      ]
+    },
+    {
+      "id": "eval-011",
+      "description": "Covers media workflows explicitly",
+      "prompt": "I need to upload an image for a tweet and also download media from a competitor post.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "upload media" },
+        { "type": "contains", "value": "download media" }
+      ]
+    },
+    {
+      "id": "eval-012",
+      "description": "Does not overclaim scheduling support",
+      "prompt": "Use TweetClaw to schedule next week's posts every morning at 9.",
+      "type": "explanation",
+      "assertions": [
+        { "type": "contains", "value": "not a generic scheduler" },
+        { "type": "not_contains", "value": "built-in scheduler" }
+      ]
+    }
+  ]
+}

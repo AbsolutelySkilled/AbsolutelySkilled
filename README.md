@@ -452,6 +452,7 @@ skills/
 | [content-marketing](skills/content-marketing/) | Blog strategy, SEO content, content calendars, repurposing |
 | [email-marketing](skills/email-marketing/) | Campaigns, drip sequences, deliverability, A/B testing |
 | [social-media-strategy](skills/social-media-strategy/) | Platform-specific tactics, scheduling, analytics, engagement |
+| [tweetclaw-social-automation](skills/tweetclaw-social-automation/) | TweetClaw X/Twitter workflows - search tweets, tweet replies, posting, follower export, media, monitors, webhooks, giveaway draws |
 | [growth-hacking](skills/growth-hacking/) | Viral loops, referral programs, activation funnels, retention |
 | [copywriting](skills/copywriting/) | Headlines, landing pages, CTAs, persuasion frameworks (AIDA, PAS) |
 | [brand-strategy](skills/brand-strategy/) | Positioning, voice and tone, brand architecture, storytelling |
