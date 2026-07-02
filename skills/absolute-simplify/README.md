@@ -7,10 +7,10 @@ Autonomously simplify your staged/unstaged git changes or a target path. Detects
 | Field | Value |
 |-------|-------|
 | Category | workflow |
-| Version | 0.5.0 |
+| Version | 0.6.0 |
 | Platforms | claude-code, gemini-cli, openai-codex, mcp |
 | License | MIT |
-| Deep-dive guides | `references/` (golang, javascript, python, simplification-catalog) |
+| Deep-dive guides | `references/` (golang, javascript, react, python, css, sql, tests, simplification-catalog) |
 
 ## How to Install
 
@@ -25,7 +25,9 @@ npx skills add maddhruv/absolute-simplify
 /absolute-simplify "clean up my changes in src/api/"
 ```
 
-Acts on your working diff. For repo-wide dead code use `/absolute-prune`; for lint/type debt use `/absolute-debt`.
+Acts on your working diff. Each change is scored High/Med/Low — low-value churn (e.g. local renames) is held out of the diff and listed for manual pickup, and the summary gives a PR-worthiness verdict so you know if the diff is worth raising.
+
+For repo-wide dead code use `/absolute-prune`; for lint/type debt use `/absolute-debt`.
 
 ## Maintainers
 

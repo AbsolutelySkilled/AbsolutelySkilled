@@ -3,7 +3,8 @@
 
 # JavaScript / TypeScript Simplification Guide
 
-Deep opinions for simplifying JS/TS/React/Node code. These supplement the
+Deep opinions for simplifying JS/TS/Node code (React specifics live in
+`react.md`). These supplement the
 universal catalog -- apply both. When project config (ESLint, tsconfig, CLAUDE.md)
 contradicts anything here, project config wins.
 
@@ -75,81 +76,11 @@ accidental return type changes, and speed up type checking in large codebases.
 
 ---
 
-## React Component Patterns
+## React / JSX
 
-### Function components only
-Never introduce class components. If simplifying an existing class component,
-only convert to a function component if the user explicitly asks -- that's a
-refactor, not a simplification.
-
-### Named exports over default exports
-```typescript
-// Prefer
-export function UserCard(props: UserCardProps): ReactElement { ... }
-
-// Avoid
-export default function UserCard(props: UserCardProps) { ... }
-```
-
-### Explicit Props types
-```typescript
-// Prefer
-interface UserCardProps {
-  name: string
-  email: string
-  onEdit: () => void
-}
-
-export function UserCard({ name, email, onEdit }: UserCardProps): ReactElement {
-  // ...
-}
-```
-
-### Avoid inline object/array literals in JSX props
-```tsx
-// Before -- creates new object on every render
-<Component style={{ color: 'red', fontSize: 14 }} />
-
-// After -- stable reference
-const errorStyle = { color: 'red', fontSize: 14 }
-<Component style={errorStyle} />
-```
-
-Only apply this when the component re-renders frequently or the prop triggers
-memoization. For static/rarely-rendered components, inline is fine.
-
-### Extract custom hooks for reused logic
-If the same `useState` + `useEffect` pattern appears in 2+ components, extract
-a custom hook. But do NOT extract hooks preemptively for one-off logic.
-
----
-
-## Conditional Rendering
-
-**No nested ternaries in JSX.** This is the number one JSX readability problem.
-
-```tsx
-// NEVER
-return (
-  <div>
-    {status === 'loading' ? <Spinner /> : status === 'error' ? <Error /> : <Content />}
-  </div>
-)
-
-// Prefer early return
-if (status === 'loading') return <Spinner />
-if (status === 'error') return <Error />
-return <Content />
-```
-
-**Avoid `&&` short-circuit rendering when it can produce `0` or `""`:**
-```tsx
-// Bug: renders "0" when count is 0
-{count && <Badge count={count} />}
-
-// Fix
-{count > 0 && <Badge count={count} />}
-```
+For React-specific simplification -- component patterns, conditional rendering,
+`useState`, `useEffect`, hooks, and memoization -- see **`react.md`**. It is
+loaded alongside this file for `.jsx`/`.tsx` files.
 
 ---
 

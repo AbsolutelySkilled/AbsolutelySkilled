@@ -23,7 +23,7 @@ skills/
   absolute-simplify/          # Diff-scoped code simplification
     SKILL.md
     README.md
-    references/               # Language guides (golang, javascript, python, catalog)
+    references/               # Language guides (golang, javascript, react, python, css, sql, tests, catalog)
   absolute-docs/              # Diátaxis-driven documentation
     SKILL.md
     README.md

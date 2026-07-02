@@ -1,13 +1,16 @@
 ---
 name: absolute-simplify
-version: 0.5.0
+version: 0.6.0
 description: >
-  Autonomously simplify staged/unstaged git changes or a target path — reduce
-  complexity, flatten nesting, remove redundancy and dead code — then run tests
-  to prove nothing broke. Acts on your working diff; for repo-wide dead code use
-  absolute-prune; for lint/type debt use absolute-debt.
-  Triggers on "absolute simplify", "simplify this", "clean up my changes",
-  "refactor this", "reduce complexity", "remove dead code", "tidy this up".
+  Use when the user wants to simplify, clean up, refactor, tidy, or refine code —
+  their staged/unstaged git changes or a target file/path. Reduces complexity,
+  flattens nesting, removes redundancy and dead code, scores each change by value
+  (holding low-value churn), then runs tests to prove nothing broke. Invoke on:
+  "simplify", "simplify this", "simplify my code/changes", "clean up", "clean this
+  up", "clean up my changes", "refactor this", "make this cleaner", "tidy this up",
+  "reduce complexity", "flatten this", "remove dead code", "make it more readable",
+  "polish before commit", or "absolute simplify". Acts on your working diff; for
+  repo-wide dead code use absolute-prune; for lint/type debt use absolute-debt.
 category: workflow
 tags:
   - workflow
@@ -64,7 +67,8 @@ Do NOT trigger this skill for:
 
 <HARD-GATE>
 1. NEVER simplify the entire repository. Scope must be explicitly bounded:
-   staged changes, unstaged changes, or a user-specified file/directory.
+   staged changes, unstaged changes, a user-specified file/directory, or — as a
+   last-resort fallback when none of those exist — the single largest source file.
 2. NEVER change observable behavior. Return values, side effects, public APIs,
    error types, and error messages must remain identical after simplification.
 3. ALWAYS read project context first (CLAUDE.md, lint config, editorconfig).
@@ -85,8 +89,8 @@ You MUST complete these steps in order:
 1. **Scope detection** - determine what code to simplify
 2. **Context gathering** - read project standards and configuration
 3. **Language detection** - identify languages, load reference files
-4. **Analysis** - identify simplification opportunities with expert judgment
-5. **Apply simplifications** - edit files autonomously
+4. **Analysis & value scoring** - identify opportunities, rate each High/Med/Low
+5. **Apply simplifications** - edit Medium/High autonomously, hold Low
 6. **Auto-verify** - run tests and lint if detectable
 7. **Summary** - report what changed, why, and verification results
 
@@ -107,14 +111,26 @@ Determine what code to simplify, in this priority order:
    files are the scope. Tell the user: "Found N files with unstaged changes.
    Simplifying those."
 
-4. **Ask the user.** If none of the above yields files, ask: "No changes
-   detected. What file or directory should I simplify?"
+4. **Fall back to the largest source file.** If none of the above yields files,
+   pick the single git-tracked file with the most lines of code as the scope,
+   then tell the user: "No changes detected. Simplifying the largest source file:
+   `<path>` (N LOC)." Restrict the candidate set to real source:
+   - Only extensions with a reference file (`.js/.ts/.tsx/.jsx/.mjs/.cjs`, `.py`,
+     `.go`, `.css/.scss/.sass/.less`, `.sql`). Skip everything else.
+   - Exclude generated/vendored/build output and lockfiles: `node_modules/`,
+     `dist/`, `build/`, `vendor/`, `.min.` files, `*.lock`, `*-lock.json`,
+     `*.generated.*`, snapshots.
+   - Use tracked files only (`git ls-files`); never scan untracked/ignored paths.
+
+   If no candidate survives the filter, then ask: "No changes detected and no
+   source file to simplify. What file or directory should I simplify?"
 
 **Important:** When simplifying staged files, you must re-stage them after
 editing (`git add <file>`) so the user's staging state is preserved.
 
-**Never** default to the entire repository. Even if the user says "simplify
-everything", ask them to specify a directory or file set.
+**Never** default to the entire repository. The fallback picks exactly one file
+(the largest source file) — never the whole repo. Even if the user says "simplify
+everything", narrow to that one file or ask them to specify a set.
 
 ---
 
@@ -153,11 +169,18 @@ Inspect file extensions in the working set:
 
 | Extensions | Load reference |
 |---|---|
-| `.js`, `.ts`, `.tsx`, `.jsx`, `.mjs`, `.cjs` | `references/javascript.md` |
+| `.js`, `.ts`, `.mjs`, `.cjs` | `references/javascript.md` |
+| `.tsx`, `.jsx` | `references/javascript.md` **and** `references/react.md` |
 | `.py`, `.pyi` | `references/python.md` |
 | `.go` | `references/golang.md` |
+| `.css`, `.scss`, `.sass`, `.less` | `references/css.md` |
+| `.sql` | `references/sql.md` |
 
 **Always** load `references/simplification-catalog.md` (universal patterns).
+
+**Test files** — when any file in scope matches a test pattern (`*test*`,
+`*spec*`, `*_test.go`, `test_*.py`, `*.test.*`, `*.spec.*`), also load
+`references/tests.md` in addition to that file's language reference.
 
 If multiple languages are in scope, load all relevant references. But if one
 language dominates (>80% of files), only load that language's reference to
@@ -198,9 +221,64 @@ so the user can decide.
 setup that may be intentionally verbose, or remove assertions that seem
 redundant (they may test specific edge cases).
 
+**Score every opportunity.** After identifying each candidate, assign it a value
+band (High / Medium / Low) using the model in the next section. Low-value changes
+are **held** — not applied — and listed for the user. Only Medium and High get
+applied in Phase 5.
+
+---
+
+## Simplification Value Score
+
+Not all simplifications are worth a reviewer's time. A local variable rename does
+not justify a PR; flattening a deeply nested function or removing a latent-bug
+`useEffect` does. Rate every change so the diff stays PR-worthy and the value is
+made explicit.
+
+Score each change on the combined signal of three factors:
+
+- **Bug / risk reduction** (highest weight) — does it eliminate a latent bug
+  class? E.g. `||`→`??` where `0`/`""` are valid, `{count && …}`→`{count > 0 && …}`,
+  removing an unnecessary effect that caused stale or extra renders. A fix
+  disguised as a simplification is always High — and must be surfaced as a fix,
+  not buried among cosmetic edits.
+- **Clarity gain** — how much cognitive load drops. Flattening 4-deep nesting is
+  high; collapsing `return x ? true : false` is near zero.
+- **Leverage / reach** — dedup consumed in 2+ sites, dead code / dead-flag
+  removal, deleting a whole needless abstraction is high; a single local touch is
+  low.
+
+**Bands:**
+
+- **High** — removes a latent bug, flattens nesting >2 levels, removes an
+  unnecessary effect/state, dedups logic across 2+ sites, or deletes a dead
+  path/flag. PR-worthy on its own.
+- **Medium** — meaningful local clarity: guard clause on moderate nesting,
+  un-nesting a ternary, extracting a named predicate, removing a redundant
+  wrapper. Worth including; bundle-worthy.
+- **Low** — cosmetic, near-zero risk-and-clarity delta: local rename,
+  `x === true`→`x`, collapse assign-then-return, concat→template literal, import
+  reorder. Not PR-worthy standalone. **Held, not applied.**
+
+**PR-worthiness verdict** (aggregate over the changes that would be applied):
+
+- **Standalone PR** — at least one High, or several Mediums sharing a theme.
+- **Bundle with related work** — mostly Medium, no High.
+- **Not worth a PR alone** — only Low changes exist. Nothing is applied; the held
+  list is reported so the user can pick any up manually.
+
+`Low` (value) is a different axis from `Skipped (conservative)` (safety). A change
+can be perfectly safe yet low-value (held here), or high-value yet too risky to
+prove (skipped there). Report them in separate buckets.
+
 ---
 
 ## Phase 5: Apply Simplifications
+
+**Apply only Medium and High changes.** Hold every Low change: do not edit the
+file for it — collect it for the "Low value (held)" list in the summary. If every
+opportunity scored Low, apply nothing and report the held list with the "not worth
+a PR alone" verdict.
 
 1. **Batch changes per file.** Make all edits to a single file in one pass,
    not 10 separate edit operations.
@@ -258,24 +336,35 @@ Output a structured summary of everything that happened:
 
 **Scope**: [staged changes | unstaged changes | <path>]
 **Files modified**: N
-**Simplifications applied**: M
+**Simplifications applied**: M (Med/High) — Low held: K
 
 ### Changes by file
 
+Each applied line is prefixed with its value band.
+
 #### `path/to/file.ts`
-- [Line X] Replaced nested ternary with if/else for clarity
-- [Line Y] Extracted guard clause, reduced nesting from 4 to 2
-- [Line Z] Removed unused import `lodash`
+- [High] [Line X] Replaced `||` with `??` — was dropping valid `0`/`""` values (latent bug)
+- [Med] [Line Y] Extracted guard clause, reduced nesting from 4 to 2
 
 #### `path/to/other.py`
-- [Line A] Replaced manual dict with dataclass
-- [Line B] Simplified `not (not x)` to `x`
+- [Med] [Line A] Replaced manual dict with dataclass
+
+### Value assessment
+- **Verdict**: Standalone PR | Bundle with related work | Not worth a PR alone
+- **Gain**: One line articulating net value — e.g. "Removed 1 latent render bug
+  and flattened 2 nested functions; worth raising on its own."
 
 ### Verification
 - Tests: PASSED (14/14) | FAILED (2 pre-existing) | TIMED OUT | NOT FOUND
 - Lint: PASSED | FIXED 3 issues | NOT FOUND
 
+### Low value (held — apply manually)
+Cosmetic, near-zero value; not applied so the diff stays PR-worthy.
+- `file.ts:12` - Rename `d` → `duration` (local var; apply if touching this fn anyway)
+- `other.py:30` - `x == True` → `x` (trivial)
+
 ### Skipped (conservative)
+Held for safety, not value — behavior preservation was uncertain.
 - `file.ts:42` - Could simplify callback but unclear if ordering matters
 - `utils.go:18` - Exported function rename would break callers
 ```
@@ -291,6 +380,7 @@ Examples (pick or improvise based on the actual numbers):
 - Large (10+ changes): `🎉🧹✨ 14 simplifications across 6 files! Your codebase just lost mass and gained clarity. Future-you sends thanks.`
 - Zero changes (already clean): `👀 Looked through everything -- your code is already clean. Nothing to simplify here. Nice work!`
 - All skipped (too uncertain): `🤔 Found a few potential improvements but skipped them all to be safe. Check the "Skipped" list above -- you might want to apply some manually.`
+- All low value (held): `🪶 Only cosmetic tweaks here -- not worth a PR on their own, so I held them. See "Low value (held)" if you want to apply any while you're in the file.`
 
 Keep it to one line. Don't overdo it -- one or two emojis, one sentence. Match
 the energy to the impact.
@@ -320,6 +410,8 @@ code theory in the summary -- just state what changed and why in plain language.
   is a production incident. Always err on the side of caution
 - **Re-stage what was staged** - preserve the user's git workflow. If they had
   files staged, keep them staged after simplification
+- **Value-rank every change** - hold low-value churn so the diff stays PR-worthy,
+  and state the gain each applied change delivers
 
 ---
 
@@ -351,6 +443,23 @@ code theory in the summary -- just state what changed and why in plain language.
    files silently. Only rename local/unexported identifiers. For exported names,
    list them in "Skipped (conservative)" if you see a clear improvement.
 
+7. **Value is a separate axis from safety.** A change can be perfectly safe yet
+   low-value. Do not apply it just because it's safe — hold it and list it. Padding
+   the diff with cosmetic edits is exactly what erodes a reviewer's trust.
+
+8. **Don't inflate value bands.** A local rename is Low even when the new name is
+   much better. Deep nesting flattened is High. Score honestly — the whole point
+   is an accurate PR-worthiness signal, not a flattering one.
+
+9. **A latent-bug fix is High and must be surfaced as a fix.** When a
+   "simplification" (e.g. `||`→`??`, `count &&`→`count > 0 &&`) actually removes a
+   bug, call it out explicitly in the summary. Do not bury it among cosmetic
+   changes — it's the reason the PR is worth raising.
+
+10. **Low-value churn bundled into a feature PR dilutes review.** Keep held Low
+    changes out of the applied diff. If the user wants them, they pick them from
+    the "Low value (held)" list — they don't arrive uninvited.
+
 ---
 
 ## Anti-Patterns and Common Mistakes
@@ -381,12 +490,23 @@ automatically based on the languages detected in Phase 3:
   simplification patterns: nesting reduction, dead code removal, redundancy
   elimination, expression simplification, naming rules, what NOT to simplify
 - **`references/javascript.md`** - Loaded for .js/.ts/.tsx/.jsx files. ES modules,
-  function declarations, React patterns, TypeScript narrowing, error handling,
-  import organization
+  function declarations, TypeScript narrowing, error handling, import organization
+- **`references/react.md`** - Loaded alongside javascript.md for .tsx/.jsx files.
+  Component patterns, conditional rendering, useState, useEffect ("you might not
+  need an effect"), hook dependencies, useMemo/useCallback/useRef discipline
 - **`references/python.md`** - Loaded for .py files. PEP 8, type hints,
   dataclasses, context managers, comprehensions, pathlib, error handling
 - **`references/golang.md`** - Loaded for .go files. Effective Go patterns,
   error handling idioms, interface design, table-driven tests, defer patterns
+- **`references/css.md`** - Loaded for .css/.scss/.sass/.less and Tailwind class
+  strings. Shorthand, redundant values, dead/duplicate rules, selector and SCSS
+  nesting cleanup, Tailwind utility dedup
+- **`references/sql.md`** - Loaded for .sql files. SELECT * expansion, redundant
+  DISTINCT/GROUP BY, subquery→JOIN/EXISTS, CTEs for readability, NULL-safe
+  predicate simplification
+- **`references/tests.md`** - Loaded alongside the language reference for test
+  files. Arrange-Act-Assert, table-driven tests, setup/fixture and mock cleanup —
+  with strict "never weaken an assertion" conservatism
 
 Only load a reference file when that language is in scope. Do not preload all
 references.
